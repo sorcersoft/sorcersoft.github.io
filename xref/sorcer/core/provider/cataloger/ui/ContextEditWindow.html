@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ContextEditWindow xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../apidocs/sorcer/core/provider/cataloger/ui/ContextEditWindow.html">View Javadoc</a></div><pre>
+
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_javadoccomment"> * Copyright 2013 the original author or authors.</em>
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_javadoccomment"> * Copyright 2013 Sorcersoft.com S.A.</em>
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_javadoccomment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_javadoccomment"> * you may not use this file except in compliance with the License.</em>
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_javadoccomment"> * You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_javadoccomment"> *      <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_javadoccomment"> * Unless required by applicable law or agreed to in writing, software</em>
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_javadoccomment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_javadoccomment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_javadoccomment"> * See the License for the specific language governing permissions and</em>
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_javadoccomment"> * limitations under the License.</em>
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> sorcer.core.provider.cataloger.ui;
+<a class="jxr_linenumber" name="19" href="#19">19</a>  
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> java.awt.Component;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> java.awt.Dimension;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.awt.event.ActionEvent;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.awt.event.ActionListener;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.net.URL;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> javax.swing.Box;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> javax.swing.BoxLayout;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> javax.swing.JButton;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> javax.swing.JComboBox;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> javax.swing.JFrame;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> javax.swing.JLabel;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> javax.swing.JPanel;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> javax.swing.JScrollPane;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> javax.swing.JTextArea;
+<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> javax.swing.tree.DefaultMutableTreeNode;
+<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> javax.swing.tree.TreeNode;
+<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> javax.swing.tree.TreePath;
+<a class="jxr_linenumber" name="38" href="#38">38</a>  
+<a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.eval.ContextGroovyObject;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.eval.ContextNode;
+<a class="jxr_linenumber" name="41" href="#41">41</a>  
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment"> * This class is used for the edit window displayed when a path or data node is</em>
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <em class="jxr_javadoccomment"> * modified. The view is rendered differently depending on if the currently</em>
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <em class="jxr_javadoccomment"> * selected item is a path or if it is a data node.</em>
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <em class="jxr_javadoccomment"> * &lt;li&gt;For paths user can specify the pathname and direction. &lt;li&gt;For data nodes</em>
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <em class="jxr_javadoccomment"> * the user can select the data type and enter the types value</em>
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="50" href="#50">50</a>  <em class="jxr_javadoccomment"> * &lt;b&gt;Note if the provider is not complied with Groovy support the Groovy option</em>
+<a class="jxr_linenumber" name="51" href="#51">51</a>  <em class="jxr_javadoccomment"> * will not be available&lt;/b&gt;</em>
+<a class="jxr_linenumber" name="52" href="#52">52</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="53" href="#53">53</a>  <em class="jxr_javadoccomment"> * This is where new data types can be introduced using the following three</em>
+<a class="jxr_linenumber" name="54" href="#54">54</a>  <em class="jxr_javadoccomment"> * steps: &lt;li&gt;add them to the dataTypes list defined in the constructor &lt;li&gt;</em>
+<a class="jxr_linenumber" name="55" href="#55">55</a>  <em class="jxr_javadoccomment"> * modify the save action (ActionPerformed) to support the new datatype creation</em>
+<a class="jxr_linenumber" name="56" href="#56">56</a>  <em class="jxr_javadoccomment"> * in the try/catch loop &lt;li&gt;add specific instructions in the @link</em>
+<a class="jxr_linenumber" name="57" href="#57">57</a>  <em class="jxr_javadoccomment"> * DataTypeListener actionPerformed event.</em>
+<a class="jxr_linenumber" name="58" href="#58">58</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="59" href="#59">59</a>  <em class="jxr_javadoccomment"> * @author Greg McChesney</em>
+<a class="jxr_linenumber" name="60" href="#60">60</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="61" href="#61">61</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="62" href="#62">62</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextEditWindow.html">ContextEditWindow</a> <strong class="jxr_keyword">extends</strong> JFrame <strong class="jxr_keyword">implements</strong> ActionListener {
+<a class="jxr_linenumber" name="63" href="#63">63</a>  	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="64" href="#64">64</a>  <em class="jxr_javadoccomment">	 * id used for serialization</em>
+<a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="66" href="#66">66</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = 1050541545115151510L;
+<a class="jxr_linenumber" name="67" href="#67">67</a>  
+<a class="jxr_linenumber" name="68" href="#68">68</a>  	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="69" href="#69">69</a>  <em class="jxr_javadoccomment">	 * ContextTree representing the current data tree.</em>
+<a class="jxr_linenumber" name="70" href="#70">70</a>  <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="71" href="#71">71</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextTree.html">ContextTree</a> theTree;
+<a class="jxr_linenumber" name="72" href="#72">72</a>  
+<a class="jxr_linenumber" name="73" href="#73">73</a>  	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="74" href="#74">74</a>  <em class="jxr_javadoccomment">	 * the node the user selected.</em>
+<a class="jxr_linenumber" name="75" href="#75">75</a>  <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="76" href="#76">76</a>  	<strong class="jxr_keyword">private</strong> TreePath currentSelected;
+<a class="jxr_linenumber" name="77" href="#77">77</a>  	<strong class="jxr_keyword">private</strong> JTextArea editField;
+<a class="jxr_linenumber" name="78" href="#78">78</a>  	<strong class="jxr_keyword">private</strong> JLabel dataLabel;
+<a class="jxr_linenumber" name="79" href="#79">79</a>  	<strong class="jxr_keyword">private</strong> JLabel instructions;
+<a class="jxr_linenumber" name="80" href="#80">80</a>  	<strong class="jxr_keyword">private</strong> JComboBox dataType;
+<a class="jxr_linenumber" name="81" href="#81">81</a>  	<strong class="jxr_keyword">private</strong> JComboBox direction;
+<a class="jxr_linenumber" name="82" href="#82">82</a>  	<strong class="jxr_keyword">private</strong> JButton editSaveButton;
+<a class="jxr_linenumber" name="83" href="#83">83</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> String SAVE_BUTTON = <span class="jxr_string">"save"</span>;
+<a class="jxr_linenumber" name="84" href="#84">84</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextNodeType.html">ContextNodeType</a> theNodeType;
+<a class="jxr_linenumber" name="85" href="#85">85</a>  
+<a class="jxr_linenumber" name="86" href="#86">86</a>  	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="87" href="#87">87</a>  <em class="jxr_javadoccomment">	 * current node the user is modifying</em>
+<a class="jxr_linenumber" name="88" href="#88">88</a>  <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="89" href="#89">89</a>  	<strong class="jxr_keyword">private</strong> DefaultMutableTreeNode currentNode;
+<a class="jxr_linenumber" name="90" href="#90">90</a>  	<em class="jxr_comment">// private String currentlySelectedDataType;</em>
+<a class="jxr_linenumber" name="91" href="#91">91</a>  	<strong class="jxr_keyword">private</strong> JScrollPane scrollingArea;
+<a class="jxr_linenumber" name="92" href="#92">92</a>  
+<a class="jxr_linenumber" name="93" href="#93">93</a>  	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="94" href="#94">94</a>  <em class="jxr_javadoccomment">	 * Constructor used to create the edit window.</em>
+<a class="jxr_linenumber" name="95" href="#95">95</a>  <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="96" href="#96">96</a>  <em class="jxr_javadoccomment">	 * @param theRootTree</em>
+<a class="jxr_linenumber" name="97" href="#97">97</a>  <em class="jxr_javadoccomment">	 *            the tree the node belongs to</em>
+<a class="jxr_linenumber" name="98" href="#98">98</a>  <em class="jxr_javadoccomment">	 * @param currentPath</em>
+<a class="jxr_linenumber" name="99" href="#99">99</a>  <em class="jxr_javadoccomment">	 *            the current path the user selected to modify, this is the data</em>
+<a class="jxr_linenumber" name="100" href="#100">100</a> <em class="jxr_javadoccomment">	 *            the window will display/update</em>
+<a class="jxr_linenumber" name="101" href="#101">101</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="102" href="#102">102</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextEditWindow.html">ContextEditWindow</a>(<a href="../../../../../sorcer/core/provider/cataloger/ui/ContextTree.html">ContextTree</a> theRootTree, TreePath currentPath) {
+<a class="jxr_linenumber" name="103" href="#103">103</a> 		theTree = theRootTree;
+<a class="jxr_linenumber" name="104" href="#104">104</a> 		currentSelected = currentPath;
+<a class="jxr_linenumber" name="105" href="#105">105</a> 
+<a class="jxr_linenumber" name="106" href="#106">106</a> 		currentNode = (DefaultMutableTreeNode) currentSelected
+<a class="jxr_linenumber" name="107" href="#107">107</a> 				.getLastPathComponent();
+<a class="jxr_linenumber" name="108" href="#108">108</a> 
+<a class="jxr_linenumber" name="109" href="#109">109</a> 		Object nodeContext = currentNode.getUserObject();
+<a class="jxr_linenumber" name="110" href="#110">110</a> 		<em class="jxr_comment">// check that the node of the tree is our special type</em>
+<a class="jxr_linenumber" name="111" href="#111">111</a> 		<strong class="jxr_keyword">if</strong> (nodeContext instanceof ContextNodeType) {
+<a class="jxr_linenumber" name="112" href="#112">112</a> 			theNodeType = (ContextNodeType) nodeContext;
+<a class="jxr_linenumber" name="113" href="#113">113</a> 			JPanel panel = <strong class="jxr_keyword">new</strong> JPanel();
+<a class="jxr_linenumber" name="114" href="#114">114</a> 			panel.setLayout(<strong class="jxr_keyword">new</strong> BoxLayout(panel, BoxLayout.PAGE_AXIS));
+<a class="jxr_linenumber" name="115" href="#115">115</a> 			JPanel listPane = <strong class="jxr_keyword">new</strong> JPanel();
+<a class="jxr_linenumber" name="116" href="#116">116</a> 			listPane.setLayout(<strong class="jxr_keyword">new</strong> BoxLayout(listPane, BoxLayout.PAGE_AXIS));
+<a class="jxr_linenumber" name="117" href="#117">117</a> 
+<a class="jxr_linenumber" name="118" href="#118">118</a> 			instructions = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"&lt;html&gt;&lt;b&gt;Enter the value below&lt;b&gt;&lt;br&gt;"</span>);
+<a class="jxr_linenumber" name="119" href="#119">119</a> 
+<a class="jxr_linenumber" name="120" href="#120">120</a> 			editField = <strong class="jxr_keyword">new</strong> JTextArea(theNodeType.getValue());
+<a class="jxr_linenumber" name="121" href="#121">121</a> 			scrollingArea = <strong class="jxr_keyword">new</strong> JScrollPane(editField);
+<a class="jxr_linenumber" name="122" href="#122">122</a> 			<em class="jxr_comment">// editField.setPreferredSize(new Dimension())</em>
+<a class="jxr_linenumber" name="123" href="#123">123</a> 
+<a class="jxr_linenumber" name="124" href="#124">124</a> 			<strong class="jxr_keyword">if</strong> (theNodeType.getObject() instanceof ContextNode)
+<a class="jxr_linenumber" name="125" href="#125">125</a> 				editField.setText(((ContextNode) theNodeType.getObject())
+<a class="jxr_linenumber" name="126" href="#126">126</a> 						.getLabel());
+<a class="jxr_linenumber" name="127" href="#127">127</a> 			<em class="jxr_comment">// GroovyObject test=new GroovyObject("1+1");</em>
+<a class="jxr_linenumber" name="128" href="#128">128</a> 
+<a class="jxr_linenumber" name="129" href="#129">129</a> 			<em class="jxr_comment">// editField.setText(test.getValue().toString());</em>
+<a class="jxr_linenumber" name="130" href="#130">130</a> 			editField.setColumns(60);
+<a class="jxr_linenumber" name="131" href="#131">131</a> 			editField.setRows(1);
+<a class="jxr_linenumber" name="132" href="#132">132</a> 			editField.setLineWrap(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="133" href="#133">133</a> 			editField.setWrapStyleWord(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="134" href="#134">134</a> 
+<a class="jxr_linenumber" name="135" href="#135">135</a> 			<em class="jxr_comment">// editField.setPreferredSize(new Dimension(350, 20));</em>
+<a class="jxr_linenumber" name="136" href="#136">136</a> 			dataLabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Data Types:"</span>);
+<a class="jxr_linenumber" name="137" href="#137">137</a> 			dataLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+<a class="jxr_linenumber" name="138" href="#138">138</a> 
+<a class="jxr_linenumber" name="139" href="#139">139</a> 			String[] dataTypes = { <span class="jxr_string">"String"</span>, <span class="jxr_string">"Integer"</span>, <span class="jxr_string">"Boolean"</span>, <span class="jxr_string">"Groovy"</span>,
+<a class="jxr_linenumber" name="140" href="#140">140</a> 					<span class="jxr_string">"Float"</span>, <span class="jxr_string">"Double"</span>, <span class="jxr_string">"URL"</span> };
+<a class="jxr_linenumber" name="141" href="#141">141</a> 
+<a class="jxr_linenumber" name="142" href="#142">142</a> 			String[] directions = { ContextNodeType.DEFAULTTYPE,
+<a class="jxr_linenumber" name="143" href="#143">143</a> 					ContextNodeType.INPUTTYPE, ContextNodeType.OUTPUTTYPE,
+<a class="jxr_linenumber" name="144" href="#144">144</a> 					ContextNodeType.INOUTPUTTYPE };
+<a class="jxr_linenumber" name="145" href="#145">145</a> 
+<a class="jxr_linenumber" name="146" href="#146">146</a> 			dataType = <strong class="jxr_keyword">new</strong> JComboBox(dataTypes);
+<a class="jxr_linenumber" name="147" href="#147">147</a> 			dataType.addActionListener(<strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextEditWindow.html">DataTypeListener</a>(instructions,
+<a class="jxr_linenumber" name="148" href="#148">148</a> 					editField, <strong class="jxr_keyword">this</strong>));
+<a class="jxr_linenumber" name="149" href="#149">149</a> 			direction = <strong class="jxr_keyword">new</strong> JComboBox(directions);
+<a class="jxr_linenumber" name="150" href="#150">150</a> 			String currentDtype = theNodeType.getObject().getClass()
+<a class="jxr_linenumber" name="151" href="#151">151</a> 					.getSimpleName();
+<a class="jxr_linenumber" name="152" href="#152">152</a> 			<strong class="jxr_keyword">if</strong> (theNodeType.getObject() instanceof ContextNode)
+<a class="jxr_linenumber" name="153" href="#153">153</a> 				currentDtype = ((ContextNode) theNodeType.getObject())
+<a class="jxr_linenumber" name="154" href="#154">154</a> 						.getDataTypeString();
+<a class="jxr_linenumber" name="155" href="#155">155</a> 			<strong class="jxr_keyword">if</strong> (currentDtype.equals(<span class="jxr_string">"ContextGroovyObject"</span>))
+<a class="jxr_linenumber" name="156" href="#156">156</a> 				currentDtype = <span class="jxr_string">"Groovy"</span>;
+<a class="jxr_linenumber" name="157" href="#157">157</a> 
+<a class="jxr_linenumber" name="158" href="#158">158</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; dataTypes.length; i++)
+<a class="jxr_linenumber" name="159" href="#159">159</a> 				<strong class="jxr_keyword">if</strong> (dataTypes[i].equals(currentDtype))
+<a class="jxr_linenumber" name="160" href="#160">160</a> 					dataType.setSelectedIndex(i);
+<a class="jxr_linenumber" name="161" href="#161">161</a> 			String currentDirection = theNodeType.getDirection();
+<a class="jxr_linenumber" name="162" href="#162">162</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; directions.length; i++)
+<a class="jxr_linenumber" name="163" href="#163">163</a> 				<strong class="jxr_keyword">if</strong> (directions[i].equals(currentDirection))
+<a class="jxr_linenumber" name="164" href="#164">164</a> 					direction.setSelectedIndex(i);
+<a class="jxr_linenumber" name="165" href="#165">165</a> 			<em class="jxr_comment">// System.out.println(currentDtype+" dtype");</em>
+<a class="jxr_linenumber" name="166" href="#166">166</a> 			editSaveButton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Save"</span>);
+<a class="jxr_linenumber" name="167" href="#167">167</a> 			editSaveButton.setActionCommand(SAVE_BUTTON);
+<a class="jxr_linenumber" name="168" href="#168">168</a> 			editSaveButton.addActionListener(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="169" href="#169">169</a> 
+<a class="jxr_linenumber" name="170" href="#170">170</a> 			JPanel instructionLabelPanel = <strong class="jxr_keyword">new</strong> JPanel();
+<a class="jxr_linenumber" name="171" href="#171">171</a> 			instructionLabelPanel.setLayout(<strong class="jxr_keyword">new</strong> BoxLayout(
+<a class="jxr_linenumber" name="172" href="#172">172</a> 					instructionLabelPanel, BoxLayout.LINE_AXIS));
+<a class="jxr_linenumber" name="173" href="#173">173</a> 
+<a class="jxr_linenumber" name="174" href="#174">174</a> 			instructionLabelPanel.add(instructions);
+<a class="jxr_linenumber" name="175" href="#175">175</a> 			instructionLabelPanel.add(Box.createHorizontalGlue());
+<a class="jxr_linenumber" name="176" href="#176">176</a> 			listPane.add(instructionLabelPanel);
+<a class="jxr_linenumber" name="177" href="#177">177</a> 			listPane.add(Box.createRigidArea(<strong class="jxr_keyword">new</strong> Dimension(0, 5)));
+<a class="jxr_linenumber" name="178" href="#178">178</a> 			<em class="jxr_comment">// panel.add(new JLabel("Value:"));</em>
+<a class="jxr_linenumber" name="179" href="#179">179</a> 			listPane.add(scrollingArea);
+<a class="jxr_linenumber" name="180" href="#180">180</a> 			listPane.add(Box.createRigidArea(<strong class="jxr_keyword">new</strong> Dimension(0, 5)));
+<a class="jxr_linenumber" name="181" href="#181">181</a> 
+<a class="jxr_linenumber" name="182" href="#182">182</a> 			<strong class="jxr_keyword">if</strong> (!theNodeType.isDataNode()) <em class="jxr_comment">// output direction if its a path</em>
+<a class="jxr_linenumber" name="183" href="#183">183</a> 			{
+<a class="jxr_linenumber" name="184" href="#184">184</a> 				dataType.setEnabled(false);
+<a class="jxr_linenumber" name="185" href="#185">185</a> 				JPanel dataLabelPanel = <strong class="jxr_keyword">new</strong> JPanel();
+<a class="jxr_linenumber" name="186" href="#186">186</a> 				dataLabelPanel.setLayout(<strong class="jxr_keyword">new</strong> BoxLayout(dataLabelPanel,
+<a class="jxr_linenumber" name="187" href="#187">187</a> 						BoxLayout.LINE_AXIS));
+<a class="jxr_linenumber" name="188" href="#188">188</a> 
+<a class="jxr_linenumber" name="189" href="#189">189</a> 				dataLabelPanel.add(<strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Direction: "</span>));
+<a class="jxr_linenumber" name="190" href="#190">190</a> 				dataLabelPanel.add(Box.createRigidArea(<strong class="jxr_keyword">new</strong> Dimension(10, 0)));
+<a class="jxr_linenumber" name="191" href="#191">191</a> 				dataLabelPanel.add(direction);
+<a class="jxr_linenumber" name="192" href="#192">192</a> 				<em class="jxr_comment">// dataLabelPanel.add(Box.createHorizontalGlue());</em>
+<a class="jxr_linenumber" name="193" href="#193">193</a> 				listPane.add(dataLabelPanel);
+<a class="jxr_linenumber" name="194" href="#194">194</a> 				<em class="jxr_comment">// listPane.add(direction);</em>
+<a class="jxr_linenumber" name="195" href="#195">195</a> 			} <strong class="jxr_keyword">else</strong> <em class="jxr_comment">// a data node output the type</em>
+<a class="jxr_linenumber" name="196" href="#196">196</a> 			{
+<a class="jxr_linenumber" name="197" href="#197">197</a> 
+<a class="jxr_linenumber" name="198" href="#198">198</a> 				JPanel dataLabelPanel = <strong class="jxr_keyword">new</strong> JPanel();
+<a class="jxr_linenumber" name="199" href="#199">199</a> 				dataLabelPanel.setLayout(<strong class="jxr_keyword">new</strong> BoxLayout(dataLabelPanel,
+<a class="jxr_linenumber" name="200" href="#200">200</a> 						BoxLayout.LINE_AXIS));
+<a class="jxr_linenumber" name="201" href="#201">201</a> 
+<a class="jxr_linenumber" name="202" href="#202">202</a> 				dataLabelPanel.add(dataLabel);
+<a class="jxr_linenumber" name="203" href="#203">203</a> 				dataLabelPanel.add(Box.createRigidArea(<strong class="jxr_keyword">new</strong> Dimension(10, 0)));
+<a class="jxr_linenumber" name="204" href="#204">204</a> 				direction.setEnabled(false);
+<a class="jxr_linenumber" name="205" href="#205">205</a> 				dataLabelPanel.add(dataType);
+<a class="jxr_linenumber" name="206" href="#206">206</a> 				<em class="jxr_comment">// dataLabelPanel.add(Box.createHorizontalGlue());</em>
+<a class="jxr_linenumber" name="207" href="#207">207</a> 				listPane.add(dataLabelPanel);
+<a class="jxr_linenumber" name="208" href="#208">208</a> 
+<a class="jxr_linenumber" name="209" href="#209">209</a> 			}
+<a class="jxr_linenumber" name="210" href="#210">210</a> 			panel.add(listPane);
+<a class="jxr_linenumber" name="211" href="#211">211</a> 			panel.add(editSaveButton);
+<a class="jxr_linenumber" name="212" href="#212">212</a> 			<strong class="jxr_keyword">this</strong>.add(panel);
+<a class="jxr_linenumber" name="213" href="#213">213</a> 			<em class="jxr_comment">// this.setSize(500, 250);</em>
+<a class="jxr_linenumber" name="214" href="#214">214</a> 			<em class="jxr_comment">// center the frame on screen</em>
+<a class="jxr_linenumber" name="215" href="#215">215</a> 			setLocationRelativeTo(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="216" href="#216">216</a> 			<strong class="jxr_keyword">this</strong>.setVisible(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="217" href="#217">217</a> 			<strong class="jxr_keyword">this</strong>.setTitle(<span class="jxr_string">"Edit Node"</span>);
+<a class="jxr_linenumber" name="218" href="#218">218</a> 		} <strong class="jxr_keyword">else</strong>
+<a class="jxr_linenumber" name="219" href="#219">219</a> 			<em class="jxr_comment">// node is not our type so lets ignore this request</em>
+<a class="jxr_linenumber" name="220" href="#220">220</a> 			<strong class="jxr_keyword">this</strong>.dispose();
+<a class="jxr_linenumber" name="221" href="#221">221</a> 
+<a class="jxr_linenumber" name="222" href="#222">222</a> 	}
+<a class="jxr_linenumber" name="223" href="#223">223</a> 
+<a class="jxr_linenumber" name="224" href="#224">224</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="225" href="#225">225</a> <em class="jxr_javadoccomment">	 * ActionPerformed is called when the save button is pressed. This method</em>
+<a class="jxr_linenumber" name="226" href="#226">226</a> <em class="jxr_javadoccomment">	 * takes the data and the selected type or direction (depending on if its a</em>
+<a class="jxr_linenumber" name="227" href="#227">227</a> <em class="jxr_javadoccomment">	 * path or node) and saves it back in the @link ContextNodeType.</em>
+<a class="jxr_linenumber" name="228" href="#228">228</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="229" href="#229">229</a> <em class="jxr_javadoccomment">	 * @param actionEvent</em>
+<a class="jxr_linenumber" name="230" href="#230">230</a> <em class="jxr_javadoccomment">	 *            ActionEvent specifying what action occurred.</em>
+<a class="jxr_linenumber" name="231" href="#231">231</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="232" href="#232">232</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="233" href="#233">233</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(ActionEvent actionEvent) {
+<a class="jxr_linenumber" name="234" href="#234">234</a> 		<em class="jxr_comment">// TODO Auto-generated method stub</em>
+<a class="jxr_linenumber" name="235" href="#235">235</a> 		String command = actionEvent.getActionCommand();
+<a class="jxr_linenumber" name="236" href="#236">236</a> 		<em class="jxr_comment">// System.out.println("command"+command);</em>
+<a class="jxr_linenumber" name="237" href="#237">237</a> 		<strong class="jxr_keyword">if</strong> (SAVE_BUTTON.equals(command)) {
+<a class="jxr_linenumber" name="238" href="#238">238</a> 			String dType = dataType.getSelectedItem().toString();
+<a class="jxr_linenumber" name="239" href="#239">239</a> 			Object value = <strong class="jxr_keyword">new</strong> String(editField.getText());<em class="jxr_comment">// default to String</em>
+<a class="jxr_linenumber" name="240" href="#240">240</a> 			<em class="jxr_comment">// datatype</em>
+<a class="jxr_linenumber" name="241" href="#241">241</a> 			<strong class="jxr_keyword">try</strong> <em class="jxr_comment">// try to create the data type the user requested, add new</em>
+<a class="jxr_linenumber" name="242" href="#242">242</a> 			<em class="jxr_comment">// datatypes here</em>
+<a class="jxr_linenumber" name="243" href="#243">243</a> 			{
+<a class="jxr_linenumber" name="244" href="#244">244</a> 
+<a class="jxr_linenumber" name="245" href="#245">245</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Integer"</span>))
+<a class="jxr_linenumber" name="246" href="#246">246</a> 					value = <strong class="jxr_keyword">new</strong> Integer(editField.getText());
+<a class="jxr_linenumber" name="247" href="#247">247</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Boolean"</span>))
+<a class="jxr_linenumber" name="248" href="#248">248</a> 					value = <strong class="jxr_keyword">new</strong> Boolean(editField.getText());
+<a class="jxr_linenumber" name="249" href="#249">249</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Groovy"</span>)) {
+<a class="jxr_linenumber" name="250" href="#250">250</a> 					value = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/eval/ContextNode.html">ContextNode</a>(editField.getText(),
+<a class="jxr_linenumber" name="251" href="#251">251</a> 							<strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/eval/ContextGroovyObject.html">ContextGroovyObject</a>(editField.getText()));
+<a class="jxr_linenumber" name="252" href="#252">252</a> 				}
+<a class="jxr_linenumber" name="253" href="#253">253</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Float"</span>))
+<a class="jxr_linenumber" name="254" href="#254">254</a> 					value = <strong class="jxr_keyword">new</strong> Float(editField.getText());
+<a class="jxr_linenumber" name="255" href="#255">255</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Double"</span>))
+<a class="jxr_linenumber" name="256" href="#256">256</a> 					value = <strong class="jxr_keyword">new</strong> Double(editField.getText());
+<a class="jxr_linenumber" name="257" href="#257">257</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"URL"</span>))
+<a class="jxr_linenumber" name="258" href="#258">258</a> 					value = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/eval/ContextNode.html">ContextNode</a>(editField.getText(), <strong class="jxr_keyword">new</strong> URL(
+<a class="jxr_linenumber" name="259" href="#259">259</a> 							editField.getText()));
+<a class="jxr_linenumber" name="260" href="#260">260</a> 			} <strong class="jxr_keyword">catch</strong> (Exception e) {
+<a class="jxr_linenumber" name="261" href="#261">261</a> 				<em class="jxr_comment">// add some code to alert user they are not doing it right</em>
+<a class="jxr_linenumber" name="262" href="#262">262</a> 			}
+<a class="jxr_linenumber" name="263" href="#263">263</a> 
+<a class="jxr_linenumber" name="264" href="#264">264</a> 			theNodeType.setValue(value); <em class="jxr_comment">// update the value</em>
+<a class="jxr_linenumber" name="265" href="#265">265</a> 			theNodeType.setDirection(direction.getSelectedItem().toString());
+<a class="jxr_linenumber" name="266" href="#266">266</a> 			<em class="jxr_comment">// currentNode.setUserObject(theNodeType);</em>
+<a class="jxr_linenumber" name="267" href="#267">267</a> 			theTree.updateModel(currentNode);
+<a class="jxr_linenumber" name="268" href="#268">268</a> 			TreeNode[] pathTo = currentNode.getPath();
+<a class="jxr_linenumber" name="269" href="#269">269</a> 			String path = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="270" href="#270">270</a> 			<strong class="jxr_keyword">int</strong> length = pathTo.length;
+<a class="jxr_linenumber" name="271" href="#271">271</a> 
+<a class="jxr_linenumber" name="272" href="#272">272</a> 			<strong class="jxr_keyword">if</strong> (!theNodeType.isDataNode()) <em class="jxr_comment">// try to change the tree colors to</em>
+<a class="jxr_linenumber" name="273" href="#273">273</a> 			<em class="jxr_comment">// show input and output</em>
+<a class="jxr_linenumber" name="274" href="#274">274</a> 			{
+<a class="jxr_linenumber" name="275" href="#275">275</a> 				<em class="jxr_comment">// length--;</em>
+<a class="jxr_linenumber" name="276" href="#276">276</a> 				<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; length; i++) <em class="jxr_comment">// ignore root and current</em>
+<a class="jxr_linenumber" name="277" href="#277">277</a> 				<em class="jxr_comment">// element!</em>
+<a class="jxr_linenumber" name="278" href="#278">278</a> 				{
+<a class="jxr_linenumber" name="279" href="#279">279</a> 					<em class="jxr_comment">// if(path.length()!=0)</em>
+<a class="jxr_linenumber" name="280" href="#280">280</a> 					<em class="jxr_comment">// /path+="/";</em>
+<a class="jxr_linenumber" name="281" href="#281">281</a> 					<em class="jxr_comment">// path+=pathTo[i].toString();</em>
+<a class="jxr_linenumber" name="282" href="#282">282</a> 					<strong class="jxr_keyword">if</strong> (((DefaultMutableTreeNode) pathTo[length - i - 1])
+<a class="jxr_linenumber" name="283" href="#283">283</a> 							.getUserObject() instanceof ContextNodeType) {
+<a class="jxr_linenumber" name="284" href="#284">284</a> 						<strong class="jxr_keyword">if</strong> (((DefaultMutableTreeNode) pathTo[length - i - 1])
+<a class="jxr_linenumber" name="285" href="#285">285</a> 								.getChildCount() == 1) {
+<a class="jxr_linenumber" name="286" href="#286">286</a> 							ContextNodeType parentNode = (ContextNodeType) ((DefaultMutableTreeNode) pathTo[length
+<a class="jxr_linenumber" name="287" href="#287">287</a> 									- i - 1]).getUserObject();
+<a class="jxr_linenumber" name="288" href="#288">288</a> 							parentNode.setDirection(direction.getSelectedItem()
+<a class="jxr_linenumber" name="289" href="#289">289</a> 									.toString());
+<a class="jxr_linenumber" name="290" href="#290">290</a> 							theTree
+<a class="jxr_linenumber" name="291" href="#291">291</a> 									.updateModel((DefaultMutableTreeNode) pathTo[length
+<a class="jxr_linenumber" name="292" href="#292">292</a> 											- i - 1]);
+<a class="jxr_linenumber" name="293" href="#293">293</a> 							i = length + 2;
+<a class="jxr_linenumber" name="294" href="#294">294</a> 							<strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="295" href="#295">295</a> 						}
+<a class="jxr_linenumber" name="296" href="#296">296</a> 					}
+<a class="jxr_linenumber" name="297" href="#297">297</a> 				}
+<a class="jxr_linenumber" name="298" href="#298">298</a> 				<em class="jxr_comment">// turn of changing children on update, child coloring allows</em>
+<a class="jxr_linenumber" name="299" href="#299">299</a> 				<em class="jxr_comment">// all elements under a node</em>
+<a class="jxr_linenumber" name="300" href="#300">300</a> 				<em class="jxr_comment">// to get the same direction color, code works but can lead to</em>
+<a class="jxr_linenumber" name="301" href="#301">301</a> 				<em class="jxr_comment">// really annoying results</em>
+<a class="jxr_linenumber" name="302" href="#302">302</a> 				<em class="jxr_comment">// ex: change the root and all directions below it get</em>
+<a class="jxr_linenumber" name="303" href="#303">303</a> 				<em class="jxr_comment">// removed....</em>
+<a class="jxr_linenumber" name="304" href="#304">304</a> 				<em class="jxr_comment">// SetChildDirection(currentNode,</em>
+<a class="jxr_linenumber" name="305" href="#305">305</a> 				<em class="jxr_comment">// direction.getSelectedItem().toString());</em>
+<a class="jxr_linenumber" name="306" href="#306">306</a> 			}
+<a class="jxr_linenumber" name="307" href="#307">307</a> 			<strong class="jxr_keyword">this</strong>.dispose();
+<a class="jxr_linenumber" name="308" href="#308">308</a> 		}
+<a class="jxr_linenumber" name="309" href="#309">309</a> 	}
+<a class="jxr_linenumber" name="310" href="#310">310</a> 
+<a class="jxr_linenumber" name="311" href="#311">311</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="312" href="#312">312</a> <em class="jxr_javadoccomment">	 * This recursive function is used to change the directions of all elements</em>
+<a class="jxr_linenumber" name="313" href="#313">313</a> <em class="jxr_javadoccomment">	 * underneath the current node. The function works but can lead to doing</em>
+<a class="jxr_linenumber" name="314" href="#314">314</a> <em class="jxr_javadoccomment">	 * more than the user was probably attempting to do.</em>
+<a class="jxr_linenumber" name="315" href="#315">315</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="316" href="#316">316</a> <em class="jxr_javadoccomment">	 * @param current</em>
+<a class="jxr_linenumber" name="317" href="#317">317</a> <em class="jxr_javadoccomment">	 *            DefaultMutableTreeNode the current node we are working on</em>
+<a class="jxr_linenumber" name="318" href="#318">318</a> <em class="jxr_javadoccomment">	 * @param direction</em>
+<a class="jxr_linenumber" name="319" href="#319">319</a> <em class="jxr_javadoccomment">	 *            String specifying the current direction to set the children</em>
+<a class="jxr_linenumber" name="320" href="#320">320</a> <em class="jxr_javadoccomment">	 *            nodes to</em>
+<a class="jxr_linenumber" name="321" href="#321">321</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="322" href="#322">322</a> 	<strong class="jxr_keyword">void</strong> SetChildDirection(DefaultMutableTreeNode current, String direction) {
+<a class="jxr_linenumber" name="323" href="#323">323</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; current.getChildCount(); i++) <em class="jxr_comment">// do it for each</em>
+<a class="jxr_linenumber" name="324" href="#324">324</a> 		<em class="jxr_comment">// child</em>
+<a class="jxr_linenumber" name="325" href="#325">325</a> 		{
+<a class="jxr_linenumber" name="326" href="#326">326</a> 			DefaultMutableTreeNode child = (DefaultMutableTreeNode) current
+<a class="jxr_linenumber" name="327" href="#327">327</a> 					.getChildAt(i);
+<a class="jxr_linenumber" name="328" href="#328">328</a> 			<strong class="jxr_keyword">if</strong> (child.getUserObject() instanceof ContextNodeType) <em class="jxr_comment">// make sure</em>
+<a class="jxr_linenumber" name="329" href="#329">329</a> 			<em class="jxr_comment">// its of</em>
+<a class="jxr_linenumber" name="330" href="#330">330</a> 			<em class="jxr_comment">// our</em>
+<a class="jxr_linenumber" name="331" href="#331">331</a> 			<em class="jxr_comment">// special</em>
+<a class="jxr_linenumber" name="332" href="#332">332</a> 			<em class="jxr_comment">// type</em>
+<a class="jxr_linenumber" name="333" href="#333">333</a> 			{
+<a class="jxr_linenumber" name="334" href="#334">334</a> 				((ContextNodeType) child.getUserObject())
+<a class="jxr_linenumber" name="335" href="#335">335</a> 						.setDirection(direction);
+<a class="jxr_linenumber" name="336" href="#336">336</a> 				theTree.updateModel(child);
+<a class="jxr_linenumber" name="337" href="#337">337</a> 				<strong class="jxr_keyword">if</strong> (child.getChildCount() != 0)
+<a class="jxr_linenumber" name="338" href="#338">338</a> 					SetChildDirection(child, direction);
+<a class="jxr_linenumber" name="339" href="#339">339</a> 			}
+<a class="jxr_linenumber" name="340" href="#340">340</a> 		}
+<a class="jxr_linenumber" name="341" href="#341">341</a> 	}
+<a class="jxr_linenumber" name="342" href="#342">342</a> 
+<a class="jxr_linenumber" name="343" href="#343">343</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="344" href="#344">344</a> <em class="jxr_javadoccomment">	 * This class acts as a ActionListener for the DataType field on the form.</em>
+<a class="jxr_linenumber" name="345" href="#345">345</a> <em class="jxr_javadoccomment">	 * This class's purpose is to update the instruction label based on the</em>
+<a class="jxr_linenumber" name="346" href="#346">346</a> <em class="jxr_javadoccomment">	 * currently selected item in the DataType field. This allows the user to</em>
+<a class="jxr_linenumber" name="347" href="#347">347</a> <em class="jxr_javadoccomment">	 * instructions that are specific to current data type. The class also</em>
+<a class="jxr_linenumber" name="348" href="#348">348</a> <em class="jxr_javadoccomment">	 * updates the current size of the window so that the instructions fit</em>
+<a class="jxr_linenumber" name="349" href="#349">349</a> <em class="jxr_javadoccomment">	 * properly. The edit field is modified to allowing for a more accurate</em>
+<a class="jxr_linenumber" name="350" href="#350">350</a> <em class="jxr_javadoccomment">	 * representation of the data. All instructions are written in HTML.</em>
+<a class="jxr_linenumber" name="351" href="#351">351</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="352" href="#352">352</a> <em class="jxr_javadoccomment">	 * @author Greg McChesney</em>
+<a class="jxr_linenumber" name="353" href="#353">353</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="354" href="#354">354</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="355" href="#355">355</a> 
+<a class="jxr_linenumber" name="356" href="#356">356</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextEditWindow.html">DataTypeListener</a> <strong class="jxr_keyword">implements</strong> ActionListener {
+<a class="jxr_linenumber" name="357" href="#357">357</a> 		<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="358" href="#358">358</a> <em class="jxr_javadoccomment">		 * the instruction label to be updated</em>
+<a class="jxr_linenumber" name="359" href="#359">359</a> <em class="jxr_javadoccomment">		 */</em>
+<a class="jxr_linenumber" name="360" href="#360">360</a> 		<strong class="jxr_keyword">private</strong> JLabel instructions;
+<a class="jxr_linenumber" name="361" href="#361">361</a> 
+<a class="jxr_linenumber" name="362" href="#362">362</a> 		<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="363" href="#363">363</a> <em class="jxr_javadoccomment">		 * the text field the user enters the data into.</em>
+<a class="jxr_linenumber" name="364" href="#364">364</a> <em class="jxr_javadoccomment">		 */</em>
+<a class="jxr_linenumber" name="365" href="#365">365</a> 		<strong class="jxr_keyword">private</strong> JTextArea editField;
+<a class="jxr_linenumber" name="366" href="#366">366</a> 		<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="367" href="#367">367</a> <em class="jxr_javadoccomment">		 * the edit window itself, used to change the size of the window</em>
+<a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_javadoccomment">		 */</em>
+<a class="jxr_linenumber" name="369" href="#369">369</a> 		<strong class="jxr_keyword">private</strong> JFrame mainPanel;
+<a class="jxr_linenumber" name="370" href="#370">370</a> 
+<a class="jxr_linenumber" name="371" href="#371">371</a> 		<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="372" href="#372">372</a> <em class="jxr_javadoccomment">		 * This is the constructor for the DataTypeListener, which updates the</em>
+<a class="jxr_linenumber" name="373" href="#373">373</a> <em class="jxr_javadoccomment">		 * editWindow based on the currently selected data type.</em>
+<a class="jxr_linenumber" name="374" href="#374">374</a> <em class="jxr_javadoccomment">		 * </em>
+<a class="jxr_linenumber" name="375" href="#375">375</a> <em class="jxr_javadoccomment">		 * @param instructions</em>
+<a class="jxr_linenumber" name="376" href="#376">376</a> <em class="jxr_javadoccomment">		 *            JLabel to update with the current instructions</em>
+<a class="jxr_linenumber" name="377" href="#377">377</a> <em class="jxr_javadoccomment">		 * @param editField</em>
+<a class="jxr_linenumber" name="378" href="#378">378</a> <em class="jxr_javadoccomment">		 *            JTextArea to modify for the current data type</em>
+<a class="jxr_linenumber" name="379" href="#379">379</a> <em class="jxr_javadoccomment">		 * @param mainPanel</em>
+<a class="jxr_linenumber" name="380" href="#380">380</a> <em class="jxr_javadoccomment">		 *            JFrame for the edit window to modify the size</em>
+<a class="jxr_linenumber" name="381" href="#381">381</a> <em class="jxr_javadoccomment">		 */</em>
+<a class="jxr_linenumber" name="382" href="#382">382</a> 		<strong class="jxr_keyword">public</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextEditWindow.html">DataTypeListener</a>(JLabel instructions, JTextArea editField,
+<a class="jxr_linenumber" name="383" href="#383">383</a> 				JFrame mainPanel) {
+<a class="jxr_linenumber" name="384" href="#384">384</a> 			<strong class="jxr_keyword">this</strong>.instructions = instructions;
+<a class="jxr_linenumber" name="385" href="#385">385</a> 			<strong class="jxr_keyword">this</strong>.editField = editField;
+<a class="jxr_linenumber" name="386" href="#386">386</a> 			<strong class="jxr_keyword">this</strong>.mainPanel = mainPanel;
+<a class="jxr_linenumber" name="387" href="#387">387</a> 		}
+<a class="jxr_linenumber" name="388" href="#388">388</a> 
+<a class="jxr_linenumber" name="389" href="#389">389</a> 		<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="390" href="#390">390</a> <em class="jxr_javadoccomment">		 * The actionPerformed event takes the current selection and updates the</em>
+<a class="jxr_linenumber" name="391" href="#391">391</a> <em class="jxr_javadoccomment">		 * interface to reflect the data type. For example Groovy expressions</em>
+<a class="jxr_linenumber" name="392" href="#392">392</a> <em class="jxr_javadoccomment">		 * have a larger edit window and more detailed instructions than an</em>
+<a class="jxr_linenumber" name="393" href="#393">393</a> <em class="jxr_javadoccomment">		 * integer field. This is also how new instructions can be added to the</em>
+<a class="jxr_linenumber" name="394" href="#394">394</a> <em class="jxr_javadoccomment">		 * interface, if an instruction is not specified the default one will be</em>
+<a class="jxr_linenumber" name="395" href="#395">395</a> <em class="jxr_javadoccomment">		 * displayed.</em>
+<a class="jxr_linenumber" name="396" href="#396">396</a> <em class="jxr_javadoccomment">		 */</em>
+<a class="jxr_linenumber" name="397" href="#397">397</a> 		<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(ActionEvent e) {
+<a class="jxr_linenumber" name="398" href="#398">398</a> 			JComboBox cb = (JComboBox) e.getSource();
+<a class="jxr_linenumber" name="399" href="#399">399</a> 			String currentSelection = (String) cb.getSelectedItem();
+<a class="jxr_linenumber" name="400" href="#400">400</a> 			<strong class="jxr_keyword">if</strong> (currentSelection.equals(<span class="jxr_string">"Groovy"</span>)) {
+<a class="jxr_linenumber" name="401" href="#401">401</a> 				instructions
+<a class="jxr_linenumber" name="402" href="#402">402</a> 						.setText(<span class="jxr_string">"&lt;html&gt;&lt;b&gt;This is groovy expression&lt;/b&gt;&lt;p&gt;Instructions for groovy expressions: &lt;ul&gt; &lt;li&gt;Specify paths using _ as a seperator&lt;li&gt;Provider must support the ContextNode object to process&lt;/ul&gt;&lt;p&gt;  "</span>);
+<a class="jxr_linenumber" name="403" href="#403">403</a> 				editField.setColumns(60);
+<a class="jxr_linenumber" name="404" href="#404">404</a> 				editField.setRows(4);
+<a class="jxr_linenumber" name="405" href="#405">405</a> 				<em class="jxr_comment">// mainPanel.setPreferredSize(new Dimension(500,200));</em>
+<a class="jxr_linenumber" name="406" href="#406">406</a> 				mainPanel.setSize(<strong class="jxr_keyword">new</strong> Dimension(500, 250));
+<a class="jxr_linenumber" name="407" href="#407">407</a> 
+<a class="jxr_linenumber" name="408" href="#408">408</a> 				<em class="jxr_comment">// todo add groovy not complied check</em>
+<a class="jxr_linenumber" name="409" href="#409">409</a> 			} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (currentSelection.equals(<span class="jxr_string">"URL"</span>)) {
+<a class="jxr_linenumber" name="410" href="#410">410</a> 				instructions
+<a class="jxr_linenumber" name="411" href="#411">411</a> 						.setText(<span class="jxr_string">"&lt;html&gt;&lt;b&gt;This is URL&lt;/b&gt; &lt;p&gt;Enter using http:// or ftp://&lt;p&gt;"</span>);
+<a class="jxr_linenumber" name="412" href="#412">412</a> 				editField.setColumns(60);
+<a class="jxr_linenumber" name="413" href="#413">413</a> 				editField.setRows(1);
+<a class="jxr_linenumber" name="414" href="#414">414</a> 				<em class="jxr_comment">// mainPanel.setPreferredSize(new Dimension(500,100));</em>
+<a class="jxr_linenumber" name="415" href="#415">415</a> 				mainPanel.setSize(<strong class="jxr_keyword">new</strong> Dimension(500, 140));
+<a class="jxr_linenumber" name="416" href="#416">416</a> 			} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="417" href="#417">417</a> 				instructions.setText(<span class="jxr_string">"&lt;html&gt;&lt;b&gt;Enter a "</span> + currentSelection
+<a class="jxr_linenumber" name="418" href="#418">418</a> 						+ <span class="jxr_string">" value below&lt;b&gt;&lt;p&gt;"</span>);
+<a class="jxr_linenumber" name="419" href="#419">419</a> 				editField.setColumns(60);
+<a class="jxr_linenumber" name="420" href="#420">420</a> 				editField.setRows(1);
+<a class="jxr_linenumber" name="421" href="#421">421</a> 				<em class="jxr_comment">// mainPanel.setPreferredSize(new Dimension(500,100));</em>
+<a class="jxr_linenumber" name="422" href="#422">422</a> 				mainPanel.setSize(<strong class="jxr_keyword">new</strong> Dimension(500, 125));
+<a class="jxr_linenumber" name="423" href="#423">423</a> 
+<a class="jxr_linenumber" name="424" href="#424">424</a> 			}
+<a class="jxr_linenumber" name="425" href="#425">425</a> 		}
+<a class="jxr_linenumber" name="426" href="#426">426</a> 	}
+<a class="jxr_linenumber" name="427" href="#427">427</a> }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+
