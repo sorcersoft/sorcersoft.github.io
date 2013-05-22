@@ -182,383 +182,384 @@
 <a class="jxr_linenumber" name="172" href="#172">172</a> 				
 <a class="jxr_linenumber" name="173" href="#173">173</a> 			} <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="174" href="#174">174</a> 				envFile = SORCER_ENV_FILENAME;
-<a class="jxr_linenumber" name="175" href="#175">175</a> 				System.setProperty(S_KEY_SORCER_ENV, envFile);
-<a class="jxr_linenumber" name="176" href="#176">176</a> 				props = loadProperties(envFile);
-<a class="jxr_linenumber" name="177" href="#177">177</a> 				update(props);
-<a class="jxr_linenumber" name="178" href="#178">178</a> 				envFrom = <span class="jxr_string">"(Sorcer resource)"</span>;
-<a class="jxr_linenumber" name="179" href="#179">179</a> 			}
-<a class="jxr_linenumber" name="180" href="#180">180</a> 			logger.fine(<span class="jxr_string">"SORCER env properties:\n"</span>
-<a class="jxr_linenumber" name="181" href="#181">181</a> 					+ GenericUtil.getPropertiesString(props));
-<a class="jxr_linenumber" name="182" href="#182">182</a> 
-<a class="jxr_linenumber" name="183" href="#183">183</a> 		} <strong class="jxr_keyword">catch</strong> (Throwable t) {
-<a class="jxr_linenumber" name="184" href="#184">184</a> 			logger.throwing(
-<a class="jxr_linenumber" name="185" href="#185">185</a> 					SorcerEnv.<strong class="jxr_keyword">class</strong>.getName(),
-<a class="jxr_linenumber" name="186" href="#186">186</a> 					<span class="jxr_string">"Unable to find/load SORCER environment configuration files"</span>,
-<a class="jxr_linenumber" name="187" href="#187">187</a> 					t);
-<a class="jxr_linenumber" name="188" href="#188">188</a> 		}
-<a class="jxr_linenumber" name="189" href="#189">189</a> 	}
-<a class="jxr_linenumber" name="190" href="#190">190</a> 	
-<a class="jxr_linenumber" name="191" href="#191">191</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="192" href="#192">192</a> <em class="jxr_javadoccomment">	 * Tries to load properties from a &lt;code&gt;filename&lt;/code&gt;, first in a local</em>
-<a class="jxr_linenumber" name="193" href="#193">193</a> <em class="jxr_javadoccomment">	 * directory. If there is no file in the local directory then load the file</em>
-<a class="jxr_linenumber" name="194" href="#194">194</a> <em class="jxr_javadoccomment">	 * from the classpath at sorcer/util/sorcer.env.</em>
-<a class="jxr_linenumber" name="195" href="#195">195</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="196" href="#196">196</a> <em class="jxr_javadoccomment">	 * @throws IOException</em>
-<a class="jxr_linenumber" name="197" href="#197">197</a> <em class="jxr_javadoccomment">	 * @throws ConfigurationException</em>
-<a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="199" href="#199">199</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties loadProperties(String filename)
-<a class="jxr_linenumber" name="200" href="#200">200</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
-<a class="jxr_linenumber" name="201" href="#201">201</a> 		Properties properties = <strong class="jxr_keyword">new</strong> Properties();
-<a class="jxr_linenumber" name="202" href="#202">202</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="203" href="#203">203</a> 			<em class="jxr_comment">// Try in user home directory first</em>
-<a class="jxr_linenumber" name="204" href="#204">204</a> 			properties.load((<strong class="jxr_keyword">new</strong> FileInputStream(<strong class="jxr_keyword">new</strong> File(filename))));
-<a class="jxr_linenumber" name="205" href="#205">205</a> 			logger.fine(<span class="jxr_string">"loaded properties from: "</span> + filename);
-<a class="jxr_linenumber" name="206" href="#206">206</a> 
-<a class="jxr_linenumber" name="207" href="#207">207</a> 		} <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="208" href="#208">208</a> 			<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="209" href="#209">209</a> 				<em class="jxr_comment">// try to look for sorcer.env in SORCER_HOME/configs</em>
-<a class="jxr_linenumber" name="210" href="#210">210</a> 				properties.load((<strong class="jxr_keyword">new</strong> FileInputStream(<strong class="jxr_keyword">new</strong> File(System.getenv(<span class="jxr_string">"SORCER_HOME"</span>)+<span class="jxr_string">"/configs/"</span> + filename))));
-<a class="jxr_linenumber" name="211" href="#211">211</a> 				logger.fine(<span class="jxr_string">"loaded properties from: "</span> + System.getenv(<span class="jxr_string">"SORCER_HOME"</span>) +<span class="jxr_string">"/configs/"</span> + filename);
-<a class="jxr_linenumber" name="212" href="#212">212</a> 			} <strong class="jxr_keyword">catch</strong> (Exception ee) {
-<a class="jxr_linenumber" name="213" href="#213">213</a> 				<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="214" href="#214">214</a> 					<em class="jxr_comment">// No file give, try as resource sorcer/util/sorcer.env</em>
-<a class="jxr_linenumber" name="215" href="#215">215</a> 					InputStream stream = SorcerEnv.<strong class="jxr_keyword">class</strong>.getResourceAsStream(filename);
-<a class="jxr_linenumber" name="216" href="#216">216</a> 					<strong class="jxr_keyword">if</strong> (stream != <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="217" href="#217">217</a> 						properties.load(stream);
-<a class="jxr_linenumber" name="218" href="#218">218</a> 					<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="219" href="#219">219</a> 						logger.severe(<span class="jxr_string">"could not load properties as Sorcer resource file&gt;"</span>
-<a class="jxr_linenumber" name="220" href="#220">220</a> 								+ filename + <span class="jxr_string">"&lt;"</span> );
-<a class="jxr_linenumber" name="221" href="#221">221</a> 				} <strong class="jxr_keyword">catch</strong> (Throwable t2) {
-<a class="jxr_linenumber" name="222" href="#222">222</a> 					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a>(e);
-<a class="jxr_linenumber" name="223" href="#223">223</a> 				}
-<a class="jxr_linenumber" name="224" href="#224">224</a> 			}
-<a class="jxr_linenumber" name="225" href="#225">225</a> 		}
-<a class="jxr_linenumber" name="226" href="#226">226</a> 		reconcileProperties(properties);
-<a class="jxr_linenumber" name="227" href="#227">227</a> 
-<a class="jxr_linenumber" name="228" href="#228">228</a> 		<strong class="jxr_keyword">return</strong> properties;
-<a class="jxr_linenumber" name="229" href="#229">229</a> 	}
-<a class="jxr_linenumber" name="230" href="#230">230</a> 
-<a class="jxr_linenumber" name="231" href="#231">231</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> reconcileProperties(Properties properties)
-<a class="jxr_linenumber" name="232" href="#232">232</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
-<a class="jxr_linenumber" name="233" href="#233">233</a> 
-<a class="jxr_linenumber" name="234" href="#234">234</a> 		update(properties);
-<a class="jxr_linenumber" name="235" href="#235">235</a> 
-<a class="jxr_linenumber" name="236" href="#236">236</a> 		<em class="jxr_comment">// set the document root for HTTP server either for provider or</em>
-<a class="jxr_linenumber" name="237" href="#237">237</a> 		<em class="jxr_comment">// requestor</em>
-<a class="jxr_linenumber" name="238" href="#238">238</a> 
-<a class="jxr_linenumber" name="239" href="#239">239</a> 		String rootDir = <strong class="jxr_keyword">null</strong>, dataDir = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="240" href="#240">240</a> 		rootDir = properties.getProperty(P_DATA_ROOT_DIR);
-<a class="jxr_linenumber" name="241" href="#241">241</a> 		dataDir = properties.getProperty(P_DATA_DIR);
-<a class="jxr_linenumber" name="242" href="#242">242</a> 		<strong class="jxr_keyword">if</strong> (rootDir != <strong class="jxr_keyword">null</strong> &amp;&amp; dataDir != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="243" href="#243">243</a> 			System.setProperty(DOC_ROOT_DIR, rootDir + File.separator + dataDir);
-<a class="jxr_linenumber" name="244" href="#244">244</a> 		} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="245" href="#245">245</a> 			rootDir = properties.getProperty(R_DATA_ROOT_DIR);
-<a class="jxr_linenumber" name="246" href="#246">246</a> 			dataDir = properties.getProperty(R_DATA_DIR);
-<a class="jxr_linenumber" name="247" href="#247">247</a> 			<strong class="jxr_keyword">if</strong> (rootDir != <strong class="jxr_keyword">null</strong> &amp;&amp; dataDir != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="248" href="#248">248</a> 				System.setProperty(DOC_ROOT_DIR, rootDir + File.separator
-<a class="jxr_linenumber" name="249" href="#249">249</a> 						+ dataDir);
-<a class="jxr_linenumber" name="250" href="#250">250</a> 			}
-<a class="jxr_linenumber" name="251" href="#251">251</a> 		}
-<a class="jxr_linenumber" name="252" href="#252">252</a> 		dataDir = properties.getProperty(P_SCRATCH_DIR);
-<a class="jxr_linenumber" name="253" href="#253">253</a> 		<strong class="jxr_keyword">if</strong> (dataDir != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="254" href="#254">254</a> 			System.setProperty(SCRATCH_DIR, dataDir);
-<a class="jxr_linenumber" name="255" href="#255">255</a> 		} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="256" href="#256">256</a> 			dataDir = properties.getProperty(R_SCRATCH_DIR);
-<a class="jxr_linenumber" name="257" href="#257">257</a> 			<strong class="jxr_keyword">if</strong> (dataDir != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="258" href="#258">258</a> 				System.setProperty(SCRATCH_DIR, dataDir);
-<a class="jxr_linenumber" name="259" href="#259">259</a> 			}
-<a class="jxr_linenumber" name="260" href="#260">260</a> 		}
-<a class="jxr_linenumber" name="261" href="#261">261</a> 
-<a class="jxr_linenumber" name="262" href="#262">262</a> 		String httpInterface = <strong class="jxr_keyword">null</strong>, httpPort = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="263" href="#263">263</a> 		httpInterface = properties.getProperty(P_DATA_SERVER_INTERFACE);
-<a class="jxr_linenumber" name="264" href="#264">264</a> 		httpPort = properties.getProperty(P_DATA_SERVER_PORT);
-<a class="jxr_linenumber" name="265" href="#265">265</a> 		<strong class="jxr_keyword">if</strong> (httpInterface != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="266" href="#266">266</a> 			System.setProperty(DATA_SERVER_INTERFACE, httpInterface);
-<a class="jxr_linenumber" name="267" href="#267">267</a> 			System.setProperty(DATA_SERVER_PORT, httpPort);
-<a class="jxr_linenumber" name="268" href="#268">268</a> 		} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="269" href="#269">269</a> 			httpInterface = properties.getProperty(R_DATA_SERVER_INTERFACE);
-<a class="jxr_linenumber" name="270" href="#270">270</a> 			httpPort = properties.getProperty(R_DATA_SERVER_PORT);
-<a class="jxr_linenumber" name="271" href="#271">271</a> 			<strong class="jxr_keyword">if</strong> (httpInterface != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="272" href="#272">272</a> 				System.setProperty(DATA_SERVER_INTERFACE, httpInterface);
-<a class="jxr_linenumber" name="273" href="#273">273</a> 				System.setProperty(DATA_SERVER_PORT, httpPort);
-<a class="jxr_linenumber" name="274" href="#274">274</a> 			}
-<a class="jxr_linenumber" name="275" href="#275">275</a> 		}
-<a class="jxr_linenumber" name="276" href="#276">276</a> 	}
-<a class="jxr_linenumber" name="277" href="#277">277</a> 	
-<a class="jxr_linenumber" name="278" href="#278">278</a> 
-<a class="jxr_linenumber" name="279" href="#279">279</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties loadProperties(InputStream inputStream)
-<a class="jxr_linenumber" name="280" href="#280">280</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
-<a class="jxr_linenumber" name="281" href="#281">281</a> 		Properties properties = <strong class="jxr_keyword">new</strong> Properties();
-<a class="jxr_linenumber" name="282" href="#282">282</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="283" href="#283">283</a> 			properties.load(inputStream);
-<a class="jxr_linenumber" name="284" href="#284">284</a> 		} <strong class="jxr_keyword">catch</strong> (IOException e) {
-<a class="jxr_linenumber" name="285" href="#285">285</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a>(e);
-<a class="jxr_linenumber" name="286" href="#286">286</a> 		}
-<a class="jxr_linenumber" name="287" href="#287">287</a> 		reconcileProperties(properties);
-<a class="jxr_linenumber" name="288" href="#288">288</a> 		<strong class="jxr_keyword">return</strong> properties;
-<a class="jxr_linenumber" name="289" href="#289">289</a> 	}
-<a class="jxr_linenumber" name="290" href="#290">290</a> 
-<a class="jxr_linenumber" name="291" href="#291">291</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties loadPropertiesNoException(String filename) {
-<a class="jxr_linenumber" name="292" href="#292">292</a> 		Properties props = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="293" href="#293">293</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="294" href="#294">294</a> 			props = loadProperties(filename);
-<a class="jxr_linenumber" name="295" href="#295">295</a> 		} <strong class="jxr_keyword">catch</strong> (ConfigurationException e) {
-<a class="jxr_linenumber" name="296" href="#296">296</a> 			logger.warning(e.toString());
-<a class="jxr_linenumber" name="297" href="#297">297</a> 			e.printStackTrace();
-<a class="jxr_linenumber" name="298" href="#298">298</a> 		}
-<a class="jxr_linenumber" name="299" href="#299">299</a> 		<strong class="jxr_keyword">return</strong> props;
-<a class="jxr_linenumber" name="300" href="#300">300</a> 	}
-<a class="jxr_linenumber" name="301" href="#301">301</a> 	
-<a class="jxr_linenumber" name="302" href="#302">302</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="303" href="#303">303</a> <em class="jxr_javadoccomment">	 * Overwrites defined properties in sorcer.env (sorcer.home,</em>
-<a class="jxr_linenumber" name="304" href="#304">304</a> <em class="jxr_javadoccomment">	 * provider.webster.interface, provider.webster.port) with those defined as</em>
-<a class="jxr_linenumber" name="305" href="#305">305</a> <em class="jxr_javadoccomment">	 * JVM system properties.</em>
-<a class="jxr_linenumber" name="306" href="#306">306</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="307" href="#307">307</a> <em class="jxr_javadoccomment">	 * @param properties</em>
-<a class="jxr_linenumber" name="308" href="#308">308</a> <em class="jxr_javadoccomment">	 * @throws ConfigurationException</em>
-<a class="jxr_linenumber" name="309" href="#309">309</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="310" href="#310">310</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> update(Properties properties)
-<a class="jxr_linenumber" name="311" href="#311">311</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
-<a class="jxr_linenumber" name="312" href="#312">312</a> 		Enumeration&lt;?&gt; e = properties.propertyNames();
-<a class="jxr_linenumber" name="313" href="#313">313</a> 		String key, value, evalue = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="314" href="#314">314</a> 		String pattern = <span class="jxr_string">"${"</span> + <span class="jxr_string">"localhost"</span> + <span class="jxr_string">"}"</span>;
-<a class="jxr_linenumber" name="315" href="#315">315</a> <em class="jxr_comment">//		String userDirPattern = "${user.home}";</em>
-<a class="jxr_linenumber" name="316" href="#316">316</a> 		<em class="jxr_comment">// first substitute for this localhost</em>
-<a class="jxr_linenumber" name="317" href="#317">317</a> 		<strong class="jxr_keyword">while</strong> (e.hasMoreElements()) {
-<a class="jxr_linenumber" name="318" href="#318">318</a> 			key = (String) e.nextElement();
-<a class="jxr_linenumber" name="319" href="#319">319</a> 			value = properties.getProperty(key);
-<a class="jxr_linenumber" name="320" href="#320">320</a> 			<strong class="jxr_keyword">if</strong> (value.equals(pattern)) {
-<a class="jxr_linenumber" name="321" href="#321">321</a> 				<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="322" href="#322">322</a> 					value = getHostAddress();
-<a class="jxr_linenumber" name="323" href="#323">323</a> 				} <strong class="jxr_keyword">catch</strong> (UnknownHostException ex) {
-<a class="jxr_linenumber" name="324" href="#324">324</a> 					ex.printStackTrace();
-<a class="jxr_linenumber" name="325" href="#325">325</a> 				}
-<a class="jxr_linenumber" name="326" href="#326">326</a> 				properties.put(key, value);
-<a class="jxr_linenumber" name="327" href="#327">327</a> 			}
-<a class="jxr_linenumber" name="328" href="#328">328</a> 	<em class="jxr_comment">/*<em class="jxr_comment">		if (value.equals(userDirPattern)) {</em></em>
-<a class="jxr_linenumber" name="329" href="#329">329</a> <em class="jxr_comment">				value = System.getProperty("user.home");				</em>
-<a class="jxr_linenumber" name="330" href="#330">330</a> <em class="jxr_comment">				properties.put(key, value);</em>
-<a class="jxr_linenumber" name="331" href="#331">331</a> <em class="jxr_comment">			}*/</em>
-<a class="jxr_linenumber" name="332" href="#332">332</a> 		}
-<a class="jxr_linenumber" name="333" href="#333">333</a> 		<em class="jxr_comment">// now substitute other entries accordingly </em>
-<a class="jxr_linenumber" name="334" href="#334">334</a> 		e = properties.propertyNames();
-<a class="jxr_linenumber" name="335" href="#335">335</a> 		<strong class="jxr_keyword">while</strong> (e.hasMoreElements()) {
-<a class="jxr_linenumber" name="336" href="#336">336</a> 			key = (String) e.nextElement();
-<a class="jxr_linenumber" name="337" href="#337">337</a> 			value = properties.getProperty(key);
-<a class="jxr_linenumber" name="338" href="#338">338</a> 			evalue = expandStringProperties(value, <strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="339" href="#339">339</a> 			<em class="jxr_comment">// try SORCER env properties</em>
-<a class="jxr_linenumber" name="340" href="#340">340</a> 			<strong class="jxr_keyword">if</strong> (evalue == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="341" href="#341">341</a> 				evalue = expandStringProperties(value, false);
-<a class="jxr_linenumber" name="342" href="#342">342</a> 			<strong class="jxr_keyword">if</strong> (evalue != <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="343" href="#343">343</a> 				properties.put(key, evalue);
-<a class="jxr_linenumber" name="344" href="#344">344</a> 			<strong class="jxr_keyword">if</strong> (value.equals(pattern)) {
-<a class="jxr_linenumber" name="345" href="#345">345</a> 				<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="346" href="#346">346</a> 					evalue = getHostAddress();
-<a class="jxr_linenumber" name="347" href="#347">347</a> 				} <strong class="jxr_keyword">catch</strong> (UnknownHostException e1) {
-<a class="jxr_linenumber" name="348" href="#348">348</a> 					e1.printStackTrace();
-<a class="jxr_linenumber" name="349" href="#349">349</a> 				}
-<a class="jxr_linenumber" name="350" href="#350">350</a> 				properties.put(key, evalue);
-<a class="jxr_linenumber" name="351" href="#351">351</a> 			}
-<a class="jxr_linenumber" name="352" href="#352">352</a> 		}
-<a class="jxr_linenumber" name="353" href="#353">353</a> 	}
-<a class="jxr_linenumber" name="354" href="#354">354</a> 		
-<a class="jxr_linenumber" name="355" href="#355">355</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="356" href="#356">356</a> <em class="jxr_javadoccomment">	 * Return the SORCER environment properties loaded by default from the</em>
-<a class="jxr_linenumber" name="357" href="#357">357</a> <em class="jxr_javadoccomment">	 * 'sorcer.env' file.</em>
-<a class="jxr_linenumber" name="358" href="#358">358</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="359" href="#359">359</a> <em class="jxr_javadoccomment">	 * @return The SORCER environment properties</em>
-<a class="jxr_linenumber" name="360" href="#360">360</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="361" href="#361">361</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties getProperties() {
-<a class="jxr_linenumber" name="362" href="#362">362</a> 		<strong class="jxr_keyword">return</strong> props;
-<a class="jxr_linenumber" name="363" href="#363">363</a> 	}
-<a class="jxr_linenumber" name="364" href="#364">364</a> 
-<a class="jxr_linenumber" name="365" href="#365">365</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="366" href="#366">366</a> <em class="jxr_javadoccomment">	 * Expands properties embedded in a string with ${some.property.name}. Also</em>
-<a class="jxr_linenumber" name="367" href="#367">367</a> <em class="jxr_javadoccomment">	 * treats ${/} as ${file.separator}.</em>
-<a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="369" href="#369">369</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String expandStringProperties(String value,
-<a class="jxr_linenumber" name="370" href="#370">370</a> 			<strong class="jxr_keyword">boolean</strong> isSystemProperty) <strong class="jxr_keyword">throws</strong> ConfigurationException {
-<a class="jxr_linenumber" name="371" href="#371">371</a> 		<strong class="jxr_keyword">int</strong> p = value.indexOf(<span class="jxr_string">"${"</span>, 0);
-<a class="jxr_linenumber" name="372" href="#372">372</a> 		<strong class="jxr_keyword">if</strong> (p == -1) {
-<a class="jxr_linenumber" name="373" href="#373">373</a> 			<strong class="jxr_keyword">return</strong> value;
-<a class="jxr_linenumber" name="374" href="#374">374</a> 		}
-<a class="jxr_linenumber" name="375" href="#375">375</a> 		<strong class="jxr_keyword">int</strong> max = value.length();
-<a class="jxr_linenumber" name="376" href="#376">376</a> 		StringBuffer sb = <strong class="jxr_keyword">new</strong> StringBuffer(max);
-<a class="jxr_linenumber" name="377" href="#377">377</a> 		<strong class="jxr_keyword">int</strong> i = 0; <em class="jxr_comment">/*<em class="jxr_comment"> Index of last character we copied */</em></em>
-<a class="jxr_linenumber" name="378" href="#378">378</a> 		<strong class="jxr_keyword">while</strong> (<strong class="jxr_keyword">true</strong>) {
-<a class="jxr_linenumber" name="379" href="#379">379</a> 			<strong class="jxr_keyword">if</strong> (p &gt; i) {
-<a class="jxr_linenumber" name="380" href="#380">380</a> 				<em class="jxr_comment">/*<em class="jxr_comment"> Copy in anything before the special stuff */</em></em>
-<a class="jxr_linenumber" name="381" href="#381">381</a> 				sb.append(value.substring(i, p));
-<a class="jxr_linenumber" name="382" href="#382">382</a> 				i = p;
-<a class="jxr_linenumber" name="383" href="#383">383</a> 			}
-<a class="jxr_linenumber" name="384" href="#384">384</a> 			<strong class="jxr_keyword">int</strong> pe = value.indexOf('}', p + 2);
-<a class="jxr_linenumber" name="385" href="#385">385</a> 			<strong class="jxr_keyword">if</strong> (pe == -1) {
-<a class="jxr_linenumber" name="386" href="#386">386</a> 				<em class="jxr_comment">/*<em class="jxr_comment"> No matching '}' found, just add in as normal text */</em></em>
-<a class="jxr_linenumber" name="387" href="#387">387</a> 				sb.append(value.substring(p, max));
-<a class="jxr_linenumber" name="388" href="#388">388</a> 				<strong class="jxr_keyword">break</strong>;
-<a class="jxr_linenumber" name="389" href="#389">389</a> 			}
-<a class="jxr_linenumber" name="390" href="#390">390</a> 			String prop = value.substring(p + 2, pe);
-<a class="jxr_linenumber" name="391" href="#391">391</a> 			<strong class="jxr_keyword">if</strong> (prop.equals(<span class="jxr_string">"/"</span>)) {
-<a class="jxr_linenumber" name="392" href="#392">392</a> 				sb.append(File.separatorChar);
-<a class="jxr_linenumber" name="393" href="#393">393</a> 			} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="394" href="#394">394</a> 				<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="395" href="#395">395</a> 					String val = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="396" href="#396">396</a> 					<strong class="jxr_keyword">if</strong> (isSystemProperty) {
-<a class="jxr_linenumber" name="397" href="#397">397</a> 						val = prop.length() == 0 ? <strong class="jxr_keyword">null</strong> : System
-<a class="jxr_linenumber" name="398" href="#398">398</a> 								.getProperty(prop);
-<a class="jxr_linenumber" name="399" href="#399">399</a> 						<strong class="jxr_keyword">if</strong> (val == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="400" href="#400">400</a> 							<em class="jxr_comment">// try System env</em>
-<a class="jxr_linenumber" name="401" href="#401">401</a> 							val = prop.length() == 0 ? <strong class="jxr_keyword">null</strong> : System
-<a class="jxr_linenumber" name="402" href="#402">402</a> 									.getenv(prop);
-<a class="jxr_linenumber" name="403" href="#403">403</a> 						}
-<a class="jxr_linenumber" name="404" href="#404">404</a> 					} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="405" href="#405">405</a> 						val = prop.length() == 0 ? <strong class="jxr_keyword">null</strong> : props
-<a class="jxr_linenumber" name="406" href="#406">406</a> 								.getProperty(prop);
-<a class="jxr_linenumber" name="407" href="#407">407</a> 					}
-<a class="jxr_linenumber" name="408" href="#408">408</a> 					<strong class="jxr_keyword">if</strong> (val != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="409" href="#409">409</a> 						sb.append(val);
-<a class="jxr_linenumber" name="410" href="#410">410</a> 					} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="411" href="#411">411</a> 						<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="412" href="#412">412</a> 					}
-<a class="jxr_linenumber" name="413" href="#413">413</a> 				} <strong class="jxr_keyword">catch</strong> (SecurityException e) {
-<a class="jxr_linenumber" name="414" href="#414">414</a> 					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a>(e);
-<a class="jxr_linenumber" name="415" href="#415">415</a> 				}
-<a class="jxr_linenumber" name="416" href="#416">416</a> 			}
-<a class="jxr_linenumber" name="417" href="#417">417</a> 			i = pe + 1;
-<a class="jxr_linenumber" name="418" href="#418">418</a> 			p = value.indexOf(<span class="jxr_string">"${"</span>, i);
-<a class="jxr_linenumber" name="419" href="#419">419</a> 			<strong class="jxr_keyword">if</strong> (p == -1) {
-<a class="jxr_linenumber" name="420" href="#420">420</a> 				<em class="jxr_comment">/*<em class="jxr_comment"> No more to expand -- copy in any extra. */</em></em>
-<a class="jxr_linenumber" name="421" href="#421">421</a> 				<strong class="jxr_keyword">if</strong> (i &lt; max) {
-<a class="jxr_linenumber" name="422" href="#422">422</a> 					sb.append(value.substring(i, max));
-<a class="jxr_linenumber" name="423" href="#423">423</a> 				}
-<a class="jxr_linenumber" name="424" href="#424">424</a> 				<strong class="jxr_keyword">break</strong>;
-<a class="jxr_linenumber" name="425" href="#425">425</a> 			}
-<a class="jxr_linenumber" name="426" href="#426">426</a> 		}
-<a class="jxr_linenumber" name="427" href="#427">427</a> 		<strong class="jxr_keyword">return</strong> sb.toString();
-<a class="jxr_linenumber" name="428" href="#428">428</a> 	}
-<a class="jxr_linenumber" name="429" href="#429">429</a> 	
-<a class="jxr_linenumber" name="430" href="#430">430</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="431" href="#431">431</a> <em class="jxr_javadoccomment">	 * Return the local host address using</em>
-<a class="jxr_linenumber" name="432" href="#432">432</a> <em class="jxr_javadoccomment">	 * &lt;code&gt;java.net.InetAddress.getLocalHost().getHostAddress()&lt;/code&gt;</em>
-<a class="jxr_linenumber" name="433" href="#433">433</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="434" href="#434">434</a> <em class="jxr_javadoccomment">	 * @return The local host address</em>
-<a class="jxr_linenumber" name="435" href="#435">435</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
-<a class="jxr_linenumber" name="436" href="#436">436</a> <em class="jxr_javadoccomment">	 *             if no IP address for the local host could be found.</em>
-<a class="jxr_linenumber" name="437" href="#437">437</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="438" href="#438">438</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostAddress() <strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
-<a class="jxr_linenumber" name="439" href="#439">439</a> 		<strong class="jxr_keyword">return</strong> java.net.InetAddress.getLocalHost().getHostAddress();
-<a class="jxr_linenumber" name="440" href="#440">440</a> 	}
-<a class="jxr_linenumber" name="441" href="#441">441</a> 
-<a class="jxr_linenumber" name="442" href="#442">442</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="443" href="#443">443</a> <em class="jxr_javadoccomment">	 * Return the local host address for a passed in host using</em>
-<a class="jxr_linenumber" name="444" href="#444">444</a> <em class="jxr_javadoccomment">	 * {@link java.net.InetAddress#getByName(String)}</em>
-<a class="jxr_linenumber" name="445" href="#445">445</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="446" href="#446">446</a> <em class="jxr_javadoccomment">	 * @param name</em>
-<a class="jxr_linenumber" name="447" href="#447">447</a> <em class="jxr_javadoccomment">	 *            The name of the host to return</em>
-<a class="jxr_linenumber" name="448" href="#448">448</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="449" href="#449">449</a> <em class="jxr_javadoccomment">	 * @return The local host address</em>
-<a class="jxr_linenumber" name="450" href="#450">450</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="451" href="#451">451</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
-<a class="jxr_linenumber" name="452" href="#452">452</a> <em class="jxr_javadoccomment">	 *             if no IP address for the host name could be found.</em>
-<a class="jxr_linenumber" name="453" href="#453">453</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="454" href="#454">454</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostAddress(String name)
-<a class="jxr_linenumber" name="455" href="#455">455</a> 			<strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
-<a class="jxr_linenumber" name="456" href="#456">456</a> 		<strong class="jxr_keyword">return</strong> java.net.InetAddress.getByName(name).getHostAddress();
-<a class="jxr_linenumber" name="457" href="#457">457</a> 	}
-<a class="jxr_linenumber" name="458" href="#458">458</a> 	
-<a class="jxr_linenumber" name="459" href="#459">459</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="460" href="#460">460</a> <em class="jxr_javadoccomment">	 * Return the local host name</em>
-<a class="jxr_linenumber" name="461" href="#461">461</a> <em class="jxr_javadoccomment">	 * &lt;code&gt;java.net.InetAddress.getLocalHost().getHostName()&lt;/code&gt;</em>
-<a class="jxr_linenumber" name="462" href="#462">462</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="463" href="#463">463</a> <em class="jxr_javadoccomment">	 * @return The local host name</em>
-<a class="jxr_linenumber" name="464" href="#464">464</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
-<a class="jxr_linenumber" name="465" href="#465">465</a> <em class="jxr_javadoccomment">	 *             if no hostname for the local host could be found.</em>
-<a class="jxr_linenumber" name="466" href="#466">466</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="467" href="#467">467</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostName() <strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
-<a class="jxr_linenumber" name="468" href="#468">468</a> 		<strong class="jxr_keyword">return</strong> java.net.InetAddress.getLocalHost().getCanonicalHostName();
-<a class="jxr_linenumber" name="469" href="#469">469</a> 		<em class="jxr_comment">// return java.net.InetAddress.getLocalHost().getHostName();</em>
-<a class="jxr_linenumber" name="470" href="#470">470</a> 	}
-<a class="jxr_linenumber" name="471" href="#471">471</a> 
-<a class="jxr_linenumber" name="472" href="#472">472</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String[]getWebsterRoots(){
-<a class="jxr_linenumber" name="473" href="#473">473</a> 		String websterRootStr = System.getProperty(SorcerConstants.WEBSTER_ROOTS, getRepoDir());
-<a class="jxr_linenumber" name="474" href="#474">474</a> 		<strong class="jxr_keyword">return</strong> websterRootStr.split(<span class="jxr_string">";"</span>);
-<a class="jxr_linenumber" name="475" href="#475">475</a> 	}
-<a class="jxr_linenumber" name="476" href="#476">476</a> 
-<a class="jxr_linenumber" name="477" href="#477">477</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="478" href="#478">478</a> <em class="jxr_javadoccomment">	 * Return the local host address based on the value of a system property.</em>
-<a class="jxr_linenumber" name="479" href="#479">479</a> <em class="jxr_javadoccomment">	 * using {@link java.net.InetAddress#getByName(String)}. If the system</em>
-<a class="jxr_linenumber" name="480" href="#480">480</a> <em class="jxr_javadoccomment">	 * property is not resolvable, return the default host address obtained from</em>
-<a class="jxr_linenumber" name="481" href="#481">481</a> <em class="jxr_javadoccomment">	 * {@link java.net.InetAddress#getLocalHost()}</em>
-<a class="jxr_linenumber" name="482" href="#482">482</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="483" href="#483">483</a> <em class="jxr_javadoccomment">	 * @param property</em>
-<a class="jxr_linenumber" name="484" href="#484">484</a> <em class="jxr_javadoccomment">	 *            The property name to use</em>
-<a class="jxr_linenumber" name="485" href="#485">485</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="486" href="#486">486</a> <em class="jxr_javadoccomment">	 * @return The local host address</em>
-<a class="jxr_linenumber" name="487" href="#487">487</a> <em class="jxr_javadoccomment">	 * </em>
-<a class="jxr_linenumber" name="488" href="#488">488</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
-<a class="jxr_linenumber" name="489" href="#489">489</a> <em class="jxr_javadoccomment">	 *             if no IP address for the host name could be found.</em>
-<a class="jxr_linenumber" name="490" href="#490">490</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="491" href="#491">491</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostAddressFromProperty(String property)
-<a class="jxr_linenumber" name="492" href="#492">492</a> 			<strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
-<a class="jxr_linenumber" name="493" href="#493">493</a> 		String host = getHostAddress();
-<a class="jxr_linenumber" name="494" href="#494">494</a> 		String value = System.getProperty(property);
-<a class="jxr_linenumber" name="495" href="#495">495</a> 		<strong class="jxr_keyword">if</strong> (value != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="496" href="#496">496</a> 			host = java.net.InetAddress.getByName(value).getHostAddress();
-<a class="jxr_linenumber" name="497" href="#497">497</a> 		}
-<a class="jxr_linenumber" name="498" href="#498">498</a> 		<strong class="jxr_keyword">return</strong> (host);
-<a class="jxr_linenumber" name="499" href="#499">499</a> 	}
-<a class="jxr_linenumber" name="500" href="#500">500</a> 
-<a class="jxr_linenumber" name="501" href="#501">501</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="502" href="#502">502</a> <em class="jxr_javadoccomment">     * &lt;p&gt;</em>
-<a class="jxr_linenumber" name="503" href="#503">503</a> <em class="jxr_javadoccomment">     * Return &lt;code&gt;true&lt;/code&gt; is a SORCER {@link sorcer.provider.boot.Booter}</em>
-<a class="jxr_linenumber" name="504" href="#504">504</a> <em class="jxr_javadoccomment">     * is used, otherwise &lt;code&gt;false&lt;/code&gt;,</em>
-<a class="jxr_linenumber" name="505" href="#505">505</a> <em class="jxr_javadoccomment">     * &lt;/p&gt;</em>
-<a class="jxr_linenumber" name="506" href="#506">506</a> <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="507" href="#507">507</a> <em class="jxr_javadoccomment">     * @return the bootable</em>
-<a class="jxr_linenumber" name="508" href="#508">508</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="509" href="#509">509</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> isBootable() {
-<a class="jxr_linenumber" name="510" href="#510">510</a>         <strong class="jxr_keyword">return</strong> bootable;
-<a class="jxr_linenumber" name="511" href="#511">511</a>     }
-<a class="jxr_linenumber" name="512" href="#512">512</a> 
-<a class="jxr_linenumber" name="513" href="#513">513</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="514" href="#514">514</a> <em class="jxr_javadoccomment">     * &lt;p&gt;</em>
-<a class="jxr_linenumber" name="515" href="#515">515</a> <em class="jxr_javadoccomment">     * Assigns &lt;code&gt;true&lt;/code&gt; by the {@link sorcer.boot.provider.Booter} when</em>
-<a class="jxr_linenumber" name="516" href="#516">516</a> <em class="jxr_javadoccomment">     * used.</em>
-<a class="jxr_linenumber" name="517" href="#517">517</a> <em class="jxr_javadoccomment">     * &lt;/p&gt;</em>
-<a class="jxr_linenumber" name="518" href="#518">518</a> <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="519" href="#519">519</a> <em class="jxr_javadoccomment">     * @param bootable</em>
-<a class="jxr_linenumber" name="520" href="#520">520</a> <em class="jxr_javadoccomment">     *            the bootable to set</em>
-<a class="jxr_linenumber" name="521" href="#521">521</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="522" href="#522">522</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setBootable(<strong class="jxr_keyword">boolean</strong> bootable) {
-<a class="jxr_linenumber" name="523" href="#523">523</a>         SorcerEnv.bootable = bootable;
-<a class="jxr_linenumber" name="524" href="#524">524</a>     }
-<a class="jxr_linenumber" name="525" href="#525">525</a> 
-<a class="jxr_linenumber" name="526" href="#526">526</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="527" href="#527">527</a> <em class="jxr_javadoccomment">	 * Library versions</em>
-<a class="jxr_linenumber" name="528" href="#528">528</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="529" href="#529">529</a> 	<em class="jxr_comment">/*<em class="jxr_comment">public static String getRiverVersion() {</em></em>
-<a class="jxr_linenumber" name="530" href="#530">530</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_RIVER, "2.2.1");</em>
-<a class="jxr_linenumber" name="531" href="#531">531</a> <em class="jxr_comment">	}</em>
-<a class="jxr_linenumber" name="532" href="#532">532</a> 
-<a class="jxr_linenumber" name="533" href="#533">533</a> <em class="jxr_comment">	public static String getRioVersion() {</em>
-<a class="jxr_linenumber" name="534" href="#534">534</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_RIO, "5.0-M2");</em>
-<a class="jxr_linenumber" name="535" href="#535">535</a> <em class="jxr_comment">	}</em>
-<a class="jxr_linenumber" name="536" href="#536">536</a> 
-<a class="jxr_linenumber" name="537" href="#537">537</a> <em class="jxr_comment">	public static String getBlitzVersion() {</em>
-<a class="jxr_linenumber" name="538" href="#538">538</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_BLITZ, "2.1.7");</em>
-<a class="jxr_linenumber" name="539" href="#539">539</a> <em class="jxr_comment">	}</em>
-<a class="jxr_linenumber" name="540" href="#540">540</a> 
-<a class="jxr_linenumber" name="541" href="#541">541</a> <em class="jxr_comment">	public static String getGroovyVersion() {</em>
-<a class="jxr_linenumber" name="542" href="#542">542</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_GROOVY, "2.1.2");</em>
-<a class="jxr_linenumber" name="543" href="#543">543</a> <em class="jxr_comment">	}</em>
-<a class="jxr_linenumber" name="544" href="#544">544</a> 
-<a class="jxr_linenumber" name="545" href="#545">545</a> <em class="jxr_comment">	public static String getSleepyCatVersion() {</em>
-<a class="jxr_linenumber" name="546" href="#546">546</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_SLEEPYCAT, "4.1.21");</em>
-<a class="jxr_linenumber" name="547" href="#547">547</a> <em class="jxr_comment">	} */</em>
-<a class="jxr_linenumber" name="548" href="#548">548</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getSorcerVersion() {
-<a class="jxr_linenumber" name="549" href="#549">549</a> 		<strong class="jxr_keyword">return</strong> props.getProperty(SorcerConstants.S_VERSION_SORCER, SORCER_VERSION);
-<a class="jxr_linenumber" name="550" href="#550">550</a> 	}
-<a class="jxr_linenumber" name="551" href="#551">551</a> }
+<a class="jxr_linenumber" name="175" href="#175">175</a> 				String envPath = getHomeDir() + <span class="jxr_string">"/configs/"</span> + envFile;
+<a class="jxr_linenumber" name="176" href="#176">176</a> 				System.setProperty(S_KEY_SORCER_ENV, envPath);
+<a class="jxr_linenumber" name="177" href="#177">177</a> 				props = loadProperties(envFile);
+<a class="jxr_linenumber" name="178" href="#178">178</a> 				update(props);
+<a class="jxr_linenumber" name="179" href="#179">179</a> 				envFrom = <span class="jxr_string">"(Sorcer resource)"</span>;
+<a class="jxr_linenumber" name="180" href="#180">180</a> 			}
+<a class="jxr_linenumber" name="181" href="#181">181</a> 			logger.fine(<span class="jxr_string">"SORCER env properties:\n"</span>
+<a class="jxr_linenumber" name="182" href="#182">182</a> 					+ GenericUtil.getPropertiesString(props));
+<a class="jxr_linenumber" name="183" href="#183">183</a> 
+<a class="jxr_linenumber" name="184" href="#184">184</a> 		} <strong class="jxr_keyword">catch</strong> (Throwable t) {
+<a class="jxr_linenumber" name="185" href="#185">185</a> 			logger.throwing(
+<a class="jxr_linenumber" name="186" href="#186">186</a> 					SorcerEnv.<strong class="jxr_keyword">class</strong>.getName(),
+<a class="jxr_linenumber" name="187" href="#187">187</a> 					<span class="jxr_string">"Unable to find/load SORCER environment configuration files"</span>,
+<a class="jxr_linenumber" name="188" href="#188">188</a> 					t);
+<a class="jxr_linenumber" name="189" href="#189">189</a> 		}
+<a class="jxr_linenumber" name="190" href="#190">190</a> 	}
+<a class="jxr_linenumber" name="191" href="#191">191</a> 	
+<a class="jxr_linenumber" name="192" href="#192">192</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="193" href="#193">193</a> <em class="jxr_javadoccomment">	 * Tries to load properties from a &lt;code&gt;filename&lt;/code&gt;, first in a local</em>
+<a class="jxr_linenumber" name="194" href="#194">194</a> <em class="jxr_javadoccomment">	 * directory. If there is no file in the local directory then load the file</em>
+<a class="jxr_linenumber" name="195" href="#195">195</a> <em class="jxr_javadoccomment">	 * from the classpath at sorcer/util/sorcer.env.</em>
+<a class="jxr_linenumber" name="196" href="#196">196</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="197" href="#197">197</a> <em class="jxr_javadoccomment">	 * @throws IOException</em>
+<a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_javadoccomment">	 * @throws ConfigurationException</em>
+<a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="200" href="#200">200</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties loadProperties(String filename)
+<a class="jxr_linenumber" name="201" href="#201">201</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
+<a class="jxr_linenumber" name="202" href="#202">202</a> 		Properties properties = <strong class="jxr_keyword">new</strong> Properties();
+<a class="jxr_linenumber" name="203" href="#203">203</a> 		<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="204" href="#204">204</a> 			<em class="jxr_comment">// Try in user home directory first</em>
+<a class="jxr_linenumber" name="205" href="#205">205</a> 			properties.load((<strong class="jxr_keyword">new</strong> FileInputStream(<strong class="jxr_keyword">new</strong> File(filename))));
+<a class="jxr_linenumber" name="206" href="#206">206</a> 			logger.fine(<span class="jxr_string">"loaded properties from: "</span> + filename);
+<a class="jxr_linenumber" name="207" href="#207">207</a> 
+<a class="jxr_linenumber" name="208" href="#208">208</a> 		} <strong class="jxr_keyword">catch</strong> (Exception e) {
+<a class="jxr_linenumber" name="209" href="#209">209</a> 			<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="210" href="#210">210</a> 				<em class="jxr_comment">// try to look for sorcer.env in SORCER_HOME/configs</em>
+<a class="jxr_linenumber" name="211" href="#211">211</a> 				properties.load((<strong class="jxr_keyword">new</strong> FileInputStream(<strong class="jxr_keyword">new</strong> File(System.getenv(<span class="jxr_string">"SORCER_HOME"</span>)+<span class="jxr_string">"/configs/"</span> + filename))));
+<a class="jxr_linenumber" name="212" href="#212">212</a> 				logger.fine(<span class="jxr_string">"loaded properties from: "</span> + System.getenv(<span class="jxr_string">"SORCER_HOME"</span>) +<span class="jxr_string">"/configs/"</span> + filename);
+<a class="jxr_linenumber" name="213" href="#213">213</a> 			} <strong class="jxr_keyword">catch</strong> (Exception ee) {
+<a class="jxr_linenumber" name="214" href="#214">214</a> 				<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="215" href="#215">215</a> 					<em class="jxr_comment">// No file give, try as resource sorcer/util/sorcer.env</em>
+<a class="jxr_linenumber" name="216" href="#216">216</a> 					InputStream stream = SorcerEnv.<strong class="jxr_keyword">class</strong>.getResourceAsStream(filename);
+<a class="jxr_linenumber" name="217" href="#217">217</a> 					<strong class="jxr_keyword">if</strong> (stream != <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="218" href="#218">218</a> 						properties.load(stream);
+<a class="jxr_linenumber" name="219" href="#219">219</a> 					<strong class="jxr_keyword">else</strong>
+<a class="jxr_linenumber" name="220" href="#220">220</a> 						logger.severe(<span class="jxr_string">"could not load properties as Sorcer resource file&gt;"</span>
+<a class="jxr_linenumber" name="221" href="#221">221</a> 								+ filename + <span class="jxr_string">"&lt;"</span> );
+<a class="jxr_linenumber" name="222" href="#222">222</a> 				} <strong class="jxr_keyword">catch</strong> (Throwable t2) {
+<a class="jxr_linenumber" name="223" href="#223">223</a> 					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a>(e);
+<a class="jxr_linenumber" name="224" href="#224">224</a> 				}
+<a class="jxr_linenumber" name="225" href="#225">225</a> 			}
+<a class="jxr_linenumber" name="226" href="#226">226</a> 		}
+<a class="jxr_linenumber" name="227" href="#227">227</a> 		reconcileProperties(properties);
+<a class="jxr_linenumber" name="228" href="#228">228</a> 
+<a class="jxr_linenumber" name="229" href="#229">229</a> 		<strong class="jxr_keyword">return</strong> properties;
+<a class="jxr_linenumber" name="230" href="#230">230</a> 	}
+<a class="jxr_linenumber" name="231" href="#231">231</a> 
+<a class="jxr_linenumber" name="232" href="#232">232</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> reconcileProperties(Properties properties)
+<a class="jxr_linenumber" name="233" href="#233">233</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
+<a class="jxr_linenumber" name="234" href="#234">234</a> 
+<a class="jxr_linenumber" name="235" href="#235">235</a> 		update(properties);
+<a class="jxr_linenumber" name="236" href="#236">236</a> 
+<a class="jxr_linenumber" name="237" href="#237">237</a> 		<em class="jxr_comment">// set the document root for HTTP server either for provider or</em>
+<a class="jxr_linenumber" name="238" href="#238">238</a> 		<em class="jxr_comment">// requestor</em>
+<a class="jxr_linenumber" name="239" href="#239">239</a> 
+<a class="jxr_linenumber" name="240" href="#240">240</a> 		String rootDir = <strong class="jxr_keyword">null</strong>, dataDir = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="241" href="#241">241</a> 		rootDir = properties.getProperty(P_DATA_ROOT_DIR);
+<a class="jxr_linenumber" name="242" href="#242">242</a> 		dataDir = properties.getProperty(P_DATA_DIR);
+<a class="jxr_linenumber" name="243" href="#243">243</a> 		<strong class="jxr_keyword">if</strong> (rootDir != <strong class="jxr_keyword">null</strong> &amp;&amp; dataDir != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="244" href="#244">244</a> 			System.setProperty(DOC_ROOT_DIR, rootDir + File.separator + dataDir);
+<a class="jxr_linenumber" name="245" href="#245">245</a> 		} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="246" href="#246">246</a> 			rootDir = properties.getProperty(R_DATA_ROOT_DIR);
+<a class="jxr_linenumber" name="247" href="#247">247</a> 			dataDir = properties.getProperty(R_DATA_DIR);
+<a class="jxr_linenumber" name="248" href="#248">248</a> 			<strong class="jxr_keyword">if</strong> (rootDir != <strong class="jxr_keyword">null</strong> &amp;&amp; dataDir != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="249" href="#249">249</a> 				System.setProperty(DOC_ROOT_DIR, rootDir + File.separator
+<a class="jxr_linenumber" name="250" href="#250">250</a> 						+ dataDir);
+<a class="jxr_linenumber" name="251" href="#251">251</a> 			}
+<a class="jxr_linenumber" name="252" href="#252">252</a> 		}
+<a class="jxr_linenumber" name="253" href="#253">253</a> 		dataDir = properties.getProperty(P_SCRATCH_DIR);
+<a class="jxr_linenumber" name="254" href="#254">254</a> 		<strong class="jxr_keyword">if</strong> (dataDir != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="255" href="#255">255</a> 			System.setProperty(SCRATCH_DIR, dataDir);
+<a class="jxr_linenumber" name="256" href="#256">256</a> 		} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="257" href="#257">257</a> 			dataDir = properties.getProperty(R_SCRATCH_DIR);
+<a class="jxr_linenumber" name="258" href="#258">258</a> 			<strong class="jxr_keyword">if</strong> (dataDir != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="259" href="#259">259</a> 				System.setProperty(SCRATCH_DIR, dataDir);
+<a class="jxr_linenumber" name="260" href="#260">260</a> 			}
+<a class="jxr_linenumber" name="261" href="#261">261</a> 		}
+<a class="jxr_linenumber" name="262" href="#262">262</a> 
+<a class="jxr_linenumber" name="263" href="#263">263</a> 		String httpInterface = <strong class="jxr_keyword">null</strong>, httpPort = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="264" href="#264">264</a> 		httpInterface = properties.getProperty(P_DATA_SERVER_INTERFACE);
+<a class="jxr_linenumber" name="265" href="#265">265</a> 		httpPort = properties.getProperty(P_DATA_SERVER_PORT);
+<a class="jxr_linenumber" name="266" href="#266">266</a> 		<strong class="jxr_keyword">if</strong> (httpInterface != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="267" href="#267">267</a> 			System.setProperty(DATA_SERVER_INTERFACE, httpInterface);
+<a class="jxr_linenumber" name="268" href="#268">268</a> 			System.setProperty(DATA_SERVER_PORT, httpPort);
+<a class="jxr_linenumber" name="269" href="#269">269</a> 		} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="270" href="#270">270</a> 			httpInterface = properties.getProperty(R_DATA_SERVER_INTERFACE);
+<a class="jxr_linenumber" name="271" href="#271">271</a> 			httpPort = properties.getProperty(R_DATA_SERVER_PORT);
+<a class="jxr_linenumber" name="272" href="#272">272</a> 			<strong class="jxr_keyword">if</strong> (httpInterface != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="273" href="#273">273</a> 				System.setProperty(DATA_SERVER_INTERFACE, httpInterface);
+<a class="jxr_linenumber" name="274" href="#274">274</a> 				System.setProperty(DATA_SERVER_PORT, httpPort);
+<a class="jxr_linenumber" name="275" href="#275">275</a> 			}
+<a class="jxr_linenumber" name="276" href="#276">276</a> 		}
+<a class="jxr_linenumber" name="277" href="#277">277</a> 	}
+<a class="jxr_linenumber" name="278" href="#278">278</a> 	
+<a class="jxr_linenumber" name="279" href="#279">279</a> 
+<a class="jxr_linenumber" name="280" href="#280">280</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties loadProperties(InputStream inputStream)
+<a class="jxr_linenumber" name="281" href="#281">281</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
+<a class="jxr_linenumber" name="282" href="#282">282</a> 		Properties properties = <strong class="jxr_keyword">new</strong> Properties();
+<a class="jxr_linenumber" name="283" href="#283">283</a> 		<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="284" href="#284">284</a> 			properties.load(inputStream);
+<a class="jxr_linenumber" name="285" href="#285">285</a> 		} <strong class="jxr_keyword">catch</strong> (IOException e) {
+<a class="jxr_linenumber" name="286" href="#286">286</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a>(e);
+<a class="jxr_linenumber" name="287" href="#287">287</a> 		}
+<a class="jxr_linenumber" name="288" href="#288">288</a> 		reconcileProperties(properties);
+<a class="jxr_linenumber" name="289" href="#289">289</a> 		<strong class="jxr_keyword">return</strong> properties;
+<a class="jxr_linenumber" name="290" href="#290">290</a> 	}
+<a class="jxr_linenumber" name="291" href="#291">291</a> 
+<a class="jxr_linenumber" name="292" href="#292">292</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties loadPropertiesNoException(String filename) {
+<a class="jxr_linenumber" name="293" href="#293">293</a> 		Properties props = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="294" href="#294">294</a> 		<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="295" href="#295">295</a> 			props = loadProperties(filename);
+<a class="jxr_linenumber" name="296" href="#296">296</a> 		} <strong class="jxr_keyword">catch</strong> (ConfigurationException e) {
+<a class="jxr_linenumber" name="297" href="#297">297</a> 			logger.warning(e.toString());
+<a class="jxr_linenumber" name="298" href="#298">298</a> 			e.printStackTrace();
+<a class="jxr_linenumber" name="299" href="#299">299</a> 		}
+<a class="jxr_linenumber" name="300" href="#300">300</a> 		<strong class="jxr_keyword">return</strong> props;
+<a class="jxr_linenumber" name="301" href="#301">301</a> 	}
+<a class="jxr_linenumber" name="302" href="#302">302</a> 	
+<a class="jxr_linenumber" name="303" href="#303">303</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="304" href="#304">304</a> <em class="jxr_javadoccomment">	 * Overwrites defined properties in sorcer.env (sorcer.home,</em>
+<a class="jxr_linenumber" name="305" href="#305">305</a> <em class="jxr_javadoccomment">	 * provider.webster.interface, provider.webster.port) with those defined as</em>
+<a class="jxr_linenumber" name="306" href="#306">306</a> <em class="jxr_javadoccomment">	 * JVM system properties.</em>
+<a class="jxr_linenumber" name="307" href="#307">307</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="308" href="#308">308</a> <em class="jxr_javadoccomment">	 * @param properties</em>
+<a class="jxr_linenumber" name="309" href="#309">309</a> <em class="jxr_javadoccomment">	 * @throws ConfigurationException</em>
+<a class="jxr_linenumber" name="310" href="#310">310</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="311" href="#311">311</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> update(Properties properties)
+<a class="jxr_linenumber" name="312" href="#312">312</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a> {
+<a class="jxr_linenumber" name="313" href="#313">313</a> 		Enumeration&lt;?&gt; e = properties.propertyNames();
+<a class="jxr_linenumber" name="314" href="#314">314</a> 		String key, value, evalue = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="315" href="#315">315</a> 		String pattern = <span class="jxr_string">"${"</span> + <span class="jxr_string">"localhost"</span> + <span class="jxr_string">"}"</span>;
+<a class="jxr_linenumber" name="316" href="#316">316</a> <em class="jxr_comment">//		String userDirPattern = "${user.home}";</em>
+<a class="jxr_linenumber" name="317" href="#317">317</a> 		<em class="jxr_comment">// first substitute for this localhost</em>
+<a class="jxr_linenumber" name="318" href="#318">318</a> 		<strong class="jxr_keyword">while</strong> (e.hasMoreElements()) {
+<a class="jxr_linenumber" name="319" href="#319">319</a> 			key = (String) e.nextElement();
+<a class="jxr_linenumber" name="320" href="#320">320</a> 			value = properties.getProperty(key);
+<a class="jxr_linenumber" name="321" href="#321">321</a> 			<strong class="jxr_keyword">if</strong> (value.equals(pattern)) {
+<a class="jxr_linenumber" name="322" href="#322">322</a> 				<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="323" href="#323">323</a> 					value = getHostAddress();
+<a class="jxr_linenumber" name="324" href="#324">324</a> 				} <strong class="jxr_keyword">catch</strong> (UnknownHostException ex) {
+<a class="jxr_linenumber" name="325" href="#325">325</a> 					ex.printStackTrace();
+<a class="jxr_linenumber" name="326" href="#326">326</a> 				}
+<a class="jxr_linenumber" name="327" href="#327">327</a> 				properties.put(key, value);
+<a class="jxr_linenumber" name="328" href="#328">328</a> 			}
+<a class="jxr_linenumber" name="329" href="#329">329</a> 	<em class="jxr_comment">/*<em class="jxr_comment">		if (value.equals(userDirPattern)) {</em></em>
+<a class="jxr_linenumber" name="330" href="#330">330</a> <em class="jxr_comment">				value = System.getProperty("user.home");				</em>
+<a class="jxr_linenumber" name="331" href="#331">331</a> <em class="jxr_comment">				properties.put(key, value);</em>
+<a class="jxr_linenumber" name="332" href="#332">332</a> <em class="jxr_comment">			}*/</em>
+<a class="jxr_linenumber" name="333" href="#333">333</a> 		}
+<a class="jxr_linenumber" name="334" href="#334">334</a> 		<em class="jxr_comment">// now substitute other entries accordingly </em>
+<a class="jxr_linenumber" name="335" href="#335">335</a> 		e = properties.propertyNames();
+<a class="jxr_linenumber" name="336" href="#336">336</a> 		<strong class="jxr_keyword">while</strong> (e.hasMoreElements()) {
+<a class="jxr_linenumber" name="337" href="#337">337</a> 			key = (String) e.nextElement();
+<a class="jxr_linenumber" name="338" href="#338">338</a> 			value = properties.getProperty(key);
+<a class="jxr_linenumber" name="339" href="#339">339</a> 			evalue = expandStringProperties(value, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="340" href="#340">340</a> 			<em class="jxr_comment">// try SORCER env properties</em>
+<a class="jxr_linenumber" name="341" href="#341">341</a> 			<strong class="jxr_keyword">if</strong> (evalue == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="342" href="#342">342</a> 				evalue = expandStringProperties(value, false);
+<a class="jxr_linenumber" name="343" href="#343">343</a> 			<strong class="jxr_keyword">if</strong> (evalue != <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="344" href="#344">344</a> 				properties.put(key, evalue);
+<a class="jxr_linenumber" name="345" href="#345">345</a> 			<strong class="jxr_keyword">if</strong> (value.equals(pattern)) {
+<a class="jxr_linenumber" name="346" href="#346">346</a> 				<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="347" href="#347">347</a> 					evalue = getHostAddress();
+<a class="jxr_linenumber" name="348" href="#348">348</a> 				} <strong class="jxr_keyword">catch</strong> (UnknownHostException e1) {
+<a class="jxr_linenumber" name="349" href="#349">349</a> 					e1.printStackTrace();
+<a class="jxr_linenumber" name="350" href="#350">350</a> 				}
+<a class="jxr_linenumber" name="351" href="#351">351</a> 				properties.put(key, evalue);
+<a class="jxr_linenumber" name="352" href="#352">352</a> 			}
+<a class="jxr_linenumber" name="353" href="#353">353</a> 		}
+<a class="jxr_linenumber" name="354" href="#354">354</a> 	}
+<a class="jxr_linenumber" name="355" href="#355">355</a> 		
+<a class="jxr_linenumber" name="356" href="#356">356</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="357" href="#357">357</a> <em class="jxr_javadoccomment">	 * Return the SORCER environment properties loaded by default from the</em>
+<a class="jxr_linenumber" name="358" href="#358">358</a> <em class="jxr_javadoccomment">	 * 'sorcer.env' file.</em>
+<a class="jxr_linenumber" name="359" href="#359">359</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="360" href="#360">360</a> <em class="jxr_javadoccomment">	 * @return The SORCER environment properties</em>
+<a class="jxr_linenumber" name="361" href="#361">361</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="362" href="#362">362</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Properties getProperties() {
+<a class="jxr_linenumber" name="363" href="#363">363</a> 		<strong class="jxr_keyword">return</strong> props;
+<a class="jxr_linenumber" name="364" href="#364">364</a> 	}
+<a class="jxr_linenumber" name="365" href="#365">365</a> 
+<a class="jxr_linenumber" name="366" href="#366">366</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="367" href="#367">367</a> <em class="jxr_javadoccomment">	 * Expands properties embedded in a string with ${some.property.name}. Also</em>
+<a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_javadoccomment">	 * treats ${/} as ${file.separator}.</em>
+<a class="jxr_linenumber" name="369" href="#369">369</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="370" href="#370">370</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String expandStringProperties(String value,
+<a class="jxr_linenumber" name="371" href="#371">371</a> 			<strong class="jxr_keyword">boolean</strong> isSystemProperty) <strong class="jxr_keyword">throws</strong> ConfigurationException {
+<a class="jxr_linenumber" name="372" href="#372">372</a> 		<strong class="jxr_keyword">int</strong> p = value.indexOf(<span class="jxr_string">"${"</span>, 0);
+<a class="jxr_linenumber" name="373" href="#373">373</a> 		<strong class="jxr_keyword">if</strong> (p == -1) {
+<a class="jxr_linenumber" name="374" href="#374">374</a> 			<strong class="jxr_keyword">return</strong> value;
+<a class="jxr_linenumber" name="375" href="#375">375</a> 		}
+<a class="jxr_linenumber" name="376" href="#376">376</a> 		<strong class="jxr_keyword">int</strong> max = value.length();
+<a class="jxr_linenumber" name="377" href="#377">377</a> 		StringBuffer sb = <strong class="jxr_keyword">new</strong> StringBuffer(max);
+<a class="jxr_linenumber" name="378" href="#378">378</a> 		<strong class="jxr_keyword">int</strong> i = 0; <em class="jxr_comment">/*<em class="jxr_comment"> Index of last character we copied */</em></em>
+<a class="jxr_linenumber" name="379" href="#379">379</a> 		<strong class="jxr_keyword">while</strong> (<strong class="jxr_keyword">true</strong>) {
+<a class="jxr_linenumber" name="380" href="#380">380</a> 			<strong class="jxr_keyword">if</strong> (p &gt; i) {
+<a class="jxr_linenumber" name="381" href="#381">381</a> 				<em class="jxr_comment">/*<em class="jxr_comment"> Copy in anything before the special stuff */</em></em>
+<a class="jxr_linenumber" name="382" href="#382">382</a> 				sb.append(value.substring(i, p));
+<a class="jxr_linenumber" name="383" href="#383">383</a> 				i = p;
+<a class="jxr_linenumber" name="384" href="#384">384</a> 			}
+<a class="jxr_linenumber" name="385" href="#385">385</a> 			<strong class="jxr_keyword">int</strong> pe = value.indexOf('}', p + 2);
+<a class="jxr_linenumber" name="386" href="#386">386</a> 			<strong class="jxr_keyword">if</strong> (pe == -1) {
+<a class="jxr_linenumber" name="387" href="#387">387</a> 				<em class="jxr_comment">/*<em class="jxr_comment"> No matching '}' found, just add in as normal text */</em></em>
+<a class="jxr_linenumber" name="388" href="#388">388</a> 				sb.append(value.substring(p, max));
+<a class="jxr_linenumber" name="389" href="#389">389</a> 				<strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="390" href="#390">390</a> 			}
+<a class="jxr_linenumber" name="391" href="#391">391</a> 			String prop = value.substring(p + 2, pe);
+<a class="jxr_linenumber" name="392" href="#392">392</a> 			<strong class="jxr_keyword">if</strong> (prop.equals(<span class="jxr_string">"/"</span>)) {
+<a class="jxr_linenumber" name="393" href="#393">393</a> 				sb.append(File.separatorChar);
+<a class="jxr_linenumber" name="394" href="#394">394</a> 			} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="395" href="#395">395</a> 				<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="396" href="#396">396</a> 					String val = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="397" href="#397">397</a> 					<strong class="jxr_keyword">if</strong> (isSystemProperty) {
+<a class="jxr_linenumber" name="398" href="#398">398</a> 						val = prop.length() == 0 ? <strong class="jxr_keyword">null</strong> : System
+<a class="jxr_linenumber" name="399" href="#399">399</a> 								.getProperty(prop);
+<a class="jxr_linenumber" name="400" href="#400">400</a> 						<strong class="jxr_keyword">if</strong> (val == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="401" href="#401">401</a> 							<em class="jxr_comment">// try System env</em>
+<a class="jxr_linenumber" name="402" href="#402">402</a> 							val = prop.length() == 0 ? <strong class="jxr_keyword">null</strong> : System
+<a class="jxr_linenumber" name="403" href="#403">403</a> 									.getenv(prop);
+<a class="jxr_linenumber" name="404" href="#404">404</a> 						}
+<a class="jxr_linenumber" name="405" href="#405">405</a> 					} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="406" href="#406">406</a> 						val = prop.length() == 0 ? <strong class="jxr_keyword">null</strong> : props
+<a class="jxr_linenumber" name="407" href="#407">407</a> 								.getProperty(prop);
+<a class="jxr_linenumber" name="408" href="#408">408</a> 					}
+<a class="jxr_linenumber" name="409" href="#409">409</a> 					<strong class="jxr_keyword">if</strong> (val != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="410" href="#410">410</a> 						sb.append(val);
+<a class="jxr_linenumber" name="411" href="#411">411</a> 					} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="412" href="#412">412</a> 						<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="413" href="#413">413</a> 					}
+<a class="jxr_linenumber" name="414" href="#414">414</a> 				} <strong class="jxr_keyword">catch</strong> (SecurityException e) {
+<a class="jxr_linenumber" name="415" href="#415">415</a> 					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ConfigurationException.html">ConfigurationException</a>(e);
+<a class="jxr_linenumber" name="416" href="#416">416</a> 				}
+<a class="jxr_linenumber" name="417" href="#417">417</a> 			}
+<a class="jxr_linenumber" name="418" href="#418">418</a> 			i = pe + 1;
+<a class="jxr_linenumber" name="419" href="#419">419</a> 			p = value.indexOf(<span class="jxr_string">"${"</span>, i);
+<a class="jxr_linenumber" name="420" href="#420">420</a> 			<strong class="jxr_keyword">if</strong> (p == -1) {
+<a class="jxr_linenumber" name="421" href="#421">421</a> 				<em class="jxr_comment">/*<em class="jxr_comment"> No more to expand -- copy in any extra. */</em></em>
+<a class="jxr_linenumber" name="422" href="#422">422</a> 				<strong class="jxr_keyword">if</strong> (i &lt; max) {
+<a class="jxr_linenumber" name="423" href="#423">423</a> 					sb.append(value.substring(i, max));
+<a class="jxr_linenumber" name="424" href="#424">424</a> 				}
+<a class="jxr_linenumber" name="425" href="#425">425</a> 				<strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="426" href="#426">426</a> 			}
+<a class="jxr_linenumber" name="427" href="#427">427</a> 		}
+<a class="jxr_linenumber" name="428" href="#428">428</a> 		<strong class="jxr_keyword">return</strong> sb.toString();
+<a class="jxr_linenumber" name="429" href="#429">429</a> 	}
+<a class="jxr_linenumber" name="430" href="#430">430</a> 	
+<a class="jxr_linenumber" name="431" href="#431">431</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="432" href="#432">432</a> <em class="jxr_javadoccomment">	 * Return the local host address using</em>
+<a class="jxr_linenumber" name="433" href="#433">433</a> <em class="jxr_javadoccomment">	 * &lt;code&gt;java.net.InetAddress.getLocalHost().getHostAddress()&lt;/code&gt;</em>
+<a class="jxr_linenumber" name="434" href="#434">434</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="435" href="#435">435</a> <em class="jxr_javadoccomment">	 * @return The local host address</em>
+<a class="jxr_linenumber" name="436" href="#436">436</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
+<a class="jxr_linenumber" name="437" href="#437">437</a> <em class="jxr_javadoccomment">	 *             if no IP address for the local host could be found.</em>
+<a class="jxr_linenumber" name="438" href="#438">438</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="439" href="#439">439</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostAddress() <strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
+<a class="jxr_linenumber" name="440" href="#440">440</a> 		<strong class="jxr_keyword">return</strong> java.net.InetAddress.getLocalHost().getHostAddress();
+<a class="jxr_linenumber" name="441" href="#441">441</a> 	}
+<a class="jxr_linenumber" name="442" href="#442">442</a> 
+<a class="jxr_linenumber" name="443" href="#443">443</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="444" href="#444">444</a> <em class="jxr_javadoccomment">	 * Return the local host address for a passed in host using</em>
+<a class="jxr_linenumber" name="445" href="#445">445</a> <em class="jxr_javadoccomment">	 * {@link java.net.InetAddress#getByName(String)}</em>
+<a class="jxr_linenumber" name="446" href="#446">446</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="447" href="#447">447</a> <em class="jxr_javadoccomment">	 * @param name</em>
+<a class="jxr_linenumber" name="448" href="#448">448</a> <em class="jxr_javadoccomment">	 *            The name of the host to return</em>
+<a class="jxr_linenumber" name="449" href="#449">449</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="450" href="#450">450</a> <em class="jxr_javadoccomment">	 * @return The local host address</em>
+<a class="jxr_linenumber" name="451" href="#451">451</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="452" href="#452">452</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
+<a class="jxr_linenumber" name="453" href="#453">453</a> <em class="jxr_javadoccomment">	 *             if no IP address for the host name could be found.</em>
+<a class="jxr_linenumber" name="454" href="#454">454</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="455" href="#455">455</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostAddress(String name)
+<a class="jxr_linenumber" name="456" href="#456">456</a> 			<strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
+<a class="jxr_linenumber" name="457" href="#457">457</a> 		<strong class="jxr_keyword">return</strong> java.net.InetAddress.getByName(name).getHostAddress();
+<a class="jxr_linenumber" name="458" href="#458">458</a> 	}
+<a class="jxr_linenumber" name="459" href="#459">459</a> 	
+<a class="jxr_linenumber" name="460" href="#460">460</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="461" href="#461">461</a> <em class="jxr_javadoccomment">	 * Return the local host name</em>
+<a class="jxr_linenumber" name="462" href="#462">462</a> <em class="jxr_javadoccomment">	 * &lt;code&gt;java.net.InetAddress.getLocalHost().getHostName()&lt;/code&gt;</em>
+<a class="jxr_linenumber" name="463" href="#463">463</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="464" href="#464">464</a> <em class="jxr_javadoccomment">	 * @return The local host name</em>
+<a class="jxr_linenumber" name="465" href="#465">465</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
+<a class="jxr_linenumber" name="466" href="#466">466</a> <em class="jxr_javadoccomment">	 *             if no hostname for the local host could be found.</em>
+<a class="jxr_linenumber" name="467" href="#467">467</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="468" href="#468">468</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostName() <strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
+<a class="jxr_linenumber" name="469" href="#469">469</a> 		<strong class="jxr_keyword">return</strong> java.net.InetAddress.getLocalHost().getCanonicalHostName();
+<a class="jxr_linenumber" name="470" href="#470">470</a> 		<em class="jxr_comment">// return java.net.InetAddress.getLocalHost().getHostName();</em>
+<a class="jxr_linenumber" name="471" href="#471">471</a> 	}
+<a class="jxr_linenumber" name="472" href="#472">472</a> 
+<a class="jxr_linenumber" name="473" href="#473">473</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String[]getWebsterRoots(){
+<a class="jxr_linenumber" name="474" href="#474">474</a> 		String websterRootStr = System.getProperty(SorcerConstants.WEBSTER_ROOTS, getRepoDir());
+<a class="jxr_linenumber" name="475" href="#475">475</a> 		<strong class="jxr_keyword">return</strong> websterRootStr.split(<span class="jxr_string">";"</span>);
+<a class="jxr_linenumber" name="476" href="#476">476</a> 	}
+<a class="jxr_linenumber" name="477" href="#477">477</a> 
+<a class="jxr_linenumber" name="478" href="#478">478</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="479" href="#479">479</a> <em class="jxr_javadoccomment">	 * Return the local host address based on the value of a system property.</em>
+<a class="jxr_linenumber" name="480" href="#480">480</a> <em class="jxr_javadoccomment">	 * using {@link java.net.InetAddress#getByName(String)}. If the system</em>
+<a class="jxr_linenumber" name="481" href="#481">481</a> <em class="jxr_javadoccomment">	 * property is not resolvable, return the default host address obtained from</em>
+<a class="jxr_linenumber" name="482" href="#482">482</a> <em class="jxr_javadoccomment">	 * {@link java.net.InetAddress#getLocalHost()}</em>
+<a class="jxr_linenumber" name="483" href="#483">483</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="484" href="#484">484</a> <em class="jxr_javadoccomment">	 * @param property</em>
+<a class="jxr_linenumber" name="485" href="#485">485</a> <em class="jxr_javadoccomment">	 *            The property name to use</em>
+<a class="jxr_linenumber" name="486" href="#486">486</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="487" href="#487">487</a> <em class="jxr_javadoccomment">	 * @return The local host address</em>
+<a class="jxr_linenumber" name="488" href="#488">488</a> <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="489" href="#489">489</a> <em class="jxr_javadoccomment">	 * @throws java.net.UnknownHostException</em>
+<a class="jxr_linenumber" name="490" href="#490">490</a> <em class="jxr_javadoccomment">	 *             if no IP address for the host name could be found.</em>
+<a class="jxr_linenumber" name="491" href="#491">491</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="492" href="#492">492</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getHostAddressFromProperty(String property)
+<a class="jxr_linenumber" name="493" href="#493">493</a> 			<strong class="jxr_keyword">throws</strong> java.net.UnknownHostException {
+<a class="jxr_linenumber" name="494" href="#494">494</a> 		String host = getHostAddress();
+<a class="jxr_linenumber" name="495" href="#495">495</a> 		String value = System.getProperty(property);
+<a class="jxr_linenumber" name="496" href="#496">496</a> 		<strong class="jxr_keyword">if</strong> (value != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="497" href="#497">497</a> 			host = java.net.InetAddress.getByName(value).getHostAddress();
+<a class="jxr_linenumber" name="498" href="#498">498</a> 		}
+<a class="jxr_linenumber" name="499" href="#499">499</a> 		<strong class="jxr_keyword">return</strong> (host);
+<a class="jxr_linenumber" name="500" href="#500">500</a> 	}
+<a class="jxr_linenumber" name="501" href="#501">501</a> 
+<a class="jxr_linenumber" name="502" href="#502">502</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="503" href="#503">503</a> <em class="jxr_javadoccomment">     * &lt;p&gt;</em>
+<a class="jxr_linenumber" name="504" href="#504">504</a> <em class="jxr_javadoccomment">     * Return &lt;code&gt;true&lt;/code&gt; is a SORCER {@link sorcer.provider.boot.Booter}</em>
+<a class="jxr_linenumber" name="505" href="#505">505</a> <em class="jxr_javadoccomment">     * is used, otherwise &lt;code&gt;false&lt;/code&gt;,</em>
+<a class="jxr_linenumber" name="506" href="#506">506</a> <em class="jxr_javadoccomment">     * &lt;/p&gt;</em>
+<a class="jxr_linenumber" name="507" href="#507">507</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="508" href="#508">508</a> <em class="jxr_javadoccomment">     * @return the bootable</em>
+<a class="jxr_linenumber" name="509" href="#509">509</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="510" href="#510">510</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> isBootable() {
+<a class="jxr_linenumber" name="511" href="#511">511</a>         <strong class="jxr_keyword">return</strong> bootable;
+<a class="jxr_linenumber" name="512" href="#512">512</a>     }
+<a class="jxr_linenumber" name="513" href="#513">513</a> 
+<a class="jxr_linenumber" name="514" href="#514">514</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="515" href="#515">515</a> <em class="jxr_javadoccomment">     * &lt;p&gt;</em>
+<a class="jxr_linenumber" name="516" href="#516">516</a> <em class="jxr_javadoccomment">     * Assigns &lt;code&gt;true&lt;/code&gt; by the {@link sorcer.boot.provider.Booter} when</em>
+<a class="jxr_linenumber" name="517" href="#517">517</a> <em class="jxr_javadoccomment">     * used.</em>
+<a class="jxr_linenumber" name="518" href="#518">518</a> <em class="jxr_javadoccomment">     * &lt;/p&gt;</em>
+<a class="jxr_linenumber" name="519" href="#519">519</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="520" href="#520">520</a> <em class="jxr_javadoccomment">     * @param bootable</em>
+<a class="jxr_linenumber" name="521" href="#521">521</a> <em class="jxr_javadoccomment">     *            the bootable to set</em>
+<a class="jxr_linenumber" name="522" href="#522">522</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="523" href="#523">523</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> setBootable(<strong class="jxr_keyword">boolean</strong> bootable) {
+<a class="jxr_linenumber" name="524" href="#524">524</a>         SorcerEnv.bootable = bootable;
+<a class="jxr_linenumber" name="525" href="#525">525</a>     }
+<a class="jxr_linenumber" name="526" href="#526">526</a> 
+<a class="jxr_linenumber" name="527" href="#527">527</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="528" href="#528">528</a> <em class="jxr_javadoccomment">	 * Library versions</em>
+<a class="jxr_linenumber" name="529" href="#529">529</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="530" href="#530">530</a> 	<em class="jxr_comment">/*<em class="jxr_comment">public static String getRiverVersion() {</em></em>
+<a class="jxr_linenumber" name="531" href="#531">531</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_RIVER, "2.2.1");</em>
+<a class="jxr_linenumber" name="532" href="#532">532</a> <em class="jxr_comment">	}</em>
+<a class="jxr_linenumber" name="533" href="#533">533</a> 
+<a class="jxr_linenumber" name="534" href="#534">534</a> <em class="jxr_comment">	public static String getRioVersion() {</em>
+<a class="jxr_linenumber" name="535" href="#535">535</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_RIO, "5.0-M2");</em>
+<a class="jxr_linenumber" name="536" href="#536">536</a> <em class="jxr_comment">	}</em>
+<a class="jxr_linenumber" name="537" href="#537">537</a> 
+<a class="jxr_linenumber" name="538" href="#538">538</a> <em class="jxr_comment">	public static String getBlitzVersion() {</em>
+<a class="jxr_linenumber" name="539" href="#539">539</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_BLITZ, "2.1.7");</em>
+<a class="jxr_linenumber" name="540" href="#540">540</a> <em class="jxr_comment">	}</em>
+<a class="jxr_linenumber" name="541" href="#541">541</a> 
+<a class="jxr_linenumber" name="542" href="#542">542</a> <em class="jxr_comment">	public static String getGroovyVersion() {</em>
+<a class="jxr_linenumber" name="543" href="#543">543</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_GROOVY, "2.1.2");</em>
+<a class="jxr_linenumber" name="544" href="#544">544</a> <em class="jxr_comment">	}</em>
+<a class="jxr_linenumber" name="545" href="#545">545</a> 
+<a class="jxr_linenumber" name="546" href="#546">546</a> <em class="jxr_comment">	public static String getSleepyCatVersion() {</em>
+<a class="jxr_linenumber" name="547" href="#547">547</a> <em class="jxr_comment">		return props.getProperty(SorcerConstants.S_VERSION_SLEEPYCAT, "4.1.21");</em>
+<a class="jxr_linenumber" name="548" href="#548">548</a> <em class="jxr_comment">	} */</em>
+<a class="jxr_linenumber" name="549" href="#549">549</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getSorcerVersion() {
+<a class="jxr_linenumber" name="550" href="#550">550</a> 		<strong class="jxr_keyword">return</strong> props.getProperty(SorcerConstants.S_VERSION_SORCER, SORCER_VERSION);
+<a class="jxr_linenumber" name="551" href="#551">551</a> 	}
+<a class="jxr_linenumber" name="552" href="#552">552</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -481,9 +481,9 @@
 <a class="jxr_linenumber" name="471" href="#471">471</a> 		System.out.println(<span class="jxr_string">"Browser log file="</span> + file.getAbsolutePath());
 <a class="jxr_linenumber" name="472" href="#472">472</a> 
 <a class="jxr_linenumber" name="473" href="#473">473</a> 		FileOutputStream fos = <strong class="jxr_keyword">new</strong> FileOutputStream(file);
-<a class="jxr_linenumber" name="474" href="#474">474</a> 		MyOutputStream myOs = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">MyOutputStream</a>(fos);
+<a class="jxr_linenumber" name="474" href="#474">474</a> 		MyOutputStream myOs = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/ServiceBrowser.html">MyOutputStream</a>(fos);
 <a class="jxr_linenumber" name="475" href="#475">475</a> 
-<a class="jxr_linenumber" name="476" href="#476">476</a> 		PrintStream ps = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">MyPrintStream</a>(myOs, LOG_FILE);
+<a class="jxr_linenumber" name="476" href="#476">476</a> 		PrintStream ps = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/ServiceBrowser.html">MyPrintStream</a>(myOs, LOG_FILE);
 <a class="jxr_linenumber" name="477" href="#477">477</a> 		System.setErr(ps);
 <a class="jxr_linenumber" name="478" href="#478">478</a> 		System.setOut(ps);
 <a class="jxr_linenumber" name="479" href="#479">479</a> 
@@ -506,7 +506,7 @@
 <a class="jxr_linenumber" name="496" href="#496">496</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="497" href="#497">497</a> 	}
 <a class="jxr_linenumber" name="498" href="#498">498</a> 
-<a class="jxr_linenumber" name="499" href="#499">499</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">MyOutputStream</a> <strong class="jxr_keyword">extends</strong> OutputStream {
+<a class="jxr_linenumber" name="499" href="#499">499</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/ServiceBrowser.html">MyOutputStream</a> <strong class="jxr_keyword">extends</strong> OutputStream {
 <a class="jxr_linenumber" name="500" href="#500">500</a> 		<strong class="jxr_keyword">public</strong> FileOutputStream _fos;
 <a class="jxr_linenumber" name="501" href="#501">501</a> 
 <a class="jxr_linenumber" name="502" href="#502">502</a> 		MyOutputStream(FileOutputStream fos) {
@@ -535,12 +535,12 @@
 <a class="jxr_linenumber" name="525" href="#525">525</a> 		}
 <a class="jxr_linenumber" name="526" href="#526">526</a> 	}
 <a class="jxr_linenumber" name="527" href="#527">527</a> 
-<a class="jxr_linenumber" name="528" href="#528">528</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">MyPrintStream</a> <strong class="jxr_keyword">extends</strong> PrintStream {
+<a class="jxr_linenumber" name="528" href="#528">528</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/ServiceBrowser.html">MyPrintStream</a> <strong class="jxr_keyword">extends</strong> PrintStream {
 <a class="jxr_linenumber" name="529" href="#529">529</a> 		<strong class="jxr_keyword">private</strong> String logName;
 <a class="jxr_linenumber" name="530" href="#530">530</a> 
-<a class="jxr_linenumber" name="531" href="#531">531</a> 		<strong class="jxr_keyword">private</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">MyOutputStream</a> fos;
+<a class="jxr_linenumber" name="531" href="#531">531</a> 		<strong class="jxr_keyword">private</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/ServiceBrowser.html">MyOutputStream</a> fos;
 <a class="jxr_linenumber" name="532" href="#532">532</a> 
-<a class="jxr_linenumber" name="533" href="#533">533</a> 		<strong class="jxr_keyword">public</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">MyPrintStream</a>(<a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">MyOutputStream</a> os, String fName) {
+<a class="jxr_linenumber" name="533" href="#533">533</a> 		<strong class="jxr_keyword">public</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/ServiceBrowser.html">MyPrintStream</a>(<a href="../../../../../sorcer/ssb/tools/plugin/browser/ServiceBrowser.html">MyOutputStream</a> os, String fName) {
 <a class="jxr_linenumber" name="534" href="#534">534</a> 			<strong class="jxr_keyword">super</strong>(os);
 <a class="jxr_linenumber" name="535" href="#535">535</a> 			logName = fName;
 <a class="jxr_linenumber" name="536" href="#536">536</a> 			fos = os;

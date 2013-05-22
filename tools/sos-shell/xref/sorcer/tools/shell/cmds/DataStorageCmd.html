@@ -83,7 +83,7 @@
 <a class="jxr_linenumber" name="73" href="#73">73</a>  
 <a class="jxr_linenumber" name="74" href="#74">74</a>  	<strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">private</strong> PrintStream out;
 <a class="jxr_linenumber" name="75" href="#75">75</a>  	<strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">private</strong> ServiceItem[] dataStorers;
-<a class="jxr_linenumber" name="76" href="#76">76</a>  	<strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">private</strong> ObjectInfo[] recordInfos;
+<a class="jxr_linenumber" name="76" href="#76">76</a>  	<strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">private</strong> <a href="../../../../sorcer/util/bdb/objects/ObjectInfo.html">ObjectInfo</a>[] recordInfos;
 <a class="jxr_linenumber" name="77" href="#77">77</a>  	<strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> selectedDataStorer = -1;
 <a class="jxr_linenumber" name="78" href="#78">78</a>  	<strong class="jxr_keyword">private</strong> Store selectedStore;
 <a class="jxr_linenumber" name="79" href="#79">79</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> selectedRecord = -1;
@@ -200,10 +200,10 @@
 <a class="jxr_linenumber" name="190" href="#190">190</a> 		Map&lt;Uuid, ObjectInfo&gt; all;
 <a class="jxr_linenumber" name="191" href="#191">191</a> 		<strong class="jxr_keyword">if</strong> (selectedDataStorer &gt;= 0) {
 <a class="jxr_linenumber" name="192" href="#192">192</a> 			out.println(<span class="jxr_string">"From Data Storage: "</span>
-<a class="jxr_linenumber" name="193" href="#193">193</a> 					+ AttributesUtil
+<a class="jxr_linenumber" name="193" href="#193">193</a> 					+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="194" href="#194">194</a> 							.getProviderName(dataStorers[selectedDataStorer].attributeSets)
 <a class="jxr_linenumber" name="195" href="#195">195</a> 					+ <span class="jxr_string">" at: "</span>
-<a class="jxr_linenumber" name="196" href="#196">196</a> 					+ AttributesUtil
+<a class="jxr_linenumber" name="196" href="#196">196</a> 					+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="197" href="#197">197</a> 							.getHostName(dataStorers[selectedDataStorer].attributeSets));
 <a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_comment">//			all = ((StorageManagement) dataStorers[selectedDataStorer].service)</em>
 <a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_comment">//					.getMonitorableExertionInfo(type,</em>
@@ -255,10 +255,10 @@
 <a class="jxr_linenumber" name="245" href="#245">245</a> 			all = <strong class="jxr_keyword">new</strong> HashMap&lt;Uuid, ObjectInfo&gt;();
 <a class="jxr_linenumber" name="246" href="#246">246</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; dataStorers.length; i++) {
 <a class="jxr_linenumber" name="247" href="#247">247</a> 				out.println(<span class="jxr_string">"From Data Storage "</span>
-<a class="jxr_linenumber" name="248" href="#248">248</a> 						+ AttributesUtil
+<a class="jxr_linenumber" name="248" href="#248">248</a> 						+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="249" href="#249">249</a> 								.getProviderName(dataStorers[i].attributeSets)
 <a class="jxr_linenumber" name="250" href="#250">250</a> 						+ <span class="jxr_string">" at: "</span>
-<a class="jxr_linenumber" name="251" href="#251">251</a> 						+ AttributesUtil
+<a class="jxr_linenumber" name="251" href="#251">251</a> 						+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="252" href="#252">252</a> 								.getHostName(dataStorers[i].attributeSets));
 <a class="jxr_linenumber" name="253" href="#253">253</a> 
 <a class="jxr_linenumber" name="254" href="#254">254</a> 				StorageManagement emx = (StorageManagement) dataStorers[i].service;
@@ -283,7 +283,7 @@
 <a class="jxr_linenumber" name="273" href="#273">273</a> <em class="jxr_comment">//		printRecordInfos(recordInfos);</em>
 <a class="jxr_linenumber" name="274" href="#274">274</a> 	}
 <a class="jxr_linenumber" name="275" href="#275">275</a> 
-<a class="jxr_linenumber" name="276" href="#276">276</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> printRecordInfos(ObjectInfo[] recordInfos) {
+<a class="jxr_linenumber" name="276" href="#276">276</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> printRecordInfos(<a href="../../../../sorcer/util/bdb/objects/ObjectInfo.html">ObjectInfo</a>[] recordInfos) {
 <a class="jxr_linenumber" name="277" href="#277">277</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; recordInfos.length; i++) {
 <a class="jxr_linenumber" name="278" href="#278">278</a> 			out.println(<span class="jxr_string">"--------- RECORD # "</span> + i + <span class="jxr_string">" ---------"</span>);
 <a class="jxr_linenumber" name="279" href="#279">279</a> 			out.println(recordInfos[i].describe());
@@ -325,10 +325,10 @@
 <a class="jxr_linenumber" name="315" href="#315">315</a> 				+ AttributesUtil.getHostName(dataStorers[index].attributeSets));
 <a class="jxr_linenumber" name="316" href="#316">316</a> 		out.println(<span class="jxr_string">"Home: "</span>
 <a class="jxr_linenumber" name="317" href="#317">317</a> 				+ AttributesUtil.getUserDir(dataStorers[index].attributeSets));
-<a class="jxr_linenumber" name="318" href="#318">318</a> 		String groups = AttributesUtil
+<a class="jxr_linenumber" name="318" href="#318">318</a> 		String groups = <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="319" href="#319">319</a> 				.getGroups(dataStorers[index].attributeSets);
 <a class="jxr_linenumber" name="320" href="#320">320</a> 		out.println(<span class="jxr_string">"Provider name: "</span>
-<a class="jxr_linenumber" name="321" href="#321">321</a> 				+ AttributesUtil
+<a class="jxr_linenumber" name="321" href="#321">321</a> 				+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="322" href="#322">322</a> 						.getProviderName(dataStorers[index].attributeSets));
 <a class="jxr_linenumber" name="323" href="#323">323</a> 		out.println(<span class="jxr_string">"Groups supported: "</span> + groups);
 <a class="jxr_linenumber" name="324" href="#324">324</a> 	}

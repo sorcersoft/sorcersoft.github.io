@@ -248,10 +248,10 @@
 <a class="jxr_linenumber" name="238" href="#238">238</a> 		Map&lt;Uuid, ExertionInfo&gt; all;
 <a class="jxr_linenumber" name="239" href="#239">239</a> 		<strong class="jxr_keyword">if</strong> (selectedMonitor &gt;= 0) {
 <a class="jxr_linenumber" name="240" href="#240">240</a> 			out.println(<span class="jxr_string">"From EMX "</span>
-<a class="jxr_linenumber" name="241" href="#241">241</a> 					+ AttributesUtil
+<a class="jxr_linenumber" name="241" href="#241">241</a> 					+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="242" href="#242">242</a> 							.getProviderName(emxMonitors[selectedMonitor].attributeSets)
 <a class="jxr_linenumber" name="243" href="#243">243</a> 					+ <span class="jxr_string">" at: "</span>
-<a class="jxr_linenumber" name="244" href="#244">244</a> 					+ AttributesUtil
+<a class="jxr_linenumber" name="244" href="#244">244</a> 					+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="245" href="#245">245</a> 							.getHostName(emxMonitors[selectedMonitor].attributeSets));
 <a class="jxr_linenumber" name="246" href="#246">246</a> 			all = ((MonitorUIManagement) emxMonitors[selectedMonitor].service)
 <a class="jxr_linenumber" name="247" href="#247">247</a> 					.getMonitorableExertionInfo(xetType,
@@ -261,10 +261,10 @@
 <a class="jxr_linenumber" name="251" href="#251">251</a> 			all = <strong class="jxr_keyword">new</strong> HashMap&lt;Uuid, ExertionInfo&gt;();
 <a class="jxr_linenumber" name="252" href="#252">252</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; emxMonitors.length; i++) {
 <a class="jxr_linenumber" name="253" href="#253">253</a> 				out.println(<span class="jxr_string">"From EMX "</span>
-<a class="jxr_linenumber" name="254" href="#254">254</a> 						+ AttributesUtil
+<a class="jxr_linenumber" name="254" href="#254">254</a> 						+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="255" href="#255">255</a> 								.getProviderName(emxMonitors[i].attributeSets)
 <a class="jxr_linenumber" name="256" href="#256">256</a> 						+ <span class="jxr_string">" at: "</span>
-<a class="jxr_linenumber" name="257" href="#257">257</a> 						+ AttributesUtil
+<a class="jxr_linenumber" name="257" href="#257">257</a> 						+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="258" href="#258">258</a> 								.getHostName(emxMonitors[i].attributeSets));
 <a class="jxr_linenumber" name="259" href="#259">259</a> 
 <a class="jxr_linenumber" name="260" href="#260">260</a> 				MonitorUIManagement emx = (MonitorUIManagement) emxMonitors[i].service;
@@ -331,10 +331,10 @@
 <a class="jxr_linenumber" name="321" href="#321">321</a> 				+ AttributesUtil.getHostName(emxMonitors[index].attributeSets));
 <a class="jxr_linenumber" name="322" href="#322">322</a> 		out.println(<span class="jxr_string">"Home: "</span>
 <a class="jxr_linenumber" name="323" href="#323">323</a> 				+ AttributesUtil.getUserDir(emxMonitors[index].attributeSets));
-<a class="jxr_linenumber" name="324" href="#324">324</a> 		String groups = AttributesUtil
+<a class="jxr_linenumber" name="324" href="#324">324</a> 		String groups = <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="325" href="#325">325</a> 				.getGroups(emxMonitors[index].attributeSets);
 <a class="jxr_linenumber" name="326" href="#326">326</a> 		out.println(<span class="jxr_string">"Provider name: "</span>
-<a class="jxr_linenumber" name="327" href="#327">327</a> 				+ AttributesUtil
+<a class="jxr_linenumber" name="327" href="#327">327</a> 				+ <a href="../../../../sorcer/jini/lookup/AttributesUtil.html">AttributesUtil</a>
 <a class="jxr_linenumber" name="328" href="#328">328</a> 						.getProviderName(emxMonitors[index].attributeSets));
 <a class="jxr_linenumber" name="329" href="#329">329</a> 		out.println(<span class="jxr_string">"Groups supported: "</span> + groups);
 <a class="jxr_linenumber" name="330" href="#330">330</a> 	}
