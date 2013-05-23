@@ -123,7 +123,7 @@
 <a class="jxr_linenumber" name="113" href="#113">113</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="114" href="#114">114</a> 			result = repositorySystem.collectDependencies(repositorySystemSession, collectRequest);
 <a class="jxr_linenumber" name="115" href="#115">115</a> 		} <strong class="jxr_keyword">catch</strong> (DependencyCollectionException e) {
-<a class="jxr_linenumber" name="116" href="#116">116</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(<span class="jxr_string">"Unable to resolve runner dependencies."</span>, e);
+<a class="jxr_linenumber" name="116" href="#116">116</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(<span class="jxr_string">"Unable to resolve requestor dependencies."</span>, e);
 <a class="jxr_linenumber" name="117" href="#117">117</a> 		}
 <a class="jxr_linenumber" name="118" href="#118">118</a> 
 <a class="jxr_linenumber" name="119" href="#119">119</a> 		<strong class="jxr_keyword">final</strong> List&lt;String&gt; resultList = <strong class="jxr_keyword">new</strong> LinkedList&lt;String&gt;();
@@ -174,7 +174,7 @@
 <a class="jxr_linenumber" name="164" href="#164">164</a> 			ArtifactResult artifactResult = repositorySystem.resolveArtifact(repositorySystemSession, request);
 <a class="jxr_linenumber" name="165" href="#165">165</a> 			<strong class="jxr_keyword">return</strong> artifactResult.getArtifact();
 <a class="jxr_linenumber" name="166" href="#166">166</a> 		} <strong class="jxr_keyword">catch</strong> (ArtifactResolutionException e) {
-<a class="jxr_linenumber" name="167" href="#167">167</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(<span class="jxr_string">"Unable to resolve runner from repository."</span>, e);
+<a class="jxr_linenumber" name="167" href="#167">167</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MojoExecutionException(<span class="jxr_string">"Unable to resolve requestor from repository."</span>, e);
 <a class="jxr_linenumber" name="168" href="#168">168</a> 		}
 <a class="jxr_linenumber" name="169" href="#169">169</a> 	}
 <a class="jxr_linenumber" name="170" href="#170">170</a> 

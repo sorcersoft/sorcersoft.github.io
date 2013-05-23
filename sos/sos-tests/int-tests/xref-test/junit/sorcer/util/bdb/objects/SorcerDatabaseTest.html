@@ -142,9 +142,9 @@
 <a class="jxr_linenumber" name="132" href="#132">132</a> <em class="jxr_comment">//	@Test</em>
 <a class="jxr_linenumber" name="133" href="#133">133</a> <em class="jxr_comment">//	public void storedTableSetTest() throws Exception {</em>
 <a class="jxr_linenumber" name="134" href="#134">134</a> <em class="jxr_comment">//		// the second run and the second db population</em>
-<a class="jxr_linenumber" name="135" href="#135">135</a> <em class="jxr_comment">//        runner.run();</em>
+<a class="jxr_linenumber" name="135" href="#135">135</a> <em class="jxr_comment">//        requestor.run();</em>
 <a class="jxr_linenumber" name="136" href="#136">136</a> <em class="jxr_comment">//        // get from the database three tables persisted twice</em>
-<a class="jxr_linenumber" name="137" href="#137">137</a> <em class="jxr_comment">//		List&lt;String&gt; names = runner.returnTableNames();</em>
+<a class="jxr_linenumber" name="137" href="#137">137</a> <em class="jxr_comment">//		List&lt;String&gt; names = requestor.returnTableNames();</em>
 <a class="jxr_linenumber" name="138" href="#138">138</a> <em class="jxr_comment">//		List&lt;String&gt; ln = list("undefined0", "undefined1", "undefined2", "undefined3", "undefined4", "undefined5");</em>
 <a class="jxr_linenumber" name="139" href="#139">139</a> <em class="jxr_comment">//		Collections.sort(names);</em>
 <a class="jxr_linenumber" name="140" href="#140">140</a> <em class="jxr_comment">//		logger.info("table names: " + names);</em>
@@ -154,7 +154,7 @@
 <a class="jxr_linenumber" name="144" href="#144">144</a> <em class="jxr_comment">//	</em>
 <a class="jxr_linenumber" name="145" href="#145">145</a> <em class="jxr_comment">//	@Test</em>
 <a class="jxr_linenumber" name="146" href="#146">146</a> <em class="jxr_comment">//	public void storedTableMapTest() throws Exception {</em>
-<a class="jxr_linenumber" name="147" href="#147">147</a> <em class="jxr_comment">//		StoredMap&lt;UuidKey, Table&gt; sm = runner.getViews()</em>
+<a class="jxr_linenumber" name="147" href="#147">147</a> <em class="jxr_comment">//		StoredMap&lt;UuidKey, Table&gt; sm = requestor.getViews()</em>
 <a class="jxr_linenumber" name="148" href="#148">148</a> <em class="jxr_comment">//				.getTableMap();</em>
 <a class="jxr_linenumber" name="149" href="#149">149</a> <em class="jxr_comment">//		</em>
 <a class="jxr_linenumber" name="150" href="#150">150</a> <em class="jxr_comment">//		Iterator&lt;Map.Entry&lt;UuidKey, Table&gt;&gt; it = sm</em>
@@ -210,7 +210,7 @@
 <a class="jxr_linenumber" name="200" href="#200">200</a> <em class="jxr_comment">//	@Test</em>
 <a class="jxr_linenumber" name="201" href="#201">201</a> <em class="jxr_comment">//	public void storedVarSetTest() throws Exception {</em>
 <a class="jxr_linenumber" name="202" href="#202">202</a> <em class="jxr_comment">//        // get from the database three sessions persisted with three tasks</em>
-<a class="jxr_linenumber" name="203" href="#203">203</a> <em class="jxr_comment">//		List&lt;String&gt; names = runner.returnVarNames();</em>
+<a class="jxr_linenumber" name="203" href="#203">203</a> <em class="jxr_comment">//		List&lt;String&gt; names = requestor.returnVarNames();</em>
 <a class="jxr_linenumber" name="204" href="#204">204</a> <em class="jxr_comment">//		List&lt;String&gt; ln = list("v1", "v1", "v2", "v2");</em>
 <a class="jxr_linenumber" name="205" href="#205">205</a> <em class="jxr_comment">//		Collections.sort(names);</em>
 <a class="jxr_linenumber" name="206" href="#206">206</a> <em class="jxr_comment">//		logger.info("names: " + names);</em>
@@ -220,7 +220,7 @@
 <a class="jxr_linenumber" name="210" href="#210">210</a> 	
 <a class="jxr_linenumber" name="211" href="#211">211</a> <em class="jxr_comment">//	@Test</em>
 <a class="jxr_linenumber" name="212" href="#212">212</a> <em class="jxr_comment">//	public void storedVarMapTest() throws Exception {</em>
-<a class="jxr_linenumber" name="213" href="#213">213</a> <em class="jxr_comment">//		StoredMap&lt;UuidKey, Var&gt; sm = runner.getViews()</em>
+<a class="jxr_linenumber" name="213" href="#213">213</a> <em class="jxr_comment">//		StoredMap&lt;UuidKey, Var&gt; sm = requestor.getViews()</em>
 <a class="jxr_linenumber" name="214" href="#214">214</a> <em class="jxr_comment">//				.getVarMap();</em>
 <a class="jxr_linenumber" name="215" href="#215">215</a> <em class="jxr_comment">//		</em>
 <a class="jxr_linenumber" name="216" href="#216">216</a> <em class="jxr_comment">//		Iterator&lt;Map.Entry&lt;UuidKey, Var&gt;&gt; it = sm</em>
@@ -243,7 +243,7 @@
 <a class="jxr_linenumber" name="233" href="#233">233</a> <em class="jxr_comment">//	@Test</em>
 <a class="jxr_linenumber" name="234" href="#234">234</a> <em class="jxr_comment">//	public void storedVarModelSetTest() throws Exception {</em>
 <a class="jxr_linenumber" name="235" href="#235">235</a> <em class="jxr_comment">//        // get from the database three sessions persisted with three tasks</em>
-<a class="jxr_linenumber" name="236" href="#236">236</a> <em class="jxr_comment">//		List&lt;String&gt; names = runner.returnVarModelNames();</em>
+<a class="jxr_linenumber" name="236" href="#236">236</a> <em class="jxr_comment">//		List&lt;String&gt; names = requestor.returnVarModelNames();</em>
 <a class="jxr_linenumber" name="237" href="#237">237</a> <em class="jxr_comment">//		List&lt;String&gt; ln = list("m1", "m1", "m2", "m2");</em>
 <a class="jxr_linenumber" name="238" href="#238">238</a> <em class="jxr_comment">//		Collections.sort(names);</em>
 <a class="jxr_linenumber" name="239" href="#239">239</a> <em class="jxr_comment">//		logger.info("names: " + names);</em>
@@ -253,7 +253,7 @@
 <a class="jxr_linenumber" name="243" href="#243">243</a> <em class="jxr_comment">//	</em>
 <a class="jxr_linenumber" name="244" href="#244">244</a> <em class="jxr_comment">//	@Test</em>
 <a class="jxr_linenumber" name="245" href="#245">245</a> <em class="jxr_comment">//	public void storedVarModelMapTest() throws Exception {</em>
-<a class="jxr_linenumber" name="246" href="#246">246</a> <em class="jxr_comment">//		StoredMap&lt;UuidKey, VarModel&gt; sm = runner.getViews()</em>
+<a class="jxr_linenumber" name="246" href="#246">246</a> <em class="jxr_comment">//		StoredMap&lt;UuidKey, VarModel&gt; sm = requestor.getViews()</em>
 <a class="jxr_linenumber" name="247" href="#247">247</a> <em class="jxr_comment">//				.getVarModelMap();</em>
 <a class="jxr_linenumber" name="248" href="#248">248</a> <em class="jxr_comment">//		</em>
 <a class="jxr_linenumber" name="249" href="#249">249</a> <em class="jxr_comment">//		Iterator&lt;Map.Entry&lt;UuidKey, VarModel&gt;&gt; it = sm</em>

@@ -108,7 +108,7 @@
 <a class="jxr_linenumber" name="98" href="#98">98</a>  					.newInstance();
 <a class="jxr_linenumber" name="99" href="#99">99</a>  		} <strong class="jxr_keyword">catch</strong> (Exception e) {
 <a class="jxr_linenumber" name="100" href="#100">100</a> 			e.printStackTrace();
-<a class="jxr_linenumber" name="101" href="#101">101</a> 			logger.info(<span class="jxr_string">"Not able to create service runner: "</span> + runnerType);
+<a class="jxr_linenumber" name="101" href="#101">101</a> 			logger.info(<span class="jxr_string">"Not able to create service requestor: "</span> + runnerType);
 <a class="jxr_linenumber" name="102" href="#102">102</a> 			System.exit(1);
 <a class="jxr_linenumber" name="103" href="#103">103</a> 		}
 <a class="jxr_linenumber" name="104" href="#104">104</a> 		String str = System.getProperty(REQUESTOR_PROPERTIES_FILENAME);
@@ -236,7 +236,7 @@
 <a class="jxr_linenumber" name="226" href="#226">226</a> 					System.err
 <a class="jxr_linenumber" name="227" href="#227">227</a> 							.println(<span class="jxr_string">"Not able to open stream on properties: "</span>
 <a class="jxr_linenumber" name="228" href="#228">228</a> 									+ filename);
-<a class="jxr_linenumber" name="229" href="#229">229</a> 					System.err.println(<span class="jxr_string">"Service runner class: "</span>
+<a class="jxr_linenumber" name="229" href="#229">229</a> 					System.err.println(<span class="jxr_string">"Service requestor class: "</span>
 <a class="jxr_linenumber" name="230" href="#230">230</a> 							+ <strong class="jxr_keyword">this</strong>.getClass());
 <a class="jxr_linenumber" name="231" href="#231">231</a> 					<strong class="jxr_keyword">return</strong>;
 <a class="jxr_linenumber" name="232" href="#232">232</a> 				}
