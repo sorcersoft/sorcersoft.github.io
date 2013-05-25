@@ -857,115 +857,112 @@
 <a class="jxr_linenumber" name="847" href="#847">847</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Task.html">Task</a> doIntraTask(<a href="../../../sorcer/service/Task.html">Task</a> task) <strong class="jxr_keyword">throws</strong> ExertionException,
 <a class="jxr_linenumber" name="848" href="#848">848</a> 			SignatureException, RemoteException {
 <a class="jxr_linenumber" name="849" href="#849">849</a> 		List&lt;Signature&gt; alls = task.getSignatures();
-<a class="jxr_linenumber" name="850" href="#850">850</a> 		Signature lastSig = alls.get(alls.size()-1);
-<a class="jxr_linenumber" name="851" href="#851">851</a> 		<strong class="jxr_keyword">if</strong> (alls.size() &gt; 1 &amp;&amp;  task.isConcatenated() &amp;&amp; !(lastSig instanceof NetSignature)) {
-<a class="jxr_linenumber" name="852" href="#852">852</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i&lt; alls.size()-1; i++) {
-<a class="jxr_linenumber" name="853" href="#853">853</a> 				alls.get(i).setType(Signature.PRE);
-<a class="jxr_linenumber" name="854" href="#854">854</a> 			}
-<a class="jxr_linenumber" name="855" href="#855">855</a> 		}
-<a class="jxr_linenumber" name="856" href="#856">856</a> 		
-<a class="jxr_linenumber" name="857" href="#857">857</a> 		task.startExecTime();
-<a class="jxr_linenumber" name="858" href="#858">858</a> 		<strong class="jxr_keyword">if</strong> (task.getPreprocessSignatures().size() &gt; 0) {
-<a class="jxr_linenumber" name="859" href="#859">859</a> 			Context cxt = preprocess(task);
-<a class="jxr_linenumber" name="860" href="#860">860</a> 			cxt.setExertion(task);
-<a class="jxr_linenumber" name="861" href="#861">861</a> 			task.setContext(cxt);
-<a class="jxr_linenumber" name="862" href="#862">862</a> 		}
-<a class="jxr_linenumber" name="863" href="#863">863</a> 		<em class="jxr_comment">// execute service task</em>
-<a class="jxr_linenumber" name="864" href="#864">864</a> 		List&lt;Signature&gt; ts = <strong class="jxr_keyword">new</strong> ArrayList&lt;Signature&gt;(1);
-<a class="jxr_linenumber" name="865" href="#865">865</a> 		Signature tsig = task.getProcessSignature();
-<a class="jxr_linenumber" name="866" href="#866">866</a> 		((ServiceContext)task.getDataContext()).setCurrentSelector(tsig.getSelector());
-<a class="jxr_linenumber" name="867" href="#867">867</a> 		((ServiceContext)task.getDataContext()).setCurrentPrefix(((ServiceSignature)tsig).getPrefix());
-<a class="jxr_linenumber" name="868" href="#868">868</a> 
-<a class="jxr_linenumber" name="869" href="#869">869</a> 		ts.add(tsig);
-<a class="jxr_linenumber" name="870" href="#870">870</a> 		task.setSignatures(ts);
-<a class="jxr_linenumber" name="871" href="#871">871</a> 		<strong class="jxr_keyword">if</strong> (tsig.getReturnPath() != <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="872" href="#872">872</a> 			<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="873" href="#873">873</a> 				((ServiceContext)task.getDataContext()).setReturnPath(tsig.getReturnPath());
-<a class="jxr_linenumber" name="874" href="#874">874</a> 			} <strong class="jxr_keyword">catch</strong> (ContextException e) {
-<a class="jxr_linenumber" name="875" href="#875">875</a> 				e.printStackTrace();
-<a class="jxr_linenumber" name="876" href="#876">876</a> 				<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(e);
-<a class="jxr_linenumber" name="877" href="#877">877</a> 			}
-<a class="jxr_linenumber" name="878" href="#878">878</a> 		task = task.doTask();
-<a class="jxr_linenumber" name="879" href="#879">879</a> 		<strong class="jxr_keyword">if</strong> (task.getStatus() &lt;= ExecState.FAILED) {
-<a class="jxr_linenumber" name="880" href="#880">880</a> 			task.stopExecTime();
-<a class="jxr_linenumber" name="881" href="#881">881</a> 			ExertionException ex = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"Batch service task failed: "</span>
-<a class="jxr_linenumber" name="882" href="#882">882</a> 					+ task.getName());
-<a class="jxr_linenumber" name="883" href="#883">883</a> 			task.reportException(ex);
-<a class="jxr_linenumber" name="884" href="#884">884</a> 			task.setStatus(ExecState.FAILED);
-<a class="jxr_linenumber" name="885" href="#885">885</a> 			task.setSignatures(alls);
-<a class="jxr_linenumber" name="886" href="#886">886</a> 			<strong class="jxr_keyword">return</strong> task;
-<a class="jxr_linenumber" name="887" href="#887">887</a> 		}
-<a class="jxr_linenumber" name="888" href="#888">888</a> 		task.setSignatures(alls);
-<a class="jxr_linenumber" name="889" href="#889">889</a> 		<strong class="jxr_keyword">if</strong> (task.getPostprocessSignatures().size() &gt; 0) {
-<a class="jxr_linenumber" name="890" href="#890">890</a> 			Context cxt = postprocess(task);
-<a class="jxr_linenumber" name="891" href="#891">891</a> 			cxt.setExertion(task);
-<a class="jxr_linenumber" name="892" href="#892">892</a> 			task.setContext(cxt);
-<a class="jxr_linenumber" name="893" href="#893">893</a> 		}
-<a class="jxr_linenumber" name="894" href="#894">894</a> 		<strong class="jxr_keyword">if</strong> (task.getStatus() &lt;= ExecState.FAILED) {
-<a class="jxr_linenumber" name="895" href="#895">895</a> 			task.stopExecTime();
-<a class="jxr_linenumber" name="896" href="#896">896</a> 			ExertionException ex = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"Batch service task failed: "</span>
-<a class="jxr_linenumber" name="897" href="#897">897</a> 					+ task.getName());
-<a class="jxr_linenumber" name="898" href="#898">898</a> 			task.reportException(ex);
-<a class="jxr_linenumber" name="899" href="#899">899</a> 			task.setStatus(ExecState.FAILED);
-<a class="jxr_linenumber" name="900" href="#900">900</a> 			task.setSignatures(alls);
-<a class="jxr_linenumber" name="901" href="#901">901</a> 			<strong class="jxr_keyword">return</strong> task;
-<a class="jxr_linenumber" name="902" href="#902">902</a> 		}
-<a class="jxr_linenumber" name="903" href="#903">903</a> 		task.setSignatures(alls);
-<a class="jxr_linenumber" name="904" href="#904">904</a> 		task.stopExecTime();
-<a class="jxr_linenumber" name="905" href="#905">905</a> 		<strong class="jxr_keyword">return</strong> task;
-<a class="jxr_linenumber" name="906" href="#906">906</a> 	}
-<a class="jxr_linenumber" name="907" href="#907">907</a> 	
-<a class="jxr_linenumber" name="908" href="#908">908</a> 	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> preprocess(<a href="../../../sorcer/service/Task.html">Task</a> task) <strong class="jxr_keyword">throws</strong> ExertionException {
-<a class="jxr_linenumber" name="909" href="#909">909</a> 		<strong class="jxr_keyword">return</strong> processContinousely(task, task.getPreprocessSignatures());
-<a class="jxr_linenumber" name="910" href="#910">910</a> 	}
-<a class="jxr_linenumber" name="911" href="#911">911</a> 
-<a class="jxr_linenumber" name="912" href="#912">912</a> 	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> postprocess(<a href="../../../sorcer/service/Task.html">Task</a> task) <strong class="jxr_keyword">throws</strong> ExertionException {
-<a class="jxr_linenumber" name="913" href="#913">913</a> 		<strong class="jxr_keyword">return</strong> processContinousely(task, task.getPostprocessSignatures());
-<a class="jxr_linenumber" name="914" href="#914">914</a> 	}
-<a class="jxr_linenumber" name="915" href="#915">915</a> 
-<a class="jxr_linenumber" name="916" href="#916">916</a> 	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> processContinousely(<a href="../../../sorcer/service/Task.html">Task</a> task, List&lt;Signature&gt; signatures)
-<a class="jxr_linenumber" name="917" href="#917">917</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a> {
-<a class="jxr_linenumber" name="918" href="#918">918</a> 		Signature.Type type = signatures.get(0).getType();
-<a class="jxr_linenumber" name="919" href="#919">919</a> 		Task t = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="920" href="#920">920</a> 		Context shared = task.getDataContext();
-<a class="jxr_linenumber" name="921" href="#921">921</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; signatures.size(); i++) {
-<a class="jxr_linenumber" name="922" href="#922">922</a>             <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="923" href="#923">923</a>                 t = task(task.getName() + <span class="jxr_string">"-"</span> + i, signatures.get(i), shared);
-<a class="jxr_linenumber" name="924" href="#924">924</a>             } <strong class="jxr_keyword">catch</strong> (SignatureException e) {
-<a class="jxr_linenumber" name="925" href="#925">925</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong>  ExertionException(e);
-<a class="jxr_linenumber" name="926" href="#926">926</a>             }
-<a class="jxr_linenumber" name="927" href="#927">927</a>             signatures.get(i).setType(Signature.SRV);
-<a class="jxr_linenumber" name="928" href="#928">928</a> 			((ServiceContext)task.getDataContext()).setCurrentSelector(signatures.get(i).getSelector());
-<a class="jxr_linenumber" name="929" href="#929">929</a> 			((ServiceContext)task.getDataContext()).setCurrentPrefix(((ServiceSignature)signatures.get(i)).getPrefix());
-<a class="jxr_linenumber" name="930" href="#930">930</a> 
-<a class="jxr_linenumber" name="931" href="#931">931</a> 			List&lt;Signature&gt; tmp = <strong class="jxr_keyword">new</strong> ArrayList&lt;Signature&gt;(1);
-<a class="jxr_linenumber" name="932" href="#932">932</a> 			tmp.add(signatures.get(i));
-<a class="jxr_linenumber" name="933" href="#933">933</a> 			t.setSignatures(tmp);
-<a class="jxr_linenumber" name="934" href="#934">934</a> 			t.setContinous(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="935" href="#935">935</a> 			<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="936" href="#936">936</a> 				t = t.doTask();
-<a class="jxr_linenumber" name="937" href="#937">937</a> 				signatures.get(i).setType(type);
-<a class="jxr_linenumber" name="938" href="#938">938</a> 				shared = t.getDataContext();
-<a class="jxr_linenumber" name="939" href="#939">939</a> 				<strong class="jxr_keyword">if</strong> (t.getStatus() &lt;= ExecState.FAILED) {
-<a class="jxr_linenumber" name="940" href="#940">940</a> 					task.setStatus(ExecState.FAILED);
-<a class="jxr_linenumber" name="941" href="#941">941</a> 					ExertionException ne = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(
-<a class="jxr_linenumber" name="942" href="#942">942</a> 							<span class="jxr_string">"Batch signature failed: "</span> + signatures.get(i));
-<a class="jxr_linenumber" name="943" href="#943">943</a> 					task.reportException(ne);
-<a class="jxr_linenumber" name="944" href="#944">944</a> 					task.setContext(shared);
-<a class="jxr_linenumber" name="945" href="#945">945</a> 					<strong class="jxr_keyword">return</strong> shared;
-<a class="jxr_linenumber" name="946" href="#946">946</a> 				}
-<a class="jxr_linenumber" name="947" href="#947">947</a> 			} <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="948" href="#948">948</a> 				e.printStackTrace();
-<a class="jxr_linenumber" name="949" href="#949">949</a> 				task.setStatus(ExecState.FAILED);
-<a class="jxr_linenumber" name="950" href="#950">950</a> 				task.reportException(e);
-<a class="jxr_linenumber" name="951" href="#951">951</a> 				task.setContext(shared);
-<a class="jxr_linenumber" name="952" href="#952">952</a> 				<strong class="jxr_keyword">return</strong> shared;
-<a class="jxr_linenumber" name="953" href="#953">953</a> 			}
-<a class="jxr_linenumber" name="954" href="#954">954</a> 		}
-<a class="jxr_linenumber" name="955" href="#955">955</a> 		<em class="jxr_comment">// return the service dataContext of the last exertion</em>
-<a class="jxr_linenumber" name="956" href="#956">956</a> 		<strong class="jxr_keyword">return</strong> shared;
-<a class="jxr_linenumber" name="957" href="#957">957</a> 	}
-<a class="jxr_linenumber" name="958" href="#958">958</a> }
+<a class="jxr_linenumber" name="850" href="#850">850</a> 
+<a class="jxr_linenumber" name="851" href="#851">851</a>         <a href="../../../sorcer/service/Signature.html">Signature</a> lastSig = alls.get(alls.size()-1);
+<a class="jxr_linenumber" name="852" href="#852">852</a> 		<strong class="jxr_keyword">if</strong> (alls.size() &gt; 1 &amp;&amp;  task.isBatch() &amp;&amp; !(lastSig instanceof NetSignature)) {
+<a class="jxr_linenumber" name="853" href="#853">853</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; alls.size()-1; i++) {
+<a class="jxr_linenumber" name="854" href="#854">854</a> 				alls.get(i).setType(Signature.PRE);
+<a class="jxr_linenumber" name="855" href="#855">855</a>             }
+<a class="jxr_linenumber" name="856" href="#856">856</a> 		}
+<a class="jxr_linenumber" name="857" href="#857">857</a> 		
+<a class="jxr_linenumber" name="858" href="#858">858</a> 		task.startExecTime();
+<a class="jxr_linenumber" name="859" href="#859">859</a> 		<strong class="jxr_keyword">if</strong> (task.getPreprocessSignatures().size() &gt; 0) {
+<a class="jxr_linenumber" name="860" href="#860">860</a> 			Context cxt = preprocess(task);
+<a class="jxr_linenumber" name="861" href="#861">861</a> 			cxt.setExertion(task);
+<a class="jxr_linenumber" name="862" href="#862">862</a>             task.setContext(cxt);
+<a class="jxr_linenumber" name="863" href="#863">863</a> 		}
+<a class="jxr_linenumber" name="864" href="#864">864</a> 		<em class="jxr_comment">// execute service task</em>
+<a class="jxr_linenumber" name="865" href="#865">865</a> 		List&lt;Signature&gt; ts = <strong class="jxr_keyword">new</strong> ArrayList&lt;Signature&gt;(1);
+<a class="jxr_linenumber" name="866" href="#866">866</a> 		Signature tsig = task.getProcessSignature();
+<a class="jxr_linenumber" name="867" href="#867">867</a>         ((<a href="../../../sorcer/core/context/ServiceContext.html">ServiceContext</a>)task.getDataContext()).setCurrentSelector(tsig.getSelector());
+<a class="jxr_linenumber" name="868" href="#868">868</a> 		((ServiceContext)task.getDataContext()).setCurrentPrefix(((ServiceSignature)tsig).getPrefix());
+<a class="jxr_linenumber" name="869" href="#869">869</a> 
+<a class="jxr_linenumber" name="870" href="#870">870</a> 		ts.add(tsig);
+<a class="jxr_linenumber" name="871" href="#871">871</a> 		task.setSignatures(ts);
+<a class="jxr_linenumber" name="872" href="#872">872</a> 		<strong class="jxr_keyword">if</strong> (tsig.getReturnPath() != <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="873" href="#873">873</a> 			((ServiceContext)task.getDataContext()).setReturnPath(tsig.getReturnPath());
+<a class="jxr_linenumber" name="874" href="#874">874</a> 
+<a class="jxr_linenumber" name="875" href="#875">875</a> 		task = task.doTask();
+<a class="jxr_linenumber" name="876" href="#876">876</a> 		<strong class="jxr_keyword">if</strong> (task.getStatus() &lt;= ExecState.FAILED) {
+<a class="jxr_linenumber" name="877" href="#877">877</a> 			task.stopExecTime();
+<a class="jxr_linenumber" name="878" href="#878">878</a> 			ExertionException ex = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"Batch service task failed: "</span>
+<a class="jxr_linenumber" name="879" href="#879">879</a> 					+ task.getName());
+<a class="jxr_linenumber" name="880" href="#880">880</a> 			task.reportException(ex);
+<a class="jxr_linenumber" name="881" href="#881">881</a> 			task.setStatus(ExecState.FAILED);
+<a class="jxr_linenumber" name="882" href="#882">882</a> 			task.setSignatures(alls);
+<a class="jxr_linenumber" name="883" href="#883">883</a> 			<strong class="jxr_keyword">return</strong> task;
+<a class="jxr_linenumber" name="884" href="#884">884</a> 		}
+<a class="jxr_linenumber" name="885" href="#885">885</a> 		task.setSignatures(alls);
+<a class="jxr_linenumber" name="886" href="#886">886</a> 		<strong class="jxr_keyword">if</strong> (task.getPostprocessSignatures().size() &gt; 0) {
+<a class="jxr_linenumber" name="887" href="#887">887</a> 			Context cxt = postprocess(task);
+<a class="jxr_linenumber" name="888" href="#888">888</a> 			cxt.setExertion(task);
+<a class="jxr_linenumber" name="889" href="#889">889</a> 			task.setContext(cxt);
+<a class="jxr_linenumber" name="890" href="#890">890</a> 		}
+<a class="jxr_linenumber" name="891" href="#891">891</a> 		<strong class="jxr_keyword">if</strong> (task.getStatus() &lt;= ExecState.FAILED) {
+<a class="jxr_linenumber" name="892" href="#892">892</a> 			task.stopExecTime();
+<a class="jxr_linenumber" name="893" href="#893">893</a> 			ExertionException ex = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"Batch service task failed: "</span>
+<a class="jxr_linenumber" name="894" href="#894">894</a> 					+ task.getName());
+<a class="jxr_linenumber" name="895" href="#895">895</a> 			task.reportException(ex);
+<a class="jxr_linenumber" name="896" href="#896">896</a> 			task.setStatus(ExecState.FAILED);
+<a class="jxr_linenumber" name="897" href="#897">897</a> 			task.setSignatures(alls);
+<a class="jxr_linenumber" name="898" href="#898">898</a> 			<strong class="jxr_keyword">return</strong> task;
+<a class="jxr_linenumber" name="899" href="#899">899</a> 		}
+<a class="jxr_linenumber" name="900" href="#900">900</a> 		task.setSignatures(alls);
+<a class="jxr_linenumber" name="901" href="#901">901</a> 		task.stopExecTime();
+<a class="jxr_linenumber" name="902" href="#902">902</a> 		<strong class="jxr_keyword">return</strong> task;
+<a class="jxr_linenumber" name="903" href="#903">903</a> 	}
+<a class="jxr_linenumber" name="904" href="#904">904</a> 	
+<a class="jxr_linenumber" name="905" href="#905">905</a> 	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> preprocess(<a href="../../../sorcer/service/Task.html">Task</a> task) <strong class="jxr_keyword">throws</strong> ExertionException {
+<a class="jxr_linenumber" name="906" href="#906">906</a> 		<strong class="jxr_keyword">return</strong> processContinousely(task, task.getPreprocessSignatures());
+<a class="jxr_linenumber" name="907" href="#907">907</a> 	}
+<a class="jxr_linenumber" name="908" href="#908">908</a> 
+<a class="jxr_linenumber" name="909" href="#909">909</a> 	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> postprocess(<a href="../../../sorcer/service/Task.html">Task</a> task) <strong class="jxr_keyword">throws</strong> ExertionException {
+<a class="jxr_linenumber" name="910" href="#910">910</a> 		<strong class="jxr_keyword">return</strong> processContinousely(task, task.getPostprocessSignatures());
+<a class="jxr_linenumber" name="911" href="#911">911</a> 	}
+<a class="jxr_linenumber" name="912" href="#912">912</a> 
+<a class="jxr_linenumber" name="913" href="#913">913</a> 	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> processContinousely(<a href="../../../sorcer/service/Task.html">Task</a> task, List&lt;Signature&gt; signatures)
+<a class="jxr_linenumber" name="914" href="#914">914</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a> {
+<a class="jxr_linenumber" name="915" href="#915">915</a> 		Signature.Type type = signatures.get(0).getType();
+<a class="jxr_linenumber" name="916" href="#916">916</a> 		Task t = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="917" href="#917">917</a> 		Context shared = task.getDataContext();
+<a class="jxr_linenumber" name="918" href="#918">918</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; signatures.size(); i++) {
+<a class="jxr_linenumber" name="919" href="#919">919</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="920" href="#920">920</a>                 t = task(task.getName() + <span class="jxr_string">"-"</span> + i, signatures.get(i), shared);
+<a class="jxr_linenumber" name="921" href="#921">921</a>             } <strong class="jxr_keyword">catch</strong> (SignatureException e) {
+<a class="jxr_linenumber" name="922" href="#922">922</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong>  ExertionException(e);
+<a class="jxr_linenumber" name="923" href="#923">923</a>             }
+<a class="jxr_linenumber" name="924" href="#924">924</a>             signatures.get(i).setType(Signature.SRV);
+<a class="jxr_linenumber" name="925" href="#925">925</a> 			((ServiceContext)task.getDataContext()).setCurrentSelector(signatures.get(i).getSelector());
+<a class="jxr_linenumber" name="926" href="#926">926</a> 			((ServiceContext)task.getDataContext()).setCurrentPrefix(((ServiceSignature)signatures.get(i)).getPrefix());
+<a class="jxr_linenumber" name="927" href="#927">927</a> 
+<a class="jxr_linenumber" name="928" href="#928">928</a> 			List&lt;Signature&gt; tmp = <strong class="jxr_keyword">new</strong> ArrayList&lt;Signature&gt;(1);
+<a class="jxr_linenumber" name="929" href="#929">929</a> 			tmp.add(signatures.get(i));
+<a class="jxr_linenumber" name="930" href="#930">930</a> 			t.setSignatures(tmp);
+<a class="jxr_linenumber" name="931" href="#931">931</a> 			t.setContinous(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="932" href="#932">932</a> 			<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="933" href="#933">933</a> 				t = t.doTask();
+<a class="jxr_linenumber" name="934" href="#934">934</a> 				signatures.get(i).setType(type);
+<a class="jxr_linenumber" name="935" href="#935">935</a> 				shared = t.getDataContext();
+<a class="jxr_linenumber" name="936" href="#936">936</a> 				<strong class="jxr_keyword">if</strong> (t.getStatus() &lt;= ExecState.FAILED) {
+<a class="jxr_linenumber" name="937" href="#937">937</a> 					task.setStatus(ExecState.FAILED);
+<a class="jxr_linenumber" name="938" href="#938">938</a> 					ExertionException ne = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(
+<a class="jxr_linenumber" name="939" href="#939">939</a> 							<span class="jxr_string">"Batch signature failed: "</span> + signatures.get(i));
+<a class="jxr_linenumber" name="940" href="#940">940</a> 					task.reportException(ne);
+<a class="jxr_linenumber" name="941" href="#941">941</a> 					task.setContext(shared);
+<a class="jxr_linenumber" name="942" href="#942">942</a> 					<strong class="jxr_keyword">return</strong> shared;
+<a class="jxr_linenumber" name="943" href="#943">943</a> 				}
+<a class="jxr_linenumber" name="944" href="#944">944</a> 			} <strong class="jxr_keyword">catch</strong> (Exception e) {
+<a class="jxr_linenumber" name="945" href="#945">945</a> 				e.printStackTrace();
+<a class="jxr_linenumber" name="946" href="#946">946</a> 				task.setStatus(ExecState.FAILED);
+<a class="jxr_linenumber" name="947" href="#947">947</a> 				task.reportException(e);
+<a class="jxr_linenumber" name="948" href="#948">948</a> 				task.setContext(shared);
+<a class="jxr_linenumber" name="949" href="#949">949</a> 				<strong class="jxr_keyword">return</strong> shared;
+<a class="jxr_linenumber" name="950" href="#950">950</a> 			}
+<a class="jxr_linenumber" name="951" href="#951">951</a> 		}
+<a class="jxr_linenumber" name="952" href="#952">952</a> 		<em class="jxr_comment">// return the service dataContext of the last exertion</em>
+<a class="jxr_linenumber" name="953" href="#953">953</a> 		<strong class="jxr_keyword">return</strong> shared;
+<a class="jxr_linenumber" name="954" href="#954">954</a> 	}
+<a class="jxr_linenumber" name="955" href="#955">955</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

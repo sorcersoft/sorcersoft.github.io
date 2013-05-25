@@ -31,13 +31,13 @@
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> sorcer.eo.<strong class="jxr_keyword">operator</strong>.path;
 <a class="jxr_linenumber" name="22" href="#22">22</a>  
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.io.Serializable;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.net.InetAddress;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.net.UnknownHostException;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.util.List;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.net.UnknownHostException;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ArrayContext;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.Contexts;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.PositionalContext;
@@ -293,7 +293,7 @@
 <a class="jxr_linenumber" name="283" href="#283">283</a> <em class="jxr_javadoccomment">	 * @throws UnknownHostException</em>
 <a class="jxr_linenumber" name="284" href="#284">284</a> <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="285" href="#285">285</a> 	<strong class="jxr_keyword">private</strong> String getHostname() <strong class="jxr_keyword">throws</strong> UnknownHostException {
-<a class="jxr_linenumber" name="286" href="#286">286</a> 		<strong class="jxr_keyword">return</strong> InetAddress.getLocalHost().getHostName();
+<a class="jxr_linenumber" name="286" href="#286">286</a> 		<strong class="jxr_keyword">return</strong> SorcerEnv.getLocalHost().getHostName();
 <a class="jxr_linenumber" name="287" href="#287">287</a> 	}
 <a class="jxr_linenumber" name="288" href="#288">288</a> 
 <a class="jxr_linenumber" name="289" href="#289">289</a> }

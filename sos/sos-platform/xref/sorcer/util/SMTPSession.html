@@ -27,10 +27,10 @@
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> sorcer.util;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> sun.net.smtp.SmtpClient;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.io.PrintStream;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.net.InetAddress;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sun.net.smtp.SmtpClient;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.io.PrintStream;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <em class="jxr_javadoccomment"> * The SMTPSession class allows to send email messages using SmtpClient</em>
@@ -152,7 +152,7 @@
 <a class="jxr_linenumber" name="142" href="#142">142</a> 			<strong class="jxr_keyword">if</strong> (!succeed) {
 <a class="jxr_linenumber" name="143" href="#143">143</a> 				<strong class="jxr_keyword">try</strong> { <em class="jxr_comment">// try again, this time, to localhost</em>
 <a class="jxr_linenumber" name="144" href="#144">144</a> 					<em class="jxr_comment">// open smtp connection</em>
-<a class="jxr_linenumber" name="145" href="#145">145</a> 					sendmail = <strong class="jxr_keyword">new</strong> SmtpClient(InetAddress.getLocalHost()
+<a class="jxr_linenumber" name="145" href="#145">145</a> 					sendmail = <strong class="jxr_keyword">new</strong> SmtpClient(SorcerEnv.getLocalHost()
 <a class="jxr_linenumber" name="146" href="#146">146</a> 							.getHostName());
 <a class="jxr_linenumber" name="147" href="#147">147</a> 					sendmail.from(sender);
 <a class="jxr_linenumber" name="148" href="#148">148</a> 					sendmail.to(recipient);
