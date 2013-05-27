@@ -1390,12 +1390,12 @@
      <td><a href="./xref/sorcer/core/context/eval/ContextNode.html#232">232</a></td> 
     </tr> 
     <tr class="a"> 
-     <td>These nested if statements could be combined</td> 
-     <td><a href="./xref/sorcer/core/context/eval/ContextNode.html#237">237</a> - <a href="./xref/sorcer/core/context/eval/ContextNode.html#238">238</a></td> 
-    </tr> 
-    <tr class="b"> 
      <td>Useless parentheses.</td> 
      <td><a href="./xref/sorcer/core/context/eval/ContextNode.html#237">237</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>These nested if statements could be combined</td> 
+     <td><a href="./xref/sorcer/core/context/eval/ContextNode.html#237">237</a> - <a href="./xref/sorcer/core/context/eval/ContextNode.html#238">238</a></td> 
     </tr> 
     <tr class="a"> 
      <td>Avoid unused local variables such as 'urlStr'.</td> 
@@ -1781,11 +1781,11 @@
      <td><a href="./xref/sorcer/core/dispatch/SWIFExertDispatcher.html#176">176</a></td> 
     </tr> 
     <tr class="a"> 
-     <td>Avoid unused private methods such as 'execScript(NetTask)'.</td> 
+     <td>Avoid unused method parameters such as 'task'.</td> 
      <td><a href="./xref/sorcer/core/dispatch/SWIFExertDispatcher.html#240">240</a></td> 
     </tr> 
     <tr class="b"> 
-     <td>Avoid unused method parameters such as 'task'.</td> 
+     <td>Avoid unused private methods such as 'execScript(NetTask)'.</td> 
      <td><a href="./xref/sorcer/core/dispatch/SWIFExertDispatcher.html#240">240</a></td> 
     </tr> 
    </tbody> 
@@ -1969,24 +1969,24 @@
    </thead> 
    <tbody> 
     <tr class="b"> 
-     <td>Unnecessary use of fully qualified name 'java.io.IOException' due to existing import 'java.io.*'</td> 
-     <td><a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#120">120</a></td> 
-    </tr> 
-    <tr class="a"> 
      <td>Avoid empty catch blocks</td> 
      <td><a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#120">120</a> - <a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#121">121</a></td> 
+    </tr> 
+    <tr class="a"> 
+     <td>Unnecessary use of fully qualified name 'java.io.IOException' due to existing import 'java.io.*'</td> 
+     <td><a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#120">120</a></td> 
     </tr> 
     <tr class="b"> 
      <td>Avoid empty catch blocks</td> 
      <td><a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#140">140</a> - <a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#141">141</a></td> 
     </tr> 
     <tr class="a"> 
-     <td>Avoid empty catch blocks</td> 
-     <td><a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#190">190</a> - <a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#191">191</a></td> 
-    </tr> 
-    <tr class="b"> 
      <td>Unnecessary use of fully qualified name 'java.io.IOException' due to existing import 'java.io.*'</td> 
      <td><a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#190">190</a></td> 
+    </tr> 
+    <tr class="b"> 
+     <td>Avoid empty catch blocks</td> 
+     <td><a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#190">190</a> - <a href="./xref/sorcer/core/loki/crypt/EncryptionManager.html#191">191</a></td> 
     </tr> 
     <tr class="a"> 
      <td>Avoid empty catch blocks</td> 
@@ -4898,11 +4898,11 @@
      <td><a href="./xref/sorcer/ui/serviceui/UIFrameFactory.html#96">96</a></td> 
     </tr> 
     <tr class="a"> 
-     <td>Avoid returning from a finally block</td> 
+     <td>Useless parentheses.</td> 
      <td><a href="./xref/sorcer/ui/serviceui/UIFrameFactory.html#118">118</a></td> 
     </tr> 
     <tr class="b"> 
-     <td>Useless parentheses.</td> 
+     <td>Avoid returning from a finally block</td> 
      <td><a href="./xref/sorcer/ui/serviceui/UIFrameFactory.html#118">118</a></td> 
     </tr> 
     <tr class="a"> 
@@ -5302,11 +5302,11 @@
      <td><a href="./xref/sorcer/util/ProviderLocator.html#53">53</a></td> 
     </tr> 
     <tr class="a"> 
-     <td>Unnecessary use of fully qualified name 'java.net.MalformedURLException' due to existing import 'java.net.MalformedURLException'</td> 
+     <td>Unnecessary use of fully qualified name 'java.io.IOException' due to existing import 'java.io.IOException'</td> 
      <td><a href="./xref/sorcer/util/ProviderLocator.html#82">82</a></td> 
     </tr> 
     <tr class="b"> 
-     <td>Unnecessary use of fully qualified name 'java.io.IOException' due to existing import 'java.io.IOException'</td> 
+     <td>Unnecessary use of fully qualified name 'java.net.MalformedURLException' due to existing import 'java.net.MalformedURLException'</td> 
      <td><a href="./xref/sorcer/util/ProviderLocator.html#82">82</a></td> 
     </tr> 
     <tr class="a"> 
@@ -5745,15 +5745,21 @@
 	<footer class="well">
 		<div class="container">
 			<div class="row">
-				<div class="span2 bottom-nav">
+				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
+						<li class="nav-header">First steps</li>
+						<li>
+							<a href="../../getting-started.html" title="Getting Started">Getting Started </a>
+						</li>
+						<li>
+							<a href="../../examples.html" title="Running provided Sorcer examples">Running provided Sorcer examples </a>
+						</li>
+						<li>
+							<a href="../../new-provider.html" title="Creating a Sorcer Service Provider">Creating a Sorcer Service Provider </a>
+						</li>
 					</ul>
 				</div>
-				<div class="span2 bottom-nav">
-					<ul class="nav nav-list">
-					</ul>
-				</div>
-				<div class="span2 bottom-nav">
+				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Documentation</li>
 						<li>
