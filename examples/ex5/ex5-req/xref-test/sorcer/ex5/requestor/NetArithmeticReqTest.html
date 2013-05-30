@@ -71,7 +71,7 @@
 <a class="jxr_linenumber" name="61" href="#61">61</a>  		Job result = (NetJob) job.exert();
 <a class="jxr_linenumber" name="62" href="#62">62</a>  		logger.info(<span class="jxr_string">"result context: "</span> + result.getComponentContext(<span class="jxr_string">"3tasks/subtract"</span>));
 <a class="jxr_linenumber" name="63" href="#63">63</a>  		logger.info(<span class="jxr_string">"job context: "</span> + result.getJobContext());
-<a class="jxr_linenumber" name="64" href="#64">64</a>  		assertEquals(result.getValue(<span class="jxr_string">"1job1task/subtract/result/value"</span>), 400.0);
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		assertEquals(400.0, result.getValue(<span class="jxr_string">"1job1task/subtract/result/value"</span>));
 <a class="jxr_linenumber" name="65" href="#65">65</a>  	}
 <a class="jxr_linenumber" name="66" href="#66">66</a>  	
 <a class="jxr_linenumber" name="67" href="#67">67</a>  	@Test
@@ -80,7 +80,7 @@
 <a class="jxr_linenumber" name="70" href="#70">70</a>  		NetJob result = (NetJob)job.exert();
 <a class="jxr_linenumber" name="71" href="#71">71</a>  		logger.info(<span class="jxr_string">"result context: "</span>  + result.getComponentContext(<span class="jxr_string">"3tasks/subtract"</span>));
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		logger.info(<span class="jxr_string">"job context: "</span> + result.getJobContext());
-<a class="jxr_linenumber" name="73" href="#73">73</a>  		assertEquals(result.getValue(<span class="jxr_string">"3tasks/subtract/result/value"</span>), 400.0);
+<a class="jxr_linenumber" name="73" href="#73">73</a>  		assertEquals(400.0, result.getValue(<span class="jxr_string">"3tasks/subtract/result/value"</span>));
 <a class="jxr_linenumber" name="74" href="#74">74</a>  	}
 <a class="jxr_linenumber" name="75" href="#75">75</a>  
 <a class="jxr_linenumber" name="76" href="#76">76</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Job getJobComposition() <strong class="jxr_keyword">throws</strong> Exception {

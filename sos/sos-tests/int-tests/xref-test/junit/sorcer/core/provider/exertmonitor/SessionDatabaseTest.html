@@ -45,7 +45,7 @@
 <a class="jxr_linenumber" name="35" href="#35">35</a>  
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.exertmonitor.IMonitorSession;
-<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> sorcer.util.IOUtil;
+<a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> sorcer.util.IOUtils;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> sorcer.util.bdb.objects.UuidKey;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">import</strong> com.sleepycat.collections.StoredMap;
@@ -80,7 +80,7 @@
 <a class="jxr_linenumber" name="70" href="#70">70</a>  	@AfterClass 
 <a class="jxr_linenumber" name="71" href="#71">71</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> cleanup() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		<em class="jxr_comment">// delete database home directory and close database</em>
-<a class="jxr_linenumber" name="73" href="#73">73</a>  		IOUtil.deleteDir(dbDir);
+<a class="jxr_linenumber" name="73" href="#73">73</a>  		IOUtils.deleteDir(dbDir);
 <a class="jxr_linenumber" name="74" href="#74">74</a>  		<strong class="jxr_keyword">if</strong> (runner != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="75" href="#75">75</a>              <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="76" href="#76">76</a>                  <em class="jxr_comment">// Always attempt to close the database cleanly.</em>
