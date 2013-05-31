@@ -15,8 +15,8 @@
 		<meta name="author" content="Paweł Rubach" />
 		<meta http-equiv="content-language" content="en" />
 
-		<link href="http://netdna.bootstrapcdn.com/bootswatch/2.2.2/spacelab/bootstrap.min.css" rel="stylesheet" />
-		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/bootswatch/2.2.2/spacelab/bootstrap.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" rel="stylesheet" />
 		<link href="./css/bootswatch.css" rel="stylesheet" />
 		<link href="./css/reflow-skin.css" rel="stylesheet" />
 		
@@ -158,17 +158,17 @@
     </div> </li> 
    <li>Answer questions:</li> 
    <ol style="list-style-type: decimal"> 
-    <li>groupId: Usually your organization's reversed domain name, e.g. com.sorcersoft</li> 
-    <li>artifactId: Project name and project directory name, e.g. myprovider1</li> 
-    <li>package: Java package for your provider classes, by default groupId is used</li> 
-    <li>serviceDescription: Description of your provider. The given description can be seen in the Sorcer service browser.</li> 
-    <li>providerInterface: Java class name of your provider's interface (service type) that will be exposed to requestors</li> 
-    <li>providerClass: Name of class that will implement the provider's interface</li> 
+    <li>groupId: This will usually be your organization's reversed domain name, e.g. com.sorcersoft</li> 
+    <li>artifactId: The project name and the project directory name, e.g. myprovider</li> 
+    <li>package: The Java package for your provider classes, by default groupId is used</li> 
+    <li>serviceDescription: The description of your provider. The given description can be seen in the Sorcer Service Browser.</li> 
+    <li>providerInterface: The Java interface name of your provider (service type) that will be exposed to requestors</li> 
+    <li>providerClass: The name of the class that will implement the provider interface</li> 
     <li>serviceName: The name of your service</li> 
    </ol> 
    <li>Confirm properties configuration <p>Now you can accept or modify entered inputs, including the default ones. If everything is OK, press Y. </p> </li> 
-   <li>Import your maven projects to your IDE (IntelliJ Idea or eclipse, for example). Below you can find see how to import your project to IntelliJ idea</li> 
-   <li>You can remove the (service UI) artifactId&gt;-sui module unless you are going to create a graphical user interface attached to your provider. You can also remove the &lt;artifactId&gt;-proxy module unless you want to crate a custom provider proxy. Remember to delete the corresponding &lt;module&gt; entry in your provider pom.xml for any removed module from your provider project. </li> 
+   <li>Import your maven projects to your IDE (IntelliJ Idea or eclipse, for example). Below you can find information on how to import your project to IntelliJ idea</li> 
+   <li>You can remove the (service UI) &lt;artifactId&gt;-sui module unless you are going to create a graphical user interface attached to your provider. You can also remove the &lt;artifactId&gt;-proxy module unless you want to crate a custom provider proxy. Remember to delete the corresponding &lt;module&gt; entry in your provider pom.xml for any removed module from your provider project. </li> 
    <li>To build your project in your the top-level directory of your project execute: 
     <div>
      <pre>mvn install</pre>
@@ -176,7 +176,7 @@
   </ol> 
   <div class="section" id="Importing_provider">
    <h2 id="Importing_provider">Importing project into IntelliJ Idea</h2> 
-   <p> To work with Sorcer the free community edition of IntelliJ Idea should be sufficient. </p>
+   <p> To work with Sorcer the free community edition of <a class="externalLink" href="http://www.jetbrains.com/idea/">IntelliJ Idea</a> should be sufficient. </p>
    <ol style="list-style-type: decimal"> 
     <li>Open IntelliJ Idea</li> 
     <li>Select import project and point the top-level directory of your provider project as in Figure below</li> 
@@ -191,7 +191,7 @@
      <li>Start Sorcer - please refer to our <a href="getting-started.html">Getting Started Guide</a> to see how to do that</li> 
      <li>Start provider (from console in project directory): 
       <div>
-       <pre>ant -f [serviceName]-prv/boot.xml</pre>
+       <pre>ant -f &lt;serviceName&gt;-prv/boot.xml</pre>
       </div> </li> 
      <li>If you use IntelliJ Idea you can drag and drop the boot.xml script to the &quot;Ant build&quot; window and double-click the &quot;boot.provider&quot; goal</li> 
     </ol> 
@@ -201,7 +201,7 @@
      <ul> 
       <li>To test your provider start sample requestor (client): 
        <div>
-        <pre>ant -f [serviceName]-req/run.xml</pre>
+        <pre>ant -f &lt;serviceName&gt;-req/run.xml</pre>
        </div> </li> 
       <li>If you use IntelliJ Idea you can drag and drop the run.xml script to the &quot;Ant build&quot; window and double-click the &quot;run.requestor&quot; goal</li> 
      </ul> 
@@ -271,7 +271,7 @@
 
 	<!-- Fallback jQuery loading from Google CDN:
 	     http://stackoverflow.com/questions/1014203/best-way-to-use-googles-hosted-jquery-but-fall-back-to-my-hosted-library-on-go -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script type="text/javascript">
 		if (typeof jQuery == 'undefined')
 		{
@@ -279,7 +279,7 @@
 		}
 	</script>
 	
-	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 	<script src="./js/lightbox.js"></script>
 	<script src="./js/jquery.smooth-scroll.min.js"></script>
 	<!-- back button support for smooth scroll -->
