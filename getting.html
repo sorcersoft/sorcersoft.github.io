@@ -93,14 +93,6 @@
 											<li><a href="source-repository.html" title="Source Repository">Source Repository </a></li>
 										</ul>
 									</li>
-									<li class="dropdown-submenu">
-										<a href="project-reports.html" title="Project Reports">Project Reports </a>
-										<ul class="dropdown-menu">
-											<li><a href="xref/index.html" title="Source Xref">Source Xref </a></li>
-											<li><a href="xref-test/index.html" title="Test Source Xref">Test Source Xref </a></li>
-											<li><a href="apidocs/index.html" title="JavaDocs">JavaDocs </a></li>
-										</ul>
-									</li>
 								</ul>
 							</li>
 						</ul>
@@ -145,6 +137,8 @@
 </pre> 
    </div><p><img src="getting/idea/step4.png" alt="Clone repository" /></p><p>Click Next.</p></li> 
   <li><p>Create directory for idea projects or use an existing one.</p><p>Click clone</p></li> 
+  <li><p>Before compiling the whole project please set the environment variable SORCER_HOME and point it to the root directory to which you cloned the project.</p></li> 
+  <li><p>You can compile the code from console by running <tt>mvn install</tt>.</p></li> 
  </ol> 
 </div> 
 <div class="section"> 
@@ -169,6 +163,8 @@ git clone https://github.com/sorcersoft/sorcer.git
   <li><p>Make sure org.sorcersoft.sorcer:sorcer:1.0-SNAPSHOT is selected</p><p><img src="getting/console/step11.png" alt="Select modules" /></p></li> 
   <li><p>Select Java SDK, or setup one if there is none</p><p><img src="getting/console/step12.png" alt="Select Java SDK" /></p></li> 
   <li><p>(Leave the defaults) Clik Finish</p><p><img src="getting/console/step13.png" alt="Project name" /></p></li> 
+  <li><p>Before compiling the whole project please set the environment variable SORCER_HOME and point it to the root directory to which you cloned the project.</p></li> 
+  <li><p>You can compile the code from console by running <tt>mvn install</tt>.</p></li> 
  </ol> 
 </div>
 			</div>

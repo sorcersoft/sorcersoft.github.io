@@ -557,14 +557,14 @@
 <a class="jxr_linenumber" name="547" href="#547">547</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="548" href="#548">548</a> 			catIsOk = isAlive((Provider) cataloger);
 <a class="jxr_linenumber" name="549" href="#549">549</a> 		} <strong class="jxr_keyword">catch</strong> (Exception re) {
-<a class="jxr_linenumber" name="550" href="#550">550</a> 			<strong class="jxr_keyword">return</strong> cataloger = (Cataloger) getService(serviceName,
+<a class="jxr_linenumber" name="550" href="#550">550</a> 			<strong class="jxr_keyword">return</strong> cataloger = getService(serviceName,
 <a class="jxr_linenumber" name="551" href="#551">551</a> 					Cataloger.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="552" href="#552">552</a> 		}
 <a class="jxr_linenumber" name="553" href="#553">553</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="554" href="#554">554</a> 			<strong class="jxr_keyword">if</strong> (catIsOk) {
 <a class="jxr_linenumber" name="555" href="#555">555</a> 				<strong class="jxr_keyword">return</strong> cataloger;
 <a class="jxr_linenumber" name="556" href="#556">556</a> 			} <strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="557" href="#557">557</a> 				<strong class="jxr_keyword">return</strong> cataloger = (Cataloger) getService(serviceName,
+<a class="jxr_linenumber" name="557" href="#557">557</a> 				<strong class="jxr_keyword">return</strong> cataloger = getService(serviceName,
 <a class="jxr_linenumber" name="558" href="#558">558</a> 						Cataloger.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="559" href="#559">559</a> 		} <strong class="jxr_keyword">catch</strong> (Exception e) {
 <a class="jxr_linenumber" name="560" href="#560">560</a> 			logger.throwing(ProviderAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getProvider"</span>, e);
