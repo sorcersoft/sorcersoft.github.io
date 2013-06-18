@@ -186,20 +186,20 @@
 <a class="jxr_linenumber" name="176" href="#176">176</a> 	}
 <a class="jxr_linenumber" name="177" href="#177">177</a> 
 <a class="jxr_linenumber" name="178" href="#178">178</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> getMasterExertion() {
-<a class="jxr_linenumber" name="179" href="#179">179</a> 		String contextName = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="179" href="#179">179</a> 		Uuid contextId = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="180" href="#180">180</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="181" href="#181">181</a> 			contextName = (String) controlContext.getValue(ControlContext.MASTER_EXERTION);
-<a class="jxr_linenumber" name="182" href="#182">182</a> 		} <strong class="jxr_keyword">catch</strong> (ContextException ex) {
-<a class="jxr_linenumber" name="183" href="#183">183</a> 			ex.printStackTrace();
-<a class="jxr_linenumber" name="184" href="#184">184</a> 		}
-<a class="jxr_linenumber" name="185" href="#185">185</a> 		<strong class="jxr_keyword">if</strong> (contextName == <strong class="jxr_keyword">null</strong>
-<a class="jxr_linenumber" name="186" href="#186">186</a> 				&amp;&amp; controlContext.getFlowType().equals(ControlContext.SEQUENTIAL)) {
-<a class="jxr_linenumber" name="187" href="#187">187</a> 			<strong class="jxr_keyword">return</strong> (size() &gt; 0) ? exertionAt(size() - 1) : <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="188" href="#188">188</a> 		} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="189" href="#189">189</a> 			Exertion master = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="190" href="#190">190</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; size(); i++) {
-<a class="jxr_linenumber" name="191" href="#191">191</a> 				<strong class="jxr_keyword">if</strong> (exertionAt(i).getContext().getName().equals(
-<a class="jxr_linenumber" name="192" href="#192">192</a> 						contextName)) {
+<a class="jxr_linenumber" name="181" href="#181">181</a> 			<em class="jxr_comment">//contextName = (String) controlContext.getValue(ControlContext.MASTER_EXERTION);</em>
+<a class="jxr_linenumber" name="182" href="#182">182</a>             contextId = (Uuid) controlContext.getValue(ControlContext.MASTER_EXERTION);
+<a class="jxr_linenumber" name="183" href="#183">183</a> 		} <strong class="jxr_keyword">catch</strong> (ContextException ex) {
+<a class="jxr_linenumber" name="184" href="#184">184</a> 			ex.printStackTrace();
+<a class="jxr_linenumber" name="185" href="#185">185</a> 		}
+<a class="jxr_linenumber" name="186" href="#186">186</a> 		<strong class="jxr_keyword">if</strong> (contextId == <strong class="jxr_keyword">null</strong>
+<a class="jxr_linenumber" name="187" href="#187">187</a> 				&amp;&amp; controlContext.getFlowType().equals(ControlContext.SEQUENTIAL)) {
+<a class="jxr_linenumber" name="188" href="#188">188</a> 			<strong class="jxr_keyword">return</strong> (size() &gt; 0) ? exertionAt(size() - 1) : <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="189" href="#189">189</a> 		} <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="190" href="#190">190</a> 			Exertion master = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="191" href="#191">191</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; size(); i++) {
+<a class="jxr_linenumber" name="192" href="#192">192</a> 				<strong class="jxr_keyword">if</strong> (exertionAt(i).getId().equals(contextId)) {
 <a class="jxr_linenumber" name="193" href="#193">193</a> 					master = exertionAt(i);
 <a class="jxr_linenumber" name="194" href="#194">194</a> 					<strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="195" href="#195">195</a> 				}

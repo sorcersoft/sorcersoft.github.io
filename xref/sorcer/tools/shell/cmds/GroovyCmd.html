@@ -179,7 +179,7 @@
 <a class="jxr_linenumber" name="169" href="#169">169</a> 		;
 <a class="jxr_linenumber" name="170" href="#170">170</a> 
 <a class="jxr_linenumber" name="171" href="#171">171</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="172" href="#172">172</a> 			is = getClass().getResourceAsStream(filename);
+<a class="jxr_linenumber" name="172" href="#172">172</a> 			is = getClass().getClassLoader().getResourceAsStream(filename);
 <a class="jxr_linenumber" name="173" href="#173">173</a> 			<strong class="jxr_keyword">if</strong> (is != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="174" href="#174">174</a> 				br = <strong class="jxr_keyword">new</strong> BufferedReader(<strong class="jxr_keyword">new</strong> InputStreamReader(is));
 <a class="jxr_linenumber" name="175" href="#175">175</a> 				<strong class="jxr_keyword">while</strong> (<strong class="jxr_keyword">null</strong> != (line = br.readLine())) {

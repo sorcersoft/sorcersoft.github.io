@@ -98,13 +98,13 @@
 <a class="jxr_linenumber" name="88" href="#88">88</a>                  job.setAccessType(Access.PULL);
 <a class="jxr_linenumber" name="89" href="#89">89</a>  
 <a class="jxr_linenumber" name="90" href="#90">90</a>              <em class="jxr_comment">// Exertion control flow PARALLEL or SEQUENTIAL</em>
-<a class="jxr_linenumber" name="91" href="#91">91</a>              <strong class="jxr_keyword">boolean</strong> iSequential = getProperty(<span class="jxr_string">"provider.control.flow"</span>, <span class="jxr_string">"SEQUENTIAL"</span>).equals(<span class="jxr_string">"SEQUENTIAL"</span>);
-<a class="jxr_linenumber" name="92" href="#92">92</a>              <strong class="jxr_keyword">if</strong> (iSequential)
+<a class="jxr_linenumber" name="91" href="#91">91</a>              <strong class="jxr_keyword">boolean</strong> isSequential = getProperty(<span class="jxr_string">"provider.control.flow"</span>, <span class="jxr_string">"SEQUENTIAL"</span>).equals(<span class="jxr_string">"SEQUENTIAL"</span>);
+<a class="jxr_linenumber" name="92" href="#92">92</a>              <strong class="jxr_keyword">if</strong> (isSequential)
 <a class="jxr_linenumber" name="93" href="#93">93</a>                  job.setFlowType(Flow.SEQ);
 <a class="jxr_linenumber" name="94" href="#94">94</a>              <strong class="jxr_keyword">else</strong>
 <a class="jxr_linenumber" name="95" href="#95">95</a>                  job.setFlowType(Flow.PAR);
 <a class="jxr_linenumber" name="96" href="#96">96</a>  
-<a class="jxr_linenumber" name="97" href="#97">97</a>              logger.info(<span class="jxr_string">"isPushAccess: "</span> + isPushAccess + <span class="jxr_string">" iSequential: "</span> + iSequential);
+<a class="jxr_linenumber" name="97" href="#97">97</a>              logger.info(<span class="jxr_string">"*** push: "</span> + isPushAccess + <span class="jxr_string">" sequential: "</span> + isSequential);
 <a class="jxr_linenumber" name="98" href="#98">98</a>  
 <a class="jxr_linenumber" name="99" href="#99">99</a>              <strong class="jxr_keyword">return</strong> job;
 <a class="jxr_linenumber" name="100" href="#100">100</a>         } <strong class="jxr_keyword">catch</strong> (Exception e) {

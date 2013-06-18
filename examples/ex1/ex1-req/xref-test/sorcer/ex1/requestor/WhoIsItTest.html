@@ -106,142 +106,141 @@
 <a class="jxr_linenumber" name="96" href="#96">96</a>          }
 <a class="jxr_linenumber" name="97" href="#97">97</a>      }
 <a class="jxr_linenumber" name="98" href="#98">98</a>  
-<a class="jxr_linenumber" name="99" href="#99">99</a>      @Ignore
-<a class="jxr_linenumber" name="100" href="#100">100</a>     @Test
-<a class="jxr_linenumber" name="101" href="#101">101</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> helloNetworkTask() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="102" href="#102">102</a>         <em class="jxr_comment">// using requestor/provider message types</em>
-<a class="jxr_linenumber" name="103" href="#103">103</a>         InetAddress inetAddress = InetAddress.getLocalHost();
-<a class="jxr_linenumber" name="104" href="#104">104</a>         String hostname = inetAddress.getHostName();
-<a class="jxr_linenumber" name="105" href="#105">105</a>         String ipAddress = inetAddress.getHostAddress();
-<a class="jxr_linenumber" name="106" href="#106">106</a>         String providerName = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="107" href="#107">107</a> 
-<a class="jxr_linenumber" name="108" href="#108">108</a>         Context context = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who Is It?"</span>);
-<a class="jxr_linenumber" name="109" href="#109">109</a>         context.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(<span class="jxr_string">"Hello Network!"</span>));
-<a class="jxr_linenumber" name="110" href="#110">110</a>         context.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
-<a class="jxr_linenumber" name="111" href="#111">111</a> 
-<a class="jxr_linenumber" name="112" href="#112">112</a>         NetSignature signature = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostName"</span>,
-<a class="jxr_linenumber" name="113" href="#113">113</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providerName);
-<a class="jxr_linenumber" name="114" href="#114">114</a> 
-<a class="jxr_linenumber" name="115" href="#115">115</a>         Task task = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who Is It?"</span>, signature, context);
-<a class="jxr_linenumber" name="116" href="#116">116</a>         Exertion result = task.exert();
-<a class="jxr_linenumber" name="117" href="#117">117</a>         logger.info(<span class="jxr_string">"task context: "</span> + result.getContext());
-<a class="jxr_linenumber" name="118" href="#118">118</a>         <strong class="jxr_keyword">if</strong> (result.getExceptions().size() &gt; 0)
-<a class="jxr_linenumber" name="119" href="#119">119</a>             logger.info(<span class="jxr_string">"exceptions: "</span> + result.getExceptions());
-<a class="jxr_linenumber" name="120" href="#120">120</a>         <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="121" href="#121">121</a>             logger.info(<span class="jxr_string">"task context: "</span> + result.getContext());
-<a class="jxr_linenumber" name="122" href="#122">122</a> <em class="jxr_comment">//        assertEquals(result.getContext().getValue("provider/hostname"), hostname);</em>
-<a class="jxr_linenumber" name="123" href="#123">123</a> <em class="jxr_comment">//        assertEquals(result.getContext().getValue("provider/address"), ipAddress);</em>
-<a class="jxr_linenumber" name="124" href="#124">124</a>         }
-<a class="jxr_linenumber" name="125" href="#125">125</a>     }
-<a class="jxr_linenumber" name="126" href="#126">126</a> 
-<a class="jxr_linenumber" name="127" href="#127">127</a> 	@Test
-<a class="jxr_linenumber" name="128" href="#128">128</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> execBatchTask() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="129" href="#129">129</a>         InetAddress inetAddress = InetAddress.getLocalHost();
-<a class="jxr_linenumber" name="130" href="#130">130</a>         String hostname = inetAddress.getHostName();
-<a class="jxr_linenumber" name="131" href="#131">131</a>         String ipAddress = inetAddress.getHostAddress();
-<a class="jxr_linenumber" name="132" href="#132">132</a> 
-<a class="jxr_linenumber" name="133" href="#133">133</a>         Context context = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who Is It?"</span>);
-<a class="jxr_linenumber" name="134" href="#134">134</a>         context.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(<span class="jxr_string">"Hello Objects!"</span>));
-<a class="jxr_linenumber" name="135" href="#135">135</a>         context.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
-<a class="jxr_linenumber" name="136" href="#136">136</a>         context.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
-<a class="jxr_linenumber" name="137" href="#137">137</a> 
-<a class="jxr_linenumber" name="138" href="#138">138</a>         Signature signature1 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getHostAddress"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="139" href="#139">139</a>         Signature signature2 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getHostName"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="140" href="#140">140</a>         Signature signature3 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getCanonicalHostName"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="141" href="#141">141</a>         Signature signature4 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getTimestamp"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="142" href="#142">142</a> 
-<a class="jxr_linenumber" name="143" href="#143">143</a>         Task task = <strong class="jxr_keyword">new</strong> ObjectTask(<span class="jxr_string">"Who Is It?"</span>, signature1, signature2, signature3, signature4);
-<a class="jxr_linenumber" name="144" href="#144">144</a>         task.setContext(context);
-<a class="jxr_linenumber" name="145" href="#145">145</a> 
-<a class="jxr_linenumber" name="146" href="#146">146</a>         Exertion result = task.exert();
-<a class="jxr_linenumber" name="147" href="#147">147</a>         logger.info(<span class="jxr_string">"task context: "</span> + result.getContext());
-<a class="jxr_linenumber" name="148" href="#148">148</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/hostname"</span>), hostname);
-<a class="jxr_linenumber" name="149" href="#149">149</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/address"</span>), ipAddress);
-<a class="jxr_linenumber" name="150" href="#150">150</a>     }
-<a class="jxr_linenumber" name="151" href="#151">151</a> 
-<a class="jxr_linenumber" name="152" href="#152">152</a>     @Ignore
-<a class="jxr_linenumber" name="153" href="#153">153</a>     @Test
-<a class="jxr_linenumber" name="154" href="#154">154</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> exertBatchTask() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="155" href="#155">155</a>         InetAddress inetAddress = InetAddress.getLocalHost();
-<a class="jxr_linenumber" name="156" href="#156">156</a>         String hostname = inetAddress.getHostName();
-<a class="jxr_linenumber" name="157" href="#157">157</a>         String ipAddress = inetAddress.getHostAddress();
-<a class="jxr_linenumber" name="158" href="#158">158</a>         String providername = <span class="jxr_string">"*"</span>;
-<a class="jxr_linenumber" name="159" href="#159">159</a> 
-<a class="jxr_linenumber" name="160" href="#160">160</a>         Context context = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who Is It?"</span>);
-<a class="jxr_linenumber" name="161" href="#161">161</a>         context.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(<span class="jxr_string">"Hello Network!"</span>));
-<a class="jxr_linenumber" name="162" href="#162">162</a>         context.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
-<a class="jxr_linenumber" name="163" href="#163">163</a>         context.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
-<a class="jxr_linenumber" name="164" href="#164">164</a> 
-<a class="jxr_linenumber" name="165" href="#165">165</a>         Signature signature1 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostAddress"</span>,
-<a class="jxr_linenumber" name="166" href="#166">166</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.PRE);
-<a class="jxr_linenumber" name="167" href="#167">167</a>         Signature signature2 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostName"</span>,
-<a class="jxr_linenumber" name="168" href="#168">168</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.SRV);
-<a class="jxr_linenumber" name="169" href="#169">169</a>         Signature signature3 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getCanonicalHostName"</span>,
-<a class="jxr_linenumber" name="170" href="#170">170</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.POST);
-<a class="jxr_linenumber" name="171" href="#171">171</a>         Signature signature4 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getTimestamp"</span>,
-<a class="jxr_linenumber" name="172" href="#172">172</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.POST);
-<a class="jxr_linenumber" name="173" href="#173">173</a> 
-<a class="jxr_linenumber" name="174" href="#174">174</a>         Task task = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who Is It?"</span>,
-<a class="jxr_linenumber" name="175" href="#175">175</a>                 <strong class="jxr_keyword">new</strong> Signature[] { signature1, signature2, signature3, signature4 },
-<a class="jxr_linenumber" name="176" href="#176">176</a>                 context);
-<a class="jxr_linenumber" name="177" href="#177">177</a> 
-<a class="jxr_linenumber" name="178" href="#178">178</a>         Exertion result = task.exert();
-<a class="jxr_linenumber" name="179" href="#179">179</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/hostname"</span>), hostname);
-<a class="jxr_linenumber" name="180" href="#180">180</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/address"</span>), inetAddress.getHostAddress());
-<a class="jxr_linenumber" name="181" href="#181">181</a>     }
-<a class="jxr_linenumber" name="182" href="#182">182</a> 
-<a class="jxr_linenumber" name="183" href="#183">183</a>     @Ignore
-<a class="jxr_linenumber" name="184" href="#184">184</a>     @Test
-<a class="jxr_linenumber" name="185" href="#185">185</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> exertJob() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="186" href="#186">186</a>         String providerName1 = Sorcer.getSuffixedName(<span class="jxr_string">"ABC"</span>);
-<a class="jxr_linenumber" name="187" href="#187">187</a>         String providerName2 = Sorcer.getSuffixedName(<span class="jxr_string">"XYZ"</span>);
-<a class="jxr_linenumber" name="188" href="#188">188</a> 
-<a class="jxr_linenumber" name="189" href="#189">189</a>         <em class="jxr_comment">// define requestor data</em>
-<a class="jxr_linenumber" name="190" href="#190">190</a>         InetAddress inetAddress = InetAddress.getLocalHost();
-<a class="jxr_linenumber" name="191" href="#191">191</a>         String hostname = inetAddress.getHostName();
-<a class="jxr_linenumber" name="192" href="#192">192</a>         String ipAddress = inetAddress.getHostAddress();
-<a class="jxr_linenumber" name="193" href="#193">193</a> 
-<a class="jxr_linenumber" name="194" href="#194">194</a>         Context context1 = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who is it?"</span>);
-<a class="jxr_linenumber" name="195" href="#195">195</a>         context1.putValue(<span class="jxr_string">"requestor/message"</span>, <span class="jxr_string">"Hello "</span> + providerName1);
-<a class="jxr_linenumber" name="196" href="#196">196</a>         context1.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
-<a class="jxr_linenumber" name="197" href="#197">197</a>         context1.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
-<a class="jxr_linenumber" name="198" href="#198">198</a> 
-<a class="jxr_linenumber" name="199" href="#199">199</a>         Context context2 = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who is it?"</span>);
-<a class="jxr_linenumber" name="200" href="#200">200</a>         context2.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(
-<a class="jxr_linenumber" name="201" href="#201">201</a>                 providerName2));
-<a class="jxr_linenumber" name="202" href="#202">202</a>         context2.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
-<a class="jxr_linenumber" name="203" href="#203">203</a>         context2.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
-<a class="jxr_linenumber" name="204" href="#204">204</a> 
-<a class="jxr_linenumber" name="205" href="#205">205</a>         NetSignature signature1 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostName"</span>,
-<a class="jxr_linenumber" name="206" href="#206">206</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providerName1);
-<a class="jxr_linenumber" name="207" href="#207">207</a>         NetSignature signature2 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostAddress"</span>,
-<a class="jxr_linenumber" name="208" href="#208">208</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providerName2);
-<a class="jxr_linenumber" name="209" href="#209">209</a> 
-<a class="jxr_linenumber" name="210" href="#210">210</a>         Task task1 = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who is it1?"</span>, signature1, context1);
-<a class="jxr_linenumber" name="211" href="#211">211</a>         Task task2 = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who is it2?"</span>, signature2, context2);
-<a class="jxr_linenumber" name="212" href="#212">212</a>         Job job = <strong class="jxr_keyword">new</strong> NetJob(<span class="jxr_string">"Who are they?"</span>);
-<a class="jxr_linenumber" name="213" href="#213">213</a>         job.addExertion(task1).addExertion(task2);
-<a class="jxr_linenumber" name="214" href="#214">214</a> 
-<a class="jxr_linenumber" name="215" href="#215">215</a>         ControlContext cc = job.getControlContext();
-<a class="jxr_linenumber" name="216" href="#216">216</a>         <em class="jxr_comment">// PUSH or PULL provider access</em>
-<a class="jxr_linenumber" name="217" href="#217">217</a>         cc.setAccessType(Strategy.Access.PUSH);
-<a class="jxr_linenumber" name="218" href="#218">218</a>         <em class="jxr_comment">// Exertion control flow PAR or SEQ</em>
-<a class="jxr_linenumber" name="219" href="#219">219</a>         cc.setFlowType(Strategy.Flow.PAR);
-<a class="jxr_linenumber" name="220" href="#220">220</a> 
-<a class="jxr_linenumber" name="221" href="#221">221</a>         Job result = (Job)job.exert();
-<a class="jxr_linenumber" name="222" href="#222">222</a> 
-<a class="jxr_linenumber" name="223" href="#223">223</a>         logger.info(<span class="jxr_string">"job context: "</span> + result.getJobContext());
-<a class="jxr_linenumber" name="224" href="#224">224</a>         logger.info(<span class="jxr_string">"job exceptions: "</span> + result.getExceptions());
-<a class="jxr_linenumber" name="225" href="#225">225</a>         logger.info(<span class="jxr_string">"task 1 trace: "</span> + result.getExertion(<span class="jxr_string">"Who is it1?"</span>).getTrace());
-<a class="jxr_linenumber" name="226" href="#226">226</a>         logger.info(<span class="jxr_string">"task 2 trace: "</span> + result.getExertion(<span class="jxr_string">"Who is it2?"</span>).getTrace());
-<a class="jxr_linenumber" name="227" href="#227">227</a> 
-<a class="jxr_linenumber" name="228" href="#228">228</a>         assertEquals(result.getValue(<span class="jxr_string">"Who are they?/Who is it1?/provider/message"</span>),
-<a class="jxr_linenumber" name="229" href="#229">229</a>                 <span class="jxr_string">"Hello "</span> + ipAddress + <span class="jxr_string">"!"</span>);
-<a class="jxr_linenumber" name="230" href="#230">230</a>         assertEquals(<span class="jxr_string">""</span>+result.getValue(<span class="jxr_string">"Who are they?/Who is it2?/provider/message"</span>),
-<a class="jxr_linenumber" name="231" href="#231">231</a>                 <span class="jxr_string">"Hi XYZ-DEV!; XYZ-DEV:Hi "</span> + ipAddress + <span class="jxr_string">"!"</span>);
-<a class="jxr_linenumber" name="232" href="#232">232</a>     }
-<a class="jxr_linenumber" name="233" href="#233">233</a> 
-<a class="jxr_linenumber" name="234" href="#234">234</a> }
+<a class="jxr_linenumber" name="99" href="#99">99</a>      @Test
+<a class="jxr_linenumber" name="100" href="#100">100</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> helloNetworkTask() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="101" href="#101">101</a>         <em class="jxr_comment">// using requestor/provider message types</em>
+<a class="jxr_linenumber" name="102" href="#102">102</a>         InetAddress inetAddress = InetAddress.getLocalHost();
+<a class="jxr_linenumber" name="103" href="#103">103</a>         String hostname = inetAddress.getHostName();
+<a class="jxr_linenumber" name="104" href="#104">104</a>         String ipAddress = inetAddress.getHostAddress();
+<a class="jxr_linenumber" name="105" href="#105">105</a>         String providerName = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="106" href="#106">106</a> 
+<a class="jxr_linenumber" name="107" href="#107">107</a>         Context context = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who Is It?"</span>);
+<a class="jxr_linenumber" name="108" href="#108">108</a>         context.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(<span class="jxr_string">"Hello Network!"</span>));
+<a class="jxr_linenumber" name="109" href="#109">109</a>         context.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
+<a class="jxr_linenumber" name="110" href="#110">110</a> 
+<a class="jxr_linenumber" name="111" href="#111">111</a>         NetSignature signature = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostName"</span>,
+<a class="jxr_linenumber" name="112" href="#112">112</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providerName);
+<a class="jxr_linenumber" name="113" href="#113">113</a> 
+<a class="jxr_linenumber" name="114" href="#114">114</a>         Task task = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who Is It?"</span>, signature, context);
+<a class="jxr_linenumber" name="115" href="#115">115</a>         Exertion result = task.exert();
+<a class="jxr_linenumber" name="116" href="#116">116</a>         logger.info(<span class="jxr_string">"task context: "</span> + result.getContext());
+<a class="jxr_linenumber" name="117" href="#117">117</a>         <strong class="jxr_keyword">if</strong> (result.getExceptions().size() &gt; 0)
+<a class="jxr_linenumber" name="118" href="#118">118</a>             logger.info(<span class="jxr_string">"exceptions: "</span> + result.getExceptions());
+<a class="jxr_linenumber" name="119" href="#119">119</a>         <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="120" href="#120">120</a>             logger.info(<span class="jxr_string">"task context: "</span> + result.getContext());
+<a class="jxr_linenumber" name="121" href="#121">121</a> <em class="jxr_comment">//        assertEquals(result.getContext().getValue("provider/hostname"), hostname);</em>
+<a class="jxr_linenumber" name="122" href="#122">122</a> <em class="jxr_comment">//        assertEquals(result.getContext().getValue("provider/address"), ipAddress);</em>
+<a class="jxr_linenumber" name="123" href="#123">123</a>         }
+<a class="jxr_linenumber" name="124" href="#124">124</a>     }
+<a class="jxr_linenumber" name="125" href="#125">125</a> 
+<a class="jxr_linenumber" name="126" href="#126">126</a> 	@Test
+<a class="jxr_linenumber" name="127" href="#127">127</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> execBatchTask() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="128" href="#128">128</a>         InetAddress inetAddress = InetAddress.getLocalHost();
+<a class="jxr_linenumber" name="129" href="#129">129</a>         String hostname = inetAddress.getHostName();
+<a class="jxr_linenumber" name="130" href="#130">130</a>         String ipAddress = inetAddress.getHostAddress();
+<a class="jxr_linenumber" name="131" href="#131">131</a> 
+<a class="jxr_linenumber" name="132" href="#132">132</a>         Context context = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who Is It?"</span>);
+<a class="jxr_linenumber" name="133" href="#133">133</a>         context.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(<span class="jxr_string">"Hello Objects!"</span>));
+<a class="jxr_linenumber" name="134" href="#134">134</a>         context.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
+<a class="jxr_linenumber" name="135" href="#135">135</a>         context.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
+<a class="jxr_linenumber" name="136" href="#136">136</a> 
+<a class="jxr_linenumber" name="137" href="#137">137</a>         Signature signature1 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getHostAddress"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="138" href="#138">138</a>         Signature signature2 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getHostName"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="139" href="#139">139</a>         Signature signature3 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getCanonicalHostName"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="140" href="#140">140</a>         Signature signature4 = <strong class="jxr_keyword">new</strong> ObjectSignature(<span class="jxr_string">"getTimestamp"</span>, WhoIsItProvider1.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="141" href="#141">141</a> 
+<a class="jxr_linenumber" name="142" href="#142">142</a>         Task task = <strong class="jxr_keyword">new</strong> ObjectTask(<span class="jxr_string">"Who Is It?"</span>, signature1, signature2, signature3, signature4);
+<a class="jxr_linenumber" name="143" href="#143">143</a>         task.setContext(context);
+<a class="jxr_linenumber" name="144" href="#144">144</a> 
+<a class="jxr_linenumber" name="145" href="#145">145</a>         Exertion result = task.exert();
+<a class="jxr_linenumber" name="146" href="#146">146</a>         logger.info(<span class="jxr_string">"task context: "</span> + result.getContext());
+<a class="jxr_linenumber" name="147" href="#147">147</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/hostname"</span>), hostname);
+<a class="jxr_linenumber" name="148" href="#148">148</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/address"</span>), ipAddress);
+<a class="jxr_linenumber" name="149" href="#149">149</a>     }
+<a class="jxr_linenumber" name="150" href="#150">150</a> 
+<a class="jxr_linenumber" name="151" href="#151">151</a>     @Ignore
+<a class="jxr_linenumber" name="152" href="#152">152</a>     @Test
+<a class="jxr_linenumber" name="153" href="#153">153</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> exertBatchTask() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="154" href="#154">154</a>         InetAddress inetAddress = InetAddress.getLocalHost();
+<a class="jxr_linenumber" name="155" href="#155">155</a>         String hostname = inetAddress.getHostName();
+<a class="jxr_linenumber" name="156" href="#156">156</a>         String ipAddress = inetAddress.getHostAddress();
+<a class="jxr_linenumber" name="157" href="#157">157</a>         String providername = <span class="jxr_string">"*"</span>;
+<a class="jxr_linenumber" name="158" href="#158">158</a> 
+<a class="jxr_linenumber" name="159" href="#159">159</a>         Context context = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who Is It?"</span>);
+<a class="jxr_linenumber" name="160" href="#160">160</a>         context.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(<span class="jxr_string">"Hello Network!"</span>));
+<a class="jxr_linenumber" name="161" href="#161">161</a>         context.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
+<a class="jxr_linenumber" name="162" href="#162">162</a>         context.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
+<a class="jxr_linenumber" name="163" href="#163">163</a> 
+<a class="jxr_linenumber" name="164" href="#164">164</a>         Signature signature1 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostAddress"</span>,
+<a class="jxr_linenumber" name="165" href="#165">165</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.PRE);
+<a class="jxr_linenumber" name="166" href="#166">166</a>         Signature signature2 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostName"</span>,
+<a class="jxr_linenumber" name="167" href="#167">167</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.SRV);
+<a class="jxr_linenumber" name="168" href="#168">168</a>         Signature signature3 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getCanonicalHostName"</span>,
+<a class="jxr_linenumber" name="169" href="#169">169</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.POST);
+<a class="jxr_linenumber" name="170" href="#170">170</a>         Signature signature4 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getTimestamp"</span>,
+<a class="jxr_linenumber" name="171" href="#171">171</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providername, Type.POST);
+<a class="jxr_linenumber" name="172" href="#172">172</a> 
+<a class="jxr_linenumber" name="173" href="#173">173</a>         Task task = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who Is It?"</span>,
+<a class="jxr_linenumber" name="174" href="#174">174</a>                 <strong class="jxr_keyword">new</strong> Signature[] { signature1, signature2, signature3, signature4 },
+<a class="jxr_linenumber" name="175" href="#175">175</a>                 context);
+<a class="jxr_linenumber" name="176" href="#176">176</a> 
+<a class="jxr_linenumber" name="177" href="#177">177</a>         Exertion result = task.exert();
+<a class="jxr_linenumber" name="178" href="#178">178</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/hostname"</span>), hostname);
+<a class="jxr_linenumber" name="179" href="#179">179</a>         assertEquals(result.getContext().getValue(<span class="jxr_string">"provider/address"</span>), inetAddress.getHostAddress());
+<a class="jxr_linenumber" name="180" href="#180">180</a>     }
+<a class="jxr_linenumber" name="181" href="#181">181</a> 
+<a class="jxr_linenumber" name="182" href="#182">182</a>     @Ignore
+<a class="jxr_linenumber" name="183" href="#183">183</a>     @Test
+<a class="jxr_linenumber" name="184" href="#184">184</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> exertJob() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="185" href="#185">185</a>         String providerName1 = Sorcer.getSuffixedName(<span class="jxr_string">"ABC"</span>);
+<a class="jxr_linenumber" name="186" href="#186">186</a>         String providerName2 = Sorcer.getSuffixedName(<span class="jxr_string">"XYZ"</span>);
+<a class="jxr_linenumber" name="187" href="#187">187</a> 
+<a class="jxr_linenumber" name="188" href="#188">188</a>         <em class="jxr_comment">// define requestor data</em>
+<a class="jxr_linenumber" name="189" href="#189">189</a>         InetAddress inetAddress = InetAddress.getLocalHost();
+<a class="jxr_linenumber" name="190" href="#190">190</a>         String hostname = inetAddress.getHostName();
+<a class="jxr_linenumber" name="191" href="#191">191</a>         String ipAddress = inetAddress.getHostAddress();
+<a class="jxr_linenumber" name="192" href="#192">192</a> 
+<a class="jxr_linenumber" name="193" href="#193">193</a>         Context context1 = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who is it?"</span>);
+<a class="jxr_linenumber" name="194" href="#194">194</a>         context1.putValue(<span class="jxr_string">"requestor/message"</span>, <span class="jxr_string">"Hello "</span> + providerName1);
+<a class="jxr_linenumber" name="195" href="#195">195</a>         context1.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
+<a class="jxr_linenumber" name="196" href="#196">196</a>         context1.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
+<a class="jxr_linenumber" name="197" href="#197">197</a> 
+<a class="jxr_linenumber" name="198" href="#198">198</a>         Context context2 = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"Who is it?"</span>);
+<a class="jxr_linenumber" name="199" href="#199">199</a>         context2.putValue(<span class="jxr_string">"requestor/message"</span>, <strong class="jxr_keyword">new</strong> RequestorMessage(
+<a class="jxr_linenumber" name="200" href="#200">200</a>                 providerName2));
+<a class="jxr_linenumber" name="201" href="#201">201</a>         context2.putValue(<span class="jxr_string">"requestor/hostname"</span>, hostname);
+<a class="jxr_linenumber" name="202" href="#202">202</a>         context2.putValue(<span class="jxr_string">"requestor/address"</span>, ipAddress);
+<a class="jxr_linenumber" name="203" href="#203">203</a> 
+<a class="jxr_linenumber" name="204" href="#204">204</a>         NetSignature signature1 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostName"</span>,
+<a class="jxr_linenumber" name="205" href="#205">205</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providerName1);
+<a class="jxr_linenumber" name="206" href="#206">206</a>         NetSignature signature2 = <strong class="jxr_keyword">new</strong> NetSignature(<span class="jxr_string">"getHostAddress"</span>,
+<a class="jxr_linenumber" name="207" href="#207">207</a>                 sorcer.ex1.WhoIsIt.<strong class="jxr_keyword">class</strong>, providerName2);
+<a class="jxr_linenumber" name="208" href="#208">208</a> 
+<a class="jxr_linenumber" name="209" href="#209">209</a>         Task task1 = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who is it1?"</span>, signature1, context1);
+<a class="jxr_linenumber" name="210" href="#210">210</a>         Task task2 = <strong class="jxr_keyword">new</strong> NetTask(<span class="jxr_string">"Who is it2?"</span>, signature2, context2);
+<a class="jxr_linenumber" name="211" href="#211">211</a>         Job job = <strong class="jxr_keyword">new</strong> NetJob(<span class="jxr_string">"Who are they?"</span>);
+<a class="jxr_linenumber" name="212" href="#212">212</a>         job.addExertion(task1).addExertion(task2);
+<a class="jxr_linenumber" name="213" href="#213">213</a> 
+<a class="jxr_linenumber" name="214" href="#214">214</a>         ControlContext cc = job.getControlContext();
+<a class="jxr_linenumber" name="215" href="#215">215</a>         <em class="jxr_comment">// PUSH or PULL provider access</em>
+<a class="jxr_linenumber" name="216" href="#216">216</a>         cc.setAccessType(Strategy.Access.PUSH);
+<a class="jxr_linenumber" name="217" href="#217">217</a>         <em class="jxr_comment">// Exertion control flow PAR or SEQ</em>
+<a class="jxr_linenumber" name="218" href="#218">218</a>         cc.setFlowType(Strategy.Flow.PAR);
+<a class="jxr_linenumber" name="219" href="#219">219</a> 
+<a class="jxr_linenumber" name="220" href="#220">220</a>         Job result = (Job)job.exert();
+<a class="jxr_linenumber" name="221" href="#221">221</a> 
+<a class="jxr_linenumber" name="222" href="#222">222</a>         logger.info(<span class="jxr_string">"job context: "</span> + result.getJobContext());
+<a class="jxr_linenumber" name="223" href="#223">223</a>         logger.info(<span class="jxr_string">"job exceptions: "</span> + result.getExceptions());
+<a class="jxr_linenumber" name="224" href="#224">224</a>         logger.info(<span class="jxr_string">"task 1 trace: "</span> + result.getExertion(<span class="jxr_string">"Who is it1?"</span>).getTrace());
+<a class="jxr_linenumber" name="225" href="#225">225</a>         logger.info(<span class="jxr_string">"task 2 trace: "</span> + result.getExertion(<span class="jxr_string">"Who is it2?"</span>).getTrace());
+<a class="jxr_linenumber" name="226" href="#226">226</a> 
+<a class="jxr_linenumber" name="227" href="#227">227</a>         assertEquals(result.getValue(<span class="jxr_string">"Who are they?/Who is it1?/provider/message"</span>),
+<a class="jxr_linenumber" name="228" href="#228">228</a>                 <span class="jxr_string">"Hello "</span> + ipAddress + <span class="jxr_string">"!"</span>);
+<a class="jxr_linenumber" name="229" href="#229">229</a>         assertEquals(<span class="jxr_string">""</span>+result.getValue(<span class="jxr_string">"Who are they?/Who is it2?/provider/message"</span>),
+<a class="jxr_linenumber" name="230" href="#230">230</a>                 <span class="jxr_string">"Hi XYZ-DEV!; XYZ-DEV:Hi "</span> + ipAddress + <span class="jxr_string">"!"</span>);
+<a class="jxr_linenumber" name="231" href="#231">231</a>     }
+<a class="jxr_linenumber" name="232" href="#232">232</a> 
+<a class="jxr_linenumber" name="233" href="#233">233</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
