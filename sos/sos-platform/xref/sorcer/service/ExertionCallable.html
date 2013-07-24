@@ -33,13 +33,13 @@
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.Callable;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../sorcer/service/ExertionCallable.html">ExertionCallable</a> <strong class="jxr_keyword">implements</strong> Callable&lt;Exertion&gt; {
-<a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">private</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> exertion;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  	<strong class="jxr_keyword">private</strong> Exertion exertion;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  
-<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/ExertionCallable.html">ExertionCallable</a>(<a href="../../sorcer/service/Exertion.html">Exertion</a> exertion) {
+<a class="jxr_linenumber" name="28" href="#28">28</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/ExertionCallable.html">ExertionCallable</a>(Exertion exertion) {
 <a class="jxr_linenumber" name="29" href="#29">29</a>  		<strong class="jxr_keyword">this</strong>.exertion = exertion;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	}
 <a class="jxr_linenumber" name="31" href="#31">31</a>  
-<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> call() <strong class="jxr_keyword">throws</strong> RemoteException, TransactionException,
+<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">public</strong> Exertion call() <strong class="jxr_keyword">throws</strong> RemoteException, TransactionException,
 <a class="jxr_linenumber" name="33" href="#33">33</a>  			ExertionException {
 <a class="jxr_linenumber" name="34" href="#34">34</a>  		<strong class="jxr_keyword">if</strong> (exertion != <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			<strong class="jxr_keyword">return</strong> exertion.exert(<strong class="jxr_keyword">null</strong>);
@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  		<strong class="jxr_keyword">return</strong> exertion;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  	}
 <a class="jxr_linenumber" name="39" href="#39">39</a>  
-<a class="jxr_linenumber" name="40" href="#40">40</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> getExertion() {
+<a class="jxr_linenumber" name="40" href="#40">40</a>  	<strong class="jxr_keyword">public</strong> Exertion getExertion() {
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		<strong class="jxr_keyword">return</strong> exertion;
 <a class="jxr_linenumber" name="42" href="#42">42</a>  	}
 <a class="jxr_linenumber" name="43" href="#43">43</a>  }

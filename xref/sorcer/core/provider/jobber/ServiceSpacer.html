@@ -67,7 +67,7 @@
 <a class="jxr_linenumber" name="57" href="#57">57</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Signature;
 <a class="jxr_linenumber" name="58" href="#58">58</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Spacer;
 <a class="jxr_linenumber" name="59" href="#59">59</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Task;
-<a class="jxr_linenumber" name="60" href="#60">60</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Sorcer;
+<a class="jxr_linenumber" name="60" href="#60">60</a>  
 <a class="jxr_linenumber" name="61" href="#61">61</a>  <strong class="jxr_keyword">import</strong> sorcer.util.StringUtils;
 <a class="jxr_linenumber" name="62" href="#62">62</a>  
 <a class="jxr_linenumber" name="63" href="#63">63</a>  <strong class="jxr_keyword">import</strong> com.sun.jini.start.LifeCycle;
@@ -78,7 +78,7 @@
 <a class="jxr_linenumber" name="68" href="#68">68</a>  <em class="jxr_javadoccomment"> * exertions to be executed.</em>
 <a class="jxr_linenumber" name="69" href="#69">69</a>  <em class="jxr_javadoccomment"> * </em>
 <a class="jxr_linenumber" name="70" href="#70">70</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="71" href="#71">71</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../sorcer/core/provider/jobber/ServiceSpacer.html">ServiceSpacer</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../sorcer/core/provider/ServiceProvider.html">ServiceProvider</a> <strong class="jxr_keyword">implements</strong> Spacer, Executor, <a href="../../../../sorcer/core/SorcerConstants.html">SorcerConstants</a> {
+<a class="jxr_linenumber" name="71" href="#71">71</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../sorcer/core/provider/jobber/ServiceSpacer.html">ServiceSpacer</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../sorcer/core/provider/ServiceProvider.html">ServiceProvider</a> <strong class="jxr_keyword">implements</strong> Spacer, <a href="../../../../sorcer/service/Executor.html">Executor</a> {
 <a class="jxr_linenumber" name="72" href="#72">72</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Logger logger;
 <a class="jxr_linenumber" name="73" href="#73">73</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../sorcer/core/loki/member/LokiMemberUtil.html">LokiMemberUtil</a> myMemberUtil;
 <a class="jxr_linenumber" name="74" href="#74">74</a>  
@@ -309,12 +309,12 @@
 <a class="jxr_linenumber" name="299" href="#299">299</a> 		Vector recipents = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="300" href="#300">300</a> 		String notifyees = ((ControlContext) job.getDataContext()).getNotifyList();
 <a class="jxr_linenumber" name="301" href="#301">301</a> 		<strong class="jxr_keyword">if</strong> (notifyees != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="302" href="#302">302</a> 			String[] list = StringUtils.tokenize(notifyees, MAIL_SEP);
+<a class="jxr_linenumber" name="302" href="#302">302</a> 			String[] list = StringUtils.tokenize(notifyees, SorcerConstants.MAIL_SEP);
 <a class="jxr_linenumber" name="303" href="#303">303</a> 			recipents = <strong class="jxr_keyword">new</strong> Vector(list.length);
 <a class="jxr_linenumber" name="304" href="#304">304</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; list.length; i++)
 <a class="jxr_linenumber" name="305" href="#305">305</a> 				recipents.addElement(list[i]);
 <a class="jxr_linenumber" name="306" href="#306">306</a> 		}
-<a class="jxr_linenumber" name="307" href="#307">307</a> 		String to = <span class="jxr_string">""</span>, admin = Sorcer.getProperty(<span class="jxr_string">"sorcer.admin"</span>);
+<a class="jxr_linenumber" name="307" href="#307">307</a> 		String to = <span class="jxr_string">""</span>, admin = SorcerEnv.getProperty(<span class="jxr_string">"sorcer.admin"</span>);
 <a class="jxr_linenumber" name="308" href="#308">308</a> 		<strong class="jxr_keyword">if</strong> (recipents == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="309" href="#309">309</a> 			<strong class="jxr_keyword">if</strong> (admin != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="310" href="#310">310</a> 				recipents = <strong class="jxr_keyword">new</strong> Vector();

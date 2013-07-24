@@ -29,8 +29,8 @@
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> net.jini.space.JavaSpace05;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.space.array.DistribArray05;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ProviderAccessor;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.service.space.SpaceAccessor;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.space.array.DistribArray05;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/context/SharedAssociativeContext.html">SharedAssociativeContext</a>(String spaceName) {
 <a class="jxr_linenumber" name="38" href="#38">38</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="39" href="#39">39</a>  		<strong class="jxr_keyword">this</strong>.spaceName = spaceName;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  		JavaSpace05 space = ProviderAccessor.getSpace(spaceName);
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		JavaSpace05 space = SpaceAccessor.getSpace(spaceName);
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		spaceElements = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/space/array/DistribArray05.html">DistribArray05</a>(space, <span class="jxr_string">""</span> + contextId);
 <a class="jxr_linenumber" name="42" href="#42">42</a>  	}
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	
@@ -108,7 +108,7 @@
 <a class="jxr_linenumber" name="98" href="#98">98</a>  	}
 <a class="jxr_linenumber" name="99" href="#99">99</a>  	
 <a class="jxr_linenumber" name="100" href="#100">100</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setSpace() {
-<a class="jxr_linenumber" name="101" href="#101">101</a> 		JavaSpace05 space = ProviderAccessor.getSpace(spaceName);
+<a class="jxr_linenumber" name="101" href="#101">101</a> 		JavaSpace05 space = SpaceAccessor.getSpace(spaceName);
 <a class="jxr_linenumber" name="102" href="#102">102</a> 		spaceElements.setSpace(space);
 <a class="jxr_linenumber" name="103" href="#103">103</a> 	}
 <a class="jxr_linenumber" name="104" href="#104">104</a> 

@@ -135,7 +135,7 @@
 <a class="jxr_linenumber" name="125" href="#125">125</a> <strong class="jxr_keyword">import</strong> net.jini.security.proxytrust.ServerProxyTrust;
 <a class="jxr_linenumber" name="126" href="#126">126</a> <strong class="jxr_keyword">import</strong> net.jini.space.JavaSpace;
 <a class="jxr_linenumber" name="127" href="#127">127</a> <strong class="jxr_keyword">import</strong> net.jini.space.JavaSpace05;
-<a class="jxr_linenumber" name="128" href="#128">128</a> <strong class="jxr_keyword">import</strong> sorcer.org.rioproject.net.HostUtil;
+<a class="jxr_linenumber" name="128" href="#128">128</a> <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
 <a class="jxr_linenumber" name="129" href="#129">129</a> <strong class="jxr_keyword">import</strong> sorcer.ui.serviceui.UIFrameFactory;
 <a class="jxr_linenumber" name="130" href="#130">130</a> 
 <a class="jxr_linenumber" name="131" href="#131">131</a> <strong class="jxr_keyword">import</strong> com.sun.jini.config.Config;
@@ -405,7 +405,7 @@
 <a class="jxr_linenumber" name="395" href="#395">395</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="396" href="#396">396</a> 			_exporter = (Exporter) Config.getNonNullEntry(_config,
 <a class="jxr_linenumber" name="397" href="#397">397</a> 					CONFIG_MODULE, <span class="jxr_string">"listenerExporter"</span>, Exporter.<strong class="jxr_keyword">class</strong>,
-<a class="jxr_linenumber" name="398" href="#398">398</a> 					<strong class="jxr_keyword">new</strong> BasicJeriExporter(TcpServerEndpoint.getInstance(HostUtil.getInetAddress().getHostAddress(), 0),
+<a class="jxr_linenumber" name="398" href="#398">398</a> 					<strong class="jxr_keyword">new</strong> BasicJeriExporter(TcpServerEndpoint.getInstance(SorcerEnv.getLocalHost().getHostAddress(), 0),
 <a class="jxr_linenumber" name="399" href="#399">399</a> 							<strong class="jxr_keyword">new</strong> BasicILFactory()));
 <a class="jxr_linenumber" name="400" href="#400">400</a> 		} <strong class="jxr_keyword">catch</strong> (ConfigurationException e) {
 <a class="jxr_linenumber" name="401" href="#401">401</a> 		} <strong class="jxr_keyword">catch</strong> (UnknownHostException e) {
@@ -422,7 +422,7 @@
 <a class="jxr_linenumber" name="412" href="#412">412</a> 		<strong class="jxr_keyword">if</strong> (_config != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="413" href="#413">413</a> 			initWithConfig();
 <a class="jxr_linenumber" name="414" href="#414">414</a> 		} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="415" href="#415">415</a> 			_exporter = <strong class="jxr_keyword">new</strong> BasicJeriExporter(TcpServerEndpoint.getInstance(HostUtil.getInetAddress().getHostAddress(), 0),
+<a class="jxr_linenumber" name="415" href="#415">415</a> 			_exporter = <strong class="jxr_keyword">new</strong> BasicJeriExporter(TcpServerEndpoint.getInstance(SorcerEnv.getLocalHost().getHostAddress(), 0),
 <a class="jxr_linenumber" name="416" href="#416">416</a> 					<strong class="jxr_keyword">new</strong> BasicILFactory());
 <a class="jxr_linenumber" name="417" href="#417">417</a> 		}
 <a class="jxr_linenumber" name="418" href="#418">418</a> 

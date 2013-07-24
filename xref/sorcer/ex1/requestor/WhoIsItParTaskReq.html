@@ -38,7 +38,7 @@
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Access;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Flow;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Log;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Sorcer;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  
 <a class="jxr_linenumber" name="32" href="#32">32</a>  
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> java.net.InetAddress;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
@@ -50,9 +50,9 @@
 <a class="jxr_linenumber" name="40" href="#40">40</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Exertion.html">Exertion</a> getExertion(String... args) <strong class="jxr_keyword">throws</strong> ExertionException {
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		<em class="jxr_comment">// get the queried provider names and the requested jobber name</em>
 <a class="jxr_linenumber" name="42" href="#42">42</a>  		<em class="jxr_comment">// arg[0] is the class name of this requestor</em>
-<a class="jxr_linenumber" name="43" href="#43">43</a>  		String providerName1 = Sorcer.getSuffixedName(args[1]);
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		String providerName2 = Sorcer.getSuffixedName(args[2]);
-<a class="jxr_linenumber" name="45" href="#45">45</a>  		jobberName = Sorcer.getSuffixedName(args[3]);
+<a class="jxr_linenumber" name="43" href="#43">43</a>  		String providerName1 = SorcerEnv.getSuffixedName(args[1]);
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		String providerName2 = SorcerEnv.getSuffixedName(args[2]);
+<a class="jxr_linenumber" name="45" href="#45">45</a>  		jobberName = SorcerEnv.getSuffixedName(args[3]);
 <a class="jxr_linenumber" name="46" href="#46">46</a>  		String hostname = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="47" href="#47">47</a>  		String ipAddress = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="48" href="#48">48</a>  		InetAddress inetAddress = <strong class="jxr_keyword">null</strong>;

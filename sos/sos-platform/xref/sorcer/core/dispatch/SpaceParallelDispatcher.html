@@ -32,14 +32,14 @@
 <a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.exertion.NetJob;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.core.loki.member.LokiMemberUtil;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.*;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ProviderAccessor;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.space.SpaceAccessor;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.util.Set;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/core/dispatch/SpaceParallelDispatcher.html">SpaceParallelDispatcher</a> <strong class="jxr_keyword">extends</strong> <a href="../../../sorcer/core/dispatch/SpaceExertDispatcher.html">SpaceExertDispatcher</a> {
 <a class="jxr_linenumber" name="30" href="#30">30</a>  
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/dispatch/SpaceParallelDispatcher.html">SpaceParallelDispatcher</a>(<a href="../../../sorcer/service/Job.html">Job</a> job, Set&lt;Context&gt; sharedContexts,
-<a class="jxr_linenumber" name="32" href="#32">32</a>  			<strong class="jxr_keyword">boolean</strong> isSpawned, <a href="../../../sorcer/core/loki/member/LokiMemberUtil.html">LokiMemberUtil</a> myMemberUtil, <a href="../../../sorcer/core/Provider.html">Provider</a> provider) <strong class="jxr_keyword">throws</strong> Throwable {
+<a class="jxr_linenumber" name="32" href="#32">32</a>  			<strong class="jxr_keyword">boolean</strong> isSpawned, <a href="../../../sorcer/core/loki/member/LokiMemberUtil.html">LokiMemberUtil</a> myMemberUtil, Provider provider) <strong class="jxr_keyword">throws</strong> Throwable {
 <a class="jxr_linenumber" name="33" href="#33">33</a>  		<strong class="jxr_keyword">super</strong>(job, sharedContexts, isSpawned, myMemberUtil, provider);
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	}
 <a class="jxr_linenumber" name="35" href="#35">35</a>  
@@ -62,10 +62,10 @@
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		} <strong class="jxr_keyword">catch</strong> (Exception re) {
 <a class="jxr_linenumber" name="53" href="#53">53</a>  			re.printStackTrace();
 <a class="jxr_linenumber" name="54" href="#54">54</a>  			logger.severe(<span class="jxr_string">"Space not reachable....resetting space"</span>);
-<a class="jxr_linenumber" name="55" href="#55">55</a>  			space = ProviderAccessor.getSpace();
+<a class="jxr_linenumber" name="55" href="#55">55</a>  			space = SpaceAccessor.getSpace();
 <a class="jxr_linenumber" name="56" href="#56">56</a>  			<strong class="jxr_keyword">if</strong> (space == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="57" href="#57">57</a>  				xrt.setStatus(FAILED);
-<a class="jxr_linenumber" name="58" href="#58">58</a>  				<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"NO exertion space available!"</span>);
+<a class="jxr_linenumber" name="58" href="#58">58</a>  				<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ExertionException(<span class="jxr_string">"NO exertion space available!"</span>);
 <a class="jxr_linenumber" name="59" href="#59">59</a>  			}
 <a class="jxr_linenumber" name="60" href="#60">60</a>  			<strong class="jxr_keyword">if</strong> (masterXrt != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="61" href="#61">61</a>  				<strong class="jxr_keyword">try</strong> {
@@ -73,7 +73,7 @@
 <a class="jxr_linenumber" name="63" href="#63">63</a>  				} <strong class="jxr_keyword">catch</strong> (Exception e) {
 <a class="jxr_linenumber" name="64" href="#64">64</a>  					e.printStackTrace();
 <a class="jxr_linenumber" name="65" href="#65">65</a>  					xrt.setStatus(FAILED);
-<a class="jxr_linenumber" name="66" href="#66">66</a>  					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(
+<a class="jxr_linenumber" name="66" href="#66">66</a>  					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ExertionException(
 <a class="jxr_linenumber" name="67" href="#67">67</a>  							<span class="jxr_string">"Wrting master exertion into exertion space failed!"</span>,
 <a class="jxr_linenumber" name="68" href="#68">68</a>  							e);
 <a class="jxr_linenumber" name="69" href="#69">69</a>  				}

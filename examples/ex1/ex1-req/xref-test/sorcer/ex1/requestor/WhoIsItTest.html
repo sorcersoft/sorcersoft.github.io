@@ -29,7 +29,7 @@
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> org.junit.Ignore;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ControlContext;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ServiceContext;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.core.exertion.NetJob;
@@ -41,7 +41,7 @@
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.ex1.provider.WhoIsItProvider1;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.service.*;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Signature.Type;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Sorcer;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  
 <a class="jxr_linenumber" name="35" href="#35">35</a>  
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> java.net.InetAddress;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> java.rmi.RMISecurityManager;
@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment"> * @author Mike Sobolewski</em>
 <a class="jxr_linenumber" name="44" href="#44">44</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="45" href="#45">45</a>  @SuppressWarnings({ <span class="jxr_string">"rawtypes"</span>, <span class="jxr_string">"unchecked"</span> })
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/ex1/requestor/WhoIsItTest.html">WhoIsItTest</a> <strong class="jxr_keyword">implements</strong> SorcerConstants {
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/ex1/requestor/WhoIsItTest.html">WhoIsItTest</a> {
 <a class="jxr_linenumber" name="47" href="#47">47</a>  
 <a class="jxr_linenumber" name="48" href="#48">48</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> Logger logger = Logger
 <a class="jxr_linenumber" name="49" href="#49">49</a>  			.getLogger(WhoIsItTest.<strong class="jxr_keyword">class</strong>.getName());
@@ -62,7 +62,7 @@
 <a class="jxr_linenumber" name="52" href="#52">52</a>          System.setProperty(<span class="jxr_string">"java.security.policy"</span>, System.getenv(<span class="jxr_string">"SORCER_HOME"</span>)
 <a class="jxr_linenumber" name="53" href="#53">53</a>                  + <span class="jxr_string">"/configs/sorcer.policy"</span>);
 <a class="jxr_linenumber" name="54" href="#54">54</a>          System.setSecurityManager(<strong class="jxr_keyword">new</strong> RMISecurityManager());
-<a class="jxr_linenumber" name="55" href="#55">55</a>          Sorcer.setCodeBaseByArtifacts(<strong class="jxr_keyword">new</strong> String[]{
+<a class="jxr_linenumber" name="55" href="#55">55</a>          SorcerEnv.setCodeBaseByArtifacts(<strong class="jxr_keyword">new</strong> String[]{
 <a class="jxr_linenumber" name="56" href="#56">56</a>                  <span class="jxr_string">"org.sorcersoft.sorcer:sos-platform"</span>,
 <a class="jxr_linenumber" name="57" href="#57">57</a>                  <span class="jxr_string">"org.sorcersoft.sorcer:ex1-rdl"</span>,
 <a class="jxr_linenumber" name="58" href="#58">58</a>                  <span class="jxr_string">"org.sorcersoft.sorcer:ex1-prv"</span>,
@@ -192,8 +192,8 @@
 <a class="jxr_linenumber" name="182" href="#182">182</a>     @Ignore
 <a class="jxr_linenumber" name="183" href="#183">183</a>     @Test
 <a class="jxr_linenumber" name="184" href="#184">184</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> exertJob() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="185" href="#185">185</a>         String providerName1 = Sorcer.getSuffixedName(<span class="jxr_string">"ABC"</span>);
-<a class="jxr_linenumber" name="186" href="#186">186</a>         String providerName2 = Sorcer.getSuffixedName(<span class="jxr_string">"XYZ"</span>);
+<a class="jxr_linenumber" name="185" href="#185">185</a>         String providerName1 = SorcerEnv.getSuffixedName(<span class="jxr_string">"ABC"</span>);
+<a class="jxr_linenumber" name="186" href="#186">186</a>         String providerName2 = SorcerEnv.getSuffixedName(<span class="jxr_string">"XYZ"</span>);
 <a class="jxr_linenumber" name="187" href="#187">187</a> 
 <a class="jxr_linenumber" name="188" href="#188">188</a>         <em class="jxr_comment">// define requestor data</em>
 <a class="jxr_linenumber" name="189" href="#189">189</a>         InetAddress inetAddress = InetAddress.getLocalHost();

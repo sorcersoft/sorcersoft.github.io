@@ -39,7 +39,7 @@
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> net.jini.jeri.BasicILFactory;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> net.jini.jeri.BasicJeriExporter;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> net.jini.jeri.tcp.TcpServerEndpoint;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Sorcer;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> java.net.UnknownHostException;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> java.rmi.Remote;
@@ -99,7 +99,7 @@
 <a class="jxr_linenumber" name="89" href="#89">89</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> export() <strong class="jxr_keyword">throws</strong> ExportException {
 <a class="jxr_linenumber" name="90" href="#90">90</a>          BasicJeriExporter exporter = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="91" href="#91">91</a>          <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="92" href="#92">92</a>              exporter = <strong class="jxr_keyword">new</strong> BasicJeriExporter(TcpServerEndpoint.getInstance(Sorcer.getHostAddress(), 0),
+<a class="jxr_linenumber" name="92" href="#92">92</a>              exporter = <strong class="jxr_keyword">new</strong> BasicJeriExporter(TcpServerEndpoint.getInstance(SorcerEnv.getHostAddress(), 0),
 <a class="jxr_linenumber" name="93" href="#93">93</a>                                         <strong class="jxr_keyword">new</strong> BasicILFactory());
 <a class="jxr_linenumber" name="94" href="#94">94</a>          } <strong class="jxr_keyword">catch</strong> (UnknownHostException e) {
 <a class="jxr_linenumber" name="95" href="#95">95</a>              <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ExportException(<span class="jxr_string">"Could not obtain local address"</span>, e);

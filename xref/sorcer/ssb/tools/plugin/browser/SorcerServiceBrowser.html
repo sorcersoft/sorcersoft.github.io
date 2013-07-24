@@ -56,7 +56,7 @@
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> sorcer.ssb.jini.studio.CodeServer;
 <a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> sorcer.ssb.jini.studio.StudioTheme;
 <a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> sorcer.ssb.osx.OSXApplication;
-<a class="jxr_linenumber" name="49" href="#49">49</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Sorcer;
+<a class="jxr_linenumber" name="49" href="#49">49</a>  
 <a class="jxr_linenumber" name="50" href="#50">50</a>  
 <a class="jxr_linenumber" name="51" href="#51">51</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SorcerServiceBrowser.html">SorcerServiceBrowser</a> {
 <a class="jxr_linenumber" name="52" href="#52">52</a>  
@@ -102,9 +102,9 @@
 <a class="jxr_linenumber" name="92" href="#92">92</a>  				}
 <a class="jxr_linenumber" name="93" href="#93">93</a>  			});
 <a class="jxr_linenumber" name="94" href="#94">94</a>  			<em class="jxr_comment">// Initialize system properties: configs/sorcer.env</em>
-<a class="jxr_linenumber" name="95" href="#95">95</a>  <em class="jxr_comment">//			Sorcer.getEnvProperties();</em>
+<a class="jxr_linenumber" name="95" href="#95">95</a>  <em class="jxr_comment">//			SorcerEnv.getEnvProperties();</em>
 <a class="jxr_linenumber" name="96" href="#96">96</a>  <em class="jxr_comment">//			ServiceBrowserUI._logger.info("Provider accessor: " </em>
-<a class="jxr_linenumber" name="97" href="#97">97</a>  <em class="jxr_comment">//					+ Sorcer.getProperty(SorcerConstants.S_SERVICE_ACCESSOR_PROVIDER_NAME));</em>
+<a class="jxr_linenumber" name="97" href="#97">97</a>  <em class="jxr_comment">//					+ SorcerEnv.getProperty(SorcerConstants.S_SERVICE_ACCESSOR_PROVIDER_NAME));</em>
 <a class="jxr_linenumber" name="98" href="#98">98</a>  <em class="jxr_comment">//			</em>
 <a class="jxr_linenumber" name="99" href="#99">99</a>  			ABOUT = TITLE;
 <a class="jxr_linenumber" name="100" href="#100">100</a> 			isPlugin = pluginStart;
@@ -179,7 +179,7 @@
 <a class="jxr_linenumber" name="169" href="#169">169</a> <em class="jxr_comment">			 * } });</em>
 <a class="jxr_linenumber" name="170" href="#170">170</a> <em class="jxr_comment">			 */</em>
 <a class="jxr_linenumber" name="171" href="#171">171</a> 			ABOUT += <span class="jxr_string">"\n(c)2009-2010 SORCERsoft.org"</span>;
-<a class="jxr_linenumber" name="172" href="#172">172</a> 			<strong class="jxr_keyword">boolean</strong> useCodeServer = <span class="jxr_string">"true"</span>.equals(System.getProperty(Sorcer.SORCER_CODE_SERVER_INTERNAL));
+<a class="jxr_linenumber" name="172" href="#172">172</a> 			<strong class="jxr_keyword">boolean</strong> useCodeServer = <span class="jxr_string">"true"</span>.equals(System.getProperty(SorcerConstants.SORCER_CODE_SERVER_INTERNAL));
 <a class="jxr_linenumber" name="173" href="#173">173</a> 			<strong class="jxr_keyword">if</strong> (!StartSorcerBrowser.isWebsterInt &amp;&amp; useCodeServer) {
 <a class="jxr_linenumber" name="174" href="#174">174</a> 				CodeServer.autoStart(tr.getClass(), ServiceBrowserConfig.getConfiguration());
 <a class="jxr_linenumber" name="175" href="#175">175</a> 			}

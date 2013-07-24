@@ -27,7 +27,7 @@
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> sorcer.util.ui;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> sorcer.core.SorcerConstants.*;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sorcer.security.util.SorcerPrincipal;
 <a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Crypt;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.util.DataReader;
@@ -36,10 +36,10 @@
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.util.Observer;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.util.Properties;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/util/ui/LauncherModel.html">LauncherModel</a> <strong class="jxr_keyword">extends</strong> <a href="../../../sorcer/util/ui/Model.html">Model</a> <strong class="jxr_keyword">implements</strong> SorcerConstants {
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/util/ui/LauncherModel.html">LauncherModel</a> <strong class="jxr_keyword">extends</strong> <a href="../../../sorcer/util/ui/Model.html">Model</a> {
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> isDebugged = false;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">private</strong> String appDefaultsFile;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">protected</strong> <a href="../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a> principal = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a>();
+<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">protected</strong> SorcerPrincipal principal = <strong class="jxr_keyword">new</strong> SorcerPrincipal();
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	<em class="jxr_comment">// roles used by MembershipModel if set by application</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">public</strong> String[] roles = { ADMIN, LOOKER, PUBLISHER, ORIGINATOR, APPROVER,
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			ALL };
@@ -123,11 +123,11 @@
 <a class="jxr_linenumber" name="113" href="#113">113</a> 		<strong class="jxr_keyword">return</strong> principal.isAuth();
 <a class="jxr_linenumber" name="114" href="#114">114</a> 	}
 <a class="jxr_linenumber" name="115" href="#115">115</a> 
-<a class="jxr_linenumber" name="116" href="#116">116</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a> getPrincipal() {
+<a class="jxr_linenumber" name="116" href="#116">116</a> 	<strong class="jxr_keyword">public</strong> SorcerPrincipal getPrincipal() {
 <a class="jxr_linenumber" name="117" href="#117">117</a> 		<strong class="jxr_keyword">return</strong> principal;
 <a class="jxr_linenumber" name="118" href="#118">118</a> 	}
 <a class="jxr_linenumber" name="119" href="#119">119</a> 
-<a class="jxr_linenumber" name="120" href="#120">120</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setPrincipal(<a href="../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a> principal) {
+<a class="jxr_linenumber" name="120" href="#120">120</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setPrincipal(SorcerPrincipal principal) {
 <a class="jxr_linenumber" name="121" href="#121">121</a> 		<strong class="jxr_keyword">this</strong>.principal = principal;
 <a class="jxr_linenumber" name="122" href="#122">122</a> 	}
 <a class="jxr_linenumber" name="123" href="#123">123</a> 

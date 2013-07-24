@@ -33,7 +33,7 @@
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Context;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ExertionException;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.SignatureException;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ProviderAccessor;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.service.space.SpaceAccessor;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> java.util.Set;
@@ -44,7 +44,7 @@
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/dispatch/SpaceTaskDispatcher.html">SpaceTaskDispatcher</a>(<a href="../../../sorcer/core/exertion/NetTask.html">NetTask</a> task, Set&lt;Context&gt; sharedContexts,
 <a class="jxr_linenumber" name="35" href="#35">35</a>  			<strong class="jxr_keyword">boolean</strong> isSpawned, <a href="../../../sorcer/core/loki/member/LokiMemberUtil.html">LokiMemberUtil</a> myMemberUtil) <strong class="jxr_keyword">throws</strong> Throwable {
 <a class="jxr_linenumber" name="36" href="#36">36</a>  		<strong class="jxr_keyword">if</strong> (space == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="37" href="#37">37</a>  			space = ProviderAccessor.getSpace();
+<a class="jxr_linenumber" name="37" href="#37">37</a>  			space = SpaceAccessor.getSpace();
 <a class="jxr_linenumber" name="38" href="#38">38</a>  		<em class="jxr_comment">// logger.info(this, "using space=" + Env.getSpaceName());</em>
 <a class="jxr_linenumber" name="39" href="#39">39</a>  		xrt = task;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  		subject = task.getSubject();
@@ -82,10 +82,10 @@
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		} <strong class="jxr_keyword">catch</strong> (RemoteException re) {
 <a class="jxr_linenumber" name="73" href="#73">73</a>  			re.printStackTrace();
 <a class="jxr_linenumber" name="74" href="#74">74</a>  			logger.severe(<span class="jxr_string">"Space not reachable... resetting space"</span>);
-<a class="jxr_linenumber" name="75" href="#75">75</a>  			space = ProviderAccessor.getSpace();
+<a class="jxr_linenumber" name="75" href="#75">75</a>  			space = SpaceAccessor.getSpace();
 <a class="jxr_linenumber" name="76" href="#76">76</a>  			<strong class="jxr_keyword">if</strong> (space == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="77" href="#77">77</a>  				xrt.setStatus(FAILED);
-<a class="jxr_linenumber" name="78" href="#78">78</a>  				<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"NO exertion space available!"</span>);
+<a class="jxr_linenumber" name="78" href="#78">78</a>  				<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ExertionException(<span class="jxr_string">"NO exertion space available!"</span>);
 <a class="jxr_linenumber" name="79" href="#79">79</a>  			}
 <a class="jxr_linenumber" name="80" href="#80">80</a>  		}
 <a class="jxr_linenumber" name="81" href="#81">81</a>  	}

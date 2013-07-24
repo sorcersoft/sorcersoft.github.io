@@ -37,7 +37,7 @@
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <em class="jxr_javadoccomment"> * with the dataContext root &lt;code&gt;List&lt;/code&gt;;</em>
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="29" href="#29">29</a>  @SuppressWarnings({ <span class="jxr_string">"serial"</span>, <span class="jxr_string">"unchecked"</span> })
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> ListContext&lt;T <strong class="jxr_keyword">extends</strong> Object&gt; <strong class="jxr_keyword">extends</strong> <a href="../../../sorcer/core/context/ServiceContext.html">ServiceContext</a> <strong class="jxr_keyword">implements</strong> <a href="../../../sorcer/core/context/IndexedContext.html">IndexedContext</a> {
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> ListContext&lt;T&gt; <strong class="jxr_keyword">extends</strong> <a href="../../../sorcer/core/context/ServiceContext.html">ServiceContext</a> <strong class="jxr_keyword">implements</strong> <a href="../../../sorcer/core/context/IndexedContext.html">IndexedContext</a> {
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	List&lt;T&gt; elements = <strong class="jxr_keyword">new</strong> ArrayList&lt;T&gt;();
 <a class="jxr_linenumber" name="32" href="#32">32</a>  	
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/context/ListContext.html">ListContext</a>() {
@@ -138,7 +138,7 @@
 <a class="jxr_linenumber" name="128" href="#128">128</a> 			putValue(pathFor(i), o);
 <a class="jxr_linenumber" name="129" href="#129">129</a> 			i++;
 <a class="jxr_linenumber" name="130" href="#130">130</a> 		}
-<a class="jxr_linenumber" name="131" href="#131">131</a> 		<strong class="jxr_keyword">return</strong> addAll(index, c);
+<a class="jxr_linenumber" name="131" href="#131">131</a> 		<strong class="jxr_keyword">return</strong> elements.addAll(index, c);
 <a class="jxr_linenumber" name="132" href="#132">132</a> 	}
 <a class="jxr_linenumber" name="133" href="#133">133</a> 
 <a class="jxr_linenumber" name="134" href="#134">134</a> 	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>
@@ -173,7 +173,7 @@
 <a class="jxr_linenumber" name="163" href="#163">163</a> <em class="jxr_comment">	 * @see java.util.List#lastIndexOf(java.lang.Object)</em>
 <a class="jxr_linenumber" name="164" href="#164">164</a> <em class="jxr_comment">	 */</em>
 <a class="jxr_linenumber" name="165" href="#165">165</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> lastIndexOf(Object o) {
-<a class="jxr_linenumber" name="166" href="#166">166</a> 		<strong class="jxr_keyword">return</strong> lastIndexOf(o);
+<a class="jxr_linenumber" name="166" href="#166">166</a> 		<strong class="jxr_keyword">return</strong> elements.lastIndexOf(o);
 <a class="jxr_linenumber" name="167" href="#167">167</a> 	}
 <a class="jxr_linenumber" name="168" href="#168">168</a> 
 <a class="jxr_linenumber" name="169" href="#169">169</a> 	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>
@@ -206,7 +206,7 @@
 <a class="jxr_linenumber" name="196" href="#196">196</a> 		<strong class="jxr_keyword">for</strong> (Object o : c) {
 <a class="jxr_linenumber" name="197" href="#197">197</a> 			i = elements.indexOf(o);
 <a class="jxr_linenumber" name="198" href="#198">198</a> 		}
-<a class="jxr_linenumber" name="199" href="#199">199</a> 		<strong class="jxr_keyword">return</strong> removeAll(c);
+<a class="jxr_linenumber" name="199" href="#199">199</a> 		<strong class="jxr_keyword">return</strong> elements.removeAll(c);
 <a class="jxr_linenumber" name="200" href="#200">200</a> 	}
 <a class="jxr_linenumber" name="201" href="#201">201</a> 
 <a class="jxr_linenumber" name="202" href="#202">202</a> 	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>

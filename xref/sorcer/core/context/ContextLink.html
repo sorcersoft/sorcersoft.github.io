@@ -42,7 +42,7 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> * </em>
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  @SuppressWarnings(<span class="jxr_string">"rawtypes"</span>)
-<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/core/context/ContextLink.html">ContextLink</a> <strong class="jxr_keyword">implements</strong> SorcerConstants, <a href="../../../sorcer/service/Link.html">Link</a> {
+<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/core/context/ContextLink.html">ContextLink</a> <strong class="jxr_keyword">implements</strong> <a href="../../../sorcer/service/Link.html">Link</a> {
 <a class="jxr_linenumber" name="36" href="#36">36</a>  
 <a class="jxr_linenumber" name="37" href="#37">37</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = -7115324059076651991L;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  
@@ -122,7 +122,7 @@
 <a class="jxr_linenumber" name="112" href="#112">112</a> <em class="jxr_comment">	 * public String rootName() { return SorcerUtil.firstToken(offset, CPS); }</em>
 <a class="jxr_linenumber" name="113" href="#113">113</a> <em class="jxr_comment">	 */</em>
 <a class="jxr_linenumber" name="114" href="#114">114</a> 	<strong class="jxr_keyword">public</strong> String getName() {
-<a class="jxr_linenumber" name="115" href="#115">115</a> 		String result = name == <strong class="jxr_keyword">null</strong> ? StringUtils.firstToken(offset, CPS) : name;
+<a class="jxr_linenumber" name="115" href="#115">115</a> 		String result = name == <strong class="jxr_keyword">null</strong> ? StringUtils.firstToken(offset, SorcerConstants.CPS) : name;
 <a class="jxr_linenumber" name="116" href="#116">116</a> 		<strong class="jxr_keyword">if</strong> (result.equals(<span class="jxr_string">""</span>))
 <a class="jxr_linenumber" name="117" href="#117">117</a> 			result = linkedContext.getSubjectPath(); <em class="jxr_comment">// assuming we have the context...</em>
 <a class="jxr_linenumber" name="118" href="#118">118</a> 		<strong class="jxr_keyword">return</strong> result;
@@ -163,7 +163,7 @@
 <a class="jxr_linenumber" name="153" href="#153">153</a> 		}
 <a class="jxr_linenumber" name="154" href="#154">154</a> 
 <a class="jxr_linenumber" name="155" href="#155">155</a> 		<strong class="jxr_keyword">if</strong> (((Context) result[0]).getValue((String) result[1]) == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="156" href="#156">156</a> 			<strong class="jxr_keyword">if</strong> (Contexts.checkIfPathBeginsWith((ServiceContext) result[0],
+<a class="jxr_linenumber" name="156" href="#156">156</a> 			<strong class="jxr_keyword">if</strong> (Contexts.checkIfPathBeginsWith((Context) result[0],
 <a class="jxr_linenumber" name="157" href="#157">157</a> 					(String) result[1])) {
 <a class="jxr_linenumber" name="158" href="#158">158</a> 				<strong class="jxr_keyword">if</strong> (!isSameContext(result[0], result[1])) {
 <a class="jxr_linenumber" name="159" href="#159">159</a> 					<strong class="jxr_keyword">this</strong>.offset = offset;
@@ -211,47 +211,49 @@
 <a class="jxr_linenumber" name="201" href="#201">201</a> <em class="jxr_javadoccomment">	 * Return the context. The {@link sorcer.security.util.SorcerPrincipal} for this principal if not</em>
 <a class="jxr_linenumber" name="202" href="#202">202</a> <em class="jxr_javadoccomment">	 * fetched yet.</em>
 <a class="jxr_linenumber" name="203" href="#203">203</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="204" href="#204">204</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Context.html">Context</a> getContext() <strong class="jxr_keyword">throws</strong> ContextException {
-<a class="jxr_linenumber" name="205" href="#205">205</a> 		<strong class="jxr_keyword">if</strong> (linkPrincipal != <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="206" href="#206">206</a> 			<strong class="jxr_keyword">return</strong> getContext(linkPrincipal);
-<a class="jxr_linenumber" name="207" href="#207">207</a> 		<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="208" href="#208">208</a> 			<strong class="jxr_keyword">return</strong> linkedContext;
-<a class="jxr_linenumber" name="209" href="#209">209</a> 	}
-<a class="jxr_linenumber" name="210" href="#210">210</a> 	
-<a class="jxr_linenumber" name="211" href="#211">211</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="212" href="#212">212</a> <em class="jxr_javadoccomment">	 * Return the context. The {@link sorcer.security.util.SorcerPrincipal} is given for authorization.</em>
-<a class="jxr_linenumber" name="213" href="#213">213</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="214" href="#214">214</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Context.html">Context</a> getContext(<a href="../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a> principal)
-<a class="jxr_linenumber" name="215" href="#215">215</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a> {
-<a class="jxr_linenumber" name="216" href="#216">216</a> 		<strong class="jxr_keyword">if</strong> (!fetched) {
-<a class="jxr_linenumber" name="217" href="#217">217</a> 			<strong class="jxr_keyword">if</strong> (principal != <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="218" href="#218">218</a> 				linkedContext = cntxtAccessor.getContext(contextId, version,
-<a class="jxr_linenumber" name="219" href="#219">219</a> 						principal);
-<a class="jxr_linenumber" name="220" href="#220">220</a> 			fetched = <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="221" href="#221">221</a> 		}
-<a class="jxr_linenumber" name="222" href="#222">222</a> 		<strong class="jxr_keyword">return</strong> linkedContext;
-<a class="jxr_linenumber" name="223" href="#223">223</a> 	}
-<a class="jxr_linenumber" name="224" href="#224">224</a> 
-<a class="jxr_linenumber" name="225" href="#225">225</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setContext(<a href="../../../sorcer/service/Context.html">Context</a> ctxt) {
-<a class="jxr_linenumber" name="226" href="#226">226</a> 		linkedContext = ctxt;
-<a class="jxr_linenumber" name="227" href="#227">227</a> 	}
-<a class="jxr_linenumber" name="228" href="#228">228</a> 
-<a class="jxr_linenumber" name="229" href="#229">229</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isRemote() {
-<a class="jxr_linenumber" name="230" href="#230">230</a> 		<strong class="jxr_keyword">return</strong> contextId != <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="231" href="#231">231</a> 	}
-<a class="jxr_linenumber" name="232" href="#232">232</a> 
-<a class="jxr_linenumber" name="233" href="#233">233</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isLocal() {
-<a class="jxr_linenumber" name="234" href="#234">234</a> 		<strong class="jxr_keyword">return</strong> linkedContext != <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="235" href="#235">235</a> 	}
-<a class="jxr_linenumber" name="236" href="#236">236</a> 
-<a class="jxr_linenumber" name="237" href="#237">237</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isFetched() {
-<a class="jxr_linenumber" name="238" href="#238">238</a> 		<strong class="jxr_keyword">return</strong> fetched;
-<a class="jxr_linenumber" name="239" href="#239">239</a> 	}
-<a class="jxr_linenumber" name="240" href="#240">240</a> 
-<a class="jxr_linenumber" name="241" href="#241">241</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> isFetched(<strong class="jxr_keyword">boolean</strong> state) {
-<a class="jxr_linenumber" name="242" href="#242">242</a> 		fetched = state;
-<a class="jxr_linenumber" name="243" href="#243">243</a> 	}
-<a class="jxr_linenumber" name="244" href="#244">244</a> }
+<a class="jxr_linenumber" name="204" href="#204">204</a> 	@Override
+<a class="jxr_linenumber" name="205" href="#205">205</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Context.html">Context</a> getContext() <strong class="jxr_keyword">throws</strong> ContextException {
+<a class="jxr_linenumber" name="206" href="#206">206</a> 		<strong class="jxr_keyword">if</strong> (linkPrincipal != <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="207" href="#207">207</a> 			<strong class="jxr_keyword">return</strong> getContext(linkPrincipal);
+<a class="jxr_linenumber" name="208" href="#208">208</a> 		<strong class="jxr_keyword">else</strong>
+<a class="jxr_linenumber" name="209" href="#209">209</a> 			<strong class="jxr_keyword">return</strong> linkedContext;
+<a class="jxr_linenumber" name="210" href="#210">210</a> 	}
+<a class="jxr_linenumber" name="211" href="#211">211</a> 	
+<a class="jxr_linenumber" name="212" href="#212">212</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="213" href="#213">213</a> <em class="jxr_javadoccomment">	 * Return the context. The {@link sorcer.security.util.SorcerPrincipal} is given for authorization.</em>
+<a class="jxr_linenumber" name="214" href="#214">214</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="215" href="#215">215</a> 	@Override
+<a class="jxr_linenumber" name="216" href="#216">216</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Context.html">Context</a> getContext(<a href="../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a> principal)
+<a class="jxr_linenumber" name="217" href="#217">217</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a> {
+<a class="jxr_linenumber" name="218" href="#218">218</a> 		<strong class="jxr_keyword">if</strong> (!fetched) {
+<a class="jxr_linenumber" name="219" href="#219">219</a> 			<strong class="jxr_keyword">if</strong> (principal != <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="220" href="#220">220</a> 				linkedContext = cntxtAccessor.getContext(contextId, version,
+<a class="jxr_linenumber" name="221" href="#221">221</a> 						principal);
+<a class="jxr_linenumber" name="222" href="#222">222</a> 			fetched = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="223" href="#223">223</a> 		}
+<a class="jxr_linenumber" name="224" href="#224">224</a> 		<strong class="jxr_keyword">return</strong> linkedContext;
+<a class="jxr_linenumber" name="225" href="#225">225</a> 	}
+<a class="jxr_linenumber" name="226" href="#226">226</a> 
+<a class="jxr_linenumber" name="227" href="#227">227</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setContext(<a href="../../../sorcer/service/Context.html">Context</a> ctxt) {
+<a class="jxr_linenumber" name="228" href="#228">228</a> 		linkedContext = ctxt;
+<a class="jxr_linenumber" name="229" href="#229">229</a> 	}
+<a class="jxr_linenumber" name="230" href="#230">230</a> 
+<a class="jxr_linenumber" name="231" href="#231">231</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isRemote() {
+<a class="jxr_linenumber" name="232" href="#232">232</a> 		<strong class="jxr_keyword">return</strong> contextId != <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="233" href="#233">233</a> 	}
+<a class="jxr_linenumber" name="234" href="#234">234</a> 
+<a class="jxr_linenumber" name="235" href="#235">235</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isLocal() {
+<a class="jxr_linenumber" name="236" href="#236">236</a> 		<strong class="jxr_keyword">return</strong> linkedContext != <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="237" href="#237">237</a> 	}
+<a class="jxr_linenumber" name="238" href="#238">238</a> 
+<a class="jxr_linenumber" name="239" href="#239">239</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isFetched() {
+<a class="jxr_linenumber" name="240" href="#240">240</a> 		<strong class="jxr_keyword">return</strong> fetched;
+<a class="jxr_linenumber" name="241" href="#241">241</a> 	}
+<a class="jxr_linenumber" name="242" href="#242">242</a> 
+<a class="jxr_linenumber" name="243" href="#243">243</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> isFetched(<strong class="jxr_keyword">boolean</strong> state) {
+<a class="jxr_linenumber" name="244" href="#244">244</a> 		fetched = state;
+<a class="jxr_linenumber" name="245" href="#245">245</a> 	}
+<a class="jxr_linenumber" name="246" href="#246">246</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

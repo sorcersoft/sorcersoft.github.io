@@ -41,7 +41,7 @@
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> * @see sorcer.service.Exertion</em>
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> * @author Mike Sobolewski</em>
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">interface</strong> <a href="../../sorcer/service/AsyncExertion.html">AsyncExertion</a> <strong class="jxr_keyword">extends</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> {
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">interface</strong> <a href="../../sorcer/service/AsyncExertion.html">AsyncExertion</a> <strong class="jxr_keyword">extends</strong> Exertion {
 <a class="jxr_linenumber" name="35" href="#35">35</a>  
 <a class="jxr_linenumber" name="36" href="#36">36</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <em class="jxr_javadoccomment">	 * Gives this exerion asynchronously to its assigned provider for to a</em>
@@ -64,7 +64,7 @@
 <a class="jxr_linenumber" name="54" href="#54">54</a>  <em class="jxr_javadoccomment">	 * @see Exertion#exert</em>
 <a class="jxr_linenumber" name="55" href="#55">55</a>  <em class="jxr_javadoccomment">	 * @see Exertion#setServicer</em>
 <a class="jxr_linenumber" name="56" href="#56">56</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="57" href="#57">57</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> request(Transaction txn) <strong class="jxr_keyword">throws</strong> TransactionException,
+<a class="jxr_linenumber" name="57" href="#57">57</a>  	<strong class="jxr_keyword">public</strong> Exertion request(Transaction txn) <strong class="jxr_keyword">throws</strong> TransactionException,
 <a class="jxr_linenumber" name="58" href="#58">58</a>  			InterruptedException, ExertionException;
 <a class="jxr_linenumber" name="59" href="#59">59</a>  
 <a class="jxr_linenumber" name="60" href="#60">60</a>  	<em class="jxr_javadoccomment">/**</em>
@@ -82,7 +82,7 @@
 <a class="jxr_linenumber" name="72" href="#72">72</a>  <em class="jxr_javadoccomment">	 *            an identifier for the &lt;code&gt;exert&lt;/code&gt; call</em>
 <a class="jxr_linenumber" name="73" href="#73">73</a>  <em class="jxr_javadoccomment">	 * @return the resulting exertion</em>
 <a class="jxr_linenumber" name="74" href="#74">74</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="75" href="#75">75</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> getRequestResult(<a href="../../sorcer/service/RequestId.html">RequestId</a> id);
+<a class="jxr_linenumber" name="75" href="#75">75</a>  	<strong class="jxr_keyword">public</strong> Exertion getRequestResult(<a href="../../sorcer/service/RequestId.html">RequestId</a> id);
 <a class="jxr_linenumber" name="76" href="#76">76</a>  
 <a class="jxr_linenumber" name="77" href="#77">77</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="78" href="#78">78</a>  <em class="jxr_javadoccomment">	 * Returns &lt;code&gt;true&lt;/code&gt; if the last &lt;code&gt;exert&lt;/code&gt; call is</em>

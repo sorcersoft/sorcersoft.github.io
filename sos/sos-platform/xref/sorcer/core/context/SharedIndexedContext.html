@@ -29,8 +29,8 @@
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> net.jini.space.JavaSpace05;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.space.array.DistribArray05;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ProviderAccessor;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.service.space.SpaceAccessor;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.space.array.DistribArray05;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.util.*;
@@ -41,7 +41,7 @@
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> * with the dataContext root &lt;code&gt;List&lt;/code&gt;;</em>
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="33" href="#33">33</a>  @SuppressWarnings({ <span class="jxr_string">"serial"</span>, <span class="jxr_string">"unchecked"</span> })
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> SharedIndexedContext&lt;T <strong class="jxr_keyword">extends</strong> Object&gt; <strong class="jxr_keyword">extends</strong> <a href="../../../sorcer/core/context/ServiceContext.html">ServiceContext</a> <strong class="jxr_keyword">implements</strong> IndexedContext, <a href="../../../sorcer/core/context/SpaceContext.html">SpaceContext</a> {
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> SharedIndexedContext&lt;T <strong class="jxr_keyword">extends</strong> Object&gt; <strong class="jxr_keyword">extends</strong> ServiceContext <strong class="jxr_keyword">implements</strong> IndexedContext, <a href="../../../sorcer/core/context/SpaceContext.html">SpaceContext</a> {
 <a class="jxr_linenumber" name="35" href="#35">35</a>  	<strong class="jxr_keyword">private</strong> List&lt;T&gt; elements = <strong class="jxr_keyword">new</strong> ArrayList&lt;T&gt;();
 <a class="jxr_linenumber" name="36" href="#36">36</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/space/array/DistribArray05.html">DistribArray05</a> spaceElements;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  	<strong class="jxr_keyword">private</strong> String spaceName;
@@ -49,7 +49,7 @@
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/context/SharedIndexedContext.html">SharedIndexedContext</a>(String spaceName) {
 <a class="jxr_linenumber" name="40" href="#40">40</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		<strong class="jxr_keyword">this</strong>.spaceName = spaceName;
-<a class="jxr_linenumber" name="42" href="#42">42</a>  		JavaSpace05 space = ProviderAccessor.getSpace(spaceName);
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		JavaSpace05 space = SpaceAccessor.getSpace(spaceName);
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		spaceElements = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/space/array/DistribArray05.html">DistribArray05</a>(space, <span class="jxr_string">""</span> + contextId);
 <a class="jxr_linenumber" name="44" href="#44">44</a>  	}
 <a class="jxr_linenumber" name="45" href="#45">45</a>  	
@@ -144,7 +144,7 @@
 <a class="jxr_linenumber" name="134" href="#134">134</a> 			putValue(pathFor(i), o);
 <a class="jxr_linenumber" name="135" href="#135">135</a> 			i++;
 <a class="jxr_linenumber" name="136" href="#136">136</a> 		}
-<a class="jxr_linenumber" name="137" href="#137">137</a> 		<strong class="jxr_keyword">return</strong> addAll(index, c);
+<a class="jxr_linenumber" name="137" href="#137">137</a> 		<strong class="jxr_keyword">return</strong> elements.addAll(index, c);
 <a class="jxr_linenumber" name="138" href="#138">138</a> 	}
 <a class="jxr_linenumber" name="139" href="#139">139</a> 
 <a class="jxr_linenumber" name="140" href="#140">140</a> 	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>
@@ -179,7 +179,7 @@
 <a class="jxr_linenumber" name="169" href="#169">169</a> <em class="jxr_comment">	 * @see java.util.List#lastIndexOf(java.lang.Object)</em>
 <a class="jxr_linenumber" name="170" href="#170">170</a> <em class="jxr_comment">	 */</em>
 <a class="jxr_linenumber" name="171" href="#171">171</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> lastIndexOf(Object o) {
-<a class="jxr_linenumber" name="172" href="#172">172</a> 		<strong class="jxr_keyword">return</strong> lastIndexOf(o);
+<a class="jxr_linenumber" name="172" href="#172">172</a> 		<strong class="jxr_keyword">return</strong> elements.lastIndexOf(o);
 <a class="jxr_linenumber" name="173" href="#173">173</a> 	}
 <a class="jxr_linenumber" name="174" href="#174">174</a> 
 <a class="jxr_linenumber" name="175" href="#175">175</a> 	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>
@@ -314,7 +314,7 @@
 <a class="jxr_linenumber" name="304" href="#304">304</a> 	}
 <a class="jxr_linenumber" name="305" href="#305">305</a> 	
 <a class="jxr_linenumber" name="306" href="#306">306</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setSpace() {
-<a class="jxr_linenumber" name="307" href="#307">307</a> 		JavaSpace05 space = ProviderAccessor.getSpace(spaceName);
+<a class="jxr_linenumber" name="307" href="#307">307</a> 		JavaSpace05 space = SpaceAccessor.getSpace(spaceName);
 <a class="jxr_linenumber" name="308" href="#308">308</a> 		spaceElements.setSpace(space);
 <a class="jxr_linenumber" name="309" href="#309">309</a> 	}
 <a class="jxr_linenumber" name="310" href="#310">310</a> 

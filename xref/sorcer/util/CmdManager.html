@@ -36,10 +36,10 @@
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <em class="jxr_javadoccomment"> * doIt commands.</em>
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="28" href="#28">28</a>  
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../sorcer/util/CmdManager.html">CmdManager</a> <strong class="jxr_keyword">implements</strong> Command, Runnable, <a href="../../sorcer/core/SorcerConstants.html">SorcerConstants</a> {
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../sorcer/util/CmdManager.html">CmdManager</a> <strong class="jxr_keyword">implements</strong> Command, Runnable {
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">private</strong> <a href="../../sorcer/util/Command.html">Command</a> command = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isSelectCmd = <strong class="jxr_keyword">true</strong>, isDo = <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">public</strong> String selectedCmdName = NONE, loginCmd = SYS_LOGIN;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">public</strong> String selectedCmdName = SorcerConstants.NONE, loginCmd = SorcerConstants.SYS_LOGIN;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/util/CmdFactory.html">CmdFactory</a> provider = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  	<strong class="jxr_keyword">private</strong> <a href="../../sorcer/util/Invoker.html">Invoker</a> invoker;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  

@@ -46,7 +46,7 @@
 <a class="jxr_linenumber" name="36" href="#36">36</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compareTo(Object arg) {
 <a class="jxr_linenumber" name="37" href="#37">37</a>  		<strong class="jxr_keyword">if</strong> (arg instanceof ProviderID) {
 <a class="jxr_linenumber" name="38" href="#38">38</a>  			<strong class="jxr_keyword">long</strong> l1 = serviceID.getMostSignificantBits();
-<a class="jxr_linenumber" name="39" href="#39">39</a>  			<strong class="jxr_keyword">long</strong> l2 = ((ServiceID) arg).getMostSignificantBits();
+<a class="jxr_linenumber" name="39" href="#39">39</a>  			<strong class="jxr_keyword">long</strong> l2 = ((ProviderID) arg).serviceID.getMostSignificantBits();
 <a class="jxr_linenumber" name="40" href="#40">40</a>  			<strong class="jxr_keyword">if</strong> ((l1 - l2) == 0) {
 <a class="jxr_linenumber" name="41" href="#41">41</a>  				<strong class="jxr_keyword">return</strong> 0;
 <a class="jxr_linenumber" name="42" href="#42">42</a>  			} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> ((l1 - l2) &gt; 0) {

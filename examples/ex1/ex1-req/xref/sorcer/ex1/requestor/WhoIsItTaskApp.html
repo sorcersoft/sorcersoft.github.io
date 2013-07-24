@@ -41,7 +41,7 @@
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Access;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Task;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Log;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Sorcer;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  
 <a class="jxr_linenumber" name="35" href="#35">35</a>  
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/ex1/requestor/WhoIsItTaskApp.html">WhoIsItTaskApp</a> {
 <a class="jxr_linenumber" name="37" href="#37">37</a>  
@@ -51,7 +51,7 @@
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		System.setSecurityManager(<strong class="jxr_keyword">new</strong> RMISecurityManager());
 <a class="jxr_linenumber" name="42" href="#42">42</a>          ServiceRequestor.prepareCodebase();
 <a class="jxr_linenumber" name="43" href="#43">43</a>  		<em class="jxr_comment">// initialize system environment from configs/sorcer.env</em>
-<a class="jxr_linenumber" name="44" href="#44">44</a>  		Sorcer.getEnvProperties();
+<a class="jxr_linenumber" name="44" href="#44">44</a>  		SorcerEnv.getEnvProperties();
 <a class="jxr_linenumber" name="45" href="#45">45</a>  		Access providerAccess = Access.PUSH;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  		<strong class="jxr_keyword">if</strong> (args.length == 1) {
 <a class="jxr_linenumber" name="47" href="#47">47</a>  			<strong class="jxr_keyword">if</strong> (!args[0].equals(Access.PUSH))

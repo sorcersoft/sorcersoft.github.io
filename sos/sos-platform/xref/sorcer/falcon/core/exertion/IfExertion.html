@@ -51,18 +51,18 @@
 <a class="jxr_linenumber" name="41" href="#41">41</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment">	 * The then exertion component.</em>
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="44" href="#44">44</a>  	<strong class="jxr_keyword">protected</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> thenExertion;
+<a class="jxr_linenumber" name="44" href="#44">44</a>  	<strong class="jxr_keyword">protected</strong> Exertion thenExertion;
 <a class="jxr_linenumber" name="45" href="#45">45</a>  
 <a class="jxr_linenumber" name="46" href="#46">46</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="47" href="#47">47</a>  <em class="jxr_javadoccomment">	 * The else exertion component.</em>
 <a class="jxr_linenumber" name="48" href="#48">48</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="49" href="#49">49</a>  	<strong class="jxr_keyword">protected</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> elseExertion;
+<a class="jxr_linenumber" name="49" href="#49">49</a>  	<strong class="jxr_keyword">protected</strong> Exertion elseExertion;
 <a class="jxr_linenumber" name="50" href="#50">50</a>  
 <a class="jxr_linenumber" name="51" href="#51">51</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="52" href="#52">52</a>  <em class="jxr_javadoccomment">	 * The dataContext of the ifExertion, independent from the component exertion's</em>
 <a class="jxr_linenumber" name="53" href="#53">53</a>  <em class="jxr_javadoccomment">	 * dataContext.</em>
 <a class="jxr_linenumber" name="54" href="#54">54</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="55" href="#55">55</a>  	<strong class="jxr_keyword">protected</strong> <a href="../../../../sorcer/service/Context.html">Context</a> ifContext;
+<a class="jxr_linenumber" name="55" href="#55">55</a>  	<strong class="jxr_keyword">protected</strong> Context ifContext;
 <a class="jxr_linenumber" name="56" href="#56">56</a>  
 <a class="jxr_linenumber" name="57" href="#57">57</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="58" href="#58">58</a>  <em class="jxr_javadoccomment">	 * The boolean expression string for legacy usage, using without the given</em>
@@ -90,10 +90,10 @@
 <a class="jxr_linenumber" name="80" href="#80">80</a>  <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="81" href="#81">81</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/falcon/core/exertion/IfExertion.html">IfExertion</a>() {
 <a class="jxr_linenumber" name="82" href="#82">82</a>  		<strong class="jxr_keyword">super</strong>();
-<a class="jxr_linenumber" name="83" href="#83">83</a>  		ifContext = <strong class="jxr_keyword">new</strong> <a href="../../../../sorcer/core/context/ServiceContext.html">ServiceContext</a>(<span class="jxr_string">"IfContext"</span>);
+<a class="jxr_linenumber" name="83" href="#83">83</a>  		ifContext = <strong class="jxr_keyword">new</strong> ServiceContext(<span class="jxr_string">"IfContext"</span>);
 <a class="jxr_linenumber" name="84" href="#84">84</a>  		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="85" href="#85">85</a>  			ifContext.setAttribute(<span class="jxr_string">"exertionDone"</span>); <em class="jxr_comment">// currently not used</em>
-<a class="jxr_linenumber" name="86" href="#86">86</a>  			ifContext.putValue(<span class="jxr_string">"exertion/done"</span>, ServiceContext.EMPTY_LEAF);
+<a class="jxr_linenumber" name="86" href="#86">86</a>  			ifContext.putValue(<span class="jxr_string">"exertion/done"</span>, Context.EMPTY_LEAF);
 <a class="jxr_linenumber" name="87" href="#87">87</a>  		} <strong class="jxr_keyword">catch</strong> (ContextException e) {
 <a class="jxr_linenumber" name="88" href="#88">88</a>  			e.printStackTrace();
 <a class="jxr_linenumber" name="89" href="#89">89</a>  		}
@@ -109,7 +109,7 @@
 <a class="jxr_linenumber" name="99" href="#99">99</a>  <em class="jxr_javadoccomment">	 * @param elseExertion</em>
 <a class="jxr_linenumber" name="100" href="#100">100</a> <em class="jxr_javadoccomment">	 *            the else exertion component</em>
 <a class="jxr_linenumber" name="101" href="#101">101</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="102" href="#102">102</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/falcon/core/exertion/IfExertion.html">IfExertion</a>(<a href="../../../../sorcer/service/Exertion.html">Exertion</a> thenExertion, <a href="../../../../sorcer/service/Exertion.html">Exertion</a> elseExertion) {
+<a class="jxr_linenumber" name="102" href="#102">102</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/falcon/core/exertion/IfExertion.html">IfExertion</a>(Exertion thenExertion, Exertion elseExertion) {
 <a class="jxr_linenumber" name="103" href="#103">103</a> 		<strong class="jxr_keyword">this</strong>();
 <a class="jxr_linenumber" name="104" href="#104">104</a> 		<strong class="jxr_keyword">this</strong>.thenExertion = thenExertion;
 <a class="jxr_linenumber" name="105" href="#105">105</a> 		<strong class="jxr_keyword">this</strong>.elseExertion = elseExertion;
@@ -153,7 +153,7 @@
 <a class="jxr_linenumber" name="143" href="#143">143</a> <em class="jxr_javadoccomment">	 * @param elseExertion</em>
 <a class="jxr_linenumber" name="144" href="#144">144</a> <em class="jxr_javadoccomment">	 *            the else component</em>
 <a class="jxr_linenumber" name="145" href="#145">145</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="146" href="#146">146</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/falcon/core/exertion/IfExertion.html">IfExertion</a>(<a href="../../../../sorcer/falcon/base/Conditional.html">Conditional</a> condition, <a href="../../../../sorcer/service/Exertion.html">Exertion</a> thenExertion,
+<a class="jxr_linenumber" name="146" href="#146">146</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/falcon/core/exertion/IfExertion.html">IfExertion</a>(<a href="../../../../sorcer/falcon/base/Conditional.html">Conditional</a> condition, Exertion thenExertion,
 <a class="jxr_linenumber" name="147" href="#147">147</a> 			Exertion elseExertion) {
 <a class="jxr_linenumber" name="148" href="#148">148</a> 		<strong class="jxr_keyword">this</strong>(thenExertion, elseExertion);
 <a class="jxr_linenumber" name="149" href="#149">149</a> 		<strong class="jxr_keyword">this</strong>.condition = condition;
@@ -164,7 +164,7 @@
 <a class="jxr_linenumber" name="154" href="#154">154</a> <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="155" href="#155">155</a> <em class="jxr_javadoccomment">	 * @return Exertion</em>
 <a class="jxr_linenumber" name="156" href="#156">156</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="157" href="#157">157</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> getThenExertion() {
+<a class="jxr_linenumber" name="157" href="#157">157</a> 	<strong class="jxr_keyword">public</strong> Exertion getThenExertion() {
 <a class="jxr_linenumber" name="158" href="#158">158</a> 		<strong class="jxr_keyword">return</strong> thenExertion;
 <a class="jxr_linenumber" name="159" href="#159">159</a> 	}
 <a class="jxr_linenumber" name="160" href="#160">160</a> 
@@ -173,7 +173,7 @@
 <a class="jxr_linenumber" name="163" href="#163">163</a> <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="164" href="#164">164</a> <em class="jxr_javadoccomment">	 * @return Exertion</em>
 <a class="jxr_linenumber" name="165" href="#165">165</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="166" href="#166">166</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> getElseExertion() {
+<a class="jxr_linenumber" name="166" href="#166">166</a> 	<strong class="jxr_keyword">public</strong> Exertion getElseExertion() {
 <a class="jxr_linenumber" name="167" href="#167">167</a> 		<strong class="jxr_keyword">return</strong> elseExertion;
 <a class="jxr_linenumber" name="168" href="#168">168</a> 	}
 <a class="jxr_linenumber" name="169" href="#169">169</a> 
@@ -207,7 +207,7 @@
 <a class="jxr_linenumber" name="197" href="#197">197</a> <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_javadoccomment">	 * @return ServiceContext</em>
 <a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="200" href="#200">200</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Context.html">Context</a> getDataContext() {
+<a class="jxr_linenumber" name="200" href="#200">200</a> 	<strong class="jxr_keyword">public</strong> Context getDataContext() {
 <a class="jxr_linenumber" name="201" href="#201">201</a> 		<strong class="jxr_keyword">return</strong> ifContext;
 <a class="jxr_linenumber" name="202" href="#202">202</a> 	}
 <a class="jxr_linenumber" name="203" href="#203">203</a> 
@@ -217,7 +217,7 @@
 <a class="jxr_linenumber" name="207" href="#207">207</a> <em class="jxr_javadoccomment">	 * @param context</em>
 <a class="jxr_linenumber" name="208" href="#208">208</a> <em class="jxr_javadoccomment">	 *            the dataContext to replace the current dataContext</em>
 <a class="jxr_linenumber" name="209" href="#209">209</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="210" href="#210">210</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setConditionalContext(<a href="../../../../sorcer/service/Context.html">Context</a> context) {
+<a class="jxr_linenumber" name="210" href="#210">210</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setConditionalContext(Context context) {
 <a class="jxr_linenumber" name="211" href="#211">211</a> 		<strong class="jxr_keyword">this</strong>.ifContext = context;
 <a class="jxr_linenumber" name="212" href="#212">212</a> 	}
 <a class="jxr_linenumber" name="213" href="#213">213</a> 
@@ -261,7 +261,7 @@
 <a class="jxr_linenumber" name="251" href="#251">251</a> <em class="jxr_javadoccomment">	 * @return Signature</em>
 <a class="jxr_linenumber" name="252" href="#252">252</a> <em class="jxr_javadoccomment">	 * @see NetSignature</em>
 <a class="jxr_linenumber" name="253" href="#253">253</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="254" href="#254">254</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Signature.html">Signature</a> getProcessSignature() {
+<a class="jxr_linenumber" name="254" href="#254">254</a> 	<strong class="jxr_keyword">public</strong> Signature getProcessSignature() {
 <a class="jxr_linenumber" name="255" href="#255">255</a> 		<strong class="jxr_keyword">return</strong> thenExertion.getProcessSignature();
 <a class="jxr_linenumber" name="256" href="#256">256</a> 	}
 <a class="jxr_linenumber" name="257" href="#257">257</a> 
@@ -361,14 +361,14 @@
 <a class="jxr_linenumber" name="351" href="#351">351</a> 				testLog.info(<span class="jxr_string">"isTrue(): "</span> + (result == 1));
 <a class="jxr_linenumber" name="352" href="#352">352</a> 				<strong class="jxr_keyword">return</strong> result == 1;
 <a class="jxr_linenumber" name="353" href="#353">353</a> 			} <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="354" href="#354">354</a> 				<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../sorcer/service/ExertionException.html">ExertionException</a>(
+<a class="jxr_linenumber" name="354" href="#354">354</a> 				<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ExertionException(
 <a class="jxr_linenumber" name="355" href="#355">355</a> 						<span class="jxr_string">"Boolean expression is not a valid condition "</span>
 <a class="jxr_linenumber" name="356" href="#356">356</a> 								+ WhileExertion.<strong class="jxr_keyword">class</strong>.getClass().getName());
 <a class="jxr_linenumber" name="357" href="#357">357</a> 			}
 <a class="jxr_linenumber" name="358" href="#358">358</a> 		}
 <a class="jxr_linenumber" name="359" href="#359">359</a> 
 <a class="jxr_linenumber" name="360" href="#360">360</a> 		<strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="361" href="#361">361</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"missing condition in"</span>
+<a class="jxr_linenumber" name="361" href="#361">361</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ExertionException(<span class="jxr_string">"missing condition in"</span>
 <a class="jxr_linenumber" name="362" href="#362">362</a> 					+ WhileExertion.<strong class="jxr_keyword">class</strong>.getClass().getName());
 <a class="jxr_linenumber" name="363" href="#363">363</a> 		}
 <a class="jxr_linenumber" name="364" href="#364">364</a> 	}
@@ -412,7 +412,7 @@
 <a class="jxr_linenumber" name="402" href="#402">402</a> <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="403" href="#403">403</a> <em class="jxr_javadoccomment">	 * @return Exertion</em>
 <a class="jxr_linenumber" name="404" href="#404">404</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="405" href="#405">405</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> getResult() {
+<a class="jxr_linenumber" name="405" href="#405">405</a> 	<strong class="jxr_keyword">public</strong> Exertion getResult() {
 <a class="jxr_linenumber" name="406" href="#406">406</a> 		Exertion exertion = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="407" href="#407">407</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="408" href="#408">408</a> 			exertion = (Exertion) ifContext.getValue(<span class="jxr_string">"exertion/done"</span>);
@@ -428,7 +428,7 @@
 <a class="jxr_linenumber" name="418" href="#418">418</a> <em class="jxr_javadoccomment">	 * @param elseExertion</em>
 <a class="jxr_linenumber" name="419" href="#419">419</a> <em class="jxr_javadoccomment">	 *            Exertion component</em>
 <a class="jxr_linenumber" name="420" href="#420">420</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="421" href="#421">421</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setElseExertion(<a href="../../../../sorcer/service/Exertion.html">Exertion</a> elseExertion) {
+<a class="jxr_linenumber" name="421" href="#421">421</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setElseExertion(Exertion elseExertion) {
 <a class="jxr_linenumber" name="422" href="#422">422</a> 		<strong class="jxr_keyword">this</strong>.elseExertion = elseExertion;
 <a class="jxr_linenumber" name="423" href="#423">423</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="424" href="#424">424</a> 			ifContext.putValue(<span class="jxr_string">"in/dataContext/elseExertion"</span>, elseExertion
@@ -444,7 +444,7 @@
 <a class="jxr_linenumber" name="434" href="#434">434</a> <em class="jxr_javadoccomment">	 * @param thenExertion</em>
 <a class="jxr_linenumber" name="435" href="#435">435</a> <em class="jxr_javadoccomment">	 *            Exertion component</em>
 <a class="jxr_linenumber" name="436" href="#436">436</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="437" href="#437">437</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setThenExertion(<a href="../../../../sorcer/service/Exertion.html">Exertion</a> thenExertion) {
+<a class="jxr_linenumber" name="437" href="#437">437</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setThenExertion(Exertion thenExertion) {
 <a class="jxr_linenumber" name="438" href="#438">438</a> 		<strong class="jxr_keyword">this</strong>.thenExertion = thenExertion;
 <a class="jxr_linenumber" name="439" href="#439">439</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="440" href="#440">440</a> 			ifContext.putValue(<span class="jxr_string">"in/dataContext/thenExertion"</span>, thenExertion
@@ -483,7 +483,7 @@
 <a class="jxr_linenumber" name="473" href="#473">473</a> <em class="jxr_javadoccomment">	 *            the type of needed exertion format</em>
 <a class="jxr_linenumber" name="474" href="#474">474</a> <em class="jxr_javadoccomment">	 * @return</em>
 <a class="jxr_linenumber" name="475" href="#475">475</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="476" href="#476">476</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> getUpdatedExertion(<strong class="jxr_keyword">int</strong> type) {
+<a class="jxr_linenumber" name="476" href="#476">476</a> 	<strong class="jxr_keyword">public</strong> Exertion getUpdatedExertion(<strong class="jxr_keyword">int</strong> type) {
 <a class="jxr_linenumber" name="477" href="#477">477</a> 		<em class="jxr_comment">// TODO</em>
 <a class="jxr_linenumber" name="478" href="#478">478</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
 <a class="jxr_linenumber" name="479" href="#479">479</a> 	}
@@ -496,7 +496,7 @@
 <a class="jxr_linenumber" name="486" href="#486">486</a> <em class="jxr_comment">	 * @see sorcer.service.ServiceExertion#linkContext(sorcer.service.Context, java.lang.String)</em>
 <a class="jxr_linenumber" name="487" href="#487">487</a> <em class="jxr_comment">	 */</em>
 <a class="jxr_linenumber" name="488" href="#488">488</a> 	@Override
-<a class="jxr_linenumber" name="489" href="#489">489</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Context.html">Context</a> linkContext(<a href="../../../../sorcer/service/Context.html">Context</a> context, String path)
+<a class="jxr_linenumber" name="489" href="#489">489</a> 	<strong class="jxr_keyword">public</strong> Context linkContext(Context context, String path)
 <a class="jxr_linenumber" name="490" href="#490">490</a> 			<strong class="jxr_keyword">throws</strong> ContextException {
 <a class="jxr_linenumber" name="491" href="#491">491</a> 		<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ContextException(<span class="jxr_string">"linkContext operation not supported"</span>);
 <a class="jxr_linenumber" name="492" href="#492">492</a> 	}
@@ -513,7 +513,7 @@
 <a class="jxr_linenumber" name="503" href="#503">503</a> <em class="jxr_comment">	 * @see sorcer.service.ServiceExertion#linkControlContext(sorcer.service.Context, java.lang.String)</em>
 <a class="jxr_linenumber" name="504" href="#504">504</a> <em class="jxr_comment">	 */</em>
 <a class="jxr_linenumber" name="505" href="#505">505</a> 	@Override
-<a class="jxr_linenumber" name="506" href="#506">506</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Context.html">Context</a> linkControlContext(<a href="../../../../sorcer/service/Context.html">Context</a> context, String path)
+<a class="jxr_linenumber" name="506" href="#506">506</a> 	<strong class="jxr_keyword">public</strong> Context linkControlContext(Context context, String path)
 <a class="jxr_linenumber" name="507" href="#507">507</a> 			<strong class="jxr_keyword">throws</strong> ContextException {
 <a class="jxr_linenumber" name="508" href="#508">508</a> 		<em class="jxr_comment">// TODO Auto-generated method stub</em>
 <a class="jxr_linenumber" name="509" href="#509">509</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
@@ -544,7 +544,7 @@
 <a class="jxr_linenumber" name="534" href="#534">534</a> <em class="jxr_comment">	 * @see sorcer.service.Exertion#addExertion(sorcer.service.Exertion)</em>
 <a class="jxr_linenumber" name="535" href="#535">535</a> <em class="jxr_comment">	 */</em>
 <a class="jxr_linenumber" name="536" href="#536">536</a> 	@Override
-<a class="jxr_linenumber" name="537" href="#537">537</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> addExertion(<a href="../../../../sorcer/service/Exertion.html">Exertion</a> component) {
+<a class="jxr_linenumber" name="537" href="#537">537</a> 	<strong class="jxr_keyword">public</strong> Exertion addExertion(Exertion component) {
 <a class="jxr_linenumber" name="538" href="#538">538</a> 		<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> RuntimeException(<span class="jxr_string">"Tasks do not contain appended exertions!"</span>);
 <a class="jxr_linenumber" name="539" href="#539">539</a> 
 <a class="jxr_linenumber" name="540" href="#540">540</a> 	}

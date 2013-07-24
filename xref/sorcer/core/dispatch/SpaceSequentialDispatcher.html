@@ -32,7 +32,7 @@
 <a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.exertion.NetJob;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.core.loki.member.LokiMemberUtil;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.*;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ProviderAccessor;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.space.SpaceAccessor;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> java.util.Set;
@@ -60,7 +60,7 @@
 <a class="jxr_linenumber" name="50" href="#50">50</a>  			} <strong class="jxr_keyword">catch</strong> (RemoteException re) {
 <a class="jxr_linenumber" name="51" href="#51">51</a>  				re.printStackTrace();
 <a class="jxr_linenumber" name="52" href="#52">52</a>  				logger.severe(<span class="jxr_string">"Space not reachable....resetting space"</span>);
-<a class="jxr_linenumber" name="53" href="#53">53</a>  				space = ProviderAccessor.getSpace();
+<a class="jxr_linenumber" name="53" href="#53">53</a>  				space = SpaceAccessor.getSpace();
 <a class="jxr_linenumber" name="54" href="#54">54</a>  				<strong class="jxr_keyword">if</strong> (space == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="55" href="#55">55</a>  					xrt.setStatus(FAILED);
 <a class="jxr_linenumber" name="56" href="#56">56</a>  					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ExertionException.html">ExertionException</a>(<span class="jxr_string">"NO exertion space available!"</span>);

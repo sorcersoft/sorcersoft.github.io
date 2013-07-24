@@ -28,11 +28,11 @@
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> sorcer.ex1.provider;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> com.sun.jini.start.LifeCycle;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.ServiceTasker;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.ex1.WhoIsIt;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Context;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ServiceExertion;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.ServiceTasker;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.ex1.WhoIsIt;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Context;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.util.StringUtils;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> java.net.InetAddress;
@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  
 <a class="jxr_linenumber" name="38" href="#38">38</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/ex1/provider/WhoIsItProvider1.html">WhoIsItProvider1</a>(String[] args, LifeCycle lifeCycle) <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="39" href="#39">39</a>  		<strong class="jxr_keyword">super</strong>(args, lifeCycle);
-<a class="jxr_linenumber" name="40" href="#40">40</a>          ServiceExertion.debug = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="40" href="#40">40</a>          SorcerEnv.debug = <strong class="jxr_keyword">true</strong>;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  	}
 <a class="jxr_linenumber" name="42" href="#42">42</a>  
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>

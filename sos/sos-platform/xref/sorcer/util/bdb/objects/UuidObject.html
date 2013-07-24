@@ -49,7 +49,7 @@
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	
 <a class="jxr_linenumber" name="40" href="#40">40</a>  	<strong class="jxr_keyword">private</strong> Uuid id;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  	   
-<a class="jxr_linenumber" name="42" href="#42">42</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a> principal;
+<a class="jxr_linenumber" name="42" href="#42">42</a>  	<strong class="jxr_keyword">private</strong> SorcerPrincipal principal;
 <a class="jxr_linenumber" name="43" href="#43">43</a>  	
 <a class="jxr_linenumber" name="44" href="#44">44</a>  	<strong class="jxr_keyword">private</strong> String description;
 <a class="jxr_linenumber" name="45" href="#45">45</a>  
@@ -69,7 +69,7 @@
 <a class="jxr_linenumber" name="59" href="#59">59</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/util/bdb/objects/UuidObject.html">UuidObject</a>(Object object, String descrition) {
 <a class="jxr_linenumber" name="60" href="#60">60</a>      	id = UuidFactory.generate();
 <a class="jxr_linenumber" name="61" href="#61">61</a>          <strong class="jxr_keyword">this</strong>.object = object;
-<a class="jxr_linenumber" name="62" href="#62">62</a>          principal = <strong class="jxr_keyword">new</strong> <a href="../../../../sorcer/security/util/SorcerPrincipal.html">SorcerPrincipal</a>(System.getProperty(<span class="jxr_string">"user.name"</span>));
+<a class="jxr_linenumber" name="62" href="#62">62</a>          principal = <strong class="jxr_keyword">new</strong> SorcerPrincipal(System.getProperty(<span class="jxr_string">"user.name"</span>));
 <a class="jxr_linenumber" name="63" href="#63">63</a>  		principal.setId(principal.getName());
 <a class="jxr_linenumber" name="64" href="#64">64</a>  		<strong class="jxr_keyword">this</strong>.description = descrition;
 <a class="jxr_linenumber" name="65" href="#65">65</a>  		dateCreated = <strong class="jxr_keyword">new</strong> Date();

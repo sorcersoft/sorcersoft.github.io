@@ -35,12 +35,12 @@
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> org.junit.BeforeClass;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> org.junit.Ignore;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ExertionException;
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.service.SignatureException;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ProviderAccessor;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ServiceAccessor;
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.util.Sorcer;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Accessor;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ExertionException;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.service.SignatureException;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.service.space.SpaceAccessor;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  
@@ -61,7 +61,7 @@
 <a class="jxr_linenumber" name="51" href="#51">51</a>  			SignatureException {
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="53" href="#53">53</a>  			assertNotNull(System.getenv(<span class="jxr_string">"SORCER_HOME"</span>));
-<a class="jxr_linenumber" name="54" href="#54">54</a>  			logger.info(<span class="jxr_string">"SORCER_HOME: "</span> + Sorcer.getHomeDir());
+<a class="jxr_linenumber" name="54" href="#54">54</a>  			logger.info(<span class="jxr_string">"SORCER_HOME: "</span> + SorcerEnv.getHomeDir());
 <a class="jxr_linenumber" name="55" href="#55">55</a>  		} <strong class="jxr_keyword">catch</strong> (AssertionError ae) {
 <a class="jxr_linenumber" name="56" href="#56">56</a>  			logger.severe(<span class="jxr_string">"SORCER_HOME must be set and point to the Sorcer root directory!!!"</span>);
 <a class="jxr_linenumber" name="57" href="#57">57</a>  		}		
@@ -71,31 +71,31 @@
 <a class="jxr_linenumber" name="61" href="#61">61</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> spaceSuffixTest() <strong class="jxr_keyword">throws</strong> ExertionException, ContextException,
 <a class="jxr_linenumber" name="62" href="#62">62</a>  			SignatureException {
 <a class="jxr_linenumber" name="63" href="#63">63</a>  
-<a class="jxr_linenumber" name="64" href="#64">64</a>  		<em class="jxr_comment">/*<em class="jxr_comment">logger.info("space name: " + Sorcer.getSpaceName());</em></em>
-<a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_comment">		logger.info("group space name: " + Sorcer.getSpaceGroup());</em>
+<a class="jxr_linenumber" name="64" href="#64">64</a>  		<em class="jxr_comment">/*<em class="jxr_comment">logger.info("space name: " + SorcerEnv.getSpaceName());</em></em>
+<a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_comment">		logger.info("group space name: " + SorcerEnv.getSpaceGroup());</em>
 <a class="jxr_linenumber" name="66" href="#66">66</a>  <em class="jxr_comment">		</em>
 <a class="jxr_linenumber" name="67" href="#67">67</a>  <em class="jxr_comment">		logger.info("suffixed space name: "</em>
-<a class="jxr_linenumber" name="68" href="#68">68</a>  <em class="jxr_comment">				+ Sorcer.getSuffixedName(Sorcer.getSpaceName()));</em>
+<a class="jxr_linenumber" name="68" href="#68">68</a>  <em class="jxr_comment">				+ SorcerEnv.getSuffixedName(SorcerEnv.getSpaceName()));</em>
 <a class="jxr_linenumber" name="69" href="#69">69</a>  <em class="jxr_comment">		logger.info("actual space name: " +</em>
-<a class="jxr_linenumber" name="70" href="#70">70</a>  <em class="jxr_comment">				Sorcer.getActualSpaceName());*/</em>
+<a class="jxr_linenumber" name="70" href="#70">70</a>  <em class="jxr_comment">				SorcerEnv.getActualSpaceName());*/</em>
 <a class="jxr_linenumber" name="71" href="#71">71</a>  		
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		
-<a class="jxr_linenumber" name="73" href="#73">73</a>  		assertEquals(Sorcer.getSuffixedName(Sorcer.getSpaceName()),
-<a class="jxr_linenumber" name="74" href="#74">74</a>  				Sorcer.getSpaceName() + <span class="jxr_string">"-"</span> + Sorcer.getNameSuffix());
+<a class="jxr_linenumber" name="73" href="#73">73</a>  		assertEquals(SorcerEnv.getSuffixedName(SorcerEnv.getSpaceName()),
+<a class="jxr_linenumber" name="74" href="#74">74</a>  				SorcerEnv.getSpaceName() + <span class="jxr_string">"-"</span> + SorcerEnv.getNameSuffix());
 <a class="jxr_linenumber" name="75" href="#75">75</a>  
-<a class="jxr_linenumber" name="76" href="#76">76</a>  		assertEquals(Sorcer.getSuffixedName(Sorcer.getSpaceName()), Sorcer.getActualSpaceName());
+<a class="jxr_linenumber" name="76" href="#76">76</a>  		assertEquals(SorcerEnv.getSuffixedName(SorcerEnv.getSpaceName()), SorcerEnv.getActualSpaceName());
 <a class="jxr_linenumber" name="77" href="#77">77</a>  	}
 <a class="jxr_linenumber" name="78" href="#78">78</a>  
 <a class="jxr_linenumber" name="79" href="#79">79</a>  	@Ignore
 <a class="jxr_linenumber" name="80" href="#80">80</a>  	@Test
 <a class="jxr_linenumber" name="81" href="#81">81</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> getSpaceTest() <strong class="jxr_keyword">throws</strong> ExertionException, ContextException,
 <a class="jxr_linenumber" name="82" href="#82">82</a>  			SignatureException {
-<a class="jxr_linenumber" name="83" href="#83">83</a>  		logger.info(<span class="jxr_string">"exert space:\n"</span> + ProviderAccessor.getSpace());
+<a class="jxr_linenumber" name="83" href="#83">83</a>  		logger.info(<span class="jxr_string">"exert space:"</span> + SpaceAccessor.getSpace());
 <a class="jxr_linenumber" name="84" href="#84">84</a>  		
-<a class="jxr_linenumber" name="85" href="#85">85</a>  		ServiceTemplate tmpl = <strong class="jxr_keyword">new</strong> ServiceTemplate(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">new</strong> Class[] { JavaSpace05.<strong class="jxr_keyword">class</strong> }, <strong class="jxr_keyword">new</strong> Entry[] { <strong class="jxr_keyword">new</strong> Name(Sorcer.getActualSpaceName())});
-<a class="jxr_linenumber" name="86" href="#86">86</a>  		ServiceItem si = ServiceAccessor.getServiceItem(tmpl, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">new</strong> String[] { Sorcer.getSpaceGroup() });
+<a class="jxr_linenumber" name="85" href="#85">85</a>  		ServiceTemplate tmpl = <strong class="jxr_keyword">new</strong> ServiceTemplate(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">new</strong> Class[] { JavaSpace05.<strong class="jxr_keyword">class</strong> }, <strong class="jxr_keyword">new</strong> Entry[] { <strong class="jxr_keyword">new</strong> Name(SorcerEnv.getActualSpaceName())});
+<a class="jxr_linenumber" name="86" href="#86">86</a>  		ServiceItem si = Accessor.getServiceItem(tmpl, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">new</strong> String[]{SorcerEnv.getSpaceGroup()});
 <a class="jxr_linenumber" name="87" href="#87">87</a>  		logger.info(<span class="jxr_string">"got service: serviceID="</span> + si.serviceID + <span class="jxr_string">" template="</span>
-<a class="jxr_linenumber" name="88" href="#88">88</a>  				+ tmpl + <span class="jxr_string">" groups="</span> + Sorcer.getSpaceGroup());
+<a class="jxr_linenumber" name="88" href="#88">88</a>  				+ tmpl + <span class="jxr_string">" groups="</span> + SorcerEnv.getSpaceGroup());
 <a class="jxr_linenumber" name="89" href="#89">89</a>  	}
 <a class="jxr_linenumber" name="90" href="#90">90</a>  		
 <a class="jxr_linenumber" name="91" href="#91">91</a>  }

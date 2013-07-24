@@ -37,9 +37,9 @@
 <a class="jxr_linenumber" name="27" href="#27">27</a>  
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Cataloger;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Provider;
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.tools.shell.NetworkShell;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.tools.shell.ShellCmd;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ProviderLookup;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Accessor;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.tools.shell.NetworkShell;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.tools.shell.ShellCmd;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <em class="jxr_javadoccomment"> * Handles directory commands</em>
@@ -179,9 +179,9 @@
 <a class="jxr_linenumber" name="169" href="#169">169</a> 	}
 <a class="jxr_linenumber" name="170" href="#170">170</a> 
 <a class="jxr_linenumber" name="171" href="#171">171</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> listCatalog() {
-<a class="jxr_linenumber" name="172" href="#172">172</a> 		Cataloger cataloger = (Cataloger)ProviderLookup.getService(Cataloger.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="172" href="#172">172</a> 		Cataloger cataloger = Accessor.getService(Cataloger.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="173" href="#173">173</a> 		<strong class="jxr_keyword">if</strong> (cataloger != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="174" href="#174">174</a> 			String[] providers = <strong class="jxr_keyword">new</strong> String[0];
+<a class="jxr_linenumber" name="174" href="#174">174</a> 			String[] providers;
 <a class="jxr_linenumber" name="175" href="#175">175</a> 			<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="176" href="#176">176</a> 				providers = cataloger.getProviderList();
 <a class="jxr_linenumber" name="177" href="#177">177</a> 			out.println(<span class="jxr_string">"Providers in the "</span> + ((Provider)cataloger).getProviderName() + <span class="jxr_string">": "</span>);
@@ -195,7 +195,7 @@
 <a class="jxr_linenumber" name="185" href="#185">185</a> 	}
 <a class="jxr_linenumber" name="186" href="#186">186</a> 	
 <a class="jxr_linenumber" name="187" href="#187">187</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> catalogInfo() {
-<a class="jxr_linenumber" name="188" href="#188">188</a> 		Cataloger cataloger = (Cataloger)ProviderLookup.getService(Cataloger.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="188" href="#188">188</a> 		Cataloger cataloger = Accessor.getService(Cataloger.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="189" href="#189">189</a> 		<strong class="jxr_keyword">if</strong> (cataloger != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="190" href="#190">190</a> 			<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="191" href="#191">191</a> 			out.println(((Provider)cataloger).getProviderName() + <span class="jxr_string">" Contents"</span>);

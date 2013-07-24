@@ -1,4 +1,5 @@
 sorcer.boot
+sorcer.boot.load
 sorcer.boot.util
 sorcer.co
 sorcer.co.tuple
@@ -20,7 +21,6 @@ sorcer.core.provider
 sorcer.core.provider.cataloger
 sorcer.core.provider.cataloger.ui
 sorcer.core.provider.dbp
-sorcer.core.provider.dsp
 sorcer.core.provider.exertmonitor
 sorcer.core.provider.exertmonitor.db
 sorcer.core.provider.exertmonitor.lease
@@ -42,13 +42,22 @@ sorcer.jini.lookup.entry
 sorcer.launcher
 sorcer.maven.plugin
 sorcer.maven.util
+sorcer.netlet
+sorcer.netlet.util
 sorcer.org.rioproject.net
+sorcer.platform
+sorcer.protocol
 sorcer.provider.boot
 sorcer.resolver
+sorcer.river
 sorcer.security.sign
 sorcer.security.ui
 sorcer.security.util
 sorcer.service
+sorcer.service.jobber
+sorcer.service.space
+sorcer.service.spacer
+sorcer.service.txmgr
 sorcer.space.array
 sorcer.ssb
 sorcer.ssb.browser.api
@@ -68,6 +77,7 @@ sorcer.util.bdb
 sorcer.util.bdb.objects
 sorcer.util.bdb.sdb
 sorcer.util.dbac
+sorcer.util.eval
 sorcer.util.exec
 sorcer.util.observable
 sorcer.util.ui
