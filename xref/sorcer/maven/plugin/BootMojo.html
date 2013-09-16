@@ -36,7 +36,7 @@
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> org.sonatype.aether.util.artifact.DefaultArtifact;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> org.sonatype.aether.util.artifact.JavaScopes;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.boot.ServiceStarter;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Cataloger;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.Cataloger;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.launcher.SorcerProcessBuilder;
@@ -186,7 +186,7 @@
 <a class="jxr_linenumber" name="176" href="#176">176</a> 				<strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="177" href="#177">177</a>             <strong class="jxr_keyword">case</strong> getService:
 <a class="jxr_linenumber" name="178" href="#178">178</a>                 getLog().info(<span class="jxr_string">"Waiting for the provider until a service is available"</span>);
-<a class="jxr_linenumber" name="179" href="#179">179</a>                 <a href="../../../sorcer/core/Cataloger.html">Cataloger</a> service = Accessor.getService(Cataloger.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="179" href="#179">179</a>                 <a href="../../../sorcer/core/provider/Cataloger.html">Cataloger</a> service = Accessor.getService(Cataloger.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="180" href="#180">180</a>                 getLog().info(<span class="jxr_string">"Service = "</span> + service);
 <a class="jxr_linenumber" name="181" href="#181">181</a>                 <strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="182" href="#182">182</a>             <strong class="jxr_keyword">default</strong>:

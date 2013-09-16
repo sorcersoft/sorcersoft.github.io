@@ -33,8 +33,8 @@
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> net.jini.core.lookup.ServiceMatches;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> net.jini.core.lookup.ServiceTemplate;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> net.jini.lookup.ServiceItemFilter;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Cataloger;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Provider;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.Cataloger;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.Provider;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.river.Filters;
@@ -75,7 +75,7 @@
 <a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_javadoccomment">	 * Used for local caching to speed up getting frequently needed service</em>
 <a class="jxr_linenumber" name="66" href="#66">66</a>  <em class="jxr_javadoccomment">	 * providers. Calls to discover JavaSpace takes a lot of time.</em>
 <a class="jxr_linenumber" name="67" href="#67">67</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="68" href="#68">68</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/core/Cataloger.html">Cataloger</a> cataloger;
+<a class="jxr_linenumber" name="68" href="#68">68</a>  	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/core/provider/Cataloger.html">Cataloger</a> cataloger;
 <a class="jxr_linenumber" name="69" href="#69">69</a>  
 <a class="jxr_linenumber" name="70" href="#70">70</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> ProviderNameUtil providerNameUtil = <strong class="jxr_keyword">new</strong> <a href="../../sorcer/util/SorcerProviderNameUtil.html">SorcerProviderNameUtil</a>();
 <a class="jxr_linenumber" name="71" href="#71">71</a>  
@@ -176,7 +176,7 @@
 <a class="jxr_linenumber" name="166" href="#166">166</a> <em class="jxr_javadoccomment">	 *            attribute set to match</em>
 <a class="jxr_linenumber" name="167" href="#167">167</a> <em class="jxr_javadoccomment">	 * @return a SORCER provider</em>
 <a class="jxr_linenumber" name="168" href="#168">168</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="169" href="#169">169</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/core/Provider.html">Provider</a> getProvider(Entry[] attributes) {
+<a class="jxr_linenumber" name="169" href="#169">169</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/core/provider/Provider.html">Provider</a> getProvider(Entry[] attributes) {
 <a class="jxr_linenumber" name="170" href="#170">170</a> 		<strong class="jxr_keyword">return</strong> (Provider) getService(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>, attributes, SorcerEnv.getLookupGroups());
 <a class="jxr_linenumber" name="171" href="#171">171</a> 	}
 <a class="jxr_linenumber" name="172" href="#172">172</a> 
@@ -188,7 +188,7 @@
 <a class="jxr_linenumber" name="178" href="#178">178</a> <em class="jxr_javadoccomment">	 *            a set of service types to match</em>
 <a class="jxr_linenumber" name="179" href="#179">179</a> <em class="jxr_javadoccomment">	 * @return a SORCER provider</em>
 <a class="jxr_linenumber" name="180" href="#180">180</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="181" href="#181">181</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/core/Provider.html">Provider</a> getProvider(Class[] serviceTypes) {
+<a class="jxr_linenumber" name="181" href="#181">181</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/core/provider/Provider.html">Provider</a> getProvider(Class[] serviceTypes) {
 <a class="jxr_linenumber" name="182" href="#182">182</a> 		<strong class="jxr_keyword">return</strong> (Provider) getService(<strong class="jxr_keyword">null</strong>, serviceTypes, <strong class="jxr_keyword">null</strong>, SorcerEnv.getLookupGroups());
 <a class="jxr_linenumber" name="183" href="#183">183</a> 	}
 <a class="jxr_linenumber" name="184" href="#184">184</a> 
@@ -200,7 +200,7 @@
 <a class="jxr_linenumber" name="190" href="#190">190</a> <em class="jxr_javadoccomment">	 * @return a Cataloger service proxy</em>
 <a class="jxr_linenumber" name="191" href="#191">191</a> <em class="jxr_javadoccomment">     * @see sorcer.core.Cataloger</em>
 <a class="jxr_linenumber" name="192" href="#192">192</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="193" href="#193">193</a> 	<strong class="jxr_keyword">protected</strong> <a href="../../sorcer/core/Cataloger.html">Cataloger</a> getCataloger() {
+<a class="jxr_linenumber" name="193" href="#193">193</a> 	<strong class="jxr_keyword">protected</strong> <a href="../../sorcer/core/provider/Cataloger.html">Cataloger</a> getCataloger() {
 <a class="jxr_linenumber" name="194" href="#194">194</a>         <strong class="jxr_keyword">return</strong> getCataloger(providerNameUtil.getName(Cataloger.<strong class="jxr_keyword">class</strong>)) ;
 <a class="jxr_linenumber" name="195" href="#195">195</a> 	}
 <a class="jxr_linenumber" name="196" href="#196">196</a> 
@@ -209,10 +209,10 @@
 <a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">	 *</em>
 <a class="jxr_linenumber" name="200" href="#200">200</a> <em class="jxr_javadoccomment">	 * @return a SORCER Cataloger</em>
 <a class="jxr_linenumber" name="201" href="#201">201</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="202" href="#202">202</a>     <strong class="jxr_keyword">protected</strong> <a href="../../sorcer/core/Cataloger.html">Cataloger</a> getCataloger(String serviceName) {
+<a class="jxr_linenumber" name="202" href="#202">202</a>     <strong class="jxr_keyword">protected</strong> <a href="../../sorcer/core/provider/Cataloger.html">Cataloger</a> getCataloger(String serviceName) {
 <a class="jxr_linenumber" name="203" href="#203">203</a>         <strong class="jxr_keyword">boolean</strong> catIsOk;
 <a class="jxr_linenumber" name="204" href="#204">204</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="205" href="#205">205</a>             catIsOk = Providers.isAlive((Provider) cataloger);
+<a class="jxr_linenumber" name="205" href="#205">205</a>             catIsOk = Accessor.isAlive((Provider) cataloger);
 <a class="jxr_linenumber" name="206" href="#206">206</a>         } <strong class="jxr_keyword">catch</strong> (Exception ignored) {
 <a class="jxr_linenumber" name="207" href="#207">207</a> 			catIsOk = false;
 <a class="jxr_linenumber" name="208" href="#208">208</a> 		}
@@ -243,11 +243,11 @@
 <a class="jxr_linenumber" name="233" href="#233">233</a> <em class="jxr_javadoccomment">	 *            - service type of requested provider</em>
 <a class="jxr_linenumber" name="234" href="#234">234</a> <em class="jxr_javadoccomment">	 * @return a requested service or null if a Cataloger is not available</em>
 <a class="jxr_linenumber" name="235" href="#235">235</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="236" href="#236">236</a> 	<strong class="jxr_keyword">protected</strong> <a href="../../sorcer/core/Provider.html">Provider</a> lookup(String providerName, Class&lt;Provider&gt; primaryInterface) {
+<a class="jxr_linenumber" name="236" href="#236">236</a> 	<strong class="jxr_keyword">protected</strong> <a href="../../sorcer/core/provider/Provider.html">Provider</a> lookup(String providerName, Class&lt;Provider&gt; primaryInterface) {
 <a class="jxr_linenumber" name="237" href="#237">237</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="238" href="#238">238</a> 			<em class="jxr_comment">// check if the cataloger is alive then return a reqested service</em>
 <a class="jxr_linenumber" name="239" href="#239">239</a> 			<em class="jxr_comment">// provider</em>
-<a class="jxr_linenumber" name="240" href="#240">240</a> 			<strong class="jxr_keyword">if</strong> (Providers.isAlive((Provider) cataloger))
+<a class="jxr_linenumber" name="240" href="#240">240</a> 			<strong class="jxr_keyword">if</strong> (Accessor.isAlive((Provider) cataloger))
 <a class="jxr_linenumber" name="241" href="#241">241</a> 				<strong class="jxr_keyword">return</strong> cataloger.lookup(providerName, primaryInterface);
 <a class="jxr_linenumber" name="242" href="#242">242</a> 			<strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="243" href="#243">243</a> 				<em class="jxr_comment">// try to get a new cataloger and lookup again</em>
@@ -272,7 +272,7 @@
 <a class="jxr_linenumber" name="262" href="#262">262</a>     <strong class="jxr_keyword">public</strong> ServiceItem[] getServiceItems(ServiceTemplate template, <strong class="jxr_keyword">int</strong> minMatches, <strong class="jxr_keyword">int</strong> maxMatches, ServiceItemFilter filter, String[] groups) {
 <a class="jxr_linenumber" name="263" href="#263">263</a>         assert filter != <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="264" href="#264">264</a>         <strong class="jxr_keyword">if</strong>(!Arrays.asList(template.serviceTypes).contains(Cataloger.<strong class="jxr_keyword">class</strong>)){
-<a class="jxr_linenumber" name="265" href="#265">265</a>             <a href="../../sorcer/core/Cataloger.html">Cataloger</a> cataloger = getCataloger();
+<a class="jxr_linenumber" name="265" href="#265">265</a>             <a href="../../sorcer/core/provider/Cataloger.html">Cataloger</a> cataloger = getCataloger();
 <a class="jxr_linenumber" name="266" href="#266">266</a>             <strong class="jxr_keyword">if</strong> (cataloger != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="267" href="#267">267</a>                 <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="268" href="#268">268</a>                     ServiceMatches matches = cataloger.lookup(template, maxMatches);

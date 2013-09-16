@@ -40,7 +40,7 @@
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <em class="jxr_javadoccomment"> * @author Rafał Krupiński</em>
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../sorcer/service/ExertionExecutor.html">ExertionExecutor</a> {
-<a class="jxr_linenumber" name="33" href="#33">33</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object exec(Exertion exertion, Parameter... entries)
+<a class="jxr_linenumber" name="33" href="#33">33</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object exec(Exertion exertion, Arg... entries)
 <a class="jxr_linenumber" name="34" href="#34">34</a>              <strong class="jxr_keyword">throws</strong> ExertionException, ContextException {
 <a class="jxr_linenumber" name="35" href="#35">35</a>          Exertion xrt;
 <a class="jxr_linenumber" name="36" href="#36">36</a>          <strong class="jxr_keyword">try</strong> {
@@ -75,7 +75,7 @@
 <a class="jxr_linenumber" name="65" href="#65">65</a>      }
 <a class="jxr_linenumber" name="66" href="#66">66</a>  
 <a class="jxr_linenumber" name="67" href="#67">67</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> &lt;T <strong class="jxr_keyword">extends</strong> Exertion&gt; T exert(T input,
-<a class="jxr_linenumber" name="68" href="#68">68</a>                                                 Transaction transaction, Parameter... entries)
+<a class="jxr_linenumber" name="68" href="#68">68</a>                                                 Transaction transaction, Arg... entries)
 <a class="jxr_linenumber" name="69" href="#69">69</a>              <strong class="jxr_keyword">throws</strong> ExertionException {
 <a class="jxr_linenumber" name="70" href="#70">70</a>          <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="71" href="#71">71</a>              <a href="../../sorcer/util/ExertProcessor.html">ExertProcessor</a> esh = <strong class="jxr_keyword">new</strong> <a href="../../sorcer/util/ExertProcessor.html">ExertProcessor</a>(input);
@@ -92,11 +92,11 @@
 <a class="jxr_linenumber" name="82" href="#82">82</a>      }
 <a class="jxr_linenumber" name="83" href="#83">83</a>  
 <a class="jxr_linenumber" name="84" href="#84">84</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Exertion exertOpenTask(Exertion exertion,
-<a class="jxr_linenumber" name="85" href="#85">85</a>                                           Parameter... entries) <strong class="jxr_keyword">throws</strong> ExertionException {
+<a class="jxr_linenumber" name="85" href="#85">85</a>                                           Arg... entries) <strong class="jxr_keyword">throws</strong> ExertionException {
 <a class="jxr_linenumber" name="86" href="#86">86</a>          Exertion closedTask = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="87" href="#87">87</a>          List&lt;Parameter&gt; params = Arrays.asList(entries);
+<a class="jxr_linenumber" name="87" href="#87">87</a>          List&lt;Arg&gt; params = Arrays.asList(entries);
 <a class="jxr_linenumber" name="88" href="#88">88</a>          List&lt;Object&gt; items = <strong class="jxr_keyword">new</strong> ArrayList&lt;Object&gt;();
-<a class="jxr_linenumber" name="89" href="#89">89</a>          <strong class="jxr_keyword">for</strong> (Parameter param : params) {
+<a class="jxr_linenumber" name="89" href="#89">89</a>          <strong class="jxr_keyword">for</strong> (Arg param : params) {
 <a class="jxr_linenumber" name="90" href="#90">90</a>              <strong class="jxr_keyword">if</strong> (param instanceof ControlContext
 <a class="jxr_linenumber" name="91" href="#91">91</a>                      &amp;&amp; ((ControlContext) param).getSignatures().size() &gt; 0) {
 <a class="jxr_linenumber" name="92" href="#92">92</a>                  List&lt;Signature&gt; sigs = ((ControlContext) param).getSignatures();

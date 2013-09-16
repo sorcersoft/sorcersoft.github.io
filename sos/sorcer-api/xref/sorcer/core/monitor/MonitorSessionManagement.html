@@ -30,7 +30,7 @@
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> net.jini.core.lease.Lease;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> net.jini.core.transaction.server.TransactionConstants;
 <a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> net.jini.id.Uuid;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Monitorable;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Monitorable;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Context;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.MonitorException;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
@@ -85,7 +85,7 @@
 <a class="jxr_linenumber" name="75" href="#75">75</a>  <em class="jxr_javadoccomment">	 * @see TransactionConstants</em>
 <a class="jxr_linenumber" name="76" href="#76">76</a>  <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="77" href="#77">77</a>  
-<a class="jxr_linenumber" name="78" href="#78">78</a>  	<strong class="jxr_keyword">public</strong> Lease init(Uuid cookie, <a href="../../../sorcer/core/Monitorable.html">Monitorable</a> mntrbl, <strong class="jxr_keyword">long</strong> duration,
+<a class="jxr_linenumber" name="78" href="#78">78</a>  	<strong class="jxr_keyword">public</strong> Lease init(Uuid cookie, <a href="../../../sorcer/service/Monitorable.html">Monitorable</a> mntrbl, <strong class="jxr_keyword">long</strong> duration,
 <a class="jxr_linenumber" name="79" href="#79">79</a>  			<strong class="jxr_keyword">long</strong> timeout) <strong class="jxr_keyword">throws</strong> RemoteException, MonitorException;
 <a class="jxr_linenumber" name="80" href="#80">80</a>  
 <a class="jxr_linenumber" name="81" href="#81">81</a>  	<em class="jxr_javadoccomment">/**</em>
@@ -142,7 +142,7 @@
 <a class="jxr_linenumber" name="132" href="#132">132</a> <em class="jxr_javadoccomment">	 * </em>
 <a class="jxr_linenumber" name="133" href="#133">133</a> <em class="jxr_javadoccomment">	 * */</em>
 <a class="jxr_linenumber" name="134" href="#134">134</a> 
-<a class="jxr_linenumber" name="135" href="#135">135</a> 	<strong class="jxr_keyword">public</strong> Lease init(Uuid cookie, <a href="../../../sorcer/core/Monitorable.html">Monitorable</a> mntrbl) <strong class="jxr_keyword">throws</strong> RemoteException,
+<a class="jxr_linenumber" name="135" href="#135">135</a> 	<strong class="jxr_keyword">public</strong> Lease init(Uuid cookie, <a href="../../../sorcer/service/Monitorable.html">Monitorable</a> mntrbl) <strong class="jxr_keyword">throws</strong> RemoteException,
 <a class="jxr_linenumber" name="136" href="#136">136</a> 			MonitorException;
 <a class="jxr_linenumber" name="137" href="#137">137</a> 
 <a class="jxr_linenumber" name="138" href="#138">138</a> 	<em class="jxr_javadoccomment">/**</em>

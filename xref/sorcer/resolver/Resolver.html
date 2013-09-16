@@ -160,26 +160,28 @@
 <a class="jxr_linenumber" name="150" href="#150">150</a> 			artifactId = simpleName;
 <a class="jxr_linenumber" name="151" href="#151">151</a> 			packaging = <span class="jxr_string">"jar"</span>;
 <a class="jxr_linenumber" name="152" href="#152">152</a> 		}
-<a class="jxr_linenumber" name="153" href="#153">153</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> File(resolver.getRootDir(), resolver.resolveSimpleName(artifactId, packaging));
-<a class="jxr_linenumber" name="154" href="#154">154</a> 	}
-<a class="jxr_linenumber" name="155" href="#155">155</a> 
-<a class="jxr_linenumber" name="156" href="#156">156</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getRootDir() {
-<a class="jxr_linenumber" name="157" href="#157">157</a>         <strong class="jxr_keyword">return</strong> resolver.getRootDir();
-<a class="jxr_linenumber" name="158" href="#158">158</a>     }
-<a class="jxr_linenumber" name="159" href="#159">159</a> 
-<a class="jxr_linenumber" name="160" href="#160">160</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getRepoDir() {
-<a class="jxr_linenumber" name="161" href="#161">161</a>         <strong class="jxr_keyword">return</strong> resolver.getRepoDir();
-<a class="jxr_linenumber" name="162" href="#162">162</a>     }
-<a class="jxr_linenumber" name="163" href="#163">163</a> 
-<a class="jxr_linenumber" name="164" href="#164">164</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> isMaven() {
-<a class="jxr_linenumber" name="165" href="#165">165</a>         <strong class="jxr_keyword">return</strong> (resolver instanceof RepositoryArtifactResolver);
-<a class="jxr_linenumber" name="166" href="#166">166</a>     }
-<a class="jxr_linenumber" name="167" href="#167">167</a> 
-<a class="jxr_linenumber" name="168" href="#168">168</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/resolver/ArtifactResolver.html">ArtifactResolver</a> getResolver() {
-<a class="jxr_linenumber" name="169" href="#169">169</a>         <strong class="jxr_keyword">return</strong> resolver;
-<a class="jxr_linenumber" name="170" href="#170">170</a>     }
-<a class="jxr_linenumber" name="171" href="#171">171</a> 
-<a class="jxr_linenumber" name="172" href="#172">172</a> }
+<a class="jxr_linenumber" name="153" href="#153">153</a>         String relPath = resolver.resolveSimpleName(artifactId, packaging);
+<a class="jxr_linenumber" name="154" href="#154">154</a>         <strong class="jxr_keyword">if</strong> (relPath == <strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="155" href="#155">155</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> File(resolver.getRootDir(), relPath);
+<a class="jxr_linenumber" name="156" href="#156">156</a> 	}
+<a class="jxr_linenumber" name="157" href="#157">157</a> 
+<a class="jxr_linenumber" name="158" href="#158">158</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getRootDir() {
+<a class="jxr_linenumber" name="159" href="#159">159</a>         <strong class="jxr_keyword">return</strong> resolver.getRootDir();
+<a class="jxr_linenumber" name="160" href="#160">160</a>     }
+<a class="jxr_linenumber" name="161" href="#161">161</a> 
+<a class="jxr_linenumber" name="162" href="#162">162</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getRepoDir() {
+<a class="jxr_linenumber" name="163" href="#163">163</a>         <strong class="jxr_keyword">return</strong> resolver.getRepoDir();
+<a class="jxr_linenumber" name="164" href="#164">164</a>     }
+<a class="jxr_linenumber" name="165" href="#165">165</a> 
+<a class="jxr_linenumber" name="166" href="#166">166</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> isMaven() {
+<a class="jxr_linenumber" name="167" href="#167">167</a>         <strong class="jxr_keyword">return</strong> (resolver instanceof RepositoryArtifactResolver);
+<a class="jxr_linenumber" name="168" href="#168">168</a>     }
+<a class="jxr_linenumber" name="169" href="#169">169</a> 
+<a class="jxr_linenumber" name="170" href="#170">170</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/resolver/ArtifactResolver.html">ArtifactResolver</a> getResolver() {
+<a class="jxr_linenumber" name="171" href="#171">171</a>         <strong class="jxr_keyword">return</strong> resolver;
+<a class="jxr_linenumber" name="172" href="#172">172</a>     }
+<a class="jxr_linenumber" name="173" href="#173">173</a> 
+<a class="jxr_linenumber" name="174" href="#174">174</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

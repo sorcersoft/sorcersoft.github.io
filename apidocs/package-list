@@ -6,7 +6,7 @@ sorcer.co.tuple
 sorcer.com.sun.jini.start
 sorcer.core
 sorcer.core.context
-sorcer.core.context.eval
+sorcer.core.context.node
 sorcer.core.dispatch
 sorcer.core.exertion
 sorcer.core.invoker
@@ -27,14 +27,13 @@ sorcer.core.provider.exertmonitor.lease
 sorcer.core.provider.jobber
 sorcer.core.provider.logger
 sorcer.core.provider.logger.ui
-sorcer.core.provider.proxy
 sorcer.core.provider.ui
+sorcer.core.provider.util
+sorcer.core.proxy
 sorcer.core.requestor
 sorcer.core.signature
 sorcer.eo
 sorcer.ex0
-sorcer.falcon.base
-sorcer.falcon.core.exertion
 sorcer.installer
 sorcer.jini.jeri
 sorcer.jini.lookup
@@ -44,11 +43,12 @@ sorcer.maven.plugin
 sorcer.maven.util
 sorcer.netlet
 sorcer.netlet.util
-sorcer.org.rioproject.net
 sorcer.platform
 sorcer.protocol
 sorcer.provider.boot
 sorcer.resolver
+sorcer.rio.cli
+sorcer.rio.util
 sorcer.river
 sorcer.security.sign
 sorcer.security.ui
@@ -73,7 +73,6 @@ sorcer.ui.exertlet
 sorcer.ui.serviceui
 sorcer.ui.util
 sorcer.util
-sorcer.util.bdb
 sorcer.util.bdb.objects
 sorcer.util.bdb.sdb
 sorcer.util.dbac

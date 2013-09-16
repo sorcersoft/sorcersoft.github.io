@@ -8,23 +8,23 @@
 <body>
 <div id="overview"><a href="../../../apidocs/sorcer/service/Invocation.html">View Javadoc</a></div><pre>
 
-<a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_javadoccomment"> * Copyright 2013 the original author or authors.</em>
-<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_javadoccomment"> * Copyright 2013 Sorcersoft.com S.A.</em>
-<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_javadoccomment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_javadoccomment"> * you may not use this file except in compliance with the License.</em>
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_javadoccomment"> * You may obtain a copy of the License at</em>
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_javadoccomment"> *      <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_javadoccomment"> * Unless required by applicable law or agreed to in writing, software</em>
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_javadoccomment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_javadoccomment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_javadoccomment"> * See the License for the specific language governing permissions and</em>
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_javadoccomment"> * limitations under the License.</em>
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * Copyright 2013 the original author or authors.</em>
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_comment"> * Copyright 2013 SorcerSoft.org.</em>
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_comment"> *  </em>
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_comment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_comment"> * you may not use this file except in compliance with the License.</em>
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_comment"> * You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_comment"> *      <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_comment"> * See the License for the specific language governing permissions and</em>
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_comment"> * limitations under the License.</em>
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="17" href="#17">17</a>  
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> sorcer.service;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
@@ -33,14 +33,14 @@
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <em class="jxr_javadoccomment"> * The Invocation interface defines context driven invocations on a service context</em>
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <em class="jxr_javadoccomment"> * containing its parameters (paths) and arguments (values). The requested</em>
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <em class="jxr_javadoccomment"> * invocation is specified by the array of contexts.</em>
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <em class="jxr_javadoccomment"> * The semantics for how parameters can be declared and how the arguments get</em>
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <em class="jxr_javadoccomment"> * passed to the parameters of callable unit are defined by the language, but</em>
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <em class="jxr_javadoccomment"> * the details of how this is represented in any particular computing system</em>
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <em class="jxr_javadoccomment"> * depend on the calling conventions of that system. A context-driven computing</em>
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> * system defines callable unit called invokers used within a scope of service</em>
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> * contexts, data structures defined in SORCER.</em>
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_javadoccomment"> * A service context is dictionary (associative array) composed of a collection</em>
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <em class="jxr_javadoccomment"> * of (key, value) pairs, such that each possible key appears at most once in</em>
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <em class="jxr_javadoccomment"> * the collection. Keys are considered as parameters and values as arguments of</em>
@@ -56,19 +56,27 @@
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment"> * calculated by corresponding invokers. Thus, requesting a value for a path in</em>
 <a class="jxr_linenumber" name="47" href="#47">47</a>  <em class="jxr_javadoccomment"> * a context is a computation defined by a invoker composition within the scope</em>
 <a class="jxr_linenumber" name="48" href="#48">48</a>  <em class="jxr_javadoccomment"> * of the context.</em>
-<a class="jxr_linenumber" name="49" href="#49">49</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="50" href="#50">50</a>  <em class="jxr_javadoccomment"> * @author Mike Sobolewski</em>
 <a class="jxr_linenumber" name="51" href="#51">51</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="52" href="#52">52</a>  @SuppressWarnings(<span class="jxr_string">"rawtypes"</span>)
 <a class="jxr_linenumber" name="53" href="#53">53</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">interface</strong> Invocation&lt;T&gt; {
 <a class="jxr_linenumber" name="54" href="#54">54</a>  
-<a class="jxr_linenumber" name="55" href="#55">55</a>  	<strong class="jxr_keyword">public</strong> T invoke(Parameter... entries) <strong class="jxr_keyword">throws</strong> RemoteException,
-<a class="jxr_linenumber" name="56" href="#56">56</a>  		EvaluationException;
-<a class="jxr_linenumber" name="57" href="#57">57</a>  	
-<a class="jxr_linenumber" name="58" href="#58">58</a>  	<strong class="jxr_keyword">public</strong> T invoke(<a href="../../sorcer/service/Context.html">Context</a> context, Parameter... entries) <strong class="jxr_keyword">throws</strong> RemoteException,
-<a class="jxr_linenumber" name="59" href="#59">59</a>  			EvaluationException;
-<a class="jxr_linenumber" name="60" href="#60">60</a>  	
-<a class="jxr_linenumber" name="61" href="#61">61</a>  }
+<a class="jxr_linenumber" name="55" href="#55">55</a>      <strong class="jxr_keyword">public</strong> T invoke(Arg... entries) <strong class="jxr_keyword">throws</strong> RemoteException,
+<a class="jxr_linenumber" name="56" href="#56">56</a>              InvocationException;
+<a class="jxr_linenumber" name="57" href="#57">57</a>  
+<a class="jxr_linenumber" name="58" href="#58">58</a>      <strong class="jxr_keyword">public</strong> T invoke(<a href="../../sorcer/service/Context.html">Context</a> context, Arg... entries)
+<a class="jxr_linenumber" name="59" href="#59">59</a>              <strong class="jxr_keyword">throws</strong> RemoteException, InvocationException;
+<a class="jxr_linenumber" name="60" href="#60">60</a>  
+<a class="jxr_linenumber" name="61" href="#61">61</a>  <em class="jxr_comment">//	</em><em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="62" href="#62">62</a>  <em class="jxr_javadoccomment">//	 * @param path</em>
+<a class="jxr_linenumber" name="63" href="#63">63</a>  <em class="jxr_javadoccomment">//	 * @param defaultValue</em>
+<a class="jxr_linenumber" name="64" href="#64">64</a>  <em class="jxr_javadoccomment">//	 * @return</em>
+<a class="jxr_linenumber" name="65" href="#65">65</a>  <em class="jxr_javadoccomment">//	 * @throws ContextException</em>
+<a class="jxr_linenumber" name="66" href="#66">66</a>  <em class="jxr_javadoccomment">//	 */</em>
+<a class="jxr_linenumber" name="67" href="#67">67</a>  <em class="jxr_comment">//	T getValue(String path, T defaultValue) throws ContextException;</em>
+<a class="jxr_linenumber" name="68" href="#68">68</a>  
+<a class="jxr_linenumber" name="69" href="#69">69</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> javax.swing.tree.TreePath;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  
 <a class="jxr_linenumber" name="39" href="#39">39</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.eval.ContextGroovyObject;
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.eval.ContextNode;
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.node.ContextNode;
 <a class="jxr_linenumber" name="41" href="#41">41</a>  
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment"> * This class is used for the edit window displayed when a path or data node is</em>
@@ -257,7 +257,7 @@
 <a class="jxr_linenumber" name="247" href="#247">247</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Boolean"</span>))
 <a class="jxr_linenumber" name="248" href="#248">248</a> 					value = <strong class="jxr_keyword">new</strong> Boolean(editField.getText());
 <a class="jxr_linenumber" name="249" href="#249">249</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Groovy"</span>)) {
-<a class="jxr_linenumber" name="250" href="#250">250</a> 					value = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/eval/ContextNode.html">ContextNode</a>(editField.getText(),
+<a class="jxr_linenumber" name="250" href="#250">250</a> 					value = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/node/ContextNode.html">ContextNode</a>(editField.getText(),
 <a class="jxr_linenumber" name="251" href="#251">251</a> 							<strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/eval/ContextGroovyObject.html">ContextGroovyObject</a>(editField.getText()));
 <a class="jxr_linenumber" name="252" href="#252">252</a> 				}
 <a class="jxr_linenumber" name="253" href="#253">253</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Float"</span>))
@@ -265,7 +265,7 @@
 <a class="jxr_linenumber" name="255" href="#255">255</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"Double"</span>))
 <a class="jxr_linenumber" name="256" href="#256">256</a> 					value = <strong class="jxr_keyword">new</strong> Double(editField.getText());
 <a class="jxr_linenumber" name="257" href="#257">257</a> 				<strong class="jxr_keyword">if</strong> (dType.equals(<span class="jxr_string">"URL"</span>))
-<a class="jxr_linenumber" name="258" href="#258">258</a> 					value = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/eval/ContextNode.html">ContextNode</a>(editField.getText(), <strong class="jxr_keyword">new</strong> URL(
+<a class="jxr_linenumber" name="258" href="#258">258</a> 					value = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/node/ContextNode.html">ContextNode</a>(editField.getText(), <strong class="jxr_keyword">new</strong> URL(
 <a class="jxr_linenumber" name="259" href="#259">259</a> 							editField.getText()));
 <a class="jxr_linenumber" name="260" href="#260">260</a> 			} <strong class="jxr_keyword">catch</strong> (Exception e) {
 <a class="jxr_linenumber" name="261" href="#261">261</a> 				<em class="jxr_comment">// add some code to alert user they are not doing it right</em>

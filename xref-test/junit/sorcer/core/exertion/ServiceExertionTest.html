@@ -117,7 +117,7 @@
 <a class="jxr_linenumber" name="107" href="#107">107</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> exertJobTest() <strong class="jxr_keyword">throws</strong> ExertionException, ContextException {
 <a class="jxr_linenumber" name="108" href="#108">108</a> 		<em class="jxr_comment">// just get value from job's dataContext</em>
 <a class="jxr_linenumber" name="109" href="#109">109</a> 		logger.info(<span class="jxr_string">"eJob value @  t3/arg/x2 = "</span> + get(eJob, <span class="jxr_string">"j1/t3/arg/x2"</span>));
-<a class="jxr_linenumber" name="110" href="#110">110</a> 		assertEquals(Context.Value.NULL, get(eJob, <span class="jxr_string">"/j1/t3/arg/x2"</span>) );
+<a class="jxr_linenumber" name="110" href="#110">110</a> 		assertEquals(Context.none, get(eJob, <span class="jxr_string">"/j1/t3/arg/x2"</span>) );
 <a class="jxr_linenumber" name="111" href="#111">111</a> 		
 <a class="jxr_linenumber" name="112" href="#112">112</a> 		<em class="jxr_comment">// exert and then get the value from job's dataContext</em>
 <a class="jxr_linenumber" name="113" href="#113">113</a> 		eJob = exert(eJob);

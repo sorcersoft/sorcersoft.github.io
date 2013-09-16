@@ -41,8 +41,8 @@
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> javax.swing.event.ListSelectionEvent;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> javax.swing.event.ListSelectionListener;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Provider;
-<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.RemoteContextManagement;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.Provider;
+<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> sorcer.core.RemoteContextManagement;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ServiceContext;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> sorcer.core.exertion.NetTask;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">import</strong> sorcer.core.signature.NetSignature;
@@ -102,7 +102,7 @@
 <a class="jxr_linenumber" name="92" href="#92">92</a>  		<strong class="jxr_keyword">this</strong>.provider = (Provider)provider;
 <a class="jxr_linenumber" name="93" href="#93">93</a>  
 <a class="jxr_linenumber" name="94" href="#94">94</a>  		interfaceIgnoreList = <strong class="jxr_keyword">new</strong> String[6];
-<a class="jxr_linenumber" name="95" href="#95">95</a>  		interfaceIgnoreList[0] = <span class="jxr_string">"sorcer.core.Provider"</span>;
+<a class="jxr_linenumber" name="95" href="#95">95</a>  		interfaceIgnoreList[0] = <span class="jxr_string">"sorcer.core.provider.Provider"</span>;
 <a class="jxr_linenumber" name="96" href="#96">96</a>  		interfaceIgnoreList[1] = <span class="jxr_string">"sorcer.core.AdministratableProvider"</span>;
 <a class="jxr_linenumber" name="97" href="#97">97</a>  		interfaceIgnoreList[2] = <span class="jxr_string">"java.rmi.Remote"</span>;
 <a class="jxr_linenumber" name="98" href="#98">98</a>  		interfaceIgnoreList[3] = <span class="jxr_string">"net.jini.core.constraint.RemoteMethodControl"</span>;

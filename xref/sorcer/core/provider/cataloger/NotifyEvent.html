@@ -31,12 +31,12 @@
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> net.jini.core.event.*;
 <a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.rmi.*;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.core.Cataloger;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.Cataloger;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../sorcer/core/provider/cataloger/NotifyEvent.html">NotifyEvent</a> <strong class="jxr_keyword">extends</strong> RemoteEvent {
 <a class="jxr_linenumber" name="27" href="#27">27</a>      <strong class="jxr_keyword">private</strong> Hashtable services;
 <a class="jxr_linenumber" name="28" href="#28">28</a>      
-<a class="jxr_linenumber" name="29" href="#29">29</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/core/provider/cataloger/NotifyEvent.html">NotifyEvent</a>(<a href="../../../../sorcer/core/Cataloger.html">Cataloger</a> source, Hashtable services,<strong class="jxr_keyword">int</strong> eventID, <strong class="jxr_keyword">long</strong> seqNum,MarshalledObject handback) {
+<a class="jxr_linenumber" name="29" href="#29">29</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/core/provider/cataloger/NotifyEvent.html">NotifyEvent</a>(<a href="../../../../sorcer/core/provider/Cataloger.html">Cataloger</a> source, Hashtable services,<strong class="jxr_keyword">int</strong> eventID, <strong class="jxr_keyword">long</strong> seqNum,MarshalledObject handback) {
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">super</strong>(source,eventID,seqNum,handback);
 <a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">this</strong>.services = services;
 <a class="jxr_linenumber" name="32" href="#32">32</a>      }

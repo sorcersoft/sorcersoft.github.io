@@ -55,7 +55,7 @@
 <a class="jxr_linenumber" name="45" href="#45">45</a>  
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> net.jini.core.lookup.ServiceItem;
 <a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.logger.LogFilter;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.logger.RemoteLogger;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> sorcer.core.RemoteLogger;
 <a class="jxr_linenumber" name="49" href="#49">49</a>  
 <a class="jxr_linenumber" name="50" href="#50">50</a>  <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="51" href="#51">51</a>  <em class="jxr_javadoccomment"> * Component Service UI for the Logger Service</em>
@@ -78,7 +78,7 @@
 <a class="jxr_linenumber" name="68" href="#68">68</a>  	<strong class="jxr_keyword">private</strong> RandomAccessFile logFile;
 <a class="jxr_linenumber" name="69" href="#69">69</a>  	<strong class="jxr_keyword">private</strong> String selectedLevel = <span class="jxr_string">"ALL"</span>;
 <a class="jxr_linenumber" name="70" href="#70">70</a>  
-<a class="jxr_linenumber" name="71" href="#71">71</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../../sorcer/core/provider/logger/LogFilter.html">LogFilter</a> logFilter;
+<a class="jxr_linenumber" name="71" href="#71">71</a>  	<strong class="jxr_keyword">private</strong> LogFilter logFilter;
 <a class="jxr_linenumber" name="72" href="#72">72</a>  	<strong class="jxr_keyword">private</strong> List&lt;String&gt; lines = <strong class="jxr_keyword">new</strong> ArrayList&lt;String&gt;();
 <a class="jxr_linenumber" name="73" href="#73">73</a>  	<strong class="jxr_keyword">private</strong> List&lt;String&gt; filteredResults = <strong class="jxr_keyword">new</strong> ArrayList&lt;String&gt;();
 <a class="jxr_linenumber" name="74" href="#74">74</a>  
@@ -222,7 +222,7 @@
 <a class="jxr_linenumber" name="212" href="#212">212</a> 		<strong class="jxr_keyword">if</strong> (!filteredResults.isEmpty())
 <a class="jxr_linenumber" name="213" href="#213">213</a> 			clearFilteredResults();
 <a class="jxr_linenumber" name="214" href="#214">214</a> 
-<a class="jxr_linenumber" name="215" href="#215">215</a> 		logFilter = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/provider/logger/LogFilter.html">LogFilter</a>(lines);
+<a class="jxr_linenumber" name="215" href="#215">215</a> 		logFilter = <strong class="jxr_keyword">new</strong> LogFilter(lines);
 <a class="jxr_linenumber" name="216" href="#216">216</a> 		filteredResults = logFilter.textFilter(text, level);
 <a class="jxr_linenumber" name="217" href="#217">217</a> 
 <a class="jxr_linenumber" name="218" href="#218">218</a> 		logText.setText(<span class="jxr_string">""</span>);

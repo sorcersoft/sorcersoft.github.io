@@ -170,7 +170,7 @@
 <a class="jxr_linenumber" name="160" href="#160">160</a>             List&lt;String&gt; outpaths = cxt.getOutPaths();
 <a class="jxr_linenumber" name="161" href="#161">161</a>             logger.info(<span class="jxr_string">"outpaths: \n"</span> + outpaths);
 <a class="jxr_linenumber" name="162" href="#162">162</a> 
-<a class="jxr_linenumber" name="163" href="#163">163</a>             <strong class="jxr_keyword">double</strong> result;
+<a class="jxr_linenumber" name="163" href="#163">163</a>             <strong class="jxr_keyword">double</strong> result = 0.0d;
 <a class="jxr_linenumber" name="164" href="#164">164</a>             <strong class="jxr_keyword">if</strong> (selector.equals(ADD)) {
 <a class="jxr_linenumber" name="165" href="#165">165</a>                 result = 0;
 <a class="jxr_linenumber" name="166" href="#166">166</a>                 <strong class="jxr_keyword">for</strong> (Double value : inputs)
@@ -251,7 +251,7 @@
 <a class="jxr_linenumber" name="241" href="#241">241</a>             List&lt;String&gt; outpaths = cxt.getOutPaths();
 <a class="jxr_linenumber" name="242" href="#242">242</a>             <em class="jxr_comment">//logger.info("outpaths: \n" + outpaths);</em>
 <a class="jxr_linenumber" name="243" href="#243">243</a> 
-<a class="jxr_linenumber" name="244" href="#244">244</a>             <strong class="jxr_keyword">double</strong> result;
+<a class="jxr_linenumber" name="244" href="#244">244</a>             <strong class="jxr_keyword">double</strong> result = 0.0d;
 <a class="jxr_linenumber" name="245" href="#245">245</a>             <strong class="jxr_keyword">if</strong> (selector.equals(ADD)) {
 <a class="jxr_linenumber" name="246" href="#246">246</a>                 result = (Double)revalue(inputs.get(0));
 <a class="jxr_linenumber" name="247" href="#247">247</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
