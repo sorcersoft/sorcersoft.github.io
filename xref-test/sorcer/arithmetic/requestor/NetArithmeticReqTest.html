@@ -65,9 +65,9 @@
 <a class="jxr_linenumber" name="55" href="#55">55</a>                  + <span class="jxr_string">"/configs/sorcer.policy"</span>);
 <a class="jxr_linenumber" name="56" href="#56">56</a>          System.setSecurityManager(<strong class="jxr_keyword">new</strong> RMISecurityManager());
 <a class="jxr_linenumber" name="57" href="#57">57</a>          SorcerEnv.setCodeBaseByArtifacts(<strong class="jxr_keyword">new</strong> String[]{
-<a class="jxr_linenumber" name="58" href="#58">58</a>                  <span class="jxr_string">"org.sorcersoft.sorcer:sos-platform"</span>,
+<a class="jxr_linenumber" name="58" href="#58">58</a>                  <span class="jxr_string">"org.sorcersoft.sorcer:sorcer-api"</span>,
 <a class="jxr_linenumber" name="59" href="#59">59</a>                  <span class="jxr_string">"org.sorcersoft.sorcer:ex6-api"</span>});
-<a class="jxr_linenumber" name="60" href="#60">60</a>          System.setProperty(<span class="jxr_string">"java.protocol.handler.pkgs"</span>, <span class="jxr_string">"net.jini.url|sorcer.util.bdb.sos|org.rioproject.url"</span>);
+<a class="jxr_linenumber" name="60" href="#60">60</a>          System.setProperty(<span class="jxr_string">"java.protocol.handler.pkgs"</span>, <span class="jxr_string">"net.jini.url|sorcer.util.bdb|org.rioproject.url"</span>);
 <a class="jxr_linenumber" name="61" href="#61">61</a>          System.setProperty(<span class="jxr_string">"java.rmi.server.RMIClassLoaderSpi"</span>, <span class="jxr_string">"org.rioproject.rmi.ResolvingLoader"</span>);
 <a class="jxr_linenumber" name="62" href="#62">62</a>          System.out.println(<span class="jxr_string">"CLASSPATH :"</span> + System.getProperty(<span class="jxr_string">"java.class.path"</span>));
 <a class="jxr_linenumber" name="63" href="#63">63</a>      }

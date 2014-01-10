@@ -11,37 +11,37 @@
 <a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_comment">/*</em>
 <a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * Copyright 2010 the original author or authors.</em>
 <a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_comment"> * Copyright 2010 SorcerSoft.org.</em>
-<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_comment"> * Copyright 2013 Sorcersoft.com S.A.</em>
-<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_comment"> *</em>
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_comment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_comment"> * you may not use this file except in compliance with the License.</em>
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_comment"> * You may obtain a copy of the License at</em>
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_comment"> *</em>
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_comment"> *      <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_comment"> *</em>
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_comment"> * See the License for the specific language governing permissions and</em>
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_comment"> * limitations under the License.</em>
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_comment"> */</em>
-<a class="jxr_linenumber" name="18" href="#18">18</a>  
-<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">package</strong> sorcer.core.exertion;
-<a class="jxr_linenumber" name="20" href="#20">20</a>  
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.util.Date;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.util.Enumeration;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.util.Hashtable;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.util.List;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.util.Vector;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> net.jini.id.Uuid;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> net.jini.id.UuidFactory;
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.Contexts;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ControlContext;
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ServiceContext;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.core.signature.NetSignature;
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_comment"> *  </em>
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_comment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_comment"> * you may not use this file except in compliance with the License.</em>
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_comment"> * You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_comment"> *      <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_comment"> * See the License for the specific language governing permissions and</em>
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_comment"> * limitations under the License.</em>
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="17" href="#17">17</a>  
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> sorcer.core.exertion;
+<a class="jxr_linenumber" name="19" href="#19">19</a>  
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> java.util.Date;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.util.Enumeration;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.util.Hashtable;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.util.Vector;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> net.jini.id.Uuid;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> net.jini.id.UuidFactory;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerConstants;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.Contexts;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ControlContext;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ServiceContext;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.core.signature.NetSignature;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Conditional;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Context;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ExecState;
@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Flow;
 <a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Task;
 <a class="jxr_linenumber" name="45" href="#45">45</a>  
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/core/exertion/Jobs.html">Jobs</a> {
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/core/exertion/Jobs.html">Jobs</a> <strong class="jxr_keyword">implements</strong> SorcerConstants {
 <a class="jxr_linenumber" name="47" href="#47">47</a>  
 <a class="jxr_linenumber" name="48" href="#48">48</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/core/exertion/Jobs.html">Jobs</a>() {
 <a class="jxr_linenumber" name="49" href="#49">49</a>  		<em class="jxr_comment">// Utility class</em>
@@ -152,8 +152,8 @@
 <a class="jxr_linenumber" name="142" href="#142">142</a> 		<strong class="jxr_keyword">return</strong> exertions;
 <a class="jxr_linenumber" name="143" href="#143">143</a> 	}
 <a class="jxr_linenumber" name="144" href="#144">144</a> 
-<a class="jxr_linenumber" name="145" href="#145">145</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ControlContext getCC(Context sc) {
-<a class="jxr_linenumber" name="146" href="#146">146</a> 		ControlContext cc = <strong class="jxr_keyword">new</strong> ControlContext();
+<a class="jxr_linenumber" name="145" href="#145">145</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../sorcer/core/context/ControlContext.html">ControlContext</a> getCC(Context sc) {
+<a class="jxr_linenumber" name="146" href="#146">146</a> 		ControlContext cc = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/core/context/ControlContext.html">ControlContext</a>();
 <a class="jxr_linenumber" name="147" href="#147">147</a> 		<strong class="jxr_keyword">for</strong> (Enumeration e = ((Hashtable) sc).keys(); e.hasMoreElements();) {
 <a class="jxr_linenumber" name="148" href="#148">148</a> 			String key = (String) e.nextElement();
 <a class="jxr_linenumber" name="149" href="#149">149</a> 			cc.put(key, ((Hashtable) sc).get(key));
@@ -182,13 +182,13 @@
 <a class="jxr_linenumber" name="172" href="#172">172</a> 	}
 <a class="jxr_linenumber" name="173" href="#173">173</a> 
 <a class="jxr_linenumber" name="174" href="#174">174</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> removeExceptions(<a href="../../../sorcer/service/Job.html">Job</a> job) {
-<a class="jxr_linenumber" name="175" href="#175">175</a> 		removeExceptions(job.getDataContext());
+<a class="jxr_linenumber" name="175" href="#175">175</a> 		removeExceptions(job.getContext());
 <a class="jxr_linenumber" name="176" href="#176">176</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; job.size(); i++) {
-<a class="jxr_linenumber" name="177" href="#177">177</a> 			<strong class="jxr_keyword">if</strong> (job.exertionAt(i).isJob())
+<a class="jxr_linenumber" name="177" href="#177">177</a> 			<strong class="jxr_keyword">if</strong> (((ServiceExertion) job.exertionAt(i)).isJob())
 <a class="jxr_linenumber" name="178" href="#178">178</a> 				removeExceptions((Job) job.exertionAt(i));
 <a class="jxr_linenumber" name="179" href="#179">179</a> 			<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="180" href="#180">180</a> 				removeExceptions(job.exertionAt(i)
-<a class="jxr_linenumber" name="181" href="#181">181</a> 						.getDataContext());
+<a class="jxr_linenumber" name="180" href="#180">180</a> 				removeExceptions(((ServiceExertion) job.exertionAt(i))
+<a class="jxr_linenumber" name="181" href="#181">181</a> 						.getContext());
 <a class="jxr_linenumber" name="182" href="#182">182</a> 		}
 <a class="jxr_linenumber" name="183" href="#183">183</a> 	}
 <a class="jxr_linenumber" name="184" href="#184">184</a> 
@@ -207,10 +207,10 @@
 <a class="jxr_linenumber" name="197" href="#197">197</a> 
 <a class="jxr_linenumber" name="198" href="#198">198</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> preserveNodeReferences(Exertion ref, Exertion res)
 <a class="jxr_linenumber" name="199" href="#199">199</a> 			<strong class="jxr_keyword">throws</strong> ContextException {
-<a class="jxr_linenumber" name="200" href="#200">200</a> 		<strong class="jxr_keyword">if</strong> (ref.isJob() &amp;&amp; res.isJob())
+<a class="jxr_linenumber" name="200" href="#200">200</a> 		<strong class="jxr_keyword">if</strong> (((ServiceExertion) ref).isJob() &amp;&amp; ((ServiceExertion) res).isJob())
 <a class="jxr_linenumber" name="201" href="#201">201</a> 			preserveNodeReferences((Job) ref, (Job) res);
 <a class="jxr_linenumber" name="202" href="#202">202</a> 		<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="203" href="#203">203</a> 			preserveNodeReferences(ref, res);
+<a class="jxr_linenumber" name="203" href="#203">203</a> 			preserveNodeReferences((ServiceExertion) ref, (ServiceExertion) res);
 <a class="jxr_linenumber" name="204" href="#204">204</a> 	}
 <a class="jxr_linenumber" name="205" href="#205">205</a> 
 <a class="jxr_linenumber" name="206" href="#206">206</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> preserveNodeReferences(<a href="../../../sorcer/service/Job.html">Job</a> refJob,
@@ -218,15 +218,15 @@
 <a class="jxr_linenumber" name="208" href="#208">208</a> 		<strong class="jxr_keyword">int</strong> size = (refJob.size() &lt; resJob.size()) ? refJob.size() : resJob
 <a class="jxr_linenumber" name="209" href="#209">209</a> 				.size();
 <a class="jxr_linenumber" name="210" href="#210">210</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; size; i++) {
-<a class="jxr_linenumber" name="211" href="#211">211</a> 			<strong class="jxr_keyword">if</strong> (refJob.exertionAt(i).isJob()
-<a class="jxr_linenumber" name="212" href="#212">212</a> 					&amp;&amp; resJob.exertionAt(i).isJob())
+<a class="jxr_linenumber" name="211" href="#211">211</a> 			<strong class="jxr_keyword">if</strong> (((ServiceExertion) refJob.exertionAt(i)).isJob()
+<a class="jxr_linenumber" name="212" href="#212">212</a> 					&amp;&amp; ((ServiceExertion) resJob.exertionAt(i)).isJob())
 <a class="jxr_linenumber" name="213" href="#213">213</a> 				preserveNodeReferences((Job) refJob.exertionAt(i),
 <a class="jxr_linenumber" name="214" href="#214">214</a> 						(<a href="../../../sorcer/service/Job.html">Job</a>) resJob.exertionAt(i));
-<a class="jxr_linenumber" name="215" href="#215">215</a> 			<strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (refJob.exertionAt(i).isTask()
-<a class="jxr_linenumber" name="216" href="#216">216</a> 					&amp;&amp; resJob.exertionAt(i).isTask())
-<a class="jxr_linenumber" name="217" href="#217">217</a> 				preserveNodeReferences(refJob.exertionAt(i)
-<a class="jxr_linenumber" name="218" href="#218">218</a> 						.getDataContext(), resJob.exertionAt(i)
-<a class="jxr_linenumber" name="219" href="#219">219</a> 						.getDataContext());
+<a class="jxr_linenumber" name="215" href="#215">215</a> 			<strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (((ServiceExertion) refJob.exertionAt(i)).isTask()
+<a class="jxr_linenumber" name="216" href="#216">216</a> 					&amp;&amp; ((ServiceExertion) resJob.exertionAt(i)).isTask())
+<a class="jxr_linenumber" name="217" href="#217">217</a> 				preserveNodeReferences(((ServiceExertion) refJob.exertionAt(i))
+<a class="jxr_linenumber" name="218" href="#218">218</a> 						.getContext(), ((ServiceExertion) resJob.exertionAt(i))
+<a class="jxr_linenumber" name="219" href="#219">219</a> 						.getContext());
 <a class="jxr_linenumber" name="220" href="#220">220</a> 		}
 <a class="jxr_linenumber" name="221" href="#221">221</a> 	}
 <a class="jxr_linenumber" name="222" href="#222">222</a> 
@@ -238,12 +238,12 @@
 <a class="jxr_linenumber" name="228" href="#228">228</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> replaceNullIDs(Exertion ex) {
 <a class="jxr_linenumber" name="229" href="#229">229</a> 		<strong class="jxr_keyword">if</strong> (ex == <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="230" href="#230">230</a> 			<strong class="jxr_keyword">return</strong>;
-<a class="jxr_linenumber" name="231" href="#231">231</a> 		<strong class="jxr_keyword">if</strong> (ex.isJob()) {
+<a class="jxr_linenumber" name="231" href="#231">231</a> 		<strong class="jxr_keyword">if</strong> (((ServiceExertion) ex).isJob()) {
 <a class="jxr_linenumber" name="232" href="#232">232</a> 			Job job = (Job) ex;
 <a class="jxr_linenumber" name="233" href="#233">233</a> 			<strong class="jxr_keyword">if</strong> (job.getId() == <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="234" href="#234">234</a> 				job.setId(getId());
-<a class="jxr_linenumber" name="235" href="#235">235</a> 			<strong class="jxr_keyword">if</strong> (job.getDataContext().getId() == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="236" href="#236">236</a> 				job.getDataContext().setId(getId());
+<a class="jxr_linenumber" name="235" href="#235">235</a> 			<strong class="jxr_keyword">if</strong> (job.getContext().getId() == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="236" href="#236">236</a> 				job.getContext().setId(getId());
 <a class="jxr_linenumber" name="237" href="#237">237</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; job.size(); i++)
 <a class="jxr_linenumber" name="238" href="#238">238</a> 				replaceNullIDs(job.exertionAt(i));
 <a class="jxr_linenumber" name="239" href="#239">239</a> 		} <strong class="jxr_keyword">else</strong>
@@ -253,9 +253,9 @@
 <a class="jxr_linenumber" name="243" href="#243">243</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> replaceNullIDs(<a href="../../../sorcer/service/ServiceExertion.html">ServiceExertion</a> task) {
 <a class="jxr_linenumber" name="244" href="#244">244</a> 		<strong class="jxr_keyword">if</strong> (task.getId() == <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="245" href="#245">245</a> 			task.setId(getId());
-<a class="jxr_linenumber" name="246" href="#246">246</a> 		<strong class="jxr_keyword">if</strong> (task.getDataContext() != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="247" href="#247">247</a> 			<strong class="jxr_keyword">if</strong> (task.getDataContext().getId() == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="248" href="#248">248</a> 				task.getDataContext().setId(getId());
+<a class="jxr_linenumber" name="246" href="#246">246</a> 		<strong class="jxr_keyword">if</strong> (task.getContext() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="247" href="#247">247</a> 			<strong class="jxr_keyword">if</strong> (task.getContext().getId() == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="248" href="#248">248</a> 				task.getContext().setId(getId());
 <a class="jxr_linenumber" name="249" href="#249">249</a> 		}
 <a class="jxr_linenumber" name="250" href="#250">250</a> 	}
 <a class="jxr_linenumber" name="251" href="#251">251</a> 
@@ -280,12 +280,12 @@
 <a class="jxr_linenumber" name="270" href="#270">270</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> ExertionException(<span class="jxr_string">"No Method For Exertion e="</span> + ex);
 <a class="jxr_linenumber" name="271" href="#271">271</a> 
 <a class="jxr_linenumber" name="272" href="#272">272</a> 		ExertionEnvelop eenv = ExertionEnvelop.getTemplate();
-<a class="jxr_linenumber" name="273" href="#273">273</a> 		eenv.serviceType = ex.getProcessSignature().getServiceType();
-<a class="jxr_linenumber" name="274" href="#274">274</a> 		eenv.providerName = ex.getProcessSignature().getProviderName();
+<a class="jxr_linenumber" name="273" href="#273">273</a> 		eenv.serviceType = ((NetSignature) ex.getProcessSignature()).getServiceType();
+<a class="jxr_linenumber" name="274" href="#274">274</a> 		eenv.providerName = ((NetSignature) ex.getProcessSignature()).getProviderName();
 <a class="jxr_linenumber" name="275" href="#275">275</a> 		eenv.exertion = ex;
-<a class="jxr_linenumber" name="276" href="#276">276</a> 		eenv.exertionID = ex.getId();
-<a class="jxr_linenumber" name="277" href="#277">277</a> 		eenv.isJob = ex.isJob();
-<a class="jxr_linenumber" name="278" href="#278">278</a> 		eenv.state = ExecState.INITIAL;
+<a class="jxr_linenumber" name="276" href="#276">276</a> 		eenv.exertionID = ((ServiceExertion)ex).getId();
+<a class="jxr_linenumber" name="277" href="#277">277</a> 		eenv.isJob = <strong class="jxr_keyword">new</strong> Boolean(((ServiceExertion) ex).isJob());
+<a class="jxr_linenumber" name="278" href="#278">278</a> 		eenv.state = <strong class="jxr_keyword">new</strong> Integer(ExecState.INITIAL);
 <a class="jxr_linenumber" name="279" href="#279">279</a> 		<strong class="jxr_keyword">return</strong> eenv;
 <a class="jxr_linenumber" name="280" href="#280">280</a> 	}
 <a class="jxr_linenumber" name="281" href="#281">281</a> 
@@ -302,7 +302,7 @@
 <a class="jxr_linenumber" name="292" href="#292">292</a> <em class="jxr_comment">//		else </em>
 <a class="jxr_linenumber" name="293" href="#293">293</a> 			<strong class="jxr_keyword">if</strong> (exertion instanceof Job) {
 <a class="jxr_linenumber" name="294" href="#294">294</a> 			contexts.add(exertion.getDataContext());
-<a class="jxr_linenumber" name="295" href="#295">295</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; exertion.getExertions().size(); i++)
+<a class="jxr_linenumber" name="295" href="#295">295</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; ((Job) exertion).getExertions().size(); i++)
 <a class="jxr_linenumber" name="296" href="#296">296</a> 				collectTaskContexts(((Job) exertion).exertionAt(i),
 <a class="jxr_linenumber" name="297" href="#297">297</a> 						contexts);
 <a class="jxr_linenumber" name="298" href="#298">298</a> 		}

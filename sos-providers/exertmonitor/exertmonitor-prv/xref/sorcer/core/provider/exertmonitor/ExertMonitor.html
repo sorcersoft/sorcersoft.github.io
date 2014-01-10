@@ -100,7 +100,7 @@
 <a class="jxr_linenumber" name="90" href="#90">90</a>  				}
 <a class="jxr_linenumber" name="91" href="#91">91</a>  			}
 <a class="jxr_linenumber" name="92" href="#92">92</a>  		}
-<a class="jxr_linenumber" name="93" href="#93">93</a>          System.out.println(<span class="jxr_string">"Opening BDBJE environment in: "</span> + dbHomeFile.getAbsolutePath());
+<a class="jxr_linenumber" name="93" href="#93">93</a>          logger.fine(<span class="jxr_string">"Opening BDBJE environment in: "</span> + dbHomeFile.getAbsolutePath());
 <a class="jxr_linenumber" name="94" href="#94">94</a>  		db = <strong class="jxr_keyword">new</strong> <a href="../../../../sorcer/core/provider/exertmonitor/db/SessionDatabase.html">SessionDatabase</a>(dbHome);
 <a class="jxr_linenumber" name="95" href="#95">95</a>  		SessionDatabaseViews views = <strong class="jxr_keyword">new</strong> <a href="../../../../sorcer/core/provider/exertmonitor/db/SessionDatabaseViews.html">SessionDatabaseViews</a>(db);
 <a class="jxr_linenumber" name="96" href="#96">96</a>  		resources = views.getSessionMap();
@@ -532,7 +532,7 @@
 <a class="jxr_linenumber" name="522" href="#522">522</a> 		Map.Entry&lt;UuidKey, IMonitorSession&gt; entry = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="523" href="#523">523</a> 		<strong class="jxr_keyword">while</strong> (mei.hasNext()) {
 <a class="jxr_linenumber" name="524" href="#524">524</a> 			entry = mei.next();
-<a class="jxr_linenumber" name="525" href="#525">525</a> 			System.out.println(<span class="jxr_string">"session cookie: "</span> + entry.getKey().getId()
+<a class="jxr_linenumber" name="525" href="#525">525</a> 			logger.fine(<span class="jxr_string">"session cookie: "</span> + entry.getKey().getId()
 <a class="jxr_linenumber" name="526" href="#526">526</a> 					+ <span class="jxr_string">":"</span> + entry.getValue().getInitialExertion().getName());
 <a class="jxr_linenumber" name="527" href="#527">527</a> 		}
 <a class="jxr_linenumber" name="528" href="#528">528</a> 	}

@@ -135,7 +135,7 @@
 <a class="jxr_linenumber" name="125" href="#125">125</a> 			rioHome = sorcerHome + <span class="jxr_string">"/lib/rio"</span>;
 <a class="jxr_linenumber" name="126" href="#126">126</a> 		}
 <a class="jxr_linenumber" name="127" href="#127">127</a> 		properties.put(RMI_SERVER_USE_CODEBASE_ONLY, <span class="jxr_string">"false"</span>);
-<a class="jxr_linenumber" name="128" href="#128">128</a> 		properties.put(PROTOCOL_HANDLER_PKGS, <span class="jxr_string">"net.jini.url|sorcer.util.bdb.sos"</span>);
+<a class="jxr_linenumber" name="128" href="#128">128</a> 		properties.put(PROTOCOL_HANDLER_PKGS, <span class="jxr_string">"net.jini.url|sorcer.util.bdb|org.rioproject.url"</span>);
 <a class="jxr_linenumber" name="129" href="#129">129</a> 		properties.put(SECURITY_POLICY, <strong class="jxr_keyword">new</strong> File(testOutputDir, <span class="jxr_string">"sorcer.policy"</span>).getPath());
 <a class="jxr_linenumber" name="130" href="#130">130</a>         properties.put(UTIL_LOGGING_CONFIG_FILE, <strong class="jxr_keyword">new</strong> File(sorcerHome, <span class="jxr_string">"configs/jini/scripts/services/logging.properties"</span>).getPath());
 <a class="jxr_linenumber" name="131" href="#131">131</a> 		properties.put(SorcerConstants.SORCER_HOME, sorcerHome);
@@ -153,7 +153,7 @@
 <a class="jxr_linenumber" name="143" href="#143">143</a> 
 <a class="jxr_linenumber" name="144" href="#144">144</a>         builder.setMainClass(mainClass);
 <a class="jxr_linenumber" name="145" href="#145">145</a> 		builder.setProperties(properties);
-<a class="jxr_linenumber" name="146" href="#146">146</a> 		builder.setParameters(Arrays.asList(ServiceStarter.SORCER_DEFAULT_CONFIG, servicesConfig.getPath()));
+<a class="jxr_linenumber" name="146" href="#146">146</a> 		builder.setParameters(Arrays.asList(ServiceStarter.SORCER_DEFAULT_CONFIG.getPath(), servicesConfig.getPath()));
 <a class="jxr_linenumber" name="147" href="#147">147</a> 		builder.setClassPath(ArtifactUtil.toString(artifacts));
 <a class="jxr_linenumber" name="148" href="#148">148</a> 		builder.setDebugger(debug);
 <a class="jxr_linenumber" name="149" href="#149">149</a> 		builder.setOutput(logFile);

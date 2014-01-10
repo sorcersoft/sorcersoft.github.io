@@ -172,8 +172,8 @@
 <a class="jxr_linenumber" name="162" href="#162">162</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/service/Exertion.html">Exertion</a> doJob(<a href="../../../../sorcer/service/Exertion.html">Exertion</a> job) {
 <a class="jxr_linenumber" name="163" href="#163">163</a>         setServiceID(job);
 <a class="jxr_linenumber" name="164" href="#164">164</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="165" href="#165">165</a>             <strong class="jxr_keyword">if</strong> (job.getControlContext().isMonitorable()
-<a class="jxr_linenumber" name="166" href="#166">166</a>                     &amp;&amp; !job.getControlContext().isWaitable()) {
+<a class="jxr_linenumber" name="165" href="#165">165</a>             <strong class="jxr_keyword">if</strong> (((ControlContext)job.getControlContext()).isMonitorable()
+<a class="jxr_linenumber" name="166" href="#166">166</a>                     &amp;&amp; !((ControlContext)job.getControlContext()).isWaitable()) {
 <a class="jxr_linenumber" name="167" href="#167">167</a>                 replaceNullExertionIDs(job);
 <a class="jxr_linenumber" name="168" href="#168">168</a>                 notifyViaEmail(job);
 <a class="jxr_linenumber" name="169" href="#169">169</a>                 <strong class="jxr_keyword">new</strong> <a href="../../../../sorcer/core/dispatch/JobThread.html">JobThread</a>((Job) job, <strong class="jxr_keyword">this</strong>).start();

@@ -43,7 +43,7 @@
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> * with the dataContext root &lt;code&gt;List&lt;/code&gt;;</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="35" href="#35">35</a>  @SuppressWarnings({ <span class="jxr_string">"serial"</span>, <span class="jxr_string">"unchecked"</span> })
-<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> SharedIndexedContext&lt;T <strong class="jxr_keyword">extends</strong> Object&gt; <strong class="jxr_keyword">extends</strong> ServiceContext <strong class="jxr_keyword">implements</strong> IndexedContext, <a href="../../../sorcer/service/SpaceContext.html">SpaceContext</a> {
+<a class="jxr_linenumber" name="36" href="#36">36</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> SharedIndexedContext&lt;T <strong class="jxr_keyword">extends</strong> Object&gt; <strong class="jxr_keyword">extends</strong> <a href="../../../sorcer/core/context/ServiceContext.html">ServiceContext</a> <strong class="jxr_keyword">implements</strong> IndexedContext, SpaceContext {
 <a class="jxr_linenumber" name="37" href="#37">37</a>  	<strong class="jxr_keyword">private</strong> List&lt;T&gt; elements = <strong class="jxr_keyword">new</strong> ArrayList&lt;T&gt;();
 <a class="jxr_linenumber" name="38" href="#38">38</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../sorcer/space/array/DistribArray05.html">DistribArray05</a> spaceElements;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">private</strong> String spaceName;

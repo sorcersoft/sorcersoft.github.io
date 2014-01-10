@@ -52,17 +52,17 @@
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment"> * A utility class that provides access to SORCER services and some</em>
 <a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment"> * infrastructure services. It extends the &lt;code&gt;ServiceAccessor&lt;/code&gt;</em>
 <a class="jxr_linenumber" name="44" href="#44">44</a>  <em class="jxr_javadoccomment"> * functionality.</em>
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment"> * The &lt;code&gt;getService&lt;/code&gt; methods directly use ServiceAccessor calls while</em>
 <a class="jxr_linenumber" name="47" href="#47">47</a>  <em class="jxr_javadoccomment"> * the &lt;code&gt;getService&lt;/code&gt; methods use a SORCER Cataloger's cached services</em>
 <a class="jxr_linenumber" name="48" href="#48">48</a>  <em class="jxr_javadoccomment"> * with round robin load balancing.</em>
-<a class="jxr_linenumber" name="49" href="#49">49</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="49" href="#49">49</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="50" href="#50">50</a>  <em class="jxr_javadoccomment"> * The individual SORCER services should be accessed using this utility since it</em>
 <a class="jxr_linenumber" name="51" href="#51">51</a>  <em class="jxr_javadoccomment"> * uses local cached proxies for frequently used SORCER infrastructure services,</em>
 <a class="jxr_linenumber" name="52" href="#52">52</a>  <em class="jxr_javadoccomment"> * for example: Cataloger, JavaSpace, Jobber. ProviderAccessor normally uses</em>
 <a class="jxr_linenumber" name="53" href="#53">53</a>  <em class="jxr_javadoccomment"> * Cataloger if available, otherwise it uses Jini lookup services as implemented</em>
 <a class="jxr_linenumber" name="54" href="#54">54</a>  <em class="jxr_javadoccomment"> * by &lt;code&gt;ServiceAccessor&lt;/code&gt;.</em>
-<a class="jxr_linenumber" name="55" href="#55">55</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="55" href="#55">55</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="56" href="#56">56</a>  <em class="jxr_javadoccomment"> * @see ServiceAccessor</em>
 <a class="jxr_linenumber" name="57" href="#57">57</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="58" href="#58">58</a>  
@@ -198,7 +198,7 @@
 <a class="jxr_linenumber" name="188" href="#188">188</a> <em class="jxr_javadoccomment">	 * This method searches for either a JINI or a RMI Cataloger service.</em>
 <a class="jxr_linenumber" name="189" href="#189">189</a> <em class="jxr_javadoccomment">	 *</em>
 <a class="jxr_linenumber" name="190" href="#190">190</a> <em class="jxr_javadoccomment">	 * @return a Cataloger service proxy</em>
-<a class="jxr_linenumber" name="191" href="#191">191</a> <em class="jxr_javadoccomment">     * @see sorcer.core.Cataloger</em>
+<a class="jxr_linenumber" name="191" href="#191">191</a> <em class="jxr_javadoccomment">     * @see sorcer.core.provider.Cataloger</em>
 <a class="jxr_linenumber" name="192" href="#192">192</a> <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="193" href="#193">193</a> 	<strong class="jxr_keyword">protected</strong> <a href="../../sorcer/core/provider/Cataloger.html">Cataloger</a> getCataloger() {
 <a class="jxr_linenumber" name="194" href="#194">194</a>         <strong class="jxr_keyword">return</strong> getCataloger(providerNameUtil.getName(Cataloger.<strong class="jxr_keyword">class</strong>)) ;
@@ -279,7 +279,7 @@
 <a class="jxr_linenumber" name="269" href="#269">269</a>                     ServiceItem[] matching = Filters.matching(matches.items, filter);
 <a class="jxr_linenumber" name="270" href="#270">270</a>                     <strong class="jxr_keyword">if</strong> (matching.length &gt; 0) <strong class="jxr_keyword">return</strong> matching;
 <a class="jxr_linenumber" name="271" href="#271">271</a>                 } <strong class="jxr_keyword">catch</strong> (RemoteException e) {
-<a class="jxr_linenumber" name="272" href="#272">272</a>                     logger.log(Level.SEVERE, <span class="jxr_string">"Could not contact Cataloger, falling back"</span>, e);
+<a class="jxr_linenumber" name="272" href="#272">272</a>                     logger.log(Level.SEVERE, <span class="jxr_string">"Problem with Cataloger, falling back"</span>, e);
 <a class="jxr_linenumber" name="273" href="#273">273</a>                 }
 <a class="jxr_linenumber" name="274" href="#274">274</a>             }
 <a class="jxr_linenumber" name="275" href="#275">275</a>         }

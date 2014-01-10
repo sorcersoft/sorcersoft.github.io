@@ -1406,36 +1406,39 @@
 <a class="jxr_linenumber" name="1396" href="#1396">1396</a> 	<strong class="jxr_keyword">public</strong> ServiceMatches lookup(ServiceTemplate tmpl, <strong class="jxr_keyword">int</strong> maxMatches)
 <a class="jxr_linenumber" name="1397" href="#1397">1397</a> 			<strong class="jxr_keyword">throws</strong> RemoteException {
 <a class="jxr_linenumber" name="1398" href="#1398">1398</a>         List&lt;ServiceItem&gt; result = <strong class="jxr_keyword">new</strong> LinkedList&lt;ServiceItem&gt;();
-<a class="jxr_linenumber" name="1399" href="#1399">1399</a>         <strong class="jxr_keyword">for</strong> (Map.Entry&lt;CatalogerInfo.InterfaceList, List&lt;ServiceItem&gt;&gt; entry : cinfo.entrySet()) {
-<a class="jxr_linenumber" name="1400" href="#1400">1400</a>             List&lt;ServiceItem&gt; serviceItems = entry.getValue();
-<a class="jxr_linenumber" name="1401" href="#1401">1401</a>             SRVITEM:
-<a class="jxr_linenumber" name="1402" href="#1402">1402</a>             <strong class="jxr_keyword">for</strong> (ServiceItem serviceItem : serviceItems) {
-<a class="jxr_linenumber" name="1403" href="#1403">1403</a>                 <strong class="jxr_keyword">if</strong> (tmpl.serviceID != <strong class="jxr_keyword">null</strong> &amp;&amp; tmpl.serviceID.equals(serviceItem.serviceID)) {
-<a class="jxr_linenumber" name="1404" href="#1404">1404</a>                     result.add(serviceItem);
-<a class="jxr_linenumber" name="1405" href="#1405">1405</a>                     <em class="jxr_comment">//serviceID is unique, stop on first matching service</em>
-<a class="jxr_linenumber" name="1406" href="#1406">1406</a>                     <strong class="jxr_keyword">break</strong>;
-<a class="jxr_linenumber" name="1407" href="#1407">1407</a>                 }
-<a class="jxr_linenumber" name="1408" href="#1408">1408</a> 
-<a class="jxr_linenumber" name="1409" href="#1409">1409</a>                 CatalogerInfo.InterfaceList interfaceList = entry.getKey();
-<a class="jxr_linenumber" name="1410" href="#1410">1410</a>                 <strong class="jxr_keyword">if</strong> (interfaceList.containsAll(Arrays.asList(tmpl.serviceTypes))) {
-<a class="jxr_linenumber" name="1411" href="#1411">1411</a>                     List&lt;Entry&gt; sItemEntryList = Arrays.asList(serviceItem.attributeSets);
-<a class="jxr_linenumber" name="1412" href="#1412">1412</a>                     <strong class="jxr_keyword">for</strong> (Entry attr : tmpl.attributeSetTemplates) {
-<a class="jxr_linenumber" name="1413" href="#1413">1413</a>                         <strong class="jxr_keyword">if</strong> (!sItemEntryList.contains(attr)) {
-<a class="jxr_linenumber" name="1414" href="#1414">1414</a>                             <strong class="jxr_keyword">continue</strong> SRVITEM;
-<a class="jxr_linenumber" name="1415" href="#1415">1415</a>                         }
-<a class="jxr_linenumber" name="1416" href="#1416">1416</a>                     }
-<a class="jxr_linenumber" name="1417" href="#1417">1417</a>                     result.add(serviceItem);
-<a class="jxr_linenumber" name="1418" href="#1418">1418</a>                     <strong class="jxr_keyword">if</strong> (result.size() &gt;= maxMatches) <strong class="jxr_keyword">break</strong>;
-<a class="jxr_linenumber" name="1419" href="#1419">1419</a>                 }
-<a class="jxr_linenumber" name="1420" href="#1420">1420</a>             }
-<a class="jxr_linenumber" name="1421" href="#1421">1421</a>         }
-<a class="jxr_linenumber" name="1422" href="#1422">1422</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ServiceMatches(result.toArray(<strong class="jxr_keyword">new</strong> ServiceItem[result.size()]), result.size());
-<a class="jxr_linenumber" name="1423" href="#1423">1423</a>     }
-<a class="jxr_linenumber" name="1424" href="#1424">1424</a> 	<strong class="jxr_keyword">public</strong> String returnString() <strong class="jxr_keyword">throws</strong> RemoteException {
-<a class="jxr_linenumber" name="1425" href="#1425">1425</a> 		<strong class="jxr_keyword">return</strong> getClass().getName() + <span class="jxr_string">":"</span> + getProviderName();
-<a class="jxr_linenumber" name="1426" href="#1426">1426</a> 	}
-<a class="jxr_linenumber" name="1427" href="#1427">1427</a> 
-<a class="jxr_linenumber" name="1428" href="#1428">1428</a> }
+<a class="jxr_linenumber" name="1399" href="#1399">1399</a>         <strong class="jxr_keyword">if</strong>(cinfo==<strong class="jxr_keyword">null</strong>){
+<a class="jxr_linenumber" name="1400" href="#1400">1400</a>             logger.warning(<span class="jxr_string">"Cataloger not initialized"</span>);
+<a class="jxr_linenumber" name="1401" href="#1401">1401</a>         } <strong class="jxr_keyword">else</strong>
+<a class="jxr_linenumber" name="1402" href="#1402">1402</a>         <strong class="jxr_keyword">for</strong> (Map.Entry&lt;CatalogerInfo.InterfaceList, List&lt;ServiceItem&gt;&gt; entry : cinfo.entrySet()) {
+<a class="jxr_linenumber" name="1403" href="#1403">1403</a>             List&lt;ServiceItem&gt; serviceItems = entry.getValue();
+<a class="jxr_linenumber" name="1404" href="#1404">1404</a>             SRVITEM:
+<a class="jxr_linenumber" name="1405" href="#1405">1405</a>             <strong class="jxr_keyword">for</strong> (ServiceItem serviceItem : serviceItems) {
+<a class="jxr_linenumber" name="1406" href="#1406">1406</a>                 <strong class="jxr_keyword">if</strong> (tmpl.serviceID != <strong class="jxr_keyword">null</strong> &amp;&amp; tmpl.serviceID.equals(serviceItem.serviceID)) {
+<a class="jxr_linenumber" name="1407" href="#1407">1407</a>                     result.add(serviceItem);
+<a class="jxr_linenumber" name="1408" href="#1408">1408</a>                     <em class="jxr_comment">//serviceID is unique, stop on first matching service</em>
+<a class="jxr_linenumber" name="1409" href="#1409">1409</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="1410" href="#1410">1410</a>                 }
+<a class="jxr_linenumber" name="1411" href="#1411">1411</a> 
+<a class="jxr_linenumber" name="1412" href="#1412">1412</a>                 CatalogerInfo.InterfaceList interfaceList = entry.getKey();
+<a class="jxr_linenumber" name="1413" href="#1413">1413</a>                 <strong class="jxr_keyword">if</strong> (interfaceList.containsAll(Arrays.asList(tmpl.serviceTypes))) {
+<a class="jxr_linenumber" name="1414" href="#1414">1414</a>                     List&lt;Entry&gt; sItemEntryList = Arrays.asList(serviceItem.attributeSets);
+<a class="jxr_linenumber" name="1415" href="#1415">1415</a>                     <strong class="jxr_keyword">for</strong> (Entry attr : tmpl.attributeSetTemplates) {
+<a class="jxr_linenumber" name="1416" href="#1416">1416</a>                         <strong class="jxr_keyword">if</strong> (!sItemEntryList.contains(attr)) {
+<a class="jxr_linenumber" name="1417" href="#1417">1417</a>                             <strong class="jxr_keyword">continue</strong> SRVITEM;
+<a class="jxr_linenumber" name="1418" href="#1418">1418</a>                         }
+<a class="jxr_linenumber" name="1419" href="#1419">1419</a>                     }
+<a class="jxr_linenumber" name="1420" href="#1420">1420</a>                     result.add(serviceItem);
+<a class="jxr_linenumber" name="1421" href="#1421">1421</a>                     <strong class="jxr_keyword">if</strong> (result.size() &gt;= maxMatches) <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="1422" href="#1422">1422</a>                 }
+<a class="jxr_linenumber" name="1423" href="#1423">1423</a>             }
+<a class="jxr_linenumber" name="1424" href="#1424">1424</a>         }
+<a class="jxr_linenumber" name="1425" href="#1425">1425</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ServiceMatches(result.toArray(<strong class="jxr_keyword">new</strong> ServiceItem[result.size()]), result.size());
+<a class="jxr_linenumber" name="1426" href="#1426">1426</a>     }
+<a class="jxr_linenumber" name="1427" href="#1427">1427</a> 	<strong class="jxr_keyword">public</strong> String returnString() <strong class="jxr_keyword">throws</strong> RemoteException {
+<a class="jxr_linenumber" name="1428" href="#1428">1428</a> 		<strong class="jxr_keyword">return</strong> getClass().getName() + <span class="jxr_string">":"</span> + getProviderName();
+<a class="jxr_linenumber" name="1429" href="#1429">1429</a> 	}
+<a class="jxr_linenumber" name="1430" href="#1430">1430</a> 
+<a class="jxr_linenumber" name="1431" href="#1431">1431</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

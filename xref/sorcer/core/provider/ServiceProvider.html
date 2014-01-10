@@ -1526,7 +1526,7 @@
 <a class="jxr_linenumber" name="1516" href="#1516">1516</a> 
 <a class="jxr_linenumber" name="1517" href="#1517">1517</a> 		<em class="jxr_comment">// when service Locker is used</em>
 <a class="jxr_linenumber" name="1518" href="#1518">1518</a> 		<strong class="jxr_keyword">if</strong> (delegate.mutualExlusion()) {
-<a class="jxr_linenumber" name="1519" href="#1519">1519</a> 			Object mutexId = exertion.getControlContext().getMutexId();
+<a class="jxr_linenumber" name="1519" href="#1519">1519</a> 			Object mutexId = ((ControlContext)exertion.getControlContext()).getMutexId();
 <a class="jxr_linenumber" name="1520" href="#1520">1520</a> 			<strong class="jxr_keyword">if</strong> (mutexId == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="1521" href="#1521">1521</a> 				exertion.getControlContext().appendTrace(
 <a class="jxr_linenumber" name="1522" href="#1522">1522</a> 						<span class="jxr_string">"mutex required by: "</span> + getProviderName() + <span class="jxr_string">":"</span>
@@ -1990,7 +1990,7 @@
 <a class="jxr_linenumber" name="1980" href="#1980">1980</a> 			}
 <a class="jxr_linenumber" name="1981" href="#1981">1981</a>         } <strong class="jxr_keyword">catch</strong> (Throwable e) {
 <a class="jxr_linenumber" name="1982" href="#1982">1982</a>             logger.log(Level.SEVERE,<span class="jxr_string">"Error while dispatching task"</span>, e);
-<a class="jxr_linenumber" name="1983" href="#1983">1983</a>             task.getControlContext().addException(e);
+<a class="jxr_linenumber" name="1983" href="#1983">1983</a>             ((<a href="../../../sorcer/core/context/ControlContext.html">ControlContext</a>)task.getControlContext()).addException(e);
 <a class="jxr_linenumber" name="1984" href="#1984">1984</a> 		}
 <a class="jxr_linenumber" name="1985" href="#1985">1985</a> 		<strong class="jxr_keyword">return</strong> dispatcher.getExertion();
 <a class="jxr_linenumber" name="1986" href="#1986">1986</a> 	}

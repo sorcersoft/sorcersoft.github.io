@@ -30,7 +30,7 @@
 <a class="jxr_linenumber" name="20" href="#20">20</a>  
 <a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> net.jini.core.transaction.Transaction;
 <a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ControlContext;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ExertProcessor;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ServiceExerter;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.util.Arrays;
@@ -78,7 +78,7 @@
 <a class="jxr_linenumber" name="68" href="#68">68</a>                                                 Transaction transaction, Arg... entries)
 <a class="jxr_linenumber" name="69" href="#69">69</a>              <strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ExertionException.html">ExertionException</a> {
 <a class="jxr_linenumber" name="70" href="#70">70</a>          <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="71" href="#71">71</a>              <a href="../../sorcer/util/ExertProcessor.html">ExertProcessor</a> esh = <strong class="jxr_keyword">new</strong> <a href="../../sorcer/util/ExertProcessor.html">ExertProcessor</a>(input);
+<a class="jxr_linenumber" name="71" href="#71">71</a>              <a href="../../sorcer/util/ServiceExerter.html">ServiceExerter</a> esh = <strong class="jxr_keyword">new</strong> <a href="../../sorcer/util/ServiceExerter.html">ServiceExerter</a>(input);
 <a class="jxr_linenumber" name="72" href="#72">72</a>              <a href="../../sorcer/service/Exertion.html">Exertion</a> result = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="73" href="#73">73</a>              <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="74" href="#74">74</a>                  result = esh.exert(transaction, <strong class="jxr_keyword">null</strong>, entries);

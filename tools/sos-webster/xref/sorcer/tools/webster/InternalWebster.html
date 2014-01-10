@@ -189,7 +189,7 @@
 <a class="jxr_linenumber" name="179" href="#179">179</a>             URL root = SorcerEnv.getCodebaseRoot(SorcerEnv.getHostAddress(), webster.getPort());
 <a class="jxr_linenumber" name="180" href="#180">180</a>             String codebase;
 <a class="jxr_linenumber" name="181" href="#181">181</a>             <strong class="jxr_keyword">if</strong> (userCodebase == <strong class="jxr_keyword">null</strong> || userCodebase.isEmpty()) {
-<a class="jxr_linenumber" name="182" href="#182">182</a>                 codebase = Resolver.resolveCodeBase(root, Artifact.getSosEnv(), Artifact.getSosPlatform());
+<a class="jxr_linenumber" name="182" href="#182">182</a>                 codebase = Resolver.resolveCodeBase(root, Artifact.getSorcerApi(), Artifact.getSosPlatform());
 <a class="jxr_linenumber" name="183" href="#183">183</a>             } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="184" href="#184">184</a>                 String[] jars = userCodebase.split(<span class="jxr_string">" "</span>);
 <a class="jxr_linenumber" name="185" href="#185">185</a>                 codebase = SorcerEnv.getCodebase(root, jars);
