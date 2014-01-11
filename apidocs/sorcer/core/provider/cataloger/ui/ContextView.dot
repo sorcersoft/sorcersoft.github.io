@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ui.ContextView
-	c110597 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextView.html">
+	c110601 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextView </td></tr>
 		</table></td></tr>
@@ -26,11 +26,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ui.ContextView extends javax.swing.JPanel
-	c110736:p -> c110597:p [dir=back,arrowtail=empty];
+	c110736:p -> c110601:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ui.ContextView implements java.util.Observer
-	c110737:p -> c110597:p [dir=back,arrowtail=empty,style=dashed];
+	c110737:p -> c110601:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ui.ContextView implements java.awt.event.ActionListener
-	c110738:p -> c110597:p [dir=back,arrowtail=empty,style=dashed];
+	c110738:p -> c110601:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.JPanel
 	c110736 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

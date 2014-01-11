@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.SpaceTaker
-	c338041 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceTaker.html">
+	c338026 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceTaker </td></tr>
 		</table></td></tr>
@@ -46,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.SpaceIsReadyTaker
-	c338047 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
+	c338028 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
 		</table></td></tr>
@@ -60,11 +60,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.SpaceTaker implements java.lang.Runnable
-	c338505:p -> c338041:p [dir=back,arrowtail=empty,style=dashed];
+	c338505:p -> c338026:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.SpaceTaker implements net.jini.lease.LeaseListener
-	c338506:p -> c338041:p [dir=back,arrowtail=empty,style=dashed];
+	c338506:p -> c338026:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.SpaceIsReadyTaker extends sorcer.core.provider.SpaceTaker
-	c338041:p -> c338047:p [dir=back,arrowtail=empty];
+	c338026:p -> c338028:p [dir=back,arrowtail=empty];
 	// java.lang.Runnable
 	c338505 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

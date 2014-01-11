@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Task
-	c298670 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Task.html">
+	c298673 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Task.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 		</table></td></tr>
@@ -56,8 +56,80 @@ digraph G {
 <tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Task.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Job
+	c298681 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Job.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Job </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # logger : Logger </td></tr>
+<tr><td align="left" balign="left"> # exertions : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + state : Integer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Job() </td></tr>
+<tr><td align="left" balign="left"> + Job(name : String) </td></tr>
+<tr><td align="left" balign="left"> + Job(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + Job(name : String, description : String) </td></tr>
+<tr><td align="left" balign="left"> + Job(name : String, description : String, signatures : List&lt;Signature&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + isJob() : boolean </td></tr>
+<tr><td align="left" balign="left"> + hasChild(childName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getChild(childName : String) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getLsbID() : long </td></tr>
+<tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + indexOf(ex : Exertion) : int </td></tr>
+<tr><td align="left" balign="left"> + setExertionAt(ex : Exertion, i : int) </td></tr>
+<tr><td align="left" balign="left"> + getMasterExertion() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + setRendezvousName(jobberName : String) </td></tr>
+<tr><td align="left" balign="left"> + getProcessSignature() : Signature </td></tr>
+<tr><td align="left" balign="left"> + addExertion(ex : Exertion) : Job </td></tr>
+<tr><td align="left" balign="left"> + addExertions(exertions : List&lt;Exertion&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setExertions(exertions : List&lt;Exertion&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addExertion(exertion : Exertion, priority : int) : Job </td></tr>
+<tr><td align="left" balign="left"> + removeExertion(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + removeExertionAt(index : int) </td></tr>
+<tr><td align="left" balign="left"> + exertionAt(index : int) : Exertion </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + doJob(txn : Transaction) : Job </font></td></tr>
+<tr><td align="left" balign="left"> + undoJob() </td></tr>
+<tr><td align="left" balign="left"> + setState(state : int) </td></tr>
+<tr><td align="left" balign="left"> + getState() : int </td></tr>
+<tr><td align="left" balign="left"> + getPrincipalID() : String </td></tr>
+<tr><td align="left" balign="left"> + setPrincipalID(id : String) </td></tr>
+<tr><td align="left" balign="left"> + setSubject(subject : Subject) </td></tr>
+<tr><td align="left" balign="left"> + setPrincipal(principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + getSubject() : Subject </td></tr>
+<tr><td align="left" balign="left"> + getServiceID() : ServiceID </td></tr>
+<tr><td align="left" balign="left"> + jobContextToString() : String </td></tr>
+<tr><td align="left" balign="left"> + setMasterExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + setOwnerId(id : String) </td></tr>
+<tr><td align="left" balign="left"> + getContextName() : String </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + isTree(visited : Set&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getExertion(index : int) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getJobContext() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getControlInfo() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + linkContext(context : Context&lt;&gt;, path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + linkControlContext(context : Context&lt;&gt;, path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getJobValue(path : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putJobValue(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + getReturnJobPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + getComponentContext(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getComponentControlContext(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getComponentExertion(path : String) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Entry&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setSessionId(id : Uuid) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Job.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ServiceExertion
-	c298673 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceExertion.html">
+	c298684 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
@@ -240,7 +312,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Block
-	c298679 [label=<<table title="sorcer.service.Block" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Block.html">
+	c298686 [label=<<table title="sorcer.service.Block" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Block.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Block </td></tr>
 		</table></td></tr>
@@ -261,80 +333,8 @@ digraph G {
 <tr><td align="left" balign="left"> + persistContext() : URL </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Block.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Job
-	c298680 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Job.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Job </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # logger : Logger </td></tr>
-<tr><td align="left" balign="left"> # exertions : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + state : Integer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Job() </td></tr>
-<tr><td align="left" balign="left"> + Job(name : String) </td></tr>
-<tr><td align="left" balign="left"> + Job(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + Job(name : String, description : String) </td></tr>
-<tr><td align="left" balign="left"> + Job(name : String, description : String, signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + isJob() : boolean </td></tr>
-<tr><td align="left" balign="left"> + hasChild(childName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getChild(childName : String) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getLsbID() : long </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
-<tr><td align="left" balign="left"> + indexOf(ex : Exertion) : int </td></tr>
-<tr><td align="left" balign="left"> + setExertionAt(ex : Exertion, i : int) </td></tr>
-<tr><td align="left" balign="left"> + getMasterExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + setRendezvousName(jobberName : String) </td></tr>
-<tr><td align="left" balign="left"> + getProcessSignature() : Signature </td></tr>
-<tr><td align="left" balign="left"> + addExertion(ex : Exertion) : Job </td></tr>
-<tr><td align="left" balign="left"> + addExertions(exertions : List&lt;Exertion&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setExertions(exertions : List&lt;Exertion&gt;) </td></tr>
-<tr><td align="left" balign="left"> + addExertion(exertion : Exertion, priority : int) : Job </td></tr>
-<tr><td align="left" balign="left"> + removeExertion(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + removeExertionAt(index : int) </td></tr>
-<tr><td align="left" balign="left"> + exertionAt(index : int) : Exertion </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + doJob(txn : Transaction) : Job </font></td></tr>
-<tr><td align="left" balign="left"> + undoJob() </td></tr>
-<tr><td align="left" balign="left"> + setState(state : int) </td></tr>
-<tr><td align="left" balign="left"> + getState() : int </td></tr>
-<tr><td align="left" balign="left"> + getPrincipalID() : String </td></tr>
-<tr><td align="left" balign="left"> + setPrincipalID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + setSubject(subject : Subject) </td></tr>
-<tr><td align="left" balign="left"> + setPrincipal(principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + getSubject() : Subject </td></tr>
-<tr><td align="left" balign="left"> + getServiceID() : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + jobContextToString() : String </td></tr>
-<tr><td align="left" balign="left"> + setMasterExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + setOwnerId(id : String) </td></tr>
-<tr><td align="left" balign="left"> + getContextName() : String </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + isTree(visited : Set&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getExertion(index : int) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getJobContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getControlInfo() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + linkContext(context : Context&lt;&gt;, path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + linkControlContext(context : Context&lt;&gt;, path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getJobValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putJobValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + getReturnJobPath() : ReturnPath&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + getComponentContext(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getComponentControlContext(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getComponentExertion(path : String) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Entry&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + setSessionId(id : Uuid) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Job.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Revaluation
-	c298690 [label=<<table title="sorcer.service.Revaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Revaluation.html">
+	c298704 [label=<<table title="sorcer.service.Revaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Revaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Revaluation </td></tr>
@@ -348,7 +348,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Revaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c298697 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+	c298705 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -393,7 +393,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ExecState
-	c298703 [label=<<table title="sorcer.service.ExecState" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecState.html">
+	c298728 [label=<<table title="sorcer.service.ExecState" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecState.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ExecState </td></tr>
@@ -422,21 +422,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExecState.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Task extends sorcer.service.ServiceExertion
-	c298673:p -> c298670:p [dir=back,arrowtail=empty];
-	//sorcer.service.ServiceExertion implements sorcer.service.Exertion
-	c298697:p -> c298673:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.ServiceExertion implements sorcer.service.Revaluation
-	c298690:p -> c298673:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.ServiceExertion implements sorcer.service.ExecState
-	c298703:p -> c298673:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.ServiceExertion implements java.io.Serializable
-	c299092:p -> c298673:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Block extends sorcer.service.ServiceExertion
-	c298673:p -> c298679:p [dir=back,arrowtail=empty];
+	c298684:p -> c298673:p [dir=back,arrowtail=empty];
 	//sorcer.service.Job extends sorcer.service.ServiceExertion
-	c298673:p -> c298680:p [dir=back,arrowtail=empty];
+	c298684:p -> c298681:p [dir=back,arrowtail=empty];
+	//sorcer.service.ServiceExertion implements sorcer.service.Exertion
+	c298705:p -> c298684:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.ServiceExertion implements sorcer.service.Revaluation
+	c298704:p -> c298684:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.ServiceExertion implements sorcer.service.ExecState
+	c298728:p -> c298684:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.ServiceExertion implements java.io.Serializable
+	c299092:p -> c298684:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Block extends sorcer.service.ServiceExertion
+	c298684:p -> c298686:p [dir=back,arrowtail=empty];
 	//sorcer.service.Exertion implements java.io.Serializable
-	c299092:p -> c298697:p [dir=back,arrowtail=empty,style=dashed];
+	c299092:p -> c298705:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c299092 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

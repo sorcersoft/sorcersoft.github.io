@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.Provider
-	c211702 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
+	c211690 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider </td></tr>
@@ -53,13 +53,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.monitor.MonitoringManagement
-	c211720 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/monitor/MonitoringManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> MonitoringManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/monitor/MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorManagement
 	c211721 [label=<<table title="sorcer.core.monitor.MonitorManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/monitor/MonitorManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -74,8 +67,15 @@ digraph G {
 <tr><td align="left" balign="left"> + persist(session : IMonitorSession) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/monitor/MonitorManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.monitor.MonitoringManagement
+	c211723 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/monitor/MonitoringManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> MonitoringManagement </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/monitor/MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Monitorable
-	c211793 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Monitorable.html">
+	c211801 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Monitorable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Monitorable </td></tr>
@@ -91,12 +91,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Monitorable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.Provider implements sorcer.service.Monitorable
-	c211793:p -> c211702:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.monitor.MonitoringManagement implements sorcer.service.Monitorable
-	c211793:p -> c211720:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorManagement
-	c211721:p -> c211720:p [dir=back,arrowtail=empty,style=dashed];
+	c211801:p -> c211690:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitorManagement implements sorcer.service.Monitorable
-	c211793:p -> c211721:p [dir=back,arrowtail=empty,style=dashed];
+	c211801:p -> c211721:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitoringManagement implements sorcer.service.Monitorable
+	c211801:p -> c211723:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorManagement
+	c211721:p -> c211723:p [dir=back,arrowtail=empty,style=dashed];
 }
 

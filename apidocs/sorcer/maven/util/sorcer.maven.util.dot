@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.maven.util.EnvFileHelper
-	c49785 [label=<<table title="sorcer.maven.util.EnvFileHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EnvFileHelper.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> EnvFileHelper </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EnvFileHelper() </td></tr>
-<tr><td align="left" balign="left"> + prepareEnvFile(projectOutDir : String) : String </td></tr>
-<tr><td align="left" balign="left"> # getRandomString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./EnvFileHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.maven.util.TestCycleHelper
-	c49786 [label=<<table title="sorcer.maven.util.TestCycleHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TestCycleHelper.html">
+	c49196 [label=<<table title="sorcer.maven.util.TestCycleHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TestCycleHelper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TestCycleHelper </td></tr>
 		</table></td></tr>
@@ -52,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TestCycleHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.maven.util.ArtifactUtil
-	c49787 [label=<<table title="sorcer.maven.util.ArtifactUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArtifactUtil.html">
+	c49197 [label=<<table title="sorcer.maven.util.ArtifactUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArtifactUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArtifactUtil </td></tr>
 		</table></td></tr>
@@ -69,7 +55,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArtifactUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.maven.util.PolicyFileHelper
-	c49788 [label=<<table title="sorcer.maven.util.PolicyFileHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PolicyFileHelper.html">
+	c49198 [label=<<table title="sorcer.maven.util.PolicyFileHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PolicyFileHelper.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PolicyFileHelper </td></tr>
 		</table></td></tr>
@@ -81,5 +67,19 @@ digraph G {
 <tr><td align="left" balign="left"> + preparePolicyFile(outputDirectory : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PolicyFileHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.maven.util.EnvFileHelper
+	c49199 [label=<<table title="sorcer.maven.util.EnvFileHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EnvFileHelper.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EnvFileHelper </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + EnvFileHelper() </td></tr>
+<tr><td align="left" balign="left"> + prepareEnvFile(projectOutDir : String) : String </td></tr>
+<tr><td align="left" balign="left"> # getRandomString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./EnvFileHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

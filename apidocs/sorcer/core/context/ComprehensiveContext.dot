@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.InclusiveContext
-	c91619 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../InclusiveContext.html">
+	c91682 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../InclusiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> InclusiveContext </td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c91706 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c91737 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -307,7 +307,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ComprehensiveContext
-	c91707 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComprehensiveContext.html">
+	c91749 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComprehensiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
 		</table></td></tr>
@@ -348,8 +348,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ComprehensiveContext extends sorcer.core.context.ServiceContext
-	c91706:p -> c91707:p [dir=back,arrowtail=empty];
+	c91737:p -> c91749:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ComprehensiveContext implements sorcer.core.InclusiveContext
-	c91619:p -> c91707:p [dir=back,arrowtail=empty,style=dashed];
+	c91682:p -> c91749:p [dir=back,arrowtail=empty,style=dashed];
 }
 

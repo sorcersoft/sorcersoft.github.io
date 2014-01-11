@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.invoker.CmdInvoking<T>
-	c86479 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CmdInvoking.html">
+	c86549 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CmdInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CmdInvoking&lt;T&gt; </td></tr>
@@ -31,6 +31,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.CmdInvoking<T> implements sorcer.service.Invocation<T>
-	c86604:p -> c86479:p [dir=back,arrowtail=empty,style=dashed];
+	c86604:p -> c86549:p [dir=back,arrowtail=empty,style=dashed];
 }
 

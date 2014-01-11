@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.RemoteLogger
-	c267218 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../RemoteLogger.html">
+	c267279 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../RemoteLogger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteLogger </td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../RemoteLogger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c267321 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c267313 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -186,8 +186,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RemoteLoggerManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.logger.RemoteLoggerManager extends sorcer.core.provider.ServiceProvider
-	c267321:p -> c267516:p [dir=back,arrowtail=empty];
+	c267313:p -> c267516:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.logger.RemoteLoggerManager implements sorcer.core.RemoteLogger
-	c267218:p -> c267516:p [dir=back,arrowtail=empty,style=dashed];
+	c267279:p -> c267516:p [dir=back,arrowtail=empty,style=dashed];
 }
 

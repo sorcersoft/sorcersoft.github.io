@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.SecureIdentifiable
-	c287069 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SecureIdentifiable.html">
+	c287070 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SecureIdentifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SecureIdentifiable </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SecureIdentifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Identifiable
-	c287108 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
+	c287114 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Identifiable </td></tr>
@@ -37,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.UuidObject
-	c287214 [label=<<table title="sorcer.util.bdb.objects.UuidObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/UuidObject.html">
+	c287212 [label=<<table title="sorcer.util.bdb.objects.UuidObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/UuidObject.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UuidObject </td></tr>
 		</table></td></tr>
@@ -61,8 +61,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../util/bdb/objects/UuidObject.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.SecureIdentifiable implements sorcer.service.Identifiable
-	c287108:p -> c287069:p [dir=back,arrowtail=empty,style=dashed];
+	c287114:p -> c287070:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.bdb.objects.UuidObject implements sorcer.service.SecureIdentifiable
-	c287069:p -> c287214:p [dir=back,arrowtail=empty,style=dashed];
+	c287070:p -> c287212:p [dir=back,arrowtail=empty,style=dashed];
 }
 

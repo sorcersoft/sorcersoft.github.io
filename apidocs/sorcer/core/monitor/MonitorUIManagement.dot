@@ -9,8 +9,15 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.monitor.MonitoringManagement
+	c211144 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoringManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> MonitoringManagement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorUIManagement
-	c211140 [label=<<table title="sorcer.core.monitor.MonitorUIManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorUIManagement.html">
+	c211146 [label=<<table title="sorcer.core.monitor.MonitorUIManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorUIManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorUIManagement </td></tr>
@@ -24,14 +31,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getMonitorableExertion(id : Uuid, credentials : Principal) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitorUIManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.monitor.MonitoringManagement
-	c211141 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoringManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> MonitoringManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorUIManagement
-	c211140:p -> c211141:p [dir=back,arrowtail=empty,style=dashed];
+	c211146:p -> c211144:p [dir=back,arrowtail=empty,style=dashed];
 }
 

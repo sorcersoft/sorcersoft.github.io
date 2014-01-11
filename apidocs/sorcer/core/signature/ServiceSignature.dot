@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.signature.EvaluationSignature
-	c303294 [label=<<table title="sorcer.core.signature.EvaluationSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EvaluationSignature.html">
+	c303250 [label=<<table title="sorcer.core.signature.EvaluationSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EvaluationSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EvaluationSignature </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EvaluationSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.ServiceSignature
-	c303295 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceSignature.html">
+	c303251 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSignature </td></tr>
 		</table></td></tr>
@@ -110,7 +110,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.ObjectSignature
-	c303296 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectSignature.html">
+	c303252 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectSignature </td></tr>
 		</table></td></tr>
@@ -141,7 +141,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Signature
-	c303343 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Signature.html">
+	c303353 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Signature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Signature </td></tr>
@@ -170,10 +170,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Signature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.EvaluationSignature extends sorcer.core.signature.ServiceSignature
-	c303295:p -> c303294:p [dir=back,arrowtail=empty];
+	c303251:p -> c303250:p [dir=back,arrowtail=empty];
 	//sorcer.core.signature.ServiceSignature implements sorcer.service.Signature
-	c303343:p -> c303295:p [dir=back,arrowtail=empty,style=dashed];
+	c303353:p -> c303251:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.signature.ObjectSignature extends sorcer.core.signature.ServiceSignature
-	c303295:p -> c303296:p [dir=back,arrowtail=empty];
+	c303251:p -> c303252:p [dir=back,arrowtail=empty];
 }
 

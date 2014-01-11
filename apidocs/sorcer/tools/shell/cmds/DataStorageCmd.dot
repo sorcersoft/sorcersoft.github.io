@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.ShellCmd
-	c115629 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
+	c115648 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.DataStorageCmd
-	c115797 [label=<<table title="sorcer.tools.shell.cmds.DataStorageCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataStorageCmd.html">
+	c115795 [label=<<table title="sorcer.tools.shell.cmds.DataStorageCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataStorageCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataStorageCmd </td></tr>
 		</table></td></tr>
@@ -53,6 +53,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataStorageCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.cmds.DataStorageCmd extends sorcer.tools.shell.ShellCmd
-	c115629:p -> c115797:p [dir=back,arrowtail=empty];
+	c115648:p -> c115795:p [dir=back,arrowtail=empty];
 }
 

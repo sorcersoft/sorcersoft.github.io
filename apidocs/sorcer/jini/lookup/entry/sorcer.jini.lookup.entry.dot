@@ -9,26 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.jini.lookup.entry.VersionInfo
-	c13023 [label=<<table title="sorcer.jini.lookup.entry.VersionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./VersionInfo.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> VersionInfo </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PRODUCT_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + EMAIL_CONTACT : String </td></tr>
-<tr><td align="left" balign="left"> + SUPPLIER_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + VERSION : String </td></tr>
-<tr><td align="left" balign="left"> + MODEL : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + VersionInfo() </td></tr>
-<tr><td align="left" balign="left"> + getVersion() : String </td></tr>
-<tr><td align="left" balign="left"> + productAttributesFor(serviceName : String) : List&lt;Entry&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./VersionInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.jini.lookup.entry.SorcerServiceInfo
-	c13024 [label=<<table title="sorcer.jini.lookup.entry.SorcerServiceInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceInfo.html">
+	c10680 [label=<<table title="sorcer.jini.lookup.entry.SorcerServiceInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceInfo </td></tr>
 		</table></td></tr>
@@ -64,5 +46,23 @@ digraph G {
 <tr><td align="left" balign="left"> + getIcon(iconKind : int) : Image </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.jini.lookup.entry.VersionInfo
+	c10681 [label=<<table title="sorcer.jini.lookup.entry.VersionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./VersionInfo.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> VersionInfo </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PRODUCT_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + EMAIL_CONTACT : String </td></tr>
+<tr><td align="left" balign="left"> + SUPPLIER_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + VERSION : String </td></tr>
+<tr><td align="left" balign="left"> + MODEL : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + VersionInfo() </td></tr>
+<tr><td align="left" balign="left"> + getVersion() : String </td></tr>
+<tr><td align="left" balign="left"> + productAttributesFor(serviceName : String) : List&lt;Entry&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./VersionInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

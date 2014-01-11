@@ -9,8 +9,15 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.RemoteContextManagement
+	c103277 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.ContextManagement
-	c103218 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextManagement.html">
+	c103282 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextManagement </td></tr>
@@ -29,15 +36,8 @@ digraph G {
 <tr><td align="left" balign="left"> + deleteContext(interfaceName : String, methodName : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.RemoteContextManagement
-	c103223 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextManagementAdapter
-	c103306 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ContextManagementAdapter.html">
+	c103339 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ContextManagementAdapter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextManagementAdapter </td></tr>
 		</table></td></tr>
@@ -56,8 +56,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./context/ContextManagementAdapter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.RemoteContextManagement implements sorcer.core.ContextManagement
-	c103218:p -> c103223:p [dir=back,arrowtail=empty,style=dashed];
+	c103282:p -> c103277:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ContextManagementAdapter implements sorcer.core.ContextManagement
-	c103218:p -> c103306:p [dir=back,arrowtail=empty,style=dashed];
+	c103282:p -> c103339:p [dir=back,arrowtail=empty,style=dashed];
 }
 

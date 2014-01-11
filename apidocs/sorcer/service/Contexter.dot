@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ServiceContext<T>
-	c110832 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
+	c110863 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -281,7 +281,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.PositionalContext<T>
-	c110842 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
+	c110866 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -305,8 +305,24 @@ digraph G {
 <tr><td align="left" balign="left"> + getTally() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Contexter<T>
+	c110917 [label=<<table title="sorcer.service.Contexter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Contexter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Contexter&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;, path : String) : Context&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Contexter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c110920 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
+	c110925 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
@@ -483,34 +499,18 @@ digraph G {
 <tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Contexter<T>
-	c110954 [label=<<table title="sorcer.service.Contexter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Contexter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Contexter&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;, path : String) : Context&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Contexter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Context<T>
-	c110920:p -> c110832:p [dir=back,arrowtail=empty,style=dashed];
+	c110925:p -> c110863:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Contexter<T>
-	c110954:p -> c110832:p [dir=back,arrowtail=empty,style=dashed];
+	c110917:p -> c110863:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
-	c110832:p -> c110842:p [dir=back,arrowtail=empty];
+	c110863:p -> c110866:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Contexter<T>
-	c110954:p -> c110842:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Context<T> implements sorcer.service.Contexter<T>
-	c110954:p -> c110920:p [dir=back,arrowtail=empty,style=dashed];
+	c110917:p -> c110866:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Contexter<T> implements java.rmi.Remote
-	c111318:p -> c110954:p [dir=back,arrowtail=empty,style=dashed];
+	c111318:p -> c110917:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Context<T> implements sorcer.service.Contexter<T>
+	c110917:p -> c110925:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
 	c111318 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

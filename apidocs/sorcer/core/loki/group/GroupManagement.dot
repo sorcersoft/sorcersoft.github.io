@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.proxy.RemotePartner
-	c160711 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../proxy/RemotePartner.html">
+	c160696 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../proxy/RemotePartner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemotePartner </td></tr>
@@ -52,11 +52,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GroupManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.proxy.RemotePartner implements java.rmi.Remote
-	c161156:p -> c160711:p [dir=back,arrowtail=empty,style=dashed];
+	c161156:p -> c160696:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.loki.group.GroupManagement implements java.rmi.Remote
 	c161156:p -> c160913:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.loki.group.GroupManagement implements sorcer.core.proxy.RemotePartner
-	c160711:p -> c160913:p [dir=back,arrowtail=empty,style=dashed];
+	c160696:p -> c160913:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
 	c161156 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

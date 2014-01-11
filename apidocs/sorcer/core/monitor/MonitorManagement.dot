@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.monitor.MonitorManagement
+	c209403 [label=<<table title="sorcer.core.monitor.MonitorManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> MonitorManagement </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + register(lstnr : RemoteEventListener, ex : Exertion, duration : long) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + persist(session : IMonitorSession) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./MonitorManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorSessionManagement
-	c209400 [label=<<table title="sorcer.core.monitor.MonitorSessionManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSessionManagement.html">
+	c209404 [label=<<table title="sorcer.core.monitor.MonitorSessionManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSessionManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorSessionManagement </td></tr>
@@ -27,28 +41,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitorSessionManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitoringManagement
-	c209402 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoringManagement.html">
+	c209405 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoringManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitoringManagement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.monitor.MonitorManagement
-	c209403 [label=<<table title="sorcer.core.monitor.MonitorManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> MonitorManagement </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + register(lstnr : RemoteEventListener, ex : Exertion, duration : long) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + persist(session : IMonitorSession) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./MonitorManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Monitorable
-	c209475 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
+	c209483 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Monitorable </td></tr>
@@ -63,15 +63,15 @@ digraph G {
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Monitorable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.monitor.MonitorSessionManagement implements sorcer.core.monitor.MonitorManagement
-	c209403:p -> c209400:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.monitor.MonitoringManagement implements sorcer.service.Monitorable
-	c209475:p -> c209402:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorManagement
-	c209403:p -> c209402:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorSessionManagement
-	c209400:p -> c209402:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitorManagement implements sorcer.service.Monitorable
-	c209475:p -> c209403:p [dir=back,arrowtail=empty,style=dashed];
+	c209483:p -> c209403:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitorSessionManagement implements sorcer.core.monitor.MonitorManagement
+	c209403:p -> c209404:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitoringManagement implements sorcer.service.Monitorable
+	c209483:p -> c209405:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorManagement
+	c209403:p -> c209405:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorSessionManagement
+	c209404:p -> c209405:p [dir=back,arrowtail=empty,style=dashed];
 }
 

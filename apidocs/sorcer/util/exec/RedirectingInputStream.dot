@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.util.exec.RedirectibleInput
-	c263227 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectibleInput.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + redirect(dest : OutputStream, len : int) : int </td></tr>
-<tr><td align="left" balign="left"> + redirectAll(dest : OutputStream) : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.exec.RedirectingInputStream
-	c263230 [label=<<table title="sorcer.util.exec.RedirectingInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RedirectingInputStream.html">
+	c263202 [label=<<table title="sorcer.util.exec.RedirectingInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RedirectingInputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RedirectingInputStream </td></tr>
 		</table></td></tr>
@@ -40,10 +26,24 @@ digraph G {
 <tr><td align="left" balign="left"> + redirectAll(out : OutputStream) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RedirectingInputStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.exec.RedirectibleInput
+	c263209 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectibleInput.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + redirect(dest : OutputStream, len : int) : int </td></tr>
+<tr><td align="left" balign="left"> + redirectAll(dest : OutputStream) : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.exec.RedirectingInputStream extends java.io.FilterInputStream
-	c263729:p -> c263230:p [dir=back,arrowtail=empty];
+	c263729:p -> c263202:p [dir=back,arrowtail=empty];
 	//sorcer.util.exec.RedirectingInputStream implements sorcer.util.exec.RedirectibleInput
-	c263227:p -> c263230:p [dir=back,arrowtail=empty,style=dashed];
+	c263209:p -> c263202:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.FilterInputStream
 	c263729 [label=<<table title="java.io.FilterInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/FilterInputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

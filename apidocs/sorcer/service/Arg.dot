@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.Deployment
-	c60943 [label=<<table title="sorcer.util.Deployment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/Deployment.html">
+	c60922 [label=<<table title="sorcer.util.Deployment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/Deployment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Deployment </td></tr>
 		</table></td></tr>
@@ -24,8 +24,25 @@ digraph G {
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/Deployment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Strategy
+	c61075 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Strategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Strategy </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
+<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
+<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Signature
-	c61082 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Signature.html">
+	c61092 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Signature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Signature </td></tr>
@@ -54,7 +71,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Signature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ReturnPath<T>
-	c61099 [label=<<table title="sorcer.service.ReturnPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReturnPath.html">
+	c61101 [label=<<table title="sorcer.service.ReturnPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReturnPath.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReturnPath&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -77,7 +94,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReturnPath.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Arg
-	c61109 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Arg.html">
+	c61118 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Arg.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Arg </td></tr>
@@ -89,25 +106,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Strategy
-	c61114 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Strategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Strategy </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
-<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.StrategyEntry
-	c61126 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/StrategyEntry.html">
+	c61125 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/StrategyEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StrategyEntry </td></tr>
 		</table></td></tr>
@@ -120,8 +120,34 @@ digraph G {
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../co/tuple/StrategyEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.InEntry<T>
+	c61128 [label=<<table title="sorcer.co.tuple.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/InEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> InEntry&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../co/tuple/InEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.InoutEntry<T>
+	c61132 [label=<<table title="sorcer.co.tuple.InoutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/InoutEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> InoutEntry&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, index : int) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../co/tuple/InoutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.OutEntry<T>
-	c61127 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/OutEntry.html">
+	c61133 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/OutEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OutEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -135,7 +161,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../co/tuple/OutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Entry<T>
-	c61130 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Entry.html">
+	c61134 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Entry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -154,34 +180,8 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../co/tuple/Entry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.InoutEntry<T>
-	c61131 [label=<<table title="sorcer.co.tuple.InoutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/InoutEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InoutEntry&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, index : int) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../co/tuple/InoutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.InEntry<T>
-	c61134 [label=<<table title="sorcer.co.tuple.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/InEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InEntry&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../co/tuple/InEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c61137 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
+	c61141 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -206,7 +206,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../co/tuple/Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c61214 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+	c61238 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Par&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -249,28 +249,28 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.Deployment implements sorcer.service.Arg
-	c61109:p -> c60943:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Signature implements sorcer.service.Arg
-	c61109:p -> c61082:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.ReturnPath<T> implements sorcer.service.Arg
-	c61109:p -> c61099:p [dir=back,arrowtail=empty,style=dashed];
+	c61118:p -> c60922:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Strategy implements sorcer.service.Arg
-	c61109:p -> c61114:p [dir=back,arrowtail=empty,style=dashed];
+	c61118:p -> c61075:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Signature implements sorcer.service.Arg
+	c61118:p -> c61092:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.ReturnPath<T> implements sorcer.service.Arg
+	c61118:p -> c61101:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.StrategyEntry implements sorcer.service.Arg
-	c61109:p -> c61126:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.co.tuple.OutEntry<T> implements sorcer.service.Arg
-	c61109:p -> c61127:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.co.tuple.Entry<T> extends sorcer.co.tuple.Tuple2<java.lang.String, T>
-	c61137:p -> c61130:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Entry<T> implements sorcer.service.Arg
-	c61109:p -> c61130:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.co.tuple.InoutEntry<T> implements sorcer.service.Arg
-	c61109:p -> c61131:p [dir=back,arrowtail=empty,style=dashed];
+	c61118:p -> c61125:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.InEntry<T> implements sorcer.service.Arg
-	c61109:p -> c61134:p [dir=back,arrowtail=empty,style=dashed];
+	c61118:p -> c61128:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.co.tuple.InoutEntry<T> implements sorcer.service.Arg
+	c61118:p -> c61132:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.co.tuple.OutEntry<T> implements sorcer.service.Arg
+	c61118:p -> c61133:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.co.tuple.Entry<T> extends sorcer.co.tuple.Tuple2<java.lang.String, T>
+	c61141:p -> c61134:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.Entry<T> implements sorcer.service.Arg
+	c61118:p -> c61134:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Arg
-	c61109:p -> c61137:p [dir=back,arrowtail=empty,style=dashed];
+	c61118:p -> c61141:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Arg
-	c61109:p -> c61214:p [dir=back,arrowtail=empty,style=dashed];
+	c61118:p -> c61238:p [dir=back,arrowtail=empty,style=dashed];
 }
 

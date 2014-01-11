@@ -9,43 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.invoker.CmdInvoking<T>
-	c178620 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/CmdInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> CmdInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/invoker/CmdInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.ExertionInvoking<T>
-	c178622 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ExertionInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ExertionInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/invoker/ExertionInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.ContextInvoking<T>
-	c178623 [label=<<table title="sorcer.core.invoker.ContextInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ContextInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ContextInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/invoker/ContextInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.ScriptInvoking<T>
-	c178624 [label=<<table title="sorcer.core.invoker.ScriptInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ScriptInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ScriptInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/invoker/ScriptInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.MethodInvoking<T>
-	c178625 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/MethodInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> MethodInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/invoker/MethodInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c178630 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
+	c178661 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -316,7 +281,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.PositionalContext<T>
-	c178640 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
+	c178664 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -340,8 +305,43 @@ digraph G {
 <tr><td align="left" balign="left"> + getTally() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.MethodInvoking<T>
+	c178687 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/MethodInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> MethodInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/invoker/MethodInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.ScriptInvoking<T>
+	c178688 [label=<<table title="sorcer.core.invoker.ScriptInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ScriptInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ScriptInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/invoker/ScriptInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.ContextInvoking<T>
+	c178689 [label=<<table title="sorcer.core.invoker.ContextInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ContextInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ContextInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/invoker/ContextInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.CmdInvoking<T>
+	c178690 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/CmdInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> CmdInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/invoker/CmdInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.ExertionInvoking<T>
+	c178692 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ExertionInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ExertionInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/invoker/ExertionInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c178718 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
+	c178723 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
@@ -519,7 +519,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c178721 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+	c178729 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -578,7 +578,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c178855 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+	c178879 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Par&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -620,25 +620,8 @@ digraph G {
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.NetJob
-	c178877 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetJob.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> NetJob </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NetJob() </td></tr>
-<tr><td align="left" balign="left"> + NetJob(name : String) </td></tr>
-<tr><td align="left" balign="left"> + NetJob(principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + NetJob(name : String, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/exertion/NetJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetTask
-	c178878 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetTask.html">
+	c178915 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetTask </td></tr>
 		</table></td></tr>
@@ -663,33 +646,50 @@ digraph G {
 <tr><td align="left" balign="left"> + getTemplate(provider : String) : NetTask </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/exertion/NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.invoker.CmdInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178620:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.ExertionInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178622:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.ContextInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178623:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.ScriptInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178624:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.MethodInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178625:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.core.exertion.NetJob
+	c178920 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetJob.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> NetJob </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NetJob() </td></tr>
+<tr><td align="left" balign="left"> + NetJob(name : String) </td></tr>
+<tr><td align="left" balign="left"> + NetJob(principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + NetJob(name : String, principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/exertion/NetJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Context<T>
-	c178718:p -> c178630:p [dir=back,arrowtail=empty,style=dashed];
+	c178723:p -> c178661:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178630:p [dir=back,arrowtail=empty,style=dashed];
+	c178745:p -> c178661:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
-	c178630:p -> c178640:p [dir=back,arrowtail=empty];
+	c178661:p -> c178664:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178640:p [dir=back,arrowtail=empty,style=dashed];
+	c178745:p -> c178664:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.MethodInvoking<T> implements sorcer.service.Invocation<T>
+	c178745:p -> c178687:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.ScriptInvoking<T> implements sorcer.service.Invocation<T>
+	c178745:p -> c178688:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.ContextInvoking<T> implements sorcer.service.Invocation<T>
+	c178745:p -> c178689:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.CmdInvoking<T> implements sorcer.service.Invocation<T>
+	c178745:p -> c178690:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.ExertionInvoking<T> implements sorcer.service.Invocation<T>
+	c178745:p -> c178692:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Context<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178718:p [dir=back,arrowtail=empty,style=dashed];
+	c178745:p -> c178723:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Invocation<T>
-	c178745:p -> c178721:p [dir=back,arrowtail=empty,style=dashed];
+	c178745:p -> c178729:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178855:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.exertion.NetJob implements sorcer.service.Invocation<T>
-	c178745:p -> c178877:p [dir=back,arrowtail=empty,style=dashed];
+	c178745:p -> c178879:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.exertion.NetTask implements sorcer.service.Invocation<T>
-	c178745:p -> c178878:p [dir=back,arrowtail=empty,style=dashed];
+	c178745:p -> c178915:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.exertion.NetJob implements sorcer.service.Invocation<T>
+	c178745:p -> c178920:p [dir=back,arrowtail=empty,style=dashed];
 }
 

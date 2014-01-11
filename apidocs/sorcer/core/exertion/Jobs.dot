@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c186666 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
+	c186730 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -619,7 +619,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.Jobs
-	c186999 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Jobs.html">
+	c187029 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Jobs.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Jobs </td></tr>
 		</table></td></tr>
@@ -657,6 +657,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Jobs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.Jobs implements sorcer.core.SorcerConstants
-	c186666:p -> c186999:p [dir=back,arrowtail=empty,style=dashed];
+	c186730:p -> c187029:p [dir=back,arrowtail=empty,style=dashed];
 }
 

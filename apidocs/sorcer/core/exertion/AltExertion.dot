@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Task
-	c59894 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
+	c59897 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 		</table></td></tr>
@@ -57,7 +57,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Task.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.AltExertion
-	c60085 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AltExertion.html">
+	c60122 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AltExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AltExertion </td></tr>
 		</table></td></tr>
@@ -73,6 +73,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AltExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.AltExertion extends sorcer.service.Task
-	c59894:p -> c60085:p [dir=back,arrowtail=empty];
+	c59897:p -> c60122:p [dir=back,arrowtail=empty];
 }
 

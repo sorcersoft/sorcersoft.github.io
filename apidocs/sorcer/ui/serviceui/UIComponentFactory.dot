@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ui.serviceui.UIComponentFactory
-	c365554 [label=<<table title="sorcer.ui.serviceui.UIComponentFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UIComponentFactory.html">
+	c365564 [label=<<table title="sorcer.ui.serviceui.UIComponentFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UIComponentFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UIComponentFactory </td></tr>
 		</table></td></tr>
@@ -27,9 +27,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UIComponentFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ui.serviceui.UIComponentFactory implements net.jini.lookup.ui.factory.JComponentFactory
-	c365743:p -> c365554:p [dir=back,arrowtail=empty,style=dashed];
+	c365743:p -> c365564:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ui.serviceui.UIComponentFactory implements java.io.Serializable
-	c365744:p -> c365554:p [dir=back,arrowtail=empty,style=dashed];
+	c365744:p -> c365564:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c365744 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

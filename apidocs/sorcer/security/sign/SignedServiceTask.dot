@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.exertion.NetTask
-	c318564 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/exertion/NetTask.html">
+	c318601 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/exertion/NetTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetTask </td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../core/exertion/NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.SignedTaskInterface
-	c318618 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedTaskInterface.html">
+	c318614 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedTaskInterface.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SignedTaskInterface </td></tr>
@@ -52,7 +52,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignedTaskInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.SignedServiceTask
-	c318619 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignedServiceTask.html">
+	c318617 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignedServiceTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignedServiceTask </td></tr>
 		</table></td></tr>
@@ -68,11 +68,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignedServiceTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.security.sign.SignedServiceTask extends sorcer.core.exertion.NetTask
-	c318564:p -> c318619:p [dir=back,arrowtail=empty];
+	c318601:p -> c318617:p [dir=back,arrowtail=empty];
 	//sorcer.security.sign.SignedServiceTask implements sorcer.security.sign.SignedTaskInterface
-	c318618:p -> c318619:p [dir=back,arrowtail=empty,style=dashed];
+	c318614:p -> c318617:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.security.sign.SignedServiceTask implements java.io.Serializable
-	c318802:p -> c318619:p [dir=back,arrowtail=empty,style=dashed];
+	c318802:p -> c318617:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c318802 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.ServiceProvider
-	c171121 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/ServiceProvider.html">
+	c171113 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -146,21 +146,8 @@ digraph G {
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.SecureIdentifiable
-	c171164 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SecureIdentifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SecureIdentifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SecureIdentifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Identity
-	c171169 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identity.html">
+	c171164 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
 		</table></td></tr>
@@ -181,8 +168,21 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.SecureIdentifiable
+	c171165 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SecureIdentifiable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SecureIdentifiable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SecureIdentifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c171192 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+	c171200 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -226,8 +226,22 @@ digraph G {
 <tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identifiable
+	c171209 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Identifiable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Identifiable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getId() : Object </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Mappable<T>
-	c171193 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mappable.html">
+	c171215 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mappable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
@@ -241,22 +255,8 @@ digraph G {
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identifiable
-	c171203 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Identifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Identifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c171249 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
+	c171253 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -281,7 +281,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../co/tuple/Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.MarshalledData
-	c171310 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/MarshalledData.html">
+	c171308 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/MarshalledData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MarshalledData </td></tr>
 		</table></td></tr>
@@ -304,20 +304,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../util/bdb/objects/MarshalledData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.ServiceProvider implements sorcer.service.Identifiable
-	c171203:p -> c171121:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.SecureIdentifiable implements sorcer.service.Identifiable
-	c171203:p -> c171164:p [dir=back,arrowtail=empty,style=dashed];
+	c171209:p -> c171113:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Identity implements sorcer.service.Identifiable
-	c171203:p -> c171169:p [dir=back,arrowtail=empty,style=dashed];
+	c171209:p -> c171164:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.SecureIdentifiable implements sorcer.service.Identifiable
+	c171209:p -> c171165:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Mappable<T>
-	c171193:p -> c171192:p [dir=back,arrowtail=empty,style=dashed];
+	c171215:p -> c171200:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Identifiable
-	c171203:p -> c171192:p [dir=back,arrowtail=empty,style=dashed];
+	c171209:p -> c171200:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Mappable<T> implements sorcer.service.Identifiable
-	c171203:p -> c171193:p [dir=back,arrowtail=empty,style=dashed];
+	c171209:p -> c171215:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Identifiable
-	c171203:p -> c171249:p [dir=back,arrowtail=empty,style=dashed];
+	c171209:p -> c171253:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.bdb.objects.MarshalledData implements sorcer.service.Identifiable
-	c171203:p -> c171310:p [dir=back,arrowtail=empty,style=dashed];
+	c171209:p -> c171308:p [dir=back,arrowtail=empty,style=dashed];
 }
 

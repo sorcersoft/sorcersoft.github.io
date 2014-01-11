@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.monitor.MonitorEvent
-	c268507 [label=<<table title="sorcer.core.monitor.MonitorEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/monitor/MonitorEvent.html">
+	c268510 [label=<<table title="sorcer.core.monitor.MonitorEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/monitor/MonitorEvent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitorEvent </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/monitor/MonitorEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.RemoteServiceEvent
-	c268538 [label=<<table title="sorcer.service.RemoteServiceEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteServiceEvent.html">
+	c268534 [label=<<table title="sorcer.service.RemoteServiceEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteServiceEvent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteServiceEvent </td></tr>
 		</table></td></tr>
@@ -42,13 +42,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RemoteServiceEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.monitor.MonitorEvent extends sorcer.service.RemoteServiceEvent
-	c268538:p -> c268507:p [dir=back,arrowtail=empty];
+	c268534:p -> c268510:p [dir=back,arrowtail=empty];
 	//sorcer.core.monitor.MonitorEvent implements java.io.Serializable
-	c268946:p -> c268507:p [dir=back,arrowtail=empty,style=dashed];
+	c268946:p -> c268510:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.RemoteServiceEvent extends net.jini.core.event.RemoteEvent
-	c268947:p -> c268538:p [dir=back,arrowtail=empty];
+	c268947:p -> c268534:p [dir=back,arrowtail=empty];
 	//sorcer.service.RemoteServiceEvent implements java.io.Serializable
-	c268946:p -> c268538:p [dir=back,arrowtail=empty,style=dashed];
+	c268946:p -> c268534:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c268946 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

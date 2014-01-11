@@ -9,8 +9,24 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.resolver.AbstractArtifactResolver
+	c167202 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # log : Logger </td></tr>
+<tr><td align="left" balign="left"> # versionResolver : VersionResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AbstractArtifactResolver() </td></tr>
+<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> # resolveVersion(groupId : String, artifactId : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.resolver.HybridArtifactResolver
-	c167226 [label=<<table title="sorcer.resolver.HybridArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HybridArtifactResolver.html">
+	c167205 [label=<<table title="sorcer.resolver.HybridArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HybridArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HybridArtifactResolver </td></tr>
 		</table></td></tr>
@@ -29,23 +45,7 @@ digraph G {
 <tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./HybridArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.AbstractArtifactResolver
-	c167233 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # log : Logger </td></tr>
-<tr><td align="left" balign="left"> # versionResolver : VersionResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractArtifactResolver() </td></tr>
-<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> # resolveVersion(groupId : String, artifactId : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.resolver.HybridArtifactResolver extends sorcer.resolver.AbstractArtifactResolver
-	c167233:p -> c167226:p [dir=back,arrowtail=empty];
+	c167202:p -> c167205:p [dir=back,arrowtail=empty];
 }
 

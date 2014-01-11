@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Job
-	c90041 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Job.html">
+	c90042 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Job.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Job </font></td></tr>
 		</table></td></tr>
@@ -82,7 +82,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Job.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ComplexExertion
-	c90102 [label=<<table title="sorcer.service.ComplexExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComplexExertion.html">
+	c90076 [label=<<table title="sorcer.service.ComplexExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComplexExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ComplexExertion </td></tr>
@@ -108,6 +108,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComplexExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Job implements sorcer.service.ComplexExertion
-	c90102:p -> c90041:p [dir=back,arrowtail=empty,style=dashed];
+	c90076:p -> c90042:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo
-	c294911 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.html">
+	c294913 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogerInfo </td></tr>
 		</table></td></tr>
@@ -42,9 +42,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo extends java.util.concurrent.ConcurrentHashMap<sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList, java.util.List<net.jini.core.lookup.ServiceItem>>
-	c295031:p -> c294911:p [dir=back,arrowtail=empty];
+	c295031:p -> c294913:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo implements java.io.Serializable
-	c295032:p -> c294911:p [dir=back,arrowtail=empty,style=dashed];
+	c295032:p -> c294913:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c295032 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

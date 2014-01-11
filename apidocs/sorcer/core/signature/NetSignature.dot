@@ -9,8 +9,39 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.signature.ObjectSignature
+	c218045 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectSignature.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ObjectSignature </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ObjectSignature() </td></tr>
+<tr><td align="left" balign="left"> + ObjectSignature(selector : String, object : Object, argTypes : Class&lt;?&gt;[], args : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + ObjectSignature(selector : String, providerClass : Class&lt;?&gt;, argClasses : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ObjectSignature(providerClass : Class&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Object </td></tr>
+<tr><td align="left" balign="left"> + setTarget(target : Object) </td></tr>
+<tr><td align="left" balign="left"> + getProviderType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + setProviderType(providerType : Class&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getTypes() : Class&lt;?&gt;[] </td></tr>
+<tr><td align="left" balign="left"> + setTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + newInstance() : Object </td></tr>
+<tr><td align="left" balign="left"> + newInstance(args : Object[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + newInstance(args : Object[], argClasses : Class&lt;?&gt;[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + initInstance() : Object </td></tr>
+<tr><td align="left" balign="left"> + isSelectable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + initInstance(args : Object[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + initInstance(args : Object[], argClasses : Class&lt;?&gt;[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + build() : Object </td></tr>
+<tr><td align="left" balign="left"> + build(inContext : Context&lt;?&gt;) : Object </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ObjectSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.NetSignature
-	c218086 [label=<<table title="sorcer.core.signature.NetSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetSignature.html">
+	c218046 [label=<<table title="sorcer.core.signature.NetSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetSignature </td></tr>
 		</table></td></tr>
@@ -61,38 +92,7 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.signature.ObjectSignature
-	c218089 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectSignature.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectSignature </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ObjectSignature() </td></tr>
-<tr><td align="left" balign="left"> + ObjectSignature(selector : String, object : Object, argTypes : Class&lt;?&gt;[], args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + ObjectSignature(selector : String, providerClass : Class&lt;?&gt;, argClasses : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + ObjectSignature(providerClass : Class&lt;?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Object </td></tr>
-<tr><td align="left" balign="left"> + setTarget(target : Object) </td></tr>
-<tr><td align="left" balign="left"> + getProviderType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setProviderType(providerType : Class&lt;?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getTypes() : Class&lt;?&gt;[] </td></tr>
-<tr><td align="left" balign="left"> + setTypes(types : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + newInstance() : Object </td></tr>
-<tr><td align="left" balign="left"> + newInstance(args : Object[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + newInstance(args : Object[], argClasses : Class&lt;?&gt;[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + initInstance() : Object </td></tr>
-<tr><td align="left" balign="left"> + isSelectable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + initInstance(args : Object[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + initInstance(args : Object[], argClasses : Class&lt;?&gt;[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + build() : Object </td></tr>
-<tr><td align="left" balign="left"> + build(inContext : Context&lt;?&gt;) : Object </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ObjectSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.NetSignature extends sorcer.core.signature.ObjectSignature
-	c218089:p -> c218086:p [dir=back,arrowtail=empty];
+	c218045:p -> c218046:p [dir=back,arrowtail=empty];
 }
 

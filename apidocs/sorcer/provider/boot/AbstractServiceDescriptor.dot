@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.AbstractServiceDescriptor
-	c53251 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractServiceDescriptor.html">
+	c53253 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractServiceDescriptor </font></td></tr>
 		</table></td></tr>
@@ -32,7 +32,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.SorcerServiceDescriptor
-	c53258 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
+	c53257 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -54,7 +54,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.OpstringServiceDescriptor
-	c53262 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../boot/OpstringServiceDescriptor.html">
+	c53268 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../boot/OpstringServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpstringServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -67,11 +67,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../boot/OpstringServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.provider.boot.AbstractServiceDescriptor implements com.sun.jini.start.ServiceDescriptor
-	c53351:p -> c53251:p [dir=back,arrowtail=empty,style=dashed];
+	c53351:p -> c53253:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.provider.boot.SorcerServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c53251:p -> c53258:p [dir=back,arrowtail=empty];
+	c53253:p -> c53257:p [dir=back,arrowtail=empty];
 	//sorcer.boot.OpstringServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c53251:p -> c53262:p [dir=back,arrowtail=empty];
+	c53253:p -> c53268:p [dir=back,arrowtail=empty];
 	// com.sun.jini.start.ServiceDescriptor
 	c53351 [label=<<table title="com.sun.jini.start.ServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/ServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

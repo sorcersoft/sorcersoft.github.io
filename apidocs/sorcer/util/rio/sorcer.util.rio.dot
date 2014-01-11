@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.util.rio.OpStringStrLoader
-	c39846 [label=<<table title="sorcer.util.rio.OpStringStrLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpStringStrLoader.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OpStringStrLoader </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + OpStringStrLoader() </td></tr>
-<tr><td align="left" balign="left"> + parseOperationalString(groovyOpString : String) : OperationalString[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OpStringStrLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.rio.OpStringUtil
-	c39847 [label=<<table title="sorcer.util.rio.OpStringUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpStringUtil.html">
+	c39846 [label=<<table title="sorcer.util.rio.OpStringUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpStringUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpStringUtil </td></tr>
 		</table></td></tr>
@@ -40,5 +27,18 @@ digraph G {
 <tr><td align="left" balign="left"> + getServiceElement(operationalString : OperationalString) : ServiceElement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OpStringUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.rio.OpStringStrLoader
+	c39847 [label=<<table title="sorcer.util.rio.OpStringStrLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpStringStrLoader.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OpStringStrLoader </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OpStringStrLoader() </td></tr>
+<tr><td align="left" balign="left"> + parseOperationalString(groovyOpString : String) : OperationalString[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OpStringStrLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

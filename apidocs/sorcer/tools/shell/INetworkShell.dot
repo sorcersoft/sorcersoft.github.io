@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.NetworkShell
-	c169519 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.html">
+	c169536 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetworkShell </td></tr>
 		</table></td></tr>
@@ -76,7 +76,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.INetworkShell
-	c169531 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./INetworkShell.html">
+	c169545 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./INetworkShell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> INetworkShell </td></tr>
@@ -97,6 +97,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./INetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.NetworkShell implements sorcer.tools.shell.INetworkShell
-	c169531:p -> c169519:p [dir=back,arrowtail=empty,style=dashed];
+	c169545:p -> c169536:p [dir=back,arrowtail=empty,style=dashed];
 }
 

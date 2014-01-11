@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.ServiceClassLoader
-	c296101 [label=<<table title="sorcer.provider.boot.ServiceClassLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceClassLoader.html">
+	c296103 [label=<<table title="sorcer.provider.boot.ServiceClassLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceClassLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceClassLoader </td></tr>
 		</table></td></tr>
@@ -32,9 +32,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceClassLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.provider.boot.ServiceClassLoader extends edu.emory.mathcs.util.classloader.URIClassLoader
-	c296192:p -> c296101:p [dir=back,arrowtail=empty];
+	c296192:p -> c296103:p [dir=back,arrowtail=empty];
 	//sorcer.provider.boot.ServiceClassLoader implements net.jini.loader.ClassAnnotation
-	c296193:p -> c296101:p [dir=back,arrowtail=empty,style=dashed];
+	c296193:p -> c296103:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.loader.ClassAnnotation
 	c296193 [label=<<table title="net.jini.loader.ClassAnnotation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/loader/ClassAnnotation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

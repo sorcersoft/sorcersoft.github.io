@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.ServiceProvider
-	c145035 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c145027 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -147,7 +147,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.exertmonitor.ExertMonitor
-	c145049 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertMonitor.html">
+	c145038 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertMonitor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertMonitor </td></tr>
 		</table></td></tr>
@@ -176,15 +176,15 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertMonitor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitoringManagement
-	c145066 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../monitor/MonitoringManagement.html">
+	c145069 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../monitor/MonitoringManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitoringManagement </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../monitor/MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.exertmonitor.ExertMonitor extends sorcer.core.provider.ServiceProvider
-	c145035:p -> c145049:p [dir=back,arrowtail=empty];
+	c145027:p -> c145038:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.exertmonitor.ExertMonitor implements sorcer.core.monitor.MonitoringManagement
-	c145066:p -> c145049:p [dir=back,arrowtail=empty,style=dashed];
+	c145069:p -> c145038:p [dir=back,arrowtail=empty,style=dashed];
 }
 

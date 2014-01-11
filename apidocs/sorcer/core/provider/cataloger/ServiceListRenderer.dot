@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceListRenderer
-	c300717 [label=<<table title="sorcer.core.provider.cataloger.ServiceListRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceListRenderer.html">
+	c300713 [label=<<table title="sorcer.core.provider.cataloger.ServiceListRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceListRenderer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceListRenderer </td></tr>
 		</table></td></tr>
@@ -24,9 +24,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceListRenderer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceListRenderer extends javax.swing.JLabel
-	c300832:p -> c300717:p [dir=back,arrowtail=empty];
+	c300832:p -> c300713:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceListRenderer implements javax.swing.ListCellRenderer<E>
-	c300833:p -> c300717:p [dir=back,arrowtail=empty,style=dashed];
+	c300833:p -> c300713:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.JLabel
 	c300832 [label=<<table title="javax.swing.JLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JLabel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

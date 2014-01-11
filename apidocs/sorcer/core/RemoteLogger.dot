@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.RemoteLogger
-	c266638 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteLogger.html">
+	c266699 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteLogger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteLogger </td></tr>
@@ -49,9 +49,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./provider/logger/RemoteLoggerManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.RemoteLogger implements java.rmi.Remote
-	c267207:p -> c266638:p [dir=back,arrowtail=empty,style=dashed];
+	c267207:p -> c266699:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.logger.RemoteLoggerManager implements sorcer.core.RemoteLogger
-	c266638:p -> c266936:p [dir=back,arrowtail=empty,style=dashed];
+	c266699:p -> c266936:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
 	c267207 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

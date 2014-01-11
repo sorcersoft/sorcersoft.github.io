@@ -10,21 +10,21 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.Jobber
-	c287609 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Jobber.html">
+	c287596 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Jobber.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Jobber </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Spacer
-	c287617 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Spacer.html">
+	c287604 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Spacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Spacer </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Provider
-	c287618 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
+	c287606 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider </td></tr>
@@ -68,7 +68,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/provider/Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Outer
-	c287623 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Outer.html">
+	c287614 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Outer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Outer </td></tr>
@@ -81,27 +81,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/proxy/Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partner
-	c287625 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Partner.html">
+	c287615 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Partner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partner </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/proxy/Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Service
-	c287668 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Service.html">
+	// sorcer.service.Tasker
+	c287682 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Service </td></tr>
+<tr><td align="center" balign="center"> Tasker </td></tr>
 		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c287676 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+	c287684 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -145,28 +139,34 @@ digraph G {
 <tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Tasker
-	c287690 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tasker.html">
+	// sorcer.service.Service
+	c287705 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Tasker </td></tr>
+<tr><td align="center" balign="center"> Service </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.Jobber implements sorcer.service.Service
-	c287668:p -> c287609:p [dir=back,arrowtail=empty,style=dashed];
+	c287705:p -> c287596:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Spacer implements sorcer.service.Service
-	c287668:p -> c287617:p [dir=back,arrowtail=empty,style=dashed];
+	c287705:p -> c287604:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Provider implements sorcer.service.Service
-	c287668:p -> c287618:p [dir=back,arrowtail=empty,style=dashed];
+	c287705:p -> c287606:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Outer implements sorcer.service.Service
-	c287668:p -> c287623:p [dir=back,arrowtail=empty,style=dashed];
+	c287705:p -> c287614:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
-	c287623:p -> c287625:p [dir=back,arrowtail=empty,style=dashed];
+	c287614:p -> c287615:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Partner implements sorcer.service.Service
-	c287668:p -> c287625:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Exertion implements sorcer.service.Service
-	c287668:p -> c287676:p [dir=back,arrowtail=empty,style=dashed];
+	c287705:p -> c287615:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Tasker implements sorcer.service.Service
-	c287668:p -> c287690:p [dir=back,arrowtail=empty,style=dashed];
+	c287705:p -> c287682:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Exertion implements sorcer.service.Service
+	c287705:p -> c287684:p [dir=back,arrowtail=empty,style=dashed];
 }
 

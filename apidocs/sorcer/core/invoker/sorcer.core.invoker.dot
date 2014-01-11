@@ -9,15 +9,36 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.invoker.MethodInvoking<T>
+	c8256 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> MethodInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./MethodInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.ScriptInvoking<T>
+	c8257 [label=<<table title="sorcer.core.invoker.ScriptInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ScriptInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ScriptInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ScriptInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.ContextInvoking<T>
+	c8258 [label=<<table title="sorcer.core.invoker.ContextInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextInvoking.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ContextInvoking&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.CmdInvoking<T>
-	c3557 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CmdInvoking.html">
+	c8259 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CmdInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CmdInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CmdInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.InvokeContextPassing
-	c3558 [label=<<table title="sorcer.core.invoker.InvokeContextPassing" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InvokeContextPassing.html">
+	c8260 [label=<<table title="sorcer.core.invoker.InvokeContextPassing" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InvokeContextPassing.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> InvokeContextPassing </td></tr>
@@ -30,32 +51,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./InvokeContextPassing.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.ExertionInvoking<T>
-	c3559 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionInvoking.html">
+	c8261 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ExertionInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.ContextInvoking<T>
-	c3560 [label=<<table title="sorcer.core.invoker.ContextInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ContextInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.ScriptInvoking<T>
-	c3561 [label=<<table title="sorcer.core.invoker.ScriptInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ScriptInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ScriptInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ScriptInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.MethodInvoking<T>
-	c3562 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoking.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> MethodInvoking&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./MethodInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

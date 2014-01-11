@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c212748 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
+	c212812 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -618,8 +618,22 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="../SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.MonitoredTaskDispatcher
+	c213085 [label=<<table title="sorcer.core.dispatch.MonitoredTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredTaskDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> MonitoredTaskDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MonitoredTaskDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./MonitoredTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c213085 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+	c213097 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -687,7 +701,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.MonitoredExertDispatcher
-	c213088 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoredExertDispatcher.html">
+	c213103 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoredExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -706,25 +720,11 @@ digraph G {
 <tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.MonitoredTaskDispatcher
-	c213098 [label=<<table title="sorcer.core.dispatch.MonitoredTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredTaskDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MonitoredTaskDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitoredTaskDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./MonitoredTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.dispatch.MonitoredExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c213085:p -> c213088:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.MonitoredExertDispatcher implements sorcer.core.SorcerConstants
-	c212748:p -> c213088:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.dispatch.MonitoredTaskDispatcher extends sorcer.core.dispatch.MonitoredExertDispatcher
-	c213088:p -> c213098:p [dir=back,arrowtail=empty];
+	c213103:p -> c213085:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.MonitoredExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
+	c213097:p -> c213103:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.MonitoredExertDispatcher implements sorcer.core.SorcerConstants
+	c212812:p -> c213103:p [dir=back,arrowtail=empty,style=dashed];
 }
 

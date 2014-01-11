@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Condition
-	c93512 [label=<<table title="sorcer.service.Condition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Condition.html">
+	c93514 [label=<<table title="sorcer.service.Condition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Condition.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Condition </td></tr>
 		</table></td></tr>
@@ -34,21 +34,8 @@ digraph G {
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;Object&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Condition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Conditional
-	c93533 [label=<<table title="sorcer.service.Conditional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Conditional.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Conditional </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isTrue() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Conditional.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Evaluation<T>
-	c93546 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
+	c93530 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
@@ -62,12 +49,25 @@ digraph G {
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Conditional
+	c93573 [label=<<table title="sorcer.service.Conditional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Conditional.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Conditional </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + isTrue() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Conditional.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Condition implements sorcer.service.Evaluation<T>
-	c93546:p -> c93512:p [dir=back,arrowtail=empty,style=dashed];
+	c93530:p -> c93514:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Condition implements sorcer.service.Conditional
-	c93533:p -> c93512:p [dir=back,arrowtail=empty,style=dashed];
+	c93573:p -> c93514:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Condition implements java.io.Serializable
-	c93932:p -> c93512:p [dir=back,arrowtail=empty,style=dashed];
+	c93932:p -> c93514:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c93932 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.HTMLView
-	c162262 [label=<<table title="sorcer.ssb.tools.plugin.browser.HTMLView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HTMLView.html">
+	c162253 [label=<<table title="sorcer.ssb.tools.plugin.browser.HTMLView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HTMLView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HTMLView </td></tr>
 		</table></td></tr>
@@ -26,9 +26,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HTMLView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.HTMLView extends javax.swing.JPanel
-	c162315:p -> c162262:p [dir=back,arrowtail=empty];
+	c162315:p -> c162253:p [dir=back,arrowtail=empty];
 	//sorcer.ssb.tools.plugin.browser.HTMLView implements javax.swing.event.HyperlinkListener
-	c162316:p -> c162262:p [dir=back,arrowtail=empty,style=dashed];
+	c162316:p -> c162253:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.event.HyperlinkListener
 	c162316 [label=<<table title="javax.swing.event.HyperlinkListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/event/HyperlinkListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

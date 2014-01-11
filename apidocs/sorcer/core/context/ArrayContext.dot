@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ServiceContext<T>
-	c62147 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c62178 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -281,7 +281,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ArrayContext
-	c62154 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArrayContext.html">
+	c62184 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArrayContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayContext </td></tr>
 		</table></td></tr>
@@ -344,7 +344,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArrayContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.IndexedContext
-	c62222 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/IndexedContext.html">
+	c62216 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/IndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IndexedContext </td></tr>
@@ -358,8 +358,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/IndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ArrayContext extends sorcer.core.context.ServiceContext
-	c62147:p -> c62154:p [dir=back,arrowtail=empty];
+	c62178:p -> c62184:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ArrayContext implements sorcer.service.IndexedContext
-	c62222:p -> c62154:p [dir=back,arrowtail=empty,style=dashed];
+	c62216:p -> c62184:p [dir=back,arrowtail=empty,style=dashed];
 }
 

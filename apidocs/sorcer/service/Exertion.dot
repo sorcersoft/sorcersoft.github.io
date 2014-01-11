@@ -9,8 +9,29 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.AsyncExertion
+	c146249 [label=<<table title="sorcer.service.AsyncExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AsyncExertion.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> AsyncExertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + request(txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getLastRequestId() : RequestId </td></tr>
+<tr><td align="left" balign="left"> + getRequestResult(id : RequestId) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + isLastRequestDone() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getRequestIds() : Set&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllPendingRequestsIds() : Set&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllDoneRequestsIds() : Set&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTotalDoneRequests() : int </td></tr>
+<tr><td align="left" balign="left"> + getTotalPendingRequests() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AsyncExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ServiceExertion
-	c146240 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
+	c146251 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
@@ -192,42 +213,23 @@ digraph G {
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.AsyncExertion
-	c146253 [label=<<table title="sorcer.service.AsyncExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AsyncExertion.html">
+	// sorcer.service.Evaluation<T>
+	c146257 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> AsyncExertion </td></tr>
+<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + request(txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getLastRequestId() : RequestId </td></tr>
-<tr><td align="left" balign="left"> + getRequestResult(id : RequestId) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isLastRequestDone() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getRequestIds() : Set&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllPendingRequestsIds() : Set&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllDoneRequestsIds() : Set&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTotalDoneRequests() : int </td></tr>
-<tr><td align="left" balign="left"> + getTotalPendingRequests() : int </td></tr>
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./AsyncExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Service
-	c146256 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Service.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Service </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c146264 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Exertion.html">
+	c146272 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -271,8 +273,22 @@ digraph G {
 <tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identifiable
+	c146281 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Identifiable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getId() : Object </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Mappable<T>
-	c146265 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mappable.html">
+	c146287 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mappable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
@@ -286,35 +302,6 @@ digraph G {
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Evaluation<T>
-	c146273 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identifiable
-	c146275 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Identifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Invocation<T>
 	c146288 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -329,26 +316,39 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.service.ServiceExertion implements sorcer.service.Exertion
-	c146264:p -> c146240:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.ServiceExertion implements java.io.Serializable
-	c146659:p -> c146240:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.service.Service
+	c146293 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Service.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Service </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.AsyncExertion implements sorcer.service.Exertion
-	c146264:p -> c146253:p [dir=back,arrowtail=empty,style=dashed];
+	c146272:p -> c146249:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.ServiceExertion implements sorcer.service.Exertion
+	c146272:p -> c146251:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.ServiceExertion implements java.io.Serializable
+	c146659:p -> c146251:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Service
-	c146256:p -> c146264:p [dir=back,arrowtail=empty,style=dashed];
+	c146293:p -> c146272:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Mappable<T>
-	c146265:p -> c146264:p [dir=back,arrowtail=empty,style=dashed];
+	c146287:p -> c146272:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Evaluation<T>
-	c146273:p -> c146264:p [dir=back,arrowtail=empty,style=dashed];
+	c146257:p -> c146272:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Invocation<T>
-	c146288:p -> c146264:p [dir=back,arrowtail=empty,style=dashed];
+	c146288:p -> c146272:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements java.io.Serializable
-	c146659:p -> c146264:p [dir=back,arrowtail=empty,style=dashed];
+	c146659:p -> c146272:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Exertion implements sorcer.service.Identifiable
-	c146275:p -> c146264:p [dir=back,arrowtail=empty,style=dashed];
+	c146281:p -> c146272:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Mappable<T> implements sorcer.service.Identifiable
-	c146275:p -> c146265:p [dir=back,arrowtail=empty,style=dashed];
+	c146281:p -> c146287:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c146659 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Setter
-	c310315 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Setter.html">
+	c310325 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Setter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Setter </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Setter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c310429 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+	c310453 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Par&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -67,11 +67,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Setter implements java.io.Serializable
-	c310690:p -> c310315:p [dir=back,arrowtail=empty,style=dashed];
+	c310690:p -> c310325:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Setter
-	c310315:p -> c310429:p [dir=back,arrowtail=empty,style=dashed];
+	c310325:p -> c310453:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
-	c310690:p -> c310429:p [dir=back,arrowtail=empty,style=dashed];
+	c310690:p -> c310453:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c310690 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

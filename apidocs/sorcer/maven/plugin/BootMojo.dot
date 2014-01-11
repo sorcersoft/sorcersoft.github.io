@@ -9,33 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.maven.plugin.BootMojo
-	c71886 [label=<<table title="sorcer.maven.plugin.BootMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BootMojo.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> BootMojo </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # servicesConfig : File </td></tr>
-<tr><td align="left" balign="left"> # mainClass : String </td></tr>
-<tr><td align="left" balign="left"> # projectOutputDir : File </td></tr>
-<tr><td align="left" balign="left"> # sorcerVersion : String </td></tr>
-<tr><td align="left" balign="left"> # booter : String </td></tr>
-<tr><td align="left" balign="left"> # provider : String </td></tr>
-<tr><td align="left" balign="left"> # debug : boolean </td></tr>
-<tr><td align="left" balign="left"> # logFile : File </td></tr>
-<tr><td align="left" balign="left"> # workingDir : File </td></tr>
-<tr><td align="left" balign="left"> # blitzHome : File </td></tr>
-<tr><td align="left" balign="left"> # sleepAfter : long </td></tr>
-<tr><td align="left" balign="left"> # waitMode : BootMojo.WaitMode </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + BootMojo() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> # reserveProviderPort() : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./BootMojo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.maven.plugin.AbstractSorcerMojo
-	c71892 [label=<<table title="sorcer.maven.plugin.AbstractSorcerMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSorcerMojo.html">
+	c71890 [label=<<table title="sorcer.maven.plugin.AbstractSorcerMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSorcerMojo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSorcerMojo </font></td></tr>
 		</table></td></tr>
@@ -64,7 +39,32 @@ digraph G {
 <tr><td align="left" balign="left"> + resolveDependencies(root : Artifact, scope : String, filter : DependencyFilter) : List&lt;Artifact&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSorcerMojo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.maven.plugin.BootMojo
+	c71893 [label=<<table title="sorcer.maven.plugin.BootMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BootMojo.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BootMojo </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # servicesConfig : File </td></tr>
+<tr><td align="left" balign="left"> # mainClass : String </td></tr>
+<tr><td align="left" balign="left"> # projectOutputDir : File </td></tr>
+<tr><td align="left" balign="left"> # sorcerVersion : String </td></tr>
+<tr><td align="left" balign="left"> # booter : String </td></tr>
+<tr><td align="left" balign="left"> # provider : String </td></tr>
+<tr><td align="left" balign="left"> # debug : boolean </td></tr>
+<tr><td align="left" balign="left"> # logFile : File </td></tr>
+<tr><td align="left" balign="left"> # workingDir : File </td></tr>
+<tr><td align="left" balign="left"> # blitzHome : File </td></tr>
+<tr><td align="left" balign="left"> # sleepAfter : long </td></tr>
+<tr><td align="left" balign="left"> # waitMode : BootMojo.WaitMode </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BootMojo() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> # reserveProviderPort() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./BootMojo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.maven.plugin.BootMojo extends sorcer.maven.plugin.AbstractSorcerMojo
-	c71892:p -> c71886:p [dir=back,arrowtail=empty];
+	c71890:p -> c71893:p [dir=back,arrowtail=empty];
 }
 

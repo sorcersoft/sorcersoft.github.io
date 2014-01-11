@@ -9,22 +9,25 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.util.exec.RedirectibleInput
-	c262648 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RedirectibleInput.html">
+	// sorcer.util.exec.RedirectingInputStream
+	c262623 [label=<<table title="sorcer.util.exec.RedirectingInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectingInputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
+<tr><td align="center" balign="center"> RedirectingInputStream </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + redirect(dest : OutputStream, len : int) : int </td></tr>
-<tr><td align="left" balign="left"> + redirectAll(dest : OutputStream) : int </td></tr>
+<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream) </td></tr>
+<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream, buflen : int) </td></tr>
+<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream, autoFlush : boolean, autoClose : boolean) </td></tr>
+<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream, autoFlush : boolean, autoClose : boolean, buflen : int) </td></tr>
+<tr><td align="left" balign="left"> + redirect(out : OutputStream, len : int) : int </td></tr>
+<tr><td align="left" balign="left"> + redirectAll(out : OutputStream) : int </td></tr>
 		</table></td></tr>
-		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./RedirectingInputStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.exec.Input
-	c262650 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Input.html">
+	c262629 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Input.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Input </td></tr>
@@ -44,26 +47,23 @@ digraph G {
 <tr><td align="left" balign="left"> + mark(readLimit : int) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Input.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.exec.RedirectingInputStream
-	c262651 [label=<<table title="sorcer.util.exec.RedirectingInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectingInputStream.html">
+	// sorcer.util.exec.RedirectibleInput
+	c262630 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RedirectibleInput.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RedirectingInputStream </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream) </td></tr>
-<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream, buflen : int) </td></tr>
-<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream, autoFlush : boolean, autoClose : boolean) </td></tr>
-<tr><td align="left" balign="left"> + RedirectingInputStream(in : InputStream, autoFlush : boolean, autoClose : boolean, buflen : int) </td></tr>
-<tr><td align="left" balign="left"> + redirect(out : OutputStream, len : int) : int </td></tr>
-<tr><td align="left" balign="left"> + redirectAll(out : OutputStream) : int </td></tr>
+<tr><td align="left" balign="left"> + redirect(dest : OutputStream, len : int) : int </td></tr>
+<tr><td align="left" balign="left"> + redirectAll(dest : OutputStream) : int </td></tr>
 		</table></td></tr>
-		</table>>, URL="./RedirectingInputStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.util.exec.RedirectibleInput implements sorcer.util.exec.Input
-	c262650:p -> c262648:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.exec.RedirectingInputStream implements sorcer.util.exec.RedirectibleInput
-	c262648:p -> c262651:p [dir=back,arrowtail=empty,style=dashed];
+	c262630:p -> c262623:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.util.exec.RedirectibleInput implements sorcer.util.exec.Input
+	c262629:p -> c262630:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.ServiceExertion
-	c70907 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
+	c70918 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
@@ -193,7 +193,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Block
-	c70913 [label=<<table title="sorcer.service.Block" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Block.html">
+	c70920 [label=<<table title="sorcer.service.Block" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Block.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Block </td></tr>
 		</table></td></tr>
@@ -215,6 +215,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Block.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Block extends sorcer.service.ServiceExertion
-	c70907:p -> c70913:p [dir=back,arrowtail=empty];
+	c70918:p -> c70920:p [dir=back,arrowtail=empty];
 }
 

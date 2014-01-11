@@ -9,8 +9,24 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.dispatch.SWIFExertDispatcher
+	c279739 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SWIFExertDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SWIFExertDispatcher </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SWIFExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # runExertion(ex : ServiceExertion) : SWIFExertDispatcher.ExertionThread </td></tr>
+<tr><td align="left" balign="left"> # execExertion(ex : Exertion) : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SWIFExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c279729 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+	c279741 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -78,7 +94,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SWIFSequentialDispatcher
-	c279747 [label=<<table title="sorcer.core.dispatch.SWIFSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFSequentialDispatcher.html">
+	c279748 [label=<<table title="sorcer.core.dispatch.SWIFSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SWIFSequentialDispatcher </td></tr>
 		</table></td></tr>
@@ -94,25 +110,9 @@ digraph G {
 <tr><td align="left" balign="left"> + setStatus(ex : ServiceExertion, status : int) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SWIFSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SWIFExertDispatcher
-	c279751 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SWIFExertDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SWIFExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SWIFExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # runExertion(ex : ServiceExertion) : SWIFExertDispatcher.ExertionThread </td></tr>
-<tr><td align="left" balign="left"> # execExertion(ex : Exertion) : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SWIFExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.dispatch.SWIFSequentialDispatcher extends sorcer.core.dispatch.SWIFExertDispatcher
-	c279751:p -> c279747:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SWIFExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c279729:p -> c279751:p [dir=back,arrowtail=empty];
+	c279741:p -> c279739:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.SWIFSequentialDispatcher extends sorcer.core.dispatch.SWIFExertDispatcher
+	c279739:p -> c279748:p [dir=back,arrowtail=empty];
 }
 

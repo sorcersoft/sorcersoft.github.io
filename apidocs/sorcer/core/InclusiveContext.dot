@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.InclusiveContext
-	c172752 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InclusiveContext.html">
+	c172815 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InclusiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> InclusiveContext </td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ComprehensiveContext
-	c172840 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ComprehensiveContext.html">
+	c172882 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ComprehensiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
 		</table></td></tr>
@@ -77,7 +77,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./context/ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c172927 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/Context.html">
+	c172932 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
@@ -255,8 +255,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../service/Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.InclusiveContext implements sorcer.service.Context<T>
-	c172927:p -> c172752:p [dir=back,arrowtail=empty,style=dashed];
+	c172932:p -> c172815:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ComprehensiveContext implements sorcer.core.InclusiveContext
-	c172752:p -> c172840:p [dir=back,arrowtail=empty,style=dashed];
+	c172815:p -> c172882:p [dir=back,arrowtail=empty,style=dashed];
 }
 

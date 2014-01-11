@@ -9,73 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.ComprehensiveContextException
-	c0 [label=<<table title="sorcer.core.ComprehensiveContextException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ComprehensiveContextException </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ComprehensiveContextException() </td></tr>
-<tr><td align="left" balign="left"> + ComprehensiveContextException(msg : String) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ComprehensiveContextException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.Grider
-	c1 [label=<<table title="sorcer.core.Grider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Grider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Grider </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Grider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.FileStorer
-	c2 [label=<<table title="sorcer.core.FileStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileStorer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> FileStorer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInputDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getAppendDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getOutputDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getDirectories(docDesc : DocumentDescriptor) : String </td></tr>
-<tr><td align="left" balign="left"> + getDirectoryContent(desc : DocumentDescriptor) : String </td></tr>
-<tr><td align="left" balign="left"> + listDirectories(desc : DocumentDescriptor) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./FileStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.Auditor
-	c3 [label=<<table title="sorcer.core.Auditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Auditor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Auditor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + audit(context : Context&lt;&gt;) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Auditor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.Persister
-	c4 [label=<<table title="sorcer.core.Persister" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Persister.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Persister </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + isPersistable() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Persister.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerNotifierProtocol
-	c5 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerNotifierProtocol.html">
+	c1798 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerNotifierProtocol.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerNotifierProtocol </td></tr>
@@ -92,8 +27,107 @@ digraph G {
 <tr><td align="left" balign="left"> + appendJobToSession(ownerID : String, jobID : String, sessionType : int, sessionID : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerNotifierProtocol.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.Dispatcher
+	c1799 [label=<<table title="sorcer.core.Dispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Dispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Dispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> + getState() : int </td></tr>
+<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + setProvider(provider : Provider) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Dispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.Auditor
+	c1800 [label=<<table title="sorcer.core.Auditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Auditor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Auditor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + audit(context : Context&lt;&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Auditor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.Persister
+	c1801 [label=<<table title="sorcer.core.Persister" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Persister.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Persister </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
+<tr><td align="left" balign="left"> + isPersistable() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Persister.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.ContextMetaData
+	c1802 [label=<<table title="sorcer.core.ContextMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaData.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ContextMetaData </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getColumnCount() : int </td></tr>
+<tr><td align="left" balign="left"> + getColumnLabel(column : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getColumnName(column : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getColumnType(column : int) : int </td></tr>
+<tr><td align="left" balign="left"> + getColumnTypeName(column : int) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextMetaData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.ComprehensiveContextException
+	c1803 [label=<<table title="sorcer.core.ComprehensiveContextException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ComprehensiveContextException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ComprehensiveContextException() </td></tr>
+<tr><td align="left" balign="left"> + ComprehensiveContextException(msg : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ComprehensiveContextException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.FileStorer
+	c1804 [label=<<table title="sorcer.core.FileStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileStorer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> FileStorer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getInputDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getAppendDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getOutputDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
+<tr><td align="left" balign="left"> + getDirectories(docDesc : DocumentDescriptor) : String </td></tr>
+<tr><td align="left" balign="left"> + getDirectoryContent(desc : DocumentDescriptor) : String </td></tr>
+<tr><td align="left" balign="left"> + listDirectories(desc : DocumentDescriptor) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./FileStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.Grider
+	c1805 [label=<<table title="sorcer.core.Grider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Grider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Grider </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Grider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.InclusiveContext
-	c6 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InclusiveContext.html">
+	c1806 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InclusiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> InclusiveContext </td></tr>
@@ -119,48 +153,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.Methoder
-	c7 [label=<<table title="sorcer.core.Methoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Methoder.html">
+	c1807 [label=<<table title="sorcer.core.Methoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Methoder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Methoder </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Methoder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.Dispatcher
-	c8 [label=<<table title="sorcer.core.Dispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Dispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Dispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-<tr><td align="left" balign="left"> + getState() : int </td></tr>
-<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + setProvider(provider : Provider) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Dispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.ContextMetaData
-	c9 [label=<<table title="sorcer.core.ContextMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaData.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ContextMetaData </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getColumnCount() : int </td></tr>
-<tr><td align="left" balign="left"> + getColumnLabel(column : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getColumnName(column : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getColumnType(column : int) : int </td></tr>
-<tr><td align="left" balign="left"> + getColumnTypeName(column : int) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextMetaData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.RemoteLogger
-	c10 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLogger.html">
+	c1808 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLogger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteLogger </td></tr>
@@ -176,8 +176,58 @@ digraph G {
 <tr><td align="left" balign="left"> + deleteLog(logName : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemoteLogger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.RemoteContextManagement
+	c1809 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.LookupLocators
+	c1810 [label=<<table title="sorcer.core.LookupLocators" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LookupLocators.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LookupLocators </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LookupLocators() </td></tr>
+<tr><td align="left" balign="left"> + getLookupLocators() : String[] </td></tr>
+<tr><td align="left" balign="left"> + setDynamicUrls(dynamicUrls : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setStaticUrls(urls : String[]) </td></tr>
+<tr><td align="left" balign="left"> + isInitialized() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LookupLocators.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.AdministratableProvider
+	c1811 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AdministratableProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.DestroyAdmin
+	c1812 [label=<<table title="sorcer.core.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DestroyAdmin.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DestroyAdmin </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + destroyNode() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DestroyAdmin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.UEID
-	c11 [label=<<table title="sorcer.core.UEID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UEID.html">
+	c1813 [label=<<table title="sorcer.core.UEID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UEID.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UEID </td></tr>
 		</table></td></tr>
@@ -192,21 +242,8 @@ digraph G {
 <tr><td align="left" balign="left"> + fromString(ueid : String) : UEID </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UEID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.AdministratableProvider
-	c12 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AdministratableProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.ContextManagement
-	c13 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagement.html">
+	c1814 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextManagement </td></tr>
@@ -226,7 +263,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerConstants
-	c14 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerConstants.html">
+	c1815 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -835,7 +872,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerEnv
-	c15 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerEnv.html">
+	c1816 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerEnv.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerEnv </td></tr>
 		</table></td></tr>
@@ -974,45 +1011,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getLookupLocatorsHolder() : LookupLocators </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerEnv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.LookupLocators
-	c16 [label=<<table title="sorcer.core.LookupLocators" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LookupLocators.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LookupLocators </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LookupLocators() </td></tr>
-<tr><td align="left" balign="left"> + getLookupLocators() : String[] </td></tr>
-<tr><td align="left" balign="left"> + setDynamicUrls(dynamicUrls : List&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setStaticUrls(urls : String[]) </td></tr>
-<tr><td align="left" balign="left"> + isInitialized() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./LookupLocators.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.DestroyAdmin
-	c17 [label=<<table title="sorcer.core.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DestroyAdmin.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> DestroyAdmin </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + destroyNode() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DestroyAdmin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.RemoteContextManagement
-	c18 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.ServiceActivator
-	c19 [label=<<table title="sorcer.core.ServiceActivator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceActivator.html">
+	c1817 [label=<<table title="sorcer.core.ServiceActivator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceActivator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceActivator </td></tr>
@@ -1025,8 +1025,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceActivator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.Methoder implements sorcer.core.AdministratableProvider
-	c12:p -> c7:p [dir=back,arrowtail=empty,style=dashed];
+	c1811:p -> c1807:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.RemoteContextManagement implements sorcer.core.ContextManagement
-	c13:p -> c18:p [dir=back,arrowtail=empty,style=dashed];
+	c1814:p -> c1809:p [dir=back,arrowtail=empty,style=dashed];
 }
 

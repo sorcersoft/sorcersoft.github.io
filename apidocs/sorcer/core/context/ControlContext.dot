@@ -9,132 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.context.ControlContext
-	c111989 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ControlContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ControlContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + JOBBER_IS_DIRECT : String </td></tr>
-<tr><td align="left" balign="left"> + CONTROL_CONTEXT : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_FLOW : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_PROVISIONABLE : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_OPTI : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_MONITORABLE : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_ACCESS : String </td></tr>
-<tr><td align="left" balign="left"> + NODE_REFERENCE_PRESERVED : String </td></tr>
-<tr><td align="left" balign="left"> + RENDEZVOUS_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFY_EXEC : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_COMMENTS : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_FEEDBACK : String </td></tr>
-<tr><td align="left" balign="left"> + GET_EXEC_TIME : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_REVIEW : String </td></tr>
-<tr><td align="left" balign="left"> + EXEC_TIME : String </td></tr>
-<tr><td align="left" balign="left"> + PRIORITY : String </td></tr>
-<tr><td align="left" balign="left"> + MASTER_EXERTION : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION : String </td></tr>
-<tr><td align="left" balign="left"> + ID : String </td></tr>
-<tr><td align="left" balign="left"> + SKIPPED : String </td></tr>
-<tr><td align="left" balign="left"> + SKIPPED_ : String </td></tr>
-<tr><td align="left" balign="left"> + RERUN : String </td></tr>
-<tr><td align="left" balign="left"> + PULL : String </td></tr>
-<tr><td align="left" balign="left"> + QOS_PULL : String </td></tr>
-<tr><td align="left" balign="left"> + PUSH : String </td></tr>
-<tr><td align="left" balign="left"> + QOS_PUSH : String </td></tr>
-<tr><td align="left" balign="left"> + SWIF : String </td></tr>
-<tr><td align="left" balign="left"> + DIRECT : String </td></tr>
-<tr><td align="left" balign="left"> + AUTO : String </td></tr>
-<tr><td align="left" balign="left"> + PARALLEL : String </td></tr>
-<tr><td align="left" balign="left"> + SEQUENTIAL : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFY : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFY_ALL : String </td></tr>
-<tr><td align="left" balign="left"> + SORCER_VARIABLES_PATH : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_MONITORING : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_WAITABLE : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_WAITED_FROM : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFICATION_MANAGEMENT : String </td></tr>
-<tr><td align="left" balign="left"> + TRUE : String </td></tr>
-<tr><td align="left" balign="left"> + FALSE : String </td></tr>
-<tr><td align="left" balign="left"> + TRACE_LIST : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ControlContext() </td></tr>
-<tr><td align="left" balign="left"> + ControlContext(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + setMasterExertion(e : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + isSequential() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isParallel() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isExertionMaster(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setWaitable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isWait(value : Strategy.Wait) </td></tr>
-<tr><td align="left" balign="left"> + setNotifierEnabled(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isNotifierEnabled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setNodeReferencePreserved(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isNodeReferencePreserved() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
-<tr><td align="left" balign="left"> + setFlowType(type : Strategy.Flow) </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable(value : Strategy.Monitor) </td></tr>
-<tr><td align="left" balign="left"> + setMonitorable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable(value : Strategy.Provision) </td></tr>
-<tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + setOpti(optiType : Strategy.Opti) </td></tr>
-<tr><td align="left" balign="left"> + getOpti() : Strategy.Opti </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getMonitor() : MonitoringManagement </td></tr>
-<tr><td align="left" balign="left"> + setMonitor(monitor : MonitoringManagement) </td></tr>
-<tr><td align="left" balign="left"> + setAccessType(access : Strategy.Access) </td></tr>
-<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
-<tr><td align="left" balign="left"> + setExertionComments(message : String) </td></tr>
-<tr><td align="left" balign="left"> + getExertionComments() : String </td></tr>
-<tr><td align="left" balign="left"> + setExecTimeRequested(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isExecTimeRequested() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setNotifyList(list : String) </td></tr>
-<tr><td align="left" balign="left"> + getNotifyList() : String </td></tr>
-<tr><td align="left" balign="left"> + setRendezvousName(rendezvous : String) </td></tr>
-<tr><td align="left" balign="left"> + getRendezvousName() : String </td></tr>
-<tr><td align="left" balign="left"> + setFeedback(message : String) </td></tr>
-<tr><td align="left" balign="left"> + getFeedback() : String </td></tr>
-<tr><td align="left" balign="left"> + setExecTimeRequested(exertion : Exertion, b : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isExecTimeRequested(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + setSkipped(exertion : Exertion, b : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isSkipped(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + startExecTime() </td></tr>
-<tr><td align="left" balign="left"> + stopExecTime() </td></tr>
-<tr><td align="left" balign="left"> + getExecTime() : String </td></tr>
-<tr><td align="left" balign="left"> + setReview(ex : Exertion, b : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isReview(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + setPriority(exertion : Exertion, priorityValue : int) </td></tr>
-<tr><td align="left" balign="left"> + getPriority(exertion : Exertion) : int </td></tr>
-<tr><td align="left" balign="left"> + setNotifyList(exertion : Exertion, list : String) </td></tr>
-<tr><td align="left" balign="left"> + getNotifyList(ex : Exertion) : String </td></tr>
-<tr><td align="left" balign="left"> + registerExertion(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + deregisterExertion(job : ComplexExertion, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + addAttributeValue(attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + addComponentAssociation(path : String, attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAttributeValue(exertion : Exertion, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getAttributeValue(attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + updateExertionName(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + appendTrace(info : String) </td></tr>
-<tr><td align="left" balign="left"> + addException(et : ThrowableTrace) </td></tr>
-<tr><td align="left" balign="left"> + addException(t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + addException(message : String, t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + describeExceptions() : String </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getSignature(kind : Signature.Kind) : ServiceSignature </td></tr>
-<tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getStopwatch() : Stopwatch </td></tr>
-<tr><td align="left" balign="left"> + setStopwatch(stopwatch : Stopwatch) </td></tr>
-<tr><td align="left" balign="left"> + getMutexId() : Object </td></tr>
-<tr><td align="left" balign="left"> + setMutexId(mutexId : Object) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c111991 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c112022 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -404,8 +280,132 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.ControlContext
+	c112023 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ControlContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ControlContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + JOBBER_IS_DIRECT : String </td></tr>
+<tr><td align="left" balign="left"> + CONTROL_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_FLOW : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_PROVISIONABLE : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_OPTI : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_MONITORABLE : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_ACCESS : String </td></tr>
+<tr><td align="left" balign="left"> + NODE_REFERENCE_PRESERVED : String </td></tr>
+<tr><td align="left" balign="left"> + RENDEZVOUS_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFY_EXEC : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_COMMENTS : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_FEEDBACK : String </td></tr>
+<tr><td align="left" balign="left"> + GET_EXEC_TIME : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_REVIEW : String </td></tr>
+<tr><td align="left" balign="left"> + EXEC_TIME : String </td></tr>
+<tr><td align="left" balign="left"> + PRIORITY : String </td></tr>
+<tr><td align="left" balign="left"> + MASTER_EXERTION : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION : String </td></tr>
+<tr><td align="left" balign="left"> + ID : String </td></tr>
+<tr><td align="left" balign="left"> + SKIPPED : String </td></tr>
+<tr><td align="left" balign="left"> + SKIPPED_ : String </td></tr>
+<tr><td align="left" balign="left"> + RERUN : String </td></tr>
+<tr><td align="left" balign="left"> + PULL : String </td></tr>
+<tr><td align="left" balign="left"> + QOS_PULL : String </td></tr>
+<tr><td align="left" balign="left"> + PUSH : String </td></tr>
+<tr><td align="left" balign="left"> + QOS_PUSH : String </td></tr>
+<tr><td align="left" balign="left"> + SWIF : String </td></tr>
+<tr><td align="left" balign="left"> + DIRECT : String </td></tr>
+<tr><td align="left" balign="left"> + AUTO : String </td></tr>
+<tr><td align="left" balign="left"> + PARALLEL : String </td></tr>
+<tr><td align="left" balign="left"> + SEQUENTIAL : String </td></tr>
+<tr><td align="left" balign="left"> + WAIT : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFY : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFY_ALL : String </td></tr>
+<tr><td align="left" balign="left"> + SORCER_VARIABLES_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_MONITORING : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_WAITABLE : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_WAITED_FROM : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFICATION_MANAGEMENT : String </td></tr>
+<tr><td align="left" balign="left"> + TRUE : String </td></tr>
+<tr><td align="left" balign="left"> + FALSE : String </td></tr>
+<tr><td align="left" balign="left"> + TRACE_LIST : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ControlContext() </td></tr>
+<tr><td align="left" balign="left"> + ControlContext(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + setMasterExertion(e : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + isSequential() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isParallel() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isExertionMaster(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setWaitable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isWait(value : Strategy.Wait) </td></tr>
+<tr><td align="left" balign="left"> + setNotifierEnabled(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isNotifierEnabled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setNodeReferencePreserved(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isNodeReferencePreserved() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
+<tr><td align="left" balign="left"> + setFlowType(type : Strategy.Flow) </td></tr>
+<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isMonitorable(value : Strategy.Monitor) </td></tr>
+<tr><td align="left" balign="left"> + setMonitorable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isProvisionable(value : Strategy.Provision) </td></tr>
+<tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + setOpti(optiType : Strategy.Opti) </td></tr>
+<tr><td align="left" balign="left"> + getOpti() : Strategy.Opti </td></tr>
+<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getMonitor() : MonitoringManagement </td></tr>
+<tr><td align="left" balign="left"> + setMonitor(monitor : MonitoringManagement) </td></tr>
+<tr><td align="left" balign="left"> + setAccessType(access : Strategy.Access) </td></tr>
+<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
+<tr><td align="left" balign="left"> + setExertionComments(message : String) </td></tr>
+<tr><td align="left" balign="left"> + getExertionComments() : String </td></tr>
+<tr><td align="left" balign="left"> + setExecTimeRequested(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isExecTimeRequested() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setNotifyList(list : String) </td></tr>
+<tr><td align="left" balign="left"> + getNotifyList() : String </td></tr>
+<tr><td align="left" balign="left"> + setRendezvousName(rendezvous : String) </td></tr>
+<tr><td align="left" balign="left"> + getRendezvousName() : String </td></tr>
+<tr><td align="left" balign="left"> + setFeedback(message : String) </td></tr>
+<tr><td align="left" balign="left"> + getFeedback() : String </td></tr>
+<tr><td align="left" balign="left"> + setExecTimeRequested(exertion : Exertion, b : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isExecTimeRequested(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + setSkipped(exertion : Exertion, b : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isSkipped(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + startExecTime() </td></tr>
+<tr><td align="left" balign="left"> + stopExecTime() </td></tr>
+<tr><td align="left" balign="left"> + getExecTime() : String </td></tr>
+<tr><td align="left" balign="left"> + setReview(ex : Exertion, b : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isReview(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + setPriority(exertion : Exertion, priorityValue : int) </td></tr>
+<tr><td align="left" balign="left"> + getPriority(exertion : Exertion) : int </td></tr>
+<tr><td align="left" balign="left"> + setNotifyList(exertion : Exertion, list : String) </td></tr>
+<tr><td align="left" balign="left"> + getNotifyList(ex : Exertion) : String </td></tr>
+<tr><td align="left" balign="left"> + registerExertion(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + deregisterExertion(job : ComplexExertion, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + addAttributeValue(attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + addComponentAssociation(path : String, attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAttributeValue(exertion : Exertion, attributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getAttributeValue(attributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + updateExertionName(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + appendTrace(info : String) </td></tr>
+<tr><td align="left" balign="left"> + addException(et : ThrowableTrace) </td></tr>
+<tr><td align="left" balign="left"> + addException(t : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + addException(message : String, t : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + describeExceptions() : String </td></tr>
+<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getSignature(kind : Signature.Kind) : ServiceSignature </td></tr>
+<tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getStopwatch() : Stopwatch </td></tr>
+<tr><td align="left" balign="left"> + setStopwatch(stopwatch : Stopwatch) </td></tr>
+<tr><td align="left" balign="left"> + getMutexId() : Object </td></tr>
+<tr><td align="left" balign="left"> + setMutexId(mutexId : Object) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Strategy
-	c112116 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Strategy.html">
+	c112077 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Strategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Strategy </td></tr>
@@ -422,8 +422,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ControlContext extends sorcer.core.context.ServiceContext
-	c111991:p -> c111989:p [dir=back,arrowtail=empty];
+	c112022:p -> c112023:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ControlContext implements sorcer.service.Strategy
-	c112116:p -> c111989:p [dir=back,arrowtail=empty,style=dashed];
+	c112077:p -> c112023:p [dir=back,arrowtail=empty,style=dashed];
 }
 

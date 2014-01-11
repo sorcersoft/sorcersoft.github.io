@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ProviderAccessor
-	c252746 [label=<<table title="sorcer.util.ProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderAccessor.html">
+	c252734 [label=<<table title="sorcer.util.ProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderAccessor </td></tr>
 		</table></td></tr>
@@ -33,7 +33,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ServiceAccessor
-	c252765 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccessor.html">
+	c252749 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccessor </td></tr>
 		</table></td></tr>
@@ -65,7 +65,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.DynamicAccessor
-	c252945 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/DynamicAccessor.html">
+	c252937 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/DynamicAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DynamicAccessor </td></tr>
@@ -78,10 +78,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../service/DynamicAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ProviderAccessor extends sorcer.util.ServiceAccessor
-	c252765:p -> c252746:p [dir=back,arrowtail=empty];
+	c252749:p -> c252734:p [dir=back,arrowtail=empty];
 	//sorcer.util.ProviderAccessor implements sorcer.service.DynamicAccessor
-	c252945:p -> c252746:p [dir=back,arrowtail=empty,style=dashed];
+	c252937:p -> c252734:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.ServiceAccessor implements sorcer.service.DynamicAccessor
-	c252945:p -> c252765:p [dir=back,arrowtail=empty,style=dashed];
+	c252937:p -> c252749:p [dir=back,arrowtail=empty,style=dashed];
 }
 

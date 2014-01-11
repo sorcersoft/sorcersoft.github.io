@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Identity
-	c237813 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Identity.html">
+	c237808 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Identity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
 		</table></td></tr>
@@ -31,23 +31,8 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../service/Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Mappable<T>
-	c237837 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Mappable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Evaluation<T>
-	c237845 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Evaluation.html">
+	c237829 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
@@ -61,20 +46,21 @@ digraph G {
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Setter
-	c237856 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Setter.html">
+	// sorcer.service.Mappable<T>
+	c237859 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Mappable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Setter </td></tr>
+<tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../../../service/Setter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../../../service/Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Invocation<T>
 	c237860 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Invocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -89,8 +75,22 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Setter
+	c237866 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Setter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Setter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
+<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Setter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Arg
-	c237865 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Arg.html">
+	c237874 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Arg.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Arg </td></tr>
@@ -103,7 +103,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c237970 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Par.html">
+	c237994 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Par&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -146,25 +146,25 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Identity implements java.io.Serializable
-	c238231:p -> c237813:p [dir=back,arrowtail=empty,style=dashed];
+	c238231:p -> c237808:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Setter implements java.io.Serializable
-	c238231:p -> c237856:p [dir=back,arrowtail=empty,style=dashed];
+	c238231:p -> c237866:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> extends sorcer.service.Identity
-	c237813:p -> c237970:p [dir=back,arrowtail=empty];
+	c237808:p -> c237994:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Arg
-	c237865:p -> c237970:p [dir=back,arrowtail=empty,style=dashed];
+	c237874:p -> c237994:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Mappable<T>
-	c237837:p -> c237970:p [dir=back,arrowtail=empty,style=dashed];
+	c237859:p -> c237994:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Evaluation<T>
-	c237845:p -> c237970:p [dir=back,arrowtail=empty,style=dashed];
+	c237829:p -> c237994:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Invocation<T>
-	c237860:p -> c237970:p [dir=back,arrowtail=empty,style=dashed];
+	c237860:p -> c237994:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Setter
-	c237856:p -> c237970:p [dir=back,arrowtail=empty,style=dashed];
+	c237866:p -> c237994:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements java.lang.Comparable<T>
-	c238232:p -> c237970:p [dir=back,arrowtail=empty,style=dashed];
+	c238232:p -> c237994:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
-	c238231:p -> c237970:p [dir=back,arrowtail=empty,style=dashed];
+	c238231:p -> c237994:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c238231 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

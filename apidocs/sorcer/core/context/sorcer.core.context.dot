@@ -9,149 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.context.ControlContext
-	c4723 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ControlContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + JOBBER_IS_DIRECT : String </td></tr>
-<tr><td align="left" balign="left"> + CONTROL_CONTEXT : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_FLOW : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_PROVISIONABLE : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_OPTI : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_MONITORABLE : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_ACCESS : String </td></tr>
-<tr><td align="left" balign="left"> + NODE_REFERENCE_PRESERVED : String </td></tr>
-<tr><td align="left" balign="left"> + RENDEZVOUS_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFY_EXEC : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_COMMENTS : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_FEEDBACK : String </td></tr>
-<tr><td align="left" balign="left"> + GET_EXEC_TIME : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_REVIEW : String </td></tr>
-<tr><td align="left" balign="left"> + EXEC_TIME : String </td></tr>
-<tr><td align="left" balign="left"> + PRIORITY : String </td></tr>
-<tr><td align="left" balign="left"> + MASTER_EXERTION : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION : String </td></tr>
-<tr><td align="left" balign="left"> + ID : String </td></tr>
-<tr><td align="left" balign="left"> + SKIPPED : String </td></tr>
-<tr><td align="left" balign="left"> + SKIPPED_ : String </td></tr>
-<tr><td align="left" balign="left"> + RERUN : String </td></tr>
-<tr><td align="left" balign="left"> + PULL : String </td></tr>
-<tr><td align="left" balign="left"> + QOS_PULL : String </td></tr>
-<tr><td align="left" balign="left"> + PUSH : String </td></tr>
-<tr><td align="left" balign="left"> + QOS_PUSH : String </td></tr>
-<tr><td align="left" balign="left"> + SWIF : String </td></tr>
-<tr><td align="left" balign="left"> + DIRECT : String </td></tr>
-<tr><td align="left" balign="left"> + AUTO : String </td></tr>
-<tr><td align="left" balign="left"> + PARALLEL : String </td></tr>
-<tr><td align="left" balign="left"> + SEQUENTIAL : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFY : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFY_ALL : String </td></tr>
-<tr><td align="left" balign="left"> + SORCER_VARIABLES_PATH : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_MONITORING : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_WAITABLE : String </td></tr>
-<tr><td align="left" balign="left"> + EXERTION_WAITED_FROM : String </td></tr>
-<tr><td align="left" balign="left"> + NOTIFICATION_MANAGEMENT : String </td></tr>
-<tr><td align="left" balign="left"> + TRUE : String </td></tr>
-<tr><td align="left" balign="left"> + FALSE : String </td></tr>
-<tr><td align="left" balign="left"> + TRACE_LIST : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ControlContext() </td></tr>
-<tr><td align="left" balign="left"> + ControlContext(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + setMasterExertion(e : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + isSequential() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isParallel() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isExertionMaster(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setWaitable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isWait(value : Strategy.Wait) </td></tr>
-<tr><td align="left" balign="left"> + setNotifierEnabled(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isNotifierEnabled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setNodeReferencePreserved(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isNodeReferencePreserved() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
-<tr><td align="left" balign="left"> + setFlowType(type : Strategy.Flow) </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable(value : Strategy.Monitor) </td></tr>
-<tr><td align="left" balign="left"> + setMonitorable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable(value : Strategy.Provision) </td></tr>
-<tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + setOpti(optiType : Strategy.Opti) </td></tr>
-<tr><td align="left" balign="left"> + getOpti() : Strategy.Opti </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getMonitor() : MonitoringManagement </td></tr>
-<tr><td align="left" balign="left"> + setMonitor(monitor : MonitoringManagement) </td></tr>
-<tr><td align="left" balign="left"> + setAccessType(access : Strategy.Access) </td></tr>
-<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
-<tr><td align="left" balign="left"> + setExertionComments(message : String) </td></tr>
-<tr><td align="left" balign="left"> + getExertionComments() : String </td></tr>
-<tr><td align="left" balign="left"> + setExecTimeRequested(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isExecTimeRequested() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setNotifyList(list : String) </td></tr>
-<tr><td align="left" balign="left"> + getNotifyList() : String </td></tr>
-<tr><td align="left" balign="left"> + setRendezvousName(rendezvous : String) </td></tr>
-<tr><td align="left" balign="left"> + getRendezvousName() : String </td></tr>
-<tr><td align="left" balign="left"> + setFeedback(message : String) </td></tr>
-<tr><td align="left" balign="left"> + getFeedback() : String </td></tr>
-<tr><td align="left" balign="left"> + setExecTimeRequested(exertion : Exertion, b : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isExecTimeRequested(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + setSkipped(exertion : Exertion, b : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isSkipped(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + startExecTime() </td></tr>
-<tr><td align="left" balign="left"> + stopExecTime() </td></tr>
-<tr><td align="left" balign="left"> + getExecTime() : String </td></tr>
-<tr><td align="left" balign="left"> + setReview(ex : Exertion, b : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isReview(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + setPriority(exertion : Exertion, priorityValue : int) </td></tr>
-<tr><td align="left" balign="left"> + getPriority(exertion : Exertion) : int </td></tr>
-<tr><td align="left" balign="left"> + setNotifyList(exertion : Exertion, list : String) </td></tr>
-<tr><td align="left" balign="left"> + getNotifyList(ex : Exertion) : String </td></tr>
-<tr><td align="left" balign="left"> + registerExertion(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + deregisterExertion(job : ComplexExertion, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + addAttributeValue(attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + addComponentAssociation(path : String, attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAttributeValue(exertion : Exertion, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getAttributeValue(attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + updateExertionName(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + appendTrace(info : String) </td></tr>
-<tr><td align="left" balign="left"> + addException(et : ThrowableTrace) </td></tr>
-<tr><td align="left" balign="left"> + addException(t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + addException(message : String, t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + describeExceptions() : String </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getSignature(kind : Signature.Kind) : ServiceSignature </td></tr>
-<tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getStopwatch() : Stopwatch </td></tr>
-<tr><td align="left" balign="left"> + setStopwatch(stopwatch : Stopwatch) </td></tr>
-<tr><td align="left" balign="left"> + getMutexId() : Object </td></tr>
-<tr><td align="left" balign="left"> + setMutexId(mutexId : Object) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ComprehensiveContextIterator
-	c4724 [label=<<table title="sorcer.core.context.ComprehensiveContextIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextIterator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ComprehensiveContextIterator </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ComprehensiveContextIterator(compContext : InclusiveContext) </td></tr>
-<tr><td align="left" balign="left"> + ComprehensiveContextIterator(iSet : Iterator&lt;&gt;[], compContext : InclusiveContext) </td></tr>
-<tr><td align="left" balign="left"> + setElementaryIterators(iSet : Iterator&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + hasNext() : boolean </td></tr>
-<tr><td align="left" balign="left"> + remove() </td></tr>
-<tr><td align="left" balign="left"> + next() : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ComprehensiveContextIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c4725 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c6493 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -421,49 +280,132 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ComprehensiveContext
-	c4726 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContext.html">
+	// sorcer.core.context.ControlContext
+	c6494 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
+<tr><td align="center" balign="center"> ControlContext </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + JOBBER_IS_DIRECT : String </td></tr>
+<tr><td align="left" balign="left"> + CONTROL_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_FLOW : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_PROVISIONABLE : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_OPTI : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_MONITORABLE : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_ACCESS : String </td></tr>
+<tr><td align="left" balign="left"> + NODE_REFERENCE_PRESERVED : String </td></tr>
+<tr><td align="left" balign="left"> + RENDEZVOUS_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFY_EXEC : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_COMMENTS : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_FEEDBACK : String </td></tr>
+<tr><td align="left" balign="left"> + GET_EXEC_TIME : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_REVIEW : String </td></tr>
+<tr><td align="left" balign="left"> + EXEC_TIME : String </td></tr>
+<tr><td align="left" balign="left"> + PRIORITY : String </td></tr>
+<tr><td align="left" balign="left"> + MASTER_EXERTION : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION : String </td></tr>
+<tr><td align="left" balign="left"> + ID : String </td></tr>
+<tr><td align="left" balign="left"> + SKIPPED : String </td></tr>
+<tr><td align="left" balign="left"> + SKIPPED_ : String </td></tr>
+<tr><td align="left" balign="left"> + RERUN : String </td></tr>
+<tr><td align="left" balign="left"> + PULL : String </td></tr>
+<tr><td align="left" balign="left"> + QOS_PULL : String </td></tr>
+<tr><td align="left" balign="left"> + PUSH : String </td></tr>
+<tr><td align="left" balign="left"> + QOS_PUSH : String </td></tr>
+<tr><td align="left" balign="left"> + SWIF : String </td></tr>
+<tr><td align="left" balign="left"> + DIRECT : String </td></tr>
+<tr><td align="left" balign="left"> + AUTO : String </td></tr>
+<tr><td align="left" balign="left"> + PARALLEL : String </td></tr>
+<tr><td align="left" balign="left"> + SEQUENTIAL : String </td></tr>
+<tr><td align="left" balign="left"> + WAIT : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFY : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFY_ALL : String </td></tr>
+<tr><td align="left" balign="left"> + SORCER_VARIABLES_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_MONITORING : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_WAITABLE : String </td></tr>
+<tr><td align="left" balign="left"> + EXERTION_WAITED_FROM : String </td></tr>
+<tr><td align="left" balign="left"> + NOTIFICATION_MANAGEMENT : String </td></tr>
+<tr><td align="left" balign="left"> + TRUE : String </td></tr>
+<tr><td align="left" balign="left"> + FALSE : String </td></tr>
+<tr><td align="left" balign="left"> + TRACE_LIST : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ComprehensiveContext(name : String) </td></tr>
-<tr><td align="left" balign="left"> + setContextIterator(compContextIterator : ComprehensiveContextIterator) </td></tr>
-<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContextMetaData() : ContextMetaData </td></tr>
-<tr><td align="left" balign="left"> + addKeyToMap(newPath : String, oldPath : String) </td></tr>
-<tr><td align="left" balign="left"> + put(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + put(location : int, path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + put(newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + put(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + getRealPath(path : String) : String </td></tr>
-<tr><td align="left" balign="left"> + removePathFromMap(path : String) </td></tr>
-<tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + clear() </td></tr>
-<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
-<tr><td align="left" balign="left"> + getPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getRealPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getValueAtIndex(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(path : String, index : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(oldIndex : int, newIndex : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
-<tr><td align="left" balign="left"> + print() </td></tr>
+<tr><td align="left" balign="left"> + ControlContext() </td></tr>
+<tr><td align="left" balign="left"> + ControlContext(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + setMasterExertion(e : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + isSequential() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isParallel() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isExertionMaster(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setWaitable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isWait(value : Strategy.Wait) </td></tr>
+<tr><td align="left" balign="left"> + setNotifierEnabled(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isNotifierEnabled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setNodeReferencePreserved(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isNodeReferencePreserved() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
+<tr><td align="left" balign="left"> + setFlowType(type : Strategy.Flow) </td></tr>
+<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isMonitorable(value : Strategy.Monitor) </td></tr>
+<tr><td align="left" balign="left"> + setMonitorable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isProvisionable(value : Strategy.Provision) </td></tr>
+<tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + setOpti(optiType : Strategy.Opti) </td></tr>
+<tr><td align="left" balign="left"> + getOpti() : Strategy.Opti </td></tr>
+<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getMonitor() : MonitoringManagement </td></tr>
+<tr><td align="left" balign="left"> + setMonitor(monitor : MonitoringManagement) </td></tr>
+<tr><td align="left" balign="left"> + setAccessType(access : Strategy.Access) </td></tr>
+<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
+<tr><td align="left" balign="left"> + setExertionComments(message : String) </td></tr>
+<tr><td align="left" balign="left"> + getExertionComments() : String </td></tr>
+<tr><td align="left" balign="left"> + setExecTimeRequested(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isExecTimeRequested() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setNotifyList(list : String) </td></tr>
+<tr><td align="left" balign="left"> + getNotifyList() : String </td></tr>
+<tr><td align="left" balign="left"> + setRendezvousName(rendezvous : String) </td></tr>
+<tr><td align="left" balign="left"> + getRendezvousName() : String </td></tr>
+<tr><td align="left" balign="left"> + setFeedback(message : String) </td></tr>
+<tr><td align="left" balign="left"> + getFeedback() : String </td></tr>
+<tr><td align="left" balign="left"> + setExecTimeRequested(exertion : Exertion, b : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isExecTimeRequested(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + setSkipped(exertion : Exertion, b : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isSkipped(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + startExecTime() </td></tr>
+<tr><td align="left" balign="left"> + stopExecTime() </td></tr>
+<tr><td align="left" balign="left"> + getExecTime() : String </td></tr>
+<tr><td align="left" balign="left"> + setReview(ex : Exertion, b : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isReview(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + setPriority(exertion : Exertion, priorityValue : int) </td></tr>
+<tr><td align="left" balign="left"> + getPriority(exertion : Exertion) : int </td></tr>
+<tr><td align="left" balign="left"> + setNotifyList(exertion : Exertion, list : String) </td></tr>
+<tr><td align="left" balign="left"> + getNotifyList(ex : Exertion) : String </td></tr>
+<tr><td align="left" balign="left"> + registerExertion(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + deregisterExertion(job : ComplexExertion, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + addAttributeValue(attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + addComponentAssociation(path : String, attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAttributeValue(exertion : Exertion, attributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getAttributeValue(attributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + updateExertionName(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + appendTrace(info : String) </td></tr>
+<tr><td align="left" balign="left"> + addException(et : ThrowableTrace) </td></tr>
+<tr><td align="left" balign="left"> + addException(t : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + addException(message : String, t : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + describeExceptions() : String </td></tr>
+<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getSignature(kind : Signature.Kind) : ServiceSignature </td></tr>
+<tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getStopwatch() : Stopwatch </td></tr>
+<tr><td align="left" balign="left"> + setStopwatch(stopwatch : Stopwatch) </td></tr>
+<tr><td align="left" balign="left"> + getMutexId() : Object </td></tr>
+<tr><td align="left" balign="left"> + setMutexId(mutexId : Object) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedIndexedContext<T>
-	c4727 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedIndexedContext.html">
+	c6495 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedIndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedIndexedContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -503,26 +445,50 @@ digraph G {
 <tr><td align="left" balign="left"> + unshare() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SharedIndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.SharedAssociativeContext
-	c4728 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedAssociativeContext.html">
+	// sorcer.core.context.PositionalContext<T>
+	c6496 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SharedAssociativeContext </td></tr>
+<tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SharedAssociativeContext(spaceName : String) </td></tr>
-<tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + share() </td></tr>
-<tr><td align="left" balign="left"> + unshare() </td></tr>
+<tr><td align="left" balign="left"> + PositionalContext() </td></tr>
+<tr><td align="left" balign="left"> + PositionalContext(name : String) </td></tr>
+<tr><td align="left" balign="left"> + PositionalContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + getInValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getInoutValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getOutValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getValuesAt(index : int) : List&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + putInValueAt(path : String, value : Object, index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putInoutValueAt(path : String, value : Object, index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putOutValueAt(path : String, value : Object, index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValueAt(path : String, value : Object, index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
+<tr><td align="left" balign="left"> + getTally() : int </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SharedAssociativeContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.ComprehensiveContextIterator
+	c6497 [label=<<table title="sorcer.core.context.ComprehensiveContextIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextIterator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ComprehensiveContextIterator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ComprehensiveContextIterator(compContext : InclusiveContext) </td></tr>
+<tr><td align="left" balign="left"> + ComprehensiveContextIterator(iSet : Iterator&lt;&gt;[], compContext : InclusiveContext) </td></tr>
+<tr><td align="left" balign="left"> + setElementaryIterators(iSet : Iterator&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + hasNext() : boolean </td></tr>
+<tr><td align="left" balign="left"> + remove() </td></tr>
+<tr><td align="left" balign="left"> + next() : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ComprehensiveContextIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextLink
-	c4729 [label=<<table title="sorcer.core.context.ContextLink" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextLink.html">
+	c6498 [label=<<table title="sorcer.core.context.ContextLink" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextLink.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextLink </td></tr>
 		</table></td></tr>
@@ -550,45 +516,106 @@ digraph G {
 <tr><td align="left" balign="left"> + isFetched(state : boolean) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextLink.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ListContext<T>
-	c4730 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListContext.html">
+	// sorcer.core.context.ArrayContext
+	c6499 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrayContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ListContext&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> ArrayContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # maxIndex : int </td></tr>
+<tr><td align="left" balign="left"> + IDEX : String </td></tr>
+<tr><td align="left" balign="left"> + VAL : String </td></tr>
+<tr><td align="left" balign="left"> + VAL_ : String </td></tr>
+<tr><td align="left" balign="left"> + IN : String </td></tr>
+<tr><td align="left" balign="left"> + IN_ : String </td></tr>
+<tr><td align="left" balign="left"> + OUT : String </td></tr>
+<tr><td align="left" balign="left"> + OUT_ : String </td></tr>
+<tr><td align="left" balign="left"> + COMMENT : String </td></tr>
+<tr><td align="left" balign="left"> + DESCRIPTION : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ArrayContext() </td></tr>
+<tr><td align="left" balign="left"> + ArrayContext(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ArrayContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + v(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + v(index : int, value : Object) </td></tr>
+<tr><td align="left" balign="left"> + iv(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + iv(index : int, value : Object) : String </td></tr>
+<tr><td align="left" balign="left"> + ov(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + ov(index : int, value : Object) : String </td></tr>
+<tr><td align="left" balign="left"> + c(comment : String) </td></tr>
+<tr><td align="left" balign="left"> + c() : String </td></tr>
+<tr><td align="left" balign="left"> + vc(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + vc(index : int, comment : String) </td></tr>
+<tr><td align="left" balign="left"> + ivc(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ivc(index : int, comment : String) </td></tr>
+<tr><td align="left" balign="left"> + ovc(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ovc(index : int, comment : String) </td></tr>
+<tr><td align="left" balign="left"> + d(description : String) </td></tr>
+<tr><td align="left" balign="left"> + d() : String </td></tr>
+<tr><td align="left" balign="left"> + vd(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + vd(index : int, description : String) </td></tr>
+<tr><td align="left" balign="left"> + ivd(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ivd(index : int, description : String) </td></tr>
+<tr><td align="left" balign="left"> + ovd(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ovd(index : int, description : String) </td></tr>
+<tr><td align="left" balign="left"> + getInValues() : List&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getSortedInPaths() : String[] </td></tr>
+<tr><td align="left" balign="left"> + civp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + covp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + divp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + dovp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ivp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ovp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ii(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + oi(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + vp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + cp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + dp(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getMaxIndex() : int </td></tr>
+<tr><td align="left" balign="left"> + getPath(selector : String, index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
+<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ArrayContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.ContextMetaDataImpl
+	c6500 [label=<<table title="sorcer.core.context.ContextMetaDataImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaDataImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContextMetaDataImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ListContext() </td></tr>
-<tr><td align="left" balign="left"> + ListContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + ListContext(elements : T[]) </td></tr>
-<tr><td align="left" balign="left"> + pathFor(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + pathIndex(path : String) : int </td></tr>
-<tr><td align="left" balign="left"> + add(e : T) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + add(index : int, element : T) </td></tr>
-<tr><td align="left" balign="left"> + addAll(c : Collection&lt;T&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + addAll(index : int, c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + containsAll(c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + get(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + indexOf(o : Object) : int </td></tr>
-<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + lastIndexOf(o : Object) : int </td></tr>
-<tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + listIterator(index : int) : ListIterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + remove(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + removeAll(c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + retainAll(c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + set(index : int, element : T) : Object </td></tr>
-<tr><td align="left" balign="left"> + subList(fromIndex : int, toIndex : int) : List&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + toArray() : Object[] </td></tr>
-<tr><td align="left" balign="left"> + toArray(a : Object[]) : Object[] </td></tr>
-<tr><td align="left" balign="left"> + getElements() : List&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + ContextMetaDataImpl(compContext : InclusiveContext) </td></tr>
+<tr><td align="left" balign="left"> + getColumnCount() : int </td></tr>
+<tr><td align="left" balign="left"> + getColumnLabel(column : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getColumnName(column : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getColumnType(column : int) : int </td></tr>
+<tr><td align="left" balign="left"> + getColumnTypeName(column : int) : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ListContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ContextMetaDataImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.SharedAssociativeContext
+	c6501 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedAssociativeContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SharedAssociativeContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SharedAssociativeContext(spaceName : String) </td></tr>
+<tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + share() </td></tr>
+<tr><td align="left" balign="left"> + unshare() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SharedAssociativeContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.Contexts
-	c4731 [label=<<table title="sorcer.core.context.Contexts" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Contexts.html">
+	c6502 [label=<<table title="sorcer.core.context.Contexts" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Contexts.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Contexts </td></tr>
 		</table></td></tr>
@@ -675,71 +702,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getDirection(context : Context&lt;&gt;, path : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Contexts.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ArrayContext
-	c4732 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrayContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ArrayContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # maxIndex : int </td></tr>
-<tr><td align="left" balign="left"> + IDEX : String </td></tr>
-<tr><td align="left" balign="left"> + VAL : String </td></tr>
-<tr><td align="left" balign="left"> + VAL_ : String </td></tr>
-<tr><td align="left" balign="left"> + IN : String </td></tr>
-<tr><td align="left" balign="left"> + IN_ : String </td></tr>
-<tr><td align="left" balign="left"> + OUT : String </td></tr>
-<tr><td align="left" balign="left"> + OUT_ : String </td></tr>
-<tr><td align="left" balign="left"> + COMMENT : String </td></tr>
-<tr><td align="left" balign="left"> + DESCRIPTION : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ArrayContext() </td></tr>
-<tr><td align="left" balign="left"> + ArrayContext(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ArrayContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + v(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + v(index : int, value : Object) </td></tr>
-<tr><td align="left" balign="left"> + iv(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + iv(index : int, value : Object) : String </td></tr>
-<tr><td align="left" balign="left"> + ov(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + ov(index : int, value : Object) : String </td></tr>
-<tr><td align="left" balign="left"> + c(comment : String) </td></tr>
-<tr><td align="left" balign="left"> + c() : String </td></tr>
-<tr><td align="left" balign="left"> + vc(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + vc(index : int, comment : String) </td></tr>
-<tr><td align="left" balign="left"> + ivc(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + ivc(index : int, comment : String) </td></tr>
-<tr><td align="left" balign="left"> + ovc(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + ovc(index : int, comment : String) </td></tr>
-<tr><td align="left" balign="left"> + d(description : String) </td></tr>
-<tr><td align="left" balign="left"> + d() : String </td></tr>
-<tr><td align="left" balign="left"> + vd(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + vd(index : int, description : String) </td></tr>
-<tr><td align="left" balign="left"> + ivd(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + ivd(index : int, description : String) </td></tr>
-<tr><td align="left" balign="left"> + ovd(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + ovd(index : int, description : String) </td></tr>
-<tr><td align="left" balign="left"> + getInValues() : List&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getSortedInPaths() : String[] </td></tr>
-<tr><td align="left" balign="left"> + civp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + covp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + divp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + dovp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + ivp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + ovp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + ii(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + oi(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + vp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + cp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + dp(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getMaxIndex() : int </td></tr>
-<tr><td align="left" balign="left"> + getPath(selector : String, index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
-<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ArrayContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextManagementAdapter
-	c4733 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagementAdapter.html">
+	c6503 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagementAdapter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextManagementAdapter </td></tr>
 		</table></td></tr>
@@ -757,50 +721,86 @@ digraph G {
 <tr><td align="left" balign="left"> + getMethodContextScript(interfaceName : String, methodName : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextManagementAdapter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ContextMetaDataImpl
-	c4734 [label=<<table title="sorcer.core.context.ContextMetaDataImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaDataImpl.html">
+	// sorcer.core.context.ListContext<T>
+	c6504 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextMetaDataImpl </td></tr>
+<tr><td align="center" balign="center"> ListContext&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextMetaDataImpl(compContext : InclusiveContext) </td></tr>
-<tr><td align="left" balign="left"> + getColumnCount() : int </td></tr>
-<tr><td align="left" balign="left"> + getColumnLabel(column : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getColumnName(column : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getColumnType(column : int) : int </td></tr>
-<tr><td align="left" balign="left"> + getColumnTypeName(column : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ListContext() </td></tr>
+<tr><td align="left" balign="left"> + ListContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + ListContext(elements : T[]) </td></tr>
+<tr><td align="left" balign="left"> + pathFor(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + pathIndex(path : String) : int </td></tr>
+<tr><td align="left" balign="left"> + add(e : T) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + add(index : int, element : T) </td></tr>
+<tr><td align="left" balign="left"> + addAll(c : Collection&lt;T&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + addAll(index : int, c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + containsAll(c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + get(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + indexOf(o : Object) : int </td></tr>
+<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + lastIndexOf(o : Object) : int </td></tr>
+<tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + listIterator(index : int) : ListIterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + remove(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + removeAll(c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + retainAll(c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + set(index : int, element : T) : Object </td></tr>
+<tr><td align="left" balign="left"> + subList(fromIndex : int, toIndex : int) : List&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + toArray() : Object[] </td></tr>
+<tr><td align="left" balign="left"> + toArray(a : Object[]) : Object[] </td></tr>
+<tr><td align="left" balign="left"> + getElements() : List&lt;&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ContextMetaDataImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.PositionalContext<T>
-	c4735 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PositionalContext.html">
+		</table>>, URL="./ListContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.ComprehensiveContext
+	c6505 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PositionalContext() </td></tr>
-<tr><td align="left" balign="left"> + PositionalContext(name : String) </td></tr>
-<tr><td align="left" balign="left"> + PositionalContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + getInValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getInoutValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getOutValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValuesAt(index : int) : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + putInValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putInoutValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putOutValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
-<tr><td align="left" balign="left"> + getTally() : int </td></tr>
+<tr><td align="left" balign="left"> + ComprehensiveContext(name : String) </td></tr>
+<tr><td align="left" balign="left"> + setContextIterator(compContextIterator : ComprehensiveContextIterator) </td></tr>
+<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getContextMetaData() : ContextMetaData </td></tr>
+<tr><td align="left" balign="left"> + addKeyToMap(newPath : String, oldPath : String) </td></tr>
+<tr><td align="left" balign="left"> + put(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + put(location : int, path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + put(newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + put(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + getRealPath(path : String) : String </td></tr>
+<tr><td align="left" balign="left"> + removePathFromMap(path : String) </td></tr>
+<tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
+<tr><td align="left" balign="left"> + clear() </td></tr>
+<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
+<tr><td align="left" balign="left"> + getPathAtIndex(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getRealPathAtIndex(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getValueAtIndex(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + changeIndex(path : String, index : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> + changeIndex(oldIndex : int, newIndex : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + print() </td></tr>
 		</table></td></tr>
-		</table>>, URL="./PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ThrowableTrace
-	c4736 [label=<<table title="sorcer.core.context.ThrowableTrace" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ThrowableTrace.html">
+	c6506 [label=<<table title="sorcer.core.context.ThrowableTrace" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ThrowableTrace.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ThrowableTrace </td></tr>
 		</table></td></tr>
@@ -818,23 +818,8 @@ digraph G {
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ThrowableTrace.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ApplicationDescription
-	c4737 [label=<<table title="sorcer.core.context.ApplicationDescription" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationDescription.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ApplicationDescription </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MECHANICAL : String </td></tr>
-<tr><td align="left" balign="left"> + ENGINEERING : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getDomain() : String </td></tr>
-<tr><td align="left" balign="left"> + getSubDomain() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ApplicationDescription.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextUtil
-	c4738 [label=<<table title="sorcer.core.context.ContextUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextUtil.html">
+	c6507 [label=<<table title="sorcer.core.context.ContextUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextUtil </td></tr>
 		</table></td></tr>
@@ -859,7 +844,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextAccessor
-	c4739 [label=<<table title="sorcer.core.context.ContextAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextAccessor.html">
+	c6508 [label=<<table title="sorcer.core.context.ContextAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextAccessor </td></tr>
@@ -875,19 +860,34 @@ digraph G {
 <tr><td align="left" balign="left"> + getHistory(id : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.ApplicationDescription
+	c6509 [label=<<table title="sorcer.core.context.ApplicationDescription" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationDescription.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ApplicationDescription </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MECHANICAL : String </td></tr>
+<tr><td align="left" balign="left"> + ENGINEERING : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getDomain() : String </td></tr>
+<tr><td align="left" balign="left"> + getSubDomain() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ApplicationDescription.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ControlContext extends sorcer.core.context.ServiceContext
-	c4725:p -> c4723:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.ComprehensiveContext extends sorcer.core.context.ServiceContext
-	c4725:p -> c4726:p [dir=back,arrowtail=empty];
+	c6493:p -> c6494:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.SharedIndexedContext<T> extends sorcer.core.context.ServiceContext
-	c4725:p -> c4727:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.SharedAssociativeContext extends sorcer.core.context.ServiceContext
-	c4725:p -> c4728:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.ListContext<T> extends sorcer.core.context.ServiceContext
-	c4725:p -> c4730:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.ArrayContext extends sorcer.core.context.ServiceContext
-	c4725:p -> c4732:p [dir=back,arrowtail=empty];
+	c6493:p -> c6495:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
-	c4725:p -> c4735:p [dir=back,arrowtail=empty];
+	c6493:p -> c6496:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.ArrayContext extends sorcer.core.context.ServiceContext
+	c6493:p -> c6499:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.SharedAssociativeContext extends sorcer.core.context.ServiceContext
+	c6493:p -> c6501:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.ListContext<T> extends sorcer.core.context.ServiceContext
+	c6493:p -> c6504:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.ComprehensiveContext extends sorcer.core.context.ServiceContext
+	c6493:p -> c6505:p [dir=back,arrowtail=empty];
 }
 

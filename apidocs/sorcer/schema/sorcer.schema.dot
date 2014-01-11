@@ -9,56 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.schema.Result
-	c10683 [label=<<table title="sorcer.schema.Result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Result.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Result </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./Result.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.schema.SchemaType
-	c10684 [label=<<table title="sorcer.schema.SchemaType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SchemaType.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SchemaType </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./SchemaType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.schema.Path
-	c10685 [label=<<table title="sorcer.schema.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
+	c14177 [label=<<table title="sorcer.schema.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Path </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.schema.Tag
-	c10686 [label=<<table title="sorcer.schema.Tag" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tag.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Tag </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tag.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.schema.Schema
-	c10687 [label=<<table title="sorcer.schema.Schema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Schema.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Schema </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./Schema.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.schema.OutEntry
-	c10688 [label=<<table title="sorcer.schema.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OutEntry </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./OutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.schema.Description
-	c10689 [label=<<table title="sorcer.schema.Description" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Description.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Description </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./Description.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.schema.InEntry
-	c10690 [label=<<table title="sorcer.schema.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InEntry.html">
+	c14178 [label=<<table title="sorcer.schema.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> InEntry </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./InEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.schema.SchemaEntry
-	c10691 [label=<<table title="sorcer.schema.SchemaEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SchemaEntry.html">
+	c14179 [label=<<table title="sorcer.schema.SchemaEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SchemaEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SchemaEntry </td></tr>
 		</table></td></tr>
@@ -81,5 +45,41 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SchemaEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.schema.SchemaType
+	c14180 [label=<<table title="sorcer.schema.SchemaType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SchemaType.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SchemaType </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SchemaType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.schema.Description
+	c14181 [label=<<table title="sorcer.schema.Description" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Description.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Description </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Description.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.schema.Schema
+	c14182 [label=<<table title="sorcer.schema.Schema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Schema.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Schema </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Schema.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.schema.Tag
+	c14183 [label=<<table title="sorcer.schema.Tag" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tag.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Tag </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tag.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.schema.Result
+	c14184 [label=<<table title="sorcer.schema.Result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Result.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Result </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Result.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.schema.OutEntry
+	c14185 [label=<<table title="sorcer.schema.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> OutEntry </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

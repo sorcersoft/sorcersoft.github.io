@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.launcher.SorcerProcessBuilder
-	c48615 [label=<<table title="sorcer.launcher.SorcerProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerProcessBuilder.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerProcessBuilder </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # sorcerHome : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerProcessBuilder(env : SorcerEnv) </td></tr>
-<tr><td align="left" balign="left"> + startProcess() : Process2 </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerProcessBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.JavaProcessBuilder
-	c48616 [label=<<table title="sorcer.launcher.JavaProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JavaProcessBuilder.html">
+	c48615 [label=<<table title="sorcer.launcher.JavaProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JavaProcessBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JavaProcessBuilder </td></tr>
 		</table></td></tr>
@@ -57,7 +44,20 @@ digraph G {
 <tr><td align="left" balign="left"> # invokeIgnoreErrors(target : Object, methodName : String, argTypes : Class&lt;&gt;[], args : Object[]) : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./JavaProcessBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.SorcerProcessBuilder
+	c48616 [label=<<table title="sorcer.launcher.SorcerProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerProcessBuilder.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerProcessBuilder </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # sorcerHome : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerProcessBuilder(env : SorcerEnv) </td></tr>
+<tr><td align="left" balign="left"> + startProcess() : Process2 </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerProcessBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.SorcerProcessBuilder extends sorcer.launcher.JavaProcessBuilder
-	c48616:p -> c48615:p [dir=back,arrowtail=empty];
+	c48615:p -> c48616:p [dir=back,arrowtail=empty];
 }
 

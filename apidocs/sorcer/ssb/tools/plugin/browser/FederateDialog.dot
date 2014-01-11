@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.FederateDialog
-	c153568 [label=<<table title="sorcer.ssb.tools.plugin.browser.FederateDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FederateDialog.html">
+	c153583 [label=<<table title="sorcer.ssb.tools.plugin.browser.FederateDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FederateDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FederateDialog </td></tr>
 		</table></td></tr>
@@ -23,9 +23,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FederateDialog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.FederateDialog extends javax.swing.JDialog
-	c153617:p -> c153568:p [dir=back,arrowtail=empty];
+	c153617:p -> c153583:p [dir=back,arrowtail=empty];
 	//sorcer.ssb.tools.plugin.browser.FederateDialog implements java.awt.event.ActionListener
-	c153618:p -> c153568:p [dir=back,arrowtail=empty,style=dashed];
+	c153618:p -> c153583:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.JDialog
 	c153617 [label=<<table title="javax.swing.JDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

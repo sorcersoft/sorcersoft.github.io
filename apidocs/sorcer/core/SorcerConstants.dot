@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c321134 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerConstants.html">
+	c321198 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -619,7 +619,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c321213 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ServiceContext.html">
+	c321244 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -890,7 +890,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./context/ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.jobber.ServiceSpacer
-	c321440 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/jobber/ServiceSpacer.html">
+	c321441 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/jobber/ServiceSpacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSpacer </td></tr>
 		</table></td></tr>
@@ -910,8 +910,28 @@ digraph G {
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./provider/jobber/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.MonitoredExertDispatcher
+	c321489 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./dispatch/MonitoredExertDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + sessionMonitor : MonitorSessionManagement </td></tr>
+<tr><td align="left" balign="left"> + lrm : LeaseRenewalManager </td></tr>
+<tr><td align="left" balign="left"> + LEASE_RENEWAL_PERIOD : long </td></tr>
+<tr><td align="left" balign="left"> + DEFAULT_TIMEOUT_PERIOD : long </td></tr>
+<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MonitoredExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # postExecExertion(result : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # execExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./dispatch/MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.Jobs
-	c321467 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./exertion/Jobs.html">
+	c321497 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./exertion/Jobs.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Jobs </td></tr>
 		</table></td></tr>
@@ -948,33 +968,13 @@ digraph G {
 <tr><td align="left" balign="left"> + getTaskContexts(ex : Exertion) : List&lt;Context&lt;&gt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./exertion/Jobs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.MonitoredExertDispatcher
-	c321474 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./dispatch/MonitoredExertDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + sessionMonitor : MonitorSessionManagement </td></tr>
-<tr><td align="left" balign="left"> + lrm : LeaseRenewalManager </td></tr>
-<tr><td align="left" balign="left"> + LEASE_RENEWAL_PERIOD : long </td></tr>
-<tr><td align="left" balign="left"> + DEFAULT_TIMEOUT_PERIOD : long </td></tr>
-<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitoredExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(result : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # execExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./dispatch/MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.core.SorcerConstants
-	c321134:p -> c321213:p [dir=back,arrowtail=empty,style=dashed];
+	c321198:p -> c321244:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.core.SorcerConstants
-	c321134:p -> c321440:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.exertion.Jobs implements sorcer.core.SorcerConstants
-	c321134:p -> c321467:p [dir=back,arrowtail=empty,style=dashed];
+	c321198:p -> c321441:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.dispatch.MonitoredExertDispatcher implements sorcer.core.SorcerConstants
-	c321134:p -> c321474:p [dir=back,arrowtail=empty,style=dashed];
+	c321198:p -> c321489:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.exertion.Jobs implements sorcer.core.SorcerConstants
+	c321198:p -> c321497:p [dir=back,arrowtail=empty,style=dashed];
 }
 

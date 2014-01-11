@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.NotifyImpl
-	c226024 [label=<<table title="sorcer.ssb.tools.plugin.browser.NotifyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NotifyImpl.html">
+	c226032 [label=<<table title="sorcer.ssb.tools.plugin.browser.NotifyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NotifyImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NotifyImpl </td></tr>
 		</table></td></tr>
@@ -25,13 +25,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NotifyImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements net.jini.core.event.RemoteEventListener
-	c226060:p -> c226024:p [dir=back,arrowtail=empty,style=dashed];
+	c226060:p -> c226032:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements java.rmi.Remote
-	c226061:p -> c226024:p [dir=back,arrowtail=empty,style=dashed];
+	c226061:p -> c226032:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements java.lang.Runnable
-	c226062:p -> c226024:p [dir=back,arrowtail=empty,style=dashed];
+	c226062:p -> c226032:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements net.jini.security.proxytrust.ServerProxyTrust
-	c226063:p -> c226024:p [dir=back,arrowtail=empty,style=dashed];
+	c226063:p -> c226032:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.core.event.RemoteEventListener
 	c226060 [label=<<table title="net.jini.core.event.RemoteEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

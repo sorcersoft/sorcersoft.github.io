@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.maven.plugin.ClientConfiguration
-	c86379 [label=<<table title="sorcer.maven.plugin.ClientConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClientConfiguration.html">
+	c86388 [label=<<table title="sorcer.maven.plugin.ClientConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClientConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ClientConfiguration </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ClientConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.maven.plugin.ClientRuntimeConfiguration
-	c86382 [label=<<table title="sorcer.maven.plugin.ClientRuntimeConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ClientRuntimeConfiguration.html">
+	c86389 [label=<<table title="sorcer.maven.plugin.ClientRuntimeConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ClientRuntimeConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ClientRuntimeConfiguration </td></tr>
 		</table></td></tr>
@@ -43,6 +43,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ClientRuntimeConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.maven.plugin.ClientRuntimeConfiguration extends sorcer.maven.plugin.ClientConfiguration
-	c86379:p -> c86382:p [dir=back,arrowtail=empty];
+	c86388:p -> c86389:p [dir=back,arrowtail=empty];
 }
 

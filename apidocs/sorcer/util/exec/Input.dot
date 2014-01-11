@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.util.exec.RedirectibleInput
-	c176298 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectibleInput.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + redirect(dest : OutputStream, len : int) : int </td></tr>
-<tr><td align="left" balign="left"> + redirectAll(dest : OutputStream) : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.exec.NullInputStream
-	c176299 [label=<<table title="sorcer.util.exec.NullInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullInputStream.html">
+	c176278 [label=<<table title="sorcer.util.exec.NullInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullInputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NullInputStream </td></tr>
 		</table></td></tr>
@@ -41,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NullInputStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.exec.Input
-	c176300 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Input.html">
+	c176279 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Input.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Input </td></tr>
@@ -61,9 +47,23 @@ digraph G {
 <tr><td align="left" balign="left"> + mark(readLimit : int) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Input.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.util.exec.RedirectibleInput implements sorcer.util.exec.Input
-	c176300:p -> c176298:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.util.exec.RedirectibleInput
+	c176280 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectibleInput.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + redirect(dest : OutputStream, len : int) : int </td></tr>
+<tr><td align="left" balign="left"> + redirectAll(dest : OutputStream) : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.exec.NullInputStream implements sorcer.util.exec.Input
-	c176300:p -> c176299:p [dir=back,arrowtail=empty,style=dashed];
+	c176279:p -> c176278:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.util.exec.RedirectibleInput implements sorcer.util.exec.Input
+	c176279:p -> c176280:p [dir=back,arrowtail=empty,style=dashed];
 }
 

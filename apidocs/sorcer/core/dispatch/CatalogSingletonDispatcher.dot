@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.dispatch.CatalogExertDispatcher
-	c79220 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
+	c79218 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> CatalogExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -28,7 +28,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CatalogExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogSingletonDispatcher
-	c79229 [label=<<table title="sorcer.core.dispatch.CatalogSingletonDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CatalogSingletonDispatcher.html">
+	c79223 [label=<<table title="sorcer.core.dispatch.CatalogSingletonDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CatalogSingletonDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogSingletonDispatcher </td></tr>
 		</table></td></tr>
@@ -42,6 +42,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CatalogSingletonDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.CatalogSingletonDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c79220:p -> c79229:p [dir=back,arrowtail=empty];
+	c79218:p -> c79223:p [dir=back,arrowtail=empty];
 }
 

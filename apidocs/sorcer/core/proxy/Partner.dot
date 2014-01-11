@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.StaticServiceProvider
-	c241240 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/StaticServiceProvider.html">
+	c241229 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../provider/StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c241245 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/ServiceProvider.html">
+	c241237 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -159,8 +159,15 @@ digraph G {
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="../provider/ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.RemotePartner
+	c241251 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemotePartner.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RemotePartner </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RemotePartner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Outer
-	c241263 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Outer.html">
+	c241254 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Outer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Outer </td></tr>
@@ -173,21 +180,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partner
-	c241265 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Partner.html">
+	c241255 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Partner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partner </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.proxy.RemotePartner
-	c241266 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemotePartner.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemotePartner </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RemotePartner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Service
-	c241308 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
+	c241345 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Service </td></tr>
@@ -200,18 +200,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c241245:p -> c241240:p [dir=back,arrowtail=empty];
+	c241237:p -> c241229:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.proxy.Partner
-	c241265:p -> c241240:p [dir=back,arrowtail=empty,style=dashed];
+	c241255:p -> c241229:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.proxy.Partner
-	c241265:p -> c241245:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.proxy.Outer implements sorcer.service.Service
-	c241308:p -> c241263:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
-	c241263:p -> c241265:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.proxy.Partner implements sorcer.service.Service
-	c241308:p -> c241265:p [dir=back,arrowtail=empty,style=dashed];
+	c241255:p -> c241237:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.RemotePartner implements sorcer.core.proxy.Partner
-	c241265:p -> c241266:p [dir=back,arrowtail=empty,style=dashed];
+	c241255:p -> c241251:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.proxy.Outer implements sorcer.service.Service
+	c241345:p -> c241254:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
+	c241254:p -> c241255:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.proxy.Partner implements sorcer.service.Service
+	c241345:p -> c241255:p [dir=back,arrowtail=empty,style=dashed];
 }
 

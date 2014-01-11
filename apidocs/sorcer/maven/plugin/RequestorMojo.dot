@@ -9,33 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.maven.plugin.RequestorMojo
-	c272409 [label=<<table title="sorcer.maven.plugin.RequestorMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RequestorMojo.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RequestorMojo </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # mainClass : String </td></tr>
-<tr><td align="left" balign="left"> # sorcerEnvFile : File </td></tr>
-<tr><td align="left" balign="left"> # scope : String </td></tr>
-<tr><td align="left" balign="left"> # debug : boolean </td></tr>
-<tr><td align="left" balign="left"> # serverDebug : boolean </td></tr>
-<tr><td align="left" balign="left"> # requestorCodebase : String[] </td></tr>
-<tr><td align="left" balign="left"> # requestorClasspath : String[] </td></tr>
-<tr><td align="left" balign="left"> # logFile : String </td></tr>
-<tr><td align="left" balign="left"> # requestors : ClientConfiguration[] </td></tr>
-<tr><td align="left" balign="left"> # sorcerHome : File </td></tr>
-<tr><td align="left" balign="left"> # timeout : int </td></tr>
-<tr><td align="left" balign="left"> # workingDir : File </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RequestorMojo() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> # resolveDependencies(propertyKey : String, userEntries : String[], scope : String) : Collection&lt;Artifact&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RequestorMojo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.maven.plugin.AbstractSorcerMojo
-	c272412 [label=<<table title="sorcer.maven.plugin.AbstractSorcerMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSorcerMojo.html">
+	c272410 [label=<<table title="sorcer.maven.plugin.AbstractSorcerMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractSorcerMojo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractSorcerMojo </font></td></tr>
 		</table></td></tr>
@@ -64,7 +39,32 @@ digraph G {
 <tr><td align="left" balign="left"> + resolveDependencies(root : Artifact, scope : String, filter : DependencyFilter) : List&lt;Artifact&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractSorcerMojo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.maven.plugin.RequestorMojo
+	c272412 [label=<<table title="sorcer.maven.plugin.RequestorMojo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RequestorMojo.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RequestorMojo </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # mainClass : String </td></tr>
+<tr><td align="left" balign="left"> # sorcerEnvFile : File </td></tr>
+<tr><td align="left" balign="left"> # scope : String </td></tr>
+<tr><td align="left" balign="left"> # debug : boolean </td></tr>
+<tr><td align="left" balign="left"> # serverDebug : boolean </td></tr>
+<tr><td align="left" balign="left"> # requestorCodebase : String[] </td></tr>
+<tr><td align="left" balign="left"> # requestorClasspath : String[] </td></tr>
+<tr><td align="left" balign="left"> # logFile : String </td></tr>
+<tr><td align="left" balign="left"> # requestors : ClientConfiguration[] </td></tr>
+<tr><td align="left" balign="left"> # sorcerHome : File </td></tr>
+<tr><td align="left" balign="left"> # timeout : int </td></tr>
+<tr><td align="left" balign="left"> # workingDir : File </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RequestorMojo() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> # resolveDependencies(propertyKey : String, userEntries : String[], scope : String) : Collection&lt;Artifact&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RequestorMojo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.maven.plugin.RequestorMojo extends sorcer.maven.plugin.AbstractSorcerMojo
-	c272412:p -> c272409:p [dir=back,arrowtail=empty];
+	c272410:p -> c272412:p [dir=back,arrowtail=empty];
 }
 

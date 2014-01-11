@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.SharedIndexedContext<T>
-	c174000 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
+	c174031 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedIndexedContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -50,45 +50,8 @@ digraph G {
 <tr><td align="left" balign="left"> + unshare() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/SharedIndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ListContext<T>
-	c174003 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ListContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ListContext&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ListContext() </td></tr>
-<tr><td align="left" balign="left"> + ListContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + ListContext(elements : T[]) </td></tr>
-<tr><td align="left" balign="left"> + pathFor(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + pathIndex(path : String) : int </td></tr>
-<tr><td align="left" balign="left"> + add(e : T) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + add(index : int, element : T) </td></tr>
-<tr><td align="left" balign="left"> + addAll(c : Collection&lt;T&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + addAll(index : int, c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + containsAll(c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + get(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + indexOf(o : Object) : int </td></tr>
-<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + lastIndexOf(o : Object) : int </td></tr>
-<tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + listIterator(index : int) : ListIterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + remove(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + removeAll(c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + retainAll(c : Collection&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + set(index : int, element : T) : Object </td></tr>
-<tr><td align="left" balign="left"> + subList(fromIndex : int, toIndex : int) : List&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + toArray() : Object[] </td></tr>
-<tr><td align="left" balign="left"> + toArray(a : Object[]) : Object[] </td></tr>
-<tr><td align="left" balign="left"> + getElements() : List&lt;&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/context/ListContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ArrayContext
-	c174005 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ArrayContext.html">
+	c174035 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ArrayContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayContext </td></tr>
 		</table></td></tr>
@@ -150,8 +113,45 @@ digraph G {
 <tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/ArrayContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.ListContext<T>
+	c174040 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ListContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ListContext&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ListContext() </td></tr>
+<tr><td align="left" balign="left"> + ListContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + ListContext(elements : T[]) </td></tr>
+<tr><td align="left" balign="left"> + pathFor(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + pathIndex(path : String) : int </td></tr>
+<tr><td align="left" balign="left"> + add(e : T) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + add(index : int, element : T) </td></tr>
+<tr><td align="left" balign="left"> + addAll(c : Collection&lt;T&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + addAll(index : int, c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + containsAll(c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + get(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + indexOf(o : Object) : int </td></tr>
+<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + lastIndexOf(o : Object) : int </td></tr>
+<tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + listIterator(index : int) : ListIterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + remove(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + removeAll(c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + retainAll(c : Collection&lt;&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + set(index : int, element : T) : Object </td></tr>
+<tr><td align="left" balign="left"> + subList(fromIndex : int, toIndex : int) : List&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + toArray() : Object[] </td></tr>
+<tr><td align="left" balign="left"> + toArray(a : Object[]) : Object[] </td></tr>
+<tr><td align="left" balign="left"> + getElements() : List&lt;&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/context/ListContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.IndexedContext
-	c174073 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IndexedContext.html">
+	c174067 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IndexedContext </td></tr>
@@ -165,10 +165,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.SharedIndexedContext<T> implements sorcer.service.IndexedContext
-	c174073:p -> c174000:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.ListContext<T> implements sorcer.service.IndexedContext
-	c174073:p -> c174003:p [dir=back,arrowtail=empty,style=dashed];
+	c174067:p -> c174031:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ArrayContext implements sorcer.service.IndexedContext
-	c174073:p -> c174005:p [dir=back,arrowtail=empty,style=dashed];
+	c174067:p -> c174035:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.ListContext<T> implements sorcer.service.IndexedContext
+	c174067:p -> c174040:p [dir=back,arrowtail=empty,style=dashed];
 }
 

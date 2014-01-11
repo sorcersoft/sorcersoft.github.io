@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.signature.ServiceSignature
-	c313145 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/signature/ServiceSignature.html">
+	c313101 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/signature/ServiceSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSignature </td></tr>
 		</table></td></tr>
@@ -95,7 +95,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/signature/ServiceSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Signature
-	c313193 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Signature.html">
+	c313203 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Signature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Signature </td></tr>
@@ -124,7 +124,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Signature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Arg
-	c313220 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
+	c313229 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Arg </td></tr>
@@ -137,11 +137,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.ServiceSignature implements sorcer.service.Signature
-	c313193:p -> c313145:p [dir=back,arrowtail=empty,style=dashed];
+	c313203:p -> c313101:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Signature implements java.io.Serializable
-	c313586:p -> c313193:p [dir=back,arrowtail=empty,style=dashed];
+	c313586:p -> c313203:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Signature implements sorcer.service.Arg
-	c313220:p -> c313193:p [dir=back,arrowtail=empty,style=dashed];
+	c313229:p -> c313203:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c313586 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

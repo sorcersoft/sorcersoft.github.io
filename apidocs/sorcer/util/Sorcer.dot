@@ -9,8 +9,20 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.util.Sorcer
+	c319407 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Sorcer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Sorcer() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerEnv
-	c319397 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
+	c319461 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerEnv </td></tr>
 		</table></td></tr>
@@ -149,19 +161,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getLookupLocatorsHolder() : LookupLocators </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/SorcerEnv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.Sorcer
-	c319425 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Sorcer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Sorcer() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.Sorcer extends sorcer.core.SorcerEnv
-	c319397:p -> c319425:p [dir=back,arrowtail=empty];
+	c319461:p -> c319407:p [dir=back,arrowtail=empty];
 }
 

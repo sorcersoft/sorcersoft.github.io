@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.StorageManagement
-	c118392 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/StorageManagement.html">
+	c118381 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/StorageManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> StorageManagement </td></tr>
@@ -46,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.dbp.DatabaseProvider
-	c118560 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/dbp/DatabaseProvider.html">
+	c118573 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/dbp/DatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DatabaseProvider </td></tr>
 		</table></td></tr>
@@ -90,11 +90,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/provider/dbp/DatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.DatabaseStorer implements sorcer.core.provider.StorageManagement
-	c118392:p -> c118445:p [dir=back,arrowtail=empty,style=dashed];
+	c118381:p -> c118445:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.DatabaseStorer implements java.rmi.Remote
 	c118849:p -> c118445:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.dbp.DatabaseProvider implements sorcer.service.DatabaseStorer
-	c118445:p -> c118560:p [dir=back,arrowtail=empty,style=dashed];
+	c118445:p -> c118573:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
 	c118849 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.CallbackModel
-	c206379 [label=<<table title="sorcer.util.CallbackModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CallbackModel.html">
+	c206356 [label=<<table title="sorcer.util.CallbackModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CallbackModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CallbackModel </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../CallbackModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ui.Model
-	c206737 [label=<<table title="sorcer.util.ui.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Model.html">
+	c206671 [label=<<table title="sorcer.util.ui.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Model.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Model </td></tr>
 		</table></td></tr>
@@ -53,9 +53,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Model.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ui.Model extends java.util.Observable
-	c206933:p -> c206737:p [dir=back,arrowtail=empty];
+	c206933:p -> c206671:p [dir=back,arrowtail=empty];
 	//sorcer.util.ui.Model implements sorcer.util.CallbackModel
-	c206379:p -> c206737:p [dir=back,arrowtail=empty,style=dashed];
+	c206356:p -> c206671:p [dir=back,arrowtail=empty,style=dashed];
 	// java.util.Observable
 	c206933 [label=<<table title="java.util.Observable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

@@ -9,39 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.context.model.par.ParList
-	c17104 [label=<<table title="sorcer.core.context.model.par.ParList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParList.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ParList </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ParList() </td></tr>
-<tr><td align="left" balign="left"> + ParList(size : int) </td></tr>
-<tr><td align="left" balign="left"> + ParList(parSet : Set&lt;Par&lt;&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + ParList(parLists : ParList[]) </td></tr>
-<tr><td align="left" balign="left"> + ParList(parArray : Par&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + ParList(parList : List&lt;Par&lt;T&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getPar(parName : String) : Par&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setParValue(parName : String, value : Object) </td></tr>
-<tr><td align="left" balign="left"> + selectPars(parNames : List&lt;String&gt;[]) : ParList </td></tr>
-<tr><td align="left" balign="left"> + selectPars(parNames : String[]) : ParList </td></tr>
-<tr><td align="left" balign="left"> + containsParName(name : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + contains(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + toArray() : Par&lt;?&gt;[] </td></tr>
-<tr><td align="left" balign="left"> + asList(array : Par&lt;?&gt;[]) : ParList </td></tr>
-<tr><td align="left" balign="left"> + setParValues(entries : Tuple2&lt;String, ?&gt;[]) : ParList </td></tr>
-<tr><td align="left" balign="left"> + describe() : String </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ParList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.ParSet
-	c17105 [label=<<table title="sorcer.core.context.model.par.ParSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParSet.html">
+	c24657 [label=<<table title="sorcer.core.context.model.par.ParSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParSet </td></tr>
 		</table></td></tr>
@@ -70,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Observable
-	c17106 [label=<<table title="sorcer.core.context.model.par.Observable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Observable.html">
+	c24658 [label=<<table title="sorcer.core.context.model.par.Observable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Observable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Observable </td></tr>
 		</table></td></tr>
@@ -96,58 +65,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getObserverMap() : Map&lt;Uuid, Observer&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Observable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.EntryList
-	c17107 [label=<<table title="sorcer.core.context.model.par.EntryList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.html">
+	// sorcer.core.context.model.par.Observer
+	c24659 [label=<<table title="sorcer.core.context.model.par.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Observer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> EntryList </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Observer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EntryList() </td></tr>
-<tr><td align="left" balign="left"> + EntryList(size : int) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entrySet : Set&lt;Entry&lt;&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entryLists : EntryList[]) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entryArray : Entry&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entryList : EntryList) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(parSet : ParSet) </td></tr>
-<tr><td align="left" balign="left"> + getEntry(entryName : String) : Entry&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + containsEntryName(name : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + contains(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + toArray() : Entry&lt;&gt;[] </td></tr>
-<tr><td align="left" balign="left"> + asList(array : Entry&lt;&gt;[]) : EntryList </td></tr>
-<tr><td align="left" balign="left"> + describe() : String </td></tr>
-<tr><td align="left" balign="left"> + getType() : EntryList.Type </td></tr>
-<tr><td align="left" balign="left"> + setType(type : EntryList.Type) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./EntryList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.EntryList.Type
-	c17108 [label=<<table title="sorcer.core.context.model.par.EntryList.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.Type.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Type </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> INPUT </td></tr>
-<tr><td align="left" balign="left"> OUTPUT </td></tr>
-<tr><td align="left" balign="left"> INITIAL_DESIGN </td></tr>
-<tr><td align="left" balign="left"> OPTIMIZED_DESIGN </td></tr>
-<tr><td align="left" balign="left"> CONSTRAINTS </td></tr>
-<tr><td align="left" balign="left"> LINKED </td></tr>
-<tr><td align="left" balign="left"> CONSTNTS </td></tr>
-<tr><td align="left" balign="left"> INVARIANTS </td></tr>
-		</table></td></tr>
-		</table>>, URL="./EntryList.Type.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c17109 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Par.html">
+	c24660 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Par&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -189,18 +121,86 @@ digraph G {
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.Observer
-	c17110 [label=<<table title="sorcer.core.context.model.par.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Observer.html">
+	// sorcer.core.context.model.par.ParList
+	c24661 [label=<<table title="sorcer.core.context.model.par.ParList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Observer </td></tr>
+<tr><td align="center" balign="center"> ParList </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + ParList() </td></tr>
+<tr><td align="left" balign="left"> + ParList(size : int) </td></tr>
+<tr><td align="left" balign="left"> + ParList(parSet : Set&lt;Par&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ParList(parLists : ParList[]) </td></tr>
+<tr><td align="left" balign="left"> + ParList(parArray : Par&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ParList(parList : List&lt;Par&lt;T&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getPar(parName : String) : Par&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + setParValue(parName : String, value : Object) </td></tr>
+<tr><td align="left" balign="left"> + selectPars(parNames : List&lt;String&gt;[]) : ParList </td></tr>
+<tr><td align="left" balign="left"> + selectPars(parNames : String[]) : ParList </td></tr>
+<tr><td align="left" balign="left"> + containsParName(name : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + toArray() : Par&lt;?&gt;[] </td></tr>
+<tr><td align="left" balign="left"> + asList(array : Par&lt;?&gt;[]) : ParList </td></tr>
+<tr><td align="left" balign="left"> + setParValues(entries : Tuple2&lt;String, ?&gt;[]) : ParList </td></tr>
+<tr><td align="left" balign="left"> + describe() : String </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ParList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.par.EntryList
+	c24662 [label=<<table title="sorcer.core.context.model.par.EntryList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EntryList </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + EntryList() </td></tr>
+<tr><td align="left" balign="left"> + EntryList(size : int) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entrySet : Set&lt;Entry&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entryLists : EntryList[]) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entryArray : Entry&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entryList : EntryList) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(parSet : ParSet) </td></tr>
+<tr><td align="left" balign="left"> + getEntry(entryName : String) : Entry&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + containsEntryName(name : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + toArray() : Entry&lt;&gt;[] </td></tr>
+<tr><td align="left" balign="left"> + asList(array : Entry&lt;&gt;[]) : EntryList </td></tr>
+<tr><td align="left" balign="left"> + describe() : String </td></tr>
+<tr><td align="left" balign="left"> + getType() : EntryList.Type </td></tr>
+<tr><td align="left" balign="left"> + setType(type : EntryList.Type) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./EntryList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.par.EntryList.Type
+	c24663 [label=<<table title="sorcer.core.context.model.par.EntryList.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.Type.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> Type </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> INPUT </td></tr>
+<tr><td align="left" balign="left"> OUTPUT </td></tr>
+<tr><td align="left" balign="left"> INITIAL_DESIGN </td></tr>
+<tr><td align="left" balign="left"> OPTIMIZED_DESIGN </td></tr>
+<tr><td align="left" balign="left"> CONSTRAINTS </td></tr>
+<tr><td align="left" balign="left"> LINKED </td></tr>
+<tr><td align="left" balign="left"> CONSTNTS </td></tr>
+<tr><td align="left" balign="left"> INVARIANTS </td></tr>
+		</table></td></tr>
+		</table>>, URL="./EntryList.Type.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

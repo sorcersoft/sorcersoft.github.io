@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.com.sun.jini.start.Service
-	c42182 [label=<<table title="sorcer.com.sun.jini.start.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Service.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Service </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + result : Object </td></tr>
-<tr><td align="left" balign="left"> + exception : Exception </td></tr>
-<tr><td align="left" balign="left"> + descriptor : ServiceDescriptor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.com.sun.jini.start.ServiceStarter
-	c42183 [label=<<table title="sorcer.com.sun.jini.start.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceStarter.html">
+	c40427 [label=<<table title="sorcer.com.sun.jini.start.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceStarter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceStarter </td></tr>
 		</table></td></tr>
@@ -37,5 +23,19 @@ digraph G {
 <tr><td align="left" balign="left"> + startServicesFromPaths(args : String[]) : Service[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceStarter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.com.sun.jini.start.Service
+	c40428 [label=<<table title="sorcer.com.sun.jini.start.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Service.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Service </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + result : Object </td></tr>
+<tr><td align="left" balign="left"> + exception : Exception </td></tr>
+<tr><td align="left" balign="left"> + descriptor : ServiceDescriptor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

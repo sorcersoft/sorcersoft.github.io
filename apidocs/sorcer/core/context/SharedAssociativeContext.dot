@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ServiceContext<T>
-	c310784 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c310815 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -281,7 +281,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedAssociativeContext
-	c310787 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedAssociativeContext.html">
+	c310823 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedAssociativeContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedAssociativeContext </td></tr>
 		</table></td></tr>
@@ -299,7 +299,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SharedAssociativeContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.SpaceContext
-	c310883 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/SpaceContext.html">
+	c310903 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/SpaceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SpaceContext </td></tr>
@@ -317,8 +317,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.SharedAssociativeContext extends sorcer.core.context.ServiceContext
-	c310784:p -> c310787:p [dir=back,arrowtail=empty];
+	c310815:p -> c310823:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.SharedAssociativeContext implements sorcer.service.SpaceContext
-	c310883:p -> c310787:p [dir=back,arrowtail=empty,style=dashed];
+	c310903:p -> c310823:p [dir=back,arrowtail=empty,style=dashed];
 }
 

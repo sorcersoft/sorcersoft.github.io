@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.ServiceTasker
-	c306744 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceTasker.html">
+	c306733 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceTasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceTasker </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceTasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c306747 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
+	c306739 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -163,7 +163,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Executor
-	c306792 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Executor.html">
+	c306806 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Executor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Executor </td></tr>
@@ -177,22 +177,22 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Executor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Tasker
-	c306832 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Tasker.html">
+	c306824 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Tasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Tasker </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.ServiceTasker extends sorcer.core.provider.ServiceProvider
-	c306747:p -> c306744:p [dir=back,arrowtail=empty];
+	c306739:p -> c306733:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.ServiceTasker implements sorcer.service.Tasker
-	c306832:p -> c306744:p [dir=back,arrowtail=empty,style=dashed];
+	c306824:p -> c306733:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceTasker implements sorcer.service.Executor
-	c306792:p -> c306744:p [dir=back,arrowtail=empty,style=dashed];
+	c306806:p -> c306733:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceTasker implements java.rmi.Remote
-	c307213:p -> c306744:p [dir=back,arrowtail=empty,style=dashed];
+	c307213:p -> c306733:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Tasker implements java.rmi.Remote
-	c307213:p -> c306832:p [dir=back,arrowtail=empty,style=dashed];
+	c307213:p -> c306824:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
 	c307213 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
