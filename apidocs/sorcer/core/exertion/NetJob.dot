@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Job
-	c217539 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Job.html">
+	c303998 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Job.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Job </font></td></tr>
 		</table></td></tr>
@@ -27,6 +27,7 @@ digraph G {
 <tr><td align="left" balign="left"> + Job(name : String, description : String, signatures : List&lt;Signature&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + isJob() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
 <tr><td align="left" balign="left"> + hasChild(childName : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getChild(childName : String) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getLsbID() : long </td></tr>
@@ -36,13 +37,13 @@ digraph G {
 <tr><td align="left" balign="left"> + getMasterExertion() : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setRendezvousName(jobberName : String) </td></tr>
 <tr><td align="left" balign="left"> + getProcessSignature() : Signature </td></tr>
-<tr><td align="left" balign="left"> + addExertion(ex : Exertion) : Job </td></tr>
+<tr><td align="left" balign="left"> + addExertion(ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + addExertions(exertions : List&lt;Exertion&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setExertions(exertions : List&lt;Exertion&gt;) </td></tr>
 <tr><td align="left" balign="left"> + addExertion(exertion : Exertion, priority : int) : Job </td></tr>
 <tr><td align="left" balign="left"> + removeExertion(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + removeExertionAt(index : int) </td></tr>
-<tr><td align="left" balign="left"> + exertionAt(index : int) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + remove(index : int) </td></tr>
+<tr><td align="left" balign="left"> + get(index : int) : Exertion </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + doJob(txn : Transaction) : Job </font></td></tr>
 <tr><td align="left" balign="left"> + undoJob() </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
@@ -72,17 +73,17 @@ digraph G {
 <tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
 <tr><td align="left" balign="left"> + putJobValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + getReturnJobPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + getComponentContext(path : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getComponentControlContext(path : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getComponentExertion(path : String) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Entry&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + setSessionId(id : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + reset(state : int) </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : ServiceExertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Job.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Evaluation<T>
-	c217548 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
+	c304006 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
@@ -97,7 +98,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Invocation<T>
-	c217579 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
+	c304042 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
@@ -111,7 +112,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetJob
-	c217754 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetJob.html">
+	c304217 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetJob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetJob </td></tr>
 		</table></td></tr>
@@ -125,13 +126,14 @@ digraph G {
 <tr><td align="left" balign="left"> + NetJob(name : String, principal : SorcerPrincipal) </td></tr>
 <tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.NetJob extends sorcer.service.Job
-	c217539:p -> c217754:p [dir=back,arrowtail=empty];
+	c303998:p -> c304217:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.NetJob implements sorcer.service.Evaluation<T>
-	c217548:p -> c217754:p [dir=back,arrowtail=empty,style=dashed];
+	c304006:p -> c304217:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.exertion.NetJob implements sorcer.service.Invocation<T>
-	c217579:p -> c217754:p [dir=back,arrowtail=empty,style=dashed];
+	c304042:p -> c304217:p [dir=back,arrowtail=empty,style=dashed];
 }
 

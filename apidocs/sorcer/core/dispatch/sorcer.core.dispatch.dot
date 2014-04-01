@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.dispatch.CatalogBlockDispatcher
+	c35184 [label=<<table title="sorcer.core.dispatch.CatalogBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogBlockDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogBlockDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogBlockDispatcher(block : Block, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceExertDispatcher
-	c25243 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
+	c35185 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SpaceExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -21,7 +35,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SpaceExertDispatcher() </td></tr>
-<tr><td align="left" balign="left"> + SpaceExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, memUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + SpaceExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, memUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + SpaceExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
 <tr><td align="left" balign="left"> # addPoison(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> # changeDoneExertionIndex(index : int) </td></tr>
@@ -36,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceExertDispatcher.CollectFailThread
-	c25244 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher.CollectFailThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.CollectFailThread.html">
+	c35186 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher.CollectFailThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.CollectFailThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CollectFailThread </td></tr>
 		</table></td></tr>
@@ -49,7 +63,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceExertDispatcher.CollectFailThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceExertDispatcher.CollectErrorThread
-	c25245 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher.CollectErrorThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.CollectErrorThread.html">
+	c35187 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher.CollectErrorThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.CollectErrorThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CollectErrorThread </td></tr>
 		</table></td></tr>
@@ -62,7 +76,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceExertDispatcher.CollectErrorThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertionDispatcherFactory
-	c25246 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionDispatcherFactory.html">
+	c35188 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionDispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionDispatcherFactory </td></tr>
 		</table></td></tr>
@@ -73,14 +87,14 @@ digraph G {
 <tr><td align="left" balign="left"> + ExertionDispatcherFactory() </td></tr>
 <tr><td align="left" balign="left"> + getFactory() : ExertionDispatcherFactory </td></tr>
 <tr><td align="left" balign="left"> + getProvisionableFactory() : ExertionDispatcherFactory </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) : Dispatcher </td></tr>
 <tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, config : String[]) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider, config : String[]) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider, config : String[]) : Dispatcher </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionDispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertionSorter
-	c25247 [label=<<table title="sorcer.core.dispatch.ExertionSorter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionSorter.html">
+	c35189 [label=<<table title="sorcer.core.dispatch.ExertionSorter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionSorter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionSorter </td></tr>
 		</table></td></tr>
@@ -93,7 +107,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertionSorter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.MonitoredTaskDispatcher
-	c25248 [label=<<table title="sorcer.core.dispatch.MonitoredTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredTaskDispatcher.html">
+	c35190 [label=<<table title="sorcer.core.dispatch.MonitoredTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredTaskDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitoredTaskDispatcher </td></tr>
 		</table></td></tr>
@@ -101,13 +115,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitoredTaskDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + MonitoredTaskDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitoredTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceSequentialDispatcher
-	c25249 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceSequentialDispatcher.html">
+	c35191 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceSequentialDispatcher </td></tr>
 		</table></td></tr>
@@ -115,13 +129,41 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceSequentialDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + SpaceSequentialDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.ProviderProvisionManager
+	c35192 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProvisionManager.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProviderProvisionManager </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # servicesToProvision : Set&lt;ProviderProvisionManager.SignatureElement&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # ProviderProvisionManager() </td></tr>
+<tr><td align="left" balign="left"> + getInstance() : ProviderProvisionManager </td></tr>
+<tr><td align="left" balign="left"> + add(exertion : Exertion, spaceExertDispatcher : SpaceExertDispatcher) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.ProviderProvisionManager.ProvisionThread
+	c35193 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager.ProvisionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProvisionManager.ProvisionThread.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProvisionThread </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # ProviderProvisionManager.ProvisionThread() </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderProvisionManager.ProvisionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SortingException
-	c25250 [label=<<table title="sorcer.core.dispatch.SortingException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SortingException.html">
+	c35194 [label=<<table title="sorcer.core.dispatch.SortingException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SortingException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SortingException </td></tr>
 		</table></td></tr>
@@ -136,7 +178,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SortingException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogExertDispatcher
-	c25251 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
+	c35195 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> CatalogExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -144,17 +186,18 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + CatalogExertDispatcher(job : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> # runExertion(ex : ServiceExertion) : CatalogExertDispatcher.ExertionThread </td></tr>
 <tr><td align="left" balign="left"> # execExertion(ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
 <tr><td align="left" balign="left"> # execTask(task : Task) : Task </td></tr>
 <tr><td align="left" balign="left"> # execServiceTask(task : Task) : Task </td></tr>
+<tr><td align="left" balign="left"> # execJob(job : Job) : Job </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CatalogExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogExertDispatcher.ExertionThread
-	c25252 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher.ExertionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.ExertionThread.html">
+	c35196 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher.ExertionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.ExertionThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionThread </td></tr>
 		</table></td></tr>
@@ -169,7 +212,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CatalogExertDispatcher.ExertionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogSequentialDispatcher
-	c25253 [label=<<table title="sorcer.core.dispatch.CatalogSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSequentialDispatcher.html">
+	c35197 [label=<<table title="sorcer.core.dispatch.CatalogSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogSequentialDispatcher </td></tr>
 		</table></td></tr>
@@ -177,13 +220,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + CatalogSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CatalogSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceTaskDispatcher
-	c25254 [label=<<table title="sorcer.core.dispatch.SpaceTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaskDispatcher.html">
+	c35198 [label=<<table title="sorcer.core.dispatch.SpaceTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaskDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceTaskDispatcher </td></tr>
 		</table></td></tr>
@@ -191,7 +234,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceTaskDispatcher(task : NetTask, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + SpaceTaskDispatcher(task : NetTask, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 <tr><td align="left" balign="left"> + collectFails() </td></tr>
@@ -199,7 +242,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogParallelDispatcher
-	c25255 [label=<<table title="sorcer.core.dispatch.CatalogParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogParallelDispatcher.html">
+	c35199 [label=<<table title="sorcer.core.dispatch.CatalogParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogParallelDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogParallelDispatcher </td></tr>
 		</table></td></tr>
@@ -207,13 +250,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + CatalogParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CatalogParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogSingletonDispatcher
-	c25256 [label=<<table title="sorcer.core.dispatch.CatalogSingletonDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSingletonDispatcher.html">
+	c35200 [label=<<table title="sorcer.core.dispatch.CatalogSingletonDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSingletonDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogSingletonDispatcher </td></tr>
 		</table></td></tr>
@@ -221,13 +264,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogSingletonDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + CatalogSingletonDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CatalogSingletonDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.DispatcherException
-	c25257 [label=<<table title="sorcer.core.dispatch.DispatcherException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherException.html">
+	c35201 [label=<<table title="sorcer.core.dispatch.DispatcherException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DispatcherException </td></tr>
 		</table></td></tr>
@@ -241,7 +284,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DispatcherException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SWIFExertDispatcher
-	c25258 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.html">
+	c35202 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SWIFExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -249,7 +292,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SWIFExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + SWIFExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> # runExertion(ex : ServiceExertion) : SWIFExertDispatcher.ExertionThread </td></tr>
 <tr><td align="left" balign="left"> # execExertion(ex : Exertion) : ServiceExertion </td></tr>
@@ -257,7 +300,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SWIFExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SWIFExertDispatcher.ExertionThread
-	c25259 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher.ExertionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.ExertionThread.html">
+	c35203 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher.ExertionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.ExertionThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionThread </td></tr>
 		</table></td></tr>
@@ -272,7 +315,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SWIFExertDispatcher.ExertionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c25260 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+	c35204 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -280,7 +323,7 @@ digraph G {
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> # xrt : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> # masterXrt : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> # inputXrts : Vector&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> # inputXrts : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> # state : int </td></tr>
 <tr><td align="left" balign="left"> # isMonitored : boolean </td></tr>
 <tr><td align="left" balign="left"> # sharedContexts : Set&lt;Context&lt;&gt;&gt; </td></tr>
@@ -292,17 +335,19 @@ digraph G {
 <tr><td align="left" balign="left"> # dispatchers : Hashtable&lt;Uuid, ExertDispatcher&gt; </td></tr>
 <tr><td align="left" balign="left"> # disatchGroup : ThreadGroup </td></tr>
 <tr><td align="left" balign="left"> # dThread : ExertDispatcher.DispatchThread </td></tr>
+<tr><td align="left" balign="left"> # providerProvisionManager : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> # provisionManager : ProvisionManager </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ExertDispatcher() </td></tr>
-<tr><td align="left" balign="left"> + ExertDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + ExertDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + getDispatchers() : Hashtable&lt;Uuid, ExertDispatcher&gt; </td></tr>
 <tr><td align="left" balign="left"> + setDispatchers(dispatchers : Hashtable&lt;Uuid, ExertDispatcher&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
 <tr><td align="left" balign="left"> + setProvider(provider : Provider) </td></tr>
 <tr><td align="left" balign="left"> # initialize() </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + dispatchExertions() </font></td></tr>
+<tr><td align="left" balign="left"> # checkAndDispatchExertions() </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + collectResults() </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
@@ -333,6 +378,7 @@ digraph G {
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> # getCatalog() : Cataloger </td></tr>
+<tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
 <tr><td align="left" balign="left"> # reconcileInputExertions(ex : Exertion) </td></tr>
@@ -340,7 +386,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher.DispatchThread
-	c25261 [label=<<table title="sorcer.core.dispatch.ExertDispatcher.DispatchThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.DispatchThread.html">
+	c35205 [label=<<table title="sorcer.core.dispatch.ExertDispatcher.DispatchThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.DispatchThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DispatchThread </td></tr>
 		</table></td></tr>
@@ -354,7 +400,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.DispatchThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher.CollectResultThread
-	c25262 [label=<<table title="sorcer.core.dispatch.ExertDispatcher.CollectResultThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.CollectResultThread.html">
+	c35206 [label=<<table title="sorcer.core.dispatch.ExertDispatcher.CollectResultThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.CollectResultThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CollectResultThread </td></tr>
 		</table></td></tr>
@@ -367,7 +413,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.CollectResultThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.DispatcherFactory
-	c25263 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherFactory.html">
+	c35207 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DispatcherFactory </td></tr>
@@ -376,12 +422,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider, config : String[]) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider, config : String[]) : Dispatcher </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcherFactory
-	c25264 [label=<<table title="sorcer.core.dispatch.ExertDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcherFactory.html">
+	c35208 [label=<<table title="sorcer.core.dispatch.ExertDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertDispatcherFactory </td></tr>
 		</table></td></tr>
@@ -393,7 +439,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceParallelDispatcher
-	c25265 [label=<<table title="sorcer.core.dispatch.SpaceParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceParallelDispatcher.html">
+	c35209 [label=<<table title="sorcer.core.dispatch.SpaceParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceParallelDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceParallelDispatcher </td></tr>
 		</table></td></tr>
@@ -401,13 +447,28 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + SpaceParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.BlockThread
+	c35210 [label=<<table title="sorcer.core.dispatch.BlockThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BlockThread.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BlockThread </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BlockThread(block : Block, provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"> + getBlock() : Block </td></tr>
+<tr><td align="left" balign="left"> + getResult() : Block </td></tr>
+		</table></td></tr>
+		</table>>, URL="./BlockThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.MonitoredExertDispatcher
-	c25266 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredExertDispatcher.html">
+	c35211 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -419,15 +480,29 @@ digraph G {
 <tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitoredExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + MonitoredExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> # postExecExertion(result : Exertion) </td></tr>
 <tr><td align="left" balign="left"> # execExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.SpaceBlockDispatcher
+	c35212 [label=<<table title="sorcer.core.dispatch.SpaceBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceBlockDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceBlockDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceBlockDispatcher(exertion : Block, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SWIFSequentialDispatcher
-	c25267 [label=<<table title="sorcer.core.dispatch.SWIFSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFSequentialDispatcher.html">
+	c35213 [label=<<table title="sorcer.core.dispatch.SWIFSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SWIFSequentialDispatcher </td></tr>
 		</table></td></tr>
@@ -435,7 +510,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SWIFSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + SWIFSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
 <tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
@@ -444,7 +519,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SWIFSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.JobThread
-	c25268 [label=<<table title="sorcer.core.dispatch.JobThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JobThread.html">
+	c35214 [label=<<table title="sorcer.core.dispatch.JobThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JobThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JobThread </td></tr>
 		</table></td></tr>
@@ -459,59 +534,51 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JobThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ProvisionManager
-	c25269 [label=<<table title="sorcer.core.dispatch.ProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProvisionManager.html">
+	c35215 [label=<<table title="sorcer.core.dispatch.ProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProvisionManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProvisionManager </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # servicesToProvision : Set&lt;ProvisionManager.SignatureElement&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ProvisionManager() </td></tr>
-<tr><td align="left" balign="left"> + getInstance() : ProvisionManager </td></tr>
-<tr><td align="left" balign="left"> + add(exertion : Exertion, spaceExertDispatcher : SpaceExertDispatcher) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ProvisionManager.ProvisionThread
-	c25270 [label=<<table title="sorcer.core.dispatch.ProvisionManager.ProvisionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProvisionManager.ProvisionThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ProvisionThread </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ProvisionManager.ProvisionThread() </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"> + ProvisionManager(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + deployServices() : boolean </td></tr>
+<tr><td align="left" balign="left"> + undeploy() </td></tr>
+<tr><td align="left" balign="left"> + getOperationalStringManager() : OperationalStringManager </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ProvisionManager.ProvisionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.dispatch.CatalogBlockDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
+	c35195:p -> c35184:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SpaceExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c25260:p -> c25243:p [dir=back,arrowtail=empty];
+	c35204:p -> c35185:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.ExertionDispatcherFactory implements sorcer.core.dispatch.DispatcherFactory
-	c25263:p -> c25246:p [dir=back,arrowtail=empty,style=dashed];
+	c35207:p -> c35188:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.dispatch.MonitoredTaskDispatcher extends sorcer.core.dispatch.MonitoredExertDispatcher
-	c25266:p -> c25248:p [dir=back,arrowtail=empty];
+	c35211:p -> c35190:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SpaceSequentialDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c25243:p -> c25249:p [dir=back,arrowtail=empty];
+	c35185:p -> c35191:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c25260:p -> c25251:p [dir=back,arrowtail=empty];
+	c35204:p -> c35195:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogSequentialDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c25251:p -> c25253:p [dir=back,arrowtail=empty];
+	c35195:p -> c35197:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SpaceTaskDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c25243:p -> c25254:p [dir=back,arrowtail=empty];
+	c35185:p -> c35198:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogParallelDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c25251:p -> c25255:p [dir=back,arrowtail=empty];
+	c35195:p -> c35199:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogSingletonDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c25251:p -> c25256:p [dir=back,arrowtail=empty];
+	c35195:p -> c35200:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SWIFExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c25260:p -> c25258:p [dir=back,arrowtail=empty];
+	c35204:p -> c35202:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.ExertDispatcherFactory extends sorcer.core.dispatch.ExertionDispatcherFactory
-	c25246:p -> c25264:p [dir=back,arrowtail=empty];
+	c35188:p -> c35208:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SpaceParallelDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c25243:p -> c25265:p [dir=back,arrowtail=empty];
+	c35185:p -> c35209:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.MonitoredExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c25260:p -> c25266:p [dir=back,arrowtail=empty];
+	c35204:p -> c35211:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.SpaceBlockDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
+	c35185:p -> c35212:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SWIFSequentialDispatcher extends sorcer.core.dispatch.SWIFExertDispatcher
-	c25258:p -> c25267:p [dir=back,arrowtail=empty];
+	c35202:p -> c35213:p [dir=back,arrowtail=empty];
 }
 

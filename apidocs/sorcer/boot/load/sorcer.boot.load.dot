@@ -10,19 +10,46 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.boot.load.Activator
-	c2977 [label=<<table title="sorcer.boot.load.Activator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Activator.html">
+	c4869 [label=<<table title="sorcer.boot.load.Activator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Activator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Activator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + entryHandlers : List&lt;Activator.EntryHandlerEntry&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Activator() </td></tr>
+<tr><td align="left" balign="left"> + activate(jars : URL[]) </td></tr>
+<tr><td align="left" balign="left"> + activate(jarUrl : URL) </td></tr>
+<tr><td align="left" balign="left"> + setInjector(injector : InjectionHelper.Injector) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Activator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.load.Activator.AbstractClassEntryHandler
+	c4870 [label=<<table title="sorcer.boot.load.Activator.AbstractClassEntryHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Activator.AbstractClassEntryHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractClassEntryHandler </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Activator() </td></tr>
-<tr><td align="left" balign="left"> + activate(cl : ClassLoader, jars : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + activate(jars : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + activate(cl : ClassLoader, jarUrl : URL) </td></tr>
+<tr><td align="left" balign="left"> + Activator.AbstractClassEntryHandler() </td></tr>
+<tr><td align="left" balign="left"> + handle(value : String) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + handle(instance : Object) </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./Activator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Activator.AbstractClassEntryHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.load.Activator.EntryHandlerEntry
+	c4871 [label=<<table title="sorcer.boot.load.Activator.EntryHandlerEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Activator.EntryHandlerEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EntryHandlerEntry </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + key : String </td></tr>
+<tr><td align="left" balign="left"> + entryHandler : Activator.AbstractClassEntryHandler </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Activator.EntryHandlerEntry(key : String, entryHandler : Activator.AbstractClassEntryHandler) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Activator.EntryHandlerEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

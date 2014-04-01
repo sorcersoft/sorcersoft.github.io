@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.loki.key.KeyGenerator
-	c188724 [label=<<table title="sorcer.core.loki.key.KeyGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./KeyGenerator.html">
+	c263894 [label=<<table title="sorcer.core.loki.key.KeyGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./KeyGenerator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> KeyGenerator </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./KeyGenerator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.loki.key.KeyGenerationManagement
-	c188725 [label=<<table title="sorcer.core.loki.key.KeyGenerationManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./KeyGenerationManagement.html">
+	c263895 [label=<<table title="sorcer.core.loki.key.KeyGenerationManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./KeyGenerationManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> KeyGenerationManagement </td></tr>
@@ -44,6 +44,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./KeyGenerationManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.loki.key.KeyGenerator implements sorcer.core.loki.key.KeyGenerationManagement
-	c188725:p -> c188724:p [dir=back,arrowtail=empty,style=dashed];
+	c263895:p -> c263894:p [dir=back,arrowtail=empty,style=dashed];
 }
 

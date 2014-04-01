@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.signature.ServiceSignature
-	c230794 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
+	c321631 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSignature </td></tr>
 		</table></td></tr>
@@ -75,7 +75,7 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getServiceID() : ServiceID </td></tr>
 <tr><td align="left" balign="left"> + setServiceID(id : ServiceID) </td></tr>
-<tr><td align="left" balign="left"> + equals(method : ServiceSignature) : boolean </td></tr>
+<tr><td align="left" balign="left"> + equals(signature : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
 <tr><td align="left" balign="left"> + setCodebase(codebase : String) </td></tr>
@@ -92,10 +92,13 @@ digraph G {
 <tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
 <tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
+<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
+<tr><td align="left" balign="left"> + compareTo(signature : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.ObjectSignature
-	c230795 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectSignature.html">
+	c321633 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectSignature </td></tr>
 		</table></td></tr>
@@ -107,17 +110,20 @@ digraph G {
 <tr><td align="left" balign="left"> + ObjectSignature(selector : String, object : Object, argTypes : Class&lt;?&gt;[], args : Object[]) </td></tr>
 <tr><td align="left" balign="left"> + ObjectSignature(selector : String, providerClass : Class&lt;?&gt;, argClasses : Class&lt;?&gt;[]) </td></tr>
 <tr><td align="left" balign="left"> + ObjectSignature(providerClass : Class&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setInvoker(invoker : MethodInvoking&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : Object[] </td></tr>
 <tr><td align="left" balign="left"> + getTarget() : Object </td></tr>
 <tr><td align="left" balign="left"> + setTarget(target : Object) </td></tr>
 <tr><td align="left" balign="left"> + getProviderType() : Class&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> + setProviderType(providerType : Class&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getEvaluator() : MethodInvoking&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEvaluator(evaluator : MethodInvoking&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getTypes() : Class&lt;?&gt;[] </td></tr>
 <tr><td align="left" balign="left"> + setTypes(types : Class&lt;?&gt;[]) </td></tr>
 <tr><td align="left" balign="left"> + newInstance() : Object </td></tr>
 <tr><td align="left" balign="left"> + newInstance(args : Object[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + newInstance(args : Object[], argClasses : Class&lt;?&gt;[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + initInstance() : Object </td></tr>
-<tr><td align="left" balign="left"> + isSelectable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + initInstance(args : Object[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + initInstance(args : Object[], argClasses : Class&lt;?&gt;[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + build() : Object </td></tr>
@@ -126,7 +132,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.NetSignature
-	c230796 [label=<<table title="sorcer.core.signature.NetSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetSignature.html">
+	c321634 [label=<<table title="sorcer.core.signature.NetSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetSignature </td></tr>
 		</table></td></tr>
@@ -178,8 +184,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.ObjectSignature extends sorcer.core.signature.ServiceSignature
-	c230794:p -> c230795:p [dir=back,arrowtail=empty];
+	c321631:p -> c321633:p [dir=back,arrowtail=empty];
 	//sorcer.core.signature.NetSignature extends sorcer.core.signature.ObjectSignature
-	c230795:p -> c230796:p [dir=back,arrowtail=empty];
+	c321633:p -> c321634:p [dir=back,arrowtail=empty];
 }
 

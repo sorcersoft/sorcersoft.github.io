@@ -10,20 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.AdministratableProvider
-	c293364 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../AdministratableProvider.html">
+	c408281 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../AdministratableProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> AdministratableProvider </td></tr>
 		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
-		</table></td></tr>
 		</table>>, URL="../../AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c293395 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c408322 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -32,8 +26,7 @@ digraph G {
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
 <tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
-<tr><td align="left" balign="left"> # tally : int </td></tr>
-<tr><td align="left" balign="left"> # size : int </td></tr>
+<tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
@@ -73,7 +66,6 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + init(configOptions : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + getMainUIDescriptor() : UIDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getProviderUIDescriptor() : UIDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getServiceUIEntries() : UIDescriptor[] </td></tr>
 <tr><td align="left" balign="left"> + getServiceComponents() : Map&lt;?, ?&gt; </td></tr>
 <tr><td align="left" balign="left"> + setServiceComponents(serviceComponents : Map&lt;?, ?&gt;) </td></tr>
@@ -114,6 +106,7 @@ digraph G {
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + dropJob(job : Job) : Job </td></tr>
+<tr><td align="left" balign="left"> + addAttribute(attributes : Entry) </td></tr>
 <tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
 <tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
@@ -147,6 +140,7 @@ digraph G {
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
 <tr><td align="left" balign="left"> + getReferentUuid() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
@@ -160,7 +154,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Cataloger
-	c293403 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Cataloger.html">
+	c408331 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Cataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cataloger </td></tr>
@@ -192,7 +186,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../Cataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger
-	c293752 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.html">
+	c408841 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceCataloger </td></tr>
 		</table></td></tr>
@@ -229,12 +223,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.AdministratableProvider
-	c293364:p -> c293395:p [dir=back,arrowtail=empty,style=dashed];
+	c408281:p -> c408322:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger extends sorcer.core.provider.ServiceProvider
-	c293395:p -> c293752:p [dir=back,arrowtail=empty];
+	c408322:p -> c408841:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.provider.Cataloger
-	c293403:p -> c293752:p [dir=back,arrowtail=empty,style=dashed];
+	c408331:p -> c408841:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.AdministratableProvider
-	c293364:p -> c293752:p [dir=back,arrowtail=empty,style=dashed];
+	c408281:p -> c408841:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor
-	c346139 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StaticServiceProvider.StaticProviderAccessor.html">
+	c479994 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StaticServiceProvider.StaticProviderAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticProviderAccessor </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StaticServiceProvider.StaticProviderAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.DynamicAccessor
-	c346258 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/DynamicAccessor.html">
+	c480152 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/DynamicAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DynamicAccessor </td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/DynamicAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor implements sorcer.service.DynamicAccessor
-	c346258:p -> c346139:p [dir=back,arrowtail=empty,style=dashed];
+	c480152:p -> c479994:p [dir=back,arrowtail=empty,style=dashed];
 }
 

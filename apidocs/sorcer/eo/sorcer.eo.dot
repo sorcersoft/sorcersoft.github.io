@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.eo.operator
-	c32254 [label=<<table title="sorcer.eo.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.html">
+	c47570 [label=<<table title="sorcer.eo.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> operator </td></tr>
 		</table></td></tr>
@@ -46,6 +46,11 @@ digraph G {
 <tr><td align="left" balign="left"> + sig(serviceType : Class&lt;?&gt;, providerName : String, parameters : Object[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, version : String, providerName : String, parameters : Object[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, version : String) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(name : String, selector : String, deployment : Deployment) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, type : Strategy.Provision, deployment : Deployment) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(serviceType : Class&lt;?&gt;, returnPath : ReturnPath&lt;&gt;, deployment : Deployment) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, providerName : String, deployment : Deployment, parameters : Object[]) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, version : String, providerName : String, deployment : Deployment, parameters : Object[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(selector : String) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(name : String, selector : String) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, type : Signature.Type) : Signature </td></tr>
@@ -57,12 +62,19 @@ digraph G {
 <tr><td align="left" balign="left"> + task(name : String, elems : T[]) : Task </td></tr>
 <tr><td align="left" balign="left"> + selector(sig : Signature) : String </td></tr>
 <tr><td align="left" balign="left"> + type(signature : Signature, type : Signature.Type) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(evaluator : Evaluation&lt;&gt;, returnPath : ReturnPath&lt;&gt;) : EvaluationSignature </td></tr>
+<tr><td align="left" balign="left"> + sig(evaluator : Evaluation&lt;&gt;) : EvaluationSignature </td></tr>
+<tr><td align="left" balign="left"> + task(signature : EvaluationSignature) : EvaluationTask </td></tr>
+<tr><td align="left" balign="left"> + task(evaluator : Evaluation&lt;&gt;) : EvaluationTask </td></tr>
+<tr><td align="left" balign="left"> + task(signature : EvaluationSignature, context : Context&lt;&gt;) : EvaluationTask </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, object : Object, deployment : Deployment, types : Class&lt;&gt;[]) : ObjectSignature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, object : Object, types : Class&lt;&gt;[]) : ObjectSignature </td></tr>
 <tr><td align="left" balign="left"> + sig(selector : String, object : Object, types : Class&lt;?&gt;[], args : Object[]) : ObjectSignature </td></tr>
 <tr><td align="left" balign="left"> + task(signature : ObjectSignature) : ObjectTask </td></tr>
 <tr><td align="left" balign="left"> + task(signature : ObjectSignature, context : Context&lt;&gt;) : ObjectTask </td></tr>
 <tr><td align="left" balign="left"> + task(name : String, signature : Signature, context : Context&lt;&gt;) : Task </td></tr>
 <tr><td align="left" balign="left"> + task(signature : Signature, context : Context&lt;&gt;) : Task </td></tr>
+<tr><td align="left" balign="left"> + task(target : String, project : File) : AntTask </td></tr>
 <tr><td align="left" balign="left"> + batch(name : String, elems : T[]) : Task </td></tr>
 <tr><td align="left" balign="left"> + srv(name : String, elems : T[]) : E </td></tr>
 <tr><td align="left" balign="left"> + xrt(name : String, elems : T[]) : E </td></tr>
@@ -143,19 +155,24 @@ digraph G {
 <tr><td align="left" balign="left"> + clear(type : Store) : int </td></tr>
 <tr><td align="left" balign="left"> + size(type : Store) : int </td></tr>
 <tr><td align="left" balign="left"> + target(object : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + parameterTypes(parameterTypes : Class&lt;&gt;[]) : operator.ParameterTypes </td></tr>
-<tr><td align="left" balign="left"> + parameterValues(args : Object[]) : operator.Args </td></tr>
-<tr><td align="left" balign="left"> + args(args : Object[]) : operator.Args </td></tr>
-<tr><td align="left" balign="left"> + args(path : String, args : Object[]) : operator.Args </td></tr>
+<tr><td align="left" balign="left"> + parameterTypes(parameterTypes : Class&lt;&gt;[]) : ParameterTypes </td></tr>
+<tr><td align="left" balign="left"> + parameterValues(args : Object[]) : Args </td></tr>
+<tr><td align="left" balign="left"> + args(args : Object[]) : Args </td></tr>
+<tr><td align="left" balign="left"> + args(path : String, args : Object[]) : Args </td></tr>
 <tr><td align="left" balign="left"> + providers(signature : Signature) : List&lt;Service&gt; </td></tr>
 <tr><td align="left" balign="left"> + interfaces(obj : Object) : List&lt;Class&lt;?&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + provider(signature : Signature) : Object </td></tr>
 <tr><td align="left" balign="left"> + instance(signature : ObjectSignature) : Object </td></tr>
 <tr><td align="left" balign="left"> + instance(signature : ObjectSignature, context : Context&lt;&gt;) : Object </td></tr>
+<tr><td align="left" balign="left"> + condition(parcontext : ParModel&lt;&gt;, expression : String, pars : String[]) : Condition </td></tr>
+<tr><td align="left" balign="left"> + condition(expression : String, pars : String[]) : Condition </td></tr>
 <tr><td align="left" balign="left"> + condition(condition : boolean) : Condition </td></tr>
 <tr><td align="left" balign="left"> + opt(name : String, target : Exertion) : OptExertion </td></tr>
+<tr><td align="left" balign="left"> + opt(condition : Condition, target : Exertion) : OptExertion </td></tr>
 <tr><td align="left" balign="left"> + opt(name : String, condition : Condition, target : Exertion) : OptExertion </td></tr>
-<tr><td align="left" balign="left"> + alt(name : String, invokers : OptExertion[]) : AltExertion </td></tr>
+<tr><td align="left" balign="left"> + alt(exertions : OptExertion[]) : AltExertion </td></tr>
+<tr><td align="left" balign="left"> + alt(name : String, exertions : OptExertion[]) : AltExertion </td></tr>
+<tr><td align="left" balign="left"> + loop(condition : Condition, target : Exertion) : LoopExertion </td></tr>
 <tr><td align="left" balign="left"> + loop(name : String, condition : Condition, target : Exertion) : LoopExertion </td></tr>
 <tr><td align="left" balign="left"> + exertion(mappable : Mappable&lt;&gt;, path : String) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dispatcher(signature : Signature) : Signature </td></tr>
@@ -163,11 +180,32 @@ digraph G {
 <tr><td align="left" balign="left"> + modelManager(signature : Signature) : Signature </td></tr>
 <tr><td align="left" balign="left"> + optimizer(signature : Signature) : Signature </td></tr>
 <tr><td align="left" balign="left"> + explorer(signature : Signature) : Signature </td></tr>
+<tr><td align="left" balign="left"> + block(exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(signature : Signature, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, signature : Signature, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
 <tr><td align="left" balign="left"> + block(signature : Signature, context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, signature : Signature, context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + perNode(number : int) : operator.PerNode </td></tr>
+<tr><td align="left" balign="left"> + classpath(jarNames : String[]) : operator.Jars </td></tr>
+<tr><td align="left" balign="left"> + codebase(jarNames : String[]) : operator.CodebaseJars </td></tr>
+<tr><td align="left" balign="left"> + implementation(className : String) : operator.Impl </td></tr>
+<tr><td align="left" balign="left"> + webster(WebsterUrl : String) : operator.WebsterUrl </td></tr>
+<tr><td align="left" balign="left"> + configuration(configuration : String) : operator.Configuration </td></tr>
+<tr><td align="left" balign="left"> + maintain(multiplicity : int) : operator.Multiplicity </td></tr>
+<tr><td align="left" balign="left"> + maintain(multiplicity : int, maxPerCybernode : int) : operator.Multiplicity </td></tr>
+<tr><td align="left" balign="left"> + maintain(multiplicity : int, perNode : operator.PerNode) : operator.Multiplicity </td></tr>
+<tr><td align="left" balign="left"> + idle(idle : String) : operator.Idle </td></tr>
+<tr><td align="left" balign="left"> + idle(idle : int) : operator.Idle </td></tr>
+<tr><td align="left" balign="left"> + deploy(elems : T[]) : Deployment </td></tr>
+<tr><td align="left" balign="left"> + add(compound : Exertion, component : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + block(loop : Loop, exertion : Exertion) : Block </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.Range
-	c32255 [label=<<table title="sorcer.eo.operator.Range" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Range.html">
+	c47571 [label=<<table title="sorcer.eo.operator.Range" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Range.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Range </td></tr>
 		</table></td></tr>
@@ -184,13 +222,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./operator.Range.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.Pipe
-	c32256 [label=<<table title="sorcer.eo.operator.Pipe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Pipe.html">
+	c47572 [label=<<table title="sorcer.eo.operator.Pipe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Pipe.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Pipe </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.Pipe.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.target
-	c32257 [label=<<table title="sorcer.eo.operator.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.target.html">
+	c47573 [label=<<table title="sorcer.eo.operator.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.target.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> target </td></tr>
 		</table></td></tr>
@@ -202,7 +240,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./operator.target.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.result
-	c32258 [label=<<table title="sorcer.eo.operator.result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.result.html">
+	c47574 [label=<<table title="sorcer.eo.operator.result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.result.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> result </td></tr>
 		</table></td></tr>
@@ -214,45 +252,114 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.result.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.eo.operator.ParameterTypes
-	c32259 [label=<<table title="sorcer.eo.operator.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.ParameterTypes.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ParameterTypes </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + operator.ParameterTypes(parameterTypes : Class&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + operator.ParameterTypes(path : String, parameterTypes : Class&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./operator.ParameterTypes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.eo.operator.Args
-	c32260 [label=<<table title="sorcer.eo.operator.Args" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Args.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Args </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + operator.Args(args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + operator.Args(path : String, args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./operator.Args.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.DataEntry<T2>
-	c32261 [label=<<table title="sorcer.eo.operator.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.DataEntry.html">
+	c47575 [label=<<table title="sorcer.eo.operator.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.DataEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataEntry&lt;T2&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.DataEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.Complement<T2>
-	c32262 [label=<<table title="sorcer.eo.operator.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Complement.html">
+	c47576 [label=<<table title="sorcer.eo.operator.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Complement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Complement&lt;T2&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.Complement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.Jars
+	c47577 [label=<<table title="sorcer.eo.operator.Jars" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Jars.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Jars </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + jars : String[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.Jars.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.CodebaseJars
+	c47578 [label=<<table title="sorcer.eo.operator.CodebaseJars" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.CodebaseJars.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CodebaseJars </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + jars : String[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.CodebaseJars.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.Impl
+	c47579 [label=<<table title="sorcer.eo.operator.Impl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Impl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Impl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + className : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.Impl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.Configuration
+	c47580 [label=<<table title="sorcer.eo.operator.Configuration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Configuration.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Configuration </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + configuration : String[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.Configuration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.WebsterUrl
+	c47581 [label=<<table title="sorcer.eo.operator.WebsterUrl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.WebsterUrl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> WebsterUrl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + websterUrl : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.WebsterUrl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.Multiplicity
+	c47582 [label=<<table title="sorcer.eo.operator.Multiplicity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Multiplicity.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Multiplicity </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + multiplicity : int </td></tr>
+<tr><td align="left" balign="left"> + maxPerCybernode : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.Multiplicity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.Idle
+	c47583 [label=<<table title="sorcer.eo.operator.Idle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Idle.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Idle </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + idle : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.Idle.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.PerNode
+	c47584 [label=<<table title="sorcer.eo.operator.PerNode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.PerNode.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerNode </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + number : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="./operator.PerNode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

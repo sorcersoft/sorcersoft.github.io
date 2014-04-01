@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl
-	c277568 [label=<<table title="sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SSBrowserEnvironmentImpl.html">
+	c388285 [label=<<table title="sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SSBrowserEnvironmentImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SSBrowserEnvironmentImpl </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SSBrowserEnvironmentImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.browser.api.SSBEnvironment
-	c277573 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SSBEnvironment.html">
+	c388290 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SSBEnvironment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SSBEnvironment </td></tr>
@@ -47,6 +47,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../SSBEnvironment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl implements sorcer.ssb.browser.api.SSBEnvironment
-	c277573:p -> c277568:p [dir=back,arrowtail=empty,style=dashed];
+	c388290:p -> c388285:p [dir=back,arrowtail=empty,style=dashed];
 }
 

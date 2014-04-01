@@ -9,15 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.provider.Jobber
-	c299777 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Jobber.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Jobber </td></tr>
-		</table></td></tr>
-		</table>>, URL="../Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c299778 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c417199 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -26,8 +19,7 @@ digraph G {
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
 <tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
-<tr><td align="left" balign="left"> # tally : int </td></tr>
-<tr><td align="left" balign="left"> # size : int </td></tr>
+<tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
@@ -67,7 +59,6 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + init(configOptions : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + getMainUIDescriptor() : UIDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getProviderUIDescriptor() : UIDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getServiceUIEntries() : UIDescriptor[] </td></tr>
 <tr><td align="left" balign="left"> + getServiceComponents() : Map&lt;?, ?&gt; </td></tr>
 <tr><td align="left" balign="left"> + setServiceComponents(serviceComponents : Map&lt;?, ?&gt;) </td></tr>
@@ -108,6 +99,7 @@ digraph G {
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + dropJob(job : Job) : Job </td></tr>
+<tr><td align="left" balign="left"> + addAttribute(attributes : Entry) </td></tr>
 <tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
 <tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
@@ -141,6 +133,7 @@ digraph G {
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
 <tr><td align="left" balign="left"> + getReferentUuid() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
@@ -153,8 +146,15 @@ digraph G {
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Jobber
+	c417209 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Jobber.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Jobber </td></tr>
+		</table></td></tr>
+		</table>>, URL="../Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Executor
-	c299845 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Executor.html">
+	c417366 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Executor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Executor </td></tr>
@@ -168,7 +168,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../service/Executor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.jobber.ServiceJobber
-	c299997 [label=<<table title="sorcer.core.provider.jobber.ServiceJobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceJobber.html">
+	c417460 [label=<<table title="sorcer.core.provider.jobber.ServiceJobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceJobber.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceJobber </td></tr>
 		</table></td></tr>
@@ -189,10 +189,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceJobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.jobber.ServiceJobber extends sorcer.core.provider.ServiceProvider
-	c299778:p -> c299997:p [dir=back,arrowtail=empty];
+	c417199:p -> c417460:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.jobber.ServiceJobber implements sorcer.core.provider.Jobber
-	c299777:p -> c299997:p [dir=back,arrowtail=empty,style=dashed];
+	c417209:p -> c417460:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.jobber.ServiceJobber implements sorcer.service.Executor
-	c299845:p -> c299997:p [dir=back,arrowtail=empty,style=dashed];
+	c417366:p -> c417460:p [dir=back,arrowtail=empty,style=dashed];
 }
 

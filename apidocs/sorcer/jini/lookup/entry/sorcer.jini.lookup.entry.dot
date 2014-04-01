@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.jini.lookup.entry.SorcerServiceInfo
-	c10680 [label=<<table title="sorcer.jini.lookup.entry.SorcerServiceInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceInfo.html">
+	c19416 [label=<<table title="sorcer.jini.lookup.entry.SorcerServiceInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceInfo </td></tr>
 		</table></td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.jini.lookup.entry.VersionInfo
-	c10681 [label=<<table title="sorcer.jini.lookup.entry.VersionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./VersionInfo.html">
+	c19417 [label=<<table title="sorcer.jini.lookup.entry.VersionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./VersionInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> VersionInfo </td></tr>
 		</table></td></tr>
@@ -64,5 +64,21 @@ digraph G {
 <tr><td align="left" balign="left"> + productAttributesFor(serviceName : String) : List&lt;Entry&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./VersionInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.jini.lookup.entry.DeployInfo
+	c19418 [label=<<table title="sorcer.jini.lookup.entry.DeployInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DeployInfo.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DeployInfo </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + type : String </td></tr>
+<tr><td align="left" balign="left"> + unique : String </td></tr>
+<tr><td align="left" balign="left"> + idle : Integer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DeployInfo() </td></tr>
+<tr><td align="left" balign="left"> + DeployInfo(type : String, unique : String, idle : Integer) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DeployInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler
-	c81737 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChartItemEnabler.html">
+	c118743 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChartItemEnabler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ChartItemEnabler </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ChartItemEnabler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.tools.plugin.browser.graph.Chart
-	c81739 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.Chart" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Chart.html">
+	c118745 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.Chart" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Chart.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Chart </td></tr>
 		</table></td></tr>
@@ -46,11 +46,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Chart.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.graph.Chart extends javax.swing.JPanel
-	c81761:p -> c81739:p [dir=back,arrowtail=empty];
+	c118809:p -> c118745:p [dir=back,arrowtail=empty];
 	//sorcer.ssb.tools.plugin.browser.graph.Chart implements sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler
-	c81737:p -> c81739:p [dir=back,arrowtail=empty,style=dashed];
+	c118743:p -> c118745:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.JPanel
-	c81761 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
+	c118809 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JPanel </td></tr>
 		</table></td></tr>

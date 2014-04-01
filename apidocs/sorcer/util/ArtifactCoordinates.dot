@@ -10,17 +10,21 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ArtifactCoordinates
-	c63236 [label=<<table title="sorcer.util.ArtifactCoordinates" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArtifactCoordinates.html">
+	c98352 [label=<<table title="sorcer.util.ArtifactCoordinates" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArtifactCoordinates.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArtifactCoordinates </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + PCKG_POM : String </td></tr>
+<tr><td align="left" balign="left"> + PCKG_JAR : String </td></tr>
+<tr><td align="left" balign="left"> + DEFAULT_PACKAGING : String </td></tr>
+<tr><td align="left" balign="left"> + PACKAGINGS : Map&lt;String, String&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ArtifactCoordinates(groupId : String, artifactId : String, packaging : String, version : String, classifier : String) </td></tr>
 <tr><td align="left" balign="left"> + ArtifactCoordinates(groupId : String, artifactId : String, version : String) </td></tr>
 <tr><td align="left" balign="left"> + coords(coords : String) : ArtifactCoordinates </td></tr>
+<tr><td align="left" balign="left"> + isArtifact(coords : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + coords(groupId : String, artifactId : String, version : String) : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getGroupId() : String </td></tr>
@@ -30,17 +34,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getPackaging() : String </td></tr>
 <tr><td align="left" balign="left"> + setClassifier(classifier : String) </td></tr>
 <tr><td align="left" balign="left"> + setPackaging(packaging : String) </td></tr>
+<tr><td align="left" balign="left"> + setVersion(version : String) </td></tr>
 <tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + equals(coords : ArtifactCoordinates) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + unresolve(relativePath : String) : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + compareTo(o : ArtifactCoordinates) : int </td></tr>
+<tr><td align="left" balign="left"> + isVersionSnapshot() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setType(type : String) </td></tr>
+<tr><td align="left" balign="left"> + getType() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ArtifactCoordinates.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ArtifactCoordinates implements java.lang.Comparable<T>
-	c63794:p -> c63236:p [dir=back,arrowtail=empty,style=dashed];
+	c99012:p -> c98352:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Comparable<T>
-	c63794 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
+	c99012 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Comparable&lt;T&gt; </td></tr>

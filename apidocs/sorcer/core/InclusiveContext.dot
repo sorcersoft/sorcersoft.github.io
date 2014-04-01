@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.InclusiveContext
-	c172815 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InclusiveContext.html">
+	c240378 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InclusiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> InclusiveContext </td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ComprehensiveContext
-	c172882 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ComprehensiveContext.html">
+	c240458 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ComprehensiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
 		</table></td></tr>
@@ -77,12 +77,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./context/ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c172932 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/Context.html">
+	c240541 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PATH_PAR : String </td></tr>
 <tr><td align="left" balign="left"> + CONTEXT_PARAMETER : String </td></tr>
 <tr><td align="left" balign="left"> + PIPE : String </td></tr>
 <tr><td align="left" balign="left"> + DIRECTION : String </td></tr>
@@ -128,6 +129,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + setId(contextId : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getParentPath() : String </td></tr>
 <tr><td align="left" balign="left"> + setParentPath(path : String) </td></tr>
 <tr><td align="left" balign="left"> + getParentID() : Uuid </td></tr>
@@ -187,6 +189,8 @@ digraph G {
 <tr><td align="left" balign="left"> + putDbValue(path : String, value : Object, datastoreUrl : URL) : Object </td></tr>
 <tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
 <tr><td align="left" balign="left"> + addValue(value : Identifiable) : Object </td></tr>
+<tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putLink(path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putLink(name : String, path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
@@ -250,13 +254,14 @@ digraph G {
 <tr><td align="left" balign="left"> + getAttributes(path : String) : Enumeration&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> + getData() : Object </td></tr>
 <tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + getLinkedContext(link : Link) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../service/Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.InclusiveContext implements sorcer.service.Context<T>
-	c172932:p -> c172815:p [dir=back,arrowtail=empty,style=dashed];
+	c240541:p -> c240378:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ComprehensiveContext implements sorcer.core.InclusiveContext
-	c172815:p -> c172882:p [dir=back,arrowtail=empty,style=dashed];
+	c240378:p -> c240458:p [dir=back,arrowtail=empty,style=dashed];
 }
 

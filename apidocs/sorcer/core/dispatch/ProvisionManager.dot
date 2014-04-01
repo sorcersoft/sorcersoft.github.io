@@ -10,17 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.dispatch.ProvisionManager
-	c260625 [label=<<table title="sorcer.core.dispatch.ProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProvisionManager.html">
+	c366307 [label=<<table title="sorcer.core.dispatch.ProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProvisionManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProvisionManager </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # servicesToProvision : Set&lt;ProvisionManager.SignatureElement&gt; </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ProvisionManager() </td></tr>
-<tr><td align="left" balign="left"> + getInstance() : ProvisionManager </td></tr>
-<tr><td align="left" balign="left"> + add(exertion : Exertion, spaceExertDispatcher : SpaceExertDispatcher) </td></tr>
+<tr><td align="left" balign="left"> + ProvisionManager(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + deployServices() : boolean </td></tr>
+<tr><td align="left" balign="left"> + undeploy() </td></tr>
+<tr><td align="left" balign="left"> + getOperationalStringManager() : OperationalStringManager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

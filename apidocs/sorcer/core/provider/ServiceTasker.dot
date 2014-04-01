@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.ServiceTasker
-	c306733 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceTasker.html">
+	c425392 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceTasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceTasker </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceTasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c306739 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
+	c425397 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -35,8 +35,7 @@ digraph G {
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
 <tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
-<tr><td align="left" balign="left"> # tally : int </td></tr>
-<tr><td align="left" balign="left"> # size : int </td></tr>
+<tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
@@ -76,7 +75,6 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + init(configOptions : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + getMainUIDescriptor() : UIDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getProviderUIDescriptor() : UIDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getServiceUIEntries() : UIDescriptor[] </td></tr>
 <tr><td align="left" balign="left"> + getServiceComponents() : Map&lt;?, ?&gt; </td></tr>
 <tr><td align="left" balign="left"> + setServiceComponents(serviceComponents : Map&lt;?, ?&gt;) </td></tr>
@@ -117,6 +115,7 @@ digraph G {
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + dropJob(job : Job) : Job </td></tr>
+<tr><td align="left" balign="left"> + addAttribute(attributes : Entry) </td></tr>
 <tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
 <tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
@@ -150,6 +149,7 @@ digraph G {
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
 <tr><td align="left" balign="left"> + getReferentUuid() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
@@ -162,8 +162,15 @@ digraph G {
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Tasker
+	c425519 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Tasker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Tasker </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Executor
-	c306806 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Executor.html">
+	c425564 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Executor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Executor </td></tr>
@@ -176,25 +183,38 @@ digraph G {
 <tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Executor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Tasker
-	c306824 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Tasker.html">
+	// sorcer.account.provider.AccountProvider
+	c425935 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../account/provider/AccountProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Tasker </td></tr>
+<tr><td align="center" balign="center"> AccountProvider </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../service/Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getBalance() : Money </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(amount : Money) </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../account/provider/AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.ServiceTasker extends sorcer.core.provider.ServiceProvider
-	c306739:p -> c306733:p [dir=back,arrowtail=empty];
+	c425397:p -> c425392:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.ServiceTasker implements sorcer.service.Tasker
-	c306824:p -> c306733:p [dir=back,arrowtail=empty,style=dashed];
+	c425519:p -> c425392:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceTasker implements sorcer.service.Executor
-	c306806:p -> c306733:p [dir=back,arrowtail=empty,style=dashed];
+	c425564:p -> c425392:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceTasker implements java.rmi.Remote
-	c307213:p -> c306733:p [dir=back,arrowtail=empty,style=dashed];
+	c425951:p -> c425392:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Tasker implements java.rmi.Remote
-	c307213:p -> c306824:p [dir=back,arrowtail=empty,style=dashed];
+	c425951:p -> c425519:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.account.provider.AccountProvider extends sorcer.core.provider.ServiceTasker
+	c425392:p -> c425935:p [dir=back,arrowtail=empty];
 	// java.rmi.Remote
-	c307213 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c425951 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

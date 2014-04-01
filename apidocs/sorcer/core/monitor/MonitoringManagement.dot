@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.exertmonitor.ExertMonitor
-	c214008 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/exertmonitor/ExertMonitor.html">
+	c298449 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/exertmonitor/ExertMonitor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertMonitor </td></tr>
 		</table></td></tr>
@@ -28,7 +28,7 @@ digraph G {
 <tr><td align="left" balign="left"> + init(cookie : Uuid, duration : long, timeout : long) </td></tr>
 <tr><td align="left" balign="left"> + init(cookie : Uuid, mntrbl : Monitorable) : Lease </td></tr>
 <tr><td align="left" balign="left"> + getState(cookie : Uuid) : int </td></tr>
-<tr><td align="left" balign="left"> + getMonitorableExertionInfo(category : ExecState.Category, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMonitorableExertionInfo(state : Exec.State, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(id : Uuid, principal : Principal) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(cookie : UEID, principal : Principal) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + update(cookie : Uuid, ctx : Context&lt;&gt;, aspect : Object) </td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../provider/exertmonitor/ExertMonitor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorManagement
-	c214037 [label=<<table title="sorcer.core.monitor.MonitorManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorManagement.html">
+	c298494 [label=<<table title="sorcer.core.monitor.MonitorManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorManagement </td></tr>
@@ -53,7 +53,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitorManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorSessionManagement
-	c214038 [label=<<table title="sorcer.core.monitor.MonitorSessionManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSessionManagement.html">
+	c298495 [label=<<table title="sorcer.core.monitor.MonitorSessionManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSessionManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorSessionManagement </td></tr>
@@ -70,14 +70,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitorSessionManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitoringManagement
-	c214039 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoringManagement.html">
+	c298496 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoringManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitoringManagement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorUIManagement
-	c214041 [label=<<table title="sorcer.core.monitor.MonitorUIManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorUIManagement.html">
+	c298498 [label=<<table title="sorcer.core.monitor.MonitorUIManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorUIManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorUIManagement </td></tr>
@@ -86,13 +86,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getMonitorableExertionInfo(aspect : ExecState.Category, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMonitorableExertionInfo(aspect : Exec.State, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(cookie : UEID, credentials : Principal) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(id : Uuid, credentials : Principal) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitorUIManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Monitorable
-	c214117 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
+	c298600 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Monitorable </td></tr>
@@ -108,23 +108,23 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Monitorable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.exertmonitor.ExertMonitor implements sorcer.core.monitor.MonitoringManagement
-	c214039:p -> c214008:p [dir=back,arrowtail=empty,style=dashed];
+	c298496:p -> c298449:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitorManagement implements sorcer.service.Monitorable
-	c214117:p -> c214037:p [dir=back,arrowtail=empty,style=dashed];
+	c298600:p -> c298494:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitorSessionManagement implements sorcer.core.monitor.MonitorManagement
-	c214037:p -> c214038:p [dir=back,arrowtail=empty,style=dashed];
+	c298494:p -> c298495:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.service.Monitorable
-	c214117:p -> c214039:p [dir=back,arrowtail=empty,style=dashed];
+	c298600:p -> c298496:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorManagement
-	c214037:p -> c214039:p [dir=back,arrowtail=empty,style=dashed];
+	c298494:p -> c298496:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorSessionManagement
-	c214038:p -> c214039:p [dir=back,arrowtail=empty,style=dashed];
+	c298495:p -> c298496:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorUIManagement
-	c214041:p -> c214039:p [dir=back,arrowtail=empty,style=dashed];
+	c298498:p -> c298496:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements java.rmi.Remote
-	c214471:p -> c214039:p [dir=back,arrowtail=empty,style=dashed];
+	c298990:p -> c298496:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c214471 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c298990 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

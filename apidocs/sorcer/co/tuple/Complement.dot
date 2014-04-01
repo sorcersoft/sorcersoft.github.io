@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.co.tuple.Complement<T2>
-	c89526 [label=<<table title="sorcer.co.tuple.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Complement.html">
+	c126623 [label=<<table title="sorcer.co.tuple.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Complement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Complement&lt;T2&gt; </td></tr>
 		</table></td></tr>
@@ -22,12 +22,15 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Complement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Entry<T>
-	c89533 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
+	c126636 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Entry&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + index : int </td></tr>
+<tr><td align="left" balign="left"> + isPersistant : boolean </td></tr>
+<tr><td align="left" balign="left"> + datastoreURL : URL </td></tr>
+<tr><td align="left" balign="left"> + fidelity : FidelityInfo </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + Entry() </td></tr>
@@ -38,10 +41,13 @@ digraph G {
 <tr><td align="left" balign="left"> + asis() : T </td></tr>
 <tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + compareTo(o : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Entry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.Complement<T2> extends sorcer.co.tuple.Entry<T2>
-	c89533:p -> c89526:p [dir=back,arrowtail=empty];
+	c126636:p -> c126623:p [dir=back,arrowtail=empty];
 }
 

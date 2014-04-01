@@ -9,34 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.provider.cataloger.ui.CatalogerUI
-	c35756 [label=<<table title="sorcer.core.provider.cataloger.ui.CatalogerUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogerUI.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogerUI </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # logger : Logger </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogerUI(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogerUI.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.CatalogerUIFactory
-	c35757 [label=<<table title="sorcer.core.provider.cataloger.ui.CatalogerUIFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogerUIFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogerUIFactory </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogerUIFactory() </td></tr>
-<tr><td align="left" balign="left"> + getMainUIDescriptor() : UIDescriptor </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogerUIFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger
-	c35758 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForCataloger.html">
+	c60637 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureDispatcherForCataloger </td></tr>
 		</table></td></tr>
@@ -63,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatcherForCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.ContextEditWindow
-	c35759 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextEditWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextEditWindow.html">
+	c60638 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextEditWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextEditWindow.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextEditWindow </td></tr>
 		</table></td></tr>
@@ -76,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextEditWindow.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.ContextNodeType
-	c35760 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextNodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextNodeType.html">
+	c60639 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextNodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextNodeType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextNodeType </td></tr>
 		</table></td></tr>
@@ -96,8 +70,61 @@ digraph G {
 <tr><td align="left" balign="left"> + setDirection(newDirection : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextNodeType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.ContextView
+	c60640 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextView.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContextView </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ContextView(signatureDispatcher : SignatureDispatchment) </td></tr>
+<tr><td align="left" balign="left"> + buildTreeFromContext(treePanel : ContextTree, theContext : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + actionPerformed(actionEvent : ActionEvent) </td></tr>
+<tr><td align="left" balign="left"> # makeTextPanel(text : String) : JComponent </td></tr>
+<tr><td align="left" balign="left"> + update(context : Observable, updated : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.CatalogerUI
+	c60641 [label=<<table title="sorcer.core.provider.cataloger.ui.CatalogerUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogerUI.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogerUI </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # logger : Logger </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogerUI(obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogerUI.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.ContextTree
+	c60642 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextTree" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextTree.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContextTree </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # rootNode : DefaultMutableTreeNode </td></tr>
+<tr><td align="left" balign="left"> # treeModel : DefaultTreeModel </td></tr>
+<tr><td align="left" balign="left"> # tree : JTree </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ContextTree() </td></tr>
+<tr><td align="left" balign="left"> + getTree() : JTree </td></tr>
+<tr><td align="left" balign="left"> + generateContext() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + doRootGenerateContext(theContext : Context&lt;&gt;, current : Object, currentPath : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + clear() </td></tr>
+<tr><td align="left" balign="left"> + updateModel(changedNode : DefaultMutableTreeNode) </td></tr>
+<tr><td align="left" balign="left"> + removeCurrentNode() </td></tr>
+<tr><td align="left" balign="left"> + addObject(child : Object) : DefaultMutableTreeNode </td></tr>
+<tr><td align="left" balign="left"> + addObject(parent : DefaultMutableTreeNode, child : Object) : DefaultMutableTreeNode </td></tr>
+<tr><td align="left" balign="left"> + addObject(parent : DefaultMutableTreeNode, child : Object, shouldBeVisible : boolean) : DefaultMutableTreeNode </td></tr>
+<tr><td align="left" balign="left"> + nodeExists(path : String) : DefaultMutableTreeNode </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextTree.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureView
-	c35761 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureView.html">
+	c60643 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureView </td></tr>
 		</table></td></tr>
@@ -116,7 +143,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignatureView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c35762 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatchment.html">
+	c60644 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatchment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SignatureDispatchment </td></tr>
@@ -142,24 +169,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatchment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.ContextView
-	c35763 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextView.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextView </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextView(signatureDispatcher : SignatureDispatchment) </td></tr>
-<tr><td align="left" balign="left"> + buildTreeFromContext(treePanel : ContextTree, theContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + actionPerformed(actionEvent : ActionEvent) </td></tr>
-<tr><td align="left" balign="left"> # makeTextPanel(text : String) : JComponent </td></tr>
-<tr><td align="left" balign="left"> + update(context : Observable, updated : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider
-	c35764 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForProvider.html">
+	c60645 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureDispatcherForProvider </td></tr>
 		</table></td></tr>
@@ -186,7 +197,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatcherForProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.BrowserModel
-	c35765 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserModel.html">
+	c60646 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BrowserModel </td></tr>
 		</table></td></tr>
@@ -223,7 +234,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BrowserModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.BrowserWindow
-	c35766 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserWindow.html">
+	c60647 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserWindow.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BrowserWindow </td></tr>
 		</table></td></tr>
@@ -235,7 +246,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BrowserWindow.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.ContextScriptView
-	c35767 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextScriptView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextScriptView.html">
+	c60648 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextScriptView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextScriptView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextScriptView </td></tr>
 		</table></td></tr>
@@ -247,33 +258,9 @@ digraph G {
 <tr><td align="left" balign="left"> + createOutContextPanel(text : String) : JPanel </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextScriptView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.ContextTree
-	c35768 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextTree" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextTree.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextTree </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # rootNode : DefaultMutableTreeNode </td></tr>
-<tr><td align="left" balign="left"> # treeModel : DefaultTreeModel </td></tr>
-<tr><td align="left" balign="left"> # tree : JTree </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextTree() </td></tr>
-<tr><td align="left" balign="left"> + getTree() : JTree </td></tr>
-<tr><td align="left" balign="left"> + generateContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + doRootGenerateContext(theContext : Context&lt;&gt;, current : Object, currentPath : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + clear() </td></tr>
-<tr><td align="left" balign="left"> + updateModel(changedNode : DefaultMutableTreeNode) </td></tr>
-<tr><td align="left" balign="left"> + removeCurrentNode() </td></tr>
-<tr><td align="left" balign="left"> + addObject(child : Object) : DefaultMutableTreeNode </td></tr>
-<tr><td align="left" balign="left"> + addObject(parent : DefaultMutableTreeNode, child : Object) : DefaultMutableTreeNode </td></tr>
-<tr><td align="left" balign="left"> + addObject(parent : DefaultMutableTreeNode, child : Object, shouldBeVisible : boolean) : DefaultMutableTreeNode </td></tr>
-<tr><td align="left" balign="left"> + nodeExists(path : String) : DefaultMutableTreeNode </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextTree.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c35762:p -> c35758:p [dir=back,arrowtail=empty,style=dashed];
+	c60644:p -> c60637:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c35762:p -> c35764:p [dir=back,arrowtail=empty,style=dashed];
+	c60644:p -> c60645:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.Sorcer
-	c319407 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
+	c440310 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Sorcer </td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerEnv
-	c319461 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
+	c440376 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerEnv </td></tr>
 		</table></td></tr>
@@ -105,7 +105,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getDataURL(dataFile : File) : URL </td></tr>
 <tr><td align="left" balign="left"> + getAnonymousPort() : int </td></tr>
 <tr><td align="left" balign="left"> + getPortAvailable() : int </td></tr>
-<tr><td align="left" balign="left"> + setCodeBaseByArtifacts(artifactCoords : String[]) </td></tr>
 <tr><td align="left" balign="left"> + updateCodebase() </td></tr>
 <tr><td align="left" balign="left"> + setCodeBase(jars : String[]) </td></tr>
 <tr><td align="left" balign="left"> + toArray(arg : String) : String[] </td></tr>
@@ -119,6 +118,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getHomeDir() : File </td></tr>
 <tr><td align="left" balign="left"> + getExtDir() : File </td></tr>
 <tr><td align="left" balign="left"> + getRepoDir() : String </td></tr>
+<tr><td align="left" balign="left"> + getLibPath() : String </td></tr>
 <tr><td align="left" balign="left"> + setRepoDir(props : Properties) : Properties </td></tr>
 <tr><td align="left" balign="left"> + loadProperties(inputStream : InputStream) : Properties </td></tr>
 <tr><td align="left" balign="left"> + getCodebase(root : URL, jar : String) : URL </td></tr>
@@ -159,9 +159,10 @@ digraph G {
 <tr><td align="left" balign="left"> + getSorcerExt() : String </td></tr>
 <tr><td align="left" balign="left"> + getSorcerExtDir() : File </td></tr>
 <tr><td align="left" balign="left"> + getLookupLocatorsHolder() : LookupLocators </td></tr>
+<tr><td align="left" balign="left"> + getWebsterRoots(additional : String[]) : String[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/SorcerEnv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.Sorcer extends sorcer.core.SorcerEnv
-	c319461:p -> c319407:p [dir=back,arrowtail=empty];
+	c440376:p -> c440310:p [dir=back,arrowtail=empty];
 }
 

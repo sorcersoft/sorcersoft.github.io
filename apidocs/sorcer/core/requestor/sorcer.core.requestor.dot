@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.requestor.ServiceRequestor
-	c37512 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceRequestor.html">
+	c50317 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceRequestor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceRequestor </font></td></tr>
 		</table></td></tr>
@@ -28,6 +28,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ServiceRequestor() </td></tr>
 <tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
 <tr><td align="left" balign="left"> + initialize(args : String[]) </td></tr>
+<tr><td align="left" balign="left"> + setCodeBaseByArtifacts(artifactCoords : String[]) </td></tr>
 <tr><td align="left" balign="left"> + setExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertion(args : String[]) : Exertion </font></td></tr>
 <tr><td align="left" balign="left"> + getJobberName() : String </td></tr>
@@ -43,10 +44,24 @@ digraph G {
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : String[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : ArtifactCoordinates[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareEnvironment() </td></tr>
+<tr><td align="left" balign="left"> # prepareBasicEnvironment() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceRequestor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.requestor.ResolvingWebster
+	c50318 [label=<<table title="sorcer.core.requestor.ResolvingWebster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingWebster.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ResolvingWebster </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ResolvingWebster() </td></tr>
+<tr><td align="left" balign="left"> + startRequestorWebsterFromProperties() : Webster </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ResolvingWebster.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.requestor.ExertletRunner
-	c37513 [label=<<table title="sorcer.core.requestor.ExertletRunner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertletRunner.html">
+	c50319 [label=<<table title="sorcer.core.requestor.ExertletRunner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertletRunner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertletRunner </font></td></tr>
 		</table></td></tr>
@@ -59,7 +74,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertletRunner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.requestor.Requestor
-	c37514 [label=<<table title="sorcer.core.requestor.Requestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Requestor.html">
+	c50320 [label=<<table title="sorcer.core.requestor.Requestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Requestor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Requestor </td></tr>
@@ -76,8 +91,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Requestor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.requestor.ServiceRequestor implements sorcer.core.requestor.Requestor
-	c37514:p -> c37512:p [dir=back,arrowtail=empty,style=dashed];
+	c50320:p -> c50317:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.requestor.ExertletRunner extends sorcer.core.requestor.ServiceRequestor
-	c37512:p -> c37513:p [dir=back,arrowtail=empty];
+	c50317:p -> c50319:p [dir=back,arrowtail=empty];
 }
 

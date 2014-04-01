@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.util.ObjectClonerAdv
+	c318109 [label=<<table title="sorcer.util.ObjectClonerAdv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectClonerAdv.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ObjectClonerAdv </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ObjectClonerAdv() </td></tr>
+<tr><td align="left" balign="left"> + cloneWithNewIDs(o : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + cloneAnnotatedWithNewIDs(o : Object) : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ObjectClonerAdv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ObjectCloner
-	c228408 [label=<<table title="sorcer.util.ObjectCloner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectCloner.html">
+	c318129 [label=<<table title="sorcer.util.ObjectCloner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectCloner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectCloner </td></tr>
 		</table></td></tr>
@@ -23,5 +37,7 @@ digraph G {
 <tr><td align="left" balign="left"> + cloneAnnotated(o : Object) : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ObjectCloner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.util.ObjectClonerAdv extends sorcer.util.ObjectCloner
+	c318129:p -> c318109:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.eo.operator
-	c374267 [label=<<table title="sorcer.eo.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./operator.html">
+	c517239 [label=<<table title="sorcer.eo.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./operator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> operator </td></tr>
 		</table></td></tr>
@@ -46,6 +46,11 @@ digraph G {
 <tr><td align="left" balign="left"> + sig(serviceType : Class&lt;?&gt;, providerName : String, parameters : Object[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, version : String, providerName : String, parameters : Object[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, version : String) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(name : String, selector : String, deployment : Deployment) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, type : Strategy.Provision, deployment : Deployment) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(serviceType : Class&lt;?&gt;, returnPath : ReturnPath&lt;&gt;, deployment : Deployment) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, providerName : String, deployment : Deployment, parameters : Object[]) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, version : String, providerName : String, deployment : Deployment, parameters : Object[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(selector : String) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(name : String, selector : String) : Signature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, serviceType : Class&lt;?&gt;, type : Signature.Type) : Signature </td></tr>
@@ -57,12 +62,19 @@ digraph G {
 <tr><td align="left" balign="left"> + task(name : String, elems : T[]) : Task </td></tr>
 <tr><td align="left" balign="left"> + selector(sig : Signature) : String </td></tr>
 <tr><td align="left" balign="left"> + type(signature : Signature, type : Signature.Type) : Signature </td></tr>
+<tr><td align="left" balign="left"> + sig(evaluator : Evaluation&lt;&gt;, returnPath : ReturnPath&lt;&gt;) : EvaluationSignature </td></tr>
+<tr><td align="left" balign="left"> + sig(evaluator : Evaluation&lt;&gt;) : EvaluationSignature </td></tr>
+<tr><td align="left" balign="left"> + task(signature : EvaluationSignature) : EvaluationTask </td></tr>
+<tr><td align="left" balign="left"> + task(evaluator : Evaluation&lt;&gt;) : EvaluationTask </td></tr>
+<tr><td align="left" balign="left"> + task(signature : EvaluationSignature, context : Context&lt;&gt;) : EvaluationTask </td></tr>
+<tr><td align="left" balign="left"> + sig(operation : String, object : Object, deployment : Deployment, types : Class&lt;&gt;[]) : ObjectSignature </td></tr>
 <tr><td align="left" balign="left"> + sig(operation : String, object : Object, types : Class&lt;&gt;[]) : ObjectSignature </td></tr>
 <tr><td align="left" balign="left"> + sig(selector : String, object : Object, types : Class&lt;?&gt;[], args : Object[]) : ObjectSignature </td></tr>
 <tr><td align="left" balign="left"> + task(signature : ObjectSignature) : ObjectTask </td></tr>
 <tr><td align="left" balign="left"> + task(signature : ObjectSignature, context : Context&lt;&gt;) : ObjectTask </td></tr>
 <tr><td align="left" balign="left"> + task(name : String, signature : Signature, context : Context&lt;&gt;) : Task </td></tr>
 <tr><td align="left" balign="left"> + task(signature : Signature, context : Context&lt;&gt;) : Task </td></tr>
+<tr><td align="left" balign="left"> + task(target : String, project : File) : AntTask </td></tr>
 <tr><td align="left" balign="left"> + batch(name : String, elems : T[]) : Task </td></tr>
 <tr><td align="left" balign="left"> + srv(name : String, elems : T[]) : E </td></tr>
 <tr><td align="left" balign="left"> + xrt(name : String, elems : T[]) : E </td></tr>
@@ -143,19 +155,24 @@ digraph G {
 <tr><td align="left" balign="left"> + clear(type : Store) : int </td></tr>
 <tr><td align="left" balign="left"> + size(type : Store) : int </td></tr>
 <tr><td align="left" balign="left"> + target(object : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + parameterTypes(parameterTypes : Class&lt;&gt;[]) : operator.ParameterTypes </td></tr>
-<tr><td align="left" balign="left"> + parameterValues(args : Object[]) : operator.Args </td></tr>
-<tr><td align="left" balign="left"> + args(args : Object[]) : operator.Args </td></tr>
-<tr><td align="left" balign="left"> + args(path : String, args : Object[]) : operator.Args </td></tr>
+<tr><td align="left" balign="left"> + parameterTypes(parameterTypes : Class&lt;&gt;[]) : ParameterTypes </td></tr>
+<tr><td align="left" balign="left"> + parameterValues(args : Object[]) : Args </td></tr>
+<tr><td align="left" balign="left"> + args(args : Object[]) : Args </td></tr>
+<tr><td align="left" balign="left"> + args(path : String, args : Object[]) : Args </td></tr>
 <tr><td align="left" balign="left"> + providers(signature : Signature) : List&lt;Service&gt; </td></tr>
 <tr><td align="left" balign="left"> + interfaces(obj : Object) : List&lt;Class&lt;?&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + provider(signature : Signature) : Object </td></tr>
 <tr><td align="left" balign="left"> + instance(signature : ObjectSignature) : Object </td></tr>
 <tr><td align="left" balign="left"> + instance(signature : ObjectSignature, context : Context&lt;&gt;) : Object </td></tr>
+<tr><td align="left" balign="left"> + condition(parcontext : ParModel&lt;&gt;, expression : String, pars : String[]) : Condition </td></tr>
+<tr><td align="left" balign="left"> + condition(expression : String, pars : String[]) : Condition </td></tr>
 <tr><td align="left" balign="left"> + condition(condition : boolean) : Condition </td></tr>
 <tr><td align="left" balign="left"> + opt(name : String, target : Exertion) : OptExertion </td></tr>
+<tr><td align="left" balign="left"> + opt(condition : Condition, target : Exertion) : OptExertion </td></tr>
 <tr><td align="left" balign="left"> + opt(name : String, condition : Condition, target : Exertion) : OptExertion </td></tr>
-<tr><td align="left" balign="left"> + alt(name : String, invokers : OptExertion[]) : AltExertion </td></tr>
+<tr><td align="left" balign="left"> + alt(exertions : OptExertion[]) : AltExertion </td></tr>
+<tr><td align="left" balign="left"> + alt(name : String, exertions : OptExertion[]) : AltExertion </td></tr>
+<tr><td align="left" balign="left"> + loop(condition : Condition, target : Exertion) : LoopExertion </td></tr>
 <tr><td align="left" balign="left"> + loop(name : String, condition : Condition, target : Exertion) : LoopExertion </td></tr>
 <tr><td align="left" balign="left"> + exertion(mappable : Mappable&lt;&gt;, path : String) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dispatcher(signature : Signature) : Signature </td></tr>
@@ -163,7 +180,28 @@ digraph G {
 <tr><td align="left" balign="left"> + modelManager(signature : Signature) : Signature </td></tr>
 <tr><td align="left" balign="left"> + optimizer(signature : Signature) : Signature </td></tr>
 <tr><td align="left" balign="left"> + explorer(signature : Signature) : Signature </td></tr>
+<tr><td align="left" balign="left"> + block(exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(signature : Signature, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, signature : Signature, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
 <tr><td align="left" balign="left"> + block(signature : Signature, context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + block(name : String, signature : Signature, context : Context&lt;&gt;, exertions : Exertion[]) : Block </td></tr>
+<tr><td align="left" balign="left"> + perNode(number : int) : operator.PerNode </td></tr>
+<tr><td align="left" balign="left"> + classpath(jarNames : String[]) : operator.Jars </td></tr>
+<tr><td align="left" balign="left"> + codebase(jarNames : String[]) : operator.CodebaseJars </td></tr>
+<tr><td align="left" balign="left"> + implementation(className : String) : operator.Impl </td></tr>
+<tr><td align="left" balign="left"> + webster(WebsterUrl : String) : operator.WebsterUrl </td></tr>
+<tr><td align="left" balign="left"> + configuration(configuration : String) : operator.Configuration </td></tr>
+<tr><td align="left" balign="left"> + maintain(multiplicity : int) : operator.Multiplicity </td></tr>
+<tr><td align="left" balign="left"> + maintain(multiplicity : int, maxPerCybernode : int) : operator.Multiplicity </td></tr>
+<tr><td align="left" balign="left"> + maintain(multiplicity : int, perNode : operator.PerNode) : operator.Multiplicity </td></tr>
+<tr><td align="left" balign="left"> + idle(idle : String) : operator.Idle </td></tr>
+<tr><td align="left" balign="left"> + idle(idle : int) : operator.Idle </td></tr>
+<tr><td align="left" balign="left"> + deploy(elems : T[]) : Deployment </td></tr>
+<tr><td align="left" balign="left"> + add(compound : Exertion, component : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + block(loop : Loop, exertion : Exertion) : Block </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

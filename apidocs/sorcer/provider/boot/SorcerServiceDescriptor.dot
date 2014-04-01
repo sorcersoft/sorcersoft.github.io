@@ -10,29 +10,40 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.AbstractServiceDescriptor
-	c332032 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
+	c459887 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractServiceDescriptor </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # actTypes : Class&lt;&gt;[] </td></tr>
-<tr><td align="left" balign="left"> # platformLoaded : boolean </td></tr>
-<tr><td align="left" balign="left"> # allDescriptors : AtomicInteger </td></tr>
-<tr><td align="left" balign="left"> # startedServices : AtomicInteger </td></tr>
-<tr><td align="left" balign="left"> # erredServices : AtomicInteger </td></tr>
-<tr><td align="left" balign="left"> # COMPONENT : String </td></tr>
+<tr><td align="left" balign="left"> # globalPolicy : AggregatePolicyProvider </td></tr>
+<tr><td align="left" balign="left"> # initialGlobalPolicy : Policy </td></tr>
+<tr><td align="left" balign="left"> # parentInjector : Injector </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
+<tr><td align="left" balign="left"> # defaultLifeCycle : LifeCycle </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractServiceDescriptor() </td></tr>
-<tr><td align="left" balign="left"> # loadPlatform(config : Configuration, defaultDir : String, commonCL : CommonClassLoader) </td></tr>
-<tr><td align="left" balign="left"> + create(config : Configuration) : AbstractServiceDescriptor.Created </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # doCreate(config : Configuration) : AbstractServiceDescriptor.Created </font></td></tr>
-<tr><td align="left" balign="left"> # getCommonClassLoader(config : Configuration) : CommonClassLoader </td></tr>
+<tr><td align="left" balign="left"> # AbstractServiceDescriptor() </td></tr>
+<tr><td align="left" balign="left"> # AbstractServiceDescriptor(codebase : Set&lt;URL&gt;, casspath : Set&lt;URI&gt;, className : String, configArgs : List&lt;String&gt;, policyFile : String) </td></tr>
+<tr><td align="left" balign="left"> + AbstractServiceDescriptor(serverConfigArgs : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + create(config : Configuration) : AbstractServiceDescriptor.Service </td></tr>
+<tr><td align="left" balign="left"> # getInjectorModule() : Module </td></tr>
+<tr><td align="left" balign="left"> # setImplClassName(className : String) </td></tr>
+<tr><td align="left" balign="left"> + getImplClassName() : String </td></tr>
+<tr><td align="left" balign="left"> # getServiceConfigArgs() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> # setServiceConfigArgs(configFile : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> # getPolicyFile() : String </td></tr>
+<tr><td align="left" balign="left"> # setPolicyFile(policyFile : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodebase() : Set&lt;URL&gt; </td></tr>
+<tr><td align="left" balign="left"> # setCodebase(codebase : Set&lt;URL&gt;) </td></tr>
+<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+<tr><td align="left" balign="left"> # setClasspath(classpath : Set&lt;URI&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addLifeCycle(lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + getLifeCycle() : LifeCycle </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.SorcerServiceDescriptor
-	c332036 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerServiceDescriptor.html">
+	c459890 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -43,17 +54,11 @@ digraph G {
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(codebase : String, policy : String, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
-<tr><td align="left" balign="left"> + getPolicy() : String </td></tr>
-<tr><td align="left" balign="left"> + getLifeCycle() : LifeCycle </td></tr>
-<tr><td align="left" balign="left"> + getClasspath() : String </td></tr>
-<tr><td align="left" balign="left"> + getImplClassName() : String </td></tr>
-<tr><td align="left" balign="left"> + getServerConfigArgs() : String[] </td></tr>
-<tr><td align="left" balign="left"> # doCreate(config : Configuration) : AbstractServiceDescriptor.Created </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> # getCodebase(codebase : String, address : String) : Set&lt;URL&gt; </td></tr>
+<tr><td align="left" balign="left"> + getClasspath() : Set&lt;URI&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.provider.boot.SorcerServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c332032:p -> c332036:p [dir=back,arrowtail=empty];
+	c459887:p -> c459890:p [dir=back,arrowtail=empty];
 }
 

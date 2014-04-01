@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.StaticServiceProvider
-	c4729 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.html">
+	c10351 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor
-	c4730 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.StaticProviderAccessor.html">
+	c10352 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.StaticProviderAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticProviderAccessor </td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StaticServiceProvider.StaticProviderAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceTasker
-	c4731 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceTasker.html">
+	c10353 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceTasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceTasker </td></tr>
 		</table></td></tr>
@@ -54,7 +54,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceTasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.SpaceTaker
-	c4732 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
+	c10354 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceTaker </td></tr>
 		</table></td></tr>
@@ -87,10 +87,11 @@ digraph G {
 <tr><td align="left" balign="left"> # isAbandoned(exertion : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> # initDataMember(ee : ExertionEnvelop, txn : Transaction) </td></tr>
 <tr><td align="left" balign="left"> + notify(e : LeaseRenewalEvent) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.SpaceTaker.SpaceTakerData
-	c4733 [label=<<table title="sorcer.core.provider.SpaceTaker.SpaceTakerData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.SpaceTakerData.html">
+	c10355 [label=<<table title="sorcer.core.provider.SpaceTaker.SpaceTakerData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.SpaceTakerData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceTakerData </td></tr>
 		</table></td></tr>
@@ -110,7 +111,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceTaker.SpaceTakerData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.SpaceIsReadyTaker
-	c4734 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
+	c10356 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
 		</table></td></tr>
@@ -124,7 +125,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ControlFlowManager
-	c4735 [label=<<table title="sorcer.core.provider.ControlFlowManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlFlowManager.html">
+	c10357 [label=<<table title="sorcer.core.provider.ControlFlowManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlFlowManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ControlFlowManager </td></tr>
 		</table></td></tr>
@@ -133,36 +134,34 @@ digraph G {
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
 <tr><td align="left" balign="left"> # exertion : Exertion </td></tr>
 <tr><td align="left" balign="left"> # jobber : Jobber </td></tr>
+<tr><td align="left" balign="left"> # concatenator : Concatenator </td></tr>
 <tr><td align="left" balign="left"> # spacer : Spacer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ControlFlowManager() </td></tr>
 <tr><td align="left" balign="left"> + ControlFlowManager(exertion : Exertion, delegate : ProviderDelegate) </td></tr>
 <tr><td align="left" balign="left"> + ControlFlowManager(exertion : Exertion, delegate : ProviderDelegate, jobber : Jobber) </td></tr>
+<tr><td align="left" balign="left"> + ControlFlowManager(exertion : Exertion, delegate : ProviderDelegate, concatenator : Concatenator) </td></tr>
 <tr><td align="left" balign="left"> + ControlFlowManager(exertion : Exertion, delegate : ProviderDelegate, spacer : Spacer) </td></tr>
 <tr><td align="left" balign="left"> + process(exertionManager : TaskManager) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doTask(task : Task) : Task </td></tr>
+<tr><td align="left" balign="left"> + doBlock(block : Block) : Block </td></tr>
 <tr><td align="left" balign="left"> + doRendezvousExertion(xrt : ServiceExertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doConditional(exertion : Exertion) : Task </td></tr>
 <tr><td align="left" balign="left"> + saveState(mapBackUp : Map&lt;String, Object&gt;, context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + restoreState(mapBackUp : Map&lt;String, Object&gt;, context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + copyContext(fromContext : Context&lt;&gt;, toContext : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + isValidExertion(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + setConcatenator(concatenator : ServiceConcatenator) </td></tr>
 <tr><td align="left" balign="left"> + setJobber(jobber : ServiceJobber) </td></tr>
 <tr><td align="left" balign="left"> + setSpacer(spacer : Spacer) </td></tr>
 <tr><td align="left" balign="left"> + resetExertionStatus(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + doBatchTask(task : Task) : Task </td></tr>
+<tr><td align="left" balign="left"> + processContinousely(task : Task, signatures : List&lt;Signature&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ControlFlowManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Jobber
-	c4736 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Jobber.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Jobber </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c4737 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
+	c10358 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -171,8 +170,7 @@ digraph G {
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
 <tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
-<tr><td align="left" balign="left"> # tally : int </td></tr>
-<tr><td align="left" balign="left"> # size : int </td></tr>
+<tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
@@ -212,7 +210,6 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + init(configOptions : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + getMainUIDescriptor() : UIDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getProviderUIDescriptor() : UIDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getServiceUIEntries() : UIDescriptor[] </td></tr>
 <tr><td align="left" balign="left"> + getServiceComponents() : Map&lt;?, ?&gt; </td></tr>
 <tr><td align="left" balign="left"> + setServiceComponents(serviceComponents : Map&lt;?, ?&gt;) </td></tr>
@@ -253,6 +250,7 @@ digraph G {
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + dropJob(job : Job) : Job </td></tr>
+<tr><td align="left" balign="left"> + addAttribute(attributes : Entry) </td></tr>
 <tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
 <tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
@@ -286,6 +284,7 @@ digraph G {
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
 <tr><td align="left" balign="left"> + getReferentUuid() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
@@ -299,7 +298,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider.KeepAwake
-	c4738 [label=<<table title="sorcer.core.provider.ServiceProvider.KeepAwake" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.KeepAwake.html">
+	c10359 [label=<<table title="sorcer.core.provider.ServiceProvider.KeepAwake" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.KeepAwake.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> KeepAwake </td></tr>
 		</table></td></tr>
@@ -312,7 +311,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.KeepAwake.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ProviderDelegate
-	c4739 [label=<<table title="sorcer.core.provider.ProviderDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.html">
+	c10360 [label=<<table title="sorcer.core.provider.ProviderDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderDelegate </td></tr>
 		</table></td></tr>
@@ -338,6 +337,7 @@ digraph G {
 <tr><td align="left" balign="left"> # provider : Provider </td></tr>
 <tr><td align="left" balign="left"> # mutualExclusion : boolean </td></tr>
 <tr><td align="left" balign="left"> # providerProxy : Remote </td></tr>
+<tr><td align="left" balign="left"> # adminProxy : Object </td></tr>
 <tr><td align="left" balign="left"> + EXPORTER : String </td></tr>
 <tr><td align="left" balign="left"> + BEANS : String </td></tr>
 <tr><td align="left" balign="left"> + DATA_BEANS : String </td></tr>
@@ -360,6 +360,7 @@ digraph G {
 <tr><td align="left" balign="left"> + EXPORTER_INTERFACE : String </td></tr>
 <tr><td align="left" balign="left"> + EXPORTER_PORT : String </td></tr>
 <tr><td align="left" balign="left"> + KEEP_ALIVE_TIME : int </td></tr>
+<tr><td align="left" balign="left"> + DISCOVERY_ENABLED : String </td></tr>
 <tr><td align="left" balign="left"> + SPACE_ENABLED : String </td></tr>
 <tr><td align="left" balign="left"> + SPACE_READINESS : String </td></tr>
 <tr><td align="left" balign="left"> + MUTUAL_EXCLUSION : String </td></tr>
@@ -374,7 +375,7 @@ digraph G {
 <tr><td align="left" balign="left"> + INTERFACE_ONLY : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProviderDelegate() </td></tr>
+<tr><td align="left" balign="left"> + ProviderDelegate(beanListener : ServiceBeanListener) </td></tr>
 <tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
 <tr><td align="left" balign="left"> + init(provider : Provider, configFilename : String) </td></tr>
 <tr><td align="left" balign="left"> # configure(jconfig : Configuration) </td></tr>
@@ -405,10 +406,12 @@ digraph G {
 <tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
 <tr><td align="left" balign="left"> + restore() </td></tr>
+<tr><td align="left" balign="left"> + getServiceID(uuid : Uuid) : ServiceID </td></tr>
 <tr><td align="left" balign="left"> + getServiceID() : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + getServerUuid() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setServerUuid(serviceID : ServiceID) </td></tr>
-<tr><td align="left" balign="left"> + setServerUuid(serverID : Uuid) </td></tr>
+<tr><td align="left" balign="left"> # getProviderUuid() : Uuid </td></tr>
+<tr><td align="left" balign="left"> # getAdminProviderUuid() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setProviderUuid(serviceID : ServiceID) </td></tr>
+<tr><td align="left" balign="left"> + setServerUuid(providerUuid : Uuid) </td></tr>
 <tr><td align="left" balign="left"> + getInfo() : String </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + fireEvent() </td></tr>
@@ -437,7 +440,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getAdmin() : Object </td></tr>
 <tr><td align="left" balign="left"> + setAdmin(proxy : Object) </td></tr>
 <tr><td align="left" balign="left"> + unexport(force : boolean) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
+<tr><td align="left" balign="left"> + createAdmin() : Object </td></tr>
+<tr><td align="left" balign="left"> + getAdminProxy() : Object </td></tr>
+<tr><td align="left" balign="left"> + getProxy() : Remote </td></tr>
 <tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
 <tr><td align="left" balign="left"> + setInner(innerProxy : Object) </td></tr>
 <tr><td align="left" balign="left"> + toArray(arg : String) : String[] </td></tr>
@@ -460,7 +465,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderDelegate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ProviderDelegate.ExertionSessionInfo
-	c4740 [label=<<table title="sorcer.core.provider.ProviderDelegate.ExertionSessionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.ExertionSessionInfo.html">
+	c10361 [label=<<table title="sorcer.core.provider.ProviderDelegate.ExertionSessionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.ExertionSessionInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionSessionInfo </td></tr>
 		</table></td></tr>
@@ -476,7 +481,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderDelegate.ExertionSessionInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ProviderDelegate.DeploymentConfiguration
-	c4741 [label=<<table title="sorcer.core.provider.ProviderDelegate.DeploymentConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.DeploymentConfiguration.html">
+	c10362 [label=<<table title="sorcer.core.provider.ProviderDelegate.DeploymentConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.DeploymentConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DeploymentConfiguration </td></tr>
 		</table></td></tr>
@@ -506,7 +511,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderDelegate.DeploymentConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ProviderRuntime
-	c4742 [label=<<table title="sorcer.core.provider.ProviderRuntime" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderRuntime.html">
+	c10363 [label=<<table title="sorcer.core.provider.ProviderRuntime" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderRuntime.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderRuntime </td></tr>
 		</table></td></tr>
@@ -529,7 +534,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderRuntime.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StorageManagement
-	c4743 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StorageManagement.html">
+	c10364 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StorageManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> StorageManagement </td></tr>
@@ -557,15 +562,22 @@ digraph G {
 <tr><td align="left" balign="left"> + contextSize(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StorageManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Concatenator
+	c10365 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Concatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Concatenator </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Spacer
-	c4744 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Spacer.html">
+	c10366 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Spacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Spacer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Cataloger
-	c4745 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cataloger.html">
+	c10367 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cataloger </td></tr>
@@ -596,8 +608,15 @@ digraph G {
 <tr><td align="left" balign="left"> + getServiceInfo() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Cataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Jobber
+	c10368 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Jobber.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Jobber </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Provider
-	c4746 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Provider.html">
+	c10369 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Provider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider </td></tr>
@@ -606,6 +625,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
 <tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
 <tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
 <tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
@@ -613,13 +633,13 @@ digraph G {
 <tr><td align="left" balign="left"> + init() </td></tr>
 <tr><td align="left" balign="left"> + init(propFile : String) </td></tr>
 <tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
 <tr><td align="left" balign="left"> + mutualExclusion() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
 <tr><td align="left" balign="left"> + getInfo() : String </td></tr>
 <tr><td align="left" balign="left"> + getDescription() : String </td></tr>
 <tr><td align="left" balign="left"> + fireEvent() </td></tr>
+<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
 <tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
@@ -638,10 +658,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
 <tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
 <tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ProviderException
-	c4747 [label=<<table title="sorcer.core.provider.ProviderException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderException.html">
+	c10370 [label=<<table title="sorcer.core.provider.ProviderException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderException </td></tr>
 		</table></td></tr>
@@ -654,12 +675,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c4737:p -> c4729:p [dir=back,arrowtail=empty];
+	c10358:p -> c10351:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.ServiceTasker extends sorcer.core.provider.ServiceProvider
-	c4737:p -> c4731:p [dir=back,arrowtail=empty];
+	c10358:p -> c10353:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.SpaceIsReadyTaker extends sorcer.core.provider.SpaceTaker
-	c4732:p -> c4734:p [dir=back,arrowtail=empty];
+	c10354:p -> c10356:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.Provider
-	c4746:p -> c4737:p [dir=back,arrowtail=empty,style=dashed];
+	c10369:p -> c10358:p [dir=back,arrowtail=empty,style=dashed];
 }
 

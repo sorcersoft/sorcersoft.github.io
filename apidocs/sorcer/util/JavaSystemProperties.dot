@@ -10,26 +10,34 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.JavaSystemProperties
-	c183220 [label=<<table title="sorcer.util.JavaSystemProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JavaSystemProperties.html">
+	c257406 [label=<<table title="sorcer.util.JavaSystemProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JavaSystemProperties.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JavaSystemProperties </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RMI_SERVER_CODEBASE : String </td></tr>
-<tr><td align="left" balign="left"> + RMI_SERVER_USE_CODEBASE_ONLY : String </td></tr>
-<tr><td align="left" balign="left"> + SECURITY_POLICY : String </td></tr>
-<tr><td align="left" balign="left"> + UTIL_LOGGING_CONFIG_FILE : String </td></tr>
+<tr><td align="left" balign="left"> + CLASS_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + LIBRARY_PATH : String </td></tr>
 <tr><td align="left" balign="left"> + NET_PREFER_IPV4_STACK : String </td></tr>
 <tr><td align="left" balign="left"> + PROTOCOL_HANDLER_PKGS : String </td></tr>
-<tr><td align="left" balign="left"> + CLASS_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + RMI_SERVER_CODEBASE : String </td></tr>
+<tr><td align="left" balign="left"> + RMI_SERVER_USE_CODEBASE_ONLY : String </td></tr>
+<tr><td align="left" balign="left"> + RMI_SERVER_CLASS_LOADER : String </td></tr>
+<tr><td align="left" balign="left"> + RMI_SERVER_HOSTNAME : String </td></tr>
+<tr><td align="left" balign="left"> + SECURITY_POLICY : String </td></tr>
+<tr><td align="left" balign="left"> + UTIL_LOGGING_CONFIG_FILE : String </td></tr>
 <tr><td align="left" balign="left"> + USER_DIR : String </td></tr>
-<tr><td align="left" balign="left"> + LIBRARY_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + USER_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + MAX_DATAGRAM_SOCKETS : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + JavaSystemProperties() </td></tr>
 <tr><td align="left" balign="left"> + getProperty(key : String, properties : Map&lt;String, String&gt;) : String </td></tr>
 <tr><td align="left" balign="left"> + getProperty(key : String, defaultValue : String, properties : Properties) : String </td></tr>
 <tr><td align="left" balign="left"> + getProperty(key : String, defaultValue : String, properties : Map&lt;String, String&gt;) : String </td></tr>
+<tr><td align="left" balign="left"> + ensure(properties : Map&lt;String, String&gt;, key : String) </td></tr>
+<tr><td align="left" balign="left"> + ensure(key : String) </td></tr>
+<tr><td align="left" balign="left"> + ensure(properties : Map&lt;String, String&gt;, key : String, value : String) </td></tr>
+<tr><td align="left" balign="left"> + ensure(key : String, value : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./JavaSystemProperties.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

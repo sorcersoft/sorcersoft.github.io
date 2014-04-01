@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.ExertionException
-	c148593 [label=<<table title="sorcer.service.ExertionException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionException.html">
+	c204370 [label=<<table title="sorcer.service.ExertionException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionException </td></tr>
 		</table></td></tr>
@@ -21,7 +21,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ExertionException() </td></tr>
 <tr><td align="left" balign="left"> + ExertionException(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + ExertionException(msg : String) </td></tr>
-<tr><td align="left" balign="left"> + ExertionException(e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + ExertionException(e : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + ExertionException(message : String, exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + ExertionException(message : String, cause : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + ExertionException(message : String, exertion : Exertion, cause : Throwable) </td></tr>
@@ -29,9 +29,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertionException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.ExertionException extends java.lang.Exception
-	c148978:p -> c148593:p [dir=back,arrowtail=empty];
+	c204797:p -> c204370:p [dir=back,arrowtail=empty];
 	// java.lang.Exception
-	c148978 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html">
+	c204797 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Exception </td></tr>
 		</table></td></tr>

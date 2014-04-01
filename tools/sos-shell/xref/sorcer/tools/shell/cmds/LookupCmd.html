@@ -381,8 +381,8 @@
 <a class="jxr_linenumber" name="371" href="#371">371</a> 		<strong class="jxr_keyword">if</strong> (cl instanceof URLClassLoader) {
 <a class="jxr_linenumber" name="372" href="#372">372</a> 			URL[] urls = ((URLClassLoader) cl).getURLs();
 <a class="jxr_linenumber" name="373" href="#373">373</a> 			<strong class="jxr_keyword">if</strong> (urls.length &gt; 0) {
-<a class="jxr_linenumber" name="374" href="#374">374</a> 				out.println(<span class="jxr_string">"Codbase URLs:"</span>);
-<a class="jxr_linenumber" name="375" href="#375">375</a> 				<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> l = 1; l &lt; urls.length; l++) {
+<a class="jxr_linenumber" name="374" href="#374">374</a> 				out.println(<span class="jxr_string">"Codebase URLs:"</span>);
+<a class="jxr_linenumber" name="375" href="#375">375</a> 				<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> l = 0; l &lt; urls.length; l++) {
 <a class="jxr_linenumber" name="376" href="#376">376</a> 					out.println(<span class="jxr_string">"  "</span> + urls[l]);
 <a class="jxr_linenumber" name="377" href="#377">377</a> 				}
 <a class="jxr_linenumber" name="378" href="#378">378</a> 			}

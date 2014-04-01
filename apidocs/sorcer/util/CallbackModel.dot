@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.CallbackModel
-	c75970 [label=<<table title="sorcer.util.CallbackModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CallbackModel.html">
+	c111988 [label=<<table title="sorcer.util.CallbackModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CallbackModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CallbackModel </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CallbackModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ui.Model
-	c76285 [label=<<table title="sorcer.util.ui.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ui/Model.html">
+	c112368 [label=<<table title="sorcer.util.ui.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ui/Model.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Model </td></tr>
 		</table></td></tr>
@@ -53,6 +53,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ui/Model.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ui.Model implements sorcer.util.CallbackModel
-	c75970:p -> c76285:p [dir=back,arrowtail=empty,style=dashed];
+	c111988:p -> c112368:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.Process2
-	c245797 [label=<<table title="sorcer.util.Process2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Process2.html">
+	c344748 [label=<<table title="sorcer.util.Process2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Process2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Process2 </td></tr>
 		</table></td></tr>
@@ -18,12 +18,42 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Process2(process : Process) </td></tr>
+<tr><td align="left" balign="left"> + Process2(process : Process, name : String) </td></tr>
+<tr><td align="left" balign="left"> + Process2(process : Process, name : String, helperThreads : ThreadGroup) </td></tr>
+<tr><td align="left" balign="left"> + getUnixPid(p : Process) : int </td></tr>
 <tr><td align="left" balign="left"> + running() : boolean </td></tr>
 <tr><td align="left" balign="left"> + waitFor() : int </td></tr>
 <tr><td align="left" balign="left"> + waitFor(timeout : long) : Integer </td></tr>
+<tr><td align="left" balign="left"> + exitValueOrNull() : Integer </td></tr>
+<tr><td align="left" balign="left"> + destroyAndExitCode() : int </td></tr>
+<tr><td align="left" balign="left"> + getOutputStream() : OutputStream </td></tr>
+<tr><td align="left" balign="left"> + getInputStream() : InputStream </td></tr>
+<tr><td align="left" balign="left"> + getErrorStream() : InputStream </td></tr>
+<tr><td align="left" balign="left"> + getPid() : int </td></tr>
+<tr><td align="left" balign="left"> + exitValue() : int </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Process2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.util.Process2 extends java.lang.Process
+	c345397:p -> c344748:p [dir=back,arrowtail=empty];
+	// java.lang.Process
+	c345397 [label=<<table title="java.lang.Process" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Process.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Process </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Process() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOutputStream() : OutputStream </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInputStream() : InputStream </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getErrorStream() : InputStream </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitFor() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exitValue() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Process.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

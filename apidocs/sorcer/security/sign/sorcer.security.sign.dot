@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.security.sign.SignedTaskInterface
-	c29341 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedTaskInterface.html">
+	c40011 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedTaskInterface.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SignedTaskInterface </td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignedTaskInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.TaskAuditor
-	c29342 [label=<<table title="sorcer.security.sign.TaskAuditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.html">
+	c40012 [label=<<table title="sorcer.security.sign.TaskAuditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskAuditor </td></tr>
 		</table></td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TaskAuditor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.TaskAuditor.AuditThread
-	c29343 [label=<<table title="sorcer.security.sign.TaskAuditor.AuditThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.AuditThread.html">
+	c40013 [label=<<table title="sorcer.security.sign.TaskAuditor.AuditThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.AuditThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AuditThread </td></tr>
 		</table></td></tr>
@@ -53,7 +53,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TaskAuditor.AuditThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.SignedServiceTask
-	c29344 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedServiceTask.html">
+	c40014 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedServiceTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignedServiceTask </td></tr>
 		</table></td></tr>
@@ -69,6 +69,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignedServiceTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.security.sign.SignedServiceTask implements sorcer.security.sign.SignedTaskInterface
-	c29341:p -> c29344:p [dir=back,arrowtail=empty,style=dashed];
+	c40011:p -> c40014:p [dir=back,arrowtail=empty,style=dashed];
 }
 

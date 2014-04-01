@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.StringUtils
-	c353026 [label=<<table title="sorcer.util.StringUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StringUtils.html">
+	c488097 [label=<<table title="sorcer.util.StringUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StringUtils.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StringUtils </td></tr>
 		</table></td></tr>
@@ -19,9 +19,11 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + StringUtils() </td></tr>
+<tr><td align="left" balign="left"> + pathToArray(arg : String) : String[] </td></tr>
 <tr><td align="left" balign="left"> + arrayToString(array : Object) : String </td></tr>
 <tr><td align="left" balign="left"> + arrayToString(array : Object, maxElements : int) : String </td></tr>
 <tr><td align="left" balign="left"> + makeArray(e : Enumeration&lt;&gt;) : Object[] </td></tr>
+<tr><td align="left" balign="left"> + toPath(array : String[]) : String </td></tr>
 <tr><td align="left" balign="left"> + tokenize(str : String, delim : String) : String[] </td></tr>
 <tr><td align="left" balign="left"> + tokenizerSplit(string : String, delimiter : String) : String[] </td></tr>
 <tr><td align="left" balign="left"> + firstToken(str : String, delim : String) : String </td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.resolver.AbstractArtifactResolver
-	c269197 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
+	c376580 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.resolver.RepositoryArtifactResolver
-	c269203 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RepositoryArtifactResolver.html">
+	c376584 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RepositoryArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RepositoryArtifactResolver </td></tr>
 		</table></td></tr>
@@ -38,13 +38,12 @@ digraph G {
 <tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
 <tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
 <tr><td align="left" balign="left"> + getRootDir() : String </td></tr>
-<tr><td align="left" balign="left"> + getRepoDir() : String </td></tr>
 <tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
 <tr><td align="left" balign="left"> # resolveSimpleName(root : File, groupId : String, artifactId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) </td></tr>
 <tr><td align="left" balign="left"> # findVersion(artifactDir : File, groupId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RepositoryArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.resolver.RepositoryArtifactResolver extends sorcer.resolver.AbstractArtifactResolver
-	c269197:p -> c269203:p [dir=back,arrowtail=empty];
+	c376580:p -> c376584:p [dir=back,arrowtail=empty];
 }
 

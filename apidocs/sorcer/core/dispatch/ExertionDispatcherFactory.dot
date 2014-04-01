@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.dispatch.ExertionDispatcherFactory
-	c147589 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionDispatcherFactory.html">
+	c201791 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionDispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionDispatcherFactory </td></tr>
 		</table></td></tr>
@@ -21,14 +21,14 @@ digraph G {
 <tr><td align="left" balign="left"> + ExertionDispatcherFactory() </td></tr>
 <tr><td align="left" balign="left"> + getFactory() : ExertionDispatcherFactory </td></tr>
 <tr><td align="left" balign="left"> + getProvisionableFactory() : ExertionDispatcherFactory </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) : Dispatcher </td></tr>
 <tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, config : String[]) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider, config : String[]) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider, config : String[]) : Dispatcher </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionDispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.DispatcherFactory
-	c147606 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherFactory.html">
+	c201810 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DispatcherFactory </td></tr>
@@ -37,12 +37,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(job : Job, provider : Provider, config : String[]) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider, config : String[]) : Dispatcher </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcherFactory
-	c147607 [label=<<table title="sorcer.core.dispatch.ExertDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcherFactory.html">
+	c201811 [label=<<table title="sorcer.core.dispatch.ExertDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertDispatcherFactory </td></tr>
 		</table></td></tr>
@@ -54,8 +54,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.ExertionDispatcherFactory implements sorcer.core.dispatch.DispatcherFactory
-	c147606:p -> c147589:p [dir=back,arrowtail=empty,style=dashed];
+	c201810:p -> c201791:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.dispatch.ExertDispatcherFactory extends sorcer.core.dispatch.ExertionDispatcherFactory
-	c147589:p -> c147607:p [dir=back,arrowtail=empty];
+	c201791:p -> c201811:p [dir=back,arrowtail=empty];
 }
 

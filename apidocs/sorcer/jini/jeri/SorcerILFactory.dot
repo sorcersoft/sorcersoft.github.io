@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.jini.jeri.SorcerILFactory
-	c325565 [label=<<table title="sorcer.jini.jeri.SorcerILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerILFactory.html">
+	c448243 [label=<<table title="sorcer.jini.jeri.SorcerILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerILFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerILFactory </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
-<tr><td align="left" balign="left"> # serviceBeanMap : Map&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # serviceBeanMap : Map&lt;Class&lt;&gt;, Object&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SorcerILFactory() </td></tr>
@@ -28,9 +28,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerILFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.jini.jeri.SorcerILFactory extends net.jini.jeri.BasicILFactory
-	c325755:p -> c325565:p [dir=back,arrowtail=empty];
+	c448472:p -> c448243:p [dir=back,arrowtail=empty];
 	// net.jini.jeri.BasicILFactory
-	c325755 [label=<<table title="net.jini.jeri.BasicILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/jeri/BasicILFactory.html">
+	c448472 [label=<<table title="net.jini.jeri.BasicILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/jeri/BasicILFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BasicILFactory </td></tr>
 		</table></td></tr>

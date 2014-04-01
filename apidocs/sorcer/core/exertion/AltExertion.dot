@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Task
-	c59897 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
+	c89674 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 		</table></td></tr>
@@ -54,10 +54,26 @@ digraph G {
 <tr><td align="left" balign="left"> + setContinous(isContinous : boolean) </td></tr>
 <tr><td align="left" balign="left"> # doBatchTask(txn : Transaction) : Task </td></tr>
 <tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + reset(state : int) </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Task.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.ConditionalExertion
+	c89736 [label=<<table title="sorcer.service.ConditionalExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/ConditionalExertion.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ConditionalExertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getConditions() : List&lt;Conditional&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/ConditionalExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.AltExertion
-	c60122 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AltExertion.html">
+	c89903 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AltExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AltExertion </td></tr>
 		</table></td></tr>
@@ -65,14 +81,27 @@ digraph G {
 <tr><td align="left" balign="left"> # optExertions : List&lt;OptExertion&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AltExertion(optExertions : OptExertion[]) </td></tr>
 <tr><td align="left" balign="left"> + AltExertion(name : String, optExertions : OptExertion[]) </td></tr>
 <tr><td align="left" balign="left"> + AltExertion(name : String, optExertions : List&lt;OptExertion&gt;) </td></tr>
 <tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getActiveOptExertion() : OptExertion </td></tr>
+<tr><td align="left" balign="left"> + getOptExertions() : List&lt;OptExertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + setOptExertions(optExertions : List&lt;OptExertion&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getOptExertion(index : int) : OptExertion </td></tr>
 <tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
+<tr><td align="left" balign="left"> + reset(state : int) </td></tr>
+<tr><td align="left" balign="left"> + getConditions() : List&lt;Conditional&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExceptions(exceptions : List&lt;ThrowableTrace&gt;) : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AltExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.AltExertion extends sorcer.service.Task
-	c59897:p -> c60122:p [dir=back,arrowtail=empty];
+	c89674:p -> c89903:p [dir=back,arrowtail=empty];
+	//sorcer.core.exertion.AltExertion implements sorcer.service.ConditionalExertion
+	c89736:p -> c89903:p [dir=back,arrowtail=empty,style=dashed];
 }
 

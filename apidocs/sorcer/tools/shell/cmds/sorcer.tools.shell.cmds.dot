@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.cmds.DataStorageCmd
-	c35163 [label=<<table title="sorcer.tools.shell.cmds.DataStorageCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataStorageCmd.html">
+	c54426 [label=<<table title="sorcer.tools.shell.cmds.DataStorageCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataStorageCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataStorageCmd </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataStorageCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.GroupsCmd
-	c35164 [label=<<table title="sorcer.tools.shell.cmds.GroupsCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroupsCmd.html">
+	c54427 [label=<<table title="sorcer.tools.shell.cmds.GroupsCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroupsCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GroupsCmd </td></tr>
 		</table></td></tr>
@@ -40,7 +40,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GroupsCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.DirCmd
-	c35165 [label=<<table title="sorcer.tools.shell.cmds.DirCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DirCmd.html">
+	c54428 [label=<<table title="sorcer.tools.shell.cmds.DirCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DirCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DirCmd </td></tr>
 		</table></td></tr>
@@ -55,23 +55,42 @@ digraph G {
 <tr><td align="left" balign="left"> + getLongDescription(subCmd : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DirCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.SpaceCmd
+	c54429 [label=<<table title="sorcer.tools.shell.cmds.SpaceCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + printCurrentSpace() </td></tr>
+<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.DiscoCmd
-	c35166 [label=<<table title="sorcer.tools.shell.cmds.DiscoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DiscoCmd.html">
+	c54430 [label=<<table title="sorcer.tools.shell.cmds.DiscoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DiscoCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DiscoCmd </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> # MAX_MATCHES : int </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + DiscoCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 <tr><td align="left" balign="left"> + describeServiceRegistrar(myReg : ServiceRegistrar, withDetails : boolean) </td></tr>
 <tr><td align="left" balign="left"> + printCurrentLus() </td></tr>
+<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getSelectedRegistrar() : ServiceRegistrar </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DiscoCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.ChgrpCmd
-	c35167 [label=<<table title="sorcer.tools.shell.cmds.ChgrpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChgrpCmd.html">
+	c54431 [label=<<table title="sorcer.tools.shell.cmds.ChgrpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChgrpCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ChgrpCmd </td></tr>
 		</table></td></tr>
@@ -84,7 +103,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ChgrpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.SetPortCmd
-	c35168 [label=<<table title="sorcer.tools.shell.cmds.SetPortCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SetPortCmd.html">
+	c54432 [label=<<table title="sorcer.tools.shell.cmds.SetPortCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SetPortCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SetPortCmd </td></tr>
 		</table></td></tr>
@@ -97,7 +116,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SetPortCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.GroovyCmd
-	c35169 [label=<<table title="sorcer.tools.shell.cmds.GroovyCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroovyCmd.html">
+	c54433 [label=<<table title="sorcer.tools.shell.cmds.GroovyCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroovyCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GroovyCmd </td></tr>
 		</table></td></tr>
@@ -113,7 +132,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GroovyCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.StartStopCmd
-	c35170 [label=<<table title="sorcer.tools.shell.cmds.StartStopCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StartStopCmd.html">
+	c54434 [label=<<table title="sorcer.tools.shell.cmds.StartStopCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StartStopCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StartStopCmd </td></tr>
 		</table></td></tr>
@@ -127,7 +146,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StartStopCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.EmxCmd
-	c35171 [label=<<table title="sorcer.tools.shell.cmds.EmxCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EmxCmd.html">
+	c54435 [label=<<table title="sorcer.tools.shell.cmds.EmxCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EmxCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EmxCmd </td></tr>
 		</table></td></tr>
@@ -147,7 +166,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EmxCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.ExertCmd
-	c35172 [label=<<table title="sorcer.tools.shell.cmds.ExertCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertCmd.html">
+	c54436 [label=<<table title="sorcer.tools.shell.cmds.ExertCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertCmd </td></tr>
 		</table></td></tr>
@@ -163,7 +182,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.SorcerCmd
-	c35173 [label=<<table title="sorcer.tools.shell.cmds.SorcerCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerCmd.html">
+	c54437 [label=<<table title="sorcer.tools.shell.cmds.SorcerCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerCmd </td></tr>
 		</table></td></tr>
@@ -176,7 +195,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.ExecCmd
-	c35174 [label=<<table title="sorcer.tools.shell.cmds.ExecCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecCmd.html">
+	c54438 [label=<<table title="sorcer.tools.shell.cmds.ExecCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExecCmd </td></tr>
 		</table></td></tr>
@@ -189,7 +208,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExecCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.LookupCmd
-	c35175 [label=<<table title="sorcer.tools.shell.cmds.LookupCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LookupCmd.html">
+	c54439 [label=<<table title="sorcer.tools.shell.cmds.LookupCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LookupCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LookupCmd </td></tr>
 		</table></td></tr>
@@ -204,7 +223,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LookupCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.ScriptThread
-	c35176 [label=<<table title="sorcer.tools.shell.cmds.ScriptThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ScriptThread.html">
+	c54440 [label=<<table title="sorcer.tools.shell.cmds.ScriptThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ScriptThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ScriptThread </td></tr>
 		</table></td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.JavaSpaceContentsView
-	c183120 [label=<<table title="sorcer.ssb.tools.plugin.browser.JavaSpaceContentsView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JavaSpaceContentsView.html">
+	c257258 [label=<<table title="sorcer.ssb.tools.plugin.browser.JavaSpaceContentsView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JavaSpaceContentsView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JavaSpaceContentsView </td></tr>
 		</table></td></tr>
@@ -25,11 +25,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JavaSpaceContentsView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.JavaSpaceContentsView extends javax.swing.JPanel
-	c183173:p -> c183120:p [dir=back,arrowtail=empty];
+	c257353:p -> c257258:p [dir=back,arrowtail=empty];
 	//sorcer.ssb.tools.plugin.browser.JavaSpaceContentsView implements java.lang.Runnable
-	c183174:p -> c183120:p [dir=back,arrowtail=empty,style=dashed];
+	c257354:p -> c257258:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Runnable
-	c183174 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+	c257354 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Runnable </td></tr>
@@ -42,7 +42,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// javax.swing.JPanel
-	c183173 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
+	c257353 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JPanel </td></tr>
 		</table></td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ServiceContext<T>
-	c310815 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c430197 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -46,10 +46,10 @@ digraph G {
 <tr><td align="left" balign="left"> # isRevaluable : boolean </td></tr>
 <tr><td align="left" balign="left"> # dbUrl : String </td></tr>
 <tr><td align="left" balign="left"> # prefix : String </td></tr>
-<tr><td align="left" balign="left"> # entryLists : List&lt;EntryList&gt; </td></tr>
 <tr><td align="left" balign="left"> # version : float </td></tr>
 <tr><td align="left" balign="left"> # delPathIds : Hashtable&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # metacontext : Hashtable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # blockScope : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # exertion : Exertion </td></tr>
 <tr><td align="left" balign="left"> # currentSelector : String </td></tr>
 <tr><td align="left" balign="left"> # currentPrefix : String </td></tr>
@@ -66,8 +66,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ServiceContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
 <tr><td align="left" balign="left"> + ServiceContext(cntxt : Context&lt;T&gt;) </td></tr>
 <tr><td align="left" balign="left"> + ServiceContext(object : Object) </td></tr>
-<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + setId(contextID : Uuid) </td></tr>
@@ -114,6 +113,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getValue0(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + inPaths() : Enumeration&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + outPaths() : Enumeration&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getValueEndsWith(name : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getValueStartsWith(name : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
@@ -165,8 +165,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getSubcontext() : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTaskContext(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendNewEntries(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + append(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;&gt;, path : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;&gt;, path : String, prefixContextName : boolean) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
@@ -248,7 +249,7 @@ digraph G {
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + checkpoint() </td></tr>
-<tr><td align="left" balign="left"> + changed(aspect : ExecState.Category) </td></tr>
+<tr><td align="left" balign="left"> + changed(aspect : Exec.State) </td></tr>
 <tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + setOutValues(context : Context&lt;T&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
@@ -270,18 +271,20 @@ digraph G {
 <tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
 <tr><td align="left" balign="left"> + getDbUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + setDbUrl(dbUrl : String) </td></tr>
-<tr><td align="left" balign="left"> + getEntryLists() : List&lt;EntryList&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEntryLists(entryLists : List&lt;EntryList&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getEntryList(type : EntryList.Type) : EntryList </td></tr>
 <tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
 <tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getBlockScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setBlockScope(blockScope : Context&lt;&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedAssociativeContext
-	c310823 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedAssociativeContext.html">
+	c430205 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedAssociativeContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedAssociativeContext </td></tr>
 		</table></td></tr>
@@ -299,7 +302,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SharedAssociativeContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.SpaceContext
-	c310903 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/SpaceContext.html">
+	c430323 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/SpaceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SpaceContext </td></tr>
@@ -317,8 +320,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.SharedAssociativeContext extends sorcer.core.context.ServiceContext
-	c310815:p -> c310823:p [dir=back,arrowtail=empty];
+	c430197:p -> c430205:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.SharedAssociativeContext implements sorcer.service.SpaceContext
-	c310903:p -> c310823:p [dir=back,arrowtail=empty,style=dashed];
+	c430323:p -> c430205:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.signature.EvaluationSignature
-	c135168 [label=<<table title="sorcer.core.signature.EvaluationSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EvaluationSignature.html">
+	c185809 [label=<<table title="sorcer.core.signature.EvaluationSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EvaluationSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EvaluationSignature </td></tr>
 		</table></td></tr>
@@ -21,11 +21,13 @@ digraph G {
 <tr><td align="left" balign="left"> + EvaluationSignature(evaluator : Evaluation&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getEvaluator() : Evaluation&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluation&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + equals(signature : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EvaluationSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.ServiceSignature
-	c135169 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
+	c185810 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSignature </td></tr>
 		</table></td></tr>
@@ -90,7 +92,7 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getServiceID() : ServiceID </td></tr>
 <tr><td align="left" balign="left"> + setServiceID(id : ServiceID) </td></tr>
-<tr><td align="left" balign="left"> + equals(method : ServiceSignature) : boolean </td></tr>
+<tr><td align="left" balign="left"> + equals(signature : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
 <tr><td align="left" balign="left"> + setCodebase(codebase : String) </td></tr>
@@ -107,9 +109,12 @@ digraph G {
 <tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
 <tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
+<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
+<tr><td align="left" balign="left"> + compareTo(signature : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.EvaluationSignature extends sorcer.core.signature.ServiceSignature
-	c135169:p -> c135168:p [dir=back,arrowtail=empty];
+	c185810:p -> c185809:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.requestor.ServiceRequestor
-	c271723 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceRequestor.html">
+	c379377 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceRequestor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceRequestor </font></td></tr>
 		</table></td></tr>
@@ -28,6 +28,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ServiceRequestor() </td></tr>
 <tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
 <tr><td align="left" balign="left"> + initialize(args : String[]) </td></tr>
+<tr><td align="left" balign="left"> + setCodeBaseByArtifacts(artifactCoords : String[]) </td></tr>
 <tr><td align="left" balign="left"> + setExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertion(args : String[]) : Exertion </font></td></tr>
 <tr><td align="left" balign="left"> + getJobberName() : String </td></tr>
@@ -43,10 +44,11 @@ digraph G {
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : String[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : ArtifactCoordinates[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareEnvironment() </td></tr>
+<tr><td align="left" balign="left"> # prepareBasicEnvironment() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceRequestor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.requestor.Requestor
-	c271725 [label=<<table title="sorcer.core.requestor.Requestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Requestor.html">
+	c379380 [label=<<table title="sorcer.core.requestor.Requestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Requestor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Requestor </td></tr>
@@ -63,6 +65,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Requestor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.requestor.ServiceRequestor implements sorcer.core.requestor.Requestor
-	c271725:p -> c271723:p [dir=back,arrowtail=empty,style=dashed];
+	c379380:p -> c379377:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ControlContext
-	c348483 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ControlContext.html">
+	c482752 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ControlContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ControlContext </td></tr>
 		</table></td></tr>
@@ -20,6 +20,7 @@ digraph G {
 <tr><td align="left" balign="left"> + EXERTION_FLOW : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_PROVISIONABLE : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_OPTI : String </td></tr>
+<tr><td align="left" balign="left"> + EXEC_STATE : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_MONITORABLE : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_ACCESS : String </td></tr>
 <tr><td align="left" balign="left"> + NODE_REFERENCE_PRESERVED : String </td></tr>
@@ -77,11 +78,12 @@ digraph G {
 <tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isMonitorable(value : Strategy.Monitor) </td></tr>
 <tr><td align="left" balign="left"> + setMonitorable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable(value : Strategy.Provision) </td></tr>
+<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
 <tr><td align="left" balign="left"> + setOpti(optiType : Strategy.Opti) </td></tr>
 <tr><td align="left" balign="left"> + getOpti() : Strategy.Opti </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setExecState(state : Exec.State) </td></tr>
+<tr><td align="left" balign="left"> + getExecState() : Exec.State </td></tr>
 <tr><td align="left" balign="left"> + getMonitor() : MonitoringManagement </td></tr>
 <tr><td align="left" balign="left"> + setMonitor(monitor : MonitoringManagement) </td></tr>
 <tr><td align="left" balign="left"> + setAccessType(access : Strategy.Access) </td></tr>
@@ -110,7 +112,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setNotifyList(exertion : Exertion, list : String) </td></tr>
 <tr><td align="left" balign="left"> + getNotifyList(ex : Exertion) : String </td></tr>
 <tr><td align="left" balign="left"> + registerExertion(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + deregisterExertion(job : ComplexExertion, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + deregisterExertion(job : Job, exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + addAttributeValue(attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addComponentAssociation(path : String, attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAttributeValue(exertion : Exertion, attributeName : String) : String </td></tr>
@@ -121,6 +123,7 @@ digraph G {
 <tr><td align="left" balign="left"> + addException(t : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + addException(message : String, t : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getStackTrace(t : Throwable) : String </td></tr>
 <tr><td align="left" balign="left"> + describeExceptions() : String </td></tr>
 <tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + getSignature(kind : Signature.Kind) : ServiceSignature </td></tr>
@@ -134,7 +137,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/ControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Strategy
-	c348537 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Strategy.html">
+	c482839 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Strategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Strategy </td></tr>
@@ -151,7 +154,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Arg
-	c348580 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
+	c482890 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Arg </td></tr>
@@ -164,8 +167,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ControlContext implements sorcer.service.Strategy
-	c348537:p -> c348483:p [dir=back,arrowtail=empty,style=dashed];
+	c482839:p -> c482752:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Strategy implements sorcer.service.Arg
-	c348580:p -> c348537:p [dir=back,arrowtail=empty,style=dashed];
+	c482890:p -> c482839:p [dir=back,arrowtail=empty,style=dashed];
 }
 

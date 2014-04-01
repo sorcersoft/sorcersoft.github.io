@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.GenericUtil
-	c157146 [label=<<table title="sorcer.util.GenericUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GenericUtil.html">
+	c219191 [label=<<table title="sorcer.util.GenericUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GenericUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GenericUtil </td></tr>
 		</table></td></tr>
@@ -32,7 +32,11 @@ digraph G {
 <tr><td align="left" balign="left"> + createArchive(fileList : List&lt;File&gt;, jarArchive : File) </td></tr>
 <tr><td align="left" balign="left"> + createScriptLogFile(logFileName : String) : PrintWriter </td></tr>
 <tr><td align="left" balign="left"> + deleteFilesAndSubDirs(dir : File) </td></tr>
+<tr><td align="left" balign="left"> + dObjATodPrimA(aD : Double[][][]) : double[][][] </td></tr>
+<tr><td align="left" balign="left"> + dObjATodPrimA(aD : Double[][]) : double[][] </td></tr>
 <tr><td align="left" balign="left"> + dObjATodPrimA(aD : Double[]) : double[] </td></tr>
+<tr><td align="left" balign="left"> + dPrimATodObjA(ad : double[][][]) : Double[][][] </td></tr>
+<tr><td align="left" balign="left"> + dPrimATodObjA(ad : double[][]) : Double[][] </td></tr>
 <tr><td align="left" balign="left"> + dPrimATodObjA(ad : double[]) : Double[] </td></tr>
 <tr><td align="left" balign="left"> + envVarExists(envName : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + execScript(shellScriptFile : File, scriptCommand : String[], execLog : PrintWriter) : Process </td></tr>
@@ -138,12 +142,13 @@ digraph G {
 <tr><td align="left" balign="left"> + watchSLURMQueuedJob(scratchDir : File, shCmd : Vector&lt;?&gt;, jobID : String, appName : String, servProps : Properties) : long </td></tr>
 <tr><td align="left" balign="left"> + nestedDoubleToNestedList(data : Double[][]) : List&lt;List&lt;?&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendFileContents(msg : String, file : File) </td></tr>
+<tr><td align="left" balign="left"> + toArtifactUrl(codebaseRoot : URL, artifactCoordinates : String) : URL </td></tr>
 		</table></td></tr>
 		</table>>, URL="./GenericUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.GenericUtil implements java.io.Serializable
-	c157677:p -> c157146:p [dir=back,arrowtail=empty,style=dashed];
+	c219819:p -> c219191:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c157677 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c219819 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

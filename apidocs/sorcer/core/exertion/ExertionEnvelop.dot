@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.exertion.ExertionEnvelop
-	c148199 [label=<<table title="sorcer.core.exertion.ExertionEnvelop" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionEnvelop.html">
+	c202510 [label=<<table title="sorcer.core.exertion.ExertionEnvelop" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionEnvelop.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionEnvelop </td></tr>
 		</table></td></tr>
@@ -37,13 +37,14 @@ digraph G {
 <tr><td align="left" balign="left"> + getTakeTemplate(parentID : Uuid, childID : Uuid) : ExertionEnvelop </td></tr>
 <tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
 <tr><td align="left" balign="left"> + resultLeaseTime() : long </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionEnvelop.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.ExertionEnvelop implements net.jini.core.entry.Entry
-	c148398:p -> c148199:p [dir=back,arrowtail=empty,style=dashed];
+	c202749:p -> c202510:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.core.entry.Entry
-	c148398 [label=<<table title="net.jini.core.entry.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/entry/Entry.html">
+	c202749 [label=<<table title="net.jini.core.entry.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/entry/Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Entry </td></tr>

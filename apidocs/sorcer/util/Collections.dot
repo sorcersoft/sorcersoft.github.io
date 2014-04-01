@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.Collections
-	c88166 [label=<<table title="sorcer.util.Collections" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Collections.html">
+	c125669 [label=<<table title="sorcer.util.Collections" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Collections.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Collections </td></tr>
 		</table></td></tr>
@@ -22,6 +22,9 @@ digraph G {
 <tr><td align="left" balign="left"> + makeArray(e : Enumeration&lt;&gt;) : Object[] </td></tr>
 <tr><td align="left" balign="left"> + i(e : Enumeration&lt;T&gt;) : Iterable&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + copy(src : Iterator&lt;T&gt;, target : T[], beginIndex : int, endIndex : int) </td></tr>
+<tr><td align="left" balign="left"> + toMap(properties : Properties) : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> + toMap(properties : Properties, result : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + toProperties(source : Map&lt;String, String&gt;) : Properties </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Collections.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

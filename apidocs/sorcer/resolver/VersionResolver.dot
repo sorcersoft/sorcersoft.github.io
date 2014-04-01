@@ -10,17 +10,17 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.resolver.VersionResolver
-	c371215 [label=<<table title="sorcer.resolver.VersionResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./VersionResolver.html">
+	c511736 [label=<<table title="sorcer.resolver.VersionResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./VersionResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> VersionResolver </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # versions : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> + instance : VersionResolver </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + VersionResolver() </td></tr>
 <tr><td align="left" balign="left"> + resolveVersion(groupId : String, artifactId : String) : String </td></tr>
-<tr><td align="left" balign="left"> # close(inputStream : Closeable) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./VersionResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

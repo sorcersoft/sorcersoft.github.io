@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ServiceContext<T>
-	c178661 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
+	c249313 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -46,10 +46,10 @@ digraph G {
 <tr><td align="left" balign="left"> # isRevaluable : boolean </td></tr>
 <tr><td align="left" balign="left"> # dbUrl : String </td></tr>
 <tr><td align="left" balign="left"> # prefix : String </td></tr>
-<tr><td align="left" balign="left"> # entryLists : List&lt;EntryList&gt; </td></tr>
 <tr><td align="left" balign="left"> # version : float </td></tr>
 <tr><td align="left" balign="left"> # delPathIds : Hashtable&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # metacontext : Hashtable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # blockScope : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # exertion : Exertion </td></tr>
 <tr><td align="left" balign="left"> # currentSelector : String </td></tr>
 <tr><td align="left" balign="left"> # currentPrefix : String </td></tr>
@@ -66,8 +66,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ServiceContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
 <tr><td align="left" balign="left"> + ServiceContext(cntxt : Context&lt;T&gt;) </td></tr>
 <tr><td align="left" balign="left"> + ServiceContext(object : Object) </td></tr>
-<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + setId(contextID : Uuid) </td></tr>
@@ -114,6 +113,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getValue0(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + inPaths() : Enumeration&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + outPaths() : Enumeration&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getValueEndsWith(name : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getValueStartsWith(name : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
@@ -165,8 +165,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getSubcontext() : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTaskContext(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendNewEntries(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + append(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;&gt;, path : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;&gt;, path : String, prefixContextName : boolean) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
@@ -248,7 +249,7 @@ digraph G {
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + checkpoint() </td></tr>
-<tr><td align="left" balign="left"> + changed(aspect : ExecState.Category) </td></tr>
+<tr><td align="left" balign="left"> + changed(aspect : Exec.State) </td></tr>
 <tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + setOutValues(context : Context&lt;T&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
@@ -270,18 +271,20 @@ digraph G {
 <tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
 <tr><td align="left" balign="left"> + getDbUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + setDbUrl(dbUrl : String) </td></tr>
-<tr><td align="left" balign="left"> + getEntryLists() : List&lt;EntryList&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEntryLists(entryLists : List&lt;EntryList&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getEntryList(type : EntryList.Type) : EntryList </td></tr>
 <tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
 <tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getBlockScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setBlockScope(blockScope : Context&lt;&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.PositionalContext<T>
-	c178664 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
+	c249316 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -305,48 +308,204 @@ digraph G {
 <tr><td align="left" balign="left"> + getTally() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.par.ParModel<T>
+	c249332 [label=<<table title="sorcer.core.context.model.par.ParModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/ParModel.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ParModel&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ParModel() </td></tr>
+<tr><td align="left" balign="left"> + ParModel(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ParModel(objects : Identifiable[]) </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
+<tr><td align="left" balign="left"> + getPar(name : String) : Par&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + add(objects : List&lt;Identifiable&gt;) : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + append(objects : Identifiable[]) : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + add(objects : Identifiable[]) : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + isContextChanged() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setContextChanged(contextChanged : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getVar(name : String) : Variability&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getVarPaths(var : Variability&lt;&gt;) : Enumeration&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMarkedVariables(sc : Context&lt;&gt;, association : String) : Variability&lt;&gt;[] </td></tr>
+<tr><td align="left" balign="left"> + markVar(cntxt : Context&lt;&gt;, path : String, var : Variability&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendNew(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/context/model/par/ParModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.par.Par<T>
+	c249337 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Par&lt;T&gt; </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # value : T </td></tr>
+<tr><td align="left" balign="left"> # scope : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> # dbURL : URL </td></tr>
+<tr><td align="left" balign="left"> # mappable : Mappable&lt;&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Par(parname : String) </td></tr>
+<tr><td align="left" balign="left"> + Par(identifiable : Identifiable) </td></tr>
+<tr><td align="left" balign="left"> + Par(parname : String, argument : T) </td></tr>
+<tr><td align="left" balign="left"> + Par(parname : String, argument : Object, scope : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + Par(name : String, path : String, map : Mappable&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setClosure(scope : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setValue(value : Object) </font></td></tr>
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"> + substitute(parameters : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setScope(scope : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"> + compareTo(o : T) : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + getPerturbedValue(varName : String) : T </td></tr>
+<tr><td align="left" balign="left"> + getPerturbation() : double </td></tr>
+<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
+<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
+<tr><td align="left" balign="left"> + getValueType() : Class&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
+<tr><td align="left" balign="left"> + getContextable() : Mappable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
+<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + valueChanged() </td></tr>
+<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVariability(name : String) : Variability&lt;T&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDbURL() : URL </font></td></tr>
+<tr><td align="left" balign="left"> + getURL() : URL </td></tr>
+<tr><td align="left" balign="left"> + setDbURL(dbURL : URL) </td></tr>
+<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setPersistent(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getMappable() : Mappable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setMappable(mappable : Mappable&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + isMappable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
+<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.Invoker<T>
+	c249366 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/Invoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # defaultName : String </td></tr>
+<tr><td align="left" balign="left"> # count : int </td></tr>
+<tr><td align="left" balign="left"> # id : Uuid </td></tr>
+<tr><td align="left" balign="left"> # value : T </td></tr>
+<tr><td align="left" balign="left"> # valueIsValid : boolean </td></tr>
+<tr><td align="left" balign="left"> # invokeContext : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # pars : ArgSet </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Invoker() </td></tr>
+<tr><td align="left" balign="left"> + Invoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + getPars() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + valueValid(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + valueValid() : boolean </td></tr>
+<tr><td align="left" balign="left"> + valueChanged() </td></tr>
+<tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + addPar(par : Object) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + addPars(parSet : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + addPars(parList : List&lt;Par&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addPars(pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + addPars(args : ArgList) </td></tr>
+<tr><td align="left" balign="left"> + addPars(parLists : ArgList[]) </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
+<tr><td align="left" balign="left"> + getEvaluator() : Evaluator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + clearPars() </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + getId() : Object </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/invoker/Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.MethodInvoking<T>
-	c178687 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/MethodInvoking.html">
+	c249369 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/MethodInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MethodInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + getParameters() : Object[] </td></tr>
+<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
+		</table></td></tr>
 		</table>>, URL="../core/invoker/MethodInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.ScriptInvoking<T>
-	c178688 [label=<<table title="sorcer.core.invoker.ScriptInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ScriptInvoking.html">
+	c249370 [label=<<table title="sorcer.core.invoker.ScriptInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ScriptInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ScriptInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/invoker/ScriptInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.ContextInvoking<T>
-	c178689 [label=<<table title="sorcer.core.invoker.ContextInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ContextInvoking.html">
+	c249371 [label=<<table title="sorcer.core.invoker.ContextInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ContextInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/invoker/ContextInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.CmdInvoking<T>
-	c178690 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/CmdInvoking.html">
+	c249372 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/CmdInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CmdInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/invoker/CmdInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.ExertionInvoking<T>
-	c178692 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ExertionInvoking.html">
+	c249374 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ExertionInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ExertionInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/invoker/ExertionInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c178723 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
+	c249408 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PATH_PAR : String </td></tr>
 <tr><td align="left" balign="left"> + CONTEXT_PARAMETER : String </td></tr>
 <tr><td align="left" balign="left"> + PIPE : String </td></tr>
 <tr><td align="left" balign="left"> + DIRECTION : String </td></tr>
@@ -392,6 +551,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + setId(contextId : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getParentPath() : String </td></tr>
 <tr><td align="left" balign="left"> + setParentPath(path : String) </td></tr>
 <tr><td align="left" balign="left"> + getParentID() : Uuid </td></tr>
@@ -451,6 +611,8 @@ digraph G {
 <tr><td align="left" balign="left"> + putDbValue(path : String, value : Object, datastoreUrl : URL) : Object </td></tr>
 <tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
 <tr><td align="left" balign="left"> + addValue(value : Identifiable) : Object </td></tr>
+<tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putLink(path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putLink(name : String, path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
@@ -514,12 +676,13 @@ digraph G {
 <tr><td align="left" balign="left"> + getAttributes(path : String) : Enumeration&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> + getData() : Object </td></tr>
 <tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + getLinkedContext(link : Link) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c178729 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+	c249415 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -532,6 +695,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 <tr><td align="left" balign="left"> + getStatus() : int </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + getDeploymentId() : String </td></tr>
 <tr><td align="left" balign="left"> + addExertion(component : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getDataContext() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
@@ -541,30 +705,40 @@ digraph G {
 <tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getControlContext() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPar(path : String) : Arg </td></tr>
 <tr><td align="left" balign="left"> + getProcessSignature() : Signature </td></tr>
 <tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
 <tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
 <tr><td align="left" balign="left"> + exert(txn : Transaction, entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + exert(entries : Arg[]) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllNetSignatures() : List&lt;NetSignature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllNetTaskSignatures() : List&lt;NetSignature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExertion(name : String) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllExertions() : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isJob() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isTask() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isBlock() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isCmd() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + isTree() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getIndex() : int </td></tr>
 <tr><td align="left" balign="left"> + setIndex(i : int) </td></tr>
 <tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Invocation<T>
-	c178745 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Invocation.html">
+	c249435 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Invocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
@@ -577,51 +751,27 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.Par<T>
-	c178879 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+	// sorcer.core.exertion.NetBlock
+	c249600 [label=<<table title="sorcer.core.exertion.NetBlock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetBlock.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Par&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> NetBlock </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # name : String </td></tr>
-<tr><td align="left" balign="left"> # value : T </td></tr>
-<tr><td align="left" balign="left"> # scope : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> # mappable : Mappable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Par(parname : String) </td></tr>
-<tr><td align="left" balign="left"> + Par(parname : String, argument : T) </td></tr>
-<tr><td align="left" balign="left"> + Par(parname : String, argument : Object, scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + Par(name : String, path : String, map : Mappable&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(parameters : Arg[]) : Evaluation&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + compareTo(o : T) : int </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + getContextable() : Mappable&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
-<tr><td align="left" balign="left"> + getDbURL() : URL </td></tr>
-<tr><td align="left" balign="left"> + getURL() : URL </td></tr>
-<tr><td align="left" balign="left"> + setDbURL(dbURL : URL) </td></tr>
-<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setPersistent(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getMappable() : Mappable&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setMappable(mappable : Mappable&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isMappable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
+<tr><td align="left" balign="left"> + NetBlock() </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(name : String) </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(name : String, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(name : String, principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> + doBlock(txn : Transaction) : Block </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
-		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../core/exertion/NetBlock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetTask
-	c178915 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetTask.html">
+	c249603 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetTask </td></tr>
 		</table></td></tr>
@@ -644,10 +794,11 @@ digraph G {
 <tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
 <tr><td align="left" balign="left"> + getTemplate() : NetTask </td></tr>
 <tr><td align="left" balign="left"> + getTemplate(provider : String) : NetTask </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/exertion/NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetJob
-	c178920 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetJob.html">
+	c249610 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetJob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetJob </td></tr>
 		</table></td></tr>
@@ -661,35 +812,44 @@ digraph G {
 <tr><td align="left" balign="left"> + NetJob(name : String, principal : SorcerPrincipal) </td></tr>
 <tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/exertion/NetJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Context<T>
-	c178723:p -> c178661:p [dir=back,arrowtail=empty,style=dashed];
+	c249408:p -> c249313:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178661:p [dir=back,arrowtail=empty,style=dashed];
+	c249435:p -> c249313:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
-	c178661:p -> c178664:p [dir=back,arrowtail=empty];
+	c249313:p -> c249316:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178664:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.MethodInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178687:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.ScriptInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178688:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.ContextInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178689:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.CmdInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178690:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.ExertionInvoking<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178692:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Context<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178723:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Exertion implements sorcer.service.Invocation<T>
-	c178745:p -> c178729:p [dir=back,arrowtail=empty,style=dashed];
+	c249435:p -> c249316:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.ParModel<T> extends sorcer.core.context.ServiceContext<T>
+	c249313:p -> c249332:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.model.par.ParModel<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249332:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Invocation<T>
-	c178745:p -> c178879:p [dir=back,arrowtail=empty,style=dashed];
+	c249435:p -> c249337:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.Invoker<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249366:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.MethodInvoking<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249369:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.ScriptInvoking<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249370:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.ContextInvoking<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249371:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.CmdInvoking<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249372:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.ExertionInvoking<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249374:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Context<T> implements sorcer.service.Invocation<T>
+	c249435:p -> c249408:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Exertion implements sorcer.service.Invocation<T>
+	c249435:p -> c249415:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.exertion.NetBlock implements sorcer.service.Invocation<T>
+	c249435:p -> c249600:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.exertion.NetTask implements sorcer.service.Invocation<T>
-	c178745:p -> c178915:p [dir=back,arrowtail=empty,style=dashed];
+	c249435:p -> c249603:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.exertion.NetJob implements sorcer.service.Invocation<T>
-	c178745:p -> c178920:p [dir=back,arrowtail=empty,style=dashed];
+	c249435:p -> c249610:p [dir=back,arrowtail=empty,style=dashed];
 }
 

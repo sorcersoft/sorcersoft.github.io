@@ -10,36 +10,55 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.boot.ServiceStarter
-	c42762 [label=<<table title="sorcer.boot.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceStarter.html">
+	c46197 [label=<<table title="sorcer.boot.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceStarter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceStarter </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CONFIG_RIVER : String </td></tr>
-<tr><td align="left" balign="left"> + SORCER_DEFAULT_CONFIG : File </td></tr>
+<tr><td align="left" balign="left"> # injector : Injector </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceStarter() </td></tr>
-<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceStarter(exitMonitor : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + start(configs : Collection&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> # getRioHome() : File </td></tr>
+<tr><td align="left" balign="left"> + stop() </td></tr>
+<tr><td align="left" balign="left"> # getDestroyer(service : Object) : ServiceDestroyer </td></tr>
+<tr><td align="left" balign="left"> + unregister(impl : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> # createFromOpStrFiles(files : Collection&lt;File&gt;) : List&lt;OpstringServiceDescriptor&gt; </td></tr>
+<tr><td align="left" balign="left"> + instantiateDescriptors(configs : Collection&lt;Configuration&gt;) : Map&lt;Configuration, List&lt;ServiceDescriptor&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + instantiateServices(descriptorMap : Map&lt;Configuration, Collection&lt;?&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + create(descs : ServiceDescriptor[], config : Configuration, stat : ServiceStarter.ServiceStatHolder, processors : Set&lt;ServiceDescriptorProcessor&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceStarter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.OpstringServiceDescriptor
-	c42763 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptor.html">
+	c46198 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpstringServiceDescriptor </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NOOP : OpstringServiceDescriptor.NoOpLifeCycle </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + OpstringServiceDescriptor(serviceElement : ServiceElement, policyFile : URL) </td></tr>
-<tr><td align="left" balign="left"> # doCreate(globalConfig : Configuration) : AbstractServiceDescriptor.Created </td></tr>
+<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OpstringServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.RiverServiceDestroyer
+	c46199 [label=<<table title="sorcer.boot.RiverServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RiverServiceDestroyer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RiverServiceDestroyer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RiverServiceDestroyer(backend : DestroyAdmin) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RiverServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.SorcerOAR
-	c42764 [label=<<table title="sorcer.boot.SorcerOAR" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerOAR.html">
+	c46200 [label=<<table title="sorcer.boot.SorcerOAR" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerOAR.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerOAR </td></tr>
 		</table></td></tr>
@@ -51,5 +70,53 @@ digraph G {
 <tr><td align="left" balign="left"> + getPolicyFile() : URL </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerOAR.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.ResolvingServiceDescriptor
+	c46201 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingServiceDescriptor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ResolvingServiceDescriptor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # resolver : Resolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # ResolvingServiceDescriptor() </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : String, classpath : String, implClassName : String, configFile : String) </td></tr>
+<tr><td align="left" balign="left"> # asArtifacts(artifact : String) : Set&lt;Artifact&gt; </td></tr>
+<tr><td align="left" balign="left"> + codebase(codebase : Set&lt;Artifact&gt;) : Set&lt;URL&gt; </td></tr>
+<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ResolvingServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.SorcerServiceDestroyer
+	c46202 [label=<<table title="sorcer.boot.SorcerServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDestroyer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerServiceDestroyer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerServiceDestroyer(backend : DestroyAdmin) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.ServiceDestroyer
+	c46203 [label=<<table title="sorcer.boot.ServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDestroyer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ServiceDestroyer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.boot.OpstringServiceDescriptor extends sorcer.boot.ResolvingServiceDescriptor
+	c46201:p -> c46198:p [dir=back,arrowtail=empty];
+	//sorcer.boot.RiverServiceDestroyer implements sorcer.boot.ServiceDestroyer
+	c46203:p -> c46199:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.boot.SorcerServiceDestroyer implements sorcer.boot.ServiceDestroyer
+	c46203:p -> c46202:p [dir=back,arrowtail=empty,style=dashed];
 }
 

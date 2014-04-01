@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ServletProtocolStream
-	c251565 [label=<<table title="sorcer.util.ServletProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServletProtocolStream.html">
+	c354275 [label=<<table title="sorcer.util.ServletProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServletProtocolStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServletProtocolStream </td></tr>
 		</table></td></tr>
@@ -35,7 +35,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServletProtocolStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.DataProtocolStream
-	c251568 [label=<<table title="sorcer.util.DataProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataProtocolStream.html">
+	c354279 [label=<<table title="sorcer.util.DataProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataProtocolStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataProtocolStream </td></tr>
 		</table></td></tr>
@@ -59,7 +59,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataProtocolStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ProtocolStream
-	c251581 [label=<<table title="sorcer.util.ProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProtocolStream.html">
+	c354292 [label=<<table title="sorcer.util.ProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProtocolStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProtocolStream </td></tr>
@@ -82,8 +82,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProtocolStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ServletProtocolStream implements sorcer.util.ProtocolStream
-	c251581:p -> c251565:p [dir=back,arrowtail=empty,style=dashed];
+	c354292:p -> c354275:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.DataProtocolStream implements sorcer.util.ProtocolStream
-	c251581:p -> c251568:p [dir=back,arrowtail=empty,style=dashed];
+	c354292:p -> c354279:p [dir=back,arrowtail=empty,style=dashed];
 }
 

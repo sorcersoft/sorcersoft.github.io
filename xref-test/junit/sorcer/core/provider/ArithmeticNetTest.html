@@ -27,14 +27,14 @@
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> junit.sorcer.core.provider;
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.service.*;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Access;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Flow;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Monitor;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Wait;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> sorcer.tools.webster.InternalWebster;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> sorcer.core.requestor.ResolvingWebster;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.requestor.ServiceRequestor;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.service.*;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Access;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Flow;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Monitor;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Strategy.Wait;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.tools.webster.Webster;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.util.JavaSystemProperties;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  
@@ -76,7 +76,7 @@
 <a class="jxr_linenumber" name="66" href="#66">66</a>          System.setProperty(<span class="jxr_string">"java.protocol.handler.pkgs"</span>, <span class="jxr_string">"net.jini.url|sorcer.util.bdb|org.rioproject.url"</span>);
 <a class="jxr_linenumber" name="67" href="#67">67</a>          System.setSecurityManager(<strong class="jxr_keyword">new</strong> RMISecurityManager());
 <a class="jxr_linenumber" name="68" href="#68">68</a>  		<strong class="jxr_keyword">if</strong>(System.getProperty(RMI_SERVER_CODEBASE)==<strong class="jxr_keyword">null</strong>){
-<a class="jxr_linenumber" name="69" href="#69">69</a>  			SorcerEnv.setCodeBaseByArtifacts(<strong class="jxr_keyword">new</strong> String[]{
+<a class="jxr_linenumber" name="69" href="#69">69</a>  			ServiceRequestor.setCodeBaseByArtifacts(<strong class="jxr_keyword">new</strong> String[]{
 <a class="jxr_linenumber" name="70" href="#70">70</a>                      <span class="jxr_string">"org.sorcersoft.sorcer:sorcer-api"</span>,
 <a class="jxr_linenumber" name="71" href="#71">71</a>                      <span class="jxr_string">"org.sorcersoft.sorcer:ju-arithmetic-api"</span>});
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		}
@@ -266,7 +266,7 @@
 <a class="jxr_linenumber" name="256" href="#256">256</a>     }
 <a class="jxr_linenumber" name="257" href="#257">257</a> 
 <a class="jxr_linenumber" name="258" href="#258">258</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="259" href="#259">259</a>         Webster webster = InternalWebster.startRequestorWebsterFromProperties();
+<a class="jxr_linenumber" name="259" href="#259">259</a>         Webster webster = ResolvingWebster.startRequestorWebsterFromProperties();
 <a class="jxr_linenumber" name="260" href="#260">260</a>         <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="261" href="#261">261</a>             waitForServices();
 <a class="jxr_linenumber" name="262" href="#262">262</a>             <a href="../../../../junit/sorcer/core/provider/ArithmeticNetTest.html">ArithmeticNetTest</a> ant = <strong class="jxr_keyword">new</strong> <a href="../../../../junit/sorcer/core/provider/ArithmeticNetTest.html">ArithmeticNetTest</a>();

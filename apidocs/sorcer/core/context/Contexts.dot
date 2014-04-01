@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.Contexts
-	c111452 [label=<<table title="sorcer.core.context.Contexts" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Contexts.html">
+	c155144 [label=<<table title="sorcer.core.context.Contexts" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Contexts.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Contexts </td></tr>
 		</table></td></tr>
@@ -52,7 +52,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getContextNodes(context : Context&lt;&gt;) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getAllContextNodes(context : Context&lt;&gt;) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getTaskContextNodes(task : Exertion) : ContextNode[] </td></tr>
-<tr><td align="left" balign="left"> + getTaskContextNodes(job : ComplexExertion) : ContextNode[] </td></tr>
+<tr><td align="left" balign="left"> + getTaskContextNodes(job : Job) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getContextNodesWithAttribute(sc : Context&lt;&gt;, attribute : String) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getMarkedConextNodes(sc : Context&lt;&gt;, association : String) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getMarkedConextNode(sc : Context&lt;&gt;, association : String) : ContextNode </td></tr>

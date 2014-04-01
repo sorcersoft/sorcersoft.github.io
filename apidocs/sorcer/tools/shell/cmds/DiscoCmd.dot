@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.ShellCmd
-	c123181 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
+	c171701 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -36,21 +36,25 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.DiscoCmd
-	c123331 [label=<<table title="sorcer.tools.shell.cmds.DiscoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DiscoCmd.html">
+	c171914 [label=<<table title="sorcer.tools.shell.cmds.DiscoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DiscoCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DiscoCmd </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> # MAX_MATCHES : int </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + DiscoCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 <tr><td align="left" balign="left"> + describeServiceRegistrar(myReg : ServiceRegistrar, withDetails : boolean) </td></tr>
 <tr><td align="left" balign="left"> + printCurrentLus() </td></tr>
+<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getSelectedRegistrar() : ServiceRegistrar </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DiscoCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.cmds.DiscoCmd extends sorcer.tools.shell.ShellCmd
-	c123181:p -> c123331:p [dir=back,arrowtail=empty];
+	c171701:p -> c171914:p [dir=back,arrowtail=empty];
 }
 

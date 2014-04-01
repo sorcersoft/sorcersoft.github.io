@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.ServiceBrowserUI
-	c293229 [label=<<table title="sorcer.ssb.tools.plugin.browser.ServiceBrowserUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBrowserUI.html">
+	c408091 [label=<<table title="sorcer.ssb.tools.plugin.browser.ServiceBrowserUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBrowserUI.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceBrowserUI </td></tr>
 		</table></td></tr>
@@ -49,13 +49,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceBrowserUI.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.ServiceBrowserUI extends java.lang.Thread
-	c293287:p -> c293229:p [dir=back,arrowtail=empty];
+	c408191:p -> c408091:p [dir=back,arrowtail=empty];
 	//sorcer.ssb.tools.plugin.browser.ServiceBrowserUI implements net.jini.core.event.RemoteEventListener
-	c293288:p -> c293229:p [dir=back,arrowtail=empty,style=dashed];
+	c408192:p -> c408091:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ssb.tools.plugin.browser.ServiceBrowserUI implements net.jini.security.proxytrust.ServerProxyTrust
-	c293289:p -> c293229:p [dir=back,arrowtail=empty,style=dashed];
+	c408193:p -> c408091:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.core.event.RemoteEventListener
-	c293288 [label=<<table title="net.jini.core.event.RemoteEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html">
+	c408192 [label=<<table title="net.jini.core.event.RemoteEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteEventListener </td></tr>
@@ -68,7 +68,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.lang.Thread
-	c293287 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">
+	c408191 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Thread </td></tr>
 		</table></td></tr>
@@ -132,7 +132,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.security.proxytrust.ServerProxyTrust
-	c293289 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
+	c408193 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServerProxyTrust </td></tr>

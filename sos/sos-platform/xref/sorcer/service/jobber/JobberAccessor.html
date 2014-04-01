@@ -50,11 +50,11 @@
 <a class="jxr_linenumber" name="40" href="#40">40</a>  <em class="jxr_javadoccomment">     * @return a SORCER Jobber provider</em>
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <em class="jxr_javadoccomment">     * @throws sorcer.util.AccessorException</em>
 <a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="43" href="#43">43</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../sorcer/core/provider/Jobber.html">Jobber</a> getJobber() <strong class="jxr_keyword">throws</strong> AccessorException {
+<a class="jxr_linenumber" name="43" href="#43">43</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Jobber getJobber() <strong class="jxr_keyword">throws</strong> AccessorException {
 <a class="jxr_linenumber" name="44" href="#44">44</a>          <strong class="jxr_keyword">return</strong> instance.doGetJobber();
 <a class="jxr_linenumber" name="45" href="#45">45</a>      }
 <a class="jxr_linenumber" name="46" href="#46">46</a>  
-<a class="jxr_linenumber" name="47" href="#47">47</a>      <strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/provider/Jobber.html">Jobber</a> doGetJobber() <strong class="jxr_keyword">throws</strong> AccessorException {
+<a class="jxr_linenumber" name="47" href="#47">47</a>      <strong class="jxr_keyword">public</strong> Jobber doGetJobber() <strong class="jxr_keyword">throws</strong> AccessorException {
 <a class="jxr_linenumber" name="48" href="#48">48</a>          <strong class="jxr_keyword">return</strong> doGetJobber(providerNameUtil.getName(Jobber.<strong class="jxr_keyword">class</strong>));
 <a class="jxr_linenumber" name="49" href="#49">49</a>      }
 <a class="jxr_linenumber" name="50" href="#50">50</a>  
@@ -65,14 +65,14 @@
 <a class="jxr_linenumber" name="55" href="#55">55</a>  <em class="jxr_javadoccomment">     *            the name of a Jobber service provider</em>
 <a class="jxr_linenumber" name="56" href="#56">56</a>  <em class="jxr_javadoccomment">     * @return a Jobber proxy</em>
 <a class="jxr_linenumber" name="57" href="#57">57</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="58" href="#58">58</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../sorcer/core/provider/Jobber.html">Jobber</a> getJobber(String name) {
+<a class="jxr_linenumber" name="58" href="#58">58</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Jobber getJobber(String name) {
 <a class="jxr_linenumber" name="59" href="#59">59</a>          <strong class="jxr_keyword">return</strong> instance.doGetJobber(name);
 <a class="jxr_linenumber" name="60" href="#60">60</a>      }
 <a class="jxr_linenumber" name="61" href="#61">61</a>  
-<a class="jxr_linenumber" name="62" href="#62">62</a>      <strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/provider/Jobber.html">Jobber</a> doGetJobber(String name) {
+<a class="jxr_linenumber" name="62" href="#62">62</a>      <strong class="jxr_keyword">public</strong> Jobber doGetJobber(String name) {
 <a class="jxr_linenumber" name="63" href="#63">63</a>          String jobberName = (name == <strong class="jxr_keyword">null</strong>) ? providerNameUtil.getName(Jobber.<strong class="jxr_keyword">class</strong>)
 <a class="jxr_linenumber" name="64" href="#64">64</a>                  : name;
-<a class="jxr_linenumber" name="65" href="#65">65</a>          <a href="../../../sorcer/core/provider/Jobber.html">Jobber</a> jobber = (Jobber) cache.get(Jobber.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="65" href="#65">65</a>          Jobber jobber = (Jobber) cache.get(Jobber.<strong class="jxr_keyword">class</strong>.getName());
 <a class="jxr_linenumber" name="66" href="#66">66</a>  
 <a class="jxr_linenumber" name="67" href="#67">67</a>          <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="68" href="#68">68</a>              <strong class="jxr_keyword">if</strong> (Accessor.isAlive((Provider) jobber)) {

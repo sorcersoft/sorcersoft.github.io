@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.monitor.MonitorEvent
-	c207077 [label=<<table title="sorcer.core.monitor.MonitorEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorEvent.html">
+	c290298 [label=<<table title="sorcer.core.monitor.MonitorEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorEvent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitorEvent </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitorEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.RemoteServiceEvent
-	c207101 [label=<<table title="sorcer.service.RemoteServiceEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/RemoteServiceEvent.html">
+	c290341 [label=<<table title="sorcer.service.RemoteServiceEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/RemoteServiceEvent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteServiceEvent </td></tr>
 		</table></td></tr>
@@ -41,11 +41,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getDate() : Date </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/RemoteServiceEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.ExecState
-	c207149 [label=<<table title="sorcer.service.ExecState" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/ExecState.html">
+	// sorcer.service.Exec
+	c290376 [label=<<table title="sorcer.service.Exec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Exec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ExecState </td></tr>
+<tr><td align="center" balign="center"> Exec </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + FAILED : int </td></tr>
@@ -55,11 +55,14 @@ digraph G {
 <tr><td align="left" balign="left"> + DONE : int </td></tr>
 <tr><td align="left" balign="left"> + STOPPED : int </td></tr>
 <tr><td align="left" balign="left"> + SUSPENDED : int </td></tr>
+<tr><td align="left" balign="left"> + RESUMED : int </td></tr>
+<tr><td align="left" balign="left"> + NEXT_STEP : int </td></tr>
 <tr><td align="left" balign="left"> + INSPACE_FOR_SLA : int </td></tr>
 <tr><td align="left" balign="left"> + RETURNED : int </td></tr>
 <tr><td align="left" balign="left"> + UPDATED : int </td></tr>
-<tr><td align="left" balign="left"> + ALL : int </td></tr>
 <tr><td align="left" balign="left"> + ASYNC : int </td></tr>
+<tr><td align="left" balign="left"> + NULL : int </td></tr>
+<tr><td align="left" balign="left"> + ASIS : int </td></tr>
 <tr><td align="left" balign="left"> + ERROR : int </td></tr>
 <tr><td align="left" balign="left"> + POISONED : int </td></tr>
 <tr><td align="left" balign="left"> + INVALID_CMD : int </td></tr>
@@ -69,17 +72,17 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../service/ExecState.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../service/Exec.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.monitor.MonitorEvent extends sorcer.service.RemoteServiceEvent
-	c207101:p -> c207077:p [dir=back,arrowtail=empty];
+	c290341:p -> c290298:p [dir=back,arrowtail=empty];
 	//sorcer.core.monitor.MonitorEvent implements java.io.Serializable
-	c207513:p -> c207077:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.monitor.MonitorEvent implements sorcer.service.ExecState
-	c207149:p -> c207077:p [dir=back,arrowtail=empty,style=dashed];
+	c290796:p -> c290298:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitorEvent implements sorcer.service.Exec
+	c290376:p -> c290298:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.RemoteServiceEvent implements java.io.Serializable
-	c207513:p -> c207101:p [dir=back,arrowtail=empty,style=dashed];
+	c290796:p -> c290341:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c207513 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c290796 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

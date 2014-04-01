@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.protocol.ProtocolHandlerRegistry
-	c251062 [label=<<table title="sorcer.protocol.ProtocolHandlerRegistry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProtocolHandlerRegistry.html">
+	c353682 [label=<<table title="sorcer.protocol.ProtocolHandlerRegistry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProtocolHandlerRegistry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProtocolHandlerRegistry </td></tr>
 		</table></td></tr>
@@ -19,16 +19,15 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ProtocolHandlerRegistry() </td></tr>
-<tr><td align="left" balign="left"> + install() </td></tr>
 <tr><td align="left" balign="left"> + createURLStreamHandler(protocol : String) : URLStreamHandler </td></tr>
-<tr><td align="left" balign="left"> + register(protocol : String, t : Class&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + register(protocol : String, handler : URLStreamHandler) </td></tr>
 <tr><td align="left" balign="left"> + get() : ProtocolHandlerRegistry </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProtocolHandlerRegistry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.protocol.ProtocolHandlerRegistry implements java.net.URLStreamHandlerFactory
-	c251560:p -> c251062:p [dir=back,arrowtail=empty,style=dashed];
+	c354270:p -> c353682:p [dir=back,arrowtail=empty,style=dashed];
 	// java.net.URLStreamHandlerFactory
-	c251560 [label=<<table title="java.net.URLStreamHandlerFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/net/URLStreamHandlerFactory.html">
+	c354270 [label=<<table title="java.net.URLStreamHandlerFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/net/URLStreamHandlerFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> URLStreamHandlerFactory </td></tr>

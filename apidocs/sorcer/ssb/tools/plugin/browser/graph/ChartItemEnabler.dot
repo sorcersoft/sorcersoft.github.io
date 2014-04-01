@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler
-	c82897 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ChartItemEnabler.html">
+	c120109 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ChartItemEnabler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ChartItemEnabler </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ChartItemEnabler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.tools.plugin.browser.graph.Chart
-	c82899 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.Chart" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Chart.html">
+	c120111 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.Chart" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Chart.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Chart </td></tr>
 		</table></td></tr>
@@ -46,6 +46,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Chart.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.graph.Chart implements sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler
-	c82897:p -> c82899:p [dir=back,arrowtail=empty,style=dashed];
+	c120109:p -> c120111:p [dir=back,arrowtail=empty,style=dashed];
 }
 

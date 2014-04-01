@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.SharedIndexedContext<T>
-	c174031 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
+	c242495 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedIndexedContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -51,7 +51,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/SharedIndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ArrayContext
-	c174035 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ArrayContext.html">
+	c242499 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ArrayContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayContext </td></tr>
 		</table></td></tr>
@@ -114,7 +114,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/ArrayContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ListContext<T>
-	c174040 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ListContext.html">
+	c242504 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ListContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ListContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -151,7 +151,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/ListContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.IndexedContext
-	c174067 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IndexedContext.html">
+	c242565 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IndexedContext </td></tr>
@@ -165,10 +165,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.SharedIndexedContext<T> implements sorcer.service.IndexedContext
-	c174067:p -> c174031:p [dir=back,arrowtail=empty,style=dashed];
+	c242565:p -> c242495:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ArrayContext implements sorcer.service.IndexedContext
-	c174067:p -> c174035:p [dir=back,arrowtail=empty,style=dashed];
+	c242565:p -> c242499:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ListContext<T> implements sorcer.service.IndexedContext
-	c174067:p -> c174040:p [dir=back,arrowtail=empty,style=dashed];
+	c242565:p -> c242504:p [dir=back,arrowtail=empty,style=dashed];
 }
 

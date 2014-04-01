@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.webster.Webster
-	c31090 [label=<<table title="sorcer.tools.webster.Webster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Webster.html">
+	c42074 [label=<<table title="sorcer.tools.webster.Webster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Webster.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Webster </td></tr>
 		</table></td></tr>
@@ -42,7 +42,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Webster.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.webster.InternalWebster
-	c31091 [label=<<table title="sorcer.tools.webster.InternalWebster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InternalWebster.html">
+	c42075 [label=<<table title="sorcer.tools.webster.InternalWebster" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InternalWebster.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InternalWebster </td></tr>
 		</table></td></tr>
@@ -53,8 +53,6 @@ digraph G {
 <tr><td align="left" balign="left"> + InternalWebster() </td></tr>
 <tr><td align="left" balign="left"> + startWebster(exportJars : String[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + startWebster(exportJars : String[], websterRoots : String[]) : Webster </td></tr>
-<tr><td align="left" balign="left"> + startRequestorWebsterFromProperties() : Webster </td></tr>
-<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./InternalWebster.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

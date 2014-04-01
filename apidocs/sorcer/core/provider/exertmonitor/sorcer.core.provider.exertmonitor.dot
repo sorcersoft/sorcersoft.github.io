@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.exertmonitor.ExertMonitor
-	c5327 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertMonitor.html">
+	c11053 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertMonitor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertMonitor </td></tr>
 		</table></td></tr>
@@ -28,7 +28,7 @@ digraph G {
 <tr><td align="left" balign="left"> + init(cookie : Uuid, duration : long, timeout : long) </td></tr>
 <tr><td align="left" balign="left"> + init(cookie : Uuid, mntrbl : Monitorable) : Lease </td></tr>
 <tr><td align="left" balign="left"> + getState(cookie : Uuid) : int </td></tr>
-<tr><td align="left" balign="left"> + getMonitorableExertionInfo(category : ExecState.Category, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMonitorableExertionInfo(state : Exec.State, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(id : Uuid, principal : Principal) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(cookie : UEID, principal : Principal) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + update(cookie : Uuid, ctx : Context&lt;&gt;, aspect : Object) </td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertMonitor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.exertmonitor.MonitorSession
-	c5328 [label=<<table title="sorcer.core.provider.exertmonitor.MonitorSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSession.html">
+	c11054 [label=<<table title="sorcer.core.provider.exertmonitor.MonitorSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSession.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitorSession </td></tr>
 		</table></td></tr>
@@ -82,7 +82,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitorSession.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.exertmonitor.IMonitorSession
-	c5329 [label=<<table title="sorcer.core.provider.exertmonitor.IMonitorSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IMonitorSession.html">
+	c11055 [label=<<table title="sorcer.core.provider.exertmonitor.IMonitorSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IMonitorSession.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IMonitorSession </td></tr>
@@ -103,6 +103,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IMonitorSession.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.exertmonitor.MonitorSession implements sorcer.core.provider.exertmonitor.IMonitorSession
-	c5329:p -> c5328:p [dir=back,arrowtail=empty,style=dashed];
+	c11055:p -> c11054:p [dir=back,arrowtail=empty,style=dashed];
 }
 

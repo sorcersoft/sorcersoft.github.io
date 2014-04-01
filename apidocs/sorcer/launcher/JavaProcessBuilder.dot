@@ -10,54 +10,44 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.launcher.JavaProcessBuilder
-	c182573 [label=<<table title="sorcer.launcher.JavaProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JavaProcessBuilder.html">
+	c256465 [label=<<table title="sorcer.launcher.JavaProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JavaProcessBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JavaProcessBuilder </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # log : Logger </td></tr>
-<tr><td align="left" balign="left"> # properties : Map&lt;String, String&gt; </td></tr>
-<tr><td align="left" balign="left"> # environment : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # properties : Properties </td></tr>
+<tr><td align="left" balign="left"> # environment : Properties </td></tr>
 <tr><td align="left" balign="left"> # classPathList : Collection&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> # mainClass : String </td></tr>
 <tr><td align="left" balign="left"> # parameters : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> # workingDir : File </td></tr>
 <tr><td align="left" balign="left"> # debugger : boolean </td></tr>
-<tr><td align="left" balign="left"> # output : File </td></tr>
 <tr><td align="left" balign="left"> # command : String </td></tr>
 <tr><td align="left" balign="left"> # debugPort : int </td></tr>
+<tr><td align="left" balign="left"> # javaAgent : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> # out : OutputStream </td></tr>
+<tr><td align="left" balign="left"> # err : OutputStream </td></tr>
+<tr><td align="left" balign="left"> # ioThreads : ThreadGroup </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + JavaProcessBuilder() </td></tr>
-<tr><td align="left" balign="left"> + setProperties(environment : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + JavaProcessBuilder(name : String) </td></tr>
+<tr><td align="left" balign="left"> + startProcess() : Process2 </td></tr>
+<tr><td align="left" balign="left"> + setOut(out : OutputStream) </td></tr>
+<tr><td align="left" balign="left"> + setErr(err : OutputStream) </td></tr>
+<tr><td align="left" balign="left"> + setProperties(properties : Properties) </td></tr>
 <tr><td align="left" balign="left"> + setClassPath(classPath : Collection&lt;String&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setMainClass(mainClass : String) </td></tr>
 <tr><td align="left" balign="left"> + setParameters(parameters : List&lt;String&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setWorkingDir(workingDir : File) </td></tr>
 <tr><td align="left" balign="left"> + setDebugger(debugger : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getDebugPort() : int </td></tr>
 <tr><td align="left" balign="left"> + setDebugPort(debugPort : int) </td></tr>
-<tr><td align="left" balign="left"> + setOutput(output : File) </td></tr>
-<tr><td align="left" balign="left"> + getEnvironment() : Map&lt;String, String&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEnvironment(environment : Map&lt;String, String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + startProcess() : Process2 </td></tr>
-<tr><td align="left" balign="left"> # invokeIgnoreErrors(target : Object, methodName : String, argTypes : Class&lt;&gt;[], args : Object[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + getEnvironment() : Properties </td></tr>
+<tr><td align="left" balign="left"> + setEnvironment(environment : Properties) </td></tr>
+<tr><td align="left" balign="left"> + getJavaAgent() : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getParameters() : List&lt;String&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./JavaProcessBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.SorcerProcessBuilder
-	c182574 [label=<<table title="sorcer.launcher.SorcerProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerProcessBuilder.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerProcessBuilder </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # sorcerHome : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerProcessBuilder(env : SorcerEnv) </td></tr>
-<tr><td align="left" balign="left"> + startProcess() : Process2 </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerProcessBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.launcher.SorcerProcessBuilder extends sorcer.launcher.JavaProcessBuilder
-	c182573:p -> c182574:p [dir=back,arrowtail=empty];
 }
 

@@ -42,7 +42,7 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>      <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment">     * Construct the ExertionSorter</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/dispatch/ExertionSorter.html">ExertionSorter</a>(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topLevelJob) <strong class="jxr_keyword">throws</strong> SortingException {
+<a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/dispatch/ExertionSorter.html">ExertionSorter</a>(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topLevelJob) <strong class="jxr_keyword">throws</strong> ContextException, SortingException {
 <a class="jxr_linenumber" name="36" href="#36">36</a>  
 <a class="jxr_linenumber" name="37" href="#37">37</a>          dag = <strong class="jxr_keyword">new</strong> DAG();
 <a class="jxr_linenumber" name="38" href="#38">38</a>          projectMap = <strong class="jxr_keyword">new</strong> HashMap();
@@ -172,7 +172,7 @@
 <a class="jxr_linenumber" name="162" href="#162">162</a> <em class="jxr_javadoccomment">     * @param topXrt</em>
 <a class="jxr_linenumber" name="163" href="#163">163</a> <em class="jxr_javadoccomment">     * @throws SortingException</em>
 <a class="jxr_linenumber" name="164" href="#164">164</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="165" href="#165">165</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addVertex(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topXrt) <strong class="jxr_keyword">throws</strong> SortingException {
+<a class="jxr_linenumber" name="165" href="#165">165</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> addVertex(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topXrt) <strong class="jxr_keyword">throws</strong> ContextException, SortingException {
 <a class="jxr_linenumber" name="166" href="#166">166</a> 
 <a class="jxr_linenumber" name="167" href="#167">167</a>         String id = topXrt.getId().toString();
 <a class="jxr_linenumber" name="168" href="#168">168</a>         dag.addVertex(id);
@@ -208,7 +208,7 @@
 <a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_javadoccomment">     * @throws CycleDetectedException</em>
 <a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">     * @throws SortingException</em>
 <a class="jxr_linenumber" name="200" href="#200">200</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="201" href="#201">201</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> getMapping(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topXrt) <strong class="jxr_keyword">throws</strong> CycleDetectedException, SortingException {
+<a class="jxr_linenumber" name="201" href="#201">201</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> getMapping(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topXrt) <strong class="jxr_keyword">throws</strong> CycleDetectedException, ContextException, SortingException {
 <a class="jxr_linenumber" name="202" href="#202">202</a>         <strong class="jxr_keyword">for</strong> (Iterator i = topXrt.getExertions().iterator(); i.hasNext(); ) {
 <a class="jxr_linenumber" name="203" href="#203">203</a>             <a href="../../../sorcer/service/Exertion.html">Exertion</a> project = (Exertion) i.next();
 <a class="jxr_linenumber" name="204" href="#204">204</a>             String id = project.getId().toString();
@@ -241,7 +241,7 @@
 <a class="jxr_linenumber" name="231" href="#231">231</a> <em class="jxr_javadoccomment">     * @throws CycleDetectedException</em>
 <a class="jxr_linenumber" name="232" href="#232">232</a> <em class="jxr_javadoccomment">     * @throws SortingException</em>
 <a class="jxr_linenumber" name="233" href="#233">233</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="234" href="#234">234</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> checkParentCycle(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topXrt) <strong class="jxr_keyword">throws</strong> CycleDetectedException, SortingException {
+<a class="jxr_linenumber" name="234" href="#234">234</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> checkParentCycle(<a href="../../../sorcer/service/Exertion.html">Exertion</a> topXrt) <strong class="jxr_keyword">throws</strong> CycleDetectedException, ContextException, SortingException {
 <a class="jxr_linenumber" name="235" href="#235">235</a>         <strong class="jxr_keyword">if</strong> (topXrt.getDataContext().getParentID() != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="236" href="#236">236</a>             String parentId = topXrt.getDataContext().getParentID().toString();
 <a class="jxr_linenumber" name="237" href="#237">237</a>             <strong class="jxr_keyword">if</strong> (dag.getVertex(parentId) != <strong class="jxr_keyword">null</strong>) {

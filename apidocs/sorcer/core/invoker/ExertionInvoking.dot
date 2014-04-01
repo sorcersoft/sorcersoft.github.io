@@ -9,15 +9,35 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.invoker.ExertInvoker
+	c206361 [label=<<table title="sorcer.core.invoker.ExertInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ExertInvoker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ExertInvoker(name : String, exertion : Exertion, path : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ExertInvoker(exertion : Exertion, path : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ExertInvoker(exertion : Exertion, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getEvaluatedExertion() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Entry&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + getUpdatedValue() : Object </td></tr>
+<tr><td align="left" balign="left"> + setUpdatedValue(updatedValue : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExertInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.ExertionInvoking<T>
-	c150293 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionInvoking.html">
+	c206374 [label=<<table title="sorcer.core.invoker.ExertionInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ExertionInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Invocation<T>
-	c150346 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
+	c206435 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
@@ -30,7 +50,9 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.invoker.ExertInvoker implements sorcer.core.invoker.ExertionInvoking<T>
+	c206374:p -> c206361:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.invoker.ExertionInvoking<T> implements sorcer.service.Invocation<T>
-	c150346:p -> c150293:p [dir=back,arrowtail=empty,style=dashed];
+	c206435:p -> c206374:p [dir=back,arrowtail=empty,style=dashed];
 }
 

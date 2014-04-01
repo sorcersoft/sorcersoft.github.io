@@ -9,39 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.provider.boot.ActivateWrapper
-	c41008 [label=<<table title="sorcer.provider.boot.ActivateWrapper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivateWrapper.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ActivateWrapper </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ActivateWrapper(id : ActivationID, data : MarshalledObject&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + register(gid : ActivationGroupID, desc : ActivateWrapper.ActivateDesc, restart : boolean, sys : ActivationSystem) : ActivationID </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ActivateWrapper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.ActivateWrapper.ActivateDesc
-	c41009 [label=<<table title="sorcer.provider.boot.ActivateWrapper.ActivateDesc" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActivateWrapper.ActivateDesc.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ActivateDesc </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + className : String </td></tr>
-<tr><td align="left" balign="left"> + importLocation : URL[] </td></tr>
-<tr><td align="left" balign="left"> + exportLocation : URL[] </td></tr>
-<tr><td align="left" balign="left"> + commonJARs : URL[] </td></tr>
-<tr><td align="left" balign="left"> + policy : String </td></tr>
-<tr><td align="left" balign="left"> + data : MarshalledObject&lt;&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ActivateWrapper.ActivateDesc(className : String, importLocation : URL[], exportLocation : URL[], commonJARs : URL[], policy : String, data : MarshalledObject&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ActivateWrapper.ActivateDesc.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.InstrumentationHook
-	c41010 [label=<<table title="sorcer.provider.boot.InstrumentationHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InstrumentationHook.html">
+	c44821 [label=<<table title="sorcer.provider.boot.InstrumentationHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InstrumentationHook.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InstrumentationHook </td></tr>
 		</table></td></tr>
@@ -55,42 +24,57 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./InstrumentationHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.AbstractServiceDescriptor
-	c41011 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
+	c44822 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractServiceDescriptor </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # actTypes : Class&lt;&gt;[] </td></tr>
-<tr><td align="left" balign="left"> # platformLoaded : boolean </td></tr>
-<tr><td align="left" balign="left"> # allDescriptors : AtomicInteger </td></tr>
-<tr><td align="left" balign="left"> # startedServices : AtomicInteger </td></tr>
-<tr><td align="left" balign="left"> # erredServices : AtomicInteger </td></tr>
-<tr><td align="left" balign="left"> # COMPONENT : String </td></tr>
+<tr><td align="left" balign="left"> # globalPolicy : AggregatePolicyProvider </td></tr>
+<tr><td align="left" balign="left"> # initialGlobalPolicy : Policy </td></tr>
+<tr><td align="left" balign="left"> # parentInjector : Injector </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
+<tr><td align="left" balign="left"> # defaultLifeCycle : LifeCycle </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractServiceDescriptor() </td></tr>
-<tr><td align="left" balign="left"> # loadPlatform(config : Configuration, defaultDir : String, commonCL : CommonClassLoader) </td></tr>
-<tr><td align="left" balign="left"> + create(config : Configuration) : AbstractServiceDescriptor.Created </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # doCreate(config : Configuration) : AbstractServiceDescriptor.Created </font></td></tr>
-<tr><td align="left" balign="left"> # getCommonClassLoader(config : Configuration) : CommonClassLoader </td></tr>
+<tr><td align="left" balign="left"> # AbstractServiceDescriptor() </td></tr>
+<tr><td align="left" balign="left"> # AbstractServiceDescriptor(codebase : Set&lt;URL&gt;, casspath : Set&lt;URI&gt;, className : String, configArgs : List&lt;String&gt;, policyFile : String) </td></tr>
+<tr><td align="left" balign="left"> + AbstractServiceDescriptor(serverConfigArgs : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + create(config : Configuration) : AbstractServiceDescriptor.Service </td></tr>
+<tr><td align="left" balign="left"> # getInjectorModule() : Module </td></tr>
+<tr><td align="left" balign="left"> # setImplClassName(className : String) </td></tr>
+<tr><td align="left" balign="left"> + getImplClassName() : String </td></tr>
+<tr><td align="left" balign="left"> # getServiceConfigArgs() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> # setServiceConfigArgs(configFile : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> # getPolicyFile() : String </td></tr>
+<tr><td align="left" balign="left"> # setPolicyFile(policyFile : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodebase() : Set&lt;URL&gt; </td></tr>
+<tr><td align="left" balign="left"> # setCodebase(codebase : Set&lt;URL&gt;) </td></tr>
+<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+<tr><td align="left" balign="left"> # setClasspath(classpath : Set&lt;URI&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addLifeCycle(lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + getLifeCycle() : LifeCycle </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.AbstractServiceDescriptor.Created
-	c41012 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor.Created" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.Created.html">
+	// sorcer.provider.boot.AbstractServiceDescriptor.Service
+	c44823 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Created </td></tr>
+<tr><td align="center" balign="center"> Service </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + proxy : Object </td></tr>
 <tr><td align="left" balign="left"> + impl : Object </td></tr>
+<tr><td align="left" balign="left"> + descriptor : ServiceDescriptor </td></tr>
+<tr><td align="left" balign="left"> + exception : Exception </td></tr>
+<tr><td align="left" balign="left"> + destroyer : ServiceDestroyer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractServiceDescriptor.Created(impl : Object, proxy : Object) </td></tr>
+<tr><td align="left" balign="left"> + AbstractServiceDescriptor.Service(impl : Object, proxy : Object, descriptor : ServiceDescriptor) </td></tr>
+<tr><td align="left" balign="left"> + AbstractServiceDescriptor.Service(impl : Object, proxy : Object, descriptor : ServiceDescriptor, exception : Exception) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./AbstractServiceDescriptor.Created.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./AbstractServiceDescriptor.Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.Booter
-	c41013 [label=<<table title="sorcer.provider.boot.Booter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Booter.html">
+	c44824 [label=<<table title="sorcer.provider.boot.Booter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Booter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Booter </td></tr>
 		</table></td></tr>
@@ -98,8 +82,6 @@ digraph G {
 <tr><td align="left" balign="left"> + PROVIDER_PROPERTIES_FILENAME : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + resolveCodebase2(coords : String) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveCodebase2(artifact : ArtifactCoordinates) : String </td></tr>
 <tr><td align="left" balign="left"> + resolveClasspath(coords : String) : String </td></tr>
 <tr><td align="left" balign="left"> + resolveClasspath(coords : String[]) : String </td></tr>
 <tr><td align="left" balign="left"> + resolveCodebase(coords : String[]) : String </td></tr>
@@ -111,6 +93,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getCodebase(jars : String[], address : String, port : String) : String </td></tr>
 <tr><td align="left" balign="left"> # getCodebaseRoot(host : String, port : int) : URL </td></tr>
 <tr><td align="left" balign="left"> # getCodebaseRoot(schema : String, host : String, port : int) : URL </td></tr>
+<tr><td align="left" balign="left"> + artifactURL(coords : String) : URL </td></tr>
+<tr><td align="left" balign="left"> + artifactURL(coords : ArtifactCoordinates) : URL </td></tr>
 <tr><td align="left" balign="left"> + getHostAddress() : String </td></tr>
 <tr><td align="left" balign="left"> + getHostAddress(name : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getHostAddressFromProperty(property : String) : String </td></tr>
@@ -129,27 +113,12 @@ digraph G {
 <tr><td align="left" balign="left"> + getWebsterStartPort() : int </td></tr>
 <tr><td align="left" balign="left"> + getWebsterEndPort() : int </td></tr>
 <tr><td align="left" balign="left"> + getAnonymousPort() : int </td></tr>
+<tr><td align="left" balign="left"> + getWebsterRoots() : String[] </td></tr>
+<tr><td align="left" balign="left"> + getWebsterRoots(additional : String[]) : String[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Booter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.RegistryUtil
-	c41014 [label=<<table title="sorcer.provider.boot.RegistryUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RegistryUtil.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RegistryUtil </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DEFAULT_PORT : int </td></tr>
-<tr><td align="left" balign="left"> + DEFAULT_RETRY_COUNT : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RegistryUtil() </td></tr>
-<tr><td align="left" balign="left"> + checkRegistry(config : Configuration) </td></tr>
-<tr><td align="left" balign="left"> + getRegistry(config : Configuration) : int </td></tr>
-<tr><td align="left" balign="left"> + getRegistryPort(config : Configuration) : int </td></tr>
-<tr><td align="left" balign="left"> + getRegistryRetries(config : Configuration) : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RegistryUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.SorcerServiceDescriptor
-	c41015 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
+	c44825 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -160,55 +129,12 @@ digraph G {
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(codebase : String, policy : String, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
-<tr><td align="left" balign="left"> + getPolicy() : String </td></tr>
-<tr><td align="left" balign="left"> + getLifeCycle() : LifeCycle </td></tr>
-<tr><td align="left" balign="left"> + getClasspath() : String </td></tr>
-<tr><td align="left" balign="left"> + getImplClassName() : String </td></tr>
-<tr><td align="left" balign="left"> + getServerConfigArgs() : String[] </td></tr>
-<tr><td align="left" balign="left"> # doCreate(config : Configuration) : AbstractServiceDescriptor.Created </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> # getCodebase(codebase : String, address : String) : Set&lt;URL&gt; </td></tr>
+<tr><td align="left" balign="left"> + getClasspath() : Set&lt;URI&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.CommonClassLoader
-	c41016 [label=<<table title="sorcer.provider.boot.CommonClassLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CommonClassLoader.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CommonClassLoader </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInstance() : CommonClassLoader </td></tr>
-<tr><td align="left" balign="left"> + getURLs() : URL[] </td></tr>
-<tr><td align="left" balign="left"> + testComponentExistence(name : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + addCommonJARs(jars : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + testResourceExistence(name : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + addComponent(name : String, urls : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + load(name : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CommonClassLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.ClassAnnotator
-	c41017 [label=<<table title="sorcer.provider.boot.ClassAnnotator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClassAnnotator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ClassAnnotator </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ClassAnnotator(codebase : URL[], props : Properties) </td></tr>
-<tr><td align="left" balign="left"> + getURLs() : URL[] </td></tr>
-<tr><td align="left" balign="left"> + setAnnotationURLs(urls : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + getClassAnnotation() : String </td></tr>
-<tr><td align="left" balign="left"> # getProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + urlsToPath(urls : URL[]) : String </td></tr>
-<tr><td align="left" balign="left"> + urisToPath(uris : URI[]) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ClassAnnotator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.SorcerDescriptorUtil
-	c41018 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDescriptorUtil.html">
+	c44826 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDescriptorUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerDescriptorUtil </td></tr>
 		</table></td></tr>
@@ -271,7 +197,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerDescriptorUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.MulticastStatus
-	c41019 [label=<<table title="sorcer.provider.boot.MulticastStatus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MulticastStatus.html">
+	c44827 [label=<<table title="sorcer.provider.boot.MulticastStatus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MulticastStatus.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MulticastStatus </td></tr>
 		</table></td></tr>
@@ -284,29 +210,7 @@ digraph G {
 <tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MulticastStatus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.ServiceClassLoader
-	c41020 [label=<<table title="sorcer.provider.boot.ServiceClassLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceClassLoader.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceClassLoader </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceClassLoader(searchPath : URI[], annotator : ClassAnnotator, parent : ClassLoader) </td></tr>
-<tr><td align="left" balign="left"> + ServiceClassLoader(searchPath : URI[], annotator : ClassAnnotator, parent : ClassLoader, metaData : Properties) </td></tr>
-<tr><td align="left" balign="left"> + getClassAnnotator() : ClassAnnotator </td></tr>
-<tr><td align="left" balign="left"> + getMetaData() : Properties </td></tr>
-<tr><td align="left" balign="left"> + addMetaData(metaData : Properties) </td></tr>
-<tr><td align="left" balign="left"> + getURLs() : URL[] </td></tr>
-<tr><td align="left" balign="left"> + getSearchPath() : URL[] </td></tr>
-<tr><td align="left" balign="left"> + addURLs(urls : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + getClassAnnotation() : String </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + getURIs(urls : URL[]) : URI[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceClassLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.provider.boot.SorcerServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c41011:p -> c41015:p [dir=back,arrowtail=empty];
+	c44822:p -> c44825:p [dir=back,arrowtail=empty];
 }
 

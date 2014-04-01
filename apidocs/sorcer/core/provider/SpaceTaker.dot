@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.SpaceTaker
-	c338026 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceTaker.html">
+	c470439 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceTaker </td></tr>
 		</table></td></tr>
@@ -43,10 +43,11 @@ digraph G {
 <tr><td align="left" balign="left"> # isAbandoned(exertion : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> # initDataMember(ee : ExertionEnvelop, txn : Transaction) </td></tr>
 <tr><td align="left" balign="left"> + notify(e : LeaseRenewalEvent) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.SpaceIsReadyTaker
-	c338028 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
+	c470441 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
 		</table></td></tr>
@@ -60,13 +61,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.SpaceTaker implements java.lang.Runnable
-	c338505:p -> c338026:p [dir=back,arrowtail=empty,style=dashed];
+	c470997:p -> c470439:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.SpaceTaker implements net.jini.lease.LeaseListener
-	c338506:p -> c338026:p [dir=back,arrowtail=empty,style=dashed];
+	c470998:p -> c470439:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.SpaceIsReadyTaker extends sorcer.core.provider.SpaceTaker
-	c338026:p -> c338028:p [dir=back,arrowtail=empty];
+	c470439:p -> c470441:p [dir=back,arrowtail=empty];
 	// java.lang.Runnable
-	c338505 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+	c470997 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Runnable </td></tr>
@@ -79,7 +80,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.lease.LeaseListener
-	c338506 [label=<<table title="net.jini.lease.LeaseListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lease/LeaseListener.html">
+	c470998 [label=<<table title="net.jini.lease.LeaseListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lease/LeaseListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LeaseListener </td></tr>

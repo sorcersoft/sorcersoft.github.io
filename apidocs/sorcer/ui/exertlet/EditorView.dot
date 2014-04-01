@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ui.exertlet.EditorView
-	c127995 [label=<<table title="sorcer.ui.exertlet.EditorView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EditorView.html">
+	c177464 [label=<<table title="sorcer.ui.exertlet.EditorView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EditorView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EditorView </td></tr>
 		</table></td></tr>
@@ -37,11 +37,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EditorView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ui.exertlet.EditorView extends javax.swing.JPanel
-	c128120:p -> c127995:p [dir=back,arrowtail=empty];
+	c177504:p -> c177464:p [dir=back,arrowtail=empty];
 	//sorcer.ui.exertlet.EditorView implements javax.swing.event.HyperlinkListener
-	c128121:p -> c127995:p [dir=back,arrowtail=empty,style=dashed];
+	c177505:p -> c177464:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.event.HyperlinkListener
-	c128121 [label=<<table title="javax.swing.event.HyperlinkListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/event/HyperlinkListener.html">
+	c177505 [label=<<table title="javax.swing.event.HyperlinkListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/event/HyperlinkListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HyperlinkListener </td></tr>
@@ -54,7 +54,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/event/HyperlinkListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// javax.swing.JPanel
-	c128120 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
+	c177504 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JPanel </td></tr>
 		</table></td></tr>

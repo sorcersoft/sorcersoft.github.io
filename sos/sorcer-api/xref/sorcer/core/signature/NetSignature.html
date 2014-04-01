@@ -337,86 +337,85 @@
 <a class="jxr_linenumber" name="327" href="#327">327</a> <em class="jxr_comment">		// If customized method provided by Mobile Agent</em>
 <a class="jxr_linenumber" name="328" href="#328">328</a> <em class="jxr_comment">		Method m = getSubstituteMethod(new Class[] { Exertion.class });</em>
 <a class="jxr_linenumber" name="329" href="#329">329</a> <em class="jxr_comment">		try {</em>
-<a class="jxr_linenumber" name="330" href="#330">330</a> <em class="jxr_comment">			if (m != null) {</em>
-<a class="jxr_linenumber" name="331" href="#331">331</a> <em class="jxr_comment">                return (Exertion) m.invoke(this, ex);</em>
-<a class="jxr_linenumber" name="332" href="#332">332</a> <em class="jxr_comment">            }</em>
-<a class="jxr_linenumber" name="333" href="#333">333</a> 
-<a class="jxr_linenumber" name="334" href="#334">334</a> <em class="jxr_comment">			if (((ServiceProvider) provider).isValidMethod(selector)) {</em>
-<a class="jxr_linenumber" name="335" href="#335">335</a> <em class="jxr_comment">				return (Exertion) ((ServiceProvider) provider).getDelegate()</em>
-<a class="jxr_linenumber" name="336" href="#336">336</a> <em class="jxr_comment">						.invokeMethod(selector, ex);</em>
-<a class="jxr_linenumber" name="337" href="#337">337</a> <em class="jxr_comment">			} else {</em>
-<a class="jxr_linenumber" name="338" href="#338">338</a> <em class="jxr_comment">				ExertionException eme = new ExertionException(</em>
-<a class="jxr_linenumber" name="339" href="#339">339</a> <em class="jxr_comment">						"Not supported method: " + serviceType + "#" + selector</em>
-<a class="jxr_linenumber" name="340" href="#340">340</a> <em class="jxr_comment">								+ " by: "</em>
-<a class="jxr_linenumber" name="341" href="#341">341</a> <em class="jxr_comment">								+ ((Provider) provider).getProviderName());</em>
-<a class="jxr_linenumber" name="342" href="#342">342</a> <em class="jxr_comment">				((Provider) provider).notifyException(ex, "unsupported method",</em>
-<a class="jxr_linenumber" name="343" href="#343">343</a> <em class="jxr_comment">						eme);</em>
-<a class="jxr_linenumber" name="344" href="#344">344</a> <em class="jxr_comment">				throw eme;</em>
-<a class="jxr_linenumber" name="345" href="#345">345</a> <em class="jxr_comment">			}</em>
-<a class="jxr_linenumber" name="346" href="#346">346</a> <em class="jxr_comment">		} catch (Exception e) {</em>
-<a class="jxr_linenumber" name="347" href="#347">347</a> <em class="jxr_comment">			throw new ExertionException(e);</em>
-<a class="jxr_linenumber" name="348" href="#348">348</a> <em class="jxr_comment">		}</em>
-<a class="jxr_linenumber" name="349" href="#349">349</a> <em class="jxr_comment">	}</em>
-<a class="jxr_linenumber" name="350" href="#350">350</a> 
-<a class="jxr_linenumber" name="351" href="#351">351</a> <em class="jxr_comment">	public Context invokeMethod(Context context) throws RemoteException,</em>
-<a class="jxr_linenumber" name="352" href="#352">352</a> <em class="jxr_comment">			ExertionException {</em>
-<a class="jxr_linenumber" name="353" href="#353">353</a> <em class="jxr_comment">		// If customized method provided by Mobile Agent</em>
-<a class="jxr_linenumber" name="354" href="#354">354</a> <em class="jxr_comment">		Method m = getSubstituteMethod(new Class[] { Context.class });</em>
-<a class="jxr_linenumber" name="355" href="#355">355</a> <em class="jxr_comment">		try {</em>
-<a class="jxr_linenumber" name="356" href="#356">356</a> <em class="jxr_comment">			if (m != null)</em>
-<a class="jxr_linenumber" name="357" href="#357">357</a> <em class="jxr_comment">				return ((Context) m.invoke(this, new Object[] { context }));</em>
-<a class="jxr_linenumber" name="358" href="#358">358</a> 
-<a class="jxr_linenumber" name="359" href="#359">359</a> <em class="jxr_comment">			if (((ServiceProvider) provider).isValidMethod(selector)) {</em>
-<a class="jxr_linenumber" name="360" href="#360">360</a> <em class="jxr_comment">				Context resultContext = ((ServiceProvider) provider)</em>
-<a class="jxr_linenumber" name="361" href="#361">361</a> <em class="jxr_comment">						.getDelegate().invokeMethod(selector, context);</em>
-<a class="jxr_linenumber" name="362" href="#362">362</a> <em class="jxr_comment">				return resultContext;</em>
-<a class="jxr_linenumber" name="363" href="#363">363</a> <em class="jxr_comment">			} else {</em>
-<a class="jxr_linenumber" name="364" href="#364">364</a> <em class="jxr_comment">				ExertionException eme = new ExertionException(</em>
-<a class="jxr_linenumber" name="365" href="#365">365</a> <em class="jxr_comment">						"Not supported method: " + serviceType + "#" + selector</em>
-<a class="jxr_linenumber" name="366" href="#366">366</a> <em class="jxr_comment">								+ " by: "</em>
-<a class="jxr_linenumber" name="367" href="#367">367</a> <em class="jxr_comment">								+ provider.getProviderName());</em>
-<a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_comment">				provider.notifyException(context.getExertion(),</em>
-<a class="jxr_linenumber" name="369" href="#369">369</a> <em class="jxr_comment">						"unsupported method", eme);</em>
-<a class="jxr_linenumber" name="370" href="#370">370</a> <em class="jxr_comment">				throw eme;</em>
-<a class="jxr_linenumber" name="371" href="#371">371</a> <em class="jxr_comment">			}</em>
-<a class="jxr_linenumber" name="372" href="#372">372</a> <em class="jxr_comment">		} catch (Exception e) {</em>
-<a class="jxr_linenumber" name="373" href="#373">373</a> <em class="jxr_comment">			throw new ExertionException(e);</em>
-<a class="jxr_linenumber" name="374" href="#374">374</a> <em class="jxr_comment">		}</em>
-<a class="jxr_linenumber" name="375" href="#375">375</a> <em class="jxr_comment">	}</em>
-<a class="jxr_linenumber" name="376" href="#376">376</a> <em class="jxr_comment">*/</em>
-<a class="jxr_linenumber" name="377" href="#377">377</a> 
-<a class="jxr_linenumber" name="378" href="#378">378</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isSelectable() {
-<a class="jxr_linenumber" name="379" href="#379">379</a> 		<strong class="jxr_keyword">if</strong> (selector == <strong class="jxr_keyword">null</strong> &amp;&amp; serviceType == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="380" href="#380">380</a> 			<strong class="jxr_keyword">return</strong> false;
-<a class="jxr_linenumber" name="381" href="#381">381</a> 		}
-<a class="jxr_linenumber" name="382" href="#382">382</a> 		Method[] methods = serviceType.getMethods();
-<a class="jxr_linenumber" name="383" href="#383">383</a> 		<strong class="jxr_keyword">for</strong> (Method m : methods) {
-<a class="jxr_linenumber" name="384" href="#384">384</a> 			<strong class="jxr_keyword">if</strong> (m.getName().equals(selector)) {
-<a class="jxr_linenumber" name="385" href="#385">385</a> 				<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="386" href="#386">386</a> 			}
-<a class="jxr_linenumber" name="387" href="#387">387</a> 		}
-<a class="jxr_linenumber" name="388" href="#388">388</a> 		<strong class="jxr_keyword">return</strong> false;
-<a class="jxr_linenumber" name="389" href="#389">389</a> 	}
-<a class="jxr_linenumber" name="390" href="#390">390</a> 
-<a class="jxr_linenumber" name="391" href="#391">391</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isUnicast() {
-<a class="jxr_linenumber" name="392" href="#392">392</a> 		<strong class="jxr_keyword">return</strong> isUnicast;
-<a class="jxr_linenumber" name="393" href="#393">393</a> 	}
-<a class="jxr_linenumber" name="394" href="#394">394</a> 
-<a class="jxr_linenumber" name="395" href="#395">395</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUnicast(<strong class="jxr_keyword">boolean</strong> isUnicast) {
-<a class="jxr_linenumber" name="396" href="#396">396</a> 		<strong class="jxr_keyword">this</strong>.isUnicast = isUnicast;
-<a class="jxr_linenumber" name="397" href="#397">397</a> 	}
-<a class="jxr_linenumber" name="398" href="#398">398</a> 
-<a class="jxr_linenumber" name="399" href="#399">399</a>     <strong class="jxr_keyword">public</strong> String getVersion() {
-<a class="jxr_linenumber" name="400" href="#400">400</a>         <strong class="jxr_keyword">return</strong> version;
-<a class="jxr_linenumber" name="401" href="#401">401</a> 	}
-<a class="jxr_linenumber" name="402" href="#402">402</a> 
-<a class="jxr_linenumber" name="403" href="#403">403</a> 	<strong class="jxr_keyword">public</strong> String toString() {
-<a class="jxr_linenumber" name="404" href="#404">404</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.getClass() + <span class="jxr_string">":"</span> + providerName + <span class="jxr_string">";"</span> + execType + <span class="jxr_string">";"</span> + isActive + <span class="jxr_string">";"</span>
-<a class="jxr_linenumber" name="405" href="#405">405</a> 				+ serviceType + <span class="jxr_string">";"</span> + selector 
-<a class="jxr_linenumber" name="406" href="#406">406</a> 					+ (prefix !=<strong class="jxr_keyword">null</strong> ? <span class="jxr_string">"#"</span> + prefix : <span class="jxr_string">""</span>) 
-<a class="jxr_linenumber" name="407" href="#407">407</a> 					+ (returnPath != <strong class="jxr_keyword">null</strong> ? <span class="jxr_string">";"</span>  + returnPath : <span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="408" href="#408">408</a> 	}
-<a class="jxr_linenumber" name="409" href="#409">409</a> }
+<a class="jxr_linenumber" name="330" href="#330">330</a> <em class="jxr_comment">			if (m != null)</em>
+<a class="jxr_linenumber" name="331" href="#331">331</a> <em class="jxr_comment">				return (Exertion) m.invoke(this, new Object[] { ex });</em>
+<a class="jxr_linenumber" name="332" href="#332">332</a> 
+<a class="jxr_linenumber" name="333" href="#333">333</a> <em class="jxr_comment">			if (((ServiceProvider) provider).isValidMethod(selector)) {</em>
+<a class="jxr_linenumber" name="334" href="#334">334</a> <em class="jxr_comment">				return (Exertion) ((ServiceProvider) provider).getDelegate()</em>
+<a class="jxr_linenumber" name="335" href="#335">335</a> <em class="jxr_comment">						.invokeMethod(selector, ex);</em>
+<a class="jxr_linenumber" name="336" href="#336">336</a> <em class="jxr_comment">			} else {</em>
+<a class="jxr_linenumber" name="337" href="#337">337</a> <em class="jxr_comment">				ExertionException eme = new ExertionException(</em>
+<a class="jxr_linenumber" name="338" href="#338">338</a> <em class="jxr_comment">						"Not supported method: " + serviceType + "#" + selector</em>
+<a class="jxr_linenumber" name="339" href="#339">339</a> <em class="jxr_comment">								+ " by: "</em>
+<a class="jxr_linenumber" name="340" href="#340">340</a> <em class="jxr_comment">								+ ((Provider) provider).getProviderName());</em>
+<a class="jxr_linenumber" name="341" href="#341">341</a> <em class="jxr_comment">				((Provider) provider).notifyException(ex, "unsupported method",</em>
+<a class="jxr_linenumber" name="342" href="#342">342</a> <em class="jxr_comment">						eme);</em>
+<a class="jxr_linenumber" name="343" href="#343">343</a> <em class="jxr_comment">				throw eme;</em>
+<a class="jxr_linenumber" name="344" href="#344">344</a> <em class="jxr_comment">			}</em>
+<a class="jxr_linenumber" name="345" href="#345">345</a> <em class="jxr_comment">		} catch (Exception e) {</em>
+<a class="jxr_linenumber" name="346" href="#346">346</a> <em class="jxr_comment">			throw new ExertionException(e);</em>
+<a class="jxr_linenumber" name="347" href="#347">347</a> <em class="jxr_comment">		}</em>
+<a class="jxr_linenumber" name="348" href="#348">348</a> <em class="jxr_comment">	}</em>
+<a class="jxr_linenumber" name="349" href="#349">349</a> 
+<a class="jxr_linenumber" name="350" href="#350">350</a> <em class="jxr_comment">	public Context invokeMethod(Context context) throws RemoteException,</em>
+<a class="jxr_linenumber" name="351" href="#351">351</a> <em class="jxr_comment">			ExertionException {</em>
+<a class="jxr_linenumber" name="352" href="#352">352</a> <em class="jxr_comment">		// If customized method provided by Mobile Agent</em>
+<a class="jxr_linenumber" name="353" href="#353">353</a> <em class="jxr_comment">		Method m = getSubstituteMethod(new Class[] { Context.class });</em>
+<a class="jxr_linenumber" name="354" href="#354">354</a> <em class="jxr_comment">		try {</em>
+<a class="jxr_linenumber" name="355" href="#355">355</a> <em class="jxr_comment">			if (m != null)</em>
+<a class="jxr_linenumber" name="356" href="#356">356</a> <em class="jxr_comment">				return ((Context) m.invoke(this, new Object[] { context }));</em>
+<a class="jxr_linenumber" name="357" href="#357">357</a> 
+<a class="jxr_linenumber" name="358" href="#358">358</a> <em class="jxr_comment">			if (((ServiceProvider) provider).isValidMethod(selector)) {</em>
+<a class="jxr_linenumber" name="359" href="#359">359</a> <em class="jxr_comment">				Context resultContext = ((ServiceProvider) provider)</em>
+<a class="jxr_linenumber" name="360" href="#360">360</a> <em class="jxr_comment">						.getDelegate().invokeMethod(selector, context);</em>
+<a class="jxr_linenumber" name="361" href="#361">361</a> <em class="jxr_comment">				return resultContext;</em>
+<a class="jxr_linenumber" name="362" href="#362">362</a> <em class="jxr_comment">			} else {</em>
+<a class="jxr_linenumber" name="363" href="#363">363</a> <em class="jxr_comment">				ExertionException eme = new ExertionException(</em>
+<a class="jxr_linenumber" name="364" href="#364">364</a> <em class="jxr_comment">						"Not supported method: " + serviceType + "#" + selector</em>
+<a class="jxr_linenumber" name="365" href="#365">365</a> <em class="jxr_comment">								+ " by: "</em>
+<a class="jxr_linenumber" name="366" href="#366">366</a> <em class="jxr_comment">								+ provider.getProviderName());</em>
+<a class="jxr_linenumber" name="367" href="#367">367</a> <em class="jxr_comment">				provider.notifyException(context.getExertion(),</em>
+<a class="jxr_linenumber" name="368" href="#368">368</a> <em class="jxr_comment">						"unsupported method", eme);</em>
+<a class="jxr_linenumber" name="369" href="#369">369</a> <em class="jxr_comment">				throw eme;</em>
+<a class="jxr_linenumber" name="370" href="#370">370</a> <em class="jxr_comment">			}</em>
+<a class="jxr_linenumber" name="371" href="#371">371</a> <em class="jxr_comment">		} catch (Exception e) {</em>
+<a class="jxr_linenumber" name="372" href="#372">372</a> <em class="jxr_comment">			throw new ExertionException(e);</em>
+<a class="jxr_linenumber" name="373" href="#373">373</a> <em class="jxr_comment">		}</em>
+<a class="jxr_linenumber" name="374" href="#374">374</a> <em class="jxr_comment">	}</em>
+<a class="jxr_linenumber" name="375" href="#375">375</a> <em class="jxr_comment">*/</em>
+<a class="jxr_linenumber" name="376" href="#376">376</a> 
+<a class="jxr_linenumber" name="377" href="#377">377</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isSelectable() {
+<a class="jxr_linenumber" name="378" href="#378">378</a> 		<strong class="jxr_keyword">if</strong> (selector == <strong class="jxr_keyword">null</strong> &amp;&amp; serviceType == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="379" href="#379">379</a> 			<strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="380" href="#380">380</a> 		}
+<a class="jxr_linenumber" name="381" href="#381">381</a> 		Method[] methods = serviceType.getMethods();
+<a class="jxr_linenumber" name="382" href="#382">382</a> 		<strong class="jxr_keyword">for</strong> (Method m : methods) {
+<a class="jxr_linenumber" name="383" href="#383">383</a> 			<strong class="jxr_keyword">if</strong> (m.getName().equals(selector)) {
+<a class="jxr_linenumber" name="384" href="#384">384</a> 				<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="385" href="#385">385</a> 			}
+<a class="jxr_linenumber" name="386" href="#386">386</a> 		}
+<a class="jxr_linenumber" name="387" href="#387">387</a> 		<strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="388" href="#388">388</a> 	}
+<a class="jxr_linenumber" name="389" href="#389">389</a> 
+<a class="jxr_linenumber" name="390" href="#390">390</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isUnicast() {
+<a class="jxr_linenumber" name="391" href="#391">391</a> 		<strong class="jxr_keyword">return</strong> isUnicast;
+<a class="jxr_linenumber" name="392" href="#392">392</a> 	}
+<a class="jxr_linenumber" name="393" href="#393">393</a> 
+<a class="jxr_linenumber" name="394" href="#394">394</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUnicast(<strong class="jxr_keyword">boolean</strong> isUnicast) {
+<a class="jxr_linenumber" name="395" href="#395">395</a> 		<strong class="jxr_keyword">this</strong>.isUnicast = isUnicast;
+<a class="jxr_linenumber" name="396" href="#396">396</a> 	}
+<a class="jxr_linenumber" name="397" href="#397">397</a> 
+<a class="jxr_linenumber" name="398" href="#398">398</a>     <strong class="jxr_keyword">public</strong> String getVersion() {
+<a class="jxr_linenumber" name="399" href="#399">399</a>         <strong class="jxr_keyword">return</strong> version;
+<a class="jxr_linenumber" name="400" href="#400">400</a> 	}
+<a class="jxr_linenumber" name="401" href="#401">401</a> 
+<a class="jxr_linenumber" name="402" href="#402">402</a> 	<strong class="jxr_keyword">public</strong> String toString() {
+<a class="jxr_linenumber" name="403" href="#403">403</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.getClass() + <span class="jxr_string">":"</span> + providerName + <span class="jxr_string">";"</span> + execType + <span class="jxr_string">";"</span> + isActive + <span class="jxr_string">";"</span>
+<a class="jxr_linenumber" name="404" href="#404">404</a> 				+ serviceType + <span class="jxr_string">";"</span> + selector 
+<a class="jxr_linenumber" name="405" href="#405">405</a> 					+ (prefix !=<strong class="jxr_keyword">null</strong> ? <span class="jxr_string">"#"</span> + prefix : <span class="jxr_string">""</span>) 
+<a class="jxr_linenumber" name="406" href="#406">406</a> 					+ (returnPath != <strong class="jxr_keyword">null</strong> ? <span class="jxr_string">";"</span>  + returnPath : <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="407" href="#407">407</a> 	}
+<a class="jxr_linenumber" name="408" href="#408">408</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

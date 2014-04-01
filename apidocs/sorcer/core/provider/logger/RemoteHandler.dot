@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.logger.RemoteHandler
-	c266358 [label=<<table title="sorcer.core.provider.logger.RemoteHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteHandler.html">
+	c373076 [label=<<table title="sorcer.core.provider.logger.RemoteHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteHandler </td></tr>
 		</table></td></tr>
@@ -26,9 +26,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RemoteHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.logger.RemoteHandler extends java.util.logging.Handler
-	c266627:p -> c266358:p [dir=back,arrowtail=empty];
+	c373382:p -> c373076:p [dir=back,arrowtail=empty];
 	// java.util.logging.Handler
-	c266627 [label=<<table title="java.util.logging.Handler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html">
+	c373382 [label=<<table title="java.util.logging.Handler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Handler </font></td></tr>
 		</table></td></tr>

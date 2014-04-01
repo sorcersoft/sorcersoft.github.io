@@ -10,20 +10,40 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.boot.ServiceStarter
-	c305964 [label=<<table title="sorcer.boot.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceStarter.html">
+	c424406 [label=<<table title="sorcer.boot.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceStarter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceStarter </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CONFIG_RIVER : String </td></tr>
-<tr><td align="left" balign="left"> + SORCER_DEFAULT_CONFIG : File </td></tr>
+<tr><td align="left" balign="left"> # injector : Injector </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceStarter() </td></tr>
-<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceStarter(exitMonitor : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + start(configs : Collection&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> # getRioHome() : File </td></tr>
+<tr><td align="left" balign="left"> + stop() </td></tr>
+<tr><td align="left" balign="left"> # getDestroyer(service : Object) : ServiceDestroyer </td></tr>
+<tr><td align="left" balign="left"> + unregister(impl : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> # createFromOpStrFiles(files : Collection&lt;File&gt;) : List&lt;OpstringServiceDescriptor&gt; </td></tr>
+<tr><td align="left" balign="left"> + instantiateDescriptors(configs : Collection&lt;Configuration&gt;) : Map&lt;Configuration, List&lt;ServiceDescriptor&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + instantiateServices(descriptorMap : Map&lt;Configuration, Collection&lt;?&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + create(descs : ServiceDescriptor[], config : Configuration, stat : ServiceStarter.ServiceStatHolder, processors : Set&lt;ServiceDescriptorProcessor&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceStarter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.boot.ServiceStarter implements com.sun.jini.start.LifeCycle
+	c424585:p -> c424406:p [dir=back,arrowtail=empty,style=dashed];
+	// com.sun.jini.start.LifeCycle
+	c424585 [label=<<table title="com.sun.jini.start.LifeCycle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> LifeCycle </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + unregister(arg0 : Object) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

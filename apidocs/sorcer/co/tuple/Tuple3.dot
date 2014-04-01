@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.co.tuple.IndexedTriplet<T>
-	c362496 [label=<<table title="sorcer.co.tuple.IndexedTriplet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IndexedTriplet.html">
+	c498603 [label=<<table title="sorcer.co.tuple.IndexedTriplet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IndexedTriplet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IndexedTriplet&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -26,8 +26,35 @@ digraph G {
 <tr><td align="left" balign="left"> + ext(extention : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./IndexedTriplet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.AnnotatedEntry<T>
+	c498606 [label=<<table title="sorcer.co.tuple.AnnotatedEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AnnotatedEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AnnotatedEntry&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + index : int </td></tr>
+<tr><td align="left" balign="left"> + isPersistant : boolean </td></tr>
+<tr><td align="left" balign="left"> + datastoreURL : URL </td></tr>
+<tr><td align="left" balign="left"> + fidelity : FidelityInfo </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AnnotatedEntry() </td></tr>
+<tr><td align="left" balign="left"> + AnnotatedEntry(path : String, anotation : String, value : T) </td></tr>
+<tr><td align="left" balign="left"> + AnnotatedEntry(path : String, value : T) </td></tr>
+<tr><td align="left" balign="left"> + AnnotatedEntry(path : String, value : T, index : int) </td></tr>
+<tr><td align="left" balign="left"> + index() : int </td></tr>
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + annotation() : String </td></tr>
+<tr><td align="left" balign="left"> + anotation(anotation : String) </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AnnotatedEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c362511 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
+	c498610 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -52,7 +79,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple3<T1, T2, T3>
-	c362513 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Tuple3.html">
+	c498616 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Tuple3.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
 		</table></td></tr>
@@ -68,8 +95,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.IndexedTriplet<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.Object>
-	c362513:p -> c362496:p [dir=back,arrowtail=empty];
+	c498616:p -> c498603:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.AnnotatedEntry<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.String>
+	c498616:p -> c498606:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Tuple3<T1, T2, T3> extends sorcer.co.tuple.Tuple2<T1, T2>
-	c362511:p -> c362513:p [dir=back,arrowtail=empty];
+	c498610:p -> c498616:p [dir=back,arrowtail=empty];
 }
 

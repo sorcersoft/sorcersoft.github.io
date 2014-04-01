@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.misc.MsgRef
-	c215372 [label=<<table title="sorcer.core.misc.MsgRef" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MsgRef.html">
+	c300059 [label=<<table title="sorcer.core.misc.MsgRef" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MsgRef.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MsgRef </td></tr>
 		</table></td></tr>
@@ -35,9 +35,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MsgRef.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.misc.MsgRef implements java.io.Serializable
-	c215631:p -> c215372:p [dir=back,arrowtail=empty,style=dashed];
+	c300356:p -> c300059:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c215631 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c300356 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

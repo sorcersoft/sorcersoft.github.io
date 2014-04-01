@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ServiceContext<T>
-	c6493 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c12426 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -46,10 +46,10 @@ digraph G {
 <tr><td align="left" balign="left"> # isRevaluable : boolean </td></tr>
 <tr><td align="left" balign="left"> # dbUrl : String </td></tr>
 <tr><td align="left" balign="left"> # prefix : String </td></tr>
-<tr><td align="left" balign="left"> # entryLists : List&lt;EntryList&gt; </td></tr>
 <tr><td align="left" balign="left"> # version : float </td></tr>
 <tr><td align="left" balign="left"> # delPathIds : Hashtable&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # metacontext : Hashtable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # blockScope : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # exertion : Exertion </td></tr>
 <tr><td align="left" balign="left"> # currentSelector : String </td></tr>
 <tr><td align="left" balign="left"> # currentPrefix : String </td></tr>
@@ -66,8 +66,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ServiceContext(name : String, subjectPath : String, subjectValue : Object) </td></tr>
 <tr><td align="left" balign="left"> + ServiceContext(cntxt : Context&lt;T&gt;) </td></tr>
 <tr><td align="left" balign="left"> + ServiceContext(object : Object) </td></tr>
-<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + setId(contextID : Uuid) </td></tr>
@@ -114,6 +113,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getValue0(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + inPaths() : Enumeration&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + outPaths() : Enumeration&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getValueEndsWith(name : String) : T </td></tr>
 <tr><td align="left" balign="left"> + getValueStartsWith(name : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
@@ -165,8 +165,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getSubcontext() : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTaskContext(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendNewEntries(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + append(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;&gt;, path : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendContext(cntxt : Context&lt;&gt;, path : String, prefixContextName : boolean) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
@@ -248,7 +249,7 @@ digraph G {
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + checkpoint() </td></tr>
-<tr><td align="left" balign="left"> + changed(aspect : ExecState.Category) </td></tr>
+<tr><td align="left" balign="left"> + changed(aspect : Exec.State) </td></tr>
 <tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + setOutValues(context : Context&lt;T&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
@@ -270,18 +271,20 @@ digraph G {
 <tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
 <tr><td align="left" balign="left"> + getDbUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + setDbUrl(dbUrl : String) </td></tr>
-<tr><td align="left" balign="left"> + getEntryLists() : List&lt;EntryList&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEntryLists(entryLists : List&lt;EntryList&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getEntryList(type : EntryList.Type) : EntryList </td></tr>
 <tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
 <tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getBlockScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setBlockScope(blockScope : Context&lt;&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ControlContext
-	c6494 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlContext.html">
+	c12427 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ControlContext </td></tr>
 		</table></td></tr>
@@ -291,6 +294,7 @@ digraph G {
 <tr><td align="left" balign="left"> + EXERTION_FLOW : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_PROVISIONABLE : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_OPTI : String </td></tr>
+<tr><td align="left" balign="left"> + EXEC_STATE : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_MONITORABLE : String </td></tr>
 <tr><td align="left" balign="left"> + EXERTION_ACCESS : String </td></tr>
 <tr><td align="left" balign="left"> + NODE_REFERENCE_PRESERVED : String </td></tr>
@@ -348,11 +352,12 @@ digraph G {
 <tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isMonitorable(value : Strategy.Monitor) </td></tr>
 <tr><td align="left" balign="left"> + setMonitorable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable(value : Strategy.Provision) </td></tr>
+<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
 <tr><td align="left" balign="left"> + setOpti(optiType : Strategy.Opti) </td></tr>
 <tr><td align="left" balign="left"> + getOpti() : Strategy.Opti </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setExecState(state : Exec.State) </td></tr>
+<tr><td align="left" balign="left"> + getExecState() : Exec.State </td></tr>
 <tr><td align="left" balign="left"> + getMonitor() : MonitoringManagement </td></tr>
 <tr><td align="left" balign="left"> + setMonitor(monitor : MonitoringManagement) </td></tr>
 <tr><td align="left" balign="left"> + setAccessType(access : Strategy.Access) </td></tr>
@@ -381,7 +386,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setNotifyList(exertion : Exertion, list : String) </td></tr>
 <tr><td align="left" balign="left"> + getNotifyList(ex : Exertion) : String </td></tr>
 <tr><td align="left" balign="left"> + registerExertion(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + deregisterExertion(job : ComplexExertion, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + deregisterExertion(job : Job, exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + addAttributeValue(attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addComponentAssociation(path : String, attributeName : String, attributeValue : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAttributeValue(exertion : Exertion, attributeName : String) : String </td></tr>
@@ -392,6 +397,7 @@ digraph G {
 <tr><td align="left" balign="left"> + addException(t : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + addException(message : String, t : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getStackTrace(t : Throwable) : String </td></tr>
 <tr><td align="left" balign="left"> + describeExceptions() : String </td></tr>
 <tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + getSignature(kind : Signature.Kind) : ServiceSignature </td></tr>
@@ -405,7 +411,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedIndexedContext<T>
-	c6495 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedIndexedContext.html">
+	c12428 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedIndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedIndexedContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -446,7 +452,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SharedIndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.PositionalContext<T>
-	c6496 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PositionalContext.html">
+	c12429 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -471,7 +477,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ComprehensiveContextIterator
-	c6497 [label=<<table title="sorcer.core.context.ComprehensiveContextIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextIterator.html">
+	c12430 [label=<<table title="sorcer.core.context.ComprehensiveContextIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContextIterator </td></tr>
 		</table></td></tr>
@@ -488,7 +494,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComprehensiveContextIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextLink
-	c6498 [label=<<table title="sorcer.core.context.ContextLink" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextLink.html">
+	c12431 [label=<<table title="sorcer.core.context.ContextLink" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextLink.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextLink </td></tr>
 		</table></td></tr>
@@ -517,7 +523,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextLink.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ArrayContext
-	c6499 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrayContext.html">
+	c12432 [label=<<table title="sorcer.core.context.ArrayContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrayContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayContext </td></tr>
 		</table></td></tr>
@@ -580,7 +586,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArrayContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextMetaDataImpl
-	c6500 [label=<<table title="sorcer.core.context.ContextMetaDataImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaDataImpl.html">
+	c12433 [label=<<table title="sorcer.core.context.ContextMetaDataImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaDataImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextMetaDataImpl </td></tr>
 		</table></td></tr>
@@ -597,7 +603,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextMetaDataImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedAssociativeContext
-	c6501 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedAssociativeContext.html">
+	c12434 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SharedAssociativeContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedAssociativeContext </td></tr>
 		</table></td></tr>
@@ -615,7 +621,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SharedAssociativeContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.Contexts
-	c6502 [label=<<table title="sorcer.core.context.Contexts" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Contexts.html">
+	c12435 [label=<<table title="sorcer.core.context.Contexts" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Contexts.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Contexts </td></tr>
 		</table></td></tr>
@@ -657,7 +663,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getContextNodes(context : Context&lt;&gt;) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getAllContextNodes(context : Context&lt;&gt;) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getTaskContextNodes(task : Exertion) : ContextNode[] </td></tr>
-<tr><td align="left" balign="left"> + getTaskContextNodes(job : ComplexExertion) : ContextNode[] </td></tr>
+<tr><td align="left" balign="left"> + getTaskContextNodes(job : Job) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getContextNodesWithAttribute(sc : Context&lt;&gt;, attribute : String) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getMarkedConextNodes(sc : Context&lt;&gt;, association : String) : ContextNode[] </td></tr>
 <tr><td align="left" balign="left"> + getMarkedConextNode(sc : Context&lt;&gt;, association : String) : ContextNode </td></tr>
@@ -703,7 +709,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Contexts.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextManagementAdapter
-	c6503 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagementAdapter.html">
+	c12436 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagementAdapter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextManagementAdapter </td></tr>
 		</table></td></tr>
@@ -722,7 +728,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextManagementAdapter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ListContext<T>
-	c6504 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListContext.html">
+	c12437 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ListContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -759,7 +765,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ListContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ComprehensiveContext
-	c6505 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContext.html">
+	c12438 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
 		</table></td></tr>
@@ -800,7 +806,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ThrowableTrace
-	c6506 [label=<<table title="sorcer.core.context.ThrowableTrace" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ThrowableTrace.html">
+	c12439 [label=<<table title="sorcer.core.context.ThrowableTrace" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ThrowableTrace.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ThrowableTrace </td></tr>
 		</table></td></tr>
@@ -819,7 +825,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ThrowableTrace.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextUtil
-	c6507 [label=<<table title="sorcer.core.context.ContextUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextUtil.html">
+	c12440 [label=<<table title="sorcer.core.context.ContextUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextUtil </td></tr>
 		</table></td></tr>
@@ -844,7 +850,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextAccessor
-	c6508 [label=<<table title="sorcer.core.context.ContextAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextAccessor.html">
+	c12441 [label=<<table title="sorcer.core.context.ContextAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextAccessor </td></tr>
@@ -861,7 +867,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ApplicationDescription
-	c6509 [label=<<table title="sorcer.core.context.ApplicationDescription" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationDescription.html">
+	c12442 [label=<<table title="sorcer.core.context.ApplicationDescription" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationDescription.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ApplicationDescription </td></tr>
@@ -876,18 +882,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ApplicationDescription.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ControlContext extends sorcer.core.context.ServiceContext
-	c6493:p -> c6494:p [dir=back,arrowtail=empty];
+	c12426:p -> c12427:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.SharedIndexedContext<T> extends sorcer.core.context.ServiceContext
-	c6493:p -> c6495:p [dir=back,arrowtail=empty];
+	c12426:p -> c12428:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
-	c6493:p -> c6496:p [dir=back,arrowtail=empty];
+	c12426:p -> c12429:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ArrayContext extends sorcer.core.context.ServiceContext
-	c6493:p -> c6499:p [dir=back,arrowtail=empty];
+	c12426:p -> c12432:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.SharedAssociativeContext extends sorcer.core.context.ServiceContext
-	c6493:p -> c6501:p [dir=back,arrowtail=empty];
+	c12426:p -> c12434:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ListContext<T> extends sorcer.core.context.ServiceContext
-	c6493:p -> c6504:p [dir=back,arrowtail=empty];
+	c12426:p -> c12437:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ComprehensiveContext extends sorcer.core.context.ServiceContext
-	c6493:p -> c6505:p [dir=back,arrowtail=empty];
+	c12426:p -> c12438:p [dir=back,arrowtail=empty];
 }
 

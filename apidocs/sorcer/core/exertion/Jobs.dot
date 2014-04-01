@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c186730 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
+	c261541 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -21,6 +21,7 @@ digraph G {
 <tr><td align="left" balign="left"> + SORCER_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_SORCER_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_SORCER_EXT : String </td></tr>
+<tr><td align="left" balign="left"> + S_SORCER_EXT : String </td></tr>
 <tr><td align="left" balign="left"> + P_UNDEFINED : String </td></tr>
 <tr><td align="left" balign="left"> + P_PROVIDER_NAME : String </td></tr>
 <tr><td align="left" balign="left"> + EXERT_MONITOR_NAME : String </td></tr>
@@ -63,6 +64,7 @@ digraph G {
 <tr><td align="left" balign="left"> + J_DELAY_TIME : String </td></tr>
 <tr><td align="left" balign="left"> + P_QOSPOOL_SIZE : String </td></tr>
 <tr><td align="left" balign="left"> + P_QOSWORKERS_MAX : String </td></tr>
+<tr><td align="left" balign="left"> + P_MONITOR_INITIAL_OPSTRINGS : String </td></tr>
 <tr><td align="left" balign="left"> + SORCER_WEBSTER_INTERNAL : String </td></tr>
 <tr><td align="left" balign="left"> + SORCER_CODE_SERVER_INTERNAL : String </td></tr>
 <tr><td align="left" balign="left"> + WEBSTER_ROOTS : String </td></tr>
@@ -619,7 +621,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.Jobs
-	c187029 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Jobs.html">
+	c261889 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Jobs.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Jobs </td></tr>
 		</table></td></tr>
@@ -632,6 +634,8 @@ digraph G {
 <tr><td align="left" balign="left"> + isQosCatalogParallel(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isCatalogParallel(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isCatalogSequential(job : Job) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isCatalogBlock(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isSpaceBlock(exertion : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isSWIFSequential(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isSpaceSequential(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isQosSpaceSequential(job : Job) : boolean </td></tr>
@@ -641,13 +645,10 @@ digraph G {
 <tr><td align="left" balign="left"> + isParallel(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isSequential(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isMonitorable(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getInputExertions(job : Job) : Vector&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + getInputExertions(job : Job) : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getCC(sc : Context&lt;&gt;) : ControlContext </td></tr>
 <tr><td align="left" balign="left"> + removeExceptions(job : Job) </td></tr>
 <tr><td align="left" balign="left"> + removeExceptions(sc : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + preserveNodeReferences(ref : Exertion, res : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + preserveNodeReferences(refJob : Job, resJob : Job) </td></tr>
-<tr><td align="left" balign="left"> + preserveNodeReferences(refContext : Context&lt;&gt;, resContext : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + replaceNullIDs(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + replaceNullIDs(task : ServiceExertion) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
@@ -657,6 +658,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Jobs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.Jobs implements sorcer.core.SorcerConstants
-	c186730:p -> c187029:p [dir=back,arrowtail=empty,style=dashed];
+	c261541:p -> c261889:p [dir=back,arrowtail=empty,style=dashed];
 }
 

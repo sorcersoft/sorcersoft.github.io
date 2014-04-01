@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.requestor.ServiceRequestor
-	c165671 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/requestor/ServiceRequestor.html">
+	c231274 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/requestor/ServiceRequestor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceRequestor </font></td></tr>
 		</table></td></tr>
@@ -28,6 +28,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ServiceRequestor() </td></tr>
 <tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
 <tr><td align="left" balign="left"> + initialize(args : String[]) </td></tr>
+<tr><td align="left" balign="left"> + setCodeBaseByArtifacts(artifactCoords : String[]) </td></tr>
 <tr><td align="left" balign="left"> + setExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertion(args : String[]) : Exertion </font></td></tr>
 <tr><td align="left" balign="left"> + getJobberName() : String </td></tr>
@@ -43,10 +44,11 @@ digraph G {
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : String[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : ArtifactCoordinates[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareEnvironment() </td></tr>
+<tr><td align="left" balign="left"> # prepareBasicEnvironment() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/requestor/ServiceRequestor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ex0.HelloWorldTester
-	c165790 [label=<<table title="sorcer.ex0.HelloWorldTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HelloWorldTester.html">
+	c231402 [label=<<table title="sorcer.ex0.HelloWorldTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HelloWorldTester.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelloWorldTester </td></tr>
 		</table></td></tr>
@@ -59,6 +61,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorldTester.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ex0.HelloWorldTester extends sorcer.core.requestor.ServiceRequestor
-	c165671:p -> c165790:p [dir=back,arrowtail=empty];
+	c231274:p -> c231402:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.eval.PropertyEvaluator
-	c249883 [label=<<table title="sorcer.util.eval.PropertyEvaluator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PropertyEvaluator.html">
+	c352293 [label=<<table title="sorcer.util.eval.PropertyEvaluator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PropertyEvaluator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PropertyEvaluator </td></tr>
 		</table></td></tr>
@@ -22,7 +22,9 @@ digraph G {
 <tr><td align="left" balign="left"> + addDefaultSources() </td></tr>
 <tr><td align="left" balign="left"> + addDefaultSources(sys : String, env : String) </td></tr>
 <tr><td align="left" balign="left"> + addSource(prefix : String, source : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addSource(prefix : String, source : Properties) </td></tr>
 <tr><td align="left" balign="left"> + eval(data : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + eval(value : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PropertyEvaluator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
