@@ -9,8 +9,25 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.dispatch.SWIFSequentialDispatcher
+	c445941 [label=<<table title="sorcer.core.dispatch.SWIFSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFSequentialDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SWIFSequentialDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SWIFSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
+<tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
+<tr><td align="left" balign="left"> + setStatus(ex : ServiceExertion, status : int) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SWIFSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SWIFExertDispatcher
-	c390866 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SWIFExertDispatcher.html">
+	c445943 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SWIFExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SWIFExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -26,7 +43,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SWIFExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c390868 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+	c445950 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -63,7 +80,6 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDispatcher(jobID : String) : ExertDispatcher </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
 <tr><td align="left" balign="left"> + createExertionID(ex : ServiceExertion) : String </td></tr>
@@ -88,7 +104,6 @@ digraph G {
 <tr><td align="left" balign="left"> # isInterupted(ex : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> # getCatalog() : Cataloger </td></tr>
 <tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
@@ -96,26 +111,9 @@ digraph G {
 <tr><td align="left" balign="left"> # prepareJob() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SWIFSequentialDispatcher
-	c390877 [label=<<table title="sorcer.core.dispatch.SWIFSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFSequentialDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SWIFSequentialDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SWIFSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-<tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> + setStatus(ex : ServiceExertion, status : int) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SWIFSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.dispatch.SWIFExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c390868:p -> c390866:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SWIFSequentialDispatcher extends sorcer.core.dispatch.SWIFExertDispatcher
-	c390866:p -> c390877:p [dir=back,arrowtail=empty];
+	c445943:p -> c445941:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.SWIFExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
+	c445950:p -> c445943:p [dir=back,arrowtail=empty];
 }
 

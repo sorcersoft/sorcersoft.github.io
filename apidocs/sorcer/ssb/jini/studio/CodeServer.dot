@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.jini.studio.CodeServer
-	c124847 [label=<<table title="sorcer.ssb.jini.studio.CodeServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CodeServer.html">
+	c147247 [label=<<table title="sorcer.ssb.jini.studio.CodeServer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CodeServer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CodeServer </td></tr>
 		</table></td></tr>
@@ -30,9 +30,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CodeServer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.jini.studio.CodeServer implements java.lang.Runnable
-	c124952:p -> c124847:p [dir=back,arrowtail=empty,style=dashed];
+	c147325:p -> c147247:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Runnable
-	c124952 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+	c147325 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Runnable </td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.ServiceExertion
-	c383172 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
+	c434750 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
@@ -67,7 +67,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setFlow(type : Strategy.Flow) </td></tr>
 <tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + addSignatures(signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isBatch() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isNotCorrectBatch() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setProcessSignature(signature : Signature) </td></tr>
 <tr><td align="left" balign="left"> + setService(provider : Service) </td></tr>
@@ -207,8 +207,22 @@ digraph G {
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Revaluation
+	c434762 [label=<<table title="sorcer.service.Revaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Revaluation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Revaluation </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Revaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c383186 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
+	c434790 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
@@ -390,23 +404,9 @@ digraph G {
 <tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Revaluation
-	c383192 [label=<<table title="sorcer.service.Revaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Revaluation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Revaluation </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Revaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.ServiceExertion implements sorcer.service.Revaluation
-	c383192:p -> c383172:p [dir=back,arrowtail=empty,style=dashed];
+	c434762:p -> c434750:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Context<T> implements sorcer.service.Revaluation
-	c383192:p -> c383186:p [dir=back,arrowtail=empty,style=dashed];
+	c434762:p -> c434790:p [dir=back,arrowtail=empty,style=dashed];
 }
 

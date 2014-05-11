@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c297035 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
+	c337420 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -615,13 +615,15 @@ digraph G {
 <tr><td align="left" balign="left"> + ACCESS_CLASS : String </td></tr>
 <tr><td align="left" balign="left"> + CODEBASE_SEPARATOR : String </td></tr>
 <tr><td align="left" balign="left"> + NAME_DEFAULT : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_SORCER_REMOTE_CALL : String </td></tr>
+<tr><td align="left" balign="left"> + START_PACKAGE : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="../SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.MonitoredTaskDispatcher
-	c297352 [label=<<table title="sorcer.core.dispatch.MonitoredTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredTaskDispatcher.html">
+	c337830 [label=<<table title="sorcer.core.dispatch.MonitoredTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredTaskDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitoredTaskDispatcher </td></tr>
 		</table></td></tr>
@@ -635,7 +637,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitoredTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c297366 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+	c337849 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -672,7 +674,6 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDispatcher(jobID : String) : ExertDispatcher </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
 <tr><td align="left" balign="left"> + createExertionID(ex : ServiceExertion) : String </td></tr>
@@ -697,7 +698,6 @@ digraph G {
 <tr><td align="left" balign="left"> # isInterupted(ex : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> # getCatalog() : Cataloger </td></tr>
 <tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
@@ -706,7 +706,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.MonitoredExertDispatcher
-	c297373 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoredExertDispatcher.html">
+	c337852 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoredExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -726,10 +726,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.MonitoredTaskDispatcher extends sorcer.core.dispatch.MonitoredExertDispatcher
-	c297373:p -> c297352:p [dir=back,arrowtail=empty];
+	c337852:p -> c337830:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.MonitoredExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c297366:p -> c297373:p [dir=back,arrowtail=empty];
+	c337849:p -> c337852:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.MonitoredExertDispatcher implements sorcer.core.SorcerConstants
-	c297035:p -> c297373:p [dir=back,arrowtail=empty,style=dashed];
+	c337420:p -> c337852:p [dir=back,arrowtail=empty,style=dashed];
 }
 

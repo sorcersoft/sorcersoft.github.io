@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Task
-	c322416 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
+	c365083 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 		</table></td></tr>
@@ -58,8 +58,27 @@ digraph G {
 <tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Task.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.ObjectTask
+	c365374 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectTask.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ObjectTask </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetTask
-	c322636 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetTask.html">
+	c365382 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetTask </td></tr>
 		</table></td></tr>
@@ -85,28 +104,9 @@ digraph G {
 <tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ObjectTask
-	c322644 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectTask </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.exertion.NetTask extends sorcer.core.exertion.ObjectTask
-	c322644:p -> c322636:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.ObjectTask extends sorcer.service.Task
-	c322416:p -> c322644:p [dir=back,arrowtail=empty];
+	c365083:p -> c365374:p [dir=back,arrowtail=empty];
+	//sorcer.core.exertion.NetTask extends sorcer.core.exertion.ObjectTask
+	c365374:p -> c365382:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.dbp.DatabaseProvider
-	c233159 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DatabaseProvider.html">
+	c263760 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DatabaseProvider </td></tr>
 		</table></td></tr>
@@ -55,7 +55,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.dbp.IDatabaseProvider
-	c233163 [label=<<table title="sorcer.core.provider.dbp.IDatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IDatabaseProvider.html">
+	c263764 [label=<<table title="sorcer.core.provider.dbp.IDatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IDatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IDatabaseProvider </td></tr>
@@ -71,11 +71,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IDatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.dbp.DatabaseProvider implements sorcer.core.provider.dbp.IDatabaseProvider
-	c233163:p -> c233159:p [dir=back,arrowtail=empty,style=dashed];
+	c263764:p -> c263760:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.dbp.IDatabaseProvider implements java.rmi.Remote
-	c233472:p -> c233163:p [dir=back,arrowtail=empty,style=dashed];
+	c264132:p -> c263764:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c233472 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c264132 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

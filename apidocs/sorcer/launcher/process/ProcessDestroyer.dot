@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.launcher.process.ProcessDestroyer
-	c345471 [label=<<table title="sorcer.launcher.process.ProcessDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcessDestroyer.html">
+	c391196 [label=<<table title="sorcer.launcher.process.ProcessDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcessDestroyer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcessDestroyer </td></tr>
 		</table></td></tr>
@@ -26,9 +26,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcessDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.process.ProcessDestroyer implements java.lang.Runnable
-	c346080:p -> c345471:p [dir=back,arrowtail=empty,style=dashed];
+	c391816:p -> c391196:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Runnable
-	c346080 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+	c391816 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Runnable </td></tr>

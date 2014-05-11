@@ -9,31 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.launcher.ILauncher
-	c234634 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ILauncher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ILauncher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + start() </td></tr>
-<tr><td align="left" balign="left"> + stop() </td></tr>
-<tr><td align="left" balign="left"> + preConfigure() </td></tr>
-<tr><td align="left" balign="left"> + setLogDir(logDir : File) </td></tr>
-<tr><td align="left" balign="left"> + setHome(home : File) </td></tr>
-<tr><td align="left" balign="left"> + setConfigs(configs : List&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setConfigDir(config : File) </td></tr>
-<tr><td align="left" balign="left"> + addSorcerListener(listener : SorcerListener) </td></tr>
-<tr><td align="left" balign="left"> + setProfile(profile : String) </td></tr>
-<tr><td align="left" balign="left"> + removeSorcerListener(listener : SorcerListener) </td></tr>
-<tr><td align="left" balign="left"> + setRioConfigs(rioConfigs : List&lt;String&gt;) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ILauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.Launcher
-	c234639 [label=<<table title="sorcer.launcher.Launcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Launcher.html">
+	c266082 [label=<<table title="sorcer.launcher.Launcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Launcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Launcher </font></td></tr>
 		</table></td></tr>
@@ -69,8 +46,31 @@ digraph G {
 <tr><td align="left" balign="left"> + setRioConfigs(rioConfigs : List&lt;String&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Launcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.ILauncher
+	c266085 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ILauncher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ILauncher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + start() </td></tr>
+<tr><td align="left" balign="left"> + stop() </td></tr>
+<tr><td align="left" balign="left"> + preConfigure() </td></tr>
+<tr><td align="left" balign="left"> + setLogDir(logDir : File) </td></tr>
+<tr><td align="left" balign="left"> + setHome(home : File) </td></tr>
+<tr><td align="left" balign="left"> + setConfigs(configs : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setConfigDir(config : File) </td></tr>
+<tr><td align="left" balign="left"> + addSorcerListener(listener : SorcerListener) </td></tr>
+<tr><td align="left" balign="left"> + setProfile(profile : String) </td></tr>
+<tr><td align="left" balign="left"> + removeSorcerListener(listener : SorcerListener) </td></tr>
+<tr><td align="left" balign="left"> + setRioConfigs(rioConfigs : List&lt;String&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ILauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.IForkingLauncher
-	c234642 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IForkingLauncher.html">
+	c266091 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IForkingLauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IForkingLauncher </td></tr>
@@ -87,8 +87,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.Launcher implements sorcer.launcher.ILauncher
-	c234634:p -> c234639:p [dir=back,arrowtail=empty,style=dashed];
+	c266085:p -> c266082:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.launcher.IForkingLauncher implements sorcer.launcher.ILauncher
-	c234634:p -> c234642:p [dir=back,arrowtail=empty,style=dashed];
+	c266085:p -> c266091:p [dir=back,arrowtail=empty,style=dashed];
 }
 

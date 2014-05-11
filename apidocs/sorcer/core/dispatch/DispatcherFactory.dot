@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.dispatch.ExertionDispatcherFactory
-	c173815 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionDispatcherFactory.html">
+	c199990 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionDispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionDispatcherFactory </td></tr>
 		</table></td></tr>
@@ -28,7 +28,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertionDispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.DispatcherFactory
-	c173834 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DispatcherFactory.html">
+	c200014 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DispatcherFactory </td></tr>
@@ -42,6 +42,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.ExertionDispatcherFactory implements sorcer.core.dispatch.DispatcherFactory
-	c173834:p -> c173815:p [dir=back,arrowtail=empty,style=dashed];
+	c200014:p -> c199990:p [dir=back,arrowtail=empty,style=dashed];
 }
 

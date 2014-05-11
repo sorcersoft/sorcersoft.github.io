@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Arg
-	c487664 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
+	c555198 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Arg </td></tr>
@@ -22,8 +22,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Path<T2>
+	c555378 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Path&lt;T2&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Path() </td></tr>
+<tr><td align="left" balign="left"> + Path(path : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.StrategyEntry
-	c487676 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StrategyEntry.html">
+	c555384 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StrategyEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StrategyEntry </td></tr>
 		</table></td></tr>
@@ -36,22 +49,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StrategyEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Path<T2>
-	c487678 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Path&lt;T2&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Path() </td></tr>
-<tr><td align="left" balign="left"> + Path(path : String) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.StrategyEntry extends sorcer.co.tuple.Path<sorcer.service.Strategy>
-	c487678:p -> c487676:p [dir=back,arrowtail=empty];
+	c555378:p -> c555384:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.StrategyEntry implements sorcer.service.Arg
-	c487664:p -> c487676:p [dir=back,arrowtail=empty,style=dashed];
+	c555198:p -> c555384:p [dir=back,arrowtail=empty,style=dashed];
 }
 

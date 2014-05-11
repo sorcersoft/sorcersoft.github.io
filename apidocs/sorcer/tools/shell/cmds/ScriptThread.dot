@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.cmds.ScriptThread
-	c397833 [label=<<table title="sorcer.tools.shell.cmds.ScriptThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ScriptThread.html">
+	c453356 [label=<<table title="sorcer.tools.shell.cmds.ScriptThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ScriptThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ScriptThread </td></tr>
 		</table></td></tr>
@@ -18,11 +18,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ScriptThread(script : String, jarsToAdd : URL[], classLoader : ClassLoader, out : PrintStream, config : Configuration, debug : boolean) </td></tr>
-<tr><td align="left" balign="left"> + ScriptThread(script : String, jarsToAdd : URL[], classLoader : ClassLoader, out : PrintStream, config : Configuration) </td></tr>
-<tr><td align="left" balign="left"> + ScriptThread(script : String, urls : URL[], classLoader : ClassLoader, out : PrintStream) </td></tr>
-<tr><td align="left" balign="left"> + ScriptThread(script : String, jarsToAdd : URL[], out : PrintStream) </td></tr>
-<tr><td align="left" balign="left"> + ScriptThread(script : String, jarsToAdd : URL[]) </td></tr>
+<tr><td align="left" balign="left"> + ScriptThread(script : String, classLoader : ClassLoader, out : PrintStream, config : Configuration, debug : boolean) </td></tr>
+<tr><td align="left" balign="left"> + ScriptThread(script : String, classLoader : ClassLoader, out : PrintStream, config : Configuration) </td></tr>
+<tr><td align="left" balign="left"> + ScriptThread(script : String, classLoader : ClassLoader, out : PrintStream) </td></tr>
+<tr><td align="left" balign="left"> + ScriptThread(script : String, out : PrintStream) </td></tr>
+<tr><td align="left" balign="left"> + ScriptThread(script : String) </td></tr>
 <tr><td align="left" balign="left"> + ScriptThread(script : String, classLoader : ClassLoader) </td></tr>
 <tr><td align="left" balign="left"> + ScriptThread(file : File, classLoader : ClassLoader) </td></tr>
 <tr><td align="left" balign="left"> + parseScript() </td></tr>
@@ -33,9 +33,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ScriptThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.cmds.ScriptThread extends java.lang.Thread
-	c397953:p -> c397833:p [dir=back,arrowtail=empty];
+	c453487:p -> c453356:p [dir=back,arrowtail=empty];
 	// java.lang.Thread
-	c397953 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">
+	c453487 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Thread </td></tr>
 		</table></td></tr>

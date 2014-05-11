@@ -99,7 +99,7 @@
 <a class="jxr_linenumber" name="89" href="#89">89</a>  		}
 <a class="jxr_linenumber" name="90" href="#90">90</a>  		setConfiguration(config);
 <a class="jxr_linenumber" name="91" href="#91">91</a>  		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="92" href="#92">92</a>  			Runtime.getRuntime().addShutdownHook(<strong class="jxr_keyword">new</strong> Thread() {
+<a class="jxr_linenumber" name="92" href="#92">92</a>  			Runtime.getRuntime().addShutdownHook(<strong class="jxr_keyword">new</strong> Thread(<span class="jxr_string">"ServiceBrowser Shutdown Hook"</span>) {
 <a class="jxr_linenumber" name="93" href="#93">93</a>  				<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="94" href="#94">94</a>  					saveSettings();
 <a class="jxr_linenumber" name="95" href="#95">95</a>  					ServiceBrowserUI.terminateAll();
@@ -308,7 +308,7 @@
 <a class="jxr_linenumber" name="298" href="#298">298</a> 
 <a class="jxr_linenumber" name="299" href="#299">299</a> 			<strong class="jxr_keyword">final</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SplashScreen.html">SplashScreen</a> splash = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/ssb/tools/plugin/browser/SplashScreen.html">SplashScreen</a>(f, logo.getImage());
 <a class="jxr_linenumber" name="300" href="#300">300</a> 			f.setVisible(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="301" href="#301">301</a> 			Thread t = <strong class="jxr_keyword">new</strong> Thread() {
+<a class="jxr_linenumber" name="301" href="#301">301</a> 			Thread t = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">new</strong> Runnable(){
 <a class="jxr_linenumber" name="302" href="#302">302</a> 				<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="303" href="#303">303</a> 
 <a class="jxr_linenumber" name="304" href="#304">304</a> 					<strong class="jxr_keyword">try</strong> {
@@ -325,7 +325,7 @@
 <a class="jxr_linenumber" name="315" href="#315">315</a> 					}
 <a class="jxr_linenumber" name="316" href="#316">316</a> 					f.toFront();
 <a class="jxr_linenumber" name="317" href="#317">317</a> 				}
-<a class="jxr_linenumber" name="318" href="#318">318</a> 			};
+<a class="jxr_linenumber" name="318" href="#318">318</a> 			}, Thread.currentThread().getName()+<span class="jxr_string">"-ServiceBrowser.openWindows"</span>);
 <a class="jxr_linenumber" name="319" href="#319">319</a> 			t.start();
 <a class="jxr_linenumber" name="320" href="#320">320</a> 
 <a class="jxr_linenumber" name="321" href="#321">321</a> 			<em class="jxr_comment">// now open any other persistent views</em>

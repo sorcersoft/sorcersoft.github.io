@@ -9,102 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.provider.Concatenator
-	c400136 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Concatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Concatenator </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Spacer
-	c400137 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Spacer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Spacer </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Jobber
-	c400139 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Jobber.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Jobber </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Provider
-	c400140 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Provider </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
-<tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + init() </td></tr>
-<tr><td align="left" balign="left"> + init(propFile : String) </td></tr>
-<tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + mutualExclusion() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
-<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + destroyNode() </td></tr>
-<tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + changed(ctx : Context&lt;?&gt;, aspect : Object) </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
-<tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
-<tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.proxy.Outer
-	c400149 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Outer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Outer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/proxy/Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.proxy.Partner
-	c400150 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Partner.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Partner </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/proxy/Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Tasker
-	c400251 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tasker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Tasker </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c400253 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+	c455789 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -157,10 +63,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getIndex() : int </td></tr>
 <tr><td align="left" balign="left"> + setIndex(i : int) </td></tr>
 <tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
+<tr><td align="left" balign="left"> + getParentId() : Uuid </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Service
-	c400279 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Service.html">
+	c455792 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Service </td></tr>
@@ -172,23 +79,116 @@ digraph G {
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.provider.Concatenator implements sorcer.service.Service
-	c400279:p -> c400136:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.Spacer implements sorcer.service.Service
-	c400279:p -> c400137:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.Jobber implements sorcer.service.Service
-	c400279:p -> c400139:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.Provider implements sorcer.service.Service
-	c400279:p -> c400140:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.proxy.Outer implements sorcer.service.Service
-	c400279:p -> c400149:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
-	c400149:p -> c400150:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.proxy.Partner implements sorcer.service.Service
-	c400279:p -> c400150:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Tasker implements sorcer.service.Service
-	c400279:p -> c400251:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.service.Tasker
+	c455842 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tasker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Tasker </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Concatenator
+	c455911 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Concatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Concatenator </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Jobber
+	c455913 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Jobber.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Jobber </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Provider
+	c455914 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Provider </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
+<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
+<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
+<tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
+<tr><td align="left" balign="left"> + init() </td></tr>
+<tr><td align="left" balign="left"> + init(propFile : String) </td></tr>
+<tr><td align="left" balign="left"> + restore() </td></tr>
+<tr><td align="left" balign="left"> + mutualExclusion() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
+<tr><td align="left" balign="left"> + getInfo() : String </td></tr>
+<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
+<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + destroyNode() </td></tr>
+<tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
+<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyException(task : Exertion, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
+<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
+<tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
+<tr><td align="left" balign="left"> + changed(ctx : Context&lt;?&gt;, aspect : Object) </td></tr>
+<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
+<tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
+<tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
+<tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Spacer
+	c455915 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Spacer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Spacer </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.Outer
+	c455937 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Outer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Outer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/proxy/Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.Partner
+	c455940 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Partner.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Partner </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/proxy/Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Exertion implements sorcer.service.Service
-	c400279:p -> c400253:p [dir=back,arrowtail=empty,style=dashed];
+	c455792:p -> c455789:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Tasker implements sorcer.service.Service
+	c455792:p -> c455842:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.Concatenator implements sorcer.service.Service
+	c455792:p -> c455911:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.Jobber implements sorcer.service.Service
+	c455792:p -> c455913:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.Provider implements sorcer.service.Service
+	c455792:p -> c455914:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.Spacer implements sorcer.service.Service
+	c455792:p -> c455915:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.proxy.Outer implements sorcer.service.Service
+	c455792:p -> c455937:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
+	c455937:p -> c455940:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.proxy.Partner implements sorcer.service.Service
+	c455792:p -> c455940:p [dir=back,arrowtail=empty,style=dashed];
 }
 

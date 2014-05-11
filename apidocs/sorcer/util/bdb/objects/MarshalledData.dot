@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Identifiable
-	c284236 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Identifiable.html">
+	c323052 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Identifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Identifiable </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.MarshalledData
-	c284338 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MarshalledData.html">
+	c323257 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MarshalledData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MarshalledData </td></tr>
 		</table></td></tr>
@@ -47,11 +47,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MarshalledData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.bdb.objects.MarshalledData implements java.io.Serializable
-	c284654:p -> c284338:p [dir=back,arrowtail=empty,style=dashed];
+	c323617:p -> c323257:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.bdb.objects.MarshalledData implements sorcer.service.Identifiable
-	c284236:p -> c284338:p [dir=back,arrowtail=empty,style=dashed];
+	c323052:p -> c323257:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c284654 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c323617 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

@@ -9,8 +9,26 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.SpaceContext
+	c531990 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SpaceContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + spacePrefix : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + unshare() </td></tr>
+<tr><td align="left" balign="left"> + share() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedIndexedContext<T>
-	c465691 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
+	c532059 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedIndexedContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -51,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/SharedIndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedAssociativeContext
-	c465697 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedAssociativeContext.html">
+	c532061 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedAssociativeContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedAssociativeContext </td></tr>
 		</table></td></tr>
@@ -68,27 +86,9 @@ digraph G {
 <tr><td align="left" balign="left"> + unshare() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/SharedAssociativeContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.SpaceContext
-	c465815 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SpaceContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + spacePrefix : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + unshare() </td></tr>
-<tr><td align="left" balign="left"> + share() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.SharedIndexedContext<T> implements sorcer.service.SpaceContext
-	c465815:p -> c465691:p [dir=back,arrowtail=empty,style=dashed];
+	c531990:p -> c532059:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.SharedAssociativeContext implements sorcer.service.SpaceContext
-	c465815:p -> c465697:p [dir=back,arrowtail=empty,style=dashed];
+	c531990:p -> c532061:p [dir=back,arrowtail=empty,style=dashed];
 }
 

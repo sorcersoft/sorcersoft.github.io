@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.CallbackModel
-	c288750 [label=<<table title="sorcer.util.CallbackModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CallbackModel.html">
+	c328731 [label=<<table title="sorcer.util.CallbackModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CallbackModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CallbackModel </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../CallbackModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ui.Model
-	c289130 [label=<<table title="sorcer.util.ui.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Model.html">
+	c329174 [label=<<table title="sorcer.util.ui.Model" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Model.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Model </td></tr>
 		</table></td></tr>
@@ -53,11 +53,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Model.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ui.Model extends java.util.Observable
-	c289430:p -> c289130:p [dir=back,arrowtail=empty];
+	c329419:p -> c329174:p [dir=back,arrowtail=empty];
 	//sorcer.util.ui.Model implements sorcer.util.CallbackModel
-	c288750:p -> c289130:p [dir=back,arrowtail=empty,style=dashed];
+	c328731:p -> c329174:p [dir=back,arrowtail=empty,style=dashed];
 	// java.util.Observable
-	c289430 [label=<<table title="java.util.Observable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observable.html">
+	c329419 [label=<<table title="java.util.Observable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Observable </td></tr>
 		</table></td></tr>

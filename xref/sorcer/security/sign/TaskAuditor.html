@@ -79,7 +79,7 @@
 <a class="jxr_linenumber" name="69" href="#69">69</a>  <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="70" href="#70">70</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> audit(<a href="../../../sorcer/security/sign/SignedServiceTask.html">SignedServiceTask</a> task) {
 <a class="jxr_linenumber" name="71" href="#71">71</a>  		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="72" href="#72">72</a>  			Thread thread = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">new</strong> <a href="../../../sorcer/security/sign/TaskAuditor.html">AuditThread</a>(task));
+<a class="jxr_linenumber" name="72" href="#72">72</a>  			Thread thread = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">new</strong> <a href="../../../sorcer/security/sign/TaskAuditor.html">AuditThread</a>(task), <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] Audit"</span>);
 <a class="jxr_linenumber" name="73" href="#73">73</a>  			thread.start();
 <a class="jxr_linenumber" name="74" href="#74">74</a>  		} <strong class="jxr_keyword">catch</strong> (Exception ex) {
 <a class="jxr_linenumber" name="75" href="#75">75</a>  			ex.printStackTrace();

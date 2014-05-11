@@ -67,9 +67,9 @@
 <a class="jxr_linenumber" name="57" href="#57">57</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/service/Task.html">Task</a> task(<a href="../../sorcer/service/Signature.html">Signature</a> signature, <a href="../../sorcer/service/Context.html">Context</a> context)
 <a class="jxr_linenumber" name="58" href="#58">58</a>              <strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/SignatureException.html">SignatureException</a> {
 <a class="jxr_linenumber" name="59" href="#59">59</a>          <strong class="jxr_keyword">if</strong> (signature instanceof NetSignature) {
-<a class="jxr_linenumber" name="60" href="#60">60</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/NetTask.html">NetTask</a>(<strong class="jxr_keyword">null</strong>, (NetSignature) signature, context);
+<a class="jxr_linenumber" name="60" href="#60">60</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/NetTask.html">NetTask</a>(<strong class="jxr_keyword">null</strong>, signature, context);
 <a class="jxr_linenumber" name="61" href="#61">61</a>          } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (signature instanceof ObjectSignature) {
-<a class="jxr_linenumber" name="62" href="#62">62</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/ObjectTask.html">ObjectTask</a>(<strong class="jxr_keyword">null</strong>, (ObjectSignature) signature, context);
+<a class="jxr_linenumber" name="62" href="#62">62</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/ObjectTask.html">ObjectTask</a>(<strong class="jxr_keyword">null</strong>, signature, context);
 <a class="jxr_linenumber" name="63" href="#63">63</a>          } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (signature instanceof EvaluationSignature) {
 <a class="jxr_linenumber" name="64" href="#64">64</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/EvaluationTask.html">EvaluationTask</a>((EvaluationSignature) signature, context);
 <a class="jxr_linenumber" name="65" href="#65">65</a>          } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (signature instanceof AntSignature) {
@@ -120,7 +120,7 @@
 <a class="jxr_linenumber" name="110" href="#110">110</a>         <strong class="jxr_keyword">if</strong> (ss != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="111" href="#111">111</a>             <strong class="jxr_keyword">if</strong> (ss instanceof NetSignature) {
 <a class="jxr_linenumber" name="112" href="#112">112</a>                 <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="113" href="#113">113</a> 					task = <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/NetTask.html">NetTask</a>(tname, (NetSignature) ss);
+<a class="jxr_linenumber" name="113" href="#113">113</a> 					task = <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/NetTask.html">NetTask</a>(tname, ss);
 <a class="jxr_linenumber" name="114" href="#114">114</a>                 } <strong class="jxr_keyword">catch</strong> (SignatureException e) {
 <a class="jxr_linenumber" name="115" href="#115">115</a>                     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ExertionException.html">ExertionException</a>(e);
 <a class="jxr_linenumber" name="116" href="#116">116</a>                 }

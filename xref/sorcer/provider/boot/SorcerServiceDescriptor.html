@@ -119,90 +119,111 @@
 <a class="jxr_linenumber" name="109" href="#109">109</a>         <strong class="jxr_keyword">this</strong>.classpath = classpath;
 <a class="jxr_linenumber" name="110" href="#110">110</a>     }
 <a class="jxr_linenumber" name="111" href="#111">111</a> 
-<a class="jxr_linenumber" name="112" href="#112">112</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/provider/boot/SorcerServiceDescriptor.html">SorcerServiceDescriptor</a>(String descCodebase, String policy,
-<a class="jxr_linenumber" name="113" href="#113">113</a> 			String classpath, String implClassName,
+<a class="jxr_linenumber" name="112" href="#112">112</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/provider/boot/SorcerServiceDescriptor.html">SorcerServiceDescriptor</a>(String descCodebase, File policy,
+<a class="jxr_linenumber" name="113" href="#113">113</a> 			String classpath, String implClassName, String address,
 <a class="jxr_linenumber" name="114" href="#114">114</a> 			<em class="jxr_comment">// Optional Args</em>
 <a class="jxr_linenumber" name="115" href="#115">115</a> 			LifeCycle lifeCycle, String... serverConfigArgs) {
-<a class="jxr_linenumber" name="116" href="#116">116</a> 		<strong class="jxr_keyword">this</strong>(descCodebase, policy, classpath, implClassName, <strong class="jxr_keyword">null</strong>, lifeCycle, serverConfigArgs);
-<a class="jxr_linenumber" name="117" href="#117">117</a> 	}
-<a class="jxr_linenumber" name="118" href="#118">118</a> 
-<a class="jxr_linenumber" name="119" href="#119">119</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="120" href="#120">120</a> <em class="jxr_javadoccomment">	 * Create a SorcerServiceDescriptor. Equivalent to calling the other</em>
-<a class="jxr_linenumber" name="121" href="#121">121</a> <em class="jxr_javadoccomment">	 * overloaded constructor with &lt;code&gt;null&lt;/code&gt; for the</em>
-<a class="jxr_linenumber" name="122" href="#122">122</a> <em class="jxr_javadoccomment">	 * &lt;code&gt;LifeCycle&lt;/code&gt; reference.</em>
-<a class="jxr_linenumber" name="123" href="#123">123</a> <em class="jxr_javadoccomment">	 *</em>
-<a class="jxr_linenumber" name="124" href="#124">124</a> <em class="jxr_javadoccomment">	 * @param codebase</em>
-<a class="jxr_linenumber" name="125" href="#125">125</a> <em class="jxr_javadoccomment">	 *            location where clients can download required service-related</em>
-<a class="jxr_linenumber" name="126" href="#126">126</a> <em class="jxr_javadoccomment">	 *            classes (for example, stubs, proxies, etc.). Codebase</em>
-<a class="jxr_linenumber" name="127" href="#127">127</a> <em class="jxr_javadoccomment">	 *            components must be separated by spaces in which each component</em>
-<a class="jxr_linenumber" name="128" href="#128">128</a> <em class="jxr_javadoccomment">	 *            is in &lt;code&gt;URL&lt;/code&gt; format.</em>
-<a class="jxr_linenumber" name="129" href="#129">129</a> <em class="jxr_javadoccomment">	 * @param policy</em>
-<a class="jxr_linenumber" name="130" href="#130">130</a> <em class="jxr_javadoccomment">	 *            server policy filename or URL</em>
-<a class="jxr_linenumber" name="131" href="#131">131</a> <em class="jxr_javadoccomment">	 * @param classpath</em>
-<a class="jxr_linenumber" name="132" href="#132">132</a> <em class="jxr_javadoccomment">	 *            location where server implementation classes can be found.</em>
-<a class="jxr_linenumber" name="133" href="#133">133</a> <em class="jxr_javadoccomment">	 *            Classpath components must be separated by path separators.</em>
-<a class="jxr_linenumber" name="134" href="#134">134</a> <em class="jxr_javadoccomment">	 * @param implClassName</em>
-<a class="jxr_linenumber" name="135" href="#135">135</a> <em class="jxr_javadoccomment">	 *            name of server implementation class</em>
-<a class="jxr_linenumber" name="136" href="#136">136</a> <em class="jxr_javadoccomment">	 * @param serverConfigArgs</em>
-<a class="jxr_linenumber" name="137" href="#137">137</a> <em class="jxr_javadoccomment">	 *            service configuration arguments</em>
-<a class="jxr_linenumber" name="138" href="#138">138</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="139" href="#139">139</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/provider/boot/SorcerServiceDescriptor.html">SorcerServiceDescriptor</a>(String codebase, String policy,
-<a class="jxr_linenumber" name="140" href="#140">140</a> 			String classpath, String implClassName,
-<a class="jxr_linenumber" name="141" href="#141">141</a> 			<em class="jxr_comment">// Optional Args</em>
-<a class="jxr_linenumber" name="142" href="#142">142</a> 			String... serverConfigArgs) {
-<a class="jxr_linenumber" name="143" href="#143">143</a> 		<strong class="jxr_keyword">this</strong>(codebase, policy, classpath, implClassName, <strong class="jxr_keyword">null</strong>, serverConfigArgs);
-<a class="jxr_linenumber" name="144" href="#144">144</a> 	}
-<a class="jxr_linenumber" name="145" href="#145">145</a> 
-<a class="jxr_linenumber" name="146" href="#146">146</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="147" href="#147">147</a> <em class="jxr_javadoccomment">	 * Codebase accessor method.</em>
-<a class="jxr_linenumber" name="148" href="#148">148</a> <em class="jxr_javadoccomment">	 *</em>
-<a class="jxr_linenumber" name="149" href="#149">149</a> <em class="jxr_javadoccomment">	 * @return The codebase string associated with this service descriptor.</em>
-<a class="jxr_linenumber" name="150" href="#150">150</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="151" href="#151">151</a> 	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> Set&lt;URL&gt; getCodebase(String codebase, String address) {
-<a class="jxr_linenumber" name="152" href="#152">152</a>         <strong class="jxr_keyword">if</strong> (codebase == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="153" href="#153">153</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> HashSet&lt;URL&gt;();
-<a class="jxr_linenumber" name="154" href="#154">154</a> 
-<a class="jxr_linenumber" name="155" href="#155">155</a>         String[] codebaseArray = StringUtils.tokenizerSplit(codebase, <span class="jxr_string">" "</span>);
-<a class="jxr_linenumber" name="156" href="#156">156</a>         <strong class="jxr_keyword">if</strong> (!codebase.contains(<span class="jxr_string">"http://"</span>))
-<a class="jxr_linenumber" name="157" href="#157">157</a>             <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="158" href="#158">158</a>                 <strong class="jxr_keyword">if</strong> (address == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="159" href="#159">159</a>                     address = Booter.getHostAddress();
-<a class="jxr_linenumber" name="160" href="#160">160</a>                 codebase = Booter.getCodebase(codebaseArray, address, Integer.toString(Booter.getPort()));
-<a class="jxr_linenumber" name="161" href="#161">161</a>                 codebaseArray = StringUtils.tokenizerSplit(codebase, <span class="jxr_string">" "</span>);
-<a class="jxr_linenumber" name="162" href="#162">162</a>             } <strong class="jxr_keyword">catch</strong> (UnknownHostException e) {
-<a class="jxr_linenumber" name="163" href="#163">163</a>                 log.warn(<span class="jxr_string">"Cannot get hostname for: {}"</span>, codebase);
-<a class="jxr_linenumber" name="164" href="#164">164</a>             }
-<a class="jxr_linenumber" name="165" href="#165">165</a>         Set&lt;URL&gt; result = <strong class="jxr_keyword">new</strong> HashSet&lt;URL&gt;();
-<a class="jxr_linenumber" name="166" href="#166">166</a>         <strong class="jxr_keyword">for</strong> (String aCodebaseArray : codebaseArray) {
-<a class="jxr_linenumber" name="167" href="#167">167</a>             <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="168" href="#168">168</a>                 result.add(<strong class="jxr_keyword">new</strong> URL(aCodebaseArray));
-<a class="jxr_linenumber" name="169" href="#169">169</a>             } <strong class="jxr_keyword">catch</strong> (MalformedURLException e) {
-<a class="jxr_linenumber" name="170" href="#170">170</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Malformed URL in configuration: "</span> + aCodebaseArray, e);
-<a class="jxr_linenumber" name="171" href="#171">171</a>             }
-<a class="jxr_linenumber" name="172" href="#172">172</a>         }
-<a class="jxr_linenumber" name="173" href="#173">173</a>         <strong class="jxr_keyword">return</strong> result;
-<a class="jxr_linenumber" name="174" href="#174">174</a> 	}
-<a class="jxr_linenumber" name="175" href="#175">175</a> 
-<a class="jxr_linenumber" name="176" href="#176">176</a> 	<em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="177" href="#177">177</a> <em class="jxr_javadoccomment">	 * LifCycle accessor method.</em>
-<a class="jxr_linenumber" name="178" href="#178">178</a> <em class="jxr_javadoccomment">	 *</em>
-<a class="jxr_linenumber" name="179" href="#179">179</a> <em class="jxr_javadoccomment">	 * @return The classpath string associated with this service descriptor.</em>
-<a class="jxr_linenumber" name="180" href="#180">180</a> <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="181" href="#181">181</a>     <strong class="jxr_keyword">public</strong> Set&lt;URI&gt; getClasspath() {
-<a class="jxr_linenumber" name="182" href="#182">182</a>         <strong class="jxr_keyword">if</strong> (classpath == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="183" href="#183">183</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="184" href="#184">184</a>         Set&lt;String&gt;paths = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
-<a class="jxr_linenumber" name="185" href="#185">185</a>         <strong class="jxr_keyword">for</strong> (String s : StringUtils.tokenizerSplit(classpath, File.pathSeparator)) {
-<a class="jxr_linenumber" name="186" href="#186">186</a>             paths.add(s);
-<a class="jxr_linenumber" name="187" href="#187">187</a>             paths.addAll(classPathHelper.getClassPathFromJar(<strong class="jxr_keyword">new</strong> File(s)));
-<a class="jxr_linenumber" name="188" href="#188">188</a>         }
-<a class="jxr_linenumber" name="189" href="#189">189</a> 
-<a class="jxr_linenumber" name="190" href="#190">190</a>         Set&lt;URI&gt; result = <strong class="jxr_keyword">new</strong> HashSet&lt;URI&gt;();
-<a class="jxr_linenumber" name="191" href="#191">191</a>         <strong class="jxr_keyword">for</strong> (String aClasspathArray : paths)
-<a class="jxr_linenumber" name="192" href="#192">192</a>             result.add(<strong class="jxr_keyword">new</strong> File(aClasspathArray).toURI());
-<a class="jxr_linenumber" name="193" href="#193">193</a>         <strong class="jxr_keyword">return</strong> result;
-<a class="jxr_linenumber" name="194" href="#194">194</a> 	}
-<a class="jxr_linenumber" name="195" href="#195">195</a> }
+<a class="jxr_linenumber" name="116" href="#116">116</a>         <strong class="jxr_keyword">super</strong>(serverConfigArgs, lifeCycle);
+<a class="jxr_linenumber" name="117" href="#117">117</a>         setCodebase(getCodebase(descCodebase, address));
+<a class="jxr_linenumber" name="118" href="#118">118</a>         setImplClassName(implClassName);
+<a class="jxr_linenumber" name="119" href="#119">119</a>         setServiceConfigArgs(Arrays.asList(serverConfigArgs));
+<a class="jxr_linenumber" name="120" href="#120">120</a>         setPolicyFile(policy.getPath());
+<a class="jxr_linenumber" name="121" href="#121">121</a>         <strong class="jxr_keyword">this</strong>.classpath = classpath;
+<a class="jxr_linenumber" name="122" href="#122">122</a>     }
+<a class="jxr_linenumber" name="123" href="#123">123</a> 
+<a class="jxr_linenumber" name="124" href="#124">124</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/provider/boot/SorcerServiceDescriptor.html">SorcerServiceDescriptor</a>(String descCodebase, String policy,
+<a class="jxr_linenumber" name="125" href="#125">125</a> 			String classpath, String implClassName,
+<a class="jxr_linenumber" name="126" href="#126">126</a> 			<em class="jxr_comment">// Optional Args</em>
+<a class="jxr_linenumber" name="127" href="#127">127</a> 			LifeCycle lifeCycle, String... serverConfigArgs) {
+<a class="jxr_linenumber" name="128" href="#128">128</a> 		<strong class="jxr_keyword">this</strong>(descCodebase, policy, classpath, implClassName, <strong class="jxr_keyword">null</strong>, lifeCycle, serverConfigArgs);
+<a class="jxr_linenumber" name="129" href="#129">129</a> 	}
+<a class="jxr_linenumber" name="130" href="#130">130</a> 
+<a class="jxr_linenumber" name="131" href="#131">131</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/provider/boot/SorcerServiceDescriptor.html">SorcerServiceDescriptor</a>(String descCodebase, File policy,
+<a class="jxr_linenumber" name="132" href="#132">132</a> 			String classpath, String implClassName,
+<a class="jxr_linenumber" name="133" href="#133">133</a> 			<em class="jxr_comment">// Optional Args</em>
+<a class="jxr_linenumber" name="134" href="#134">134</a> 			String... serverConfigArgs) {
+<a class="jxr_linenumber" name="135" href="#135">135</a> 		<strong class="jxr_keyword">this</strong>(descCodebase, policy.getPath(), classpath, implClassName, serverConfigArgs);
+<a class="jxr_linenumber" name="136" href="#136">136</a> 	}
+<a class="jxr_linenumber" name="137" href="#137">137</a> 
+<a class="jxr_linenumber" name="138" href="#138">138</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="139" href="#139">139</a> <em class="jxr_javadoccomment">	 * Create a SorcerServiceDescriptor. Equivalent to calling the other</em>
+<a class="jxr_linenumber" name="140" href="#140">140</a> <em class="jxr_javadoccomment">	 * overloaded constructor with &lt;code&gt;null&lt;/code&gt; for the</em>
+<a class="jxr_linenumber" name="141" href="#141">141</a> <em class="jxr_javadoccomment">	 * &lt;code&gt;LifeCycle&lt;/code&gt; reference.</em>
+<a class="jxr_linenumber" name="142" href="#142">142</a> <em class="jxr_javadoccomment">	 *</em>
+<a class="jxr_linenumber" name="143" href="#143">143</a> <em class="jxr_javadoccomment">	 * @param codebase</em>
+<a class="jxr_linenumber" name="144" href="#144">144</a> <em class="jxr_javadoccomment">	 *            location where clients can download required service-related</em>
+<a class="jxr_linenumber" name="145" href="#145">145</a> <em class="jxr_javadoccomment">	 *            classes (for example, stubs, proxies, etc.). Codebase</em>
+<a class="jxr_linenumber" name="146" href="#146">146</a> <em class="jxr_javadoccomment">	 *            components must be separated by spaces in which each component</em>
+<a class="jxr_linenumber" name="147" href="#147">147</a> <em class="jxr_javadoccomment">	 *            is in &lt;code&gt;URL&lt;/code&gt; format.</em>
+<a class="jxr_linenumber" name="148" href="#148">148</a> <em class="jxr_javadoccomment">	 * @param policy</em>
+<a class="jxr_linenumber" name="149" href="#149">149</a> <em class="jxr_javadoccomment">	 *            server policy filename or URL</em>
+<a class="jxr_linenumber" name="150" href="#150">150</a> <em class="jxr_javadoccomment">	 * @param classpath</em>
+<a class="jxr_linenumber" name="151" href="#151">151</a> <em class="jxr_javadoccomment">	 *            location where server implementation classes can be found.</em>
+<a class="jxr_linenumber" name="152" href="#152">152</a> <em class="jxr_javadoccomment">	 *            Classpath components must be separated by path separators.</em>
+<a class="jxr_linenumber" name="153" href="#153">153</a> <em class="jxr_javadoccomment">	 * @param implClassName</em>
+<a class="jxr_linenumber" name="154" href="#154">154</a> <em class="jxr_javadoccomment">	 *            name of server implementation class</em>
+<a class="jxr_linenumber" name="155" href="#155">155</a> <em class="jxr_javadoccomment">	 * @param serverConfigArgs</em>
+<a class="jxr_linenumber" name="156" href="#156">156</a> <em class="jxr_javadoccomment">	 *            service configuration arguments</em>
+<a class="jxr_linenumber" name="157" href="#157">157</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="158" href="#158">158</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/provider/boot/SorcerServiceDescriptor.html">SorcerServiceDescriptor</a>(String codebase, String policy,
+<a class="jxr_linenumber" name="159" href="#159">159</a> 			String classpath, String implClassName,
+<a class="jxr_linenumber" name="160" href="#160">160</a> 			<em class="jxr_comment">// Optional Args</em>
+<a class="jxr_linenumber" name="161" href="#161">161</a> 			String... serverConfigArgs) {
+<a class="jxr_linenumber" name="162" href="#162">162</a> 		<strong class="jxr_keyword">this</strong>(codebase, policy, classpath, implClassName, <strong class="jxr_keyword">null</strong>, serverConfigArgs);
+<a class="jxr_linenumber" name="163" href="#163">163</a> 	}
+<a class="jxr_linenumber" name="164" href="#164">164</a> 
+<a class="jxr_linenumber" name="165" href="#165">165</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="166" href="#166">166</a> <em class="jxr_javadoccomment">	 * Codebase accessor method.</em>
+<a class="jxr_linenumber" name="167" href="#167">167</a> <em class="jxr_javadoccomment">	 *</em>
+<a class="jxr_linenumber" name="168" href="#168">168</a> <em class="jxr_javadoccomment">	 * @return The codebase string associated with this service descriptor.</em>
+<a class="jxr_linenumber" name="169" href="#169">169</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="170" href="#170">170</a> 	<strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">static</strong> Set&lt;URL&gt; getCodebase(String codebase, String address) {
+<a class="jxr_linenumber" name="171" href="#171">171</a>         <strong class="jxr_keyword">if</strong> (codebase == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="172" href="#172">172</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> HashSet&lt;URL&gt;();
+<a class="jxr_linenumber" name="173" href="#173">173</a> 
+<a class="jxr_linenumber" name="174" href="#174">174</a>         String[] codebaseArray = StringUtils.tokenizerSplit(codebase, <span class="jxr_string">" "</span>);
+<a class="jxr_linenumber" name="175" href="#175">175</a>         <strong class="jxr_keyword">if</strong> (!codebase.contains(<span class="jxr_string">"http://"</span>))
+<a class="jxr_linenumber" name="176" href="#176">176</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="177" href="#177">177</a>                 <strong class="jxr_keyword">if</strong> (address == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="178" href="#178">178</a>                     address = Booter.getHostAddress();
+<a class="jxr_linenumber" name="179" href="#179">179</a>                 codebase = Booter.getCodebase(codebaseArray, address, Integer.toString(Booter.getPort()));
+<a class="jxr_linenumber" name="180" href="#180">180</a>                 codebaseArray = StringUtils.tokenizerSplit(codebase, <span class="jxr_string">" "</span>);
+<a class="jxr_linenumber" name="181" href="#181">181</a>             } <strong class="jxr_keyword">catch</strong> (UnknownHostException e) {
+<a class="jxr_linenumber" name="182" href="#182">182</a>                 log.warn(<span class="jxr_string">"Cannot get hostname for: {}"</span>, codebase);
+<a class="jxr_linenumber" name="183" href="#183">183</a>             }
+<a class="jxr_linenumber" name="184" href="#184">184</a>         Set&lt;URL&gt; result = <strong class="jxr_keyword">new</strong> HashSet&lt;URL&gt;();
+<a class="jxr_linenumber" name="185" href="#185">185</a>         <strong class="jxr_keyword">for</strong> (String aCodebaseArray : codebaseArray) {
+<a class="jxr_linenumber" name="186" href="#186">186</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="187" href="#187">187</a>                 result.add(<strong class="jxr_keyword">new</strong> URL(aCodebaseArray));
+<a class="jxr_linenumber" name="188" href="#188">188</a>             } <strong class="jxr_keyword">catch</strong> (MalformedURLException e) {
+<a class="jxr_linenumber" name="189" href="#189">189</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Malformed URL in configuration: "</span> + aCodebaseArray, e);
+<a class="jxr_linenumber" name="190" href="#190">190</a>             }
+<a class="jxr_linenumber" name="191" href="#191">191</a>         }
+<a class="jxr_linenumber" name="192" href="#192">192</a>         <strong class="jxr_keyword">return</strong> result;
+<a class="jxr_linenumber" name="193" href="#193">193</a> 	}
+<a class="jxr_linenumber" name="194" href="#194">194</a> 
+<a class="jxr_linenumber" name="195" href="#195">195</a> 	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="196" href="#196">196</a> <em class="jxr_javadoccomment">	 * LifCycle accessor method.</em>
+<a class="jxr_linenumber" name="197" href="#197">197</a> <em class="jxr_javadoccomment">	 *</em>
+<a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_javadoccomment">	 * @return The classpath string associated with this service descriptor.</em>
+<a class="jxr_linenumber" name="199" href="#199">199</a> <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="200" href="#200">200</a>     <strong class="jxr_keyword">public</strong> Set&lt;URI&gt; getClasspath() {
+<a class="jxr_linenumber" name="201" href="#201">201</a>         <strong class="jxr_keyword">if</strong> (classpath == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="202" href="#202">202</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="203" href="#203">203</a>         assert classPathHelper != <strong class="jxr_keyword">null</strong> : <span class="jxr_string">"Null ClassPathHelper"</span>;
+<a class="jxr_linenumber" name="204" href="#204">204</a>         Set&lt;String&gt;paths = <strong class="jxr_keyword">new</strong> HashSet&lt;String&gt;();
+<a class="jxr_linenumber" name="205" href="#205">205</a>         <strong class="jxr_keyword">for</strong> (String s : StringUtils.tokenizerSplit(classpath, File.pathSeparator)) {
+<a class="jxr_linenumber" name="206" href="#206">206</a>             log.debug(s);
+<a class="jxr_linenumber" name="207" href="#207">207</a>             paths.add(s);
+<a class="jxr_linenumber" name="208" href="#208">208</a>             paths.addAll(classPathHelper.getClassPathFromJar(<strong class="jxr_keyword">new</strong> File(s)));
+<a class="jxr_linenumber" name="209" href="#209">209</a>         }
+<a class="jxr_linenumber" name="210" href="#210">210</a> 
+<a class="jxr_linenumber" name="211" href="#211">211</a>         Set&lt;URI&gt; result = <strong class="jxr_keyword">new</strong> HashSet&lt;URI&gt;();
+<a class="jxr_linenumber" name="212" href="#212">212</a>         <strong class="jxr_keyword">for</strong> (String aClasspathArray : paths)
+<a class="jxr_linenumber" name="213" href="#213">213</a>             result.add(<strong class="jxr_keyword">new</strong> File(aClasspathArray).toURI());
+<a class="jxr_linenumber" name="214" href="#214">214</a>         <strong class="jxr_keyword">return</strong> result;
+<a class="jxr_linenumber" name="215" href="#215">215</a> 	}
+<a class="jxr_linenumber" name="216" href="#216">216</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

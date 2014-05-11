@@ -9,32 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.context.model.var.Differentiation
-	c14501 [label=<<table title="sorcer.core.context.model.var.Differentiation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Differentiation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Differentiation </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Differentiation() </td></tr>
-<tr><td align="left" balign="left"> + Differentiation(derivation : Differentiation) </td></tr>
-<tr><td align="left" balign="left"> + Differentiation(evaluator : String, gradient : String, wrt : List&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getEvaluatorName() : String </td></tr>
-<tr><td align="left" balign="left"> + setEvaluatorName(varName : String) </td></tr>
-<tr><td align="left" balign="left"> + getDependentVarNames() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + setDependentVarNames(dependentVarNames : List&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + addDepenedntVar(name : String) : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getGradients() : List&lt;Gradient&gt; </td></tr>
-<tr><td align="left" balign="left"> + getGradient(evaluationName : String) : Gradient </td></tr>
-<tr><td align="left" balign="left"> + setGradients(gradients : List&lt;Gradient&gt;) </td></tr>
-<tr><td align="left" balign="left"> + addGradient(gradient : Gradient) : List&lt;Gradient&gt; </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Differentiation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.var.FidelityInfo
-	c14502 [label=<<table title="sorcer.core.context.model.var.FidelityInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityInfo.html">
+	c11815 [label=<<table title="sorcer.core.context.model.var.FidelityInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FidelityInfo </td></tr>
 		</table></td></tr>
@@ -74,8 +50,32 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FidelityInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.var.Differentiation
+	c11816 [label=<<table title="sorcer.core.context.model.var.Differentiation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Differentiation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Differentiation </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Differentiation() </td></tr>
+<tr><td align="left" balign="left"> + Differentiation(derivation : Differentiation) </td></tr>
+<tr><td align="left" balign="left"> + Differentiation(evaluator : String, gradient : String, wrt : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getEvaluatorName() : String </td></tr>
+<tr><td align="left" balign="left"> + setEvaluatorName(varName : String) </td></tr>
+<tr><td align="left" balign="left"> + getDependentVarNames() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + setDependentVarNames(dependentVarNames : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addDepenedntVar(name : String) : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getGradients() : List&lt;Gradient&gt; </td></tr>
+<tr><td align="left" balign="left"> + getGradient(evaluationName : String) : Gradient </td></tr>
+<tr><td align="left" balign="left"> + setGradients(gradients : List&lt;Gradient&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addGradient(gradient : Gradient) : List&lt;Gradient&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Differentiation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.var.Gradient
-	c14503 [label=<<table title="sorcer.core.context.model.var.Gradient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Gradient.html">
+	c11817 [label=<<table title="sorcer.core.context.model.var.Gradient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Gradient.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Gradient </td></tr>
 		</table></td></tr>

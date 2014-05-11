@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ui.serviceui.UIComponentFactory
-	c502056 [label=<<table title="sorcer.ui.serviceui.UIComponentFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UIComponentFactory.html">
+	c572837 [label=<<table title="sorcer.ui.serviceui.UIComponentFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UIComponentFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UIComponentFactory </td></tr>
 		</table></td></tr>
@@ -27,18 +27,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UIComponentFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ui.serviceui.UIComponentFactory implements net.jini.lookup.ui.factory.JComponentFactory
-	c502394:p -> c502056:p [dir=back,arrowtail=empty,style=dashed];
+	c573211:p -> c572837:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ui.serviceui.UIComponentFactory implements java.io.Serializable
-	c502395:p -> c502056:p [dir=back,arrowtail=empty,style=dashed];
+	c573212:p -> c572837:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c502395 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c573212 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.lookup.ui.factory.JComponentFactory
-	c502394 [label=<<table title="net.jini.lookup.ui.factory.JComponentFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c573211 [label=<<table title="net.jini.lookup.ui.factory.JComponentFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> JComponentFactory </td></tr>

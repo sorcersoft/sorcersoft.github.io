@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.launcher.process.ForkingLauncher
-	c233543 [label=<<table title="sorcer.launcher.process.ForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./process/ForkingLauncher.html">
+	c264961 [label=<<table title="sorcer.launcher.process.ForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./process/ForkingLauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ForkingLauncher </td></tr>
 		</table></td></tr>
@@ -21,6 +21,7 @@ digraph G {
 <tr><td align="left" balign="left"> + ForkingLauncher() </td></tr>
 <tr><td align="left" balign="left"> + preConfigure() </td></tr>
 <tr><td align="left" balign="left"> + start() </td></tr>
+<tr><td align="left" balign="left"> + getPid() : int </td></tr>
 <tr><td align="left" balign="left"> + stop() </td></tr>
 <tr><td align="left" balign="left"> # getEnvironment() : Properties </td></tr>
 <tr><td align="left" balign="left"> + setDebugPort(debugPort : Integer) </td></tr>
@@ -32,7 +33,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./process/ForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.ILauncher
-	c233952 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ILauncher.html">
+	c265360 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ILauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ILauncher </td></tr>
@@ -55,7 +56,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ILauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.IForkingLauncher
-	c233960 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IForkingLauncher.html">
+	c265366 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IForkingLauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IForkingLauncher </td></tr>
@@ -72,8 +73,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.process.ForkingLauncher implements sorcer.launcher.IForkingLauncher
-	c233960:p -> c233543:p [dir=back,arrowtail=empty,style=dashed];
+	c265366:p -> c264961:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.launcher.IForkingLauncher implements sorcer.launcher.ILauncher
-	c233952:p -> c233960:p [dir=back,arrowtail=empty,style=dashed];
+	c265360:p -> c265366:p [dir=back,arrowtail=empty,style=dashed];
 }
 

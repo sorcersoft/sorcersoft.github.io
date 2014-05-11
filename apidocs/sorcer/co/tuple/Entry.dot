@@ -9,8 +9,21 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Arg
+	c208396 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Evaluation<T>
-	c181835 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
+	c208417 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
@@ -24,33 +37,24 @@ digraph G {
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Arg
-	c181888 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
+	// sorcer.co.tuple.FidelityEntry<T>
+	c208569 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Arg </td></tr>
+<tr><td align="center" balign="center"> FidelityEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + FidelityEntry() </td></tr>
+<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, value : T) </td></tr>
+<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, fidelity : FidelityInfo) </td></tr>
+<tr><td align="left" balign="left"> + fidelity() : FidelityInfo </td></tr>
+<tr><td align="left" balign="left"> + fidelity(fidelity : FidelityInfo) </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Complement<T2>
-	c181905 [label=<<table title="sorcer.co.tuple.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Complement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Complement&lt;T2&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Complement(path : String, value : T2) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Complement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./FidelityEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c181910 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
+	c208583 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -74,24 +78,20 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.FidelityEntry<T>
-	c181914 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityEntry.html">
+	// sorcer.co.tuple.Complement<T2>
+	c208584 [label=<<table title="sorcer.co.tuple.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Complement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> FidelityEntry&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> Complement&lt;T2&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + FidelityEntry() </td></tr>
-<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, value : T) </td></tr>
-<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, fidelity : FidelityInfo) </td></tr>
-<tr><td align="left" balign="left"> + fidelity() : FidelityInfo </td></tr>
-<tr><td align="left" balign="left"> + fidelity(fidelity : FidelityInfo) </td></tr>
+<tr><td align="left" balign="left"> + Complement(path : String, value : T2) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./FidelityEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Complement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Entry<T>
-	c181918 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Entry.html">
+	c208587 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Entry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -117,29 +117,29 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Entry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.Complement<T2>
-	c182117 [label=<<table title="sorcer.eo.operator.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.Complement.html">
+	c208822 [label=<<table title="sorcer.eo.operator.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.Complement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Complement&lt;T2&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../eo/operator.Complement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.co.tuple.Complement<T2> extends sorcer.co.tuple.Entry<T2>
-	c181918:p -> c181905:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Arg
-	c181888:p -> c181910:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.FidelityEntry<T> extends sorcer.co.tuple.Entry<T>
-	c181918:p -> c181914:p [dir=back,arrowtail=empty];
+	c208587:p -> c208569:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Arg
+	c208396:p -> c208583:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.co.tuple.Complement<T2> extends sorcer.co.tuple.Entry<T2>
+	c208587:p -> c208584:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Entry<T> extends sorcer.co.tuple.Tuple2<java.lang.String, T>
-	c181910:p -> c181918:p [dir=back,arrowtail=empty];
+	c208583:p -> c208587:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Entry<T> implements sorcer.service.Arg
-	c181888:p -> c181918:p [dir=back,arrowtail=empty,style=dashed];
+	c208396:p -> c208587:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Entry<T> implements sorcer.service.Evaluation<T>
-	c181835:p -> c181918:p [dir=back,arrowtail=empty,style=dashed];
+	c208417:p -> c208587:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Entry<T> implements java.lang.Comparable<T>
-	c182281:p -> c181918:p [dir=back,arrowtail=empty,style=dashed];
+	c208992:p -> c208587:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.eo.operator.Complement<T2> extends sorcer.co.tuple.Entry<T2>
-	c181918:p -> c182117:p [dir=back,arrowtail=empty];
+	c208587:p -> c208822:p [dir=back,arrowtail=empty];
 	// java.lang.Comparable<T>
-	c182281 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
+	c208992 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Comparable&lt;T&gt; </td></tr>

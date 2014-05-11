@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.AdministratableProvider
-	c86121 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AdministratableProvider.html">
+	c100164 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AdministratableProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> AdministratableProvider </td></tr>
 		</table></td></tr>
 		</table>>, URL="../AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.AdminProxy
-	c86179 [label=<<table title="sorcer.core.proxy.AdminProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AdminProxy.html">
+	c100429 [label=<<table title="sorcer.core.proxy.AdminProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AdminProxy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AdminProxy </td></tr>
 		</table></td></tr>
@@ -45,15 +45,15 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AdminProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.proxy.AdminProxy implements sorcer.core.AdministratableProvider
-	c86121:p -> c86179:p [dir=back,arrowtail=empty,style=dashed];
+	c100164:p -> c100429:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.AdminProxy implements net.jini.id.ReferentUuid
-	c86716:p -> c86179:p [dir=back,arrowtail=empty,style=dashed];
+	c100877:p -> c100429:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.AdminProxy implements net.jini.core.constraint.RemoteMethodControl
-	c86717:p -> c86179:p [dir=back,arrowtail=empty,style=dashed];
+	c100878:p -> c100429:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.AdminProxy implements java.io.Serializable
-	c86718:p -> c86179:p [dir=back,arrowtail=empty,style=dashed];
+	c100879:p -> c100429:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.id.ReferentUuid
-	c86716 [label=<<table title="net.jini.id.ReferentUuid" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/id/ReferentUuid.html">
+	c100877 [label=<<table title="net.jini.id.ReferentUuid" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/id/ReferentUuid.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ReferentUuid </td></tr>
@@ -66,14 +66,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/id/ReferentUuid.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.io.Serializable
-	c86718 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c100879 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.core.constraint.RemoteMethodControl
-	c86717 [label=<<table title="net.jini.core.constraint.RemoteMethodControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html">
+	c100878 [label=<<table title="net.jini.core.constraint.RemoteMethodControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteMethodControl </td></tr>

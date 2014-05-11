@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.HTMLView
-	c226542 [label=<<table title="sorcer.ssb.tools.plugin.browser.HTMLView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HTMLView.html">
+	c256775 [label=<<table title="sorcer.ssb.tools.plugin.browser.HTMLView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HTMLView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HTMLView </td></tr>
 		</table></td></tr>
@@ -26,11 +26,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HTMLView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.HTMLView extends javax.swing.JPanel
-	c226646:p -> c226542:p [dir=back,arrowtail=empty];
+	c256876:p -> c256775:p [dir=back,arrowtail=empty];
 	//sorcer.ssb.tools.plugin.browser.HTMLView implements javax.swing.event.HyperlinkListener
-	c226647:p -> c226542:p [dir=back,arrowtail=empty,style=dashed];
+	c256877:p -> c256775:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.event.HyperlinkListener
-	c226647 [label=<<table title="javax.swing.event.HyperlinkListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/event/HyperlinkListener.html">
+	c256877 [label=<<table title="javax.swing.event.HyperlinkListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/event/HyperlinkListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HyperlinkListener </td></tr>
@@ -43,7 +43,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/event/HyperlinkListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// javax.swing.JPanel
-	c226646 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
+	c256876 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JPanel </td></tr>
 		</table></td></tr>

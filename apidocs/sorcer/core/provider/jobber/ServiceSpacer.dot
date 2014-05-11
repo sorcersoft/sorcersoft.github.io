@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c421946 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../SorcerConstants.html">
+	c485435 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -615,13 +615,29 @@ digraph G {
 <tr><td align="left" balign="left"> + ACCESS_CLASS : String </td></tr>
 <tr><td align="left" balign="left"> + CODEBASE_SEPARATOR : String </td></tr>
 <tr><td align="left" balign="left"> + NAME_DEFAULT : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_SORCER_REMOTE_CALL : String </td></tr>
+<tr><td align="left" balign="left"> + START_PACKAGE : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Executor
+	c485603 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Executor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Executor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../service/Executor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c421983 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c485664 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -721,7 +737,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 <tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
 <tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
 <tr><td align="left" balign="left"> + loadConfiguration(filename : String) </td></tr>
 <tr><td align="left" balign="left"> + hangup() </td></tr>
 <tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
@@ -755,31 +770,18 @@ digraph G {
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Spacer
-	c421991 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Spacer.html">
+	c485672 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Spacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Spacer </td></tr>
 		</table></td></tr>
 		</table>>, URL="../Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Executor
-	c422150 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Executor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Executor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../service/Executor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.jobber.ServiceSpacer
-	c422241 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceSpacer.html">
+	c485840 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceSpacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSpacer </td></tr>
 		</table></td></tr>
@@ -800,12 +802,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.jobber.ServiceSpacer extends sorcer.core.provider.ServiceProvider
-	c421983:p -> c422241:p [dir=back,arrowtail=empty];
+	c485664:p -> c485840:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.core.provider.Spacer
-	c421991:p -> c422241:p [dir=back,arrowtail=empty,style=dashed];
+	c485672:p -> c485840:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.service.Executor
-	c422150:p -> c422241:p [dir=back,arrowtail=empty,style=dashed];
+	c485603:p -> c485840:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.core.SorcerConstants
-	c421946:p -> c422241:p [dir=back,arrowtail=empty,style=dashed];
+	c485435:p -> c485840:p [dir=back,arrowtail=empty,style=dashed];
 }
 

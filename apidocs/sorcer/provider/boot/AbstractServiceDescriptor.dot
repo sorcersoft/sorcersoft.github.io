@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.AbstractServiceDescriptor
-	c74237 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractServiceDescriptor.html">
+	c86882 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractServiceDescriptor </font></td></tr>
 		</table></td></tr>
@@ -18,6 +18,7 @@ digraph G {
 <tr><td align="left" balign="left"> # globalPolicy : AggregatePolicyProvider </td></tr>
 <tr><td align="left" balign="left"> # initialGlobalPolicy : Policy </td></tr>
 <tr><td align="left" balign="left"> # parentInjector : Injector </td></tr>
+<tr><td align="left" balign="left"> # configurer : Configurer </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> # defaultLifeCycle : LifeCycle </td></tr>
 		</table></td></tr>
@@ -43,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.SorcerServiceDescriptor
-	c74240 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
+	c86884 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -52,14 +53,16 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
+<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : File, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
+<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : File, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
 <tr><td align="left" balign="left"> + SorcerServiceDescriptor(codebase : String, policy : String, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
 <tr><td align="left" balign="left"> # getCodebase(codebase : String, address : String) : Set&lt;URL&gt; </td></tr>
 <tr><td align="left" balign="left"> + getClasspath() : Set&lt;URI&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.ResolvingServiceDescriptor
-	c74252 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../boot/ResolvingServiceDescriptor.html">
+	c86893 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../boot/ResolvingServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResolvingServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -68,20 +71,23 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # ResolvingServiceDescriptor() </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String, configFile : String) </td></tr>
 <tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : String, classpath : String, implClassName : String, configFile : String) </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String) </td></tr>
 <tr><td align="left" balign="left"> # asArtifacts(artifact : String) : Set&lt;Artifact&gt; </td></tr>
 <tr><td align="left" balign="left"> + codebase(codebase : Set&lt;Artifact&gt;) : Set&lt;URL&gt; </td></tr>
 <tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../boot/ResolvingServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.provider.boot.AbstractServiceDescriptor implements com.sun.jini.start.ServiceDescriptor
-	c74427:p -> c74237:p [dir=back,arrowtail=empty,style=dashed];
+	c87088:p -> c86882:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.provider.boot.SorcerServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c74237:p -> c74240:p [dir=back,arrowtail=empty];
+	c86882:p -> c86884:p [dir=back,arrowtail=empty];
 	//sorcer.boot.ResolvingServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c74237:p -> c74252:p [dir=back,arrowtail=empty];
+	c86882:p -> c86893:p [dir=back,arrowtail=empty];
 	// com.sun.jini.start.ServiceDescriptor
-	c74427 [label=<<table title="com.sun.jini.start.ServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/ServiceDescriptor.html">
+	c87088 [label=<<table title="com.sun.jini.start.ServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/ServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceDescriptor </td></tr>

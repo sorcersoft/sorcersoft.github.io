@@ -9,8 +9,52 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Arg
+	c496433 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Signature
+	c496445 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Signature.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Signature </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SRV : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + PRE : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + POST : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + APD : Signature.Type </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
+<tr><td align="left" balign="left"> + getPrefix() : String </td></tr>
+<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
+<tr><td align="left" balign="left"> + setProviderName(providerName : String) </td></tr>
+<tr><td align="left" balign="left"> + getServiceType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : ReturnPath&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setServiceType(serviceType : Class&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getType() : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + setType(type : Signature.Type) : Signature </td></tr>
+<tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
+<tr><td align="left" balign="left"> + setCodebase(urls : String) </td></tr>
+<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
+<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Signature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.ServiceSignature
-	c432892 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/signature/ServiceSignature.html">
+	c496571 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/signature/ServiceSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSignature </td></tr>
 		</table></td></tr>
@@ -97,67 +141,23 @@ digraph G {
 <tr><td align="left" balign="left"> + compareTo(signature : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/signature/ServiceSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Signature
-	c433032 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Signature.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Signature </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SRV : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + PRE : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + POST : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + APD : Signature.Type </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
-<tr><td align="left" balign="left"> + getPrefix() : String </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + setProviderName(providerName : String) </td></tr>
-<tr><td align="left" balign="left"> + getServiceType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : ReturnPath&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setServiceType(serviceType : Class&lt;?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getType() : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + setType(type : Signature.Type) : Signature </td></tr>
-<tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
-<tr><td align="left" balign="left"> + setCodebase(urls : String) </td></tr>
-<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
-<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Signature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Arg
-	c433064 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Arg </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.signature.ServiceSignature implements sorcer.service.Signature
-	c433032:p -> c432892:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Signature implements java.io.Serializable
-	c433457:p -> c433032:p [dir=back,arrowtail=empty,style=dashed];
+	c497029:p -> c496445:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Signature implements java.lang.Comparable<T>
-	c433458:p -> c433032:p [dir=back,arrowtail=empty,style=dashed];
+	c497030:p -> c496445:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Signature implements sorcer.service.Arg
-	c433064:p -> c433032:p [dir=back,arrowtail=empty,style=dashed];
+	c496433:p -> c496445:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.signature.ServiceSignature implements sorcer.service.Signature
+	c496445:p -> c496571:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c433457 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c497029 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.lang.Comparable<T>
-	c433458 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
+	c497030 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Comparable&lt;T&gt; </td></tr>

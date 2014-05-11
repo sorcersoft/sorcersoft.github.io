@@ -217,7 +217,7 @@
 <a class="jxr_linenumber" name="207" href="#207">207</a> 
 <a class="jxr_linenumber" name="208" href="#208">208</a> 		<strong class="jxr_keyword">final</strong> Process process = Runtime.getRuntime().exec(cmd);				
 <a class="jxr_linenumber" name="209" href="#209">209</a> 		<strong class="jxr_keyword">final</strong> PrintWriter logOut = <strong class="jxr_keyword">new</strong> PrintWriter(logFile);
-<a class="jxr_linenumber" name="210" href="#210">210</a> 		Thread scriptLogger = <strong class="jxr_keyword">new</strong> Thread() {
+<a class="jxr_linenumber" name="210" href="#210">210</a> 		Thread scriptLogger = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">new</strong> Runnable() {
 <a class="jxr_linenumber" name="211" href="#211">211</a> 			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="212" href="#212">212</a> 				String line;
 <a class="jxr_linenumber" name="213" href="#213">213</a> 				BufferedReader in = <strong class="jxr_keyword">new</strong> BufferedReader(<strong class="jxr_keyword">new</strong> InputStreamReader(
@@ -238,7 +238,7 @@
 <a class="jxr_linenumber" name="228" href="#228">228</a> 									+ logFile);
 <a class="jxr_linenumber" name="229" href="#229">229</a> 				}
 <a class="jxr_linenumber" name="230" href="#230">230</a> 			}
-<a class="jxr_linenumber" name="231" href="#231">231</a> 		};
+<a class="jxr_linenumber" name="231" href="#231">231</a> 		}, Thread.currentThread().getName()+<span class="jxr_string">"-STDIN-"</span>+process.toString());
 <a class="jxr_linenumber" name="232" href="#232">232</a> 		scriptLogger.start();
 <a class="jxr_linenumber" name="233" href="#233">233</a> 		CmdResult result = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="234" href="#234">234</a> 		<strong class="jxr_keyword">if</strong> (stdin != <strong class="jxr_keyword">null</strong>)

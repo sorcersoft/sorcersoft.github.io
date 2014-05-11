@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.dispatch.SpaceExertDispatcher
-	c464578 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
+	c530833 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SpaceExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceBlockDispatcher
-	c464605 [label=<<table title="sorcer.core.dispatch.SpaceBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceBlockDispatcher.html">
+	c530858 [label=<<table title="sorcer.core.dispatch.SpaceBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceBlockDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceBlockDispatcher </td></tr>
 		</table></td></tr>
@@ -50,6 +50,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.SpaceBlockDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c464578:p -> c464605:p [dir=back,arrowtail=empty];
+	c530833:p -> c530858:p [dir=back,arrowtail=empty];
 }
 

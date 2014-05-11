@@ -9,8 +9,58 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.provider.cataloger.ui.CatalogerUI
+	c71710 [label=<<table title="sorcer.core.provider.cataloger.ui.CatalogerUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogerUI.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogerUI </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # logger : Logger </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogerUI(obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogerUI.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.ContextNodeType
+	c71711 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextNodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextNodeType.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContextNodeType </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + INPUTTYPE : String </td></tr>
+<tr><td align="left" balign="left"> + OUTPUTTYPE : String </td></tr>
+<tr><td align="left" balign="left"> + INOUTPUTTYPE : String </td></tr>
+<tr><td align="left" balign="left"> + DEFAULTTYPE : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getValue() : String </td></tr>
+<tr><td align="left" balign="left"> + isDataNode() : Boolean </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
+<tr><td align="left" balign="left"> + getObject() : Object </td></tr>
+<tr><td align="left" balign="left"> + getDirection() : String </td></tr>
+<tr><td align="left" balign="left"> + setDirection(newDirection : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextNodeType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.ContextView
+	c71712 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextView.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContextView </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ContextView(signatureDispatcher : SignatureDispatchment) </td></tr>
+<tr><td align="left" balign="left"> + buildTreeFromContext(treePanel : ContextTree, theContext : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + actionPerformed(actionEvent : ActionEvent) </td></tr>
+<tr><td align="left" balign="left"> # makeTextPanel(text : String) : JComponent </td></tr>
+<tr><td align="left" balign="left"> + update(context : Observable, updated : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger
-	c60637 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForCataloger.html">
+	c71713 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureDispatcherForCataloger </td></tr>
 		</table></td></tr>
@@ -36,71 +86,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatcherForCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.ContextEditWindow
-	c60638 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextEditWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextEditWindow.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextEditWindow </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextEditWindow(theRootTree : ContextTree, currentPath : TreePath) </td></tr>
-<tr><td align="left" balign="left"> + actionPerformed(actionEvent : ActionEvent) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextEditWindow.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.ContextNodeType
-	c60639 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextNodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextNodeType.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextNodeType </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + INPUTTYPE : String </td></tr>
-<tr><td align="left" balign="left"> + OUTPUTTYPE : String </td></tr>
-<tr><td align="left" balign="left"> + INOUTPUTTYPE : String </td></tr>
-<tr><td align="left" balign="left"> + DEFAULTTYPE : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getValue() : String </td></tr>
-<tr><td align="left" balign="left"> + isDataNode() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + getObject() : Object </td></tr>
-<tr><td align="left" balign="left"> + getDirection() : String </td></tr>
-<tr><td align="left" balign="left"> + setDirection(newDirection : String) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextNodeType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.ContextView
-	c60640 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextView.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextView </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextView(signatureDispatcher : SignatureDispatchment) </td></tr>
-<tr><td align="left" balign="left"> + buildTreeFromContext(treePanel : ContextTree, theContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + actionPerformed(actionEvent : ActionEvent) </td></tr>
-<tr><td align="left" balign="left"> # makeTextPanel(text : String) : JComponent </td></tr>
-<tr><td align="left" balign="left"> + update(context : Observable, updated : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.CatalogerUI
-	c60641 [label=<<table title="sorcer.core.provider.cataloger.ui.CatalogerUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogerUI.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogerUI </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # logger : Logger </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogerUI(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogerUI.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.ContextTree
-	c60642 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextTree" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextTree.html">
+	c71714 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextTree" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextTree.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextTree </td></tr>
 		</table></td></tr>
@@ -123,54 +110,21 @@ digraph G {
 <tr><td align="left" balign="left"> + nodeExists(path : String) : DefaultMutableTreeNode </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextTree.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.SignatureView
-	c60643 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureView.html">
+	// sorcer.core.provider.cataloger.ui.ContextEditWindow
+	c71715 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextEditWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextEditWindow.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SignatureView </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + provider_l : JList&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + interface_l : JList&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + method_l : JList&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + PROVIDER_SEARCH : String </td></tr>
-<tr><td align="left" balign="left"> + INTERFACE_SEARCH : String </td></tr>
-<tr><td align="left" balign="left"> + METHOD_SEARCH : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SignatureView(withProviderList : boolean) </td></tr>
-<tr><td align="left" balign="left"> + addListeners(search : ActionListener, providerL : ListSelectionListener, interfaceL : ListSelectionListener, methodL : ListSelectionListener) </td></tr>
-<tr><td align="left" balign="left"> + update(Model : Observable, updated_interface : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SignatureView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c60644 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatchment.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SignatureDispatchment </td></tr>
+<tr><td align="center" balign="center"> ContextEditWindow </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProviderListener() : ListSelectionListener </td></tr>
-<tr><td align="left" balign="left"> + getInterfaceListener() : ListSelectionListener </td></tr>
-<tr><td align="left" balign="left"> + getMethodListener() : ListSelectionListener </td></tr>
-<tr><td align="left" balign="left"> + actionPerformed(e : ActionEvent) </td></tr>
-<tr><td align="left" balign="left"> + fillModel() </td></tr>
-<tr><td align="left" balign="left"> + getProviders() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInterfaces(providerName : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getMethods(interfaceName : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getSavedContextList() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getContext(methodName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + saveContext(theContext : Context&lt;&gt;) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + saveContext(newName : String, theContext : Context&lt;&gt;) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + deleteContext(methodName : String) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + exertService(theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
+<tr><td align="left" balign="left"> + ContextEditWindow(theRootTree : ContextTree, currentPath : TreePath) </td></tr>
+<tr><td align="left" balign="left"> + actionPerformed(actionEvent : ActionEvent) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SignatureDispatchment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ContextEditWindow.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider
-	c60645 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForProvider.html">
+	c71716 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureDispatcherForProvider </td></tr>
 		</table></td></tr>
@@ -196,8 +150,79 @@ digraph G {
 <tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatcherForProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.SignatureDispatchment
+	c71717 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatchment.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SignatureDispatchment </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getProviderListener() : ListSelectionListener </td></tr>
+<tr><td align="left" balign="left"> + getInterfaceListener() : ListSelectionListener </td></tr>
+<tr><td align="left" balign="left"> + getMethodListener() : ListSelectionListener </td></tr>
+<tr><td align="left" balign="left"> + actionPerformed(e : ActionEvent) </td></tr>
+<tr><td align="left" balign="left"> + fillModel() </td></tr>
+<tr><td align="left" balign="left"> + getProviders() : String[] </td></tr>
+<tr><td align="left" balign="left"> + getInterfaces(providerName : String) : String[] </td></tr>
+<tr><td align="left" balign="left"> + getMethods(interfaceName : String) : String[] </td></tr>
+<tr><td align="left" balign="left"> + getSavedContextList() : String[] </td></tr>
+<tr><td align="left" balign="left"> + getContext(methodName : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveContext(theContext : Context&lt;&gt;) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + saveContext(newName : String, theContext : Context&lt;&gt;) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + deleteContext(methodName : String) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + exertService(theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SignatureDispatchment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.SignatureView
+	c71718 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureView.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SignatureView </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + provider_l : JList&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + interface_l : JList&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + method_l : JList&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + PROVIDER_SEARCH : String </td></tr>
+<tr><td align="left" balign="left"> + INTERFACE_SEARCH : String </td></tr>
+<tr><td align="left" balign="left"> + METHOD_SEARCH : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SignatureView(withProviderList : boolean) </td></tr>
+<tr><td align="left" balign="left"> + addListeners(search : ActionListener, providerL : ListSelectionListener, interfaceL : ListSelectionListener, methodL : ListSelectionListener) </td></tr>
+<tr><td align="left" balign="left"> + update(Model : Observable, updated_interface : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SignatureView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.ContextScriptView
+	c71719 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextScriptView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextScriptView.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContextScriptView </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ContextScriptView(dispatcher : SignatureDispatchment, model : BrowserModel) </td></tr>
+<tr><td align="left" balign="left"> + createOutContextPanel(text : String) : JPanel </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextScriptView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.BrowserWindow
+	c71720 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserWindow.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BrowserWindow </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BrowserWindow(model : BrowserModel, dispatcher : SignatureDispatchment, withProviderList : boolean) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./BrowserWindow.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.BrowserModel
-	c60646 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserModel.html">
+	c71721 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BrowserModel </td></tr>
 		</table></td></tr>
@@ -233,34 +258,9 @@ digraph G {
 <tr><td align="left" balign="left"> + setContextScript(contextScript : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BrowserModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.BrowserWindow
-	c60647 [label=<<table title="sorcer.core.provider.cataloger.ui.BrowserWindow" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BrowserWindow.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> BrowserWindow </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + BrowserWindow(model : BrowserModel, dispatcher : SignatureDispatchment, withProviderList : boolean) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./BrowserWindow.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.ContextScriptView
-	c60648 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextScriptView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextScriptView.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextScriptView </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextScriptView(dispatcher : SignatureDispatchment, model : BrowserModel) </td></tr>
-<tr><td align="left" balign="left"> + createOutContextPanel(text : String) : JPanel </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextScriptView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c60644:p -> c60637:p [dir=back,arrowtail=empty,style=dashed];
+	c71717:p -> c71713:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c60644:p -> c60645:p [dir=back,arrowtail=empty,style=dashed];
+	c71717:p -> c71716:p [dir=back,arrowtail=empty,style=dashed];
 }
 

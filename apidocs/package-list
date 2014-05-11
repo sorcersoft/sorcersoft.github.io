@@ -1,15 +1,21 @@
-org.sorcersoft.sorcer.rio.resolver
+org.sorcersoft.sorcer.resolver
 sorcer.account.provider
 sorcer.account.provider.ui
 sorcer.account.provider.ui.mvc
 sorcer.account.requestor
 sorcer.boot
+sorcer.boot.destroy
 sorcer.boot.load
 sorcer.boot.platform
+sorcer.boot.rio
 sorcer.boot.util
+sorcer.client
 sorcer.co
 sorcer.co.tuple
 sorcer.config
+sorcer.config.convert
+sorcer.container.core
+sorcer.container.discovery
 sorcer.core
 sorcer.core.context
 sorcer.core.context.eval
@@ -31,6 +37,7 @@ sorcer.core.monitor
 sorcer.core.provider
 sorcer.core.provider.cataloger
 sorcer.core.provider.cataloger.ui
+sorcer.core.provider.container
 sorcer.core.provider.dbp
 sorcer.core.provider.exertmonitor
 sorcer.core.provider.exertmonitor.db
@@ -42,6 +49,7 @@ sorcer.core.provider.ui
 sorcer.core.provider.util
 sorcer.core.proxy
 sorcer.core.requestor
+sorcer.core.service
 sorcer.core.signature
 sorcer.eo
 sorcer.ex0
@@ -57,6 +65,7 @@ sorcer.netlet
 sorcer.netlet.util
 sorcer.org.apache.commons.io.output
 sorcer.org.apache.commons.lang3
+sorcer.platform.logger
 sorcer.po
 sorcer.protocol
 sorcer.provider.boot
@@ -85,6 +94,7 @@ sorcer.tools
 sorcer.tools.shell
 sorcer.tools.shell.cmds
 sorcer.tools.webster
+sorcer.tools.webster.start
 sorcer.ui.exertlet
 sorcer.ui.serviceui
 sorcer.ui.util
@@ -98,6 +108,7 @@ sorcer.util.eval
 sorcer.util.exec
 sorcer.util.io
 sorcer.util.observable
+sorcer.util.reflect
 sorcer.util.rio
 sorcer.util.ui
 sorcer.vfe

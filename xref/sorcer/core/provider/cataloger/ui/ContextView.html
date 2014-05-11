@@ -391,7 +391,7 @@
 <a class="jxr_linenumber" name="381" href="#381">381</a> 				<em class="jxr_comment">// for(int i = 0; i&lt; sortedVec.size();i++) {</em>
 <a class="jxr_linenumber" name="382" href="#382">382</a> 				cnt++;
 <a class="jxr_linenumber" name="383" href="#383">383</a> 				<em class="jxr_comment">// path = (String)sortedVec.elementAt(i);</em>
-<a class="jxr_linenumber" name="384" href="#384">384</a> 				path = (String) key;
+<a class="jxr_linenumber" name="384" href="#384">384</a> 				path = key;
 <a class="jxr_linenumber" name="385" href="#385">385</a> 				<em class="jxr_comment">// System.out.println("path: "+path);</em>
 <a class="jxr_linenumber" name="386" href="#386">386</a> 				String data = <span class="jxr_string">""</span>;
 <a class="jxr_linenumber" name="387" href="#387">387</a> 				String splitPath[] = path.split(<span class="jxr_string">"/"</span>);
@@ -443,8 +443,8 @@
 <a class="jxr_linenumber" name="433" href="#433">433</a> 						<strong class="jxr_keyword">if</strong> (data.length() != 0)
 <a class="jxr_linenumber" name="434" href="#434">434</a> 							treePanel.addObject(parentNode,
 <a class="jxr_linenumber" name="435" href="#435">435</a> 									<strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/provider/cataloger/ui/ContextNodeType.html">ContextNodeType</a>(
-<a class="jxr_linenumber" name="436" href="#436">436</a> 											((ContextNode) theContext
-<a class="jxr_linenumber" name="437" href="#437">437</a> 													.getValue(path)), <strong class="jxr_keyword">true</strong>),
+<a class="jxr_linenumber" name="436" href="#436">436</a>                                             theContext
+<a class="jxr_linenumber" name="437" href="#437">437</a>                                                     .getValue(path), <strong class="jxr_keyword">true</strong>),
 <a class="jxr_linenumber" name="438" href="#438">438</a> 									<strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="439" href="#439">439</a> 					} <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="440" href="#440">440</a> 						<strong class="jxr_keyword">if</strong> (theContext.getValue(path).toString().length() != 0)

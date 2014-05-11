@@ -9,8 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.account.provider.AccountProvider
+	c79007 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AccountProvider </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + setProperties(props : Properties) </td></tr>
+<tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getBalance() : Money </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(amount : Money) </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.AccountImpl
-	c66818 [label=<<table title="sorcer.account.provider.AccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountImpl.html">
+	c79008 [label=<<table title="sorcer.account.provider.AccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AccountImpl </td></tr>
 		</table></td></tr>
@@ -25,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AccountImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.ServiceAccountImpl
-	c66819 [label=<<table title="sorcer.account.provider.ServiceAccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccountImpl.html">
+	c79009 [label=<<table title="sorcer.account.provider.ServiceAccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccountImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccountImpl </td></tr>
 		</table></td></tr>
@@ -47,59 +66,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setAdmin(admin : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceAccountImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.account.provider.AccountProvider
-	c66820 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AccountProvider </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getBalance() : Money </td></tr>
-<tr><td align="left" balign="left"> + makeDeposit(amount : Money) </td></tr>
-<tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.account.provider.Money
-	c66821 [label=<<table title="sorcer.account.provider.Money" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Money.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Money </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # cents : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Money(cents : Integer) </td></tr>
-<tr><td align="left" balign="left"> + Money(cents : int) </td></tr>
-<tr><td align="left" balign="left"> + getCents() : int </td></tr>
-<tr><td align="left" balign="left"> + add(otherMoney : Money) </td></tr>
-<tr><td align="left" balign="left"> + subtract(otherMoney : Money) </td></tr>
-<tr><td align="left" balign="left"> + greaterThan(otherMoney : Money) : boolean </td></tr>
-<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + value() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Money.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.account.provider.OverdraftException
-	c66822 [label=<<table title="sorcer.account.provider.OverdraftException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OverdraftException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OverdraftException </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + withdrawalSucceeded : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + OverdraftException(withdrawalSucceeded : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isWithdrawalSucceeded() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OverdraftException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.ServiceAccount
-	c66823 [label=<<table title="sorcer.account.provider.ServiceAccount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccount.html">
+	c79010 [label=<<table title="sorcer.account.provider.ServiceAccount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccount.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceAccount </td></tr>
@@ -118,20 +86,21 @@ digraph G {
 <tr><td align="left" balign="left"> + makeWithdrawal(account : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceAccount.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.account.provider.AccountException
-	c66824 [label=<<table title="sorcer.account.provider.AccountException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountException.html">
+	// sorcer.account.provider.OverdraftException
+	c79011 [label=<<table title="sorcer.account.provider.OverdraftException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OverdraftException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AccountException </td></tr>
+<tr><td align="center" balign="center"> OverdraftException </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + withdrawalSucceeded : boolean </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AccountException(cause : Exception) </td></tr>
+<tr><td align="left" balign="left"> + OverdraftException(withdrawalSucceeded : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isWithdrawalSucceeded() : boolean </td></tr>
 		</table></td></tr>
-		</table>>, URL="./AccountException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OverdraftException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.Account
-	c66825 [label=<<table title="sorcer.account.provider.Account" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Account.html">
+	c79012 [label=<<table title="sorcer.account.provider.Account" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Account.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Account </td></tr>
@@ -145,8 +114,40 @@ digraph G {
 <tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Account.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.account.provider.Money
+	c79013 [label=<<table title="sorcer.account.provider.Money" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Money.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Money </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # cents : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Money(cents : Integer) </td></tr>
+<tr><td align="left" balign="left"> + Money(cents : int) </td></tr>
+<tr><td align="left" balign="left"> + getCents() : int </td></tr>
+<tr><td align="left" balign="left"> + add(otherMoney : Money) </td></tr>
+<tr><td align="left" balign="left"> + subtract(otherMoney : Money) </td></tr>
+<tr><td align="left" balign="left"> + greaterThan(otherMoney : Money) : boolean </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + value() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Money.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.account.provider.AccountException
+	c79014 [label=<<table title="sorcer.account.provider.AccountException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AccountException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + withdrawalSucceeded : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AccountException(cause : Exception) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AccountException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.NegativeAmountException
-	c66826 [label=<<table title="sorcer.account.provider.NegativeAmountException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NegativeAmountException.html">
+	c79015 [label=<<table title="sorcer.account.provider.NegativeAmountException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NegativeAmountException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NegativeAmountException </td></tr>
 		</table></td></tr>
@@ -157,15 +158,15 @@ digraph G {
 <tr><td align="left" balign="left"> + NegativeAmountException() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NegativeAmountException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.account.provider.AccountImpl implements sorcer.account.provider.Account
-	c66825:p -> c66818:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.account.provider.ServiceAccountImpl implements sorcer.account.provider.Account
-	c66825:p -> c66819:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.account.provider.ServiceAccountImpl implements sorcer.account.provider.ServiceAccount
-	c66823:p -> c66819:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.account.provider.AccountProvider implements sorcer.account.provider.Account
-	c66825:p -> c66820:p [dir=back,arrowtail=empty,style=dashed];
+	c79012:p -> c79007:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.account.provider.AccountProvider implements sorcer.account.provider.ServiceAccount
-	c66823:p -> c66820:p [dir=back,arrowtail=empty,style=dashed];
+	c79010:p -> c79007:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.account.provider.AccountImpl implements sorcer.account.provider.Account
+	c79012:p -> c79008:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.account.provider.ServiceAccountImpl implements sorcer.account.provider.Account
+	c79012:p -> c79009:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.account.provider.ServiceAccountImpl implements sorcer.account.provider.ServiceAccount
+	c79010:p -> c79009:p [dir=back,arrowtail=empty,style=dashed];
 }
 

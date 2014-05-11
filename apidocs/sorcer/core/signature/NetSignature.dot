@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.signature.ObjectSignature
-	c304571 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectSignature.html">
+	c345649 [label=<<table title="sorcer.core.signature.ObjectSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectSignature </td></tr>
 		</table></td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.NetSignature
-	c304572 [label=<<table title="sorcer.core.signature.NetSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetSignature.html">
+	c345650 [label=<<table title="sorcer.core.signature.NetSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetSignature </td></tr>
 		</table></td></tr>
@@ -96,6 +96,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.NetSignature extends sorcer.core.signature.ObjectSignature
-	c304571:p -> c304572:p [dir=back,arrowtail=empty];
+	c345649:p -> c345650:p [dir=back,arrowtail=empty];
 }
 

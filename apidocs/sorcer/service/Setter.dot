@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Setter
+	c493560 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Setter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Setter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
+<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Setter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c429538 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+	c493631 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Par&lt;T&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,28 +83,14 @@ digraph G {
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Setter
-	c429643 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Setter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Setter </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Setter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Setter
-	c429643:p -> c429538:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
-	c430046:p -> c429538:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Setter implements java.io.Serializable
-	c430046:p -> c429643:p [dir=back,arrowtail=empty,style=dashed];
+	c494128:p -> c493560:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Setter
+	c493560:p -> c493631:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
+	c494128:p -> c493631:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c430046 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c494128 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

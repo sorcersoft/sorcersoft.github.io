@@ -9,15 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.RemoteContextManagement
-	c372102 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteContextManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.ContextManagement
-	c372107 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagement.html">
+	c421577 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextManagement </td></tr>
@@ -36,8 +29,15 @@ digraph G {
 <tr><td align="left" balign="left"> + deleteContext(interfaceName : String, methodName : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.RemoteContextManagement
+	c421579 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteContextManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider
-	c372138 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/StaticServiceProvider.html">
+	c421795 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -50,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./provider/StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c372145 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/ServiceProvider.html">
+	c421805 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -150,7 +150,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 <tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
 <tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
 <tr><td align="left" balign="left"> + loadConfiguration(filename : String) </td></tr>
 <tr><td align="left" balign="left"> + hangup() </td></tr>
 <tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
@@ -184,20 +183,21 @@ digraph G {
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./provider/ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.RemoteContextManagement implements sorcer.core.ContextManagement
-	c372107:p -> c372102:p [dir=back,arrowtail=empty,style=dashed];
+	c421577:p -> c421579:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.RemoteContextManagement implements java.rmi.Remote
-	c372699:p -> c372102:p [dir=back,arrowtail=empty,style=dashed];
+	c422287:p -> c421579:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c372145:p -> c372138:p [dir=back,arrowtail=empty];
+	c421805:p -> c421795:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.RemoteContextManagement
-	c372102:p -> c372138:p [dir=back,arrowtail=empty,style=dashed];
+	c421579:p -> c421795:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.RemoteContextManagement
-	c372102:p -> c372145:p [dir=back,arrowtail=empty,style=dashed];
+	c421579:p -> c421805:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c372699 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c422287 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

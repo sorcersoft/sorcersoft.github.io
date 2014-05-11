@@ -38,7 +38,7 @@
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.config.AbstractBeanListener;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.config.BeanListener;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.Provider;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.core.service.IServiceBuilder;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.provider.boot.AbstractServiceDescriptor;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.ui.serviceui.UIComponentFactory;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.ui.serviceui.UIDescriptorFactory;
@@ -76,7 +76,7 @@
 <a class="jxr_linenumber" name="66" href="#66">66</a>          }
 <a class="jxr_linenumber" name="67" href="#67">67</a>  
 <a class="jxr_linenumber" name="68" href="#68">68</a>          @Override
-<a class="jxr_linenumber" name="69" href="#69">69</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preProcess(<a href="../../../sorcer/core/provider/Provider.html">Provider</a> provider) {
+<a class="jxr_linenumber" name="69" href="#69">69</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> preProcess(<a href="../../../sorcer/core/service/IServiceBuilder.html">IServiceBuilder</a> provider) {
 <a class="jxr_linenumber" name="70" href="#70">70</a>              <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="71" href="#71">71</a>                  <em class="jxr_comment">// URL exportUrl, String className, String name, String helpFilename</em>
 <a class="jxr_linenumber" name="72" href="#72">72</a>                  UIDescriptor uiDesc2 = UIDescriptorFactory.getUIDescriptor(MainUI.ROLE,

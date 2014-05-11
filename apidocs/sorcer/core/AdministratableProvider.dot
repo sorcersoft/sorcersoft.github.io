@@ -10,21 +10,21 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.Methoder
-	c88168 [label=<<table title="sorcer.core.Methoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Methoder.html">
+	c102341 [label=<<table title="sorcer.core.Methoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Methoder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Methoder </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Methoder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.AdministratableProvider
-	c88172 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AdministratableProvider.html">
+	c102344 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AdministratableProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> AdministratableProvider </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider
-	c88206 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/StaticServiceProvider.html">
+	c102565 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -37,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./provider/StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c88213 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/ServiceProvider.html">
+	c102575 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -137,7 +137,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 <tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
 <tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
 <tr><td align="left" balign="left"> + loadConfiguration(filename : String) </td></tr>
 <tr><td align="left" balign="left"> + hangup() </td></tr>
 <tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
@@ -171,10 +170,11 @@ digraph G {
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./provider/ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.AdminProxy
-	c88230 [label=<<table title="sorcer.core.proxy.AdminProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./proxy/AdminProxy.html">
+	c102609 [label=<<table title="sorcer.core.proxy.AdminProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./proxy/AdminProxy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AdminProxy </td></tr>
 		</table></td></tr>
@@ -202,7 +202,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./proxy/AdminProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger
-	c88732 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/cataloger/ServiceCataloger.html">
+	c103017 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/cataloger/ServiceCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceCataloger </td></tr>
 		</table></td></tr>
@@ -239,31 +239,31 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./provider/cataloger/ServiceCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.Methoder implements sorcer.core.AdministratableProvider
-	c88172:p -> c88168:p [dir=back,arrowtail=empty,style=dashed];
+	c102344:p -> c102341:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.Methoder implements java.rmi.Remote
-	c88767:p -> c88168:p [dir=back,arrowtail=empty,style=dashed];
+	c103057:p -> c102341:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.AdministratableProvider implements net.jini.admin.Administrable
-	c88768:p -> c88172:p [dir=back,arrowtail=empty,style=dashed];
+	c103058:p -> c102344:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.AdministratableProvider implements net.jini.admin.JoinAdmin
-	c88769:p -> c88172:p [dir=back,arrowtail=empty,style=dashed];
+	c103059:p -> c102344:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.AdministratableProvider implements com.sun.jini.admin.DestroyAdmin
-	c88770:p -> c88172:p [dir=back,arrowtail=empty,style=dashed];
+	c103060:p -> c102344:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.AdministratableProvider implements java.rmi.Remote
-	c88767:p -> c88172:p [dir=back,arrowtail=empty,style=dashed];
+	c103057:p -> c102344:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c88213:p -> c88206:p [dir=back,arrowtail=empty];
+	c102575:p -> c102565:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.AdministratableProvider
-	c88172:p -> c88206:p [dir=back,arrowtail=empty,style=dashed];
+	c102344:p -> c102565:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.AdministratableProvider
-	c88172:p -> c88213:p [dir=back,arrowtail=empty,style=dashed];
+	c102344:p -> c102575:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.AdminProxy implements sorcer.core.AdministratableProvider
-	c88172:p -> c88230:p [dir=back,arrowtail=empty,style=dashed];
+	c102344:p -> c102609:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger extends sorcer.core.provider.ServiceProvider
-	c88213:p -> c88732:p [dir=back,arrowtail=empty];
+	c102575:p -> c103017:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.AdministratableProvider
-	c88172:p -> c88732:p [dir=back,arrowtail=empty,style=dashed];
+	c102344:p -> c103017:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.admin.JoinAdmin
-	c88769 [label=<<table title="net.jini.admin.JoinAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/JoinAdmin.html">
+	c103059 [label=<<table title="net.jini.admin.JoinAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/JoinAdmin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> JoinAdmin </td></tr>
@@ -286,7 +286,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/admin/JoinAdmin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// com.sun.jini.admin.DestroyAdmin
-	c88770 [label=<<table title="com.sun.jini.admin.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html">
+	c103060 [label=<<table title="com.sun.jini.admin.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DestroyAdmin </td></tr>
@@ -299,14 +299,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.rmi.Remote
-	c88767 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c103057 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.admin.Administrable
-	c88768 [label=<<table title="net.jini.admin.Administrable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/Administrable.html">
+	c103058 [label=<<table title="net.jini.admin.Administrable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/Administrable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Administrable </td></tr>

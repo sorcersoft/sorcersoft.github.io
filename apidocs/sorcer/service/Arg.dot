@@ -9,8 +9,133 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Arg
+	c108267 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Arg.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Signature
+	c108279 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Signature.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Signature </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SRV : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + PRE : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + POST : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + APD : Signature.Type </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
+<tr><td align="left" balign="left"> + getPrefix() : String </td></tr>
+<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
+<tr><td align="left" balign="left"> + setProviderName(providerName : String) </td></tr>
+<tr><td align="left" balign="left"> + getServiceType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : ReturnPath&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setServiceType(serviceType : Class&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getType() : Signature.Type </td></tr>
+<tr><td align="left" balign="left"> + setType(type : Signature.Type) : Signature </td></tr>
+<tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
+<tr><td align="left" balign="left"> + setCodebase(urls : String) </td></tr>
+<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
+<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Signature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Strategy
+	c108307 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Strategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Strategy </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
+<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
+<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.ReturnPath<T>
+	c108318 [label=<<table title="sorcer.service.ReturnPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReturnPath.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ReturnPath&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + path : String </td></tr>
+<tr><td align="left" balign="left"> + direction : Direction </td></tr>
+<tr><td align="left" balign="left"> + argPaths : String[] </td></tr>
+<tr><td align="left" balign="left"> + type : Class&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ReturnPath() </td></tr>
+<tr><td align="left" balign="left"> + ReturnPath(path : String, argPaths : String[]) </td></tr>
+<tr><td align="left" balign="left"> + ReturnPath(path : String, direction : Direction) </td></tr>
+<tr><td align="left" balign="left"> + ReturnPath(path : String, direction : Direction, argPaths : String[]) </td></tr>
+<tr><td align="left" balign="left"> + ReturnPath(path : String, direction : Direction, returnType : Class&lt;T&gt;, argPaths : String[]) </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ReturnPath.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.var.FidelityInfo
+	c108353 [label=<<table title="sorcer.core.context.model.var.FidelityInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/var/FidelityInfo.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> FidelityInfo </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # varName : String </td></tr>
+<tr><td align="left" balign="left"> # fidelityName : String </td></tr>
+<tr><td align="left" balign="left"> # evalutorName : String </td></tr>
+<tr><td align="left" balign="left"> # filterName : String </td></tr>
+<tr><td align="left" balign="left"> # gradientName : String </td></tr>
+<tr><td align="left" balign="left"> # wrt : Wrt </td></tr>
+<tr><td align="left" balign="left"> # differentiation : Differentiation </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + FidelityInfo() </td></tr>
+<tr><td align="left" balign="left"> + FidelityInfo(fidelityName : String) </td></tr>
+<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String) </td></tr>
+<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String, gradientName : String) </td></tr>
+<tr><td align="left" balign="left"> + FidelityInfo(varName : String, wrt : Wrt, fidelityName : String, gradientName : String) </td></tr>
+<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String, evaluatorName : String, filterName : String) </td></tr>
+<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String, evaluatorName : String, filterName : String, gradientName : String) </td></tr>
+<tr><td align="left" balign="left"> + FidelityInfo(eval : FidelityInfo) </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setName(fidelityName : String) </td></tr>
+<tr><td align="left" balign="left"> + getEvaluatorName() : String </td></tr>
+<tr><td align="left" balign="left"> + getFilterName() : String </td></tr>
+<tr><td align="left" balign="left"> + setEvaluatorName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + setFilterName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getWrt() : Wrt </td></tr>
+<tr><td align="left" balign="left"> + setWrt(wrt : Wrt) </td></tr>
+<tr><td align="left" balign="left"> + setWrt(wrt : String) </td></tr>
+<tr><td align="left" balign="left"> + getGradientName() : String </td></tr>
+<tr><td align="left" balign="left"> + setGradientName(gradientName : String) </td></tr>
+<tr><td align="left" balign="left"> + getVarName() : String </td></tr>
+<tr><td align="left" balign="left"> + setVarName(varName : String) </td></tr>
+<tr><td align="left" balign="left"> + getDifferentiation() : Differentiation </td></tr>
+<tr><td align="left" balign="left"> + setDifferentiation(differentiation : Differentiation) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/context/model/var/FidelityInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c93721 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+	c108366 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Par&lt;T&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,49 +194,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.var.FidelityInfo
-	c93727 [label=<<table title="sorcer.core.context.model.var.FidelityInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/var/FidelityInfo.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> FidelityInfo </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # varName : String </td></tr>
-<tr><td align="left" balign="left"> # fidelityName : String </td></tr>
-<tr><td align="left" balign="left"> # evalutorName : String </td></tr>
-<tr><td align="left" balign="left"> # filterName : String </td></tr>
-<tr><td align="left" balign="left"> # gradientName : String </td></tr>
-<tr><td align="left" balign="left"> # wrt : Wrt </td></tr>
-<tr><td align="left" balign="left"> # differentiation : Differentiation </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + FidelityInfo() </td></tr>
-<tr><td align="left" balign="left"> + FidelityInfo(fidelityName : String) </td></tr>
-<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String) </td></tr>
-<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String, gradientName : String) </td></tr>
-<tr><td align="left" balign="left"> + FidelityInfo(varName : String, wrt : Wrt, fidelityName : String, gradientName : String) </td></tr>
-<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String, evaluatorName : String, filterName : String) </td></tr>
-<tr><td align="left" balign="left"> + FidelityInfo(varName : String, fidelityName : String, evaluatorName : String, filterName : String, gradientName : String) </td></tr>
-<tr><td align="left" balign="left"> + FidelityInfo(eval : FidelityInfo) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setName(fidelityName : String) </td></tr>
-<tr><td align="left" balign="left"> + getEvaluatorName() : String </td></tr>
-<tr><td align="left" balign="left"> + getFilterName() : String </td></tr>
-<tr><td align="left" balign="left"> + setEvaluatorName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + setFilterName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getWrt() : Wrt </td></tr>
-<tr><td align="left" balign="left"> + setWrt(wrt : Wrt) </td></tr>
-<tr><td align="left" balign="left"> + setWrt(wrt : String) </td></tr>
-<tr><td align="left" balign="left"> + getGradientName() : String </td></tr>
-<tr><td align="left" balign="left"> + setGradientName(gradientName : String) </td></tr>
-<tr><td align="left" balign="left"> + getVarName() : String </td></tr>
-<tr><td align="left" balign="left"> + setVarName(varName : String) </td></tr>
-<tr><td align="left" balign="left"> + getDifferentiation() : Differentiation </td></tr>
-<tr><td align="left" balign="left"> + setDifferentiation(differentiation : Differentiation) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/context/model/var/FidelityInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.deploy.Deployment
-	c93761 [label=<<table title="sorcer.core.deploy.Deployment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/deploy/Deployment.html">
+	c108408 [label=<<table title="sorcer.core.deploy.Deployment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/deploy/Deployment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Deployment </td></tr>
 		</table></td></tr>
@@ -159,106 +243,8 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/deploy/Deployment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Strategy
-	c93785 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Strategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Strategy </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
-<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Signature
-	c93804 [label=<<table title="sorcer.service.Signature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Signature.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Signature </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SRV : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + PRE : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + POST : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + APD : Signature.Type </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
-<tr><td align="left" balign="left"> + getPrefix() : String </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + setProviderName(providerName : String) </td></tr>
-<tr><td align="left" balign="left"> + getServiceType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : ReturnPath&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setServiceType(serviceType : Class&lt;?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getType() : Signature.Type </td></tr>
-<tr><td align="left" balign="left"> + setType(type : Signature.Type) : Signature </td></tr>
-<tr><td align="left" balign="left"> + getCodebase() : String </td></tr>
-<tr><td align="left" balign="left"> + setCodebase(urls : String) </td></tr>
-<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
-<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Signature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.ReturnPath<T>
-	c93816 [label=<<table title="sorcer.service.ReturnPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReturnPath.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ReturnPath&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + path : String </td></tr>
-<tr><td align="left" balign="left"> + direction : Direction </td></tr>
-<tr><td align="left" balign="left"> + argPaths : String[] </td></tr>
-<tr><td align="left" balign="left"> + type : Class&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ReturnPath() </td></tr>
-<tr><td align="left" balign="left"> + ReturnPath(path : String, argPaths : String[]) </td></tr>
-<tr><td align="left" balign="left"> + ReturnPath(path : String, direction : Direction) </td></tr>
-<tr><td align="left" balign="left"> + ReturnPath(path : String, direction : Direction, argPaths : String[]) </td></tr>
-<tr><td align="left" balign="left"> + ReturnPath(path : String, direction : Direction, returnType : Class&lt;T&gt;, argPaths : String[]) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ReturnPath.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Arg
-	c93836 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Arg.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Arg </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.StrategyEntry
-	c93848 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/StrategyEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> StrategyEntry </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + StrategyEntry(path : String, strategy : Strategy) </td></tr>
-<tr><td align="left" balign="left"> + strategy() : Strategy </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../co/tuple/StrategyEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.AnnotatedEntry<T>
-	c93854 [label=<<table title="sorcer.co.tuple.AnnotatedEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/AnnotatedEntry.html">
+	c108442 [label=<<table title="sorcer.co.tuple.AnnotatedEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/AnnotatedEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AnnotatedEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -284,8 +270,22 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../co/tuple/AnnotatedEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.StrategyEntry
+	c108453 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/StrategyEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> StrategyEntry </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + StrategyEntry(path : String, strategy : Strategy) </td></tr>
+<tr><td align="left" balign="left"> + strategy() : Strategy </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../co/tuple/StrategyEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c93858 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
+	c108454 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -310,7 +310,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../co/tuple/Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Entry<T>
-	c93866 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Entry.html">
+	c108458 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Entry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -335,27 +335,27 @@ digraph G {
 <tr><td align="left" balign="left"> + compareTo(o : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="../co/tuple/Entry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Arg
-	c93836:p -> c93721:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.var.FidelityInfo implements sorcer.service.Arg
-	c93836:p -> c93727:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.deploy.Deployment implements sorcer.service.Arg
-	c93836:p -> c93761:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Strategy implements sorcer.service.Arg
-	c93836:p -> c93785:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Signature implements sorcer.service.Arg
-	c93836:p -> c93804:p [dir=back,arrowtail=empty,style=dashed];
+	c108267:p -> c108279:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Strategy implements sorcer.service.Arg
+	c108267:p -> c108307:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.ReturnPath<T> implements sorcer.service.Arg
-	c93836:p -> c93816:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.co.tuple.StrategyEntry implements sorcer.service.Arg
-	c93836:p -> c93848:p [dir=back,arrowtail=empty,style=dashed];
+	c108267:p -> c108318:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.var.FidelityInfo implements sorcer.service.Arg
+	c108267:p -> c108353:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Arg
+	c108267:p -> c108366:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.deploy.Deployment implements sorcer.service.Arg
+	c108267:p -> c108408:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.AnnotatedEntry<T> implements sorcer.service.Arg
-	c93836:p -> c93854:p [dir=back,arrowtail=empty,style=dashed];
+	c108267:p -> c108442:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.co.tuple.StrategyEntry implements sorcer.service.Arg
+	c108267:p -> c108453:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Arg
-	c93836:p -> c93858:p [dir=back,arrowtail=empty,style=dashed];
+	c108267:p -> c108454:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Entry<T> extends sorcer.co.tuple.Tuple2<java.lang.String, T>
-	c93858:p -> c93866:p [dir=back,arrowtail=empty];
+	c108454:p -> c108458:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Entry<T> implements sorcer.service.Arg
-	c93836:p -> c93866:p [dir=back,arrowtail=empty,style=dashed];
+	c108267:p -> c108458:p [dir=back,arrowtail=empty,style=dashed];
 }
 

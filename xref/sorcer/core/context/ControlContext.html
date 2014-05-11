@@ -502,7 +502,7 @@
 <a class="jxr_linenumber" name="492" href="#492">492</a> 		<strong class="jxr_keyword">int</strong> result;
 <a class="jxr_linenumber" name="493" href="#493">493</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="494" href="#494">494</a> 			String i = getAttributeValue(exertion, PRIORITY);
-<a class="jxr_linenumber" name="495" href="#495">495</a> 			result = (i == NULL) ? NORMAL_PRIORITY : Integer.parseInt(i);
+<a class="jxr_linenumber" name="495" href="#495">495</a> 			result = (NULL.equals(i)) ? NORMAL_PRIORITY : Integer.parseInt(i);
 <a class="jxr_linenumber" name="496" href="#496">496</a> 		} <strong class="jxr_keyword">catch</strong> (ClassCastException ex) {
 <a class="jxr_linenumber" name="497" href="#497">497</a> 			logger.throwing(ControlContext.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getPriority"</span>, ex);
 <a class="jxr_linenumber" name="498" href="#498">498</a> 			<strong class="jxr_keyword">return</strong> -1;
@@ -526,7 +526,7 @@
 <a class="jxr_linenumber" name="516" href="#516">516</a> 		<strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="517" href="#517">517</a> 			put(ex.getContext().getName(), ex.getId());
 <a class="jxr_linenumber" name="518" href="#518">518</a> 		}
-<a class="jxr_linenumber" name="519" href="#519">519</a> 		setPriority(ex, MAX_PRIORITY - ((ServiceExertion)ex).getIndex());
+<a class="jxr_linenumber" name="519" href="#519">519</a> 		setPriority(ex, MAX_PRIORITY - ex.getIndex());
 <a class="jxr_linenumber" name="520" href="#520">520</a> 		setExecTimeRequested(ex, <strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="521" href="#521">521</a> 	}
 <a class="jxr_linenumber" name="522" href="#522">522</a> 
@@ -555,9 +555,9 @@
 <a class="jxr_linenumber" name="545" href="#545">545</a> 		<em class="jxr_comment">// ((Hashtable)getMetacontext().get((String)e.nextElement())).remove(path</em>
 <a class="jxr_linenumber" name="546" href="#546">546</a> 		<em class="jxr_comment">// );</em>
 <a class="jxr_linenumber" name="547" href="#547">547</a> 
-<a class="jxr_linenumber" name="548" href="#548">548</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = ((ServiceExertion) exertion).getIndex(); i &lt; job.size(); i++) {
+<a class="jxr_linenumber" name="548" href="#548">548</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = exertion.getIndex(); i &lt; job.size(); i++) {
 <a class="jxr_linenumber" name="549" href="#549">549</a> 			String oldPath = job.get(i).getContext().getName();
-<a class="jxr_linenumber" name="550" href="#550">550</a> 			((ServiceExertion) job.get(i)).setIndex(i);
+<a class="jxr_linenumber" name="550" href="#550">550</a> 			job.get(i).setIndex(i);
 <a class="jxr_linenumber" name="551" href="#551">551</a> 			put(job.get(i).getContext().getName(), remove(oldPath));
 <a class="jxr_linenumber" name="552" href="#552">552</a> 			Hashtable map;
 <a class="jxr_linenumber" name="553" href="#553">553</a> 			Hashtable imc = getMetacontext();
@@ -624,7 +624,7 @@
 <a class="jxr_linenumber" name="614" href="#614">614</a> 		Enumeration e = keys();
 <a class="jxr_linenumber" name="615" href="#615">615</a> 		<strong class="jxr_keyword">while</strong> (e.hasMoreElements()) {
 <a class="jxr_linenumber" name="616" href="#616">616</a> 			key = (String) e.nextElement();
-<a class="jxr_linenumber" name="617" href="#617">617</a> 			<strong class="jxr_keyword">if</strong> (key.endsWith(<span class="jxr_string">"["</span> + ((ServiceExertion)exertion).getIndex()
+<a class="jxr_linenumber" name="617" href="#617">617</a> 			<strong class="jxr_keyword">if</strong> (key.endsWith(<span class="jxr_string">"["</span> + exertion.getIndex()
 <a class="jxr_linenumber" name="618" href="#618">618</a> 					+ <span class="jxr_string">"]"</span> + ID)) {
 <a class="jxr_linenumber" name="619" href="#619">619</a> 				oldPath = key;
 <a class="jxr_linenumber" name="620" href="#620">620</a> 				<strong class="jxr_keyword">break</strong>;

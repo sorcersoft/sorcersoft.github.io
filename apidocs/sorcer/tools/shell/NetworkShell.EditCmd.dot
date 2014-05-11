@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.NetworkShell.EditCmd
-	c308878 [label=<<table title="sorcer.tools.shell.NetworkShell.EditCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.EditCmd.html">
+	c350074 [label=<<table title="sorcer.tools.shell.NetworkShell.EditCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.EditCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EditCmd </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.EditCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.ShellCmd
-	c308886 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShellCmd.html">
+	c350080 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -36,7 +36,8 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ShellCmd() </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + execute() </font></td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + execute(shell : INetworkShell) </td></tr>
 <tr><td align="left" balign="left"> + getCommandWord() : String </td></tr>
 <tr><td align="left" balign="left"> + getUsage(subCmd : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getShortHelp() : String </td></tr>
@@ -49,6 +50,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.NetworkShell.EditCmd extends sorcer.tools.shell.ShellCmd
-	c308886:p -> c308878:p [dir=back,arrowtail=empty];
+	c350080:p -> c350074:p [dir=back,arrowtail=empty];
 }
 

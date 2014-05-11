@@ -9,22 +9,25 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.ssb.browser.api.SSBrowserFilter
-	c56492 [label=<<table title="sorcer.ssb.browser.api.SSBrowserFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserFilter.html">
+	// sorcer.ssb.browser.api.SSBEnvironment
+	c68073 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBEnvironment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SSBrowserFilter </td></tr>
+<tr><td align="center" balign="center"> SSBEnvironment </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + accept(item : ServiceItem) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getDisplayName() : String </td></tr>
+<tr><td align="left" balign="left"> + registerTab(newTab : SSBrowserTab) </td></tr>
+<tr><td align="left" balign="left"> + setPluginMenu(pluginMenu : JMenuItem) </td></tr>
+<tr><td align="left" balign="left"> + setRightPane(view : JComponent) </td></tr>
+<tr><td align="left" balign="left"> + showAttributes(atts : Entry[]) </td></tr>
+<tr><td align="left" balign="left"> + getBrowserFrame() : JFrame </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SSBrowserFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SSBEnvironment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.browser.api.SSBrowserTab
-	c56493 [label=<<table title="sorcer.ssb.browser.api.SSBrowserTab" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserTab.html">
+	c68074 [label=<<table title="sorcer.ssb.browser.api.SSBrowserTab" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserTab.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SSBrowserTab </td></tr>
@@ -41,22 +44,22 @@ digraph G {
 <tr><td align="left" balign="left"> + serviceModified(serviceID : ServiceID) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SSBrowserTab.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.ssb.browser.api.SSBPluginException
-	c56494 [label=<<table title="sorcer.ssb.browser.api.SSBPluginException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBPluginException.html">
+	// sorcer.ssb.browser.api.SSBrowserFilter
+	c68075 [label=<<table title="sorcer.ssb.browser.api.SSBrowserFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SSBPluginException </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SSBrowserFilter </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SSBPluginException(reason : String) </td></tr>
-<tr><td align="left" balign="left"> + SSBPluginException(reason : String, cause : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + SSBPluginException(cause : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + accept(item : ServiceItem) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getDisplayName() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SSBPluginException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SSBrowserFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.browser.api.SSBrowserPlugin
-	c56495 [label=<<table title="sorcer.ssb.browser.api.SSBrowserPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserPlugin.html">
+	c68076 [label=<<table title="sorcer.ssb.browser.api.SSBrowserPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SSBrowserPlugin </td></tr>
@@ -72,22 +75,19 @@ digraph G {
 <tr><td align="left" balign="left"> + initialize(env : SSBEnvironment) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SSBrowserPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.ssb.browser.api.SSBEnvironment
-	c56496 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBEnvironment.html">
+	// sorcer.ssb.browser.api.SSBPluginException
+	c68077 [label=<<table title="sorcer.ssb.browser.api.SSBPluginException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBPluginException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SSBEnvironment </td></tr>
+<tr><td align="center" balign="center"> SSBPluginException </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + registerTab(newTab : SSBrowserTab) </td></tr>
-<tr><td align="left" balign="left"> + setPluginMenu(pluginMenu : JMenuItem) </td></tr>
-<tr><td align="left" balign="left"> + setRightPane(view : JComponent) </td></tr>
-<tr><td align="left" balign="left"> + showAttributes(atts : Entry[]) </td></tr>
-<tr><td align="left" balign="left"> + getBrowserFrame() : JFrame </td></tr>
+<tr><td align="left" balign="left"> + SSBPluginException(reason : String) </td></tr>
+<tr><td align="left" balign="left"> + SSBPluginException(reason : String, cause : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + SSBPluginException(cause : Throwable) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SSBEnvironment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SSBPluginException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

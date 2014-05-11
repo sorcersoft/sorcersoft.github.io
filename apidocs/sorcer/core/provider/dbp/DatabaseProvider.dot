@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.DatabaseStorer
-	c160675 [label=<<table title="sorcer.service.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/DatabaseStorer.html">
+	c185899 [label=<<table title="sorcer.service.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/DatabaseStorer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DatabaseStorer </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../service/DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.dbp.DatabaseProvider
-	c160810 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DatabaseProvider.html">
+	c186129 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DatabaseProvider </td></tr>
 		</table></td></tr>
@@ -62,7 +62,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.dbp.IDatabaseProvider
-	c160814 [label=<<table title="sorcer.core.provider.dbp.IDatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IDatabaseProvider.html">
+	c186133 [label=<<table title="sorcer.core.provider.dbp.IDatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IDatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IDatabaseProvider </td></tr>
@@ -78,8 +78,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IDatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.dbp.DatabaseProvider implements sorcer.service.DatabaseStorer
-	c160675:p -> c160810:p [dir=back,arrowtail=empty,style=dashed];
+	c185899:p -> c186129:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.dbp.DatabaseProvider implements sorcer.core.provider.dbp.IDatabaseProvider
-	c160814:p -> c160810:p [dir=back,arrowtail=empty,style=dashed];
+	c186133:p -> c186129:p [dir=back,arrowtail=empty,style=dashed];
 }
 

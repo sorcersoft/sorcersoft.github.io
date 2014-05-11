@@ -92,7 +92,7 @@
 <a class="jxr_linenumber" name="82" href="#82">82</a>  	@Override
 <a class="jxr_linenumber" name="83" href="#83">83</a>  	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> addExertion(<a href="../../sorcer/service/Exertion.html">Exertion</a> ex) <strong class="jxr_keyword">throws</strong> ExertionException {
 <a class="jxr_linenumber" name="84" href="#84">84</a>  		exertions.add(ex);
-<a class="jxr_linenumber" name="85" href="#85">85</a>  		((ServiceExertion) ex).setIndex(exertions.indexOf(ex));
+<a class="jxr_linenumber" name="85" href="#85">85</a>  		ex.setIndex(exertions.indexOf(ex));
 <a class="jxr_linenumber" name="86" href="#86">86</a>  		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="87" href="#87">87</a>  			controlContext.registerExertion(ex);
 <a class="jxr_linenumber" name="88" href="#88">88</a>  		} <strong class="jxr_keyword">catch</strong> (ContextException e) {
@@ -232,7 +232,7 @@
 <a class="jxr_linenumber" name="222" href="#222">222</a> <em class="jxr_javadoccomment">	 * Returns the exertion at the specified index.</em>
 <a class="jxr_linenumber" name="223" href="#223">223</a> <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="224" href="#224">224</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> get(<strong class="jxr_keyword">int</strong> index) {
-<a class="jxr_linenumber" name="225" href="#225">225</a> 		<strong class="jxr_keyword">return</strong> (Exertion) exertions.get(index);
+<a class="jxr_linenumber" name="225" href="#225">225</a> 		<strong class="jxr_keyword">return</strong> exertions.get(index);
 <a class="jxr_linenumber" name="226" href="#226">226</a> 	}
 <a class="jxr_linenumber" name="227" href="#227">227</a> 	
 <a class="jxr_linenumber" name="228" href="#228">228</a> 	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>

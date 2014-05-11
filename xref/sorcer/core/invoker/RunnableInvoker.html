@@ -75,7 +75,7 @@
 <a class="jxr_linenumber" name="65" href="#65">65</a>  		} <strong class="jxr_keyword">catch</strong> (ContextException e) {
 <a class="jxr_linenumber" name="66" href="#66">66</a>  			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/InvocationException.html">InvocationException</a>(e);
 <a class="jxr_linenumber" name="67" href="#67">67</a>  		}
-<a class="jxr_linenumber" name="68" href="#68">68</a>  		<strong class="jxr_keyword">new</strong> Thread(runnable).start();
+<a class="jxr_linenumber" name="68" href="#68">68</a>  		<strong class="jxr_keyword">new</strong> Thread(runnable, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] RunnableInvoker-"</span> + runnable.toString()).start();
 <a class="jxr_linenumber" name="69" href="#69">69</a>  		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="70" href="#70">70</a>  	}
 <a class="jxr_linenumber" name="71" href="#71">71</a>  	

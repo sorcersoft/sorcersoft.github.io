@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.dispatch.CatalogBlockDispatcher
-	c113752 [label=<<table title="sorcer.core.dispatch.CatalogBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogBlockDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogBlockDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogBlockDispatcher(block : Block, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogExertDispatcher
-	c113763 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CatalogExertDispatcher.html">
+	c132522 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CatalogExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> CatalogExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -42,36 +28,8 @@ digraph G {
 <tr><td align="left" balign="left"> # execJob(job : Job) : Job </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CatalogExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogSequentialDispatcher
-	c113765 [label=<<table title="sorcer.core.dispatch.CatalogSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSequentialDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogSequentialDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogParallelDispatcher
-	c113767 [label=<<table title="sorcer.core.dispatch.CatalogParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogParallelDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogParallelDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogSingletonDispatcher
-	c113768 [label=<<table title="sorcer.core.dispatch.CatalogSingletonDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSingletonDispatcher.html">
+	c132527 [label=<<table title="sorcer.core.dispatch.CatalogSingletonDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSingletonDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogSingletonDispatcher </td></tr>
 		</table></td></tr>
@@ -85,7 +43,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CatalogSingletonDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c113772 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+	c132535 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -122,7 +80,6 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDispatcher(jobID : String) : ExertDispatcher </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
 <tr><td align="left" balign="left"> + createExertionID(ex : ServiceExertion) : String </td></tr>
@@ -147,7 +104,6 @@ digraph G {
 <tr><td align="left" balign="left"> # isInterupted(ex : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> # getCatalog() : Cataloger </td></tr>
 <tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
@@ -155,15 +111,57 @@ digraph G {
 <tr><td align="left" balign="left"> # prepareJob() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.dispatch.CatalogBlockDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c113763:p -> c113752:p [dir=back,arrowtail=empty];
+	// sorcer.core.dispatch.CatalogBlockDispatcher
+	c132539 [label=<<table title="sorcer.core.dispatch.CatalogBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogBlockDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogBlockDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogBlockDispatcher(block : Block, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.CatalogParallelDispatcher
+	c132540 [label=<<table title="sorcer.core.dispatch.CatalogParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogParallelDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogParallelDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.CatalogSequentialDispatcher
+	c132541 [label=<<table title="sorcer.core.dispatch.CatalogSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSequentialDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogSequentialDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.CatalogExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c113772:p -> c113763:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.CatalogSequentialDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c113763:p -> c113765:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.CatalogParallelDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c113763:p -> c113767:p [dir=back,arrowtail=empty];
+	c132535:p -> c132522:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogSingletonDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c113763:p -> c113768:p [dir=back,arrowtail=empty];
+	c132522:p -> c132527:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.CatalogBlockDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
+	c132522:p -> c132539:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.CatalogParallelDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
+	c132522:p -> c132540:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.CatalogSequentialDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
+	c132522:p -> c132541:p [dir=back,arrowtail=empty];
 }
 

@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.vfe.Observer
-	c324357 [label=<<table title="sorcer.vfe.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Observer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Observer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.Invoker<T>
-	c324446 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/Invoker.html">
+	c367433 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/Invoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -77,7 +64,20 @@ digraph G {
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/invoker/Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.vfe.Observer
+	c367475 [label=<<table title="sorcer.vfe.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Observer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Observer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.Invoker<T> implements sorcer.vfe.Observer
-	c324357:p -> c324446:p [dir=back,arrowtail=empty,style=dashed];
+	c367475:p -> c367433:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.StringUtils
-	c488097 [label=<<table title="sorcer.util.StringUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StringUtils.html">
+	c555871 [label=<<table title="sorcer.util.StringUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StringUtils.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StringUtils </td></tr>
 		</table></td></tr>
@@ -44,6 +44,7 @@ digraph G {
 <tr><td align="left" balign="left"> + join(iterable : Iterable&lt;?&gt;, separator : char) : String </td></tr>
 <tr><td align="left" balign="left"> + join(iterable : Iterable&lt;?&gt;, separator : String) : String </td></tr>
 <tr><td align="left" balign="left"> + toString(obj : Object) : String </td></tr>
+<tr><td align="left" balign="left"> + firstInteger(defVal : int, strings : String[]) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StringUtils.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

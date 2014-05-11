@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.SorcerDescriptorUtil
-	c446921 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerDescriptorUtil.html">
+	c512064 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerDescriptorUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerDescriptorUtil </td></tr>
 		</table></td></tr>
@@ -24,7 +24,6 @@ digraph G {
 <tr><td align="left" balign="left"> + CATALOGER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + LOGGER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + LOGGER_SUI : ArtifactCoordinates </td></tr>
-<tr><td align="left" balign="left"> + WEBSTER : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + SPACER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + JOBBER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + SLEEPYCAT : ArtifactCoordinates </td></tr>
@@ -32,14 +31,6 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SorcerDescriptorUtil() </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String, port : int) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String, roots : String[]) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String, port : int, roots : String[]) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String, port : int, roots : String[], isDaemon : boolean) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String, port : int, roots : String[], address : String, debug : boolean) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String, port : int, roots : String[], address : String, debug : boolean, isDaemon : boolean) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getWebster(policy : String, port : int, roots : String[], address : String, startPort : int, endPort : int, debug : boolean, isDaemon : boolean) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getSpacer(policy : String, spacerConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getSpacer(policy : String, port : int, spacerConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getSpacer(policy : String, hostAddress : String, port : int, spacerConfig : String[]) : ServiceDescriptor </td></tr>

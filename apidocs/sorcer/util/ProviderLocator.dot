@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ProviderLocator
-	c359754 [label=<<table title="sorcer.util.ProviderLocator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderLocator.html">
+	c407826 [label=<<table title="sorcer.util.ProviderLocator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderLocator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderLocator </td></tr>
 		</table></td></tr>
@@ -27,12 +27,12 @@ digraph G {
 <tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
 <tr><td align="left" balign="left"> # getGroups() : String[] </td></tr>
 <tr><td align="left" balign="left"> + getServiceItem(signature : Signature) : ServiceItem </td></tr>
-<tr><td align="left" balign="left"> + getServicer(signature : Signature) : Service </td></tr>
 <tr><td align="left" balign="left"> + getService(signature : Signature) : Service </td></tr>
+<tr><td align="left" balign="left"> + getProvider(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProviderLocator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.DynamicAccessor
-	c360011 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/DynamicAccessor.html">
+	c407908 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/DynamicAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DynamicAccessor </td></tr>
@@ -42,9 +42,10 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getProvider(providerName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../service/DynamicAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ProviderLocator implements sorcer.service.DynamicAccessor
-	c360011:p -> c359754:p [dir=back,arrowtail=empty,style=dashed];
+	c407908:p -> c407826:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,8 +9,207 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Context<T>
+	c179412 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PATH_PAR : String </td></tr>
+<tr><td align="left" balign="left"> + CONTEXT_PARAMETER : String </td></tr>
+<tr><td align="left" balign="left"> + PIPE : String </td></tr>
+<tr><td align="left" balign="left"> + DIRECTION : String </td></tr>
+<tr><td align="left" balign="left"> + OPP : String </td></tr>
+<tr><td align="left" balign="left"> + INDEX : String </td></tr>
+<tr><td align="left" balign="left"> + PATH : String </td></tr>
+<tr><td align="left" balign="left"> + CONTEXT_ID : String </td></tr>
+<tr><td align="left" balign="left"> + DATA_NODE_TYPE : String </td></tr>
+<tr><td align="left" balign="left"> + VAR_NODE_TYPE : String </td></tr>
+<tr><td align="left" balign="left"> + APPLICATION : String </td></tr>
+<tr><td align="left" balign="left"> + FORMAT : String </td></tr>
+<tr><td align="left" balign="left"> + MODIFIER : String </td></tr>
+<tr><td align="left" balign="left"> + ACTION : String </td></tr>
+<tr><td align="left" balign="left"> + PROVIDER_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + INTERFACE : String </td></tr>
+<tr><td align="left" balign="left"> + SELECTOR : String </td></tr>
+<tr><td align="left" balign="left"> + VAR : String </td></tr>
+<tr><td align="left" balign="left"> + VT : String </td></tr>
+<tr><td align="left" balign="left"> + DA_IN : String </td></tr>
+<tr><td align="left" balign="left"> + DA_OUT : String </td></tr>
+<tr><td align="left" balign="left"> + DA_INOUT : String </td></tr>
+<tr><td align="left" balign="left"> + DA_ININ : String </td></tr>
+<tr><td align="left" balign="left"> + DA_OUTOUT : String </td></tr>
+<tr><td align="left" balign="left"> + SERVICE_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + PAR_MODEL : String </td></tr>
+<tr><td align="left" balign="left"> + EMPTY_LEAF : String </td></tr>
+<tr><td align="left" balign="left"> + JOB : String </td></tr>
+<tr><td align="left" balign="left"> + JOB_ : String </td></tr>
+<tr><td align="left" balign="left"> + TASK : String </td></tr>
+<tr><td align="left" balign="left"> + TASK_ : String </td></tr>
+<tr><td align="left" balign="left"> + ID : String </td></tr>
+<tr><td align="left" balign="left"> + JOB_COMMENTS : String </td></tr>
+<tr><td align="left" balign="left"> + JOB_FEEDBACK : String </td></tr>
+<tr><td align="left" balign="left"> + DSD_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + none : Object </td></tr>
+<tr><td align="left" balign="left"> + PARAMETER_TYPES : String </td></tr>
+<tr><td align="left" balign="left"> + PARAMETER_VALUES : String </td></tr>
+<tr><td align="left" balign="left"> + TARGET : String </td></tr>
+<tr><td align="left" balign="left"> + RETURN : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setId(contextId : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
+<tr><td align="left" balign="left"> + getParentPath() : String </td></tr>
+<tr><td align="left" balign="left"> + setParentPath(path : String) </td></tr>
+<tr><td align="left" balign="left"> + getParentID() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setParentID(parentId : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getCreationDate() : String </td></tr>
+<tr><td align="left" balign="left"> + setCreationDate(date : String) </td></tr>
+<tr><td align="left" balign="left"> + getLastUpdateDate() : String </td></tr>
+<tr><td align="left" balign="left"> + setLastUpdateDate(date : String) </td></tr>
+<tr><td align="left" balign="left"> + setDescription(date : String) </td></tr>
+<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
+<tr><td align="left" balign="left"> + getScope() : int </td></tr>
+<tr><td align="left" balign="left"> + setScopeCode(scope : int) </td></tr>
+<tr><td align="left" balign="left"> + getOwnerID() : String </td></tr>
+<tr><td align="left" balign="left"> + setOwnerID(id : String) </td></tr>
+<tr><td align="left" balign="left"> + setSubjectID(id : String) </td></tr>
+<tr><td align="left" balign="left"> + getSubjectID() : String </td></tr>
+<tr><td align="left" balign="left"> + setProject(projectName : String) </td></tr>
+<tr><td align="left" balign="left"> + getProject() : String </td></tr>
+<tr><td align="left" balign="left"> + setAccessClass(accessClass : String) </td></tr>
+<tr><td align="left" balign="left"> + getAccessClass() : String </td></tr>
+<tr><td align="left" balign="left"> + setExportControl(exportControl : String) </td></tr>
+<tr><td align="left" balign="left"> + getExportControl() : String </td></tr>
+<tr><td align="left" balign="left"> + getGoodUntilDate() : String </td></tr>
+<tr><td align="left" balign="left"> + setGoodUntilDate(date : String) </td></tr>
+<tr><td align="left" balign="left"> + getDomainID() : String </td></tr>
+<tr><td align="left" balign="left"> + setDomainID(id : String) </td></tr>
+<tr><td align="left" balign="left"> + getSubdomainID() : String </td></tr>
+<tr><td align="left" balign="left"> + setSubdomainID(id : String) </td></tr>
+<tr><td align="left" balign="left"> + getDomainName() : String </td></tr>
+<tr><td align="left" balign="left"> + setDomainName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getSubdomainName() : String </td></tr>
+<tr><td align="left" balign="left"> + setSubdomainName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getPrincipal() : SorcerPrincipal </td></tr>
+<tr><td align="left" balign="left"> + setPrincipal(principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + getVersion() : float </td></tr>
+<tr><td align="left" balign="left"> + setVersion(version : float) </td></tr>
+<tr><td align="left" balign="left"> + containsPath(path : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getMetacontext() : Hashtable&lt;String, Map&lt;String, String&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setMetacontext(metacontext : Hashtable&lt;String, Map&lt;String, String&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getExecPath() : ExecPath </td></tr>
+<tr><td align="left" balign="left"> + setExertion(task : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + getSubjectPath() : String </td></tr>
+<tr><td align="left" balign="left"> + getSubjectValue() : Object </td></tr>
+<tr><td align="left" balign="left"> + setSubject(path : String, value : Object) </td></tr>
+<tr><td align="left" balign="left"> + reportException(t : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + reportException(message : String, t : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + appendTrace(footprint : String) </td></tr>
+<tr><td align="left" balign="left"> + append(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
+<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
+<tr><td align="left" balign="left"> + setReturnValue(value : Object) </td></tr>
+<tr><td align="left" balign="left"> + putDbValue(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putDbValue(path : String, value : Object, datastoreUrl : URL) : Object </td></tr>
+<tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
+<tr><td align="left" balign="left"> + addValue(value : Identifiable) : Object </td></tr>
+<tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putLink(path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putLink(name : String, path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putLink(name : String, path : String, id : String, offset : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putLink(name : String, path : String, lnkedCntxtID : String, version : float, offset : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + remove(path : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + connect(outPath : String, inPath : String, inContext : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + pipe(inPath : String, outPath : String, outContext : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + map(fromPath : String, toPath : String, toContext : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + removeLink(path : String) </td></tr>
+<tr><td align="left" balign="left"> + getContextMapping(path : String) : Object[] </td></tr>
+<tr><td align="left" balign="left"> + checkpoint() </td></tr>
+<tr><td align="left" balign="left"> + mark(path : String, tuple : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + markedPaths(association : String) : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMarkedValues(association : String) : List&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + setAttribute(attribute : String) </td></tr>
+<tr><td align="left" balign="left"> + isLocalAttribute(attributeName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isLocalSingletonAttribute(attributeName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isLocalMetaattribute(attributeName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isAttribute(attributeName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isSingletonAttribute(attributeName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isMetaattribute(attributeName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getAttributeValue(path : String, attributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getSingletonAttributeValue(path : String, attributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getMetaattributeValue(path : String, attributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + removeAttributeValue(path : String, attributeValue : String) </td></tr>
+<tr><td align="left" balign="left"> + getLocalMetapath(metaattributeName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + isValid(method : Signature) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contextPaths() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPaths() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + paths(regex : String) : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + contextValues() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + localLinkPaths() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + linkPaths() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + links() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + localLinks() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + link(context : Context&lt;&gt;, atPath : String, offset : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + getLink(path : String) : Link </td></tr>
+<tr><td align="left" balign="left"> + putInValue(path : String, value : T) : T </td></tr>
+<tr><td align="left" balign="left"> + putOutValue(path : String, value : T) : T </td></tr>
+<tr><td align="left" balign="left"> + putInoutValue(path : String, value : T) : T </td></tr>
+<tr><td align="left" balign="left"> + putInValue(path : String, value : T, association : String) : T </td></tr>
+<tr><td align="left" balign="left"> + putOutValue(path : String, value : T, association : String) : T </td></tr>
+<tr><td align="left" balign="left"> + putInoutValue(path : String, value : T, association : String) : T </td></tr>
+<tr><td align="left" balign="left"> + setIn(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setOut(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setInout(path : String) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + toString(isHTML : boolean) : String </td></tr>
+<tr><td align="left" balign="left"> + isExportControlled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isExportControlled(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getPath(obj : Object) : String </td></tr>
+<tr><td align="left" balign="left"> + localSimpleAttributes() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + simpleAttributes() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + metaassociations(path : String) : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + localAttributes() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + localCompositeAttributes() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + compositeAttributes() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAttributes() : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAttributes(path : String) : Enumeration&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getData() : Object </td></tr>
+<tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
+<tr><td align="left" balign="left"> + getLinkedContext(link : Link) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Contexter<T>
+	c179415 [label=<<table title="sorcer.service.Contexter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Contexter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Contexter&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;, path : String) : Context&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Contexter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c154452 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
+	c179450 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -284,7 +483,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/context/ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.PositionalContext<T>
-	c154455 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
+	c179459 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -308,219 +507,20 @@ digraph G {
 <tr><td align="left" balign="left"> + getTally() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Contexter<T>
-	c154539 [label=<<table title="sorcer.service.Contexter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Contexter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Contexter&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;, path : String) : Context&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Contexter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Context<T>
-	c154547 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PATH_PAR : String </td></tr>
-<tr><td align="left" balign="left"> + CONTEXT_PARAMETER : String </td></tr>
-<tr><td align="left" balign="left"> + PIPE : String </td></tr>
-<tr><td align="left" balign="left"> + DIRECTION : String </td></tr>
-<tr><td align="left" balign="left"> + OPP : String </td></tr>
-<tr><td align="left" balign="left"> + INDEX : String </td></tr>
-<tr><td align="left" balign="left"> + PATH : String </td></tr>
-<tr><td align="left" balign="left"> + CONTEXT_ID : String </td></tr>
-<tr><td align="left" balign="left"> + DATA_NODE_TYPE : String </td></tr>
-<tr><td align="left" balign="left"> + VAR_NODE_TYPE : String </td></tr>
-<tr><td align="left" balign="left"> + APPLICATION : String </td></tr>
-<tr><td align="left" balign="left"> + FORMAT : String </td></tr>
-<tr><td align="left" balign="left"> + MODIFIER : String </td></tr>
-<tr><td align="left" balign="left"> + ACTION : String </td></tr>
-<tr><td align="left" balign="left"> + PROVIDER_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + INTERFACE : String </td></tr>
-<tr><td align="left" balign="left"> + SELECTOR : String </td></tr>
-<tr><td align="left" balign="left"> + VAR : String </td></tr>
-<tr><td align="left" balign="left"> + VT : String </td></tr>
-<tr><td align="left" balign="left"> + DA_IN : String </td></tr>
-<tr><td align="left" balign="left"> + DA_OUT : String </td></tr>
-<tr><td align="left" balign="left"> + DA_INOUT : String </td></tr>
-<tr><td align="left" balign="left"> + DA_ININ : String </td></tr>
-<tr><td align="left" balign="left"> + DA_OUTOUT : String </td></tr>
-<tr><td align="left" balign="left"> + SERVICE_CONTEXT : String </td></tr>
-<tr><td align="left" balign="left"> + PAR_MODEL : String </td></tr>
-<tr><td align="left" balign="left"> + EMPTY_LEAF : String </td></tr>
-<tr><td align="left" balign="left"> + JOB : String </td></tr>
-<tr><td align="left" balign="left"> + JOB_ : String </td></tr>
-<tr><td align="left" balign="left"> + TASK : String </td></tr>
-<tr><td align="left" balign="left"> + TASK_ : String </td></tr>
-<tr><td align="left" balign="left"> + ID : String </td></tr>
-<tr><td align="left" balign="left"> + JOB_COMMENTS : String </td></tr>
-<tr><td align="left" balign="left"> + JOB_FEEDBACK : String </td></tr>
-<tr><td align="left" balign="left"> + DSD_PATH : String </td></tr>
-<tr><td align="left" balign="left"> + none : Object </td></tr>
-<tr><td align="left" balign="left"> + PARAMETER_TYPES : String </td></tr>
-<tr><td align="left" balign="left"> + PARAMETER_VALUES : String </td></tr>
-<tr><td align="left" balign="left"> + TARGET : String </td></tr>
-<tr><td align="left" balign="left"> + RETURN : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setId(contextId : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + getParentPath() : String </td></tr>
-<tr><td align="left" balign="left"> + setParentPath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + getParentID() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setParentID(parentId : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getCreationDate() : String </td></tr>
-<tr><td align="left" balign="left"> + setCreationDate(date : String) </td></tr>
-<tr><td align="left" balign="left"> + getLastUpdateDate() : String </td></tr>
-<tr><td align="left" balign="left"> + setLastUpdateDate(date : String) </td></tr>
-<tr><td align="left" balign="left"> + setDescription(date : String) </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + getScope() : int </td></tr>
-<tr><td align="left" balign="left"> + setScopeCode(scope : int) </td></tr>
-<tr><td align="left" balign="left"> + getOwnerID() : String </td></tr>
-<tr><td align="left" balign="left"> + setOwnerID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + setSubjectID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + getSubjectID() : String </td></tr>
-<tr><td align="left" balign="left"> + setProject(projectName : String) </td></tr>
-<tr><td align="left" balign="left"> + getProject() : String </td></tr>
-<tr><td align="left" balign="left"> + setAccessClass(accessClass : String) </td></tr>
-<tr><td align="left" balign="left"> + getAccessClass() : String </td></tr>
-<tr><td align="left" balign="left"> + setExportControl(exportControl : String) </td></tr>
-<tr><td align="left" balign="left"> + getExportControl() : String </td></tr>
-<tr><td align="left" balign="left"> + getGoodUntilDate() : String </td></tr>
-<tr><td align="left" balign="left"> + setGoodUntilDate(date : String) </td></tr>
-<tr><td align="left" balign="left"> + getDomainID() : String </td></tr>
-<tr><td align="left" balign="left"> + setDomainID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + getSubdomainID() : String </td></tr>
-<tr><td align="left" balign="left"> + setSubdomainID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + getDomainName() : String </td></tr>
-<tr><td align="left" balign="left"> + setDomainName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getSubdomainName() : String </td></tr>
-<tr><td align="left" balign="left"> + setSubdomainName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getPrincipal() : SorcerPrincipal </td></tr>
-<tr><td align="left" balign="left"> + setPrincipal(principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + getVersion() : float </td></tr>
-<tr><td align="left" balign="left"> + setVersion(version : float) </td></tr>
-<tr><td align="left" balign="left"> + containsPath(path : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getMetacontext() : Hashtable&lt;String, Map&lt;String, String&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setMetacontext(metacontext : Hashtable&lt;String, Map&lt;String, String&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getExecPath() : ExecPath </td></tr>
-<tr><td align="left" balign="left"> + setExertion(task : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + getSubjectPath() : String </td></tr>
-<tr><td align="left" balign="left"> + getSubjectValue() : Object </td></tr>
-<tr><td align="left" balign="left"> + setSubject(path : String, value : Object) </td></tr>
-<tr><td align="left" balign="left"> + reportException(t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + reportException(message : String, t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + appendTrace(footprint : String) </td></tr>
-<tr><td align="left" balign="left"> + append(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + setReturnValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + putDbValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putDbValue(path : String, value : Object, datastoreUrl : URL) : Object </td></tr>
-<tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
-<tr><td align="left" balign="left"> + addValue(value : Identifiable) : Object </td></tr>
-<tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(name : String, path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(name : String, path : String, id : String, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(name : String, path : String, lnkedCntxtID : String, version : float, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + remove(path : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + connect(outPath : String, inPath : String, inContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + pipe(inPath : String, outPath : String, outContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + map(fromPath : String, toPath : String, toContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + removeLink(path : String) </td></tr>
-<tr><td align="left" balign="left"> + getContextMapping(path : String) : Object[] </td></tr>
-<tr><td align="left" balign="left"> + checkpoint() </td></tr>
-<tr><td align="left" balign="left"> + mark(path : String, tuple : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + markedPaths(association : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getMarkedValues(association : String) : List&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setAttribute(attribute : String) </td></tr>
-<tr><td align="left" balign="left"> + isLocalAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isLocalSingletonAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isLocalMetaattribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSingletonAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isMetaattribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getAttributeValue(path : String, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getSingletonAttributeValue(path : String, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getMetaattributeValue(path : String, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + removeAttributeValue(path : String, attributeValue : String) </td></tr>
-<tr><td align="left" balign="left"> + getLocalMetapath(metaattributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + isValid(method : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + contextPaths() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPaths() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + paths(regex : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextValues() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localLinkPaths() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + linkPaths() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + links() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localLinks() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + link(context : Context&lt;&gt;, atPath : String, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + getLink(path : String) : Link </td></tr>
-<tr><td align="left" balign="left"> + putInValue(path : String, value : T) : T </td></tr>
-<tr><td align="left" balign="left"> + putOutValue(path : String, value : T) : T </td></tr>
-<tr><td align="left" balign="left"> + putInoutValue(path : String, value : T) : T </td></tr>
-<tr><td align="left" balign="left"> + putInValue(path : String, value : T, association : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putOutValue(path : String, value : T, association : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putInoutValue(path : String, value : T, association : String) : T </td></tr>
-<tr><td align="left" balign="left"> + setIn(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setOut(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setInout(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + toString(isHTML : boolean) : String </td></tr>
-<tr><td align="left" balign="left"> + isExportControlled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isExportControlled(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getPath(obj : Object) : String </td></tr>
-<tr><td align="left" balign="left"> + localSimpleAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + simpleAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + metaassociations(path : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localCompositeAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + compositeAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAttributes(path : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getData() : Object </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
-<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
-<tr><td align="left" balign="left"> + getLinkedContext(link : Link) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Context<T>
-	c154547:p -> c154452:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Contexter<T>
-	c154539:p -> c154452:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
-	c154452:p -> c154455:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Contexter<T>
-	c154539:p -> c154455:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Contexter<T> implements java.rmi.Remote
-	c154984:p -> c154539:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Context<T> implements sorcer.service.Contexter<T>
-	c154539:p -> c154547:p [dir=back,arrowtail=empty,style=dashed];
+	c179415:p -> c179412:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Contexter<T> implements java.rmi.Remote
+	c179975:p -> c179415:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Context<T>
+	c179412:p -> c179450:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Contexter<T>
+	c179415:p -> c179450:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
+	c179450:p -> c179459:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Contexter<T>
+	c179415:p -> c179459:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c154984 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c179975 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

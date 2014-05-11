@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ProviderAccessor
-	c355652 [label=<<table title="sorcer.util.ProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderAccessor.html">
+	c403457 [label=<<table title="sorcer.util.ProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderAccessor </td></tr>
 		</table></td></tr>
@@ -33,11 +33,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ServiceAccessor
-	c355666 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccessor.html">
+	c403477 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccessor </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # WAIT_FOR : long </td></tr>
+<tr><td align="left" balign="left"> # LUS_REAPEAT : int </td></tr>
 <tr><td align="left" balign="left"> # cache : Map&lt;String, Object&gt; </td></tr>
 <tr><td align="left" balign="left"> # providerNameUtil : ProviderNameUtil </td></tr>
 		</table></td></tr>
@@ -52,6 +54,7 @@ digraph G {
 <tr><td align="left" balign="left"> # openDiscoveryManagement(groups : String[]) </td></tr>
 <tr><td align="left" balign="left"> + getService(serviceType : Class&lt;T&gt;, attributes : Entry[], filter : ServiceItemFilter) : T </td></tr>
 <tr><td align="left" balign="left"> + getService(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
+<tr><td align="left" balign="left"> + getProvider(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 <tr><td align="left" balign="left"> + getService(template : ServiceTemplate, filter : ServiceItemFilter, groups : String[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + terminateDiscovery() </td></tr>
 <tr><td align="left" balign="left"> + getServiceItem(signature : Signature) : ServiceItem </td></tr>
@@ -65,7 +68,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.DynamicAccessor
-	c355917 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/DynamicAccessor.html">
+	c403556 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/DynamicAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DynamicAccessor </td></tr>
@@ -75,13 +78,14 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getProvider(providerName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../service/DynamicAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ProviderAccessor extends sorcer.util.ServiceAccessor
-	c355666:p -> c355652:p [dir=back,arrowtail=empty];
+	c403477:p -> c403457:p [dir=back,arrowtail=empty];
 	//sorcer.util.ProviderAccessor implements sorcer.service.DynamicAccessor
-	c355917:p -> c355652:p [dir=back,arrowtail=empty,style=dashed];
+	c403556:p -> c403457:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.ServiceAccessor implements sorcer.service.DynamicAccessor
-	c355917:p -> c355666:p [dir=back,arrowtail=empty,style=dashed];
+	c403556:p -> c403477:p [dir=back,arrowtail=empty,style=dashed];
 }
 

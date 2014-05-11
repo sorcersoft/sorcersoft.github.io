@@ -38,7 +38,7 @@
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../sorcer/core/provider/logger/LoggingConfig.html">LoggingConfig</a> <strong class="jxr_keyword">implements</strong> Serializable {
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	<strong class="jxr_keyword">private</strong> String logger;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">private</strong> Level lev;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  	<strong class="jxr_keyword">private</strong> <a href="../../../../sorcer/core/provider/logger/Level.html">Level</a> lev;
 <a class="jxr_linenumber" name="32" href="#32">32</a>  
 <a class="jxr_linenumber" name="33" href="#33">33</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_javadoccomment">	 * Compare logger names</em>
@@ -66,7 +66,7 @@
 <a class="jxr_linenumber" name="56" href="#56">56</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="57" href="#57">57</a>  <em class="jxr_javadoccomment">	 * Construct an instance using the supplied info</em>
 <a class="jxr_linenumber" name="58" href="#58">58</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="59" href="#59">59</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/core/provider/logger/LoggingConfig.html">LoggingConfig</a>(String logger, Level lev) {
+<a class="jxr_linenumber" name="59" href="#59">59</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/core/provider/logger/LoggingConfig.html">LoggingConfig</a>(String logger, <a href="../../../../sorcer/core/provider/logger/Level.html">Level</a> lev) {
 <a class="jxr_linenumber" name="60" href="#60">60</a>  		<strong class="jxr_keyword">this</strong>.logger = logger;
 <a class="jxr_linenumber" name="61" href="#61">61</a>  		<strong class="jxr_keyword">this</strong>.lev = lev;
 <a class="jxr_linenumber" name="62" href="#62">62</a>  	}
@@ -81,14 +81,14 @@
 <a class="jxr_linenumber" name="71" href="#71">71</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="72" href="#72">72</a>  <em class="jxr_javadoccomment">	 * Get the associated level for this logger</em>
 <a class="jxr_linenumber" name="73" href="#73">73</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="74" href="#74">74</a>  	<strong class="jxr_keyword">public</strong> Level getLevel() {
+<a class="jxr_linenumber" name="74" href="#74">74</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../sorcer/core/provider/logger/Level.html">Level</a> getLevel() {
 <a class="jxr_linenumber" name="75" href="#75">75</a>  		<strong class="jxr_keyword">return</strong> lev;
 <a class="jxr_linenumber" name="76" href="#76">76</a>  	}
 <a class="jxr_linenumber" name="77" href="#77">77</a>  
 <a class="jxr_linenumber" name="78" href="#78">78</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="79" href="#79">79</a>  <em class="jxr_javadoccomment">	 * Set the new associated level for this logger</em>
 <a class="jxr_linenumber" name="80" href="#80">80</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="81" href="#81">81</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setLevel(Level lev) {
+<a class="jxr_linenumber" name="81" href="#81">81</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setLevel(<a href="../../../../sorcer/core/provider/logger/Level.html">Level</a> lev) {
 <a class="jxr_linenumber" name="82" href="#82">82</a>  		<strong class="jxr_keyword">this</strong>.lev = lev;
 <a class="jxr_linenumber" name="83" href="#83">83</a>  	}
 <a class="jxr_linenumber" name="84" href="#84">84</a>  }

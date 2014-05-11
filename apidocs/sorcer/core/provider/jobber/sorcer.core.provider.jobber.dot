@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.jobber.ServiceSpacer
-	c30394 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSpacer.html">
+	c37394 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSpacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSpacer </td></tr>
 		</table></td></tr>
@@ -31,7 +31,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.jobber.ServiceSpacer.JobThread
-	c30395 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer.JobThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSpacer.JobThread.html">
+	c37395 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer.JobThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSpacer.JobThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JobThread </td></tr>
 		</table></td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceSpacer.JobThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.jobber.ServiceSpacer.TaskThread
-	c30396 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer.TaskThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSpacer.TaskThread.html">
+	c37396 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer.TaskThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSpacer.TaskThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TaskThread </td></tr>
 		</table></td></tr>
@@ -62,8 +62,28 @@ digraph G {
 <tr><td align="left" balign="left"> + getTaskID() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceSpacer.TaskThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.jobber.ServiceConcatenator
+	c37397 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceConcatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceConcatenator() </td></tr>
+<tr><td align="left" balign="left"> + ServiceConcatenator(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + doBlock(block : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + doBlock(block : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.jobber.ServiceJobber
-	c30397 [label=<<table title="sorcer.core.provider.jobber.ServiceJobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceJobber.html">
+	c37398 [label=<<table title="sorcer.core.provider.jobber.ServiceJobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceJobber.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceJobber </td></tr>
 		</table></td></tr>
@@ -83,25 +103,5 @@ digraph G {
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceJobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceConcatenator
-	c30398 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceConcatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceConcatenator() </td></tr>
-<tr><td align="left" balign="left"> + ServiceConcatenator(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

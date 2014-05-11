@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.boot.platform.PlatformLoader
-	c342496 [label=<<table title="sorcer.boot.platform.PlatformLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PlatformLoader.html">
+	c387253 [label=<<table title="sorcer.boot.platform.PlatformLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PlatformLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlatformLoader </td></tr>
 		</table></td></tr>
@@ -22,6 +22,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getInjector() : Injector </td></tr>
 <tr><td align="left" balign="left"> + getClassLoader() : ClassLoader </td></tr>
 <tr><td align="left" balign="left"> + create() </td></tr>
+<tr><td align="left" balign="left"> # loadPlatformServices(dir : File) : List&lt;ServiceActivator&gt; </td></tr>
 <tr><td align="left" balign="left"> # loadPlatform(platformDir : File, commonCL : CommonClassLoader) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PlatformLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];

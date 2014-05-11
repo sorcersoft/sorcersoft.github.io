@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.proxy.RemotePartner
-	c224743 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../proxy/RemotePartner.html">
+	c254975 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../proxy/RemotePartner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemotePartner </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../proxy/RemotePartner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.loki.group.GroupManagement
-	c224998 [label=<<table title="sorcer.core.loki.group.GroupManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GroupManagement.html">
+	c255159 [label=<<table title="sorcer.core.loki.group.GroupManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GroupManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> GroupManagement </td></tr>
@@ -52,13 +52,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GroupManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.proxy.RemotePartner implements java.rmi.Remote
-	c225281:p -> c224743:p [dir=back,arrowtail=empty,style=dashed];
+	c255425:p -> c254975:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.loki.group.GroupManagement implements java.rmi.Remote
-	c225281:p -> c224998:p [dir=back,arrowtail=empty,style=dashed];
+	c255425:p -> c255159:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.loki.group.GroupManagement implements sorcer.core.proxy.RemotePartner
-	c224743:p -> c224998:p [dir=back,arrowtail=empty,style=dashed];
+	c254975:p -> c255159:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c225281 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c255425 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

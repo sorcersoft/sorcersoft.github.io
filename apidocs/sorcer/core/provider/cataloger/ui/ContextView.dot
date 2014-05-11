@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ui.ContextView
-	c154241 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextView.html">
+	c179184 [label=<<table title="sorcer.core.provider.cataloger.ui.ContextView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextView </td></tr>
 		</table></td></tr>
@@ -26,13 +26,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ui.ContextView extends javax.swing.JPanel
-	c154299:p -> c154241:p [dir=back,arrowtail=empty];
+	c179247:p -> c179184:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ui.ContextView implements java.util.Observer
-	c154300:p -> c154241:p [dir=back,arrowtail=empty,style=dashed];
+	c179248:p -> c179184:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ui.ContextView implements java.awt.event.ActionListener
-	c154301:p -> c154241:p [dir=back,arrowtail=empty,style=dashed];
+	c179249:p -> c179184:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.JPanel
-	c154299 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
+	c179247 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JPanel </td></tr>
 		</table></td></tr>
@@ -53,7 +53,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.awt.event.ActionListener
-	c154301 [label=<<table title="java.awt.event.ActionListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html">
+	c179249 [label=<<table title="java.awt.event.ActionListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ActionListener </td></tr>
@@ -66,7 +66,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.util.Observer
-	c154300 [label=<<table title="java.util.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html">
+	c179248 [label=<<table title="java.util.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Observer </td></tr>

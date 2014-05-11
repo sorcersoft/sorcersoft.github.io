@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.co.operator
-	c374268 [label=<<table title="sorcer.co.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./operator.html">
+	c589720 [label=<<table title="sorcer.co.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./operator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> operator </td></tr>
 		</table></td></tr>
@@ -42,6 +42,8 @@ digraph G {
 <tr><td align="left" balign="left"> + duo(x1 : T1, x2 : T2) : Tuple2&lt;T1, T2&gt; </td></tr>
 <tr><td align="left" balign="left"> + triplet(x1 : T1, x2 : T2, x3 : T3) : Tuple3&lt;T1, T2, T3&gt; </td></tr>
 <tr><td align="left" balign="left"> + entry(x1 : String, x2 : T2) : Entry&lt;T2&gt; </td></tr>
+<tr><td align="left" balign="left"> + entry(x1 : String) : Entry&lt;T2&gt; </td></tr>
+<tr><td align="left" balign="left"> + entry(x1 : String, tag : String, x2 : T) : AnnotatedEntry&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + dbEntry(x1 : String, x2 : T2) : Entry&lt;T2&gt; </td></tr>
 <tr><td align="left" balign="left"> + dbEntry(x1 : T1, x2 : T2, dbURL : URL) : Tuple2&lt;T1, T2&gt; </td></tr>
 <tr><td align="left" balign="left"> + entry(x1 : T1, x2 : T2, x3 : T3) : Tuple3&lt;T1, T2, T3&gt; </td></tr>
@@ -51,6 +53,12 @@ digraph G {
 <tr><td align="left" balign="left"> + listContext(elems : T[]) : ListContext&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + dictionary(entries : Tuple2&lt;?, ?&gt;[]) : Map&lt;Object, Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + map(entries : Tuple2&lt;K, V&gt;[]) : Map&lt;K, V&gt; </td></tr>
+<tr><td align="left" balign="left"> + loop(to : int) : Loop </td></tr>
+<tr><td align="left" balign="left"> + loop(from : int, to : int) : Loop </td></tr>
+<tr><td align="left" balign="left"> + loop(template : String, to : int) : Loop </td></tr>
+<tr><td align="left" balign="left"> + loop(templates : List&lt;String&gt;, to : int) : Loop </td></tr>
+<tr><td align="left" balign="left"> + loop(template : String, from : int, to : int) : Loop </td></tr>
+<tr><td align="left" balign="left"> + names(loop : Loop, prefix : String) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + names(name : String, size : int, from : int) : String[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];

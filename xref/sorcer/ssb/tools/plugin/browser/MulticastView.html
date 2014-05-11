@@ -103,16 +103,16 @@
 <a class="jxr_linenumber" name="93" href="#93">93</a>  		getContentPane().add(splitter, BorderLayout.CENTER);
 <a class="jxr_linenumber" name="94" href="#94">94</a>  		<em class="jxr_comment">// getContentPane().add( _status,BorderLayout.SOUTH);</em>
 <a class="jxr_linenumber" name="95" href="#95">95</a>  
-<a class="jxr_linenumber" name="96" href="#96">96</a>  		_updater1 = <strong class="jxr_keyword">new</strong> Thread() {
+<a class="jxr_linenumber" name="96" href="#96">96</a>  		_updater1 = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">new</strong> Runnable(){
 <a class="jxr_linenumber" name="97" href="#97">97</a>  			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="98" href="#98">98</a>  				listen(<span class="jxr_string">"224.0.1.84"</span>, 0);
 <a class="jxr_linenumber" name="99" href="#99">99</a>  			}
-<a class="jxr_linenumber" name="100" href="#100">100</a> 		};
-<a class="jxr_linenumber" name="101" href="#101">101</a> 		_updater2 = <strong class="jxr_keyword">new</strong> Thread() {
+<a class="jxr_linenumber" name="100" href="#100">100</a> 		}, <span class="jxr_string">"listen-224.0.1.84"</span>);
+<a class="jxr_linenumber" name="101" href="#101">101</a> 		_updater2 = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">new</strong> Runnable() {
 <a class="jxr_linenumber" name="102" href="#102">102</a> 			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="103" href="#103">103</a> 				listen(<span class="jxr_string">"224.0.1.85"</span>, 1);
 <a class="jxr_linenumber" name="104" href="#104">104</a> 			}
-<a class="jxr_linenumber" name="105" href="#105">105</a> 		};
+<a class="jxr_linenumber" name="105" href="#105">105</a> 		}, <span class="jxr_string">"listen-224.0.1.85"</span>);
 <a class="jxr_linenumber" name="106" href="#106">106</a> 		_updater1.start();
 <a class="jxr_linenumber" name="107" href="#107">107</a> 		_updater2.start();
 <a class="jxr_linenumber" name="108" href="#108">108</a> 		_output.setText(<span class="jxr_string">"Waiting for multicast requests &amp; announcements...\n"</span>);

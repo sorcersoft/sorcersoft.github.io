@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ProcessDownCallback
-	c449212 [label=<<table title="sorcer.util.ProcessDownCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProcessDownCallback.html">
+	c514510 [label=<<table title="sorcer.util.ProcessDownCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProcessDownCallback.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcessDownCallback </td></tr>
@@ -22,8 +22,23 @@ digraph G {
 <tr><td align="left" balign="left"> + processDown(process : Process) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/ProcessDownCallback.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.SorcerListener
+	c514942 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SorcerListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
+<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
+<tr><td align="left" balign="left"> + sorcerEnded(exception : Exception) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.NullSorcerListener
-	c449636 [label=<<table title="sorcer.launcher.NullSorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullSorcerListener.html">
+	c514943 [label=<<table title="sorcer.launcher.NullSorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullSorcerListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NullSorcerListener </td></tr>
 		</table></td></tr>
@@ -38,24 +53,9 @@ digraph G {
 <tr><td align="left" balign="left"> + processDown(process : Process) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NullSorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.SorcerListener
-	c449640 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SorcerListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
-<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
-<tr><td align="left" balign="left"> + sorcerEnded(exception : Exception) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.launcher.NullSorcerListener implements sorcer.launcher.SorcerListener
-	c449640:p -> c449636:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.launcher.SorcerListener implements sorcer.util.ProcessDownCallback
-	c449212:p -> c449640:p [dir=back,arrowtail=empty,style=dashed];
+	c514510:p -> c514942:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.launcher.NullSorcerListener implements sorcer.launcher.SorcerListener
+	c514942:p -> c514943:p [dir=back,arrowtail=empty,style=dashed];
 }
 

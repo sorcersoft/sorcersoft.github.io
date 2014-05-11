@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ex0.HelloWorldTester
-	c66131 [label=<<table title="sorcer.ex0.HelloWorldTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldTester.html">
+	c78277 [label=<<table title="sorcer.ex0.HelloWorldTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldTester.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelloWorldTester </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorldTester.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ex0.HelloWorldImplUI
-	c66132 [label=<<table title="sorcer.ex0.HelloWorldImplUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldImplUI.html">
+	c78278 [label=<<table title="sorcer.ex0.HelloWorldImplUI" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldImplUI.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelloWorldImplUI </td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorldImplUI.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ex0.HelloWorldImpl
-	c66133 [label=<<table title="sorcer.ex0.HelloWorldImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldImpl.html">
+	c78279 [label=<<table title="sorcer.ex0.HelloWorldImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelloWorldImpl </td></tr>
 		</table></td></tr>
@@ -49,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorldImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ex0.HelloWorld
-	c66134 [label=<<table title="sorcer.ex0.HelloWorld" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorld.html">
+	c78280 [label=<<table title="sorcer.ex0.HelloWorld" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorld.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HelloWorld </td></tr>
@@ -62,7 +62,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorld.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ex0.HelloWorldContext
-	c66135 [label=<<table title="sorcer.ex0.HelloWorldContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldContext.html">
+	c78281 [label=<<table title="sorcer.ex0.HelloWorldContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HelloWorldContext </td></tr>
@@ -78,6 +78,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorldContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ex0.HelloWorldImpl implements sorcer.ex0.HelloWorld
-	c66134:p -> c66133:p [dir=back,arrowtail=empty,style=dashed];
+	c78280:p -> c78279:p [dir=back,arrowtail=empty,style=dashed];
 }
 

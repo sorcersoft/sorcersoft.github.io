@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ServiceContext<T>
-	c150355 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../context/ServiceContext.html">
+	c175095 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../context/ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -284,7 +284,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../context/ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.ContextResult
-	c150399 [label=<<table title="sorcer.core.invoker.ContextResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextResult.html">
+	c175186 [label=<<table title="sorcer.core.invoker.ContextResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextResult.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextResult </td></tr>
 		</table></td></tr>
@@ -303,6 +303,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ContextResult.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.ContextResult extends sorcer.core.context.ServiceContext
-	c150355:p -> c150399:p [dir=back,arrowtail=empty];
+	c175095:p -> c175186:p [dir=back,arrowtail=empty];
 }
 

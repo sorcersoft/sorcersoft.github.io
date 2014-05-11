@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.jini.lookup.entry.DeployInfo
-	c164859 [label=<<table title="sorcer.jini.lookup.entry.DeployInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DeployInfo.html">
+	c190474 [label=<<table title="sorcer.jini.lookup.entry.DeployInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DeployInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DeployInfo </td></tr>
 		</table></td></tr>
@@ -26,9 +26,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DeployInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.jini.lookup.entry.DeployInfo implements net.jini.core.entry.Entry
-	c165219:p -> c164859:p [dir=back,arrowtail=empty,style=dashed];
+	c190855:p -> c190474:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.core.entry.Entry
-	c165219 [label=<<table title="net.jini.core.entry.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/entry/Entry.html">
+	c190855 [label=<<table title="net.jini.core.entry.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/entry/Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Entry </td></tr>

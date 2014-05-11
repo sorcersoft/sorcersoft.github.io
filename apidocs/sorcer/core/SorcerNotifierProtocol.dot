@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerNotifierProtocol
-	c449911 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerNotifierProtocol.html">
+	c515169 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerNotifierProtocol.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerNotifierProtocol </td></tr>
@@ -28,7 +28,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerNotifierProtocol.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Provider
-	c449976 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/Provider.html">
+	c515417 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/Provider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider </td></tr>
@@ -50,7 +50,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
 <tr><td align="left" balign="left"> + getInfo() : String </td></tr>
 <tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -74,6 +73,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./provider/Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.SorcerNotifierProtocol implements sorcer.core.provider.Provider
-	c449976:p -> c449911:p [dir=back,arrowtail=empty,style=dashed];
+	c515417:p -> c515169:p [dir=back,arrowtail=empty,style=dashed];
 }
 

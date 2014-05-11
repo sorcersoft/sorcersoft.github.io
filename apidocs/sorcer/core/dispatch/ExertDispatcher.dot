@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.Dispatcher
-	c195318 [label=<<table title="sorcer.core.Dispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Dispatcher.html">
+	c222776 [label=<<table title="sorcer.core.Dispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Dispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Dispatcher </td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../Dispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exec
-	c195505 [label=<<table title="sorcer.service.Exec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Exec.html">
+	c222929 [label=<<table title="sorcer.service.Exec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Exec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exec </td></tr>
@@ -59,7 +59,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Exec.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceExertDispatcher
-	c195646 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
+	c223196 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SpaceExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -85,7 +85,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.CatalogExertDispatcher
-	c195656 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
+	c223201 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> CatalogExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -104,7 +104,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CatalogExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SWIFExertDispatcher
-	c195663 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.html">
+	c223207 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SWIFExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -120,7 +120,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SWIFExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c195665 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertDispatcher.html">
+	c223214 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -157,7 +157,6 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDispatcher(jobID : String) : ExertDispatcher </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
 <tr><td align="left" balign="left"> + createExertionID(ex : ServiceExertion) : String </td></tr>
@@ -182,7 +181,6 @@ digraph G {
 <tr><td align="left" balign="left"> # isInterupted(ex : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> # getCatalog() : Cataloger </td></tr>
 <tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
@@ -191,7 +189,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.MonitoredExertDispatcher
-	c195672 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredExertDispatcher.html">
+	c223217 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -211,16 +209,16 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.SpaceExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c195665:p -> c195646:p [dir=back,arrowtail=empty];
+	c223214:p -> c223196:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c195665:p -> c195656:p [dir=back,arrowtail=empty];
+	c223214:p -> c223201:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SWIFExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c195665:p -> c195663:p [dir=back,arrowtail=empty];
+	c223214:p -> c223207:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.ExertDispatcher implements sorcer.core.Dispatcher
-	c195318:p -> c195665:p [dir=back,arrowtail=empty,style=dashed];
+	c222776:p -> c223214:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.dispatch.ExertDispatcher implements sorcer.service.Exec
-	c195505:p -> c195665:p [dir=back,arrowtail=empty,style=dashed];
+	c222929:p -> c223214:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.dispatch.MonitoredExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c195665:p -> c195672:p [dir=back,arrowtail=empty];
+	c223214:p -> c223217:p [dir=back,arrowtail=empty];
 }
 

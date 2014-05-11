@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.monitor.MonitorableSession
-	c299176 [label=<<table title="sorcer.core.monitor.MonitorableSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorableSession.html">
+	c339837 [label=<<table title="sorcer.core.monitor.MonitorableSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorableSession.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitorableSession </td></tr>
 		</table></td></tr>
@@ -29,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitorableSession.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitoringSession
-	c299180 [label=<<table title="sorcer.core.monitor.MonitoringSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoringSession.html">
+	c339843 [label=<<table title="sorcer.core.monitor.MonitoringSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoringSession.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitoringSession </td></tr>
@@ -47,11 +47,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitoringSession.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.monitor.MonitorableSession implements sorcer.core.monitor.MonitoringSession
-	c299180:p -> c299176:p [dir=back,arrowtail=empty,style=dashed];
+	c339843:p -> c339837:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringSession implements java.io.Serializable
-	c299673:p -> c299180:p [dir=back,arrowtail=empty,style=dashed];
+	c340307:p -> c339843:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c299673 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c340307 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

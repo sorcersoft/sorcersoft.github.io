@@ -37,11 +37,11 @@
 <a class="jxr_linenumber" name="27" href="#27">27</a>  
 <a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../sorcer/tools/shell/cmds/SorcerCmd.html">SorcerCmd</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../sorcer/tools/shell/ShellCmd.html">ShellCmd</a> {
 <a class="jxr_linenumber" name="29" href="#29">29</a>  	{
-<a class="jxr_linenumber" name="30" href="#30">30</a>  		COMMAND_NAME = <span class="jxr_string">"ig"</span>;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  		COMMAND_NAME = <span class="jxr_string">"sh"</span>;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  
 <a class="jxr_linenumber" name="32" href="#32">32</a>  		NOT_LOADED_MSG = <span class="jxr_string">"***command not loaded due to conflict"</span>;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  
-<a class="jxr_linenumber" name="34" href="#34">34</a>  		COMMAND_USAGE = <span class="jxr_string">"ig -h | -n | -d"</span>;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		COMMAND_USAGE = <span class="jxr_string">"sh -h | -n | -d"</span>;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  
 <a class="jxr_linenumber" name="36" href="#36">36</a>  		COMMAND_HELP = <span class="jxr_string">"Display SORCER_HOME \n  -h  cd to SORCER_HOME\n"</span>
 <a class="jxr_linenumber" name="37" href="#37">37</a>  				+<span class="jxr_string">"-n  cd to the netlets directory\n  -d  cd to http data root directory."</span>;
@@ -61,27 +61,27 @@
 <a class="jxr_linenumber" name="51" href="#51">51</a>  			<strong class="jxr_keyword">return</strong>;
 <a class="jxr_linenumber" name="52" href="#52">52</a>  		}
 <a class="jxr_linenumber" name="53" href="#53">53</a>  		String option = myTk.nextToken();
-<a class="jxr_linenumber" name="54" href="#54">54</a>  		<strong class="jxr_keyword">if</strong> (option.equals(<span class="jxr_string">"ig"</span>)) {
+<a class="jxr_linenumber" name="54" href="#54">54</a>  		<strong class="jxr_keyword">if</strong> (option.equals(<span class="jxr_string">"sh"</span>)) {
 <a class="jxr_linenumber" name="55" href="#55">55</a>  			option = myTk.nextToken();
 <a class="jxr_linenumber" name="56" href="#56">56</a>  		}
 <a class="jxr_linenumber" name="57" href="#57">57</a>  
 <a class="jxr_linenumber" name="58" href="#58">58</a>  		<strong class="jxr_keyword">if</strong> (option.equals(<span class="jxr_string">"-h"</span>)) {
 <a class="jxr_linenumber" name="59" href="#59">59</a>  			NetworkShell.setRequest(<span class="jxr_string">"cd "</span> + System.getenv(<span class="jxr_string">"SORCER_HOME"</span>));
-<a class="jxr_linenumber" name="60" href="#60">60</a>  			ShellCmd cmd = (ShellCmd) NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
+<a class="jxr_linenumber" name="60" href="#60">60</a>  			ShellCmd cmd = NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
 <a class="jxr_linenumber" name="61" href="#61">61</a>  			cmd.execute();
 <a class="jxr_linenumber" name="62" href="#62">62</a>  		} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (option.equals(<span class="jxr_string">"-n"</span>)) {
 <a class="jxr_linenumber" name="63" href="#63">63</a>  			NetworkShell.setRequest(<span class="jxr_string">"cd "</span> + System.getenv(<span class="jxr_string">"SORCER_HOME"</span>)
-<a class="jxr_linenumber" name="64" href="#64">64</a>  					+ File.separator + <span class="jxr_string">"netlets"</span> + File.separator + <span class="jxr_string">"src"</span>);
-<a class="jxr_linenumber" name="65" href="#65">65</a>  			ShellCmd cmd = (ShellCmd) NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
+<a class="jxr_linenumber" name="64" href="#64">64</a>  					+ File.separator + <span class="jxr_string">"netlets"</span>);
+<a class="jxr_linenumber" name="65" href="#65">65</a>  			ShellCmd cmd = NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
 <a class="jxr_linenumber" name="66" href="#66">66</a>  			cmd.execute();
 <a class="jxr_linenumber" name="67" href="#67">67</a>  		} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (option.equals(<span class="jxr_string">"-d"</span>)) {
 <a class="jxr_linenumber" name="68" href="#68">68</a>  			NetworkShell.setRequest(<span class="jxr_string">"cd "</span> + System.getenv(<span class="jxr_string">"SORCER_HOME"</span>)
-<a class="jxr_linenumber" name="69" href="#69">69</a>  					+ File.separator + <span class="jxr_string">"data"</span>);
-<a class="jxr_linenumber" name="70" href="#70">70</a>  			ShellCmd cmd = (ShellCmd) NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
+<a class="jxr_linenumber" name="69" href="#69">69</a>  					+ File.separator + <span class="jxr_string">"deploy"</span>);
+<a class="jxr_linenumber" name="70" href="#70">70</a>  			ShellCmd cmd = NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
 <a class="jxr_linenumber" name="71" href="#71">71</a>  			cmd.execute();
 <a class="jxr_linenumber" name="72" href="#72">72</a>  		} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (option.equals(<span class="jxr_string">"~"</span>)) {
 <a class="jxr_linenumber" name="73" href="#73">73</a>  			NetworkShell.setRequest(<span class="jxr_string">"cd "</span> + System.getProperty(<span class="jxr_string">"user.home"</span>));
-<a class="jxr_linenumber" name="74" href="#74">74</a>  			ShellCmd cmd = (ShellCmd) NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
+<a class="jxr_linenumber" name="74" href="#74">74</a>  			ShellCmd cmd = NetworkShell.getCommandTable().get(<span class="jxr_string">"ls"</span>);
 <a class="jxr_linenumber" name="75" href="#75">75</a>  			cmd.execute();
 <a class="jxr_linenumber" name="76" href="#76">76</a>  		}
 <a class="jxr_linenumber" name="77" href="#77">77</a>  	}

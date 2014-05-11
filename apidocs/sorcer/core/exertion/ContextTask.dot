@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.exertion.ContextTask
-	c152004 [label=<<table title="sorcer.core.exertion.ContextTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextTask </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextTask(serviceType : Class&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getProviderContext() : Context&lt;&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetTask
-	c152010 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetTask.html">
+	c176754 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetTask </td></tr>
 		</table></td></tr>
@@ -49,7 +36,20 @@ digraph G {
 <tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.ContextTask
+	c176756 [label=<<table title="sorcer.core.exertion.ContextTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextTask.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContextTask </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ContextTask(serviceType : Class&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getProviderContext() : Context&lt;&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.ContextTask extends sorcer.core.exertion.NetTask
-	c152010:p -> c152004:p [dir=back,arrowtail=empty];
+	c176754:p -> c176756:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.jini.lookup.AttributesUtil
-	c101383 [label=<<table title="sorcer.jini.lookup.AttributesUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributesUtil.html">
+	c117196 [label=<<table title="sorcer.jini.lookup.AttributesUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AttributesUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributesUtil </td></tr>
 		</table></td></tr>
@@ -20,6 +20,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AttributesUtil() </td></tr>
 <tr><td align="left" balign="left"> + getFirstByType(attributeSets : Entry[], type : Class&lt;T&gt;) : T </td></tr>
+<tr><td align="left" balign="left"> + getSorcerServiceInfo(attributeSets : Entry[]) : SorcerServiceInfo </td></tr>
 <tr><td align="left" balign="left"> + getGroups(attributeSets : Entry[]) : String </td></tr>
 <tr><td align="left" balign="left"> + getProviderName(attributeSets : Entry[]) : String </td></tr>
 <tr><td align="left" balign="left"> + getHostName(attributeSets : Entry[]) : String </td></tr>

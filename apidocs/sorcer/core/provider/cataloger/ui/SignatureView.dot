@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ui.SignatureView
-	c438862 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignatureView.html">
+	c502776 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignatureView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureView </td></tr>
 		</table></td></tr>
@@ -29,11 +29,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignatureView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ui.SignatureView extends javax.swing.JPanel
-	c438917:p -> c438862:p [dir=back,arrowtail=empty];
+	c502833:p -> c502776:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ui.SignatureView implements java.util.Observer
-	c438918:p -> c438862:p [dir=back,arrowtail=empty,style=dashed];
+	c502834:p -> c502776:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.swing.JPanel
-	c438917 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
+	c502833 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JPanel </td></tr>
 		</table></td></tr>
@@ -54,7 +54,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.util.Observer
-	c438918 [label=<<table title="java.util.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html">
+	c502834 [label=<<table title="java.util.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Observer </td></tr>

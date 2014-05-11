@@ -75,8 +75,8 @@
 <a class="jxr_linenumber" name="65" href="#65">65</a>  		title.setIcon(TreeRenderer._jarIcon);
 <a class="jxr_linenumber" name="66" href="#66">66</a>  		add(title, BorderLayout.NORTH);
 <a class="jxr_linenumber" name="67" href="#67">67</a>  		<strong class="jxr_keyword">if</strong> (!url.toString().endsWith(<span class="jxr_string">"/"</span>)) {
-<a class="jxr_linenumber" name="68" href="#68">68</a>  			<strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">this</strong>).start();
-<a class="jxr_linenumber" name="69" href="#69">69</a>  		}
+<a class="jxr_linenumber" name="68" href="#68">68</a>              <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">this</strong>, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] JarView-"</span> + codebase).start();
+<a class="jxr_linenumber" name="69" href="#69">69</a>          }
 <a class="jxr_linenumber" name="70" href="#70">70</a>  	}
 <a class="jxr_linenumber" name="71" href="#71">71</a>  
 <a class="jxr_linenumber" name="72" href="#72">72</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {

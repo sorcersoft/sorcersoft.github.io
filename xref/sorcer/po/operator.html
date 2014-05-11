@@ -152,7 +152,7 @@
 <a class="jxr_linenumber" name="142" href="#142">142</a> 		
 <a class="jxr_linenumber" name="143" href="#143">143</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/service/Invocation.html">Invocation</a> invoker(<a href="../../sorcer/service/Mappable.html">Mappable</a> mappable, String path)
 <a class="jxr_linenumber" name="144" href="#144">144</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ContextException.html">ContextException</a> {
-<a class="jxr_linenumber" name="145" href="#145">145</a> 		Object obj = ((ServiceContext) mappable).asis(path);
+<a class="jxr_linenumber" name="145" href="#145">145</a> 		Object obj = mappable.asis(path);
 <a class="jxr_linenumber" name="146" href="#146">146</a> 		<strong class="jxr_keyword">while</strong> (obj instanceof Mappable || obj instanceof Par) {
 <a class="jxr_linenumber" name="147" href="#147">147</a> 			<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="148" href="#148">148</a> 				obj = ((Evaluation) obj).asis();
@@ -445,7 +445,7 @@
 <a class="jxr_linenumber" name="435" href="#435">435</a> 
 <a class="jxr_linenumber" name="436" href="#436">436</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/core/invoker/LoopInvoker.html">LoopInvoker</a> loop(String name, <a href="../../sorcer/service/Condition.html">Condition</a> condition, <a href="../../sorcer/core/context/model/par/Par.html">Par</a> <a href="../../sorcer/co/tuple/target.html">target</a>)
 <a class="jxr_linenumber" name="437" href="#437">437</a> 			<strong class="jxr_keyword">throws</strong> EvaluationException, RemoteException {
-<a class="jxr_linenumber" name="438" href="#438">438</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/invoker/LoopInvoker.html">LoopInvoker</a>(name, condition, (Invoker) ((Par) target).asis());
+<a class="jxr_linenumber" name="438" href="#438">438</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/invoker/LoopInvoker.html">LoopInvoker</a>(name, condition, (Invoker) target.asis());
 <a class="jxr_linenumber" name="439" href="#439">439</a> 	}
 <a class="jxr_linenumber" name="440" href="#440">440</a> 	
 <a class="jxr_linenumber" name="441" href="#441">441</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/core/invoker/OptInvoker.html">OptInvoker</a> get(<a href="../../sorcer/core/invoker/AltInvoker.html">AltInvoker</a> invoker, <strong class="jxr_keyword">int</strong> index) {

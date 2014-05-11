@@ -9,8 +9,15 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.ParModeling
+	c379622 [label=<<table title="sorcer.service.ParModeling" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParModeling.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ParModeling </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ParModeling.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.ParModel<T>
-	c335330 [label=<<table title="sorcer.core.context.model.par.ParModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/ParModel.html">
+	c379706 [label=<<table title="sorcer.core.context.model.par.ParModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/ParModel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParModel&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -36,18 +43,10 @@ digraph G {
 <tr><td align="left" balign="left"> + getVarPaths(var : Variability&lt;&gt;) : Enumeration&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMarkedVariables(sc : Context&lt;&gt;, association : String) : Variability&lt;&gt;[] </td></tr>
 <tr><td align="left" balign="left"> + markVar(cntxt : Context&lt;&gt;, path : String, var : Variability&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendNew(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/model/par/ParModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.ParModeling
-	c335427 [label=<<table title="sorcer.service.ParModeling" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParModeling.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ParModeling </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ParModeling.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.model.par.ParModel<T> implements sorcer.service.ParModeling
-	c335427:p -> c335330:p [dir=back,arrowtail=empty,style=dashed];
+	c379622:p -> c379706:p [dir=back,arrowtail=empty,style=dashed];
 }
 

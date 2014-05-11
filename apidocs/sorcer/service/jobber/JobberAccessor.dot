@@ -10,11 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ServiceAccessor
-	c260797 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/ServiceAccessor.html">
+	c298278 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/ServiceAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccessor </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # WAIT_FOR : long </td></tr>
+<tr><td align="left" balign="left"> # LUS_REAPEAT : int </td></tr>
 <tr><td align="left" balign="left"> # cache : Map&lt;String, Object&gt; </td></tr>
 <tr><td align="left" balign="left"> # providerNameUtil : ProviderNameUtil </td></tr>
 		</table></td></tr>
@@ -29,6 +31,7 @@ digraph G {
 <tr><td align="left" balign="left"> # openDiscoveryManagement(groups : String[]) </td></tr>
 <tr><td align="left" balign="left"> + getService(serviceType : Class&lt;T&gt;, attributes : Entry[], filter : ServiceItemFilter) : T </td></tr>
 <tr><td align="left" balign="left"> + getService(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
+<tr><td align="left" balign="left"> + getProvider(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 <tr><td align="left" balign="left"> + getService(template : ServiceTemplate, filter : ServiceItemFilter, groups : String[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + terminateDiscovery() </td></tr>
 <tr><td align="left" balign="left"> + getServiceItem(signature : Signature) : ServiceItem </td></tr>
@@ -42,7 +45,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../util/ServiceAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.jobber.JobberAccessor
-	c261218 [label=<<table title="sorcer.service.jobber.JobberAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JobberAccessor.html">
+	c298621 [label=<<table title="sorcer.service.jobber.JobberAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JobberAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JobberAccessor </td></tr>
 		</table></td></tr>
@@ -58,6 +61,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JobberAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.jobber.JobberAccessor extends sorcer.util.ServiceAccessor
-	c260797:p -> c261218:p [dir=back,arrowtail=empty];
+	c298278:p -> c298621:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c443104 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerConstants.html">
+	c507927 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -615,88 +615,15 @@ digraph G {
 <tr><td align="left" balign="left"> + ACCESS_CLASS : String </td></tr>
 <tr><td align="left" balign="left"> + CODEBASE_SEPARATOR : String </td></tr>
 <tr><td align="left" balign="left"> + NAME_DEFAULT : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_SORCER_REMOTE_CALL : String </td></tr>
+<tr><td align="left" balign="left"> + START_PACKAGE : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceSpacer
-	c443399 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/jobber/ServiceSpacer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceSpacer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceSpacer() </td></tr>
-<tr><td align="left" balign="left"> + ServiceSpacer(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + doTask(task : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="./provider/jobber/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceConcatenator
-	c443403 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/jobber/ServiceConcatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceConcatenator() </td></tr>
-<tr><td align="left" balign="left"> + ServiceConcatenator(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./provider/jobber/ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogBlockDispatcher
-	c443415 [label=<<table title="sorcer.core.dispatch.CatalogBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./dispatch/CatalogBlockDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogBlockDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogBlockDispatcher(block : Block, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./dispatch/CatalogBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.MonitoredExertDispatcher
-	c443442 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./dispatch/MonitoredExertDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + sessionMonitor : MonitorSessionManagement </td></tr>
-<tr><td align="left" balign="left"> + lrm : LeaseRenewalManager </td></tr>
-<tr><td align="left" balign="left"> + LEASE_RENEWAL_PERIOD : long </td></tr>
-<tr><td align="left" balign="left"> + DEFAULT_TIMEOUT_PERIOD : long </td></tr>
-<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitoredExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(result : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # execExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./dispatch/MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.Jobs
-	c443452 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./exertion/Jobs.html">
+	c508326 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./exertion/Jobs.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Jobs </td></tr>
 		</table></td></tr>
@@ -732,8 +659,102 @@ digraph G {
 <tr><td align="left" balign="left"> + getTaskContexts(ex : Exertion) : List&lt;Context&lt;&gt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./exertion/Jobs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.jobber.ServiceSpacer
+	c508332 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/jobber/ServiceSpacer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceSpacer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceSpacer() </td></tr>
+<tr><td align="left" balign="left"> + ServiceSpacer(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + doJob(job : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
+<tr><td align="left" balign="left"> + doTask(task : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+		</table></td></tr>
+		</table>>, URL="./provider/jobber/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.jobber.ServiceConcatenator
+	c508335 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/jobber/ServiceConcatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceConcatenator() </td></tr>
+<tr><td align="left" balign="left"> + ServiceConcatenator(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + doBlock(block : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + doBlock(block : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./provider/jobber/ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.MonitoredExertDispatcher
+	c508359 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./dispatch/MonitoredExertDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + sessionMonitor : MonitorSessionManagement </td></tr>
+<tr><td align="left" balign="left"> + lrm : LeaseRenewalManager </td></tr>
+<tr><td align="left" balign="left"> + LEASE_RENEWAL_PERIOD : long </td></tr>
+<tr><td align="left" balign="left"> + DEFAULT_TIMEOUT_PERIOD : long </td></tr>
+<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MonitoredExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # postExecExertion(result : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # execExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./dispatch/MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.CatalogBlockDispatcher
+	c508360 [label=<<table title="sorcer.core.dispatch.CatalogBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./dispatch/CatalogBlockDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogBlockDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogBlockDispatcher(block : Block, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./dispatch/CatalogBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.account.provider.AccountProvider
+	c508620 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../account/provider/AccountProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AccountProvider </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + setProperties(props : Properties) </td></tr>
+<tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getBalance() : Money </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(amount : Money) </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../account/provider/AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.ServiceAccountImpl
-	c443678 [label=<<table title="sorcer.account.provider.ServiceAccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../account/provider/ServiceAccountImpl.html">
+	c508622 [label=<<table title="sorcer.account.provider.ServiceAccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../account/provider/ServiceAccountImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccountImpl </td></tr>
 		</table></td></tr>
@@ -755,37 +776,19 @@ digraph G {
 <tr><td align="left" balign="left"> + setAdmin(admin : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../account/provider/ServiceAccountImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.account.provider.AccountProvider
-	c443679 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../account/provider/AccountProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AccountProvider </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getBalance() : Money </td></tr>
-<tr><td align="left" balign="left"> + makeDeposit(amount : Money) </td></tr>
-<tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../account/provider/AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.core.SorcerConstants
-	c443104:p -> c443399:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.jobber.ServiceConcatenator implements sorcer.core.SorcerConstants
-	c443104:p -> c443403:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.dispatch.CatalogBlockDispatcher implements sorcer.core.SorcerConstants
-	c443104:p -> c443415:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.dispatch.MonitoredExertDispatcher implements sorcer.core.SorcerConstants
-	c443104:p -> c443442:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.exertion.Jobs implements sorcer.core.SorcerConstants
-	c443104:p -> c443452:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.account.provider.ServiceAccountImpl implements sorcer.core.SorcerConstants
-	c443104:p -> c443678:p [dir=back,arrowtail=empty,style=dashed];
+	c507927:p -> c508326:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.core.SorcerConstants
+	c507927:p -> c508332:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.jobber.ServiceConcatenator implements sorcer.core.SorcerConstants
+	c507927:p -> c508335:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.dispatch.MonitoredExertDispatcher implements sorcer.core.SorcerConstants
+	c507927:p -> c508359:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.dispatch.CatalogBlockDispatcher implements sorcer.core.SorcerConstants
+	c507927:p -> c508360:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.account.provider.AccountProvider implements sorcer.core.SorcerConstants
-	c443104:p -> c443679:p [dir=back,arrowtail=empty,style=dashed];
+	c507927:p -> c508620:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.account.provider.ServiceAccountImpl implements sorcer.core.SorcerConstants
+	c507927:p -> c508622:p [dir=back,arrowtail=empty,style=dashed];
 }
 

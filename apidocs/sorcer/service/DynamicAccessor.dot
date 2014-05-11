@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ProviderAccessor
-	c176155 [label=<<table title="sorcer.util.ProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProviderAccessor.html">
+	c202496 [label=<<table title="sorcer.util.ProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProviderAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderAccessor </td></tr>
 		</table></td></tr>
@@ -33,7 +33,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../util/ProviderAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ProviderLocator
-	c176163 [label=<<table title="sorcer.util.ProviderLocator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProviderLocator.html">
+	c202513 [label=<<table title="sorcer.util.ProviderLocator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProviderLocator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderLocator </td></tr>
 		</table></td></tr>
@@ -50,12 +50,12 @@ digraph G {
 <tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
 <tr><td align="left" balign="left"> # getGroups() : String[] </td></tr>
 <tr><td align="left" balign="left"> + getServiceItem(signature : Signature) : ServiceItem </td></tr>
-<tr><td align="left" balign="left"> + getServicer(signature : Signature) : Service </td></tr>
 <tr><td align="left" balign="left"> + getService(signature : Signature) : Service </td></tr>
+<tr><td align="left" balign="left"> + getProvider(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/ProviderLocator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ProviderLookup
-	c176168 [label=<<table title="sorcer.util.ProviderLookup" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProviderLookup.html">
+	c202515 [label=<<table title="sorcer.util.ProviderLookup" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ProviderLookup.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderLookup </td></tr>
 		</table></td></tr>
@@ -80,11 +80,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../util/ProviderLookup.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ServiceAccessor
-	c176169 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ServiceAccessor.html">
+	c202516 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ServiceAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccessor </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # WAIT_FOR : long </td></tr>
+<tr><td align="left" balign="left"> # LUS_REAPEAT : int </td></tr>
 <tr><td align="left" balign="left"> # cache : Map&lt;String, Object&gt; </td></tr>
 <tr><td align="left" balign="left"> # providerNameUtil : ProviderNameUtil </td></tr>
 		</table></td></tr>
@@ -99,6 +101,7 @@ digraph G {
 <tr><td align="left" balign="left"> # openDiscoveryManagement(groups : String[]) </td></tr>
 <tr><td align="left" balign="left"> + getService(serviceType : Class&lt;T&gt;, attributes : Entry[], filter : ServiceItemFilter) : T </td></tr>
 <tr><td align="left" balign="left"> + getService(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
+<tr><td align="left" balign="left"> + getProvider(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 <tr><td align="left" balign="left"> + getService(template : ServiceTemplate, filter : ServiceItemFilter, groups : String[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + terminateDiscovery() </td></tr>
 <tr><td align="left" balign="left"> + getServiceItem(signature : Signature) : ServiceItem </td></tr>
@@ -111,8 +114,22 @@ digraph G {
 <tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/ServiceAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.DynamicAccessor
+	c202595 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DynamicAccessor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DynamicAccessor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getProvider(providerName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DynamicAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor
-	c176262 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/StaticServiceProvider.StaticProviderAccessor.html">
+	c202698 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/StaticServiceProvider.StaticProviderAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticProviderAccessor </td></tr>
 		</table></td></tr>
@@ -124,32 +141,20 @@ digraph G {
 <tr><td align="left" balign="left"> + getService(signature : Signature) : Service </td></tr>
 <tr><td align="left" balign="left"> + getServiceItem(signature : Signature) : ServiceItem </td></tr>
 <tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getProvider(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/StaticServiceProvider.StaticProviderAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.DynamicAccessor
-	c176420 [label=<<table title="sorcer.service.DynamicAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DynamicAccessor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> DynamicAccessor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DynamicAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ProviderAccessor extends sorcer.util.ServiceAccessor
-	c176169:p -> c176155:p [dir=back,arrowtail=empty];
+	c202516:p -> c202496:p [dir=back,arrowtail=empty];
 	//sorcer.util.ProviderAccessor implements sorcer.service.DynamicAccessor
-	c176420:p -> c176155:p [dir=back,arrowtail=empty,style=dashed];
+	c202595:p -> c202496:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.ProviderLocator implements sorcer.service.DynamicAccessor
-	c176420:p -> c176163:p [dir=back,arrowtail=empty,style=dashed];
+	c202595:p -> c202513:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.ProviderLookup implements sorcer.service.DynamicAccessor
-	c176420:p -> c176168:p [dir=back,arrowtail=empty,style=dashed];
+	c202595:p -> c202515:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.ServiceAccessor implements sorcer.service.DynamicAccessor
-	c176420:p -> c176169:p [dir=back,arrowtail=empty,style=dashed];
+	c202595:p -> c202516:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor implements sorcer.service.DynamicAccessor
-	c176420:p -> c176262:p [dir=back,arrowtail=empty,style=dashed];
+	c202595:p -> c202698:p [dir=back,arrowtail=empty,style=dashed];
 }
 

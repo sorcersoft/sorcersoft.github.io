@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.AdministratableProvider
-	c408281 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../AdministratableProvider.html">
+	c465836 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../AdministratableProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> AdministratableProvider </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c408322 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c466067 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -117,7 +117,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 <tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
 <tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
 <tr><td align="left" balign="left"> + loadConfiguration(filename : String) </td></tr>
 <tr><td align="left" balign="left"> + hangup() </td></tr>
 <tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
@@ -151,10 +150,11 @@ digraph G {
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Cataloger
-	c408331 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Cataloger.html">
+	c466070 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Cataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cataloger </td></tr>
@@ -186,7 +186,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../Cataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger
-	c408841 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.html">
+	c466509 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceCataloger </td></tr>
 		</table></td></tr>
@@ -223,12 +223,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.AdministratableProvider
-	c408281:p -> c408322:p [dir=back,arrowtail=empty,style=dashed];
+	c465836:p -> c466067:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger extends sorcer.core.provider.ServiceProvider
-	c408322:p -> c408841:p [dir=back,arrowtail=empty];
+	c466067:p -> c466509:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.provider.Cataloger
-	c408331:p -> c408841:p [dir=back,arrowtail=empty,style=dashed];
+	c466070:p -> c466509:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.AdministratableProvider
-	c408281:p -> c408841:p [dir=back,arrowtail=empty,style=dashed];
+	c465836:p -> c466509:p [dir=back,arrowtail=empty,style=dashed];
 }
 

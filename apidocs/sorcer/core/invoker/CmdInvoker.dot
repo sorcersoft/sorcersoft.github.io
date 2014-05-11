@@ -9,28 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.invoker.CmdInvoker
-	c123098 [label=<<table title="sorcer.core.invoker.CmdInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CmdInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CmdInvoker </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CmdInvoker(cmd : String) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(name : String, cmd : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(cmdarray : String[], pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(shcmd : String, scriptFile : File, background : boolean, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], script : File, background : boolean, stdin : InputStream, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], scriptFile : File, background : boolean, logFile : File) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(cmd : String, stdin : InputStream) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execScript() : ExecUtils.CmdResult </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CmdInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.Invoker<T>
-	c123109 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
+	c145433 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -84,16 +64,36 @@ digraph G {
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.CmdInvoker
+	c145435 [label=<<table title="sorcer.core.invoker.CmdInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CmdInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CmdInvoker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CmdInvoker(cmd : String) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(name : String, cmd : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(cmdarray : String[], pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(shcmd : String, scriptFile : File, background : boolean, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], script : File, background : boolean, stdin : InputStream, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], scriptFile : File, background : boolean, logFile : File) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(cmd : String, stdin : InputStream) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execScript() : ExecUtils.CmdResult </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CmdInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.CmdInvoking<T>
-	c123115 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CmdInvoking.html">
+	c145444 [label=<<table title="sorcer.core.invoker.CmdInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CmdInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CmdInvoking&lt;T&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CmdInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.CmdInvoker extends sorcer.core.invoker.Invoker
-	c123109:p -> c123098:p [dir=back,arrowtail=empty];
+	c145433:p -> c145435:p [dir=back,arrowtail=empty];
 	//sorcer.core.invoker.CmdInvoker implements sorcer.core.invoker.CmdInvoking<T>
-	c123115:p -> c123098:p [dir=back,arrowtail=empty,style=dashed];
+	c145444:p -> c145435:p [dir=back,arrowtail=empty,style=dashed];
 }
 

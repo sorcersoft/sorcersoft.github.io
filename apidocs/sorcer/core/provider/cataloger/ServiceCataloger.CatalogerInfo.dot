@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo
-	c410208 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.html">
+	c467962 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogerInfo </td></tr>
 		</table></td></tr>
@@ -42,18 +42,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo extends java.util.concurrent.ConcurrentHashMap<sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList, java.util.List<net.jini.core.lookup.ServiceItem>>
-	c410244:p -> c410208:p [dir=back,arrowtail=empty];
+	c468003:p -> c467962:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo implements java.io.Serializable
-	c410245:p -> c410208:p [dir=back,arrowtail=empty,style=dashed];
+	c468004:p -> c467962:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c410245 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c468004 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.util.concurrent.ConcurrentHashMap<K, V>
-	c410244 [label=<<table title="java.util.concurrent.ConcurrentHashMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html">
+	c468003 [label=<<table title="java.util.concurrent.ConcurrentHashMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConcurrentHashMap&lt;K, V&gt; </td></tr>
 		</table></td></tr>

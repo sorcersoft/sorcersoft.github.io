@@ -91,7 +91,7 @@
 <a class="jxr_linenumber" name="81" href="#81">81</a>          <em class="jxr_comment">// remove sorcer variables from new context</em>
 <a class="jxr_linenumber" name="82" href="#82">82</a>          <em class="jxr_comment">// these objects are new objects and collide with old</em>
 <a class="jxr_linenumber" name="83" href="#83">83</a>          <em class="jxr_comment">// object IDs in original context</em>
-<a class="jxr_linenumber" name="84" href="#84">84</a>          ((Hashtable) toCntxt).remove(SORCER_VARIABLES_PATH);
+<a class="jxr_linenumber" name="84" href="#84">84</a>          toCntxt.remove(SORCER_VARIABLES_PATH);
 <a class="jxr_linenumber" name="85" href="#85">85</a>      }
 <a class="jxr_linenumber" name="86" href="#86">86</a>  
 <a class="jxr_linenumber" name="87" href="#87">87</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../sorcer/core/context/node/ContextNode.html">ContextNode</a>[] getContextNodes(<a href="../../../sorcer/service/Context.html">Context</a> context)
@@ -184,7 +184,7 @@
 <a class="jxr_linenumber" name="174" href="#174">174</a>             <strong class="jxr_keyword">if</strong> (localMeta!=<strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="175" href="#175">175</a>                 <strong class="jxr_keyword">for</strong> (String loc : StringUtils.tokenize(localMeta, SorcerConstants.APS)) {
 <a class="jxr_linenumber" name="176" href="#176">176</a>                     <strong class="jxr_keyword">if</strong> ((hash!=<strong class="jxr_keyword">null</strong> &amp;&amp; !hash.isEmpty()) &amp;&amp;
-<a class="jxr_linenumber" name="177" href="#177">177</a>                             ((Hashtable)hash.get(loc))!=<strong class="jxr_keyword">null</strong> &amp;&amp;
+<a class="jxr_linenumber" name="177" href="#177">177</a>                             hash.get(loc) !=<strong class="jxr_keyword">null</strong> &amp;&amp;
 <a class="jxr_linenumber" name="178" href="#178">178</a>                     (((Hashtable)hash.get(loc)).containsKey(path))) {
 <a class="jxr_linenumber" name="179" href="#179">179</a>                         Object val = ((Hashtable)hash.get(loc)).get(path);
 <a class="jxr_linenumber" name="180" href="#180">180</a>                         <strong class="jxr_keyword">if</strong> (val!=<strong class="jxr_keyword">null</strong>) markerStr.append(SorcerConstants.APS).append(val);

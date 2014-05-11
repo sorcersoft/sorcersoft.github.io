@@ -10,60 +10,25 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.logger.RemoteLoggerManager
-	c26972 [label=<<table title="sorcer.core.provider.logger.RemoteLoggerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerManager.html">
+	c73904 [label=<<table title="sorcer.core.provider.logger.RemoteLoggerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteLoggerManager </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + logFile : RandomAccessFile </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RemoteLoggerManager(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + init(args : String[]) </td></tr>
+<tr><td align="left" balign="left"> + RemoteLoggerManager() </td></tr>
 <tr><td align="left" balign="left"> + getLogNames() : String[] </td></tr>
-<tr><td align="left" balign="left"> + publish(record : LogRecord) </td></tr>
+<tr><td align="left" balign="left"> + publish(loggingEvents : List&lt;LoggingEventVO&gt;) </td></tr>
+<tr><td align="left" balign="left"> # publish(loggingEvent : ILoggingEvent) </td></tr>
 <tr><td align="left" balign="left"> + getLog(fileName : String) : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + reset() </td></tr>
-<tr><td align="left" balign="left"> + readConfiguration(is : InputStream) </td></tr>
 <tr><td align="left" balign="left"> + getLoggers() : List&lt;LoggingConfig&gt; </td></tr>
-<tr><td align="left" balign="left"> + getLoggerLevel(loggerName : String) : Level </td></tr>
 <tr><td align="left" balign="left"> + deleteLog(loggerName : String) </td></tr>
-<tr><td align="left" balign="left"> + getLogComments(filename : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemoteLoggerManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.logger.LogFileHandler
-	c26973 [label=<<table title="sorcer.core.provider.logger.LogFileHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogFileHandler.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LogFileHandler </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LogFileHandler(logFile : File) </td></tr>
-<tr><td align="left" balign="left"> + publish(record : LogRecord) </td></tr>
-<tr><td align="left" balign="left"> + openFile() </td></tr>
-<tr><td align="left" balign="left"> + close() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./LogFileHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.logger.RemoteHandler
-	c26974 [label=<<table title="sorcer.core.provider.logger.RemoteHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteHandler.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RemoteHandler </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RemoteHandler() </td></tr>
-<tr><td align="left" balign="left"> + RemoteHandler(level : Level, name : String) </td></tr>
-<tr><td align="left" balign="left"> + publish(record : LogRecord) </td></tr>
-<tr><td align="left" balign="left"> + close() </td></tr>
-<tr><td align="left" balign="left"> + flush() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RemoteHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.logger.LoggingConfig
-	c26975 [label=<<table title="sorcer.core.provider.logger.LoggingConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoggingConfig.html">
+	c73905 [label=<<table title="sorcer.core.provider.logger.LoggingConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoggingConfig.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoggingConfig </td></tr>
 		</table></td></tr>
@@ -81,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LoggingConfig.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.logger.LogFilter
-	c26976 [label=<<table title="sorcer.core.provider.logger.LogFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogFilter.html">
+	c73906 [label=<<table title="sorcer.core.provider.logger.LogFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogFilter </td></tr>
 		</table></td></tr>
@@ -94,5 +59,47 @@ digraph G {
 <tr><td align="left" balign="left"> + textFilter(text : String, level : String) : List&lt;String&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.logger.Level
+	c73907 [label=<<table title="sorcer.core.provider.logger.Level" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Level.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Level </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OFF_INT : int </td></tr>
+<tr><td align="left" balign="left"> + ERROR_INT : int </td></tr>
+<tr><td align="left" balign="left"> + WARN_INT : int </td></tr>
+<tr><td align="left" balign="left"> + INFO_INT : int </td></tr>
+<tr><td align="left" balign="left"> + DEBUG_INT : int </td></tr>
+<tr><td align="left" balign="left"> + TRACE_INT : int </td></tr>
+<tr><td align="left" balign="left"> + ALL_INT : int </td></tr>
+<tr><td align="left" balign="left"> + OFF_INTEGER : Integer </td></tr>
+<tr><td align="left" balign="left"> + ERROR_INTEGER : Integer </td></tr>
+<tr><td align="left" balign="left"> + WARN_INTEGER : Integer </td></tr>
+<tr><td align="left" balign="left"> + INFO_INTEGER : Integer </td></tr>
+<tr><td align="left" balign="left"> + DEBUG_INTEGER : Integer </td></tr>
+<tr><td align="left" balign="left"> + TRACE_INTEGER : Integer </td></tr>
+<tr><td align="left" balign="left"> + ALL_INTEGER : Integer </td></tr>
+<tr><td align="left" balign="left"> + OFF : Level </td></tr>
+<tr><td align="left" balign="left"> + ERROR : Level </td></tr>
+<tr><td align="left" balign="left"> + WARN : Level </td></tr>
+<tr><td align="left" balign="left"> + INFO : Level </td></tr>
+<tr><td align="left" balign="left"> + DEBUG : Level </td></tr>
+<tr><td align="left" balign="left"> + TRACE : Level </td></tr>
+<tr><td align="left" balign="left"> + ALL : Level </td></tr>
+<tr><td align="left" balign="left"> + levelInt : int </td></tr>
+<tr><td align="left" balign="left"> + levelStr : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + toInt() : int </td></tr>
+<tr><td align="left" balign="left"> + toInteger() : Integer </td></tr>
+<tr><td align="left" balign="left"> + isGreaterOrEqual(r : Level) : boolean </td></tr>
+<tr><td align="left" balign="left"> + toLevel(sArg : String) : Level </td></tr>
+<tr><td align="left" balign="left"> + valueOf(sArg : String) : Level </td></tr>
+<tr><td align="left" balign="left"> + toLevel(val : int) : Level </td></tr>
+<tr><td align="left" balign="left"> + toLevel(val : int, defaultLevel : Level) : Level </td></tr>
+<tr><td align="left" balign="left"> + toLevel(sArg : String, defaultLevel : Level) : Level </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Level.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

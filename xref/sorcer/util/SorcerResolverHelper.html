@@ -46,7 +46,7 @@
 <a class="jxr_linenumber" name="36" href="#36">36</a>          <strong class="jxr_keyword">return</strong> result;
 <a class="jxr_linenumber" name="37" href="#37">37</a>      }
 <a class="jxr_linenumber" name="38" href="#38">38</a>  
-<a class="jxr_linenumber" name="39" href="#39">39</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> URL[] toURLs(String[] filePaths) <strong class="jxr_keyword">throws</strong> URISyntaxException, MalformedURLException {
+<a class="jxr_linenumber" name="39" href="#39">39</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> URL[] toURLs(String[] filePaths) <strong class="jxr_keyword">throws</strong> MalformedURLException {
 <a class="jxr_linenumber" name="40" href="#40">40</a>          URL[] result = <strong class="jxr_keyword">new</strong> URL[filePaths.length];
 <a class="jxr_linenumber" name="41" href="#41">41</a>          <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; filePaths.length; i++) {
 <a class="jxr_linenumber" name="42" href="#42">42</a>              result[i] = toURI(filePaths[i]).toURL();

@@ -9,20 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.util.Sorcer
-	c440310 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Sorcer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Sorcer() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerEnv
-	c440376 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
+	c505023 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerEnv </td></tr>
 		</table></td></tr>
@@ -37,8 +25,6 @@ digraph G {
 <tr><td align="left" balign="left"> + SorcerEnv(props : Map&lt;String, String&gt;) </td></tr>
 <tr><td align="left" balign="left"> # SorcerEnv() </td></tr>
 <tr><td align="left" balign="left"> + getWebsterPort() : int </td></tr>
-<tr><td align="left" balign="left"> + getWebsterStartPort() : int </td></tr>
-<tr><td align="left" balign="left"> + getWebsterEndPort() : int </td></tr>
 <tr><td align="left" balign="left"> + getServiceIdFilename() : String </td></tr>
 <tr><td align="left" balign="left"> + isMulticastEnabled() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isLookupCacheEnabled() : boolean </td></tr>
@@ -46,7 +32,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getLookupMinMatches() : int </td></tr>
 <tr><td align="left" balign="left"> + getLookupMaxMatches() : int </td></tr>
 <tr><td align="left" balign="left"> + getWebsterUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getWebsterInterface() : String </td></tr>
 <tr><td align="left" balign="left"> + getWebsterUrlURL() : URL </td></tr>
+<tr><td align="left" balign="left"> + setWebsterUrl(host : String, port : int) </td></tr>
 <tr><td align="left" balign="left"> + getDatabaseStorerUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + getDataspaceStorerUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + getDataServerUrl() : String </td></tr>
@@ -112,6 +100,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getDefaultNameSuffix(suffixLength : int) : String </td></tr>
 <tr><td align="left" balign="left"> + getSuffixedName(name : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getActualName(name : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getPureNameFromActual(actualName : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getSuffixedName(name : String, suffixLength : int) : String </td></tr>
 <tr><td align="left" balign="left"> + loadContextNodeTypes(map : Hashtable&lt;?, ?&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getEnvironment() : SorcerEnv </td></tr>
@@ -135,8 +124,6 @@ digraph G {
 <tr><td align="left" balign="left"> + setBootable(bootable : boolean) </td></tr>
 <tr><td align="left" balign="left"> + getSorcerVersion() : String </td></tr>
 <tr><td align="left" balign="left"> + getCodebaseRoot() : URL </td></tr>
-<tr><td align="left" balign="left"> + getCodebaseRoot(address : String, port : int) : URL </td></tr>
-<tr><td align="left" balign="left"> + getWebsterInterface() : String </td></tr>
 <tr><td align="left" balign="left"> + setHomeDir() </td></tr>
 <tr><td align="left" balign="left"> + loadProperties(filename : String) : Properties </td></tr>
 <tr><td align="left" balign="left"> + prepareWebsterInterface(props : Properties) : String </td></tr>
@@ -147,7 +134,6 @@ digraph G {
 <tr><td align="left" balign="left"> + setWebsterInternal(internal : boolean) </td></tr>
 <tr><td align="left" balign="left"> + getRequestorWebsterCodebase() : String </td></tr>
 <tr><td align="left" balign="left"> + setRequestorWebsterCodebase(codebase : String) </td></tr>
-<tr><td align="left" balign="left"> + getWebsterPortProperty() : int </td></tr>
 <tr><td align="left" balign="left"> + setWebsterPortProperty(port : int) </td></tr>
 <tr><td align="left" balign="left"> + getWebsterRootsString() : String </td></tr>
 <tr><td align="left" balign="left"> + setWebsterRootsString(roots : String) </td></tr>
@@ -162,7 +148,19 @@ digraph G {
 <tr><td align="left" balign="left"> + getWebsterRoots(additional : String[]) : String[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/SorcerEnv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.Sorcer
+	c505067 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Sorcer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Sorcer() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.Sorcer extends sorcer.core.SorcerEnv
-	c440376:p -> c440310:p [dir=back,arrowtail=empty];
+	c505023:p -> c505067:p [dir=back,arrowtail=empty];
 }
 

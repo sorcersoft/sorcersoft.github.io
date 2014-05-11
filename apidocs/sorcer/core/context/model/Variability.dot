@@ -9,8 +9,76 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Evaluation<T>
+	c579893 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Evaluation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identifiable
+	c579903 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Identifiable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Identifiable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getId() : Object </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Perturbation<T>
+	c579930 [label=<<table title="sorcer.service.Perturbation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Perturbation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Perturbation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getPerturbedValue(varName : String) : T </td></tr>
+<tr><td align="left" balign="left"> + getPerturbation() : double </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../service/Perturbation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.Variability<T>
+	c579961 [label=<<table title="sorcer.core.context.model.Variability" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Variability.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Variability&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
+<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
+<tr><td align="left" balign="left"> + setValue(varValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + getValueType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + getVariability(name : String) : Variability&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
+<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + valueChanged() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Variability.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c508713 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./par/Par.html">
+	c579971 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./par/Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Par&lt;T&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,90 +137,22 @@ digraph G {
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.Variability<T>
-	c508715 [label=<<table title="sorcer.core.context.model.Variability" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Variability.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Variability&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
-<tr><td align="left" balign="left"> + setValue(varValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + getValueType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + getVariability(name : String) : Variability&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Variability.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Evaluation<T>
-	c508775 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Evaluation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Perturbation<T>
-	c508788 [label=<<table title="sorcer.service.Perturbation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Perturbation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Perturbation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getPerturbedValue(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + getPerturbation() : double </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../service/Perturbation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identifiable
-	c508803 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../service/Identifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Identifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.core.context.model.Variability<T>
-	c508715:p -> c508713:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Evaluation<T>
-	c508775:p -> c508713:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
-	c509221:p -> c508713:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.Variability<T> implements sorcer.service.Identifiable
-	c508803:p -> c508715:p [dir=back,arrowtail=empty,style=dashed];
+	c579903:p -> c579961:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.Variability<T> implements sorcer.service.Evaluation<T>
-	c508775:p -> c508715:p [dir=back,arrowtail=empty,style=dashed];
+	c579893:p -> c579961:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.Variability<T> implements sorcer.service.Perturbation<T>
-	c508788:p -> c508715:p [dir=back,arrowtail=empty,style=dashed];
+	c579930:p -> c579961:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.model.Variability<T> implements java.io.Serializable
-	c509221:p -> c508715:p [dir=back,arrowtail=empty,style=dashed];
+	c580468:p -> c579961:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.core.context.model.Variability<T>
+	c579961:p -> c579971:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Evaluation<T>
+	c579893:p -> c579971:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
+	c580468:p -> c579971:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c509221 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c580468 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

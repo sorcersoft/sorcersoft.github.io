@@ -254,7 +254,7 @@
 <a class="jxr_linenumber" name="244" href="#244">244</a> 		domainName = cntxt.getDomainName();
 <a class="jxr_linenumber" name="245" href="#245">245</a> 		subdomainName = cntxt.getSubdomainName();
 <a class="jxr_linenumber" name="246" href="#246">246</a> 		version = cntxt.getVersion();
-<a class="jxr_linenumber" name="247" href="#247">247</a> 		exertion = (Exertion) cntxt.getExertion();
+<a class="jxr_linenumber" name="247" href="#247">247</a> 		exertion = cntxt.getExertion();
 <a class="jxr_linenumber" name="248" href="#248">248</a> 		principal = cntxt.getPrincipal();
 <a class="jxr_linenumber" name="249" href="#249">249</a> 		isPersistantTaskAssociated = ((ServiceContext) cntxt).isPersistantTaskAssociated;
 <a class="jxr_linenumber" name="250" href="#250">250</a> 	}
@@ -847,7 +847,7 @@
 <a class="jxr_linenumber" name="837" href="#837">837</a> 			link.setName(cntxt.getName());
 <a class="jxr_linenumber" name="838" href="#838">838</a> 		<strong class="jxr_keyword">else</strong>
 <a class="jxr_linenumber" name="839" href="#839">839</a> 			link.setName(name);
-<a class="jxr_linenumber" name="840" href="#840">840</a> 		<strong class="jxr_keyword">return</strong> putValue(path, (T)link);
+<a class="jxr_linenumber" name="840" href="#840">840</a> 		<strong class="jxr_keyword">return</strong> putValue(path, link);
 <a class="jxr_linenumber" name="841" href="#841">841</a> 	}
 <a class="jxr_linenumber" name="842" href="#842">842</a> 
 <a class="jxr_linenumber" name="843" href="#843">843</a> 	<strong class="jxr_keyword">public</strong> Object putLink(String path, <a href="../../../sorcer/service/Context.html">Context</a> cntxt, String offset)
@@ -1771,7 +1771,7 @@
 <a class="jxr_linenumber" name="1761" href="#1761">1761</a> 
 <a class="jxr_linenumber" name="1762" href="#1762">1762</a> 		<strong class="jxr_keyword">int</strong> len = mappedKey.length();
 <a class="jxr_linenumber" name="1763" href="#1763">1763</a> 		String prefix;
-<a class="jxr_linenumber" name="1764" href="#1764">1764</a> 		Enumeration e = ((Hashtable) mappedCntxt).keys();
+<a class="jxr_linenumber" name="1764" href="#1764">1764</a> 		Enumeration e = mappedCntxt.keys();
 <a class="jxr_linenumber" name="1765" href="#1765">1765</a> 		<strong class="jxr_keyword">while</strong> (e.hasMoreElements()) {
 <a class="jxr_linenumber" name="1766" href="#1766">1766</a> 			cntxtKey = (String) e.nextElement();
 <a class="jxr_linenumber" name="1767" href="#1767">1767</a> 			<strong class="jxr_keyword">if</strong> (cntxtKey.startsWith(mappedKey)) {
@@ -1794,16 +1794,16 @@
 <a class="jxr_linenumber" name="1784" href="#1784">1784</a> 						<strong class="jxr_keyword">if</strong> (mappedCntxt.getSubjectPath().length() &gt; 0)
 <a class="jxr_linenumber" name="1785" href="#1785">1785</a> 							prefix = mappedCntxt.getSubjectPath() + CPS;
 <a class="jxr_linenumber" name="1786" href="#1786">1786</a> 						putValue(prefix + newKey,
-<a class="jxr_linenumber" name="1787" href="#1787">1787</a> 								(T)((Hashtable) mappedCntxt).get(oldKey));
+<a class="jxr_linenumber" name="1787" href="#1787">1787</a>                                 ((Hashtable) mappedCntxt).get(oldKey));
 <a class="jxr_linenumber" name="1788" href="#1788">1788</a> 					}
 <a class="jxr_linenumber" name="1789" href="#1789">1789</a> 					<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="1790" href="#1790">1790</a> 						putValue(newKey, (T)((Hashtable) mappedCntxt).get(oldKey));
+<a class="jxr_linenumber" name="1790" href="#1790">1790</a> 						putValue(newKey, ((Hashtable) mappedCntxt).get(oldKey));
 <a class="jxr_linenumber" name="1791" href="#1791">1791</a> 				}
 <a class="jxr_linenumber" name="1792" href="#1792">1792</a> 			}
 <a class="jxr_linenumber" name="1793" href="#1793">1793</a> 		}
 <a class="jxr_linenumber" name="1794" href="#1794">1794</a> 		<em class="jxr_comment">// replicate subcontext attributes and metaattributes</em>
 <a class="jxr_linenumber" name="1795" href="#1795">1795</a> 		Hashtable table, attrTable;
-<a class="jxr_linenumber" name="1796" href="#1796">1796</a> 		attrTable = ((ServiceContext) mappedCntxt).metacontext;
+<a class="jxr_linenumber" name="1796" href="#1796">1796</a> 		attrTable = mappedCntxt.metacontext;
 <a class="jxr_linenumber" name="1797" href="#1797">1797</a> 		<em class="jxr_comment">// note the metacontext contains only singleton attributes</em>
 <a class="jxr_linenumber" name="1798" href="#1798">1798</a> 		<em class="jxr_comment">// AND the SORCER.CONTEXT_ATTRIBUTES table</em>
 <a class="jxr_linenumber" name="1799" href="#1799">1799</a> 		e = attrTable.keys();
@@ -2170,7 +2170,7 @@
 <a class="jxr_linenumber" name="2160" href="#2160">2160</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/context/ServiceContext.html">ServiceContext</a> setParameterTypes(Class... types) <strong class="jxr_keyword">throws</strong> ContextException {
 <a class="jxr_linenumber" name="2161" href="#2161">2161</a> 		<strong class="jxr_keyword">if</strong> (parameterTypesPath == <strong class="jxr_keyword">null</strong>) 
 <a class="jxr_linenumber" name="2162" href="#2162">2162</a> 			parameterTypesPath = Context.PARAMETER_TYPES;
-<a class="jxr_linenumber" name="2163" href="#2163">2163</a> 		putValue(parameterTypesPath, (T)types);
+<a class="jxr_linenumber" name="2163" href="#2163">2163</a> 		putValue(parameterTypesPath, types);
 <a class="jxr_linenumber" name="2164" href="#2164">2164</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
 <a class="jxr_linenumber" name="2165" href="#2165">2165</a> 	}
 <a class="jxr_linenumber" name="2166" href="#2166">2166</a> 	
@@ -2193,7 +2193,7 @@
 <a class="jxr_linenumber" name="2183" href="#2183">2183</a> 	}
 <a class="jxr_linenumber" name="2184" href="#2184">2184</a> 
 <a class="jxr_linenumber" name="2185" href="#2185">2185</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/core/context/ServiceContext.html">ServiceContext</a> setTarget(Object <a href="../../../sorcer/co/tuple/target.html">target</a>) <strong class="jxr_keyword">throws</strong> ContextException {
-<a class="jxr_linenumber" name="2186" href="#2186">2186</a> 		putValue(targetPath, (T)target);
+<a class="jxr_linenumber" name="2186" href="#2186">2186</a> 		putValue(targetPath, <a href="../../../sorcer/co/tuple/target.html">target</a>);
 <a class="jxr_linenumber" name="2187" href="#2187">2187</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
 <a class="jxr_linenumber" name="2188" href="#2188">2188</a> 	}
 <a class="jxr_linenumber" name="2189" href="#2189">2189</a> 
@@ -2241,7 +2241,7 @@
 <a class="jxr_linenumber" name="2231" href="#2231">2231</a> 			returnPath = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ReturnPath.html">ReturnPath</a>(Context.RETURN);
 <a class="jxr_linenumber" name="2232" href="#2232">2232</a> 
 <a class="jxr_linenumber" name="2233" href="#2233">2233</a> 		<strong class="jxr_keyword">if</strong> (value == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="2234" href="#2234">2234</a> 			putValue(returnPath.path, (T)none);
+<a class="jxr_linenumber" name="2234" href="#2234">2234</a> 			putValue(returnPath.path, <a href="../../../sorcer/service/Context.html">none</a>);
 <a class="jxr_linenumber" name="2235" href="#2235">2235</a> 		<strong class="jxr_keyword">else</strong>
 <a class="jxr_linenumber" name="2236" href="#2236">2236</a> 			putValue(returnPath.path, value);
 <a class="jxr_linenumber" name="2237" href="#2237">2237</a> 
@@ -2278,7 +2278,7 @@
 <a class="jxr_linenumber" name="2268" href="#2268">2268</a> 			returnJobPath = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ReturnPath.html">ReturnPath</a>(Context.RETURN);
 <a class="jxr_linenumber" name="2269" href="#2269">2269</a> 
 <a class="jxr_linenumber" name="2270" href="#2270">2270</a> 		<strong class="jxr_keyword">if</strong> (value == <strong class="jxr_keyword">null</strong>)
-<a class="jxr_linenumber" name="2271" href="#2271">2271</a> 			putValue(returnJobPath.path, (T)none);
+<a class="jxr_linenumber" name="2271" href="#2271">2271</a> 			putValue(returnJobPath.path, <a href="../../../sorcer/service/Context.html">none</a>);
 <a class="jxr_linenumber" name="2272" href="#2272">2272</a> 		<strong class="jxr_keyword">else</strong>
 <a class="jxr_linenumber" name="2273" href="#2273">2273</a> 			putValue(returnJobPath.path, value);
 <a class="jxr_linenumber" name="2274" href="#2274">2274</a> 
@@ -2648,7 +2648,7 @@
 <a class="jxr_linenumber" name="2638" href="#2638">2638</a> 		Enumeration en = keys();
 <a class="jxr_linenumber" name="2639" href="#2639">2639</a> 		<strong class="jxr_keyword">while</strong> (en.hasMoreElements()) {
 <a class="jxr_linenumber" name="2640" href="#2640">2640</a> 			String key = (String) en.nextElement();
-<a class="jxr_linenumber" name="2641" href="#2641">2641</a> 			T val = (T)get(key);
+<a class="jxr_linenumber" name="2641" href="#2641">2641</a> 			T val = get(key);
 <a class="jxr_linenumber" name="2642" href="#2642">2642</a> 			<strong class="jxr_keyword">if</strong> (id == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="2643" href="#2643">2643</a> 				<em class="jxr_comment">// logger.info("initValue= "+initVal+" val = "+val);</em>
 <a class="jxr_linenumber" name="2644" href="#2644">2644</a> 				<strong class="jxr_keyword">if</strong> (initVal.equals(val)) {
@@ -2875,7 +2875,7 @@
 <a class="jxr_linenumber" name="2865" href="#2865">2865</a>             <strong class="jxr_keyword">if</strong> (obj instanceof Par)
 <a class="jxr_linenumber" name="2866" href="#2866">2866</a> 				<strong class="jxr_keyword">return</strong> (T) ((Par)obj).getValue(entries);
 <a class="jxr_linenumber" name="2867" href="#2867">2867</a> 			<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="2868" href="#2868">2868</a> 				<strong class="jxr_keyword">return</strong> (T) obj;
+<a class="jxr_linenumber" name="2868" href="#2868">2868</a> 				<strong class="jxr_keyword">return</strong> obj;
 <a class="jxr_linenumber" name="2869" href="#2869">2869</a> 		} <strong class="jxr_keyword">catch</strong> (Throwable e) {
 <a class="jxr_linenumber" name="2870" href="#2870">2870</a> 			logger.warning(e.getMessage());
 <a class="jxr_linenumber" name="2871" href="#2871">2871</a> 			e.printStackTrace();

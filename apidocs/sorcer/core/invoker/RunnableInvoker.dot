@@ -9,24 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.invoker.RunnableInvoker<T>
-	c385188 [label=<<table title="sorcer.core.invoker.RunnableInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RunnableInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RunnableInvoker&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + RunnableInvoker(name : String, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RunnableInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.Invoker<T>
-	c385192 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
+	c439989 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -80,7 +64,23 @@ digraph G {
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.RunnableInvoker<T>
+	c439992 [label=<<table title="sorcer.core.invoker.RunnableInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RunnableInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RunnableInvoker&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + RunnableInvoker(name : String, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RunnableInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.RunnableInvoker<T> extends sorcer.core.invoker.Invoker<T>
-	c385192:p -> c385188:p [dir=back,arrowtail=empty];
+	c439989:p -> c439992:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Job
-	c258265 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Job.html">
+	c295429 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Job.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Job </font></td></tr>
 		</table></td></tr>
@@ -83,7 +83,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Job.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ServiceExertion
-	c258268 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
+	c295445 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
@@ -140,7 +140,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setFlow(type : Strategy.Flow) </td></tr>
 <tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + addSignatures(signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isBatch() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isNotCorrectBatch() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setProcessSignature(signature : Signature) </td></tr>
 <tr><td align="left" balign="left"> + setService(provider : Service) </td></tr>
@@ -281,7 +281,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.CompoundExertion
-	c258325 [label=<<table title="sorcer.service.CompoundExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CompoundExertion.html">
+	c295453 [label=<<table title="sorcer.service.CompoundExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CompoundExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CompoundExertion </td></tr>
@@ -300,7 +300,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CompoundExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.ObjectJob
-	c258482 [label=<<table title="sorcer.core.exertion.ObjectJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/ObjectJob.html">
+	c295725 [label=<<table title="sorcer.core.exertion.ObjectJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/ObjectJob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectJob </td></tr>
 		</table></td></tr>
@@ -316,7 +316,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/exertion/ObjectJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetJob
-	c258484 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetJob.html">
+	c295727 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/NetJob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetJob </td></tr>
 		</table></td></tr>
@@ -334,12 +334,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/exertion/NetJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Job extends sorcer.service.ServiceExertion
-	c258268:p -> c258265:p [dir=back,arrowtail=empty];
+	c295445:p -> c295429:p [dir=back,arrowtail=empty];
 	//sorcer.service.Job implements sorcer.service.CompoundExertion
-	c258325:p -> c258265:p [dir=back,arrowtail=empty,style=dashed];
+	c295453:p -> c295429:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.exertion.ObjectJob extends sorcer.service.Job
-	c258265:p -> c258482:p [dir=back,arrowtail=empty];
+	c295429:p -> c295725:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.NetJob extends sorcer.service.Job
-	c258265:p -> c258484:p [dir=back,arrowtail=empty];
+	c295429:p -> c295727:p [dir=back,arrowtail=empty];
 }
 

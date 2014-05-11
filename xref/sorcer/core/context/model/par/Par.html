@@ -250,7 +250,7 @@
 <a class="jxr_linenumber" name="240" href="#240">240</a> 	@Override
 <a class="jxr_linenumber" name="241" href="#241">241</a> 	<strong class="jxr_keyword">public</strong> T getArg(String varName) <strong class="jxr_keyword">throws</strong> ArgException {
 <a class="jxr_linenumber" name="242" href="#242">242</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="243" href="#243">243</a> 			<strong class="jxr_keyword">return</strong> (T) scope.getValue(varName, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="243" href="#243">243</a> 			<strong class="jxr_keyword">return</strong> scope.getValue(varName, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="244" href="#244">244</a> 		} <strong class="jxr_keyword">catch</strong> (ContextException e) {
 <a class="jxr_linenumber" name="245" href="#245">245</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/service/ArgException.html">ArgException</a>(e);
 <a class="jxr_linenumber" name="246" href="#246">246</a> 		}
@@ -384,7 +384,7 @@
 <a class="jxr_linenumber" name="374" href="#374">374</a> 		<strong class="jxr_keyword">if</strong> (attributes[0].equals(name)) {
 <a class="jxr_linenumber" name="375" href="#375">375</a> 			<strong class="jxr_keyword">if</strong> (attributes.length == 1)
 <a class="jxr_linenumber" name="376" href="#376">376</a> 				<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="377" href="#377">377</a> 					<strong class="jxr_keyword">return</strong> (T)getValue(args);
+<a class="jxr_linenumber" name="377" href="#377">377</a> 					<strong class="jxr_keyword">return</strong> getValue(args);
 <a class="jxr_linenumber" name="378" href="#378">378</a> 				} <strong class="jxr_keyword">catch</strong> (RemoteException e) {
 <a class="jxr_linenumber" name="379" href="#379">379</a> 					<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/service/ContextException.html">ContextException</a>(e);
 <a class="jxr_linenumber" name="380" href="#380">380</a> 				}

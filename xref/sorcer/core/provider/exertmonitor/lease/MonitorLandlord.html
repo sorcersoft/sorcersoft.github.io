@@ -95,7 +95,7 @@
 <a class="jxr_linenumber" name="85" href="#85">85</a>  				TcpServerEndpoint.getInstance(0), <strong class="jxr_keyword">new</strong> BasicILFactory());
 <a class="jxr_linenumber" name="86" href="#86">86</a>  
 <a class="jxr_linenumber" name="87" href="#87">87</a>  		proxy = (Landlord) exporter.export(<strong class="jxr_keyword">this</strong>);
-<a class="jxr_linenumber" name="88" href="#88">88</a>  		Thread llt = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="88" href="#88">88</a>  		Thread llt = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">this</strong>, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] MonitorLandlord.checkLeases"</span>);
 <a class="jxr_linenumber" name="89" href="#89">89</a>  		llt.setDaemon(<strong class="jxr_keyword">true</strong>);
 <a class="jxr_linenumber" name="90" href="#90">90</a>  		llt.start();
 <a class="jxr_linenumber" name="91" href="#91">91</a>  	}

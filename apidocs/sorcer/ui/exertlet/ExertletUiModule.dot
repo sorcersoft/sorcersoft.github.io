@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ui.exertlet.ExertletUiModule
-	c209531 [label=<<table title="sorcer.ui.exertlet.ExertletUiModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertletUiModule.html">
+	c237951 [label=<<table title="sorcer.ui.exertlet.ExertletUiModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertletUiModule.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertletUiModule </td></tr>
 		</table></td></tr>
@@ -23,9 +23,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExertletUiModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ui.exertlet.ExertletUiModule extends com.google.inject.AbstractModule
-	c209574:p -> c209531:p [dir=back,arrowtail=empty];
+	c238004:p -> c237951:p [dir=back,arrowtail=empty];
 	// com.google.inject.AbstractModule
-	c209574 [label=<<table title="com.google.inject.AbstractModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c238004 [label=<<table title="com.google.inject.AbstractModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractModule </font></td></tr>
 		</table></td></tr>
@@ -48,6 +48,7 @@ digraph G {
 <tr><td align="left" balign="left"> # addError(arg0 : Message) </td></tr>
 <tr><td align="left" balign="left"> # requestInjection(arg0 : Object) </td></tr>
 <tr><td align="left" balign="left"> # requestStaticInjection(arg0 : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> # bindInterceptor(arg0 : Matcher&lt;?&gt;, arg1 : Matcher&lt;?&gt;, arg2 : MethodInterceptor[]) </td></tr>
 <tr><td align="left" balign="left"> # requireBinding(arg0 : Key&lt;?&gt;) </td></tr>
 <tr><td align="left" balign="left"> # requireBinding(arg0 : Class&lt;?&gt;) </td></tr>
 <tr><td align="left" balign="left"> # getProvider(arg0 : Key&lt;T&gt;) : Provider&lt;T&gt; </td></tr>

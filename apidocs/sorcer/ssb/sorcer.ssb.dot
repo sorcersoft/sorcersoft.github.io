@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.ssb.ServiceBrowser
-	c55123 [label=<<table title="sorcer.ssb.ServiceBrowser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceBrowser.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceBrowser </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceBrowser() </td></tr>
-<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceBrowser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.StartSorcerPlugin
-	c55124 [label=<<table title="sorcer.ssb.StartSorcerPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StartSorcerPlugin.html">
+	c65125 [label=<<table title="sorcer.ssb.StartSorcerPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StartSorcerPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StartSorcerPlugin </td></tr>
 		</table></td></tr>
@@ -36,21 +23,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getProperties() : Properties </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StartSorcerPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.ssb.SorcerServiceBrowser
-	c55125 [label=<<table title="sorcer.ssb.SorcerServiceBrowser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceBrowser.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerServiceBrowser </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerServiceBrowser() </td></tr>
-<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerServiceBrowser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.StartPlugin
-	c55126 [label=<<table title="sorcer.ssb.StartPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StartPlugin.html">
+	c65126 [label=<<table title="sorcer.ssb.StartPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StartPlugin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StartPlugin </td></tr>
 		</table></td></tr>
@@ -63,5 +37,31 @@ digraph G {
 <tr><td align="left" balign="left"> + getProperties() : Properties </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StartPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.ssb.SorcerServiceBrowser
+	c65127 [label=<<table title="sorcer.ssb.SorcerServiceBrowser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceBrowser.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerServiceBrowser </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerServiceBrowser() </td></tr>
+<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerServiceBrowser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.ssb.ServiceBrowser
+	c65128 [label=<<table title="sorcer.ssb.ServiceBrowser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceBrowser.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceBrowser </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceBrowser() </td></tr>
+<tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceBrowser.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

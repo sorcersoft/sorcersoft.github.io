@@ -9,38 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.NoneException
-	c142301 [label=<<table title="sorcer.service.NoneException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NoneException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> NoneException </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NoneException() </td></tr>
-<tr><td align="left" balign="left"> + NoneException(msg : String) </td></tr>
-<tr><td align="left" balign="left"> + NoneException(exception : Exception) </td></tr>
-<tr><td align="left" balign="left"> + NoneException(msg : String, exception : Exception) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./NoneException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.EvaluationException
-	c142308 [label=<<table title="sorcer.service.EvaluationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EvaluationException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> EvaluationException </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EvaluationException() </td></tr>
-<tr><td align="left" balign="left"> + EvaluationException(exception : Exception) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationException(msg : String, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationException(msg : String) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./EvaluationException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ContextException
-	c142310 [label=<<table title="sorcer.service.ContextException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextException.html">
+	c166330 [label=<<table title="sorcer.service.ContextException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextException </td></tr>
 		</table></td></tr>
@@ -54,14 +24,44 @@ digraph G {
 <tr><td align="left" balign="left"> + ContextException(msg : String, exception : Exception) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.service.NoneException extends sorcer.service.ContextException
-	c142310:p -> c142301:p [dir=back,arrowtail=empty];
-	//sorcer.service.EvaluationException extends sorcer.service.ContextException
-	c142310:p -> c142308:p [dir=back,arrowtail=empty];
+	// sorcer.service.EvaluationException
+	c166352 [label=<<table title="sorcer.service.EvaluationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EvaluationException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EvaluationException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + EvaluationException() </td></tr>
+<tr><td align="left" balign="left"> + EvaluationException(exception : Exception) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationException(msg : String, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationException(msg : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./EvaluationException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.NoneException
+	c166375 [label=<<table title="sorcer.service.NoneException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NoneException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> NoneException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NoneException() </td></tr>
+<tr><td align="left" balign="left"> + NoneException(msg : String) </td></tr>
+<tr><td align="left" balign="left"> + NoneException(exception : Exception) </td></tr>
+<tr><td align="left" balign="left"> + NoneException(msg : String, exception : Exception) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./NoneException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.ContextException extends java.lang.Exception
-	c142699:p -> c142310:p [dir=back,arrowtail=empty];
+	c166916:p -> c166330:p [dir=back,arrowtail=empty];
+	//sorcer.service.EvaluationException extends sorcer.service.ContextException
+	c166330:p -> c166352:p [dir=back,arrowtail=empty];
+	//sorcer.service.NoneException extends sorcer.service.ContextException
+	c166330:p -> c166375:p [dir=back,arrowtail=empty];
 	// java.lang.Exception
-	c142699 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html">
+	c166916 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Exception </td></tr>
 		</table></td></tr>

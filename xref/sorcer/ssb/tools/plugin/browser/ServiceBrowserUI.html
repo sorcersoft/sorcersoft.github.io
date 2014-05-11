@@ -610,7 +610,7 @@
 <a class="jxr_linenumber" name="600" href="#600">600</a> 		<strong class="jxr_keyword">if</strong> (!LOGGED_IN) {
 <a class="jxr_linenumber" name="601" href="#601">601</a> 			<strong class="jxr_keyword">return</strong> r;
 <a class="jxr_linenumber" name="602" href="#602">602</a> 		}
-<a class="jxr_linenumber" name="603" href="#603">603</a> 		<strong class="jxr_keyword">return</strong> (Runnable) wrap((Object) r, Runnable.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="603" href="#603">603</a> 		<strong class="jxr_keyword">return</strong> (Runnable) wrap(r, Runnable.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="604" href="#604">604</a> 	}
 <a class="jxr_linenumber" name="605" href="#605">605</a> 
 <a class="jxr_linenumber" name="606" href="#606">606</a> 	<strong class="jxr_keyword">private</strong> Object wrap(Object obj, Class iface) {
@@ -687,7 +687,7 @@
 <a class="jxr_linenumber" name="677" href="#677">677</a> 			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="678" href="#678">678</a> 				updateFiltersImpl();
 <a class="jxr_linenumber" name="679" href="#679">679</a> 			}
-<a class="jxr_linenumber" name="680" href="#680">680</a> 		}));
+<a class="jxr_linenumber" name="680" href="#680">680</a> 		}), <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] ServiceBrowser.updateFilters"</span>);
 <a class="jxr_linenumber" name="681" href="#681">681</a> 		t.start();
 <a class="jxr_linenumber" name="682" href="#682">682</a> 	}
 <a class="jxr_linenumber" name="683" href="#683">683</a> 
@@ -1603,7 +1603,7 @@
 <a class="jxr_linenumber" name="1593" href="#1593">1593</a> 
 <a class="jxr_linenumber" name="1594" href="#1594">1594</a> 					}
 <a class="jxr_linenumber" name="1595" href="#1595">1595</a> 				}
-<a class="jxr_linenumber" name="1596" href="#1596">1596</a> 			}));
+<a class="jxr_linenumber" name="1596" href="#1596">1596</a> 			}), <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] ServiceBrowser-ping"</span>);
 <a class="jxr_linenumber" name="1597" href="#1597">1597</a> 			t.start();
 <a class="jxr_linenumber" name="1598" href="#1598">1598</a> 			<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1599" href="#1599">1599</a> 
@@ -1998,7 +1998,7 @@
 <a class="jxr_linenumber" name="1988" href="#1988">1988</a> 
 <a class="jxr_linenumber" name="1989" href="#1989">1989</a> 				terminateImpl();
 <a class="jxr_linenumber" name="1990" href="#1990">1990</a> 			}
-<a class="jxr_linenumber" name="1991" href="#1991">1991</a> 		}));
+<a class="jxr_linenumber" name="1991" href="#1991">1991</a> 		}), <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] ServiceBrowser.terminate"</span>);
 <a class="jxr_linenumber" name="1992" href="#1992">1992</a> 		t.start();
 <a class="jxr_linenumber" name="1993" href="#1993">1993</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1994" href="#1994">1994</a> 			t.join();
@@ -2013,7 +2013,7 @@
 <a class="jxr_linenumber" name="2003" href="#2003">2003</a> 
 <a class="jxr_linenumber" name="2004" href="#2004">2004</a> 				terminateImpl();
 <a class="jxr_linenumber" name="2005" href="#2005">2005</a> 			}
-<a class="jxr_linenumber" name="2006" href="#2006">2006</a> 		}));
+<a class="jxr_linenumber" name="2006" href="#2006">2006</a> 		}), <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] ServiceBrowser.terminate"</span>);
 <a class="jxr_linenumber" name="2007" href="#2007">2007</a> 		t.start();
 <a class="jxr_linenumber" name="2008" href="#2008">2008</a> 	}
 <a class="jxr_linenumber" name="2009" href="#2009">2009</a> 
@@ -2067,7 +2067,7 @@
 <a class="jxr_linenumber" name="2057" href="#2057">2057</a> 				<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="2058" href="#2058">2058</a> 					dicoveredImpl(reg);
 <a class="jxr_linenumber" name="2059" href="#2059">2059</a> 				}
-<a class="jxr_linenumber" name="2060" href="#2060">2060</a> 			}));
+<a class="jxr_linenumber" name="2060" href="#2060">2060</a> 			}), <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] ServiceBrowser-discovered"</span>);
 <a class="jxr_linenumber" name="2061" href="#2061">2061</a> 			t.start();
 <a class="jxr_linenumber" name="2062" href="#2062">2062</a> 
 <a class="jxr_linenumber" name="2063" href="#2063">2063</a> 		}

@@ -414,7 +414,7 @@
 <a class="jxr_linenumber" name="404" href="#404">404</a> 	}
 <a class="jxr_linenumber" name="405" href="#405">405</a> 
 <a class="jxr_linenumber" name="406" href="#406">406</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/service/Signature.html">Signature</a> sig(Class&lt;?&gt; serviceType) <strong class="jxr_keyword">throws</strong> SignatureException {
-<a class="jxr_linenumber" name="407" href="#407">407</a> 		<strong class="jxr_keyword">return</strong> SignatureFactory.sig(serviceType, (ReturnPath) <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="407" href="#407">407</a> 		<strong class="jxr_keyword">return</strong> SignatureFactory.sig(serviceType, <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="408" href="#408">408</a> <em class="jxr_comment">/*<em class="jxr_comment">#SOURCE sig_class_returnpath</em></em>
 <a class="jxr_linenumber" name="409" href="#409">409</a> <em class="jxr_comment">        Signature sig = null;</em>
 <a class="jxr_linenumber" name="410" href="#410">410</a> <em class="jxr_comment">        if (serviceType.isInterface()) {</em>
@@ -542,7 +542,7 @@
 <a class="jxr_linenumber" name="532" href="#532">532</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/core/exertion/ObjectTask.html">ObjectTask</a> task(<a href="../../sorcer/core/signature/ObjectSignature.html">ObjectSignature</a> signature, <a href="../../sorcer/service/Context.html">Context</a> context)
 <a class="jxr_linenumber" name="533" href="#533">533</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/SignatureException.html">SignatureException</a> {
 <a class="jxr_linenumber" name="534" href="#534">534</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/core/exertion/ObjectTask.html">ObjectTask</a>(signature.getSelector(),
-<a class="jxr_linenumber" name="535" href="#535">535</a> 				(<a href="../../sorcer/core/signature/ObjectSignature.html">ObjectSignature</a>) signature, context);
+<a class="jxr_linenumber" name="535" href="#535">535</a>                 signature, context);
 <a class="jxr_linenumber" name="536" href="#536">536</a> 	}
 <a class="jxr_linenumber" name="537" href="#537">537</a> 
 <a class="jxr_linenumber" name="538" href="#538">538</a>     <em class="jxr_comment">// TODO VFE related</em>
@@ -689,7 +689,7 @@
 <a class="jxr_linenumber" name="679" href="#679">679</a> 
 <a class="jxr_linenumber" name="680" href="#680">680</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object get(<a href="../../sorcer/service/Context.html">Context</a> context) <strong class="jxr_keyword">throws</strong> ContextException,
 <a class="jxr_linenumber" name="681" href="#681">681</a> 			RemoteException {
-<a class="jxr_linenumber" name="682" href="#682">682</a> 		<strong class="jxr_keyword">return</strong> ((ServiceContext) context).getReturnValue();
+<a class="jxr_linenumber" name="682" href="#682">682</a> 		<strong class="jxr_keyword">return</strong> context.getReturnValue();
 <a class="jxr_linenumber" name="683" href="#683">683</a> 	}
 <a class="jxr_linenumber" name="684" href="#684">684</a> 
 <a class="jxr_linenumber" name="685" href="#685">685</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object get(<a href="../../sorcer/service/Context.html">Context</a> context, <strong class="jxr_keyword">int</strong> index)
@@ -702,7 +702,7 @@
 <a class="jxr_linenumber" name="692" href="#692">692</a> 
 <a class="jxr_linenumber" name="693" href="#693">693</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object get(<a href="../../sorcer/service/Exertion.html">Exertion</a> exertion) <strong class="jxr_keyword">throws</strong> ContextException,
 <a class="jxr_linenumber" name="694" href="#694">694</a> 			RemoteException {
-<a class="jxr_linenumber" name="695" href="#695">695</a> 		<strong class="jxr_keyword">return</strong> ((ServiceContext) exertion.getContext()).getReturnValue();
+<a class="jxr_linenumber" name="695" href="#695">695</a> 		<strong class="jxr_keyword">return</strong> exertion.getContext().getReturnValue();
 <a class="jxr_linenumber" name="696" href="#696">696</a> 	}
 <a class="jxr_linenumber" name="697" href="#697">697</a> 
 <a class="jxr_linenumber" name="698" href="#698">698</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> &lt;V&gt; V asis(Object evaluation) <strong class="jxr_keyword">throws</strong> EvaluationException {
@@ -739,8 +739,8 @@
 <a class="jxr_linenumber" name="729" href="#729">729</a> 
 <a class="jxr_linenumber" name="730" href="#730">730</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object get(<a href="../../sorcer/service/Exertion.html">Exertion</a> exertion, String component, String path)
 <a class="jxr_linenumber" name="731" href="#731">731</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ExertionException.html">ExertionException</a> {
-<a class="jxr_linenumber" name="732" href="#732">732</a> 		Exertion c = ((Exertion) exertion).getExertion(component);
-<a class="jxr_linenumber" name="733" href="#733">733</a> 		<strong class="jxr_keyword">return</strong> get((Exertion) c, path);
+<a class="jxr_linenumber" name="732" href="#732">732</a> 		Exertion c = exertion.getExertion(component);
+<a class="jxr_linenumber" name="733" href="#733">733</a> 		<strong class="jxr_keyword">return</strong> get(c, path);
 <a class="jxr_linenumber" name="734" href="#734">734</a> 	}
 <a class="jxr_linenumber" name="735" href="#735">735</a> 
 <a class="jxr_linenumber" name="736" href="#736">736</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object value(URL url) <strong class="jxr_keyword">throws</strong> IOException {
@@ -803,17 +803,17 @@
 <a class="jxr_linenumber" name="793" href="#793">793</a> 
 <a class="jxr_linenumber" name="794" href="#794">794</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object url(<a href="../../sorcer/service/Context.html">Context</a> model, String name)
 <a class="jxr_linenumber" name="795" href="#795">795</a> 			<strong class="jxr_keyword">throws</strong> ContextException, RemoteException {
-<a class="jxr_linenumber" name="796" href="#796">796</a> 		<strong class="jxr_keyword">return</strong> ((ServiceContext) model).getURL(name);
+<a class="jxr_linenumber" name="796" href="#796">796</a> 		<strong class="jxr_keyword">return</strong> model.getURL(name);
 <a class="jxr_linenumber" name="797" href="#797">797</a> 	}
 <a class="jxr_linenumber" name="798" href="#798">798</a> 
 <a class="jxr_linenumber" name="799" href="#799">799</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object asis(<a href="../../sorcer/service/Mappable.html">Mappable</a> mappable, String path)
 <a class="jxr_linenumber" name="800" href="#800">800</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ContextException.html">ContextException</a> {
-<a class="jxr_linenumber" name="801" href="#801">801</a> 		<strong class="jxr_keyword">return</strong> ((ServiceContext) mappable).asis(path);
+<a class="jxr_linenumber" name="801" href="#801">801</a> 		<strong class="jxr_keyword">return</strong> mappable.asis(path);
 <a class="jxr_linenumber" name="802" href="#802">802</a> 	}
 <a class="jxr_linenumber" name="803" href="#803">803</a> 
 <a class="jxr_linenumber" name="804" href="#804">804</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object get(<a href="../../sorcer/service/Mappable.html">Mappable</a> mappable, String path)
 <a class="jxr_linenumber" name="805" href="#805">805</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ContextException.html">ContextException</a> {
-<a class="jxr_linenumber" name="806" href="#806">806</a> 		Object obj = ((ServiceContext) mappable).asis(path);
+<a class="jxr_linenumber" name="806" href="#806">806</a> 		Object obj = mappable.asis(path);
 <a class="jxr_linenumber" name="807" href="#807">807</a>         <strong class="jxr_keyword">while</strong> (obj instanceof Mappable || obj instanceof Par) {
 <a class="jxr_linenumber" name="808" href="#808">808</a> 			<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="809" href="#809">809</a> 				obj = ((Evaluation) obj).asis();
@@ -887,11 +887,11 @@
 <a class="jxr_linenumber" name="877" href="#877">877</a>             }
 <a class="jxr_linenumber" name="878" href="#878">878</a>         }
 <a class="jxr_linenumber" name="879" href="#879">879</a> 
-<a class="jxr_linenumber" name="880" href="#880">880</a>         Object obj = ((ServiceExertion) xrt).getReturnValue(entries);
+<a class="jxr_linenumber" name="880" href="#880">880</a>         Object obj = xrt.getReturnValue(entries);
 <a class="jxr_linenumber" name="881" href="#881">881</a>         <strong class="jxr_keyword">if</strong> (obj == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="882" href="#882">882</a>             <a href="../../sorcer/service/ReturnPath.html">ReturnPath</a> returnPath = xrt.getDataContext().getReturnPath();
 <a class="jxr_linenumber" name="883" href="#883">883</a>             <strong class="jxr_keyword">if</strong> (returnPath != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="884" href="#884">884</a>                 <strong class="jxr_keyword">return</strong> ((ServiceExertion) xrt).getReturnValue(entries);
+<a class="jxr_linenumber" name="884" href="#884">884</a>                 <strong class="jxr_keyword">return</strong> xrt.getReturnValue(entries);
 <a class="jxr_linenumber" name="885" href="#885">885</a>             } <strong class="jxr_keyword">else</strong> {
 <a class="jxr_linenumber" name="886" href="#886">886</a>                 <strong class="jxr_keyword">return</strong> xrt.getContext();
 <a class="jxr_linenumber" name="887" href="#887">887</a>             }
@@ -936,7 +936,7 @@
 <a class="jxr_linenumber" name="926" href="#926">926</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> Object get(<a href="../../sorcer/service/Exertion.html">Exertion</a> xrt, String path)
 <a class="jxr_linenumber" name="927" href="#927">927</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ExertionException.html">ExertionException</a> {
 <a class="jxr_linenumber" name="928" href="#928">928</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="929" href="#929">929</a> 			<strong class="jxr_keyword">return</strong> ((ServiceExertion) xrt).getValue(path);
+<a class="jxr_linenumber" name="929" href="#929">929</a> 			<strong class="jxr_keyword">return</strong> xrt.getValue(path);
 <a class="jxr_linenumber" name="930" href="#930">930</a> 		} <strong class="jxr_keyword">catch</strong> (ContextException e) {
 <a class="jxr_linenumber" name="931" href="#931">931</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ExertionException.html">ExertionException</a>(e);
 <a class="jxr_linenumber" name="932" href="#932">932</a> 		}
@@ -959,7 +959,7 @@
 <a class="jxr_linenumber" name="949" href="#949">949</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/service/Task.html">Task</a> exert(<a href="../../sorcer/service/Task.html">Task</a> input, Entry... entries)
 <a class="jxr_linenumber" name="950" href="#950">950</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ExertionException.html">ExertionException</a> {
 <a class="jxr_linenumber" name="951" href="#951">951</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="952" href="#952">952</a> 			<strong class="jxr_keyword">return</strong> (Task) ((Task) input).exert(<strong class="jxr_keyword">null</strong>, entries);
+<a class="jxr_linenumber" name="952" href="#952">952</a> 			<strong class="jxr_keyword">return</strong> (Task) input.exert(<strong class="jxr_keyword">null</strong>, entries);
 <a class="jxr_linenumber" name="953" href="#953">953</a> 		} <strong class="jxr_keyword">catch</strong> (Exception e) {
 <a class="jxr_linenumber" name="954" href="#954">954</a> 			<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../sorcer/service/ExertionException.html">ExertionException</a>(e);
 <a class="jxr_linenumber" name="955" href="#955">955</a> 		}
@@ -1629,9 +1629,9 @@
 <a class="jxr_linenumber" name="1619" href="#1619">1619</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/SignatureException.html">SignatureException</a> {
 <a class="jxr_linenumber" name="1620" href="#1620">1620</a> 		<strong class="jxr_keyword">if</strong> (signature.getSelector() == <strong class="jxr_keyword">null</strong>
 <a class="jxr_linenumber" name="1621" href="#1621">1621</a> 				|| signature.getSelector().equals(<span class="jxr_string">"new"</span>))
-<a class="jxr_linenumber" name="1622" href="#1622">1622</a> 			<strong class="jxr_keyword">return</strong> ((ObjectSignature) signature).newInstance();
+<a class="jxr_linenumber" name="1622" href="#1622">1622</a> 			<strong class="jxr_keyword">return</strong> signature.newInstance();
 <a class="jxr_linenumber" name="1623" href="#1623">1623</a> 		<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="1624" href="#1624">1624</a> 			<strong class="jxr_keyword">return</strong> ((ObjectSignature) signature).initInstance();
+<a class="jxr_linenumber" name="1624" href="#1624">1624</a> 			<strong class="jxr_keyword">return</strong> signature.initInstance();
 <a class="jxr_linenumber" name="1625" href="#1625">1625</a> 	}
 <a class="jxr_linenumber" name="1626" href="#1626">1626</a> 
 <a class="jxr_linenumber" name="1627" href="#1627">1627</a> 	<em class="jxr_javadoccomment">/**</em>
@@ -1697,7 +1697,7 @@
 <a class="jxr_linenumber" name="1687" href="#1687">1687</a> 
 <a class="jxr_linenumber" name="1688" href="#1688">1688</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> exertion(<a href="../../sorcer/service/Mappable.html">Mappable</a> mappable, String path)
 <a class="jxr_linenumber" name="1689" href="#1689">1689</a> 			<strong class="jxr_keyword">throws</strong> <a href="../../sorcer/service/ContextException.html">ContextException</a> {
-<a class="jxr_linenumber" name="1690" href="#1690">1690</a> 		Object obj = ((ServiceContext) mappable).asis(path);
+<a class="jxr_linenumber" name="1690" href="#1690">1690</a> 		Object obj = mappable.asis(path);
 <a class="jxr_linenumber" name="1691" href="#1691">1691</a>         <strong class="jxr_keyword">while</strong> (obj instanceof Mappable || obj instanceof Par) {
 <a class="jxr_linenumber" name="1692" href="#1692">1692</a> 			<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="1693" href="#1693">1693</a> 				obj = ((Evaluation) obj).asis();

@@ -9,48 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.boot.util.ServiceDescriptorProcessor
-	c45510 [label=<<table title="sorcer.boot.util.ServiceDescriptorProcessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDescriptorProcessor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ServiceDescriptorProcessor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + process(descriptor : ServiceDescriptor) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceDescriptorProcessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.boot.util.ReferenceHolder<T>
-	c45511 [label=<<table title="sorcer.boot.util.ReferenceHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReferenceHolder.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ReferenceHolder&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ReferenceHolder() </td></tr>
-<tr><td align="left" balign="left"> + get() : T </td></tr>
-<tr><td align="left" balign="left"> + set(resolver : T) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ReferenceHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.boot.util.JarClassPathHelper
-	c45512 [label=<<table title="sorcer.boot.util.JarClassPathHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JarClassPathHelper.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> JarClassPathHelper </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + JarClassPathHelper() </td></tr>
-<tr><td align="left" balign="left"> + getClassPathFromJar(f : File) : Collection&lt;String&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./JarClassPathHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.util.ClassPathVerifier
-	c45513 [label=<<table title="sorcer.boot.util.ClassPathVerifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClassPathVerifier.html">
+	c55641 [label=<<table title="sorcer.boot.util.ClassPathVerifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClassPathVerifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ClassPathVerifier </td></tr>
 		</table></td></tr>
@@ -63,8 +23,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getClassLoaderTree(classloader : ClassLoader) : List&lt;ClassLoader&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ClassPathVerifier.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.util.JarClassPathHelper
+	c55642 [label=<<table title="sorcer.boot.util.JarClassPathHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JarClassPathHelper.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> JarClassPathHelper </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + JarClassPathHelper() </td></tr>
+<tr><td align="left" balign="left"> + getClassPathFromJar(f : File) : Collection&lt;String&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./JarClassPathHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.util.LifeCycleMultiplexer
-	c45514 [label=<<table title="sorcer.boot.util.LifeCycleMultiplexer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LifeCycleMultiplexer.html">
+	c55643 [label=<<table title="sorcer.boot.util.LifeCycleMultiplexer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LifeCycleMultiplexer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LifeCycleMultiplexer </td></tr>
 		</table></td></tr>
@@ -77,5 +50,32 @@ digraph G {
 <tr><td align="left" balign="left"> + add(lifeCycle : LifeCycle) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LifeCycleMultiplexer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.util.ReferenceHolder<T>
+	c55644 [label=<<table title="sorcer.boot.util.ReferenceHolder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReferenceHolder.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ReferenceHolder&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ReferenceHolder() </td></tr>
+<tr><td align="left" balign="left"> + get() : T </td></tr>
+<tr><td align="left" balign="left"> + set(resolver : T) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ReferenceHolder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.util.ServiceDescriptorProcessor
+	c55645 [label=<<table title="sorcer.boot.util.ServiceDescriptorProcessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDescriptorProcessor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ServiceDescriptorProcessor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + process(descriptor : ServiceDescriptor) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceDescriptorProcessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -9,23 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.ssb.osx.OSXApplication
-	c57179 [label=<<table title="sorcer.ssb.osx.OSXApplication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSXApplication.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> OSXApplication </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + quit() </td></tr>
-<tr><td align="left" balign="left"> + about() </td></tr>
-<tr><td align="left" balign="left"> + preferences() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OSXApplication.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.osx.OSXAdapter
-	c57180 [label=<<table title="sorcer.ssb.osx.OSXAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSXAdapter.html">
+	c64398 [label=<<table title="sorcer.ssb.osx.OSXAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSXAdapter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OSXAdapter </td></tr>
 		</table></td></tr>
@@ -40,5 +25,20 @@ digraph G {
 <tr><td align="left" balign="left"> + enablePrefs(enabled : boolean) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OSXAdapter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.ssb.osx.OSXApplication
+	c64399 [label=<<table title="sorcer.ssb.osx.OSXApplication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OSXApplication.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OSXApplication </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + quit() </td></tr>
+<tr><td align="left" balign="left"> + about() </td></tr>
+<tr><td align="left" balign="left"> + preferences() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OSXApplication.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c80665 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/SorcerConstants.html">
+	c93636 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -615,13 +615,15 @@ digraph G {
 <tr><td align="left" balign="left"> + ACCESS_CLASS : String </td></tr>
 <tr><td align="left" balign="left"> + CODEBASE_SEPARATOR : String </td></tr>
 <tr><td align="left" balign="left"> + NAME_DEFAULT : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_SORCER_REMOTE_CALL : String </td></tr>
+<tr><td align="left" balign="left"> + START_PACKAGE : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../core/SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceTasker
-	c80697 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/provider/ServiceTasker.html">
+	c93857 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../core/provider/ServiceTasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceTasker </td></tr>
 		</table></td></tr>
@@ -637,7 +639,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../core/provider/ServiceTasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.AccountProvider
-	c81240 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AccountProvider.html">
+	c94329 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AccountProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AccountProvider </td></tr>
 		</table></td></tr>
@@ -646,6 +648,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + setProperties(props : Properties) </td></tr>
 <tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
@@ -655,7 +658,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.ServiceAccount
-	c81243 [label=<<table title="sorcer.account.provider.ServiceAccount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccount.html">
+	c94332 [label=<<table title="sorcer.account.provider.ServiceAccount" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccount.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceAccount </td></tr>
@@ -675,7 +678,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceAccount.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.Account
-	c81245 [label=<<table title="sorcer.account.provider.Account" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Account.html">
+	c94334 [label=<<table title="sorcer.account.provider.Account" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Account.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Account </td></tr>
@@ -690,12 +693,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Account.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.account.provider.AccountProvider extends sorcer.core.provider.ServiceTasker
-	c80697:p -> c81240:p [dir=back,arrowtail=empty];
+	c93857:p -> c94329:p [dir=back,arrowtail=empty];
 	//sorcer.account.provider.AccountProvider implements sorcer.account.provider.Account
-	c81245:p -> c81240:p [dir=back,arrowtail=empty,style=dashed];
+	c94334:p -> c94329:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.account.provider.AccountProvider implements sorcer.account.provider.ServiceAccount
-	c81243:p -> c81240:p [dir=back,arrowtail=empty,style=dashed];
+	c94332:p -> c94329:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.account.provider.AccountProvider implements sorcer.core.SorcerConstants
-	c80665:p -> c81240:p [dir=back,arrowtail=empty,style=dashed];
+	c93636:p -> c94329:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener
-	c409526 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerEventListener.html">
+	c467237 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerEventListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogerEventListener </td></tr>
 		</table></td></tr>
@@ -27,11 +27,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerEventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener implements net.jini.lookup.ServiceDiscoveryListener
-	c409558:p -> c409526:p [dir=back,arrowtail=empty,style=dashed];
+	c467274:p -> c467237:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener implements java.lang.Runnable
-	c409559:p -> c409526:p [dir=back,arrowtail=empty,style=dashed];
+	c467275:p -> c467237:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Runnable
-	c409559 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+	c467275 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Runnable </td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.lookup.ServiceDiscoveryListener
-	c409558 [label=<<table title="net.jini.lookup.ServiceDiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lookup/ServiceDiscoveryListener.html">
+	c467274 [label=<<table title="net.jini.lookup.ServiceDiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lookup/ServiceDiscoveryListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceDiscoveryListener </td></tr>

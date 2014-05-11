@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Incrementor<T>
+	c288973 [label=<<table title="sorcer.service.Incrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Incrementor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Incrementor&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + next() : T </td></tr>
+<tr><td align="left" balign="left"> + reset() : Incrementor&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Incrementor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.Invoker<T>
-	c252094 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
+	c289073 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -65,7 +79,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.InvokeIncrementor
-	c252096 [label=<<table title="sorcer.core.invoker.InvokeIncrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InvokeIncrementor.html">
+	c289079 [label=<<table title="sorcer.core.invoker.InvokeIncrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InvokeIncrementor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InvokeIncrementor </td></tr>
 		</table></td></tr>
@@ -83,23 +97,9 @@ digraph G {
 <tr><td align="left" balign="left"> + next() : Integer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./InvokeIncrementor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Incrementor<T>
-	c252159 [label=<<table title="sorcer.service.Incrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Incrementor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Incrementor&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + next() : T </td></tr>
-<tr><td align="left" balign="left"> + reset() : Incrementor&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Incrementor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.InvokeIncrementor extends sorcer.core.invoker.Invoker<java.lang.Integer>
-	c252094:p -> c252096:p [dir=back,arrowtail=empty];
+	c289073:p -> c289079:p [dir=back,arrowtail=empty];
 	//sorcer.core.invoker.InvokeIncrementor implements sorcer.service.Incrementor<T>
-	c252159:p -> c252096:p [dir=back,arrowtail=empty,style=dashed];
+	c288973:p -> c289079:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,11 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.NetworkShell
-	c307510 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.html">
+	c348620 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetworkShell </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NSH_HELP : String </td></tr>
+<tr><td align="left" balign="left"> + CONFIG_EXT_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + CONFIG_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + CONFIG_FILES : String[] </td></tr>
 <tr><td align="left" balign="left"> + selectedRegistrar : int </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> + logger : Logger </td></tr>
@@ -62,6 +66,8 @@ digraph G {
 <tr><td align="left" balign="left"> + arrayToRequest(array : Object) : String </td></tr>
 <tr><td align="left" balign="left"> + getText(urlOrFilename : String) : String </td></tr>
 <tr><td align="left" balign="left"> + huntForTheScriptFile(input : String) : File </td></tr>
+<tr><td align="left" balign="left"> + huntForTheScriptFile(input : String, standardExtensions : String[]) : File </td></tr>
+<tr><td align="left" balign="left"> + readScript(file : File) : String </td></tr>
 <tr><td align="left" balign="left"> + getCommandTable() : TreeMap&lt;String, ShellCmd&gt; </td></tr>
 <tr><td align="left" balign="left"> + getRequest() : String </td></tr>
 <tr><td align="left" balign="left"> + setRequest(request : String) </td></tr>
@@ -76,7 +82,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.INetworkShell
-	c307519 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./INetworkShell.html">
+	c348630 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./INetworkShell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> INetworkShell </td></tr>
@@ -97,11 +103,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./INetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.NetworkShell implements net.jini.discovery.DiscoveryListener
-	c307864:p -> c307510:p [dir=back,arrowtail=empty,style=dashed];
+	c349014:p -> c348620:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.tools.shell.NetworkShell implements sorcer.tools.shell.INetworkShell
-	c307519:p -> c307510:p [dir=back,arrowtail=empty,style=dashed];
+	c348630:p -> c348620:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.discovery.DiscoveryListener
-	c307864 [label=<<table title="net.jini.discovery.DiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/discovery/DiscoveryListener.html">
+	c349014 [label=<<table title="net.jini.discovery.DiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/discovery/DiscoveryListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DiscoveryListener </td></tr>

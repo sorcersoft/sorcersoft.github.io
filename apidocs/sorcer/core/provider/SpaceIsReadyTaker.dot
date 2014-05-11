@@ -9,45 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.provider.SpaceTaker
-	c468393 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceTaker </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # LOKI_ONLY : String </td></tr>
-<tr><td align="left" balign="left"> # isTransactional : boolean </td></tr>
-<tr><td align="left" balign="left"> # TRANSACTION_LEASE_TIME : long </td></tr>
-<tr><td align="left" balign="left"> # transactionLeaseTimeout : long </td></tr>
-<tr><td align="left" balign="left"> + SPACE_TIMEOUT : long </td></tr>
-<tr><td align="left" balign="left"> # spaceTimeout : long </td></tr>
-<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
-<tr><td align="left" balign="left"> # data : SpaceTaker.SpaceTakerData </td></tr>
-<tr><td align="left" balign="left"> # pool : ExecutorService </td></tr>
-<tr><td align="left" balign="left"> # leaseManager : LeaseRenewalManager </td></tr>
-<tr><td align="left" balign="left"> # keepGoing : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceTaker() </td></tr>
-<tr><td align="left" balign="left"> + SpaceTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
-<tr><td align="left" balign="left"> + doLog(msg : String, threadId : String, txn : Transaction.Created) </td></tr>
-<tr><td align="left" balign="left"> # getTransactionLeaseTime() : long </td></tr>
-<tr><td align="left" balign="left"> # getTimeOut() : long </td></tr>
-<tr><td align="left" balign="left"> # doThreadMonitorTaker(threadIdString : String) : String </td></tr>
-<tr><td align="left" balign="left"> # abortTransaction(txn : Transaction.Created) </td></tr>
-<tr><td align="left" balign="left"> # commitTransaction(txn : Transaction.Created) </td></tr>
-<tr><td align="left" balign="left"> # doThreadMonitorWorker(threadIdString : String) : String </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-<tr><td align="left" balign="left"> + createTransaction() : Transaction.Created </td></tr>
-<tr><td align="left" balign="left"> + createTransaction(threadId : String) : Transaction.Created </td></tr>
-<tr><td align="left" balign="left"> # isAbandoned(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> # initDataMember(ee : ExertionEnvelop, txn : Transaction) </td></tr>
-<tr><td align="left" balign="left"> + notify(e : LeaseRenewalEvent) </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.SpaceIsReadyTaker
-	c468395 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceIsReadyTaker.html">
+	c535000 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceIsReadyTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
 		</table></td></tr>
@@ -60,7 +23,38 @@ digraph G {
 <tr><td align="left" balign="left"> + run() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.SpaceTaker
+	c535001 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceTaker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # isTransactional : boolean </td></tr>
+<tr><td align="left" balign="left"> # TRANSACTION_LEASE_TIME : long </td></tr>
+<tr><td align="left" balign="left"> # transactionLeaseTimeout : long </td></tr>
+<tr><td align="left" balign="left"> + SPACE_TIMEOUT : long </td></tr>
+<tr><td align="left" balign="left"> # spaceTimeout : long </td></tr>
+<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
+<tr><td align="left" balign="left"> # data : SpaceTaker.SpaceTakerData </td></tr>
+<tr><td align="left" balign="left"> # pool : ExecutorService </td></tr>
+<tr><td align="left" balign="left"> # keepGoing : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceTaker() </td></tr>
+<tr><td align="left" balign="left"> + SpaceTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
+<tr><td align="left" balign="left"> + doLog(msg : String, threadId : String, txn : Transaction.Created) </td></tr>
+<tr><td align="left" balign="left"> # getTransactionLeaseTime() : long </td></tr>
+<tr><td align="left" balign="left"> # getTimeOut() : long </td></tr>
+<tr><td align="left" balign="left"> # doThreadMonitorTaker(threadIdString : String) : String </td></tr>
+<tr><td align="left" balign="left"> # doThreadMonitorWorker(threadIdString : String) : String </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"> + createTransaction() : Transaction.Created </td></tr>
+<tr><td align="left" balign="left"> # isAbandoned(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> # initDataMember(ee : ExertionEnvelop, txn : Transaction) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.SpaceIsReadyTaker extends sorcer.core.provider.SpaceTaker
-	c468393:p -> c468395:p [dir=back,arrowtail=empty];
+	c535001:p -> c535000:p [dir=back,arrowtail=empty];
 }
 

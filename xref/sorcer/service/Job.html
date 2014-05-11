@@ -244,7 +244,7 @@
 <a class="jxr_linenumber" name="234" href="#234">234</a> 	@Override
 <a class="jxr_linenumber" name="235" href="#235">235</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> addExertion(<a href="../../sorcer/service/Exertion.html">Exertion</a> ex) <strong class="jxr_keyword">throws</strong> ExertionException {
 <a class="jxr_linenumber" name="236" href="#236">236</a> 		exertions.add(ex);
-<a class="jxr_linenumber" name="237" href="#237">237</a> 		((ServiceExertion) ex).setIndex(exertions.indexOf(ex));
+<a class="jxr_linenumber" name="237" href="#237">237</a> 		ex.setIndex(exertions.indexOf(ex));
 <a class="jxr_linenumber" name="238" href="#238">238</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="239" href="#239">239</a> 			controlContext.registerExertion(ex);
 <a class="jxr_linenumber" name="240" href="#240">240</a> 		} <strong class="jxr_keyword">catch</strong> (ContextException e) {
@@ -297,7 +297,7 @@
 <a class="jxr_linenumber" name="287" href="#287">287</a> <em class="jxr_javadoccomment">	 *                current size of this &lt;tt&gt;Job&lt;/tt&gt; object.</em>
 <a class="jxr_linenumber" name="288" href="#288">288</a> <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="289" href="#289">289</a> 	<strong class="jxr_keyword">public</strong> <a href="../../sorcer/service/Exertion.html">Exertion</a> get(<strong class="jxr_keyword">int</strong> index) {
-<a class="jxr_linenumber" name="290" href="#290">290</a> 		<strong class="jxr_keyword">return</strong> (Exertion) exertions.get(index);
+<a class="jxr_linenumber" name="290" href="#290">290</a> 		<strong class="jxr_keyword">return</strong> exertions.get(index);
 <a class="jxr_linenumber" name="291" href="#291">291</a> 	}
 <a class="jxr_linenumber" name="292" href="#292">292</a> 
 <a class="jxr_linenumber" name="293" href="#293">293</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">abstract</strong> <a href="../../sorcer/service/Job.html">Job</a> doJob(Transaction txn) <strong class="jxr_keyword">throws</strong> ExertionException,
@@ -368,7 +368,7 @@
 <a class="jxr_linenumber" name="358" href="#358">358</a> 	<strong class="jxr_keyword">public</strong> String jobContextToString() <strong class="jxr_keyword">throws</strong> ExertionException {
 <a class="jxr_linenumber" name="359" href="#359">359</a> 		StringBuffer sb = <strong class="jxr_keyword">new</strong> StringBuffer();
 <a class="jxr_linenumber" name="360" href="#360">360</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; exertions.size(); i++) {
-<a class="jxr_linenumber" name="361" href="#361">361</a> 			<strong class="jxr_keyword">if</strong> (((ServiceExertion) get(i)).isJob())
+<a class="jxr_linenumber" name="361" href="#361">361</a> 			<strong class="jxr_keyword">if</strong> (get(i).isJob())
 <a class="jxr_linenumber" name="362" href="#362">362</a> 				sb.append(((Job) get(i)).jobContextToString());
 <a class="jxr_linenumber" name="363" href="#363">363</a> 			<strong class="jxr_keyword">else</strong>
 <a class="jxr_linenumber" name="364" href="#364">364</a> 				sb.append(((ServiceExertion) get(i)).contextToString());
@@ -591,7 +591,7 @@
 <a class="jxr_linenumber" name="581" href="#581">581</a> 	<strong class="jxr_keyword">public</strong> Object getReturnValue(Arg... entries) <strong class="jxr_keyword">throws</strong> ContextException,
 <a class="jxr_linenumber" name="582" href="#582">582</a> 			RemoteException {
 <a class="jxr_linenumber" name="583" href="#583">583</a> 		<em class="jxr_comment">//ReturnPath rp = ((ServiceContext) dataContext).getReturnJobPath();</em>
-<a class="jxr_linenumber" name="584" href="#584">584</a>         <a href="../../sorcer/service/ReturnPath.html">ReturnPath</a> rp = ((ServiceContext) dataContext).getReturnPath();
+<a class="jxr_linenumber" name="584" href="#584">584</a>         <a href="../../sorcer/service/ReturnPath.html">ReturnPath</a> rp = dataContext.getReturnPath();
 <a class="jxr_linenumber" name="585" href="#585">585</a> 		Object obj = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="586" href="#586">586</a> 		<strong class="jxr_keyword">if</strong> (rp != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="587" href="#587">587</a> 			<strong class="jxr_keyword">if</strong> (rp.path == <strong class="jxr_keyword">null</strong> || rp.path.equals(<span class="jxr_string">"self"</span>)) {

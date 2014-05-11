@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.jini.lookup.ProviderID
-	c20101 [label=<<table title="sorcer.jini.lookup.ProviderID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderID.html">
+	c24996 [label=<<table title="sorcer.jini.lookup.ProviderID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderID.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderID </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.jini.lookup.AttributesUtil
-	c20102 [label=<<table title="sorcer.jini.lookup.AttributesUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AttributesUtil.html">
+	c24997 [label=<<table title="sorcer.jini.lookup.AttributesUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AttributesUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AttributesUtil </td></tr>
 		</table></td></tr>
@@ -33,6 +33,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AttributesUtil() </td></tr>
 <tr><td align="left" balign="left"> + getFirstByType(attributeSets : Entry[], type : Class&lt;T&gt;) : T </td></tr>
+<tr><td align="left" balign="left"> + getSorcerServiceInfo(attributeSets : Entry[]) : SorcerServiceInfo </td></tr>
 <tr><td align="left" balign="left"> + getGroups(attributeSets : Entry[]) : String </td></tr>
 <tr><td align="left" balign="left"> + getProviderName(attributeSets : Entry[]) : String </td></tr>
 <tr><td align="left" balign="left"> + getHostName(attributeSets : Entry[]) : String </td></tr>

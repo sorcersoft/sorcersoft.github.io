@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.InclusiveContext
-	c240378 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InclusiveContext.html">
+	c275742 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InclusiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> InclusiveContext </td></tr>
@@ -35,49 +35,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getContextMetaData() : ContextMetaData </td></tr>
 		</table></td></tr>
 		</table>>, URL="./InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.ComprehensiveContext
-	c240458 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ComprehensiveContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ComprehensiveContext(name : String) </td></tr>
-<tr><td align="left" balign="left"> + setContextIterator(compContextIterator : ComprehensiveContextIterator) </td></tr>
-<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContextMetaData() : ContextMetaData </td></tr>
-<tr><td align="left" balign="left"> + addKeyToMap(newPath : String, oldPath : String) </td></tr>
-<tr><td align="left" balign="left"> + put(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + put(location : int, path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + put(newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + put(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + getRealPath(path : String) : String </td></tr>
-<tr><td align="left" balign="left"> + removePathFromMap(path : String) </td></tr>
-<tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + clear() </td></tr>
-<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
-<tr><td align="left" balign="left"> + getPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getRealPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getValueAtIndex(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(path : String, index : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(oldIndex : int, newIndex : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
-<tr><td align="left" balign="left"> + print() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./context/ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c240541 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/Context.html">
+	c275900 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../service/Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
@@ -259,9 +218,50 @@ digraph G {
 <tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../service/Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.ComprehensiveContext
+	c275945 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ComprehensiveContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ComprehensiveContext(name : String) </td></tr>
+<tr><td align="left" balign="left"> + setContextIterator(compContextIterator : ComprehensiveContextIterator) </td></tr>
+<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getContextMetaData() : ContextMetaData </td></tr>
+<tr><td align="left" balign="left"> + addKeyToMap(newPath : String, oldPath : String) </td></tr>
+<tr><td align="left" balign="left"> + put(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + put(location : int, path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + put(newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + put(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, path : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValue(location : int, newPath : String, oldPath : String, value : Object, association : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + getRealPath(path : String) : String </td></tr>
+<tr><td align="left" balign="left"> + removePathFromMap(path : String) </td></tr>
+<tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
+<tr><td align="left" balign="left"> + clear() </td></tr>
+<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
+<tr><td align="left" balign="left"> + getPathAtIndex(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getRealPathAtIndex(index : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getValueAtIndex(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + changeIndex(path : String, index : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> + changeIndex(oldIndex : int, newIndex : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + print() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./context/ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.InclusiveContext implements sorcer.service.Context<T>
-	c240541:p -> c240378:p [dir=back,arrowtail=empty,style=dashed];
+	c275900:p -> c275742:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ComprehensiveContext implements sorcer.core.InclusiveContext
-	c240378:p -> c240458:p [dir=back,arrowtail=empty,style=dashed];
+	c275742:p -> c275945:p [dir=back,arrowtail=empty,style=dashed];
 }
 

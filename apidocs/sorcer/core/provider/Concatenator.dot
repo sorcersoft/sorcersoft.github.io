@@ -9,15 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.provider.Concatenator
-	c131913 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Concatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Concatenator </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Service
-	c132056 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
+	c154709 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Service </td></tr>
@@ -29,8 +22,15 @@ digraph G {
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Concatenator
+	c154828 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Concatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Concatenator </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.jobber.ServiceConcatenator
-	c132168 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./jobber/ServiceConcatenator.html">
+	c155003 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./jobber/ServiceConcatenator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
 		</table></td></tr>
@@ -50,13 +50,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./jobber/ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.Concatenator implements sorcer.service.Service
-	c132056:p -> c131913:p [dir=back,arrowtail=empty,style=dashed];
+	c154709:p -> c154828:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Concatenator implements java.rmi.Remote
-	c132460:p -> c131913:p [dir=back,arrowtail=empty,style=dashed];
+	c155306:p -> c154828:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.jobber.ServiceConcatenator implements sorcer.core.provider.Concatenator
-	c131913:p -> c132168:p [dir=back,arrowtail=empty,style=dashed];
+	c154828:p -> c155003:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c132460 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c155306 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

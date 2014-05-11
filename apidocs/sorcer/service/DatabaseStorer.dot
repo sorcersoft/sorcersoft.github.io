@@ -9,8 +9,15 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.DatabaseStorer
+	c188802 [label=<<table title="sorcer.service.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DatabaseStorer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DatabaseStorer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StorageManagement
-	c163306 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/StorageManagement.html">
+	c188924 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/StorageManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> StorageManagement </td></tr>
@@ -38,15 +45,8 @@ digraph G {
 <tr><td align="left" balign="left"> + contextSize(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/StorageManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.DatabaseStorer
-	c163406 [label=<<table title="sorcer.service.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DatabaseStorer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> DatabaseStorer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.dbp.DatabaseProvider
-	c163541 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/dbp/DatabaseProvider.html">
+	c189032 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/dbp/DatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DatabaseProvider </td></tr>
 		</table></td></tr>
@@ -91,13 +91,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/provider/dbp/DatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.DatabaseStorer implements sorcer.core.provider.StorageManagement
-	c163306:p -> c163406:p [dir=back,arrowtail=empty,style=dashed];
+	c188924:p -> c188802:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.DatabaseStorer implements java.rmi.Remote
-	c163854:p -> c163406:p [dir=back,arrowtail=empty,style=dashed];
+	c189404:p -> c188802:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.dbp.DatabaseProvider implements sorcer.service.DatabaseStorer
-	c163406:p -> c163541:p [dir=back,arrowtail=empty,style=dashed];
+	c188802:p -> c189032:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c163854 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c189404 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

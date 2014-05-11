@@ -9,25 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.invoker.LoopInvoker<V>
-	c280069 [label=<<table title="sorcer.core.invoker.LoopInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoopInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LoopInvoker&lt;V&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # condition : Condition </td></tr>
-<tr><td align="left" balign="left"> # target : Invoker&lt;V&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : V </td></tr>
-		</table></td></tr>
-		</table>>, URL="./LoopInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.Invoker<T>
-	c280081 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
+	c318823 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -81,7 +64,24 @@ digraph G {
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.LoopInvoker<V>
+	c318824 [label=<<table title="sorcer.core.invoker.LoopInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoopInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoopInvoker&lt;V&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # condition : Condition </td></tr>
+<tr><td align="left" balign="left"> # target : Invoker&lt;V&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : V </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoopInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.LoopInvoker<V> extends sorcer.core.invoker.Invoker<V>
-	c280081:p -> c280069:p [dir=back,arrowtail=empty];
+	c318823:p -> c318824:p [dir=back,arrowtail=empty];
 }
 

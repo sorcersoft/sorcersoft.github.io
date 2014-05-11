@@ -177,7 +177,7 @@
 <a class="jxr_linenumber" name="167" href="#167">167</a> 		<strong class="jxr_keyword">if</strong> (exertion instanceof AltExertion) {
 <a class="jxr_linenumber" name="168" href="#168">168</a> 			<strong class="jxr_keyword">for</strong> (OptExertion oe : ((AltExertion)exertion).getOptExertions()) {
 <a class="jxr_linenumber" name="169" href="#169">169</a> 				oe.getCondition().getConditionalContext().append(xrt.getContext());
-<a class="jxr_linenumber" name="170" href="#170">170</a> 				((OptExertion)oe).getCondition().setStatus(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="170" href="#170">170</a> 				oe.getCondition().setStatus(<strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="171" href="#171">171</a> 			}
 <a class="jxr_linenumber" name="172" href="#172">172</a> 		} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (exertion instanceof OptExertion) {
 <a class="jxr_linenumber" name="173" href="#173">173</a> 			Context pc = ((OptExertion)exertion).getCondition().getConditionalContext();
@@ -200,9 +200,9 @@
 <a class="jxr_linenumber" name="190" href="#190">190</a> 	
 <a class="jxr_linenumber" name="191" href="#191">191</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> postUpdate(<a href="../../../sorcer/service/ServiceExertion.html">ServiceExertion</a> exertion) <strong class="jxr_keyword">throws</strong> ContextException, RemoteException {
 <a class="jxr_linenumber" name="192" href="#192">192</a> 		<strong class="jxr_keyword">if</strong> (exertion instanceof AltExertion) {
-<a class="jxr_linenumber" name="193" href="#193">193</a> 			((Block)xrt).getContext().append(((AltExertion)exertion).getActiveOptExertion().getContext());
+<a class="jxr_linenumber" name="193" href="#193">193</a> 			xrt.getContext().append(((AltExertion)exertion).getActiveOptExertion().getContext());
 <a class="jxr_linenumber" name="194" href="#194">194</a> 		} <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (exertion instanceof OptExertion) {
-<a class="jxr_linenumber" name="195" href="#195">195</a> 			((Block)xrt).getContext().append(((OptExertion)exertion).getContext());
+<a class="jxr_linenumber" name="195" href="#195">195</a> 			xrt.getContext().append(exertion.getContext());
 <a class="jxr_linenumber" name="196" href="#196">196</a> 		}
 <a class="jxr_linenumber" name="197" href="#197">197</a> 		
 <a class="jxr_linenumber" name="198" href="#198">198</a> <em class="jxr_comment">//		if (exertion instanceof AltExertion) {</em>
@@ -224,7 +224,7 @@
 <a class="jxr_linenumber" name="214" href="#214">214</a> 	
 <a class="jxr_linenumber" name="215" href="#215">215</a> 	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> reset() {
 <a class="jxr_linenumber" name="216" href="#216">216</a> 		xrt.setStatus(INITIAL);
-<a class="jxr_linenumber" name="217" href="#217">217</a> 		<strong class="jxr_keyword">for</strong> (Exertion e : ((Block)xrt).getExertions())
+<a class="jxr_linenumber" name="217" href="#217">217</a> 		<strong class="jxr_keyword">for</strong> (Exertion e : xrt.getExertions())
 <a class="jxr_linenumber" name="218" href="#218">218</a> 			((ServiceExertion)e).reset(INITIAL);
 <a class="jxr_linenumber" name="219" href="#219">219</a> 	}
 <a class="jxr_linenumber" name="220" href="#220">220</a> }

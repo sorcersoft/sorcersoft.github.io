@@ -9,24 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.boot.platform.PlatformLoader
-	c46886 [label=<<table title="sorcer.boot.platform.PlatformLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlatformLoader.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> PlatformLoader </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # platformInjector : Injector </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PlatformLoader(injector : Injector, platformRoot : File, servicePlatformRoot : File) </td></tr>
-<tr><td align="left" balign="left"> + getInjector() : Injector </td></tr>
-<tr><td align="left" balign="left"> + getClassLoader() : ClassLoader </td></tr>
-<tr><td align="left" balign="left"> + create() </td></tr>
-<tr><td align="left" balign="left"> # loadPlatform(platformDir : File, commonCL : CommonClassLoader) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./PlatformLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.platform.PlatformDescriptor
-	c46887 [label=<<table title="sorcer.boot.platform.PlatformDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlatformDescriptor.html">
+	c51264 [label=<<table title="sorcer.boot.platform.PlatformDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlatformDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> PlatformDescriptor </font></td></tr>
 		</table></td></tr>
@@ -39,5 +23,35 @@ digraph G {
 <tr><td align="left" balign="left"> + getPlatformService() : ServiceDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PlatformDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.platform.PlatformLoader
+	c51265 [label=<<table title="sorcer.boot.platform.PlatformLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlatformLoader.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PlatformLoader </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # platformInjector : Injector </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PlatformLoader(injector : Injector, platformRoot : File, servicePlatformRoot : File) </td></tr>
+<tr><td align="left" balign="left"> + getInjector() : Injector </td></tr>
+<tr><td align="left" balign="left"> + getClassLoader() : ClassLoader </td></tr>
+<tr><td align="left" balign="left"> + create() </td></tr>
+<tr><td align="left" balign="left"> # loadPlatformServices(dir : File) : List&lt;ServiceActivator&gt; </td></tr>
+<tr><td align="left" balign="left"> # loadPlatform(platformDir : File, commonCL : CommonClassLoader) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PlatformLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.platform.PlatformModule
+	c51266 [label=<<table title="sorcer.boot.platform.PlatformModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlatformModule.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PlatformModule </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PlatformModule() </td></tr>
+<tr><td align="left" balign="left"> # configure() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PlatformModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

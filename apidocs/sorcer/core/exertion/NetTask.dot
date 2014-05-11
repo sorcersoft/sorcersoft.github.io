@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Evaluation<T>
-	c305370 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
+	c346262 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Invocation<T>
-	c305406 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
+	c346279 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
@@ -38,21 +38,27 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ContextTask
-	c305568 [label=<<table title="sorcer.core.exertion.ContextTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextTask.html">
+	// sorcer.core.exertion.ObjectTask
+	c346512 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextTask </td></tr>
+<tr><td align="center" balign="center"> ObjectTask </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextTask(serviceType : Class&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getProviderContext() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ContextTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.NetTask
-	c305574 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetTask.html">
+	c346520 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetTask </td></tr>
 		</table></td></tr>
@@ -78,27 +84,21 @@ digraph G {
 <tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ObjectTask
-	c305582 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectTask.html">
+	// sorcer.core.exertion.ContextTask
+	c346522 [label=<<table title="sorcer.core.exertion.ContextTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectTask </td></tr>
+<tr><td align="center" balign="center"> ContextTask </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+<tr><td align="left" balign="left"> + ContextTask(serviceType : Class&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getProviderContext() : Context&lt;&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ContextTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.SignedServiceTask
-	c305592 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../security/sign/SignedServiceTask.html">
+	c346586 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../security/sign/SignedServiceTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignedServiceTask </td></tr>
 		</table></td></tr>
@@ -113,15 +113,15 @@ digraph G {
 <tr><td align="left" balign="left"> + verify(publickey : PublicKey, signature1 : Signature) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../security/sign/SignedServiceTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.exertion.ContextTask extends sorcer.core.exertion.NetTask
-	c305574:p -> c305568:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.NetTask extends sorcer.core.exertion.ObjectTask
-	c305582:p -> c305574:p [dir=back,arrowtail=empty];
+	c346512:p -> c346520:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.NetTask implements sorcer.service.Evaluation<T>
-	c305370:p -> c305574:p [dir=back,arrowtail=empty,style=dashed];
+	c346262:p -> c346520:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.exertion.NetTask implements sorcer.service.Invocation<T>
-	c305406:p -> c305574:p [dir=back,arrowtail=empty,style=dashed];
+	c346279:p -> c346520:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.exertion.ContextTask extends sorcer.core.exertion.NetTask
+	c346520:p -> c346522:p [dir=back,arrowtail=empty];
 	//sorcer.security.sign.SignedServiceTask extends sorcer.core.exertion.NetTask
-	c305574:p -> c305592:p [dir=back,arrowtail=empty];
+	c346520:p -> c346586:p [dir=back,arrowtail=empty];
 }
 

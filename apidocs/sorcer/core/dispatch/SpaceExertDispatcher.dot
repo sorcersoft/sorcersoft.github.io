@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.dispatch.SpaceExertDispatcher
-	c466624 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceExertDispatcher.html">
+	c533008 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SpaceExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceSequentialDispatcher
-	c466630 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceSequentialDispatcher.html">
+	c533016 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceSequentialDispatcher </td></tr>
 		</table></td></tr>
@@ -49,24 +49,8 @@ digraph G {
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceTaskDispatcher
-	c466637 [label=<<table title="sorcer.core.dispatch.SpaceTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaskDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceTaskDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceTaskDispatcher(task : NetTask, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-<tr><td align="left" balign="left"> + collectFails() </td></tr>
-<tr><td align="left" balign="left"> + collectErrors() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c466643 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+	c533026 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -103,7 +87,6 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDispatcher(jobID : String) : ExertDispatcher </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
 <tr><td align="left" balign="left"> + createExertionID(ex : ServiceExertion) : String </td></tr>
@@ -128,7 +111,6 @@ digraph G {
 <tr><td align="left" balign="left"> # isInterupted(ex : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> # getCatalog() : Cataloger </td></tr>
 <tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
@@ -136,22 +118,8 @@ digraph G {
 <tr><td align="left" balign="left"> # prepareJob() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceParallelDispatcher
-	c466648 [label=<<table title="sorcer.core.dispatch.SpaceParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceParallelDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceParallelDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceBlockDispatcher
-	c466651 [label=<<table title="sorcer.core.dispatch.SpaceBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceBlockDispatcher.html">
+	c533033 [label=<<table title="sorcer.core.dispatch.SpaceBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceBlockDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceBlockDispatcher </td></tr>
 		</table></td></tr>
@@ -164,15 +132,45 @@ digraph G {
 <tr><td align="left" balign="left"> + collectResults() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.SpaceParallelDispatcher
+	c533034 [label=<<table title="sorcer.core.dispatch.SpaceParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceParallelDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceParallelDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.SpaceTaskDispatcher
+	c533035 [label=<<table title="sorcer.core.dispatch.SpaceTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaskDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceTaskDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceTaskDispatcher(task : NetTask, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> + collectFails() </td></tr>
+<tr><td align="left" balign="left"> + collectErrors() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.dispatch.SpaceExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c466643:p -> c466624:p [dir=back,arrowtail=empty];
+	c533026:p -> c533008:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SpaceSequentialDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c466624:p -> c466630:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SpaceTaskDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c466624:p -> c466637:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SpaceParallelDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c466624:p -> c466648:p [dir=back,arrowtail=empty];
+	c533008:p -> c533016:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.SpaceBlockDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c466624:p -> c466651:p [dir=back,arrowtail=empty];
+	c533008:p -> c533033:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.SpaceParallelDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
+	c533008:p -> c533034:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.SpaceTaskDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
+	c533008:p -> c533035:p [dir=back,arrowtail=empty];
 }
 

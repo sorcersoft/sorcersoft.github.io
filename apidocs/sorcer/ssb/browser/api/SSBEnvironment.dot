@@ -9,8 +9,25 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.ssb.browser.api.SSBEnvironment
+	c441804 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SSBEnvironment.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SSBEnvironment </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + registerTab(newTab : SSBrowserTab) </td></tr>
+<tr><td align="left" balign="left"> + setPluginMenu(pluginMenu : JMenuItem) </td></tr>
+<tr><td align="left" balign="left"> + setRightPane(view : JComponent) </td></tr>
+<tr><td align="left" balign="left"> + showAttributes(atts : Entry[]) </td></tr>
+<tr><td align="left" balign="left"> + getBrowserFrame() : JFrame </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SSBEnvironment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl
-	c386920 [label=<<table title="sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/SSBrowserEnvironmentImpl.html">
+	c441809 [label=<<table title="sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/SSBrowserEnvironmentImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SSBrowserEnvironmentImpl </td></tr>
 		</table></td></tr>
@@ -29,24 +46,7 @@ digraph G {
 <tr><td align="left" balign="left"> + showAttributes(atts : Entry[]) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/SSBrowserEnvironmentImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.ssb.browser.api.SSBEnvironment
-	c386925 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SSBEnvironment.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SSBEnvironment </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + registerTab(newTab : SSBrowserTab) </td></tr>
-<tr><td align="left" balign="left"> + setPluginMenu(pluginMenu : JMenuItem) </td></tr>
-<tr><td align="left" balign="left"> + setRightPane(view : JComponent) </td></tr>
-<tr><td align="left" balign="left"> + showAttributes(atts : Entry[]) </td></tr>
-<tr><td align="left" balign="left"> + getBrowserFrame() : JFrame </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SSBEnvironment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.browser.api.impl.SSBrowserEnvironmentImpl implements sorcer.ssb.browser.api.SSBEnvironment
-	c386925:p -> c386920:p [dir=back,arrowtail=empty,style=dashed];
+	c441804:p -> c441809:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,8 +9,15 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.DatabaseStorer
+	c548667 [label=<<table title="sorcer.service.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/DatabaseStorer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DatabaseStorer </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StorageManagement
-	c481371 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StorageManagement.html">
+	c548789 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StorageManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> StorageManagement </td></tr>
@@ -38,14 +45,7 @@ digraph G {
 <tr><td align="left" balign="left"> + contextSize(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StorageManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.DatabaseStorer
-	c481471 [label=<<table title="sorcer.service.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/DatabaseStorer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> DatabaseStorer </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.DatabaseStorer implements sorcer.core.provider.StorageManagement
-	c481371:p -> c481471:p [dir=back,arrowtail=empty,style=dashed];
+	c548789:p -> c548667:p [dir=back,arrowtail=empty,style=dashed];
 }
 

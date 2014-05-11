@@ -9,8 +9,44 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Identity
+	c274441 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Identity.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # id : Uuid </td></tr>
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # characteristicValue : Object </td></tr>
+<tr><td align="left" balign="left"> # hasCharacteristicValue : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Identity() </td></tr>
+<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setId(uuid : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getCharacteristicValue() : Object </td></tr>
+<tr><td align="left" balign="left"> + setCharacteristicValue(characteristicValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identifiable
+	c274446 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Identifiable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getId() : Object </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c239105 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
+	c274514 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/par/Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Par&lt;T&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,52 +105,16 @@ digraph G {
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/model/par/Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identity
-	c239184 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Identity.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # id : Uuid </td></tr>
-<tr><td align="left" balign="left"> # name : String </td></tr>
-<tr><td align="left" balign="left"> # characteristicValue : Object </td></tr>
-<tr><td align="left" balign="left"> # hasCharacteristicValue : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Identity() </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setId(uuid : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getCharacteristicValue() : Object </td></tr>
-<tr><td align="left" balign="left"> + setCharacteristicValue(characteristicValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identifiable
-	c239195 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Identifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.context.model.par.Par<T> extends sorcer.service.Identity
-	c239184:p -> c239105:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
-	c239613:p -> c239105:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Identity implements java.io.Serializable
-	c239613:p -> c239184:p [dir=back,arrowtail=empty,style=dashed];
+	c275011:p -> c274441:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Identity implements sorcer.service.Identifiable
-	c239195:p -> c239184:p [dir=back,arrowtail=empty,style=dashed];
+	c274446:p -> c274441:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> extends sorcer.service.Identity
+	c274441:p -> c274514:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
+	c275011:p -> c274514:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c239613 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c275011 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

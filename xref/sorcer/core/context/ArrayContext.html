@@ -442,7 +442,7 @@
 <a class="jxr_linenumber" name="432" href="#432">432</a> 			String temp = list[out]; <em class="jxr_comment">// remove marked item</em>
 <a class="jxr_linenumber" name="433" href="#433">433</a> 			in = out; <em class="jxr_comment">// start shifts at out</em>
 <a class="jxr_linenumber" name="434" href="#434">434</a> 			<em class="jxr_comment">// until one is smaller</em>
-<a class="jxr_linenumber" name="435" href="#435">435</a> 			<strong class="jxr_keyword">while</strong> (in &gt; 0 &amp;&amp; getIndex((String) list[in - 1]) &gt;= getIndex(temp)) {
+<a class="jxr_linenumber" name="435" href="#435">435</a> 			<strong class="jxr_keyword">while</strong> (in &gt; 0 &amp;&amp; getIndex(list[in - 1]) &gt;= getIndex(temp)) {
 <a class="jxr_linenumber" name="436" href="#436">436</a> 				list[in] = list[in - 1]; <em class="jxr_comment">// shift item right,</em>
 <a class="jxr_linenumber" name="437" href="#437">437</a> 				--in; <em class="jxr_comment">// go left one position</em>
 <a class="jxr_linenumber" name="438" href="#438">438</a> 			}

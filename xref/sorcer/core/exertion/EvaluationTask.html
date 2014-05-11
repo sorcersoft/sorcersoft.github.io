@@ -104,8 +104,8 @@
 <a class="jxr_linenumber" name="94" href="#94">94</a>  	@Override
 <a class="jxr_linenumber" name="95" href="#95">95</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Task.html">Task</a> doTask(Transaction txn) <strong class="jxr_keyword">throws</strong> ExertionException,
 <a class="jxr_linenumber" name="96" href="#96">96</a>  			SignatureException {
-<a class="jxr_linenumber" name="97" href="#97">97</a>  		((ServiceContext)dataContext).setCurrentSelector(getProcessSignature().getSelector());
-<a class="jxr_linenumber" name="98" href="#98">98</a>  		((ServiceContext)dataContext).setCurrentPrefix(((ServiceSignature)getProcessSignature()).getPrefix());
+<a class="jxr_linenumber" name="97" href="#97">97</a>  		dataContext.setCurrentSelector(getProcessSignature().getSelector());
+<a class="jxr_linenumber" name="98" href="#98">98</a>  		dataContext.setCurrentPrefix(getProcessSignature().getPrefix());
 <a class="jxr_linenumber" name="99" href="#99">99</a>  
 <a class="jxr_linenumber" name="100" href="#100">100</a> 		<strong class="jxr_keyword">if</strong> (signatures.size() &gt; 1) {
 <a class="jxr_linenumber" name="101" href="#101">101</a> 			<strong class="jxr_keyword">try</strong> {

@@ -167,7 +167,7 @@
 <a class="jxr_linenumber" name="157" href="#157">157</a> 		<strong class="jxr_keyword">while</strong> (i.hasNext()) {
 <a class="jxr_linenumber" name="158" href="#158">158</a> 			Arg entry = i.next();
 <a class="jxr_linenumber" name="159" href="#159">159</a> 			val = ((Evaluation)entry).getValue();
-<a class="jxr_linenumber" name="160" href="#160">160</a> 			key = (String) entry.getName();
+<a class="jxr_linenumber" name="160" href="#160">160</a> 			key = entry.getName();
 <a class="jxr_linenumber" name="161" href="#161">161</a> 			<strong class="jxr_keyword">if</strong> (val instanceof Evaluation) {
 <a class="jxr_linenumber" name="162" href="#162">162</a> 				val = ((Evaluation) val).getValue();
 <a class="jxr_linenumber" name="163" href="#163">163</a> 			}

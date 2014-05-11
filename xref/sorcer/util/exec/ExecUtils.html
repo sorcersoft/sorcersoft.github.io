@@ -180,10 +180,10 @@
 <a class="jxr_linenumber" name="170" href="#170">170</a> 		String out = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="171" href="#171">171</a> 		<strong class="jxr_keyword">if</strong> (!outLogged) {
 <a class="jxr_linenumber" name="172" href="#172">172</a> 			stdout = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/util/exec/ExecUtils.html">Redir</a>(process.getInputStream());
-<a class="jxr_linenumber" name="173" href="#173">173</a> 			<strong class="jxr_keyword">new</strong> Thread(stdout).start();
+<a class="jxr_linenumber" name="173" href="#173">173</a> 			<strong class="jxr_keyword">new</strong> Thread(stdout, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] STDOUT-"</span> + process.toString()).start();
 <a class="jxr_linenumber" name="174" href="#174">174</a> 		}
 <a class="jxr_linenumber" name="175" href="#175">175</a> 		Redir stderr = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/util/exec/ExecUtils.html">Redir</a>(process.getErrorStream());
-<a class="jxr_linenumber" name="176" href="#176">176</a> 		<strong class="jxr_keyword">new</strong> Thread(stderr).start();
+<a class="jxr_linenumber" name="176" href="#176">176</a> 		<strong class="jxr_keyword">new</strong> Thread(stderr, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] STDERR-"</span> + process.toString()).start();
 <a class="jxr_linenumber" name="177" href="#177">177</a> 		<em class="jxr_comment">// redirect input in the current thread</em>
 <a class="jxr_linenumber" name="178" href="#178">178</a> 		<strong class="jxr_keyword">if</strong> (stdin != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="179" href="#179">179</a> 			OutputStream pout = process.getOutputStream();
@@ -224,8 +224,8 @@
 <a class="jxr_linenumber" name="214" href="#214">214</a> 		<em class="jxr_comment">// concurrency to avoid stdio deadlocks</em>
 <a class="jxr_linenumber" name="215" href="#215">215</a> 		Redir stdout = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/util/exec/ExecUtils.html">Redir</a>(process.getInputStream());
 <a class="jxr_linenumber" name="216" href="#216">216</a> 		Redir stderr = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/util/exec/ExecUtils.html">Redir</a>(process.getErrorStream());
-<a class="jxr_linenumber" name="217" href="#217">217</a> 		<strong class="jxr_keyword">new</strong> Thread(stdout).start();
-<a class="jxr_linenumber" name="218" href="#218">218</a> 		<strong class="jxr_keyword">new</strong> Thread(stderr).start();
+<a class="jxr_linenumber" name="217" href="#217">217</a> 		<strong class="jxr_keyword">new</strong> Thread(stdout, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] STDOUT-"</span> + process.toString()).start();
+<a class="jxr_linenumber" name="218" href="#218">218</a> 		<strong class="jxr_keyword">new</strong> Thread(stderr, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] STDERR-"</span> + process.toString()).start();
 <a class="jxr_linenumber" name="219" href="#219">219</a> 		<em class="jxr_comment">// redirect input in the current thread</em>
 <a class="jxr_linenumber" name="220" href="#220">220</a> 		<strong class="jxr_keyword">if</strong> (stdin != <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="221" href="#221">221</a> 			OutputStream pout = process.getOutputStream();

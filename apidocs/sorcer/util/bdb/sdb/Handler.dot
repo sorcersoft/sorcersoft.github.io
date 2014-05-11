@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.bdb.sdb.Handler
-	c227005 [label=<<table title="sorcer.util.bdb.sdb.Handler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Handler.html">
+	c257246 [label=<<table title="sorcer.util.bdb.sdb.Handler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Handler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Handler </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Handler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.sos.Handler
-	c227183 [label=<<table title="sorcer.util.bdb.sos.Handler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../sos/Handler.html">
+	c257448 [label=<<table title="sorcer.util.bdb.sos.Handler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../sos/Handler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Handler </td></tr>
 		</table></td></tr>
@@ -35,11 +35,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../sos/Handler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.bdb.sdb.Handler extends java.net.URLStreamHandler
-	c227330:p -> c227005:p [dir=back,arrowtail=empty];
+	c257603:p -> c257246:p [dir=back,arrowtail=empty];
 	//sorcer.util.bdb.sos.Handler extends sorcer.util.bdb.sdb.Handler
-	c227005:p -> c227183:p [dir=back,arrowtail=empty];
+	c257246:p -> c257448:p [dir=back,arrowtail=empty];
 	// java.net.URLStreamHandler
-	c227330 [label=<<table title="java.net.URLStreamHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/net/URLStreamHandler.html">
+	c257603 [label=<<table title="java.net.URLStreamHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/net/URLStreamHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> URLStreamHandler </font></td></tr>
 		</table></td></tr>

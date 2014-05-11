@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.ControlFlowManager
-	c156476 [label=<<table title="sorcer.core.provider.ControlFlowManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ControlFlowManager.html">
+	c181662 [label=<<table title="sorcer.core.provider.ControlFlowManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ControlFlowManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ControlFlowManager </td></tr>
 		</table></td></tr>
@@ -33,14 +33,6 @@ digraph G {
 <tr><td align="left" balign="left"> + doBlock(block : Block) : Block </td></tr>
 <tr><td align="left" balign="left"> + doRendezvousExertion(xrt : ServiceExertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doConditional(exertion : Exertion) : Task </td></tr>
-<tr><td align="left" balign="left"> + saveState(mapBackUp : Map&lt;String, Object&gt;, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + restoreState(mapBackUp : Map&lt;String, Object&gt;, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + copyContext(fromContext : Context&lt;&gt;, toContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isValidExertion(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + setConcatenator(concatenator : ServiceConcatenator) </td></tr>
-<tr><td align="left" balign="left"> + setJobber(jobber : ServiceJobber) </td></tr>
-<tr><td align="left" balign="left"> + setSpacer(spacer : Spacer) </td></tr>
-<tr><td align="left" balign="left"> + resetExertionStatus(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + doBatchTask(task : Task) : Task </td></tr>
 <tr><td align="left" balign="left"> + processContinousely(task : Task, signatures : List&lt;Signature&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>

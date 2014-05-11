@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.resolver.AbstractArtifactResolver
-	c99478 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
+	c114431 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.resolver.ArtifactResolver
-	c99479 [label=<<table title="sorcer.resolver.ArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArtifactResolver.html">
+	c114437 [label=<<table title="sorcer.resolver.ArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ArtifactResolver </td></tr>
@@ -43,7 +43,28 @@ digraph G {
 <tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.ProjectArtifactResolver
+	c114438 [label=<<table title="sorcer.resolver.ProjectArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProjectArtifactResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProjectArtifactResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProjectArtifactResolver() </td></tr>
+<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getRootDir() : String </td></tr>
+<tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
+<tr><td align="left" balign="left"> # resolveRelative(root : File, artifactId : String) : File </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProjectArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.resolver.AbstractArtifactResolver implements sorcer.resolver.ArtifactResolver
-	c99479:p -> c99478:p [dir=back,arrowtail=empty,style=dashed];
+	c114437:p -> c114431:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.resolver.ProjectArtifactResolver implements sorcer.resolver.ArtifactResolver
+	c114437:p -> c114438:p [dir=back,arrowtail=empty,style=dashed];
 }
 

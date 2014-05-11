@@ -9,8 +9,140 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Arg
+	c375983 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Arg.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Scopable
+	c375999 [label=<<table title="sorcer.service.Scopable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Scopable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Scopable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getScope() : Object </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Scopable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Mappable<T>
+	c376003 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Mappable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Evaluation<T>
+	c376004 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Evaluation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identity
+	c376009 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Identity.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # id : Uuid </td></tr>
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # characteristicValue : Object </td></tr>
+<tr><td align="left" balign="left"> # hasCharacteristicValue : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Identity() </td></tr>
+<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setId(uuid : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getCharacteristicValue() : Object </td></tr>
+<tr><td align="left" balign="left"> + setCharacteristicValue(characteristicValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Setter
+	c376011 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Setter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Setter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
+<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Setter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Invocation<T>
+	c376021 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Invocation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.Variability<T>
+	c376072 [label=<<table title="sorcer.core.context.model.Variability" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Variability.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Variability&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
+<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
+<tr><td align="left" balign="left"> + setValue(varValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + getValueType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + getVariability(name : String) : Variability&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
+<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + valueChanged() </td></tr>
+		</table></td></tr>
+		</table>>, URL="../Variability.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.ParImpl<T>
-	c331921 [label=<<table title="sorcer.core.context.model.par.ParImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParImpl.html">
+	c376079 [label=<<table title="sorcer.core.context.model.par.ParImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParImpl&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -32,7 +164,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.Par<T>
-	c331922 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Par.html">
+	c376082 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Par.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Par&lt;T&gt; </font></td></tr>
 		</table></td></tr>
@@ -91,177 +223,45 @@ digraph G {
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.Variability<T>
-	c331924 [label=<<table title="sorcer.core.context.model.Variability" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Variability.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Variability&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
-<tr><td align="left" balign="left"> + setValue(varValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + getValueType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + getVariability(name : String) : Variability&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged() </td></tr>
-		</table></td></tr>
-		</table>>, URL="../Variability.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Evaluation<T>
-	c331984 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Evaluation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identity
-	c332001 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Identity.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # id : Uuid </td></tr>
-<tr><td align="left" balign="left"> # name : String </td></tr>
-<tr><td align="left" balign="left"> # characteristicValue : Object </td></tr>
-<tr><td align="left" balign="left"> # hasCharacteristicValue : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Identity() </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setId(uuid : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getCharacteristicValue() : Object </td></tr>
-<tr><td align="left" balign="left"> + setCharacteristicValue(characteristicValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Mappable<T>
-	c332019 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Mappable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Invocation<T>
-	c332020 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Invocation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Setter
-	c332027 [label=<<table title="sorcer.service.Setter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Setter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Setter </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Setter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Scopable
-	c332031 [label=<<table title="sorcer.service.Scopable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Scopable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Scopable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getScope() : Object </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Scopable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Arg
-	c332037 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../service/Arg.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Arg </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.context.model.par.ParImpl<T> extends sorcer.core.context.model.par.Par
-	c331922:p -> c331921:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.model.par.Par<T> extends sorcer.service.Identity
-	c332001:p -> c331922:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.core.context.model.Variability<T>
-	c331924:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Arg
-	c332037:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Mappable<T>
-	c332019:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Evaluation<T>
-	c331984:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Invocation<T>
-	c332020:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Setter
-	c332027:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Scopable
-	c332031:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements java.lang.Comparable<T>
-	c332430:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
-	c332431:p -> c331922:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.Variability<T> implements sorcer.service.Evaluation<T>
-	c331984:p -> c331924:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.Variability<T> implements java.io.Serializable
-	c332431:p -> c331924:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Identity implements java.io.Serializable
-	c332431:p -> c332001:p [dir=back,arrowtail=empty,style=dashed];
+	c376579:p -> c376009:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Setter implements java.io.Serializable
-	c332431:p -> c332027:p [dir=back,arrowtail=empty,style=dashed];
+	c376579:p -> c376011:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.Variability<T> implements sorcer.service.Evaluation<T>
+	c376004:p -> c376072:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.Variability<T> implements java.io.Serializable
+	c376579:p -> c376072:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.ParImpl<T> extends sorcer.core.context.model.par.Par
+	c376082:p -> c376079:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.model.par.Par<T> extends sorcer.service.Identity
+	c376009:p -> c376082:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.core.context.model.Variability<T>
+	c376072:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Arg
+	c375983:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Mappable<T>
+	c376003:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Evaluation<T>
+	c376004:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Invocation<T>
+	c376021:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Setter
+	c376011:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements sorcer.service.Scopable
+	c375999:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements java.lang.Comparable<T>
+	c376580:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.model.par.Par<T> implements java.io.Serializable
+	c376579:p -> c376082:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c332431 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c376579 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.lang.Comparable<T>
-	c332430 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
+	c376580 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Comparable&lt;T&gt; </td></tr>

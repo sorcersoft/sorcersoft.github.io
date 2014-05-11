@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.NetworkShell.HelpCmd
-	c431740 [label=<<table title="sorcer.tools.shell.NetworkShell.HelpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HelpCmd.html">
+	c495911 [label=<<table title="sorcer.tools.shell.NetworkShell.HelpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HelpCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelpCmd </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.HelpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.ClearCmd
-	c431741 [label=<<table title="sorcer.tools.shell.NetworkShell.ClearCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.ClearCmd.html">
+	c495912 [label=<<table title="sorcer.tools.shell.NetworkShell.ClearCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.ClearCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ClearCmd </td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.ClearCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.EditCmd
-	c431742 [label=<<table title="sorcer.tools.shell.NetworkShell.EditCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.EditCmd.html">
+	c495913 [label=<<table title="sorcer.tools.shell.NetworkShell.EditCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.EditCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EditCmd </td></tr>
 		</table></td></tr>
@@ -49,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.EditCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.InfoCmd
-	c431743 [label=<<table title="sorcer.tools.shell.NetworkShell.InfoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.InfoCmd.html">
+	c495914 [label=<<table title="sorcer.tools.shell.NetworkShell.InfoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.InfoCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InfoCmd </td></tr>
 		</table></td></tr>
@@ -62,7 +62,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.InfoCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.HttpCmd
-	c431744 [label=<<table title="sorcer.tools.shell.NetworkShell.HttpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HttpCmd.html">
+	c495915 [label=<<table title="sorcer.tools.shell.NetworkShell.HttpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HttpCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HttpCmd </td></tr>
 		</table></td></tr>
@@ -80,7 +80,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.HttpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.ShellCmd
-	c431750 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ShellCmd.html">
+	c495919 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -93,7 +93,8 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ShellCmd() </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + execute() </font></td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + execute(shell : INetworkShell) </td></tr>
 <tr><td align="left" balign="left"> + getCommandWord() : String </td></tr>
 <tr><td align="left" balign="left"> + getUsage(subCmd : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getShortHelp() : String </td></tr>
@@ -105,144 +106,23 @@ digraph G {
 <tr><td align="left" balign="left"> + setConfig(config : Configuration) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.DataStorageCmd
-	c431959 [label=<<table title="sorcer.tools.shell.cmds.DataStorageCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/DataStorageCmd.html">
+	// sorcer.tools.shell.cmds.LookupCmd
+	c496158 [label=<<table title="sorcer.tools.shell.cmds.LookupCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/LookupCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DataStorageCmd </td></tr>
+<tr><td align="center" balign="center"> LookupCmd </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DataStorageCmd() </td></tr>
+<tr><td align="left" balign="left"> + LookupCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> + printCurrentStorer() </td></tr>
-<tr><td align="left" balign="left"> + setDataStorers(storers : ServiceItem[]) </td></tr>
-<tr><td align="left" balign="left"> + getDataStorerMap() : Map&lt;Uuid, ServiceItem&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDataStorers() : ArrayList&lt;StorageManagement&gt; </td></tr>
+<tr><td align="left" balign="left"> + printCurrentService() </td></tr>
+<tr><td align="left" balign="left"> + getServiceItems() : ArrayList&lt;ServiceItem&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./cmds/DataStorageCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.GroupsCmd
-	c431960 [label=<<table title="sorcer.tools.shell.cmds.GroupsCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/GroupsCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> GroupsCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + GroupsCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/GroupsCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.DirCmd
-	c431961 [label=<<table title="sorcer.tools.shell.cmds.DirCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/DirCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DirCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DirCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> + changeDir(dirName : String, echoSuccess : boolean, out : PrintStream) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getUsage(subCmd : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getLongDescription(subCmd : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/DirCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.SpaceCmd
-	c431962 [label=<<table title="sorcer.tools.shell.cmds.SpaceCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/SpaceCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> + printCurrentSpace() </td></tr>
-<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/SpaceCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.DiscoCmd
-	c431963 [label=<<table title="sorcer.tools.shell.cmds.DiscoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/DiscoCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DiscoCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # MAX_MATCHES : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DiscoCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> + describeServiceRegistrar(myReg : ServiceRegistrar, withDetails : boolean) </td></tr>
-<tr><td align="left" balign="left"> + printCurrentLus() </td></tr>
-<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
-<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[]) : ServiceItem[] </td></tr>
-<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
-<tr><td align="left" balign="left"> + getSelectedRegistrar() : ServiceRegistrar </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/DiscoCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.ChgrpCmd
-	c431964 [label=<<table title="sorcer.tools.shell.cmds.ChgrpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/ChgrpCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ChgrpCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ChgrpCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/ChgrpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.SetPortCmd
-	c431965 [label=<<table title="sorcer.tools.shell.cmds.SetPortCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/SetPortCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SetPortCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SetPortCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/SetPortCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.GroovyCmd
-	c431966 [label=<<table title="sorcer.tools.shell.cmds.GroovyCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/GroovyCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> GroovyCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + GroovyCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> + getScript() : String </td></tr>
-<tr><td align="left" balign="left"> + setScript(script : String) </td></tr>
-<tr><td align="left" balign="left"> + readFile(file : File) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/GroovyCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.StartStopCmd
-	c431967 [label=<<table title="sorcer.tools.shell.cmds.StartStopCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/StartStopCmd.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> StartStopCmd </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + StartStopCmd() </td></tr>
-<tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> + getUsage(subCmd : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./cmds/StartStopCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./cmds/LookupCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.EmxCmd
-	c431968 [label=<<table title="sorcer.tools.shell.cmds.EmxCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/EmxCmd.html">
+	c496159 [label=<<table title="sorcer.tools.shell.cmds.EmxCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/EmxCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EmxCmd </td></tr>
 		</table></td></tr>
@@ -261,8 +141,107 @@ digraph G {
 <tr><td align="left" balign="left"> + getMonitors() : ArrayList&lt;MonitoringManagement&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./cmds/EmxCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.SetPortCmd
+	c496160 [label=<<table title="sorcer.tools.shell.cmds.SetPortCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/SetPortCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SetPortCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SetPortCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/SetPortCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.GroovyCmd
+	c496161 [label=<<table title="sorcer.tools.shell.cmds.GroovyCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/GroovyCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GroovyCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GroovyCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + getScript() : String </td></tr>
+<tr><td align="left" balign="left"> + setScript(script : String) </td></tr>
+<tr><td align="left" balign="left"> + readFile(file : File) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/GroovyCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.DirCmd
+	c496162 [label=<<table title="sorcer.tools.shell.cmds.DirCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/DirCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DirCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DirCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + changeDir(dirName : String, echoSuccess : boolean, out : PrintStream) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getUsage(subCmd : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getLongDescription(subCmd : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/DirCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.ExecCmd
+	c496163 [label=<<table title="sorcer.tools.shell.cmds.ExecCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/ExecCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ExecCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ExecCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/ExecCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.BootCmd
+	c496164 [label=<<table title="sorcer.tools.shell.cmds.BootCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/BootCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BootCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BootCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/BootCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.SorcerCmd
+	c496165 [label=<<table title="sorcer.tools.shell.cmds.SorcerCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/SorcerCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/SorcerCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.SpaceCmd
+	c496166 [label=<<table title="sorcer.tools.shell.cmds.SpaceCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/SpaceCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + printCurrentSpace() </td></tr>
+<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/SpaceCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.ExertCmd
-	c431969 [label=<<table title="sorcer.tools.shell.cmds.ExertCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/ExertCmd.html">
+	c496167 [label=<<table title="sorcer.tools.shell.cmds.ExertCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/ExertCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertCmd </td></tr>
 		</table></td></tr>
@@ -277,84 +256,121 @@ digraph G {
 <tr><td align="left" balign="left"> + readFile(file : File) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./cmds/ExertCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.SorcerCmd
-	c431970 [label=<<table title="sorcer.tools.shell.cmds.SorcerCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/SorcerCmd.html">
+	// sorcer.tools.shell.cmds.DataStorageCmd
+	c496168 [label=<<table title="sorcer.tools.shell.cmds.DataStorageCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/DataStorageCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerCmd </td></tr>
+<tr><td align="center" balign="center"> DataStorageCmd </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerCmd() </td></tr>
+<tr><td align="left" balign="left"> + DataStorageCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + printCurrentStorer() </td></tr>
+<tr><td align="left" balign="left"> + setDataStorers(storers : ServiceItem[]) </td></tr>
+<tr><td align="left" balign="left"> + getDataStorerMap() : Map&lt;Uuid, ServiceItem&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDataStorers() : ArrayList&lt;StorageManagement&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./cmds/SorcerCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.ExecCmd
-	c431971 [label=<<table title="sorcer.tools.shell.cmds.ExecCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/ExecCmd.html">
+		</table>>, URL="./cmds/DataStorageCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.StartStopCmd
+	c496169 [label=<<table title="sorcer.tools.shell.cmds.StartStopCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/StartStopCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExecCmd </td></tr>
+<tr><td align="center" balign="center"> StartStopCmd </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExecCmd() </td></tr>
+<tr><td align="left" balign="left"> + StartStopCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + getUsage(subCmd : String) : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./cmds/ExecCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.cmds.LookupCmd
-	c431972 [label=<<table title="sorcer.tools.shell.cmds.LookupCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/LookupCmd.html">
+		</table>>, URL="./cmds/StartStopCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.DiscoCmd
+	c496170 [label=<<table title="sorcer.tools.shell.cmds.DiscoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/DiscoCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LookupCmd </td></tr>
+<tr><td align="center" balign="center"> DiscoCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # MAX_MATCHES : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DiscoCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + describeServiceRegistrar(myReg : ServiceRegistrar, withDetails : boolean) </td></tr>
+<tr><td align="left" balign="left"> + printCurrentLus() </td></tr>
+<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getSelectedRegistrar() : ServiceRegistrar </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/DiscoCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.ChgrpCmd
+	c496171 [label=<<table title="sorcer.tools.shell.cmds.ChgrpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/ChgrpCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ChgrpCmd </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LookupCmd() </td></tr>
+<tr><td align="left" balign="left"> + ChgrpCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
-<tr><td align="left" balign="left"> + printCurrentService() </td></tr>
-<tr><td align="left" balign="left"> + getServiceItems() : ArrayList&lt;ServiceItem&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./cmds/LookupCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./cmds/ChgrpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.cmds.GroupsCmd
+	c496172 [label=<<table title="sorcer.tools.shell.cmds.GroupsCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cmds/GroupsCmd.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GroupsCmd </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GroupsCmd() </td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./cmds/GroupsCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.NetworkShell.HelpCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431740:p [dir=back,arrowtail=empty];
+	c495919:p -> c495911:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.ClearCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431741:p [dir=back,arrowtail=empty];
+	c495919:p -> c495912:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.EditCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431742:p [dir=back,arrowtail=empty];
+	c495919:p -> c495913:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.InfoCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431743:p [dir=back,arrowtail=empty];
+	c495919:p -> c495914:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.HttpCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431744:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.DataStorageCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431959:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.GroupsCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431960:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.DirCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431961:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.SpaceCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431962:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.DiscoCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431963:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.ChgrpCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431964:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.SetPortCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431965:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.GroovyCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431966:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.StartStopCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431967:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.EmxCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431968:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.ExertCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431969:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.SorcerCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431970:p [dir=back,arrowtail=empty];
-	//sorcer.tools.shell.cmds.ExecCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431971:p [dir=back,arrowtail=empty];
+	c495919:p -> c495915:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.cmds.LookupCmd extends sorcer.tools.shell.ShellCmd
-	c431750:p -> c431972:p [dir=back,arrowtail=empty];
+	c495919:p -> c496158:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.EmxCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496159:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.SetPortCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496160:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.GroovyCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496161:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.DirCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496162:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.ExecCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496163:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.BootCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496164:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.SorcerCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496165:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.SpaceCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496166:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.ExertCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496167:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.DataStorageCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496168:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.StartStopCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496169:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.DiscoCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496170:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.ChgrpCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496171:p [dir=back,arrowtail=empty];
+	//sorcer.tools.shell.cmds.GroupsCmd extends sorcer.tools.shell.ShellCmd
+	c495919:p -> c496172:p [dir=back,arrowtail=empty];
 }
 

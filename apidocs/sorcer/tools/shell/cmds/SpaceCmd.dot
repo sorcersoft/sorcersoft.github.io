@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.ShellCmd
-	c465196 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
+	c531473 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -23,7 +23,8 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ShellCmd() </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + execute() </font></td></tr>
+<tr><td align="left" balign="left"> + execute() </td></tr>
+<tr><td align="left" balign="left"> + execute(shell : INetworkShell) </td></tr>
 <tr><td align="left" balign="left"> + getCommandWord() : String </td></tr>
 <tr><td align="left" balign="left"> + getUsage(subCmd : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getShortHelp() : String </td></tr>
@@ -36,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.SpaceCmd
-	c465408 [label=<<table title="sorcer.tools.shell.cmds.SpaceCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceCmd.html">
+	c531720 [label=<<table title="sorcer.tools.shell.cmds.SpaceCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceCmd </td></tr>
 		</table></td></tr>
@@ -51,6 +52,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SpaceCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.cmds.SpaceCmd extends sorcer.tools.shell.ShellCmd
-	c465196:p -> c465408:p [dir=back,arrowtail=empty];
+	c531473:p -> c531720:p [dir=back,arrowtail=empty];
 }
 

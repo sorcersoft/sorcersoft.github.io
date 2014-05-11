@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger
-	c435444 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignatureDispatcherForCataloger.html">
+	c499144 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignatureDispatcherForCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureDispatcherForCataloger </td></tr>
 		</table></td></tr>
@@ -37,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatcherForCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c435451 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatchment.html">
+	c499148 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatchment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SignatureDispatchment </td></tr>
@@ -64,6 +64,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatchment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c435451:p -> c435444:p [dir=back,arrowtail=empty,style=dashed];
+	c499148:p -> c499144:p [dir=back,arrowtail=empty,style=dashed];
 }
 

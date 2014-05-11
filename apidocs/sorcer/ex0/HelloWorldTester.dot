@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.requestor.ServiceRequestor
-	c231274 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/requestor/ServiceRequestor.html">
+	c261799 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/requestor/ServiceRequestor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceRequestor </font></td></tr>
 		</table></td></tr>
@@ -48,7 +48,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/requestor/ServiceRequestor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ex0.HelloWorldTester
-	c231402 [label=<<table title="sorcer.ex0.HelloWorldTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HelloWorldTester.html">
+	c261933 [label=<<table title="sorcer.ex0.HelloWorldTester" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HelloWorldTester.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelloWorldTester </td></tr>
 		</table></td></tr>
@@ -61,6 +61,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorldTester.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ex0.HelloWorldTester extends sorcer.core.requestor.ServiceRequestor
-	c231274:p -> c231402:p [dir=back,arrowtail=empty];
+	c261799:p -> c261933:p [dir=back,arrowtail=empty];
 }
 

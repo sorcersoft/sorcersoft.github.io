@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.boot.OpstringServiceDescriptor
-	c327476 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpstringServiceDescriptor.html">
+	c370580 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpstringServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpstringServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -18,13 +18,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + OpstringServiceDescriptor(serviceElement : ServiceElement, policyFile : URL) </td></tr>
+<tr><td align="left" balign="left"> + OpstringServiceDescriptor(serviceElement : ServiceElement, policyFile : File) </td></tr>
 <tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OpstringServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.ResolvingServiceDescriptor
-	c327479 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingServiceDescriptor.html">
+	c370581 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResolvingServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -33,13 +33,16 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # ResolvingServiceDescriptor() </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String, configFile : String) </td></tr>
 <tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : String, classpath : String, implClassName : String, configFile : String) </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String) </td></tr>
 <tr><td align="left" balign="left"> # asArtifacts(artifact : String) : Set&lt;Artifact&gt; </td></tr>
 <tr><td align="left" balign="left"> + codebase(codebase : Set&lt;Artifact&gt;) : Set&lt;URL&gt; </td></tr>
 <tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ResolvingServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.boot.OpstringServiceDescriptor extends sorcer.boot.ResolvingServiceDescriptor
-	c327479:p -> c327476:p [dir=back,arrowtail=empty];
+	c370581:p -> c370580:p [dir=back,arrowtail=empty];
 }
 

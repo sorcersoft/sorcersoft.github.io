@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.CompoundService
-	c64070 [label=<<table title="sorcer.core.provider.cataloger.CompoundService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CompoundService.html">
+	c75359 [label=<<table title="sorcer.core.provider.cataloger.CompoundService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CompoundService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CompoundService </td></tr>
@@ -23,36 +23,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getUI() : Component </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CompoundService.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ServiceDiscoveryHelper
-	c64071 [label=<<table title="sorcer.core.provider.cataloger.ServiceDiscoveryHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDiscoveryHelper.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceDiscoveryHelper </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceDiscoveryHelper() </td></tr>
-<tr><td align="left" balign="left"> + getService(serviceClass : Class&lt;&gt;, waitTime : long) : Object </td></tr>
-<tr><td align="left" balign="left"> + getService(serviceClass : Class&lt;&gt;, serviceName : String, waitTime : long) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceDiscoveryHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ServiceListRenderer
-	c64072 [label=<<table title="sorcer.core.provider.cataloger.ServiceListRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceListRenderer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceListRenderer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceListRenderer() </td></tr>
-<tr><td align="left" balign="left"> + getServiceType(si : ServiceItem) : ServiceType </td></tr>
-<tr><td align="left" balign="left"> + getListCellRendererComponent(list : JList&lt;&gt;, value : Object, index : int, isSelected : boolean, cellHasFocus : boolean) : Component </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceListRenderer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger
-	c64073 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.html">
+	c75360 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceCataloger </td></tr>
 		</table></td></tr>
@@ -89,7 +61,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo
-	c64074 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.CatalogerInfo.html">
+	c75361 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.CatalogerInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogerInfo </td></tr>
 		</table></td></tr>
@@ -121,7 +93,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList
-	c64075 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.CatalogerInfo.InterfaceList.html">
+	c75362 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.CatalogerInfo.InterfaceList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InterfaceList </td></tr>
 		</table></td></tr>
@@ -135,7 +107,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerInfo.InterfaceList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener
-	c64076 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.CatalogerEventListener.html">
+	c75363 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceCataloger.CatalogerEventListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogerEventListener </td></tr>
 		</table></td></tr>
@@ -151,8 +123,22 @@ digraph G {
 <tr><td align="left" balign="left"> + run() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerEventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ServiceListRenderer
+	c75364 [label=<<table title="sorcer.core.provider.cataloger.ServiceListRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceListRenderer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceListRenderer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceListRenderer() </td></tr>
+<tr><td align="left" balign="left"> + getServiceType(si : ServiceItem) : ServiceType </td></tr>
+<tr><td align="left" balign="left"> + getListCellRendererComponent(list : JList&lt;&gt;, value : Object, index : int, isSelected : boolean, cellHasFocus : boolean) : Component </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceListRenderer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.NotifyEvent
-	c64077 [label=<<table title="sorcer.core.provider.cataloger.NotifyEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NotifyEvent.html">
+	c75365 [label=<<table title="sorcer.core.provider.cataloger.NotifyEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NotifyEvent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NotifyEvent </td></tr>
 		</table></td></tr>
@@ -164,5 +150,19 @@ digraph G {
 <tr><td align="left" balign="left"> + getServices() : Hashtable&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NotifyEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ServiceDiscoveryHelper
+	c75366 [label=<<table title="sorcer.core.provider.cataloger.ServiceDiscoveryHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDiscoveryHelper.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceDiscoveryHelper </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceDiscoveryHelper() </td></tr>
+<tr><td align="left" balign="left"> + getService(serviceClass : Class&lt;&gt;, waitTime : long) : Object </td></tr>
+<tr><td align="left" balign="left"> + getService(serviceClass : Class&lt;&gt;, serviceName : String, waitTime : long) : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceDiscoveryHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

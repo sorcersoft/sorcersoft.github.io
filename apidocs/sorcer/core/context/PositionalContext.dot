@@ -9,8 +9,74 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.Positioning
+	c389050 [label=<<table title="sorcer.service.Positioning" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Positioning.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Positioning </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getValuesAt(index : int) : List&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + getInValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getOutValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + getInoutValueAt(index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putValueAt(path : String, value : Object, index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putInValueAt(path : String, value : Object, index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putOutValueAt(path : String, value : Object, index : int) : Object </td></tr>
+<tr><td align="left" balign="left"> + putInoutValueAt(path : String, value : Object, index : int) : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Positioning.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Evaluation<T>
+	c389065 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Contexter<T>
+	c389080 [label=<<table title="sorcer.service.Contexter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Contexter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Contexter&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;, path : String) : Context&lt;T&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Contexter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Invocation<T>
+	c389082 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c343501 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c389115 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -284,7 +350,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.PositionalContext<T>
-	c343504 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PositionalContext.html">
+	c389124 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -308,87 +374,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getTally() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Evaluation<T>
-	c343587 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Contexter<T>
-	c343588 [label=<<table title="sorcer.service.Contexter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Contexter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Contexter&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContext(path : String) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + appendContext(context : Context&lt;T&gt;, path : String) : Context&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Contexter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Invocation<T>
-	c343623 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Positioning
-	c343638 [label=<<table title="sorcer.service.Positioning" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Positioning.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Positioning </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValuesAt(index : int) : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + getInValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getOutValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getInoutValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putInValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putOutValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putInoutValueAt(path : String, value : Object, index : int) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Positioning.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Evaluation<T>
-	c343587:p -> c343501:p [dir=back,arrowtail=empty,style=dashed];
+	c389065:p -> c389115:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Invocation<T>
-	c343623:p -> c343501:p [dir=back,arrowtail=empty,style=dashed];
+	c389082:p -> c389115:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ServiceContext<T> implements sorcer.service.Contexter<T>
-	c343588:p -> c343501:p [dir=back,arrowtail=empty,style=dashed];
+	c389080:p -> c389115:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.PositionalContext<T> extends sorcer.core.context.ServiceContext<T>
-	c343501:p -> c343504:p [dir=back,arrowtail=empty];
+	c389115:p -> c389124:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Positioning
-	c343638:p -> c343504:p [dir=back,arrowtail=empty,style=dashed];
+	c389050:p -> c389124:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Evaluation<T>
-	c343587:p -> c343504:p [dir=back,arrowtail=empty,style=dashed];
+	c389065:p -> c389124:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Invocation<T>
-	c343623:p -> c343504:p [dir=back,arrowtail=empty,style=dashed];
+	c389082:p -> c389124:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Contexter<T>
-	c343588:p -> c343504:p [dir=back,arrowtail=empty,style=dashed];
+	c389080:p -> c389124:p [dir=back,arrowtail=empty,style=dashed];
 }
 

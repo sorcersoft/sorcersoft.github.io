@@ -9,8 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.account.provider.AccountProvider
+	c90699 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AccountProvider </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + setProperties(props : Properties) </td></tr>
+<tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getBalance() : Money </td></tr>
+<tr><td align="left" balign="left"> + makeDeposit(amount : Money) </td></tr>
+<tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.AccountImpl
-	c77823 [label=<<table title="sorcer.account.provider.AccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountImpl.html">
+	c90700 [label=<<table title="sorcer.account.provider.AccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AccountImpl </td></tr>
 		</table></td></tr>
@@ -25,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AccountImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.ServiceAccountImpl
-	c77824 [label=<<table title="sorcer.account.provider.ServiceAccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccountImpl.html">
+	c90701 [label=<<table title="sorcer.account.provider.ServiceAccountImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceAccountImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccountImpl </td></tr>
 		</table></td></tr>
@@ -47,26 +66,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setAdmin(admin : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceAccountImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.account.provider.AccountProvider
-	c77825 [label=<<table title="sorcer.account.provider.AccountProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AccountProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AccountProvider </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AccountProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + getBalance(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + makeDeposit(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + makeWithdrawal(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getBalance() : Money </td></tr>
-<tr><td align="left" balign="left"> + makeDeposit(amount : Money) </td></tr>
-<tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AccountProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.account.provider.Account
-	c77830 [label=<<table title="sorcer.account.provider.Account" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Account.html">
+	c90704 [label=<<table title="sorcer.account.provider.Account" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Account.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Account </td></tr>
@@ -80,16 +81,16 @@ digraph G {
 <tr><td align="left" balign="left"> + makeWithdrawal(amount : Money) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Account.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.account.provider.AccountImpl implements sorcer.account.provider.Account
-	c77830:p -> c77823:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.account.provider.ServiceAccountImpl implements sorcer.account.provider.Account
-	c77830:p -> c77824:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.account.provider.AccountProvider implements sorcer.account.provider.Account
-	c77830:p -> c77825:p [dir=back,arrowtail=empty,style=dashed];
+	c90704:p -> c90699:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.account.provider.AccountImpl implements sorcer.account.provider.Account
+	c90704:p -> c90700:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.account.provider.ServiceAccountImpl implements sorcer.account.provider.Account
+	c90704:p -> c90701:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.account.provider.Account implements java.rmi.Remote
-	c77841:p -> c77830:p [dir=back,arrowtail=empty,style=dashed];
+	c90717:p -> c90704:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c77841 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c90717 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

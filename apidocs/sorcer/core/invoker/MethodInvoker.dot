@@ -9,51 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.invoker.MethodInvoker<T>
-	c286212 [label=<<table title="sorcer.core.invoker.MethodInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MethodInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MethodInvoker&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # logger : Logger </td></tr>
-<tr><td align="left" balign="left"> # className : String </td></tr>
-<tr><td align="left" balign="left"> # target : Object </td></tr>
-<tr><td align="left" balign="left"> # count : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MethodInvoker() </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(target : Object, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, signature : Class&lt;?&gt;[], pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, paramTypes : Class&lt;?&gt;[], distributionParameter : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String, initObject : Object) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String, initObject : Object) </td></tr>
-<tr><td align="left" balign="left"> + setArgs(methodName : String, paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + setArgs(paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + setArgs(parameters : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + setSignatureTypes(paramTypes : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + setSelector(methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getInitObject() : Object </td></tr>
-<tr><td align="left" balign="left"> + setInitObject(initObject : Object) </td></tr>
-<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + getParameters() : Object[] </td></tr>
-<tr><td align="left" balign="left"> + getClassName() : String </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Object </td></tr>
-<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
-<tr><td align="left" balign="left"> + describe() : String </td></tr>
-<tr><td align="left" balign="left"> + setContext(context : Context&lt;&gt;) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./MethodInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.Invoker<T>
-	c286222 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
+	c325351 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -107,8 +64,51 @@ digraph G {
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.MethodInvoker<T>
+	c325356 [label=<<table title="sorcer.core.invoker.MethodInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MethodInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> MethodInvoker&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # logger : Logger </td></tr>
+<tr><td align="left" balign="left"> # className : String </td></tr>
+<tr><td align="left" balign="left"> # target : Object </td></tr>
+<tr><td align="left" balign="left"> # count : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MethodInvoker() </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(target : Object, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, signature : Class&lt;?&gt;[], pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, paramTypes : Class&lt;?&gt;[], distributionParameter : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String, initObject : Object) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String, initObject : Object) </td></tr>
+<tr><td align="left" balign="left"> + setArgs(methodName : String, paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + setArgs(paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + setArgs(parameters : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + setSignatureTypes(paramTypes : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setSelector(methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getInitObject() : Object </td></tr>
+<tr><td align="left" balign="left"> + setInitObject(initObject : Object) </td></tr>
+<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + getParameters() : Object[] </td></tr>
+<tr><td align="left" balign="left"> + getClassName() : String </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Object </td></tr>
+<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
+<tr><td align="left" balign="left"> + describe() : String </td></tr>
+<tr><td align="left" balign="left"> + setContext(context : Context&lt;&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./MethodInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.MethodInvoking<T>
-	c286225 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoking.html">
+	c325363 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MethodInvoking&lt;T&gt; </td></tr>
@@ -124,8 +124,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MethodInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.MethodInvoker<T> extends sorcer.core.invoker.Invoker<T>
-	c286222:p -> c286212:p [dir=back,arrowtail=empty];
+	c325351:p -> c325356:p [dir=back,arrowtail=empty];
 	//sorcer.core.invoker.MethodInvoker<T> implements sorcer.core.invoker.MethodInvoking<T>
-	c286225:p -> c286212:p [dir=back,arrowtail=empty,style=dashed];
+	c325363:p -> c325356:p [dir=back,arrowtail=empty,style=dashed];
 }
 

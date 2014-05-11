@@ -9,24 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.monitor.MonitorEvent
-	c188606 [label=<<table title="sorcer.core.monitor.MonitorEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/monitor/MonitorEvent.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MonitorEvent </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ID : long </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitorEvent(source : Object) </td></tr>
-<tr><td align="left" balign="left"> + MonitorEvent(source : Object, ex : Exertion, cause : int) </td></tr>
-<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getCause() : int </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/monitor/MonitorEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ServiceExertion
-	c188653 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
+	c215642 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
@@ -83,7 +67,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setFlow(type : Strategy.Flow) </td></tr>
 <tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + addSignatures(signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isBatch() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isNotCorrectBatch() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setProcessSignature(signature : Signature) </td></tr>
 <tr><td align="left" balign="left"> + setService(provider : Service) </td></tr>
@@ -224,7 +208,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exec
-	c188684 [label=<<table title="sorcer.service.Exec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Exec.html">
+	c215678 [label=<<table title="sorcer.service.Exec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Exec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exec </td></tr>
@@ -255,8 +239,24 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Exec.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.monitor.MonitorEvent
+	c215776 [label=<<table title="sorcer.core.monitor.MonitorEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/monitor/MonitorEvent.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> MonitorEvent </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ID : long </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MonitorEvent(source : Object) </td></tr>
+<tr><td align="left" balign="left"> + MonitorEvent(source : Object, ex : Exertion, cause : int) </td></tr>
+<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getCause() : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/monitor/MonitorEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertDispatcher
-	c188844 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/dispatch/ExertDispatcher.html">
+	c215963 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/dispatch/ExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
 		</table></td></tr>
@@ -293,7 +293,6 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDispatcher(jobID : String) : ExertDispatcher </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
 <tr><td align="left" balign="left"> + createExertionID(ex : ServiceExertion) : String </td></tr>
@@ -318,7 +317,6 @@ digraph G {
 <tr><td align="left" balign="left"> # isInterupted(ex : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
 <tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> # getCatalog() : Cataloger </td></tr>
 <tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
 <tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
@@ -326,11 +324,11 @@ digraph G {
 <tr><td align="left" balign="left"> # prepareJob() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/dispatch/ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.monitor.MonitorEvent implements sorcer.service.Exec
-	c188684:p -> c188606:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.ServiceExertion implements sorcer.service.Exec
-	c188684:p -> c188653:p [dir=back,arrowtail=empty,style=dashed];
+	c215678:p -> c215642:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.monitor.MonitorEvent implements sorcer.service.Exec
+	c215678:p -> c215776:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.dispatch.ExertDispatcher implements sorcer.service.Exec
-	c188684:p -> c188844:p [dir=back,arrowtail=empty,style=dashed];
+	c215678:p -> c215963:p [dir=back,arrowtail=empty,style=dashed];
 }
 

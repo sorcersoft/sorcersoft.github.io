@@ -107,7 +107,7 @@
 <a class="jxr_linenumber" name="97" href="#97">97</a>  	<strong class="jxr_keyword">public</strong> String getColumnName(<strong class="jxr_keyword">int</strong> column)
 <a class="jxr_linenumber" name="98" href="#98">98</a>  			<strong class="jxr_keyword">throws</strong> <a href="../../../sorcer/core/ComprehensiveContextException.html">ComprehensiveContextException</a> {
 <a class="jxr_linenumber" name="99" href="#99">99</a>  		currentColumn = column - 1;
-<a class="jxr_linenumber" name="100" href="#100">100</a> 		<strong class="jxr_keyword">return</strong> (String) compContext.getPathAtIndex(currentColumn);
+<a class="jxr_linenumber" name="100" href="#100">100</a> 		<strong class="jxr_keyword">return</strong> compContext.getPathAtIndex(currentColumn);
 <a class="jxr_linenumber" name="101" href="#101">101</a> 		<em class="jxr_comment">// ContextNode cnode =</em>
 <a class="jxr_linenumber" name="102" href="#102">102</a> 		<em class="jxr_comment">// (ContextNode)compContext.getValueAtIndex(currentColumn);</em>
 <a class="jxr_linenumber" name="103" href="#103">103</a> 		<em class="jxr_comment">// return cnode.getName();</em>

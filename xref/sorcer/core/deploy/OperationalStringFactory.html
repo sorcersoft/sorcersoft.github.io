@@ -126,7 +126,7 @@
 <a class="jxr_linenumber" name="116" href="#116">116</a>         }
 <a class="jxr_linenumber" name="117" href="#117">117</a>         opString.setUndeployOption(getUndeployOption(idle));
 <a class="jxr_linenumber" name="118" href="#118">118</a>         <em class="jxr_comment">//opString.addOperationalString(iGridDeployment);</em>
-<a class="jxr_linenumber" name="119" href="#119">119</a>         <a href="../../../sorcer/core/deploy/Deployment.html">Deployment</a> eDeployment = ((ServiceSignature) exertion.getProcessSignature()).getDeployment();
+<a class="jxr_linenumber" name="119" href="#119">119</a>         <a href="../../../sorcer/core/deploy/Deployment.html">Deployment</a> eDeployment = exertion.getProcessSignature().getDeployment();
 <a class="jxr_linenumber" name="120" href="#120">120</a>         Deployment.Unique unique = eDeployment==<strong class="jxr_keyword">null</strong>? Deployment.Unique.NO:eDeployment.getUnique();
 <a class="jxr_linenumber" name="121" href="#121">121</a>         <strong class="jxr_keyword">if</strong>(unique == Deployment.Unique.YES) {
 <a class="jxr_linenumber" name="122" href="#122">122</a>             uniqueOperationalStrings.add(opString);

@@ -9,8 +9,31 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.provider.ProviderRuntime
+	c14732 [label=<<table title="sorcer.core.provider.ProviderRuntime" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderRuntime.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProviderRuntime </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # groupsToDiscover : String[] </td></tr>
+<tr><td align="left" balign="left"> # spaceGroup : String </td></tr>
+<tr><td align="left" balign="left"> # spaceName : String </td></tr>
+<tr><td align="left" balign="left"> # publishedServiceTypes : Class&lt;&gt;[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProviderRuntime() </td></tr>
+<tr><td align="left" balign="left"> + getRuntimeId() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setRuntimeId(runtimeId : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
+<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
+<tr><td align="left" balign="left"> + getGroupsToDiscover() : String[] </td></tr>
+<tr><td align="left" balign="left"> + getSpaceGroup() : String </td></tr>
+<tr><td align="left" balign="left"> + getSpaceName() : String </td></tr>
+<tr><td align="left" balign="left"> + getPublishedServiceTypes() : Class&lt;&gt;[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderRuntime.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider
-	c10351 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.html">
+	c14733 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -23,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor
-	c10352 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.StaticProviderAccessor.html">
+	c14734 [label=<<table title="sorcer.core.provider.StaticServiceProvider.StaticProviderAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.StaticProviderAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticProviderAccessor </td></tr>
 		</table></td></tr>
@@ -35,10 +58,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getService(signature : Signature) : Service </td></tr>
 <tr><td align="left" balign="left"> + getServiceItem(signature : Signature) : ServiceItem </td></tr>
 <tr><td align="left" balign="left"> + getServiceItems(template : ServiceTemplate, minMatches : int, maxMatches : int, filter : ServiceItemFilter, groups : String[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + getProvider(serviceName : String, serviceType : Class&lt;T&gt;) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StaticServiceProvider.StaticProviderAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceTasker
-	c10353 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceTasker.html">
+	c14735 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceTasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceTasker </td></tr>
 		</table></td></tr>
@@ -53,79 +77,8 @@ digraph G {
 <tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceTasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.SpaceTaker
-	c10354 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceTaker </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # LOKI_ONLY : String </td></tr>
-<tr><td align="left" balign="left"> # isTransactional : boolean </td></tr>
-<tr><td align="left" balign="left"> # TRANSACTION_LEASE_TIME : long </td></tr>
-<tr><td align="left" balign="left"> # transactionLeaseTimeout : long </td></tr>
-<tr><td align="left" balign="left"> + SPACE_TIMEOUT : long </td></tr>
-<tr><td align="left" balign="left"> # spaceTimeout : long </td></tr>
-<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
-<tr><td align="left" balign="left"> # data : SpaceTaker.SpaceTakerData </td></tr>
-<tr><td align="left" balign="left"> # pool : ExecutorService </td></tr>
-<tr><td align="left" balign="left"> # leaseManager : LeaseRenewalManager </td></tr>
-<tr><td align="left" balign="left"> # keepGoing : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceTaker() </td></tr>
-<tr><td align="left" balign="left"> + SpaceTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
-<tr><td align="left" balign="left"> + doLog(msg : String, threadId : String, txn : Transaction.Created) </td></tr>
-<tr><td align="left" balign="left"> # getTransactionLeaseTime() : long </td></tr>
-<tr><td align="left" balign="left"> # getTimeOut() : long </td></tr>
-<tr><td align="left" balign="left"> # doThreadMonitorTaker(threadIdString : String) : String </td></tr>
-<tr><td align="left" balign="left"> # abortTransaction(txn : Transaction.Created) </td></tr>
-<tr><td align="left" balign="left"> # commitTransaction(txn : Transaction.Created) </td></tr>
-<tr><td align="left" balign="left"> # doThreadMonitorWorker(threadIdString : String) : String </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-<tr><td align="left" balign="left"> + createTransaction() : Transaction.Created </td></tr>
-<tr><td align="left" balign="left"> + createTransaction(threadId : String) : Transaction.Created </td></tr>
-<tr><td align="left" balign="left"> # isAbandoned(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> # initDataMember(ee : ExertionEnvelop, txn : Transaction) </td></tr>
-<tr><td align="left" balign="left"> + notify(e : LeaseRenewalEvent) </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.SpaceTaker.SpaceTakerData
-	c10355 [label=<<table title="sorcer.core.provider.SpaceTaker.SpaceTakerData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.SpaceTakerData.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceTakerData </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + entry : ExertionEnvelop </td></tr>
-<tr><td align="left" balign="left"> + myMemberUtil : LokiMemberUtil </td></tr>
-<tr><td align="left" balign="left"> + provider : Provider </td></tr>
-<tr><td align="left" balign="left"> + spaceName : String </td></tr>
-<tr><td align="left" balign="left"> + spaceGroup : String </td></tr>
-<tr><td align="left" balign="left"> + workerTransactional : boolean </td></tr>
-<tr><td align="left" balign="left"> + noQueue : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceTaker.SpaceTakerData() </td></tr>
-<tr><td align="left" balign="left"> + SpaceTaker.SpaceTakerData(entry : ExertionEnvelop, member : LokiMemberUtil, provider : Provider, spaceName : String, spaceGroup : String, workerIsTransactional : boolean, noQueue : boolean) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceTaker.SpaceTakerData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.SpaceIsReadyTaker
-	c10356 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceIsReadyTaker() </td></tr>
-<tr><td align="left" balign="left"> + SpaceIsReadyTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ControlFlowManager
-	c10357 [label=<<table title="sorcer.core.provider.ControlFlowManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlFlowManager.html">
+	c14736 [label=<<table title="sorcer.core.provider.ControlFlowManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ControlFlowManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ControlFlowManager </td></tr>
 		</table></td></tr>
@@ -148,20 +101,275 @@ digraph G {
 <tr><td align="left" balign="left"> + doBlock(block : Block) : Block </td></tr>
 <tr><td align="left" balign="left"> + doRendezvousExertion(xrt : ServiceExertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doConditional(exertion : Exertion) : Task </td></tr>
-<tr><td align="left" balign="left"> + saveState(mapBackUp : Map&lt;String, Object&gt;, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + restoreState(mapBackUp : Map&lt;String, Object&gt;, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + copyContext(fromContext : Context&lt;&gt;, toContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isValidExertion(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + setConcatenator(concatenator : ServiceConcatenator) </td></tr>
-<tr><td align="left" balign="left"> + setJobber(jobber : ServiceJobber) </td></tr>
-<tr><td align="left" balign="left"> + setSpacer(spacer : Spacer) </td></tr>
-<tr><td align="left" balign="left"> + resetExertionStatus(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + doBatchTask(task : Task) : Task </td></tr>
 <tr><td align="left" balign="left"> + processContinousely(task : Task, signatures : List&lt;Signature&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ControlFlowManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.ProviderDelegate
+	c14737 [label=<<table title="sorcer.core.provider.ProviderDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProviderDelegate </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # config : ProviderDelegate.DeploymentConfiguration </td></tr>
+<tr><td align="left" balign="left"> # groupsToDiscover : String[] </td></tr>
+<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
+<tr><td align="left" balign="left"> # tManager : TransactionManager </td></tr>
+<tr><td align="left" balign="left"> # workerTransactional : boolean </td></tr>
+<tr><td align="left" balign="left"> # spaceGroup : String </td></tr>
+<tr><td align="left" balign="left"> # spaceName : String </td></tr>
+<tr><td align="left" balign="left"> # publishedServiceTypes : Class&lt;&gt;[] </td></tr>
+<tr><td align="left" balign="left"> # serviceType : SorcerServiceInfo </td></tr>
+<tr><td align="left" balign="left"> # idPersistent : boolean </td></tr>
+<tr><td align="left" balign="left"> # matchInterfaceOnly : boolean </td></tr>
+<tr><td align="left" balign="left"> # monitorable : boolean </td></tr>
+<tr><td align="left" balign="left"> # notifying : boolean </td></tr>
+<tr><td align="left" balign="left"> # spaceEnabled : boolean </td></tr>
+<tr><td align="left" balign="left"> # spaceReadiness : boolean </td></tr>
+<tr><td align="left" balign="left"> # spaceSecurityEnabled : boolean </td></tr>
+<tr><td align="left" balign="left"> + persister : Mandator </td></tr>
+<tr><td align="left" balign="left"> # leaseManager : LeaseRenewalManager </td></tr>
+<tr><td align="left" balign="left"> # provider : Provider </td></tr>
+<tr><td align="left" balign="left"> # mutualExclusion : boolean </td></tr>
+<tr><td align="left" balign="left"> # providerProxy : Remote </td></tr>
+<tr><td align="left" balign="left"> # adminProxy : Object </td></tr>
+<tr><td align="left" balign="left"> + EXPORTER : String </td></tr>
+<tr><td align="left" balign="left"> + BEANS : String </td></tr>
+<tr><td align="left" balign="left"> + DATA_BEANS : String </td></tr>
+<tr><td align="left" balign="left"> + SCRIPTLETS : String </td></tr>
+<tr><td align="left" balign="left"> + BEAN_CLASSES : String </td></tr>
+<tr><td align="left" balign="left"> + CONTEXT_MANAGER : String </td></tr>
+<tr><td align="left" balign="left"> + SMART_PROXY : String </td></tr>
+<tr><td align="left" balign="left"> + SERVER : String </td></tr>
+<tr><td align="left" balign="left"> + SERVER_TYPE : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_LOGGING : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_LOGGER_MANAGER_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_LOGGER_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_LOGGER_LEVEL : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_CONTEXT_LOGGING : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_PROVIDER_LOGGING : String </td></tr>
+<tr><td align="left" balign="left"> + PROVIDER_MONITORING : String </td></tr>
+<tr><td align="left" balign="left"> + PROVIDER_NOTIFYING : String </td></tr>
+<tr><td align="left" balign="left"> + SERVER_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + SERVER_EXPORTER : String </td></tr>
+<tr><td align="left" balign="left"> + EXPORTER_INTERFACE : String </td></tr>
+<tr><td align="left" balign="left"> + EXPORTER_PORT : String </td></tr>
+<tr><td align="left" balign="left"> + KEEP_ALIVE_TIME : int </td></tr>
+<tr><td align="left" balign="left"> + DISCOVERY_ENABLED : String </td></tr>
+<tr><td align="left" balign="left"> + SPACE_ENABLED : String </td></tr>
+<tr><td align="left" balign="left"> + SPACE_READINESS : String </td></tr>
+<tr><td align="left" balign="left"> + MUTUAL_EXCLUSION : String </td></tr>
+<tr><td align="left" balign="left"> + SPACE_SECURITY_ENABLED : String </td></tr>
+<tr><td align="left" balign="left"> + WORKER_TRANSACTIONAL : String </td></tr>
+<tr><td align="left" balign="left"> + WORKER_COUNT : String </td></tr>
+<tr><td align="left" balign="left"> + WORKER_PER_INTERFACE_COUNT : String </td></tr>
+<tr><td align="left" balign="left"> + SPACE_WORKER_QUEUE_SIZE : String </td></tr>
+<tr><td align="left" balign="left"> + MAX_WORKER_POOL_SIZE : String </td></tr>
+<tr><td align="left" balign="left"> + WORKER_TRANSACTION_LEASE_TIME : String </td></tr>
+<tr><td align="left" balign="left"> + SPACE_TIMEOUT : String </td></tr>
+<tr><td align="left" balign="left"> + INTERFACE_ONLY : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProviderDelegate(beanListener : IServiceBeanListener, serviceBuilder : IServiceBuilder&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + init(provider : Provider, configFilename : String) </td></tr>
+<tr><td align="left" balign="left"> # configure(jconfig : Configuration) </td></tr>
+<tr><td align="left" balign="left"> + startSpaceTakers() </td></tr>
+<tr><td align="left" balign="left"> + doTask(task : Task, transaction : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> # forwardTask(task : ServiceExertion, requestor : Provider) : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> + dropTask(entryTask : Exertion) : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> + doJob(job : Job) : Job </td></tr>
+<tr><td align="left" balign="left"> + dropJob(job : Job) : Job </td></tr>
+<tr><td align="left" balign="left"> + hangup() </td></tr>
+<tr><td align="left" balign="left"> + isValidMethod(name : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + execTask(task : Task) : Task </td></tr>
+<tr><td align="left" balign="left"> + invokeMethod(selector : String, ex : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + invokeMethod(selector : String, sc : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDataDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getScratchDir(scratchDirNamePrefix : String) : File </td></tr>
+<tr><td align="left" balign="left"> + getScratchDir(context : Context&lt;&gt;, scratchDirPrefix : String) : File </td></tr>
+<tr><td align="left" balign="left"> + getScratchDir(context : Context&lt;&gt;) : File </td></tr>
+<tr><td align="left" balign="left"> + getScratchURL(scratchFile : File) : URL </td></tr>
+<tr><td align="left" balign="left"> + getServiceType() : SorcerServiceInfo </td></tr>
+<tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
+<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
+<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
+<tr><td align="left" balign="left"> + setProviderName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
+<tr><td align="left" balign="left"> + addExtraLookupAttribute(extra : Entry) </td></tr>
+<tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
+<tr><td align="left" balign="left"> + restore() </td></tr>
+<tr><td align="left" balign="left"> + getServiceID(uuid : Uuid) : ServiceID </td></tr>
+<tr><td align="left" balign="left"> + getServiceID() : ServiceID </td></tr>
+<tr><td align="left" balign="left"> # getProviderUuid() : Uuid </td></tr>
+<tr><td align="left" balign="left"> # getAdminProviderUuid() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setProviderUuid(serviceID : ServiceID) </td></tr>
+<tr><td align="left" balign="left"> + setServerUuid(providerUuid : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + isValidTask(servicetask : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> # notify(task : Exertion, notificationType : int, message : String) </td></tr>
+<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception, fullStackTrace : boolean) </td></tr>
+<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyException(task : Exertion, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
+<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
+<tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
+<tr><td align="left" balign="left"> + changed(sc : Context&lt;&gt;, aspect : Object) </td></tr>
+<tr><td align="left" balign="left"> + stop(ueid : UEID, subject : Subject) </td></tr>
+<tr><td align="left" balign="left"> + suspend(ueid : UEID, subject : Subject) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getProviderConfig() : ProviderDelegate.DeploymentConfiguration </td></tr>
+<tr><td align="left" balign="left"> + getDeploymentConfig() : Configuration </td></tr>
+<tr><td align="left" balign="left"> + setJiniConfig(config : Configuration) </td></tr>
+<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
+<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
+<tr><td align="left" balign="left"> + mutualExlusion() : boolean </td></tr>
+<tr><td align="left" balign="left"> + mutualExlusion(mutualExlusion : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isSpaceTransactional() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
+<tr><td align="left" balign="left"> + getAdmin() : Object </td></tr>
+<tr><td align="left" balign="left"> + setAdmin(proxy : Object) </td></tr>
+<tr><td align="left" balign="left"> + unexport(force : boolean) : boolean </td></tr>
+<tr><td align="left" balign="left"> + createAdmin() : Object </td></tr>
+<tr><td align="left" balign="left"> + getAdminProxy() : Object </td></tr>
+<tr><td align="left" balign="left"> + getProxy() : Remote </td></tr>
+<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
+<tr><td align="left" balign="left"> + setInner(innerProxy : Object) </td></tr>
+<tr><td align="left" balign="left"> + toArray(arg : String) : String[] </td></tr>
+<tr><td align="left" balign="left"> + getSmartProxy() : Object </td></tr>
+<tr><td align="left" balign="left"> + getPartner() : Remote </td></tr>
+<tr><td align="left" balign="left"> + getProviderProxy() : Remote </td></tr>
+<tr><td align="left" balign="left"> + isSpaceSecurityEnabled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getServiceComponents() : Map&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setServiceComponents(serviceComponents : Map&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + getHostAddress() : String </td></tr>
+<tr><td align="left" balign="left"> + getHostName() : String </td></tr>
+<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + spaceEnabled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getSpaceHandlingPools() : List&lt;ExecutorService&gt; </td></tr>
+<tr><td align="left" balign="left"> + getContextManager() : ContextManagement </td></tr>
+<tr><td align="left" balign="left"> + getPublishedServiceTypes() : Class&lt;&gt;[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderDelegate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.ProviderDelegate.ExertionSessionInfo
+	c14738 [label=<<table title="sorcer.core.provider.ProviderDelegate.ExertionSessionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.ExertionSessionInfo.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ExertionSessionInfo </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProviderDelegate.ExertionSessionInfo() </td></tr>
+<tr><td align="left" balign="left"> + add(ex : ServiceExertion) </td></tr>
+<tr><td align="left" balign="left"> + getSession() : MonitoringSession </td></tr>
+<tr><td align="left" balign="left"> + getID() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + removeLease() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderDelegate.ExertionSessionInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.ProviderDelegate.DeploymentConfiguration
+	c14739 [label=<<table title="sorcer.core.provider.ProviderDelegate.DeploymentConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.DeploymentConfiguration.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DeploymentConfiguration </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # props : Properties </td></tr>
+<tr><td align="left" balign="left"> # jiniConfig : Configuration </td></tr>
+<tr><td align="left" balign="left"> # dataDir : String </td></tr>
+<tr><td align="left" balign="left"> # dataLimit : long </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProviderDelegate.DeploymentConfiguration() </td></tr>
+<tr><td align="left" balign="left"> + init(exitOnEmptyName : boolean, propsFilename : String) </td></tr>
+<tr><td align="left" balign="left"> + getProviderConfiguraion() : Configuration </td></tr>
+<tr><td align="left" balign="left"> + getDataDir() : String </td></tr>
+<tr><td align="left" balign="left"> + getDataLimit() : long </td></tr>
+<tr><td align="left" balign="left"> + setProviderName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + setProperty(key : String, value : String) </td></tr>
+<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
+<tr><td align="left" balign="left"> + getIconName() : String </td></tr>
+<tr><td align="left" balign="left"> + getProviderHostName() : String </td></tr>
+<tr><td align="left" balign="left"> + getProviderHostAddress() : String </td></tr>
+<tr><td align="left" balign="left"> + loadConfiguration(filename : String) </td></tr>
+<tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
+<tr><td align="left" balign="left"> + getProperty(key : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getProperty(property : String, defaultValue : String) : String </td></tr>
+<tr><td align="left" balign="left"> + updateFromProperties() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderDelegate.DeploymentConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.SpaceIsReadyTaker
+	c14740 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceIsReadyTaker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceIsReadyTaker() </td></tr>
+<tr><td align="left" balign="left"> + SpaceIsReadyTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.SpaceTaker
+	c14741 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceTaker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # isTransactional : boolean </td></tr>
+<tr><td align="left" balign="left"> # TRANSACTION_LEASE_TIME : long </td></tr>
+<tr><td align="left" balign="left"> # transactionLeaseTimeout : long </td></tr>
+<tr><td align="left" balign="left"> + SPACE_TIMEOUT : long </td></tr>
+<tr><td align="left" balign="left"> # spaceTimeout : long </td></tr>
+<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
+<tr><td align="left" balign="left"> # data : SpaceTaker.SpaceTakerData </td></tr>
+<tr><td align="left" balign="left"> # pool : ExecutorService </td></tr>
+<tr><td align="left" balign="left"> # keepGoing : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceTaker() </td></tr>
+<tr><td align="left" balign="left"> + SpaceTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
+<tr><td align="left" balign="left"> + doLog(msg : String, threadId : String, txn : Transaction.Created) </td></tr>
+<tr><td align="left" balign="left"> # getTransactionLeaseTime() : long </td></tr>
+<tr><td align="left" balign="left"> # getTimeOut() : long </td></tr>
+<tr><td align="left" balign="left"> # doThreadMonitorTaker(threadIdString : String) : String </td></tr>
+<tr><td align="left" balign="left"> # doThreadMonitorWorker(threadIdString : String) : String </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"> + createTransaction() : Transaction.Created </td></tr>
+<tr><td align="left" balign="left"> # isAbandoned(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> # initDataMember(ee : ExertionEnvelop, txn : Transaction) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.SpaceTaker.SpaceTakerData
+	c14742 [label=<<table title="sorcer.core.provider.SpaceTaker.SpaceTakerData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.SpaceTakerData.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceTakerData </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + entry : ExertionEnvelop </td></tr>
+<tr><td align="left" balign="left"> + myMemberUtil : LokiMemberUtil </td></tr>
+<tr><td align="left" balign="left"> + provider : Provider </td></tr>
+<tr><td align="left" balign="left"> + spaceName : String </td></tr>
+<tr><td align="left" balign="left"> + spaceGroup : String </td></tr>
+<tr><td align="left" balign="left"> + workerTransactional : boolean </td></tr>
+<tr><td align="left" balign="left"> + noQueue : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceTaker.SpaceTakerData() </td></tr>
+<tr><td align="left" balign="left"> + SpaceTaker.SpaceTakerData(entry : ExertionEnvelop, member : LokiMemberUtil, provider : Provider, spaceName : String, spaceGroup : String, workerIsTransactional : boolean, noQueue : boolean) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceTaker.SpaceTakerData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c10358 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
+	c14743 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
@@ -261,7 +469,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 <tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
 <tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
 <tr><td align="left" balign="left"> + loadConfiguration(filename : String) </td></tr>
 <tr><td align="left" balign="left"> + hangup() </td></tr>
 <tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
@@ -295,10 +502,11 @@ digraph G {
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
 <tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider.KeepAwake
-	c10359 [label=<<table title="sorcer.core.provider.ServiceProvider.KeepAwake" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.KeepAwake.html">
+	c14744 [label=<<table title="sorcer.core.provider.ServiceProvider.KeepAwake" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.KeepAwake.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> KeepAwake </td></tr>
 		</table></td></tr>
@@ -310,231 +518,8 @@ digraph G {
 <tr><td align="left" balign="left"> + run() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.KeepAwake.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.ProviderDelegate
-	c10360 [label=<<table title="sorcer.core.provider.ProviderDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ProviderDelegate </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # config : ProviderDelegate.DeploymentConfiguration </td></tr>
-<tr><td align="left" balign="left"> # groupsToDiscover : String[] </td></tr>
-<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
-<tr><td align="left" balign="left"> # tManager : TransactionManager </td></tr>
-<tr><td align="left" balign="left"> # workerTransactional : boolean </td></tr>
-<tr><td align="left" balign="left"> # spaceGroup : String </td></tr>
-<tr><td align="left" balign="left"> # spaceName : String </td></tr>
-<tr><td align="left" balign="left"> # publishedServiceTypes : Class&lt;&gt;[] </td></tr>
-<tr><td align="left" balign="left"> # serviceType : SorcerServiceInfo </td></tr>
-<tr><td align="left" balign="left"> # idPersistent : boolean </td></tr>
-<tr><td align="left" balign="left"> # matchInterfaceOnly : boolean </td></tr>
-<tr><td align="left" balign="left"> # monitorable : boolean </td></tr>
-<tr><td align="left" balign="left"> # notifying : boolean </td></tr>
-<tr><td align="left" balign="left"> # spaceEnabled : boolean </td></tr>
-<tr><td align="left" balign="left"> # spaceReadiness : boolean </td></tr>
-<tr><td align="left" balign="left"> # spaceSecurityEnabled : boolean </td></tr>
-<tr><td align="left" balign="left"> + persister : Mandator </td></tr>
-<tr><td align="left" balign="left"> # leaseManager : LeaseRenewalManager </td></tr>
-<tr><td align="left" balign="left"> # provider : Provider </td></tr>
-<tr><td align="left" balign="left"> # mutualExclusion : boolean </td></tr>
-<tr><td align="left" balign="left"> # providerProxy : Remote </td></tr>
-<tr><td align="left" balign="left"> # adminProxy : Object </td></tr>
-<tr><td align="left" balign="left"> + EXPORTER : String </td></tr>
-<tr><td align="left" balign="left"> + BEANS : String </td></tr>
-<tr><td align="left" balign="left"> + DATA_BEANS : String </td></tr>
-<tr><td align="left" balign="left"> + SCRIPTLETS : String </td></tr>
-<tr><td align="left" balign="left"> + BEAN_CLASSES : String </td></tr>
-<tr><td align="left" balign="left"> + CONTEXT_MANAGER : String </td></tr>
-<tr><td align="left" balign="left"> + SMART_PROXY : String </td></tr>
-<tr><td align="left" balign="left"> + SERVER : String </td></tr>
-<tr><td align="left" balign="left"> + SERVER_TYPE : String </td></tr>
-<tr><td align="left" balign="left"> + REMOTE_LOGGING : String </td></tr>
-<tr><td align="left" balign="left"> + REMOTE_LOGGER_MANAGER_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + REMOTE_LOGGER_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + REMOTE_LOGGER_LEVEL : String </td></tr>
-<tr><td align="left" balign="left"> + REMOTE_CONTEXT_LOGGING : String </td></tr>
-<tr><td align="left" balign="left"> + REMOTE_PROVIDER_LOGGING : String </td></tr>
-<tr><td align="left" balign="left"> + PROVIDER_MONITORING : String </td></tr>
-<tr><td align="left" balign="left"> + PROVIDER_NOTIFYING : String </td></tr>
-<tr><td align="left" balign="left"> + SERVER_NAME : String </td></tr>
-<tr><td align="left" balign="left"> + SERVER_EXPORTER : String </td></tr>
-<tr><td align="left" balign="left"> + EXPORTER_INTERFACE : String </td></tr>
-<tr><td align="left" balign="left"> + EXPORTER_PORT : String </td></tr>
-<tr><td align="left" balign="left"> + KEEP_ALIVE_TIME : int </td></tr>
-<tr><td align="left" balign="left"> + DISCOVERY_ENABLED : String </td></tr>
-<tr><td align="left" balign="left"> + SPACE_ENABLED : String </td></tr>
-<tr><td align="left" balign="left"> + SPACE_READINESS : String </td></tr>
-<tr><td align="left" balign="left"> + MUTUAL_EXCLUSION : String </td></tr>
-<tr><td align="left" balign="left"> + SPACE_SECURITY_ENABLED : String </td></tr>
-<tr><td align="left" balign="left"> + WORKER_TRANSACTIONAL : String </td></tr>
-<tr><td align="left" balign="left"> + WORKER_COUNT : String </td></tr>
-<tr><td align="left" balign="left"> + WORKER_PER_INTERFACE_COUNT : String </td></tr>
-<tr><td align="left" balign="left"> + SPACE_WORKER_QUEUE_SIZE : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_WORKER_POOL_SIZE : String </td></tr>
-<tr><td align="left" balign="left"> + WORKER_TRANSACTION_LEASE_TIME : String </td></tr>
-<tr><td align="left" balign="left"> + SPACE_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + INTERFACE_ONLY : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProviderDelegate(beanListener : ServiceBeanListener) </td></tr>
-<tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
-<tr><td align="left" balign="left"> + init(provider : Provider, configFilename : String) </td></tr>
-<tr><td align="left" balign="left"> # configure(jconfig : Configuration) </td></tr>
-<tr><td align="left" balign="left"> + startSpaceTakers() </td></tr>
-<tr><td align="left" balign="left"> + doTask(task : Task, transaction : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> # forwardTask(task : ServiceExertion, requestor : Provider) : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> + dropTask(entryTask : Exertion) : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Job) : Job </td></tr>
-<tr><td align="left" balign="left"> + dropJob(job : Job) : Job </td></tr>
-<tr><td align="left" balign="left"> + hangup() </td></tr>
-<tr><td align="left" balign="left"> + isValidMethod(name : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + execTask(task : Task) : Task </td></tr>
-<tr><td align="left" balign="left"> + invokeMethod(selector : String, ex : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + invokeMethod(selector : String, sc : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDataDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getScratchDir(scratchDirNamePrefix : String) : File </td></tr>
-<tr><td align="left" balign="left"> + getScratchDir(context : Context&lt;&gt;, scratchDirPrefix : String) : File </td></tr>
-<tr><td align="left" balign="left"> + getScratchDir(context : Context&lt;&gt;) : File </td></tr>
-<tr><td align="left" balign="left"> + getScratchURL(scratchFile : File) : URL </td></tr>
-<tr><td align="left" balign="left"> + getServiceType() : SorcerServiceInfo </td></tr>
-<tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + setProviderName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + addExtraLookupAttribute(extra : Entry) </td></tr>
-<tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
-<tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + getServiceID(uuid : Uuid) : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + getServiceID() : ServiceID </td></tr>
-<tr><td align="left" balign="left"> # getProviderUuid() : Uuid </td></tr>
-<tr><td align="left" balign="left"> # getAdminProviderUuid() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setProviderUuid(serviceID : ServiceID) </td></tr>
-<tr><td align="left" balign="left"> + setServerUuid(providerUuid : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
-<tr><td align="left" balign="left"> + isValidTask(servicetask : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> # notify(task : Exertion, notificationType : int, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception, fullStackTrace : boolean) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + changed(sc : Context&lt;&gt;, aspect : Object) </td></tr>
-<tr><td align="left" balign="left"> + stop(ueid : UEID, subject : Subject) </td></tr>
-<tr><td align="left" balign="left"> + suspend(ueid : UEID, subject : Subject) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfig() : ProviderDelegate.DeploymentConfiguration </td></tr>
-<tr><td align="left" balign="left"> + getDeploymentConfig() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + setJiniConfig(config : Configuration) </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
-<tr><td align="left" balign="left"> + mutualExlusion() : boolean </td></tr>
-<tr><td align="left" balign="left"> + mutualExlusion(mutualExlusion : boolean) </td></tr>
-<tr><td align="left" balign="left"> + isSpaceTransactional() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
-<tr><td align="left" balign="left"> + getAdmin() : Object </td></tr>
-<tr><td align="left" balign="left"> + setAdmin(proxy : Object) </td></tr>
-<tr><td align="left" balign="left"> + unexport(force : boolean) : boolean </td></tr>
-<tr><td align="left" balign="left"> + createAdmin() : Object </td></tr>
-<tr><td align="left" balign="left"> + getAdminProxy() : Object </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Remote </td></tr>
-<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
-<tr><td align="left" balign="left"> + setInner(innerProxy : Object) </td></tr>
-<tr><td align="left" balign="left"> + toArray(arg : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getSmartProxy() : Object </td></tr>
-<tr><td align="left" balign="left"> + getPartner() : Remote </td></tr>
-<tr><td align="left" balign="left"> + getProviderProxy() : Remote </td></tr>
-<tr><td align="left" balign="left"> + isSpaceSecurityEnabled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getServiceComponents() : Map&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setServiceComponents(serviceComponents : Map&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getHostAddress() : String </td></tr>
-<tr><td align="left" balign="left"> + getHostName() : String </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + spaceEnabled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getSpaceHandlingPools() : List&lt;ExecutorService&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContextManager() : ContextManagement </td></tr>
-<tr><td align="left" balign="left"> + getPublishedServiceTypes() : Class&lt;&gt;[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProviderDelegate.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.ProviderDelegate.ExertionSessionInfo
-	c10361 [label=<<table title="sorcer.core.provider.ProviderDelegate.ExertionSessionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.ExertionSessionInfo.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertionSessionInfo </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProviderDelegate.ExertionSessionInfo() </td></tr>
-<tr><td align="left" balign="left"> + add(ex : ServiceExertion) </td></tr>
-<tr><td align="left" balign="left"> + getSession() : MonitoringSession </td></tr>
-<tr><td align="left" balign="left"> + getID() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + removeLease() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProviderDelegate.ExertionSessionInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.ProviderDelegate.DeploymentConfiguration
-	c10362 [label=<<table title="sorcer.core.provider.ProviderDelegate.DeploymentConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderDelegate.DeploymentConfiguration.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DeploymentConfiguration </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # props : Properties </td></tr>
-<tr><td align="left" balign="left"> # jiniConfig : Configuration </td></tr>
-<tr><td align="left" balign="left"> # dataDir : String </td></tr>
-<tr><td align="left" balign="left"> # dataLimit : long </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProviderDelegate.DeploymentConfiguration() </td></tr>
-<tr><td align="left" balign="left"> + init(exitOnEmptyName : boolean, propsFilename : String) </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguraion() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + getDataDir() : String </td></tr>
-<tr><td align="left" balign="left"> + getDataLimit() : long </td></tr>
-<tr><td align="left" balign="left"> + setProviderName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + setProperty(key : String, value : String) </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + getIconName() : String </td></tr>
-<tr><td align="left" balign="left"> + getProviderHostName() : String </td></tr>
-<tr><td align="left" balign="left"> + getProviderHostAddress() : String </td></tr>
-<tr><td align="left" balign="left"> + loadConfiguration(filename : String) </td></tr>
-<tr><td align="left" balign="left"> + getProviderProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + getProperty(key : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getProperty(property : String, defaultValue : String) : String </td></tr>
-<tr><td align="left" balign="left"> + updateFromProperties() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProviderDelegate.DeploymentConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.ProviderRuntime
-	c10363 [label=<<table title="sorcer.core.provider.ProviderRuntime" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderRuntime.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ProviderRuntime </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # groupsToDiscover : String[] </td></tr>
-<tr><td align="left" balign="left"> # spaceGroup : String </td></tr>
-<tr><td align="left" balign="left"> # spaceName : String </td></tr>
-<tr><td align="left" balign="left"> # publishedServiceTypes : Class&lt;&gt;[] </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProviderRuntime() </td></tr>
-<tr><td align="left" balign="left"> + getRuntimeId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setRuntimeId(runtimeId : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + getGroupsToDiscover() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getSpaceGroup() : String </td></tr>
-<tr><td align="left" balign="left"> + getSpaceName() : String </td></tr>
-<tr><td align="left" balign="left"> + getPublishedServiceTypes() : Class&lt;&gt;[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProviderRuntime.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StorageManagement
-	c10364 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StorageManagement.html">
+	c14745 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StorageManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> StorageManagement </td></tr>
@@ -562,22 +547,8 @@ digraph G {
 <tr><td align="left" balign="left"> + contextSize(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./StorageManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Concatenator
-	c10365 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Concatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Concatenator </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Spacer
-	c10366 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Spacer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Spacer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Cataloger
-	c10367 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cataloger.html">
+	c14746 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cataloger </td></tr>
@@ -608,15 +579,35 @@ digraph G {
 <tr><td align="left" balign="left"> + getServiceInfo() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Cataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Concatenator
+	c14747 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Concatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Concatenator </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.ProviderException
+	c14748 [label=<<table title="sorcer.core.provider.ProviderException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProviderException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProviderException() </td></tr>
+<tr><td align="left" balign="left"> + ProviderException(msg : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Jobber
-	c10368 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Jobber.html">
+	c14749 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Jobber.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Jobber </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Provider
-	c10369 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Provider.html">
+	c14750 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Provider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider </td></tr>
@@ -638,7 +629,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
 <tr><td align="left" balign="left"> + getInfo() : String </td></tr>
 <tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + fireEvent() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -661,26 +651,20 @@ digraph G {
 <tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.ProviderException
-	c10370 [label=<<table title="sorcer.core.provider.ProviderException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderException.html">
+	// sorcer.core.provider.Spacer
+	c14751 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Spacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ProviderException </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Spacer </td></tr>
 		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProviderException() </td></tr>
-<tr><td align="left" balign="left"> + ProviderException(msg : String) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProviderException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c10358:p -> c10351:p [dir=back,arrowtail=empty];
+	c14743:p -> c14733:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.ServiceTasker extends sorcer.core.provider.ServiceProvider
-	c10358:p -> c10353:p [dir=back,arrowtail=empty];
+	c14743:p -> c14735:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.SpaceIsReadyTaker extends sorcer.core.provider.SpaceTaker
-	c10354:p -> c10356:p [dir=back,arrowtail=empty];
+	c14741:p -> c14740:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.Provider
-	c10369:p -> c10358:p [dir=back,arrowtail=empty,style=dashed];
+	c14750:p -> c14743:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.service.IndexedContext
+	c307042 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/IndexedContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IndexedContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/IndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c267745 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c307134 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -284,7 +298,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ListContext<T>
-	c267756 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ListContext.html">
+	c307144 [label=<<table title="sorcer.core.context.ListContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ListContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ListContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -320,23 +334,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getElements() : List&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ListContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.IndexedContext
-	c267817 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/IndexedContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> IndexedContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/IndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ListContext<T> extends sorcer.core.context.ServiceContext
-	c267745:p -> c267756:p [dir=back,arrowtail=empty];
+	c307134:p -> c307144:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ListContext<T> implements sorcer.service.IndexedContext
-	c267817:p -> c267756:p [dir=back,arrowtail=empty,style=dashed];
+	c307042:p -> c307144:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,12 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.rio.rmi.SorcerResolvingLoader
-	c455104 [label=<<table title="sorcer.rio.rmi.SorcerResolvingLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerResolvingLoader.html">
+	c520762 [label=<<table title="sorcer.rio.rmi.SorcerResolvingLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerResolvingLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerResolvingLoader </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + SORCER_HOME : String </td></tr>
+<tr><td align="left" balign="left"> + ENV_SORCER_HOME : String </td></tr>
+<tr><td align="left" balign="left"> + CODEBASE_SEPARATOR : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SorcerResolvingLoader() </td></tr>
@@ -26,9 +28,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerResolvingLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.rio.rmi.SorcerResolvingLoader extends java.rmi.server.RMIClassLoaderSpi
-	c455296:p -> c455104:p [dir=back,arrowtail=empty];
+	c520970:p -> c520762:p [dir=back,arrowtail=empty];
 	// java.rmi.server.RMIClassLoaderSpi
-	c455296 [label=<<table title="java.rmi.server.RMIClassLoaderSpi" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/server/RMIClassLoaderSpi.html">
+	c520970 [label=<<table title="java.rmi.server.RMIClassLoaderSpi" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/server/RMIClassLoaderSpi.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> RMIClassLoaderSpi </font></td></tr>
 		</table></td></tr>

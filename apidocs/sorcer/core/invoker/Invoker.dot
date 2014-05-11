@@ -9,148 +9,65 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.vfe.Observable
-	c252685 [label=<<table title="sorcer.vfe.Observable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../vfe/Observable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Observable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # changed : boolean </td></tr>
-<tr><td align="left" balign="left"> # logger : Logger </td></tr>
-<tr><td align="left" balign="left"> # observerMap : Map&lt;Uuid, Observer&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Observable() </td></tr>
-<tr><td align="left" balign="left"> + hasObservers() : boolean </td></tr>
-<tr><td align="left" balign="left"> + countObservers() : int </td></tr>
-<tr><td align="left" balign="left"> + clearObservers() </td></tr>
-<tr><td align="left" balign="left"> + notifyObservers() </td></tr>
-<tr><td align="left" balign="left"> + notifyObservers(arg : Object) </td></tr>
-<tr><td align="left" balign="left"> + addObserver(observer : Observer) </td></tr>
-<tr><td align="left" balign="left"> + getObservers() : Observer[] </td></tr>
-<tr><td align="left" balign="left"> + deleteObserver(observer : Observer) </td></tr>
-<tr><td align="left" balign="left"> + setChanged() </td></tr>
-<tr><td align="left" balign="left"> + isChanged() : boolean </td></tr>
-<tr><td align="left" balign="left"> # clearChanged() </td></tr>
-<tr><td align="left" balign="left"> + notifyParentObservers(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + getObserverMap() : Map&lt;Uuid, Observer&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../vfe/Observable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.vfe.Observer
-	c252687 [label=<<table title="sorcer.vfe.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../vfe/Observer.html">
+	// sorcer.service.Scopable
+	c289660 [label=<<table title="sorcer.service.Scopable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Scopable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Observer </td></tr>
+<tr><td align="center" balign="center"> Scopable </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + getScope() : Object </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../vfe/Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.LoopInvoker<V>
-	c252764 [label=<<table title="sorcer.core.invoker.LoopInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoopInvoker.html">
+		</table>>, URL="../../service/Scopable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identifiable
+	c289675 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Identifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LoopInvoker&lt;V&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # condition : Condition </td></tr>
-<tr><td align="left" balign="left"> # target : Invoker&lt;V&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : V </td></tr>
-		</table></td></tr>
-		</table>>, URL="./LoopInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.CmdInvoker
-	c252765 [label=<<table title="sorcer.core.invoker.CmdInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CmdInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CmdInvoker </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Identifiable </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CmdInvoker(cmd : String) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(name : String, cmd : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(cmdarray : String[], pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(shcmd : String, scriptFile : File, background : boolean, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], script : File, background : boolean, stdin : InputStream, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], scriptFile : File, background : boolean, logFile : File) </td></tr>
-<tr><td align="left" balign="left"> + CmdInvoker(cmd : String, stdin : InputStream) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execScript() : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + getId() : Object </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./CmdInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.MethodInvoker<T>
-	c252766 [label=<<table title="sorcer.core.invoker.MethodInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoker.html">
+		</table>>, URL="../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Evaluator<T>
+	c289681 [label=<<table title="sorcer.service.Evaluator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MethodInvoker&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Evaluator&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # logger : Logger </td></tr>
-<tr><td align="left" balign="left"> # className : String </td></tr>
-<tr><td align="left" balign="left"> # target : Object </td></tr>
-<tr><td align="left" balign="left"> # count : int </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MethodInvoker() </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(target : Object, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, signature : Class&lt;?&gt;[], pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, paramTypes : Class&lt;?&gt;[], distributionParameter : String, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String, initObject : Object) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String, initObject : Object) </td></tr>
-<tr><td align="left" balign="left"> + setArgs(methodName : String, paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + setArgs(paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + setArgs(parameters : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + setSignatureTypes(paramTypes : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + setSelector(methodName : String) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getInitObject() : Object </td></tr>
-<tr><td align="left" balign="left"> + setInitObject(initObject : Object) </td></tr>
-<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + getParameters() : Object[] </td></tr>
-<tr><td align="left" balign="left"> + getClassName() : String </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Object </td></tr>
-<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
-<tr><td align="left" balign="left"> + describe() : String </td></tr>
-<tr><td align="left" balign="left"> + setContext(context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
 		</table></td></tr>
-		</table>>, URL="./MethodInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.OptInvoker<T>
-	c252768 [label=<<table title="sorcer.core.invoker.OptInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OptInvoker.html">
+		</table>>, URL="../../service/Evaluator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Invocation<T>
+	c289682 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OptInvoker&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # condition : Condition </td></tr>
-<tr><td align="left" balign="left"> # target : Invoker&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + OptInvoker(name : String) </td></tr>
-<tr><td align="left" balign="left"> + OptInvoker(name : String, invoker : Invoker&lt;T&gt;) </td></tr>
-<tr><td align="left" balign="left"> + OptInvoker(name : String, condition : Condition, invoker : Invoker&lt;T&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Invoker&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + setTarget(target : Invoker&lt;T&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OptInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.AltInvoker<V>
-	c252770 [label=<<table title="sorcer.core.invoker.AltInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AltInvoker.html">
+	c289794 [label=<<table title="sorcer.core.invoker.AltInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AltInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AltInvoker&lt;V&gt; </td></tr>
 		</table></td></tr>
@@ -164,8 +81,43 @@ digraph G {
 <tr><td align="left" balign="left"> + getInvoker(index : int) : OptInvoker&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AltInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.CallableInvoker<T>
+	c289795 [label=<<table title="sorcer.core.invoker.CallableInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CallableInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CallableInvoker&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + POOL_SIZE : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CallableInvoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + CallableInvoker(context : ParModel&lt;&gt;, callable : Callable&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CallableInvoker(name : String, callable : Callable&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CallableInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.InvokeDoubleIncrementor
+	c289796 [label=<<table title="sorcer.core.invoker.InvokeDoubleIncrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InvokeDoubleIncrementor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> InvokeDoubleIncrementor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # increment : double </td></tr>
+<tr><td align="left" balign="left"> # target : Invocation&lt;Double&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + InvokeDoubleIncrementor(name : String, invoker : Invocation&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + InvokeDoubleIncrementor(name : String, invoker : Invocation&lt;&gt;, increment : double) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : Double </td></tr>
+<tr><td align="left" balign="left"> + getIncrement() : double </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Invocation&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + reset() : Incrementor&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + next() : Double </td></tr>
+		</table></td></tr>
+		</table>>, URL="./InvokeDoubleIncrementor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.ExertInvoker
-	c252771 [label=<<table title="sorcer.core.invoker.ExertInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertInvoker.html">
+	c289797 [label=<<table title="sorcer.core.invoker.ExertInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertInvoker </td></tr>
 		</table></td></tr>
@@ -184,59 +136,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setUpdatedValue(updatedValue : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.RunnableInvoker<T>
-	c252772 [label=<<table title="sorcer.core.invoker.RunnableInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RunnableInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RunnableInvoker&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + RunnableInvoker(name : String, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RunnableInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.InvokeDoubleIncrementor
-	c252774 [label=<<table title="sorcer.core.invoker.InvokeDoubleIncrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InvokeDoubleIncrementor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InvokeDoubleIncrementor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # increment : double </td></tr>
-<tr><td align="left" balign="left"> # target : Invocation&lt;Double&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InvokeDoubleIncrementor(name : String, invoker : Invocation&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + InvokeDoubleIncrementor(name : String, invoker : Invocation&lt;&gt;, increment : double) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : Double </td></tr>
-<tr><td align="left" balign="left"> + getIncrement() : double </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Invocation&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + reset() : Incrementor&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + next() : Double </td></tr>
-		</table></td></tr>
-		</table>>, URL="./InvokeDoubleIncrementor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.CallableInvoker<T>
-	c252775 [label=<<table title="sorcer.core.invoker.CallableInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CallableInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CallableInvoker&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + POOL_SIZE : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CallableInvoker(context : ParModel&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + CallableInvoker(context : ParModel&lt;&gt;, callable : Callable&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + CallableInvoker(name : String, callable : Callable&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CallableInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.Invoker<T>
-	c252776 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Invoker.html">
+	c289798 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Invoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -290,8 +191,123 @@ digraph G {
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.LoopInvoker<V>
+	c289799 [label=<<table title="sorcer.core.invoker.LoopInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoopInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoopInvoker&lt;V&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # condition : Condition </td></tr>
+<tr><td align="left" balign="left"> # target : Invoker&lt;V&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : V </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoopInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.CmdInvoker
+	c289800 [label=<<table title="sorcer.core.invoker.CmdInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CmdInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CmdInvoker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CmdInvoker(cmd : String) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(name : String, cmd : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(cmdarray : String[], pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(shcmd : String, scriptFile : File, background : boolean, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], script : File, background : boolean, stdin : InputStream, logFile : File, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(argarray : String[], scriptFile : File, background : boolean, logFile : File) </td></tr>
+<tr><td align="left" balign="left"> + CmdInvoker(cmd : String, stdin : InputStream) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execScript() : ExecUtils.CmdResult </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CmdInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.RunnableInvoker<T>
+	c289801 [label=<<table title="sorcer.core.invoker.RunnableInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RunnableInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RunnableInvoker&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + RunnableInvoker(context : ParModel&lt;&gt;, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + RunnableInvoker(name : String, runnable : Runnable, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RunnableInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.MethodInvoker<T>
+	c289803 [label=<<table title="sorcer.core.invoker.MethodInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> MethodInvoker&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # logger : Logger </td></tr>
+<tr><td align="left" balign="left"> # className : String </td></tr>
+<tr><td align="left" balign="left"> # target : Object </td></tr>
+<tr><td align="left" balign="left"> # count : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MethodInvoker() </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(target : Object, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, target : Object, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, signature : Class&lt;?&gt;[], pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, className : String, methodName : String, paramTypes : Class&lt;?&gt;[], distributionParameter : String, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(name : String, exportUrl : URL, className : String, methodName : String, initObject : Object) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + MethodInvoker(exportURL : URL[], className : String, methodName : String, initObject : Object) </td></tr>
+<tr><td align="left" balign="left"> + setArgs(methodName : String, paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + setArgs(paramTypes : Class&lt;?&gt;[], parameters : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + setArgs(parameters : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + setSignatureTypes(paramTypes : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setSelector(methodName : String) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getInitObject() : Object </td></tr>
+<tr><td align="left" balign="left"> + setInitObject(initObject : Object) </td></tr>
+<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + getParameters() : Object[] </td></tr>
+<tr><td align="left" balign="left"> + getClassName() : String </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Object </td></tr>
+<tr><td align="left" balign="left"> + getSelector() : String </td></tr>
+<tr><td align="left" balign="left"> + describe() : String </td></tr>
+<tr><td align="left" balign="left"> + setContext(context : Context&lt;&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./MethodInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.InvokeIncrementor
+	c289804 [label=<<table title="sorcer.core.invoker.InvokeIncrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InvokeIncrementor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> InvokeIncrementor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # increment : int </td></tr>
+<tr><td align="left" balign="left"> # target : Invocation&lt;Integer&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + InvokeIncrementor(name : String, invoker : Invocation&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + InvokeIncrementor(name : String, invoker : Invocation&lt;&gt;, increment : int) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : Integer </td></tr>
+<tr><td align="left" balign="left"> + getIncrement() : int </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Invocation&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + reset() : Incrementor&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + next() : Integer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./InvokeIncrementor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.GroovyInvoker<T>
-	c252777 [label=<<table title="sorcer.core.invoker.GroovyInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroovyInvoker.html">
+	c289805 [label=<<table title="sorcer.core.invoker.GroovyInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroovyInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GroovyInvoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -312,122 +328,106 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./GroovyInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.InvokeIncrementor
-	c252778 [label=<<table title="sorcer.core.invoker.InvokeIncrementor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InvokeIncrementor.html">
+	// sorcer.core.invoker.OptInvoker<T>
+	c289808 [label=<<table title="sorcer.core.invoker.OptInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OptInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InvokeIncrementor </td></tr>
+<tr><td align="center" balign="center"> OptInvoker&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # increment : int </td></tr>
-<tr><td align="left" balign="left"> # target : Invocation&lt;Integer&gt; </td></tr>
+<tr><td align="left" balign="left"> # condition : Condition </td></tr>
+<tr><td align="left" balign="left"> # target : Invoker&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InvokeIncrementor(name : String, invoker : Invocation&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + InvokeIncrementor(name : String, invoker : Invocation&lt;&gt;, increment : int) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : Integer </td></tr>
-<tr><td align="left" balign="left"> + getIncrement() : int </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Invocation&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + reset() : Incrementor&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + next() : Integer </td></tr>
-		</table></td></tr>
-		</table>>, URL="./InvokeIncrementor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Evaluator<T>
-	c252827 [label=<<table title="sorcer.service.Evaluator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Evaluator&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Evaluator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identifiable
-	c252837 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Identifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Identifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Invocation<T>
-	c252845 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OptInvoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + OptInvoker(name : String, invoker : Invoker&lt;T&gt;) </td></tr>
+<tr><td align="left" balign="left"> + OptInvoker(name : String, condition : Condition, invoker : Invoker&lt;T&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Invoker&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + setTarget(target : Invoker&lt;T&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Scopable
-	c252856 [label=<<table title="sorcer.service.Scopable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Scopable.html">
+		</table>>, URL="./OptInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.vfe.Observer
+	c289840 [label=<<table title="sorcer.vfe.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../vfe/Observer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Scopable </td></tr>
+<tr><td align="center" balign="center"> Observer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getScope() : Object </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
+<tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../service/Scopable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.vfe.Observable implements java.io.Serializable
-	c253255:p -> c252685:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.LoopInvoker<V> extends sorcer.core.invoker.Invoker<V>
-	c252776:p -> c252764:p [dir=back,arrowtail=empty];
-	//sorcer.core.invoker.CmdInvoker extends sorcer.core.invoker.Invoker
-	c252776:p -> c252765:p [dir=back,arrowtail=empty];
-	//sorcer.core.invoker.MethodInvoker<T> extends sorcer.core.invoker.Invoker<T>
-	c252776:p -> c252766:p [dir=back,arrowtail=empty];
-	//sorcer.core.invoker.OptInvoker<T> extends sorcer.core.invoker.Invoker<T>
-	c252776:p -> c252768:p [dir=back,arrowtail=empty];
+		</table>>, URL="../../vfe/Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.vfe.Observable
+	c289841 [label=<<table title="sorcer.vfe.Observable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../vfe/Observable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Observable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # changed : boolean </td></tr>
+<tr><td align="left" balign="left"> # logger : Logger </td></tr>
+<tr><td align="left" balign="left"> # observerMap : Map&lt;Uuid, Observer&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Observable() </td></tr>
+<tr><td align="left" balign="left"> + hasObservers() : boolean </td></tr>
+<tr><td align="left" balign="left"> + countObservers() : int </td></tr>
+<tr><td align="left" balign="left"> + clearObservers() </td></tr>
+<tr><td align="left" balign="left"> + notifyObservers() </td></tr>
+<tr><td align="left" balign="left"> + notifyObservers(arg : Object) </td></tr>
+<tr><td align="left" balign="left"> + addObserver(observer : Observer) </td></tr>
+<tr><td align="left" balign="left"> + getObservers() : Observer[] </td></tr>
+<tr><td align="left" balign="left"> + deleteObserver(observer : Observer) </td></tr>
+<tr><td align="left" balign="left"> + setChanged() </td></tr>
+<tr><td align="left" balign="left"> + isChanged() : boolean </td></tr>
+<tr><td align="left" balign="left"> # clearChanged() </td></tr>
+<tr><td align="left" balign="left"> + notifyParentObservers(obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + getObserverMap() : Map&lt;Uuid, Observer&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../vfe/Observable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.AltInvoker<V> extends sorcer.core.invoker.Invoker<V>
-	c252776:p -> c252770:p [dir=back,arrowtail=empty];
-	//sorcer.core.invoker.ExertInvoker extends sorcer.core.invoker.Invoker
-	c252776:p -> c252771:p [dir=back,arrowtail=empty];
-	//sorcer.core.invoker.RunnableInvoker<T> extends sorcer.core.invoker.Invoker<T>
-	c252776:p -> c252772:p [dir=back,arrowtail=empty];
-	//sorcer.core.invoker.InvokeDoubleIncrementor extends sorcer.core.invoker.Invoker<java.lang.Double>
-	c252776:p -> c252774:p [dir=back,arrowtail=empty];
+	c289798:p -> c289794:p [dir=back,arrowtail=empty];
 	//sorcer.core.invoker.CallableInvoker<T> extends sorcer.core.invoker.Invoker<T>
-	c252776:p -> c252775:p [dir=back,arrowtail=empty];
+	c289798:p -> c289795:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.InvokeDoubleIncrementor extends sorcer.core.invoker.Invoker<java.lang.Double>
+	c289798:p -> c289796:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.ExertInvoker extends sorcer.core.invoker.Invoker
+	c289798:p -> c289797:p [dir=back,arrowtail=empty];
 	//sorcer.core.invoker.Invoker<T> extends sorcer.vfe.Observable
-	c252685:p -> c252776:p [dir=back,arrowtail=empty];
+	c289841:p -> c289798:p [dir=back,arrowtail=empty];
 	//sorcer.core.invoker.Invoker<T> implements sorcer.service.Identifiable
-	c252837:p -> c252776:p [dir=back,arrowtail=empty,style=dashed];
+	c289675:p -> c289798:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.invoker.Invoker<T> implements sorcer.service.Scopable
-	c252856:p -> c252776:p [dir=back,arrowtail=empty,style=dashed];
+	c289660:p -> c289798:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.invoker.Invoker<T> implements sorcer.service.Evaluator<T>
-	c252827:p -> c252776:p [dir=back,arrowtail=empty,style=dashed];
+	c289681:p -> c289798:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.invoker.Invoker<T> implements sorcer.service.Invocation<T>
-	c252845:p -> c252776:p [dir=back,arrowtail=empty,style=dashed];
+	c289682:p -> c289798:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.invoker.Invoker<T> implements sorcer.vfe.Observer
-	c252687:p -> c252776:p [dir=back,arrowtail=empty,style=dashed];
+	c289840:p -> c289798:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.invoker.Invoker<T> implements java.io.Serializable
-	c253255:p -> c252776:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.GroovyInvoker<T> extends sorcer.core.invoker.Invoker<T>
-	c252776:p -> c252777:p [dir=back,arrowtail=empty];
+	c290240:p -> c289798:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.LoopInvoker<V> extends sorcer.core.invoker.Invoker<V>
+	c289798:p -> c289799:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.CmdInvoker extends sorcer.core.invoker.Invoker
+	c289798:p -> c289800:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.RunnableInvoker<T> extends sorcer.core.invoker.Invoker<T>
+	c289798:p -> c289801:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.MethodInvoker<T> extends sorcer.core.invoker.Invoker<T>
+	c289798:p -> c289803:p [dir=back,arrowtail=empty];
 	//sorcer.core.invoker.InvokeIncrementor extends sorcer.core.invoker.Invoker<java.lang.Integer>
-	c252776:p -> c252778:p [dir=back,arrowtail=empty];
+	c289798:p -> c289804:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.GroovyInvoker<T> extends sorcer.core.invoker.Invoker<T>
+	c289798:p -> c289805:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.OptInvoker<T> extends sorcer.core.invoker.Invoker<T>
+	c289798:p -> c289808:p [dir=back,arrowtail=empty];
+	//sorcer.vfe.Observable implements java.io.Serializable
+	c290240:p -> c289841:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c253255 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c290240 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

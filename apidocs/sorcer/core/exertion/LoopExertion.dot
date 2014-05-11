@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Task
-	c279416 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
+	c317924 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 		</table></td></tr>
@@ -59,7 +59,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Task.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ConditionalExertion
-	c279478 [label=<<table title="sorcer.service.ConditionalExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/ConditionalExertion.html">
+	c318000 [label=<<table title="sorcer.service.ConditionalExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/ConditionalExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConditionalExertion </td></tr>
@@ -73,7 +73,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/ConditionalExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.LoopExertion
-	c279634 [label=<<table title="sorcer.core.exertion.LoopExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoopExertion.html">
+	c318216 [label=<<table title="sorcer.core.exertion.LoopExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoopExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoopExertion </td></tr>
 		</table></td></tr>
@@ -97,8 +97,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LoopExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.LoopExertion extends sorcer.service.Task
-	c279416:p -> c279634:p [dir=back,arrowtail=empty];
+	c317924:p -> c318216:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.LoopExertion implements sorcer.service.ConditionalExertion
-	c279478:p -> c279634:p [dir=back,arrowtail=empty,style=dashed];
+	c318000:p -> c318216:p [dir=back,arrowtail=empty,style=dashed];
 }
 

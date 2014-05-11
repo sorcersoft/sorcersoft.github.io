@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.launcher.Sorcer
-	c42758 [label=<<table title="sorcer.launcher.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Sorcer.html">
+	c49794 [label=<<table title="sorcer.launcher.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Sorcer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Sorcer </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.OutputConsumer
-	c42759 [label=<<table title="sorcer.launcher.OutputConsumer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutputConsumer.html">
+	c49795 [label=<<table title="sorcer.launcher.OutputConsumer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutputConsumer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OutputConsumer </td></tr>
@@ -35,8 +35,21 @@ digraph G {
 <tr><td align="left" balign="left"> + consume(line : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OutputConsumer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.SorcerOutputConsumer
+	c49796 [label=<<table title="sorcer.launcher.SorcerOutputConsumer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerOutputConsumer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerOutputConsumer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerOutputConsumer(sorcerListener : SorcerListener) </td></tr>
+<tr><td align="left" balign="left"> + writeLine(line : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerOutputConsumer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.JavaProcessBuilder
-	c42760 [label=<<table title="sorcer.launcher.JavaProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JavaProcessBuilder.html">
+	c49797 [label=<<table title="sorcer.launcher.JavaProcessBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JavaProcessBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JavaProcessBuilder </td></tr>
 		</table></td></tr>
@@ -75,21 +88,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getParameters() : List&lt;String&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./JavaProcessBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.SorcerOutputConsumer
-	c42761 [label=<<table title="sorcer.launcher.SorcerOutputConsumer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerOutputConsumer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerOutputConsumer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerOutputConsumer(sorcerListener : SorcerListener) </td></tr>
-<tr><td align="left" balign="left"> + writeLine(line : String) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerOutputConsumer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.SorcerLauncher
-	c42762 [label=<<table title="sorcer.launcher.SorcerLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerLauncher.html">
+	c49798 [label=<<table title="sorcer.launcher.SorcerLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerLauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerLauncher </td></tr>
 		</table></td></tr>
@@ -103,7 +103,7 @@ digraph G {
 <tr><td align="left" balign="left"> + start() </td></tr>
 <tr><td align="left" balign="left"> # configure() </td></tr>
 <tr><td align="left" balign="left"> + checkEnvironment() : boolean </td></tr>
-<tr><td align="left" balign="left"> # getConfigs() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> # getConfigs() : List&lt;File&gt; </td></tr>
 <tr><td align="left" balign="left"> # getEnvironment() : Properties </td></tr>
 <tr><td align="left" balign="left"> + setProfile(profileName : String) </td></tr>
 <tr><td align="left" balign="left"> + installSecurityManager() </td></tr>
@@ -112,94 +112,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setThreadFactory(threadFactory : ThreadFactory) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.ILauncher
-	c42763 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ILauncher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ILauncher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + start() </td></tr>
-<tr><td align="left" balign="left"> + stop() </td></tr>
-<tr><td align="left" balign="left"> + preConfigure() </td></tr>
-<tr><td align="left" balign="left"> + setLogDir(logDir : File) </td></tr>
-<tr><td align="left" balign="left"> + setHome(home : File) </td></tr>
-<tr><td align="left" balign="left"> + setConfigs(configs : List&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setConfigDir(config : File) </td></tr>
-<tr><td align="left" balign="left"> + addSorcerListener(listener : SorcerListener) </td></tr>
-<tr><td align="left" balign="left"> + setProfile(profile : String) </td></tr>
-<tr><td align="left" balign="left"> + removeSorcerListener(listener : SorcerListener) </td></tr>
-<tr><td align="left" balign="left"> + setRioConfigs(rioConfigs : List&lt;String&gt;) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ILauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.SorcerShutdownHook
-	c42764 [label=<<table title="sorcer.launcher.SorcerShutdownHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerShutdownHook.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerShutdownHook </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + instance : SorcerShutdownHook </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerShutdownHook() </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-<tr><td align="left" balign="left"> + add(launcher : Launcher) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerShutdownHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.NullSorcerListener
-	c42765 [label=<<table title="sorcer.launcher.NullSorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullSorcerListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> NullSorcerListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NullSorcerListener() </td></tr>
-<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
-<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
-<tr><td align="left" balign="left"> + sorcerEnded(e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + processDown(process : Process) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./NullSorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.Mode
-	c42766 [label=<<table title="sorcer.launcher.Mode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mode.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Mode </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + paramValue : String </td></tr>
-<tr><td align="left" balign="left"> + force : boolean </td></tr>
-<tr><td align="left" balign="left"> + fork : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> forceFork </td></tr>
-<tr><td align="left" balign="left"> preferFork </td></tr>
-<tr><td align="left" balign="left"> forceDirect </td></tr>
-<tr><td align="left" balign="left"> preferDirect </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Mode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.WaitingListener
-	c42767 [label=<<table title="sorcer.launcher.WaitingListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WaitingListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> WaitingListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + WaitingListener() </td></tr>
-<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
-<tr><td align="left" balign="left"> + sorcerEnded(e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + wait(mode : WaitMode) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./WaitingListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.Launcher
-	c42768 [label=<<table title="sorcer.launcher.Launcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Launcher.html">
+	c49799 [label=<<table title="sorcer.launcher.Launcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Launcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Launcher </font></td></tr>
 		</table></td></tr>
@@ -236,7 +150,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Launcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.SorcerListener
-	c42769 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerListener.html">
+	c49800 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerListener </td></tr>
@@ -250,40 +164,61 @@ digraph G {
 <tr><td align="left" balign="left"> + sorcerEnded(exception : Exception) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.WaitMode
-	c42770 [label=<<table title="sorcer.launcher.WaitMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WaitMode.html">
+	// sorcer.launcher.NullSorcerListener
+	c49801 [label=<<table title="sorcer.launcher.NullSorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullSorcerListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> WaitMode </td></tr>
+<tr><td align="center" balign="center"> NullSorcerListener </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> no </td></tr>
-<tr><td align="left" balign="left"> start </td></tr>
-<tr><td align="left" balign="left"> end </td></tr>
+<tr><td align="left" balign="left"> + NullSorcerListener() </td></tr>
+<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
+<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
+<tr><td align="left" balign="left"> + sorcerEnded(e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + processDown(process : Process) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./WaitMode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.IForkingLauncher
-	c42771 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IForkingLauncher.html">
+		</table>>, URL="./NullSorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.ILauncher
+	c49802 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ILauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> IForkingLauncher </td></tr>
+<tr><td align="center" balign="center"> ILauncher </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setDebugPort(debugPort : Integer) </td></tr>
-<tr><td align="left" balign="left"> + setOut(out : OutputStream) </td></tr>
-<tr><td align="left" balign="left"> + setErr(err : OutputStream) </td></tr>
-<tr><td align="left" balign="left"> + setOutFile(outFile : File) </td></tr>
-<tr><td align="left" balign="left"> + setErrFile(errFile : File) </td></tr>
+<tr><td align="left" balign="left"> + start() </td></tr>
+<tr><td align="left" balign="left"> + stop() </td></tr>
+<tr><td align="left" balign="left"> + preConfigure() </td></tr>
+<tr><td align="left" balign="left"> + setLogDir(logDir : File) </td></tr>
+<tr><td align="left" balign="left"> + setHome(home : File) </td></tr>
+<tr><td align="left" balign="left"> + setConfigs(configs : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setConfigDir(config : File) </td></tr>
+<tr><td align="left" balign="left"> + addSorcerListener(listener : SorcerListener) </td></tr>
+<tr><td align="left" balign="left"> + setProfile(profile : String) </td></tr>
+<tr><td align="left" balign="left"> + removeSorcerListener(listener : SorcerListener) </td></tr>
+<tr><td align="left" balign="left"> + setRioConfigs(rioConfigs : List&lt;String&gt;) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./IForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ILauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.SorcerShutdownHook
+	c49803 [label=<<table title="sorcer.launcher.SorcerShutdownHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerShutdownHook.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerShutdownHook </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + instance : SorcerShutdownHook </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerShutdownHook() </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"> + add(launcher : Launcher) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerShutdownHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.Profile
-	c42772 [label=<<table title="sorcer.launcher.Profile" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Profile.html">
+	c49804 [label=<<table title="sorcer.launcher.Profile" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Profile.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Profile </td></tr>
 		</table></td></tr>
@@ -302,15 +237,81 @@ digraph G {
 <tr><td align="left" balign="left"> + loadDefault() : Profile </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Profile.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.Mode
+	c49805 [label=<<table title="sorcer.launcher.Mode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mode.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> Mode </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + paramValue : String </td></tr>
+<tr><td align="left" balign="left"> + force : boolean </td></tr>
+<tr><td align="left" balign="left"> + fork : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> forceFork </td></tr>
+<tr><td align="left" balign="left"> preferFork </td></tr>
+<tr><td align="left" balign="left"> forceDirect </td></tr>
+<tr><td align="left" balign="left"> preferDirect </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Mode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.WaitMode
+	c49806 [label=<<table title="sorcer.launcher.WaitMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WaitMode.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> WaitMode </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> no </td></tr>
+<tr><td align="left" balign="left"> start </td></tr>
+<tr><td align="left" balign="left"> end </td></tr>
+		</table></td></tr>
+		</table>>, URL="./WaitMode.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.WaitingListener
+	c49807 [label=<<table title="sorcer.launcher.WaitingListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WaitingListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> WaitingListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + WaitingListener() </td></tr>
+<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
+<tr><td align="left" balign="left"> + sorcerEnded(e : Exception) </td></tr>
+<tr><td align="left" balign="left"> + processDown(process : Process) </td></tr>
+<tr><td align="left" balign="left"> + wait(mode : WaitMode) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./WaitingListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.IForkingLauncher
+	c49808 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IForkingLauncher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IForkingLauncher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + setDebugPort(debugPort : Integer) </td></tr>
+<tr><td align="left" balign="left"> + setOut(out : OutputStream) </td></tr>
+<tr><td align="left" balign="left"> + setErr(err : OutputStream) </td></tr>
+<tr><td align="left" balign="left"> + setOutFile(outFile : File) </td></tr>
+<tr><td align="left" balign="left"> + setErrFile(errFile : File) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./IForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.SorcerLauncher extends sorcer.launcher.Launcher
-	c42768:p -> c42762:p [dir=back,arrowtail=empty];
-	//sorcer.launcher.NullSorcerListener implements sorcer.launcher.SorcerListener
-	c42769:p -> c42765:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.launcher.WaitingListener extends sorcer.launcher.NullSorcerListener
-	c42765:p -> c42767:p [dir=back,arrowtail=empty];
+	c49799:p -> c49798:p [dir=back,arrowtail=empty];
 	//sorcer.launcher.Launcher implements sorcer.launcher.ILauncher
-	c42763:p -> c42768:p [dir=back,arrowtail=empty,style=dashed];
+	c49802:p -> c49799:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.launcher.NullSorcerListener implements sorcer.launcher.SorcerListener
+	c49800:p -> c49801:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.launcher.WaitingListener extends sorcer.launcher.NullSorcerListener
+	c49801:p -> c49807:p [dir=back,arrowtail=empty];
 	//sorcer.launcher.IForkingLauncher implements sorcer.launcher.ILauncher
-	c42763:p -> c42771:p [dir=back,arrowtail=empty,style=dashed];
+	c49802:p -> c49808:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,8 +9,35 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.security.sign.TaskAuditor
+	c43971 [label=<<table title="sorcer.security.sign.TaskAuditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TaskAuditor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # auditor : Auditor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + TaskAuditor() </td></tr>
+<tr><td align="left" balign="left"> + audit(task : SignedServiceTask) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TaskAuditor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.security.sign.TaskAuditor.AuditThread
+	c43972 [label=<<table title="sorcer.security.sign.TaskAuditor.AuditThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.AuditThread.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AuditThread </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + TaskAuditor.AuditThread(task : SignedServiceTask) </td></tr>
+<tr><td align="left" balign="left"> + getAuditor() : Auditor </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TaskAuditor.AuditThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.SignedTaskInterface
-	c40011 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedTaskInterface.html">
+	c43973 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedTaskInterface.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SignedTaskInterface </td></tr>
@@ -25,35 +52,8 @@ digraph G {
 <tr><td align="left" balign="left"> + verify(publickey : PublicKey, signature1 : Signature) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SignedTaskInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.security.sign.TaskAuditor
-	c40012 [label=<<table title="sorcer.security.sign.TaskAuditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> TaskAuditor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # auditor : Auditor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TaskAuditor() </td></tr>
-<tr><td align="left" balign="left"> + audit(task : SignedServiceTask) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./TaskAuditor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.security.sign.TaskAuditor.AuditThread
-	c40013 [label=<<table title="sorcer.security.sign.TaskAuditor.AuditThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TaskAuditor.AuditThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AuditThread </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TaskAuditor.AuditThread(task : SignedServiceTask) </td></tr>
-<tr><td align="left" balign="left"> + getAuditor() : Auditor </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./TaskAuditor.AuditThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.SignedServiceTask
-	c40014 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedServiceTask.html">
+	c43974 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedServiceTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignedServiceTask </td></tr>
 		</table></td></tr>
@@ -69,6 +69,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SignedServiceTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.security.sign.SignedServiceTask implements sorcer.security.sign.SignedTaskInterface
-	c40011:p -> c40014:p [dir=back,arrowtail=empty,style=dashed];
+	c43973:p -> c43974:p [dir=back,arrowtail=empty,style=dashed];
 }
 
