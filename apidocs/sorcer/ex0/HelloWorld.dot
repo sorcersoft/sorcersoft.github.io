@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ex0.HelloWorldImpl
-	c259033 [label=<<table title="sorcer.ex0.HelloWorldImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldImpl.html">
+	c272033 [label=<<table title="sorcer.ex0.HelloWorldImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HelloWorldImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelloWorldImpl </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HelloWorldImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ex0.HelloWorld
-	c259034 [label=<<table title="sorcer.ex0.HelloWorld" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HelloWorld.html">
+	c272034 [label=<<table title="sorcer.ex0.HelloWorld" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HelloWorld.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HelloWorld </td></tr>
@@ -32,15 +32,15 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + sayHelloWorld(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + sayHelloWorld(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./HelloWorld.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ex0.HelloWorldImpl implements sorcer.ex0.HelloWorld
-	c259034:p -> c259033:p [dir=back,arrowtail=empty,style=dashed];
+	c272034:p -> c272033:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ex0.HelloWorld implements java.rmi.Remote
-	c259054:p -> c259034:p [dir=back,arrowtail=empty,style=dashed];
+	c272069:p -> c272034:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c259054 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c272069 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

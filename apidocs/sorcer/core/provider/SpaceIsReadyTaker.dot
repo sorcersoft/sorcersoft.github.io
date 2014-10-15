@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.provider.SpaceIsReadyTaker
-	c535000 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceIsReadyTaker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceIsReadyTaker() </td></tr>
-<tr><td align="left" balign="left"> + SpaceIsReadyTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.SpaceTaker
-	c535001 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
+	c572839 [label=<<table title="sorcer.core.provider.SpaceTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceTaker </td></tr>
 		</table></td></tr>
@@ -38,10 +24,11 @@ digraph G {
 <tr><td align="left" balign="left"> # data : SpaceTaker.SpaceTakerData </td></tr>
 <tr><td align="left" balign="left"> # pool : ExecutorService </td></tr>
 <tr><td align="left" balign="left"> # keepGoing : boolean </td></tr>
+<tr><td align="left" balign="left"> # remoteLogging : boolean </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SpaceTaker() </td></tr>
-<tr><td align="left" balign="left"> + SpaceTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
+<tr><td align="left" balign="left"> + SpaceTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService, remoteLogging : boolean) </td></tr>
 <tr><td align="left" balign="left"> + doLog(msg : String, threadId : String, txn : Transaction.Created) </td></tr>
 <tr><td align="left" balign="left"> # getTransactionLeaseTime() : long </td></tr>
 <tr><td align="left" balign="left"> # getTimeOut() : long </td></tr>
@@ -54,7 +41,21 @@ digraph G {
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.SpaceIsReadyTaker
+	c572844 [label=<<table title="sorcer.core.provider.SpaceIsReadyTaker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceIsReadyTaker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceIsReadyTaker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceIsReadyTaker() </td></tr>
+<tr><td align="left" balign="left"> + SpaceIsReadyTaker(data : SpaceTaker.SpaceTakerData, pool : ExecutorService) </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceIsReadyTaker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.SpaceIsReadyTaker extends sorcer.core.provider.SpaceTaker
-	c535001:p -> c535000:p [dir=back,arrowtail=empty];
+	c572839:p -> c572844:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.config.AbstractBeanListener
-	c302959 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../config/AbstractBeanListener.html">
+	c324418 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../config/AbstractBeanListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractBeanListener </font></td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../config/AbstractBeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.container.LegacyInitializer
-	c302995 [label=<<table title="sorcer.core.provider.container.LegacyInitializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LegacyInitializer.html">
+	c324478 [label=<<table title="sorcer.core.provider.container.LegacyInitializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LegacyInitializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LegacyInitializer </td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LegacyInitializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.container.LegacyInitializer extends sorcer.config.AbstractBeanListener
-	c302959:p -> c302995:p [dir=back,arrowtail=empty];
+	c324418:p -> c324478:p [dir=back,arrowtail=empty];
 }
 

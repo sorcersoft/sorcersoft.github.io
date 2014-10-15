@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.exertmonitor.lease.MonitorLandlord
-	c35939 [label=<<table title="sorcer.core.provider.exertmonitor.lease.MonitorLandlord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorLandlord.html">
+	c38836 [label=<<table title="sorcer.core.provider.exertmonitor.lease.MonitorLandlord" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorLandlord.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitorLandlord </td></tr>
 		</table></td></tr>
@@ -40,7 +40,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MonitorLandlord.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.exertmonitor.lease.MonitorLandlord.MonitorLeasedResource
-	c35940 [label=<<table title="sorcer.core.provider.exertmonitor.lease.MonitorLandlord.MonitorLeasedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorLandlord.MonitorLeasedResource.html">
+	c38837 [label=<<table title="sorcer.core.provider.exertmonitor.lease.MonitorLandlord.MonitorLeasedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorLandlord.MonitorLeasedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorLeasedResource </td></tr>
@@ -49,10 +49,10 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + leaseCancelled() </td></tr>
-<tr><td align="left" balign="left"> + setTimeout(timeoutDuration : long) </td></tr>
-<tr><td align="left" balign="left"> + getTimeout() : long </td></tr>
-<tr><td align="left" balign="left"> + timedOut() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + leaseCancelled() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setTimeout(timeoutDuration : long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTimeout() : long </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + timedOut() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitorLandlord.MonitorLeasedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

@@ -9,43 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.ssb.browser.api.SSBEnvironment
-	c68073 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBEnvironment.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SSBEnvironment </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + registerTab(newTab : SSBrowserTab) </td></tr>
-<tr><td align="left" balign="left"> + setPluginMenu(pluginMenu : JMenuItem) </td></tr>
-<tr><td align="left" balign="left"> + setRightPane(view : JComponent) </td></tr>
-<tr><td align="left" balign="left"> + showAttributes(atts : Entry[]) </td></tr>
-<tr><td align="left" balign="left"> + getBrowserFrame() : JFrame </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SSBEnvironment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.ssb.browser.api.SSBrowserTab
-	c68074 [label=<<table title="sorcer.ssb.browser.api.SSBrowserTab" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserTab.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SSBrowserTab </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getTabName() : String </td></tr>
-<tr><td align="left" balign="left"> + getIcon() : ImageIcon </td></tr>
-<tr><td align="left" balign="left"> + getServiceTree() : JTree </td></tr>
-<tr><td align="left" balign="left"> + serviceDiscovered(serviceItem : ServiceItem) </td></tr>
-<tr><td align="left" balign="left"> + serviceDiscarded(serviceID : ServiceID) </td></tr>
-<tr><td align="left" balign="left"> + serviceModified(serviceID : ServiceID) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SSBrowserTab.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.browser.api.SSBrowserFilter
-	c68075 [label=<<table title="sorcer.ssb.browser.api.SSBrowserFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserFilter.html">
+	c70650 [label=<<table title="sorcer.ssb.browser.api.SSBrowserFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SSBrowserFilter </td></tr>
@@ -54,29 +19,30 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + accept(item : ServiceItem) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getDisplayName() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + accept(item : ServiceItem) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDisplayName() : String </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./SSBrowserFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.ssb.browser.api.SSBrowserPlugin
-	c68076 [label=<<table title="sorcer.ssb.browser.api.SSBrowserPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserPlugin.html">
+	// sorcer.ssb.browser.api.SSBrowserTab
+	c70651 [label=<<table title="sorcer.ssb.browser.api.SSBrowserTab" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserTab.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SSBrowserPlugin </td></tr>
+<tr><td align="center" balign="center"> SSBrowserTab </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getDisplayName() : String </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + getVersion() : String </td></tr>
-<tr><td align="left" balign="left"> + enable(enabled : boolean) </td></tr>
-<tr><td align="left" balign="left"> + initialize(env : SSBEnvironment) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTabName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getIcon() : ImageIcon </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getServiceTree() : JTree </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceDiscovered(serviceItem : ServiceItem) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceDiscarded(serviceID : ServiceID) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceModified(serviceID : ServiceID) </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./SSBrowserPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SSBrowserTab.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.browser.api.SSBPluginException
-	c68077 [label=<<table title="sorcer.ssb.browser.api.SSBPluginException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBPluginException.html">
+	c70652 [label=<<table title="sorcer.ssb.browser.api.SSBPluginException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBPluginException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SSBPluginException </td></tr>
 		</table></td></tr>
@@ -89,5 +55,39 @@ digraph G {
 <tr><td align="left" balign="left"> + SSBPluginException(cause : Throwable) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SSBPluginException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.ssb.browser.api.SSBrowserPlugin
+	c70653 [label=<<table title="sorcer.ssb.browser.api.SSBrowserPlugin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBrowserPlugin.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SSBrowserPlugin </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDisplayName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDescription() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVersion() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + enable(enabled : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + initialize(env : SSBEnvironment) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SSBrowserPlugin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.ssb.browser.api.SSBEnvironment
+	c70654 [label=<<table title="sorcer.ssb.browser.api.SSBEnvironment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SSBEnvironment.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SSBEnvironment </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + registerTab(newTab : SSBrowserTab) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setPluginMenu(pluginMenu : JMenuItem) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setRightPane(view : JComponent) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + showAttributes(atts : Entry[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getBrowserFrame() : JFrame </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SSBEnvironment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,11 +10,12 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.ServiceExertion
-	c434750 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
+	c467435 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + debug : boolean </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> # exertionId : Uuid </td></tr>
 <tr><td align="left" balign="left"> # runtimeId : String </td></tr>
@@ -28,7 +29,6 @@ digraph G {
 <tr><td align="left" balign="left"> # lsbId : Long </td></tr>
 <tr><td align="left" balign="left"> # msbId : Long </td></tr>
 <tr><td align="left" balign="left"> # sessionId : Uuid </td></tr>
-<tr><td align="left" balign="left"> # monitorSession : MonitoringSession </td></tr>
 <tr><td align="left" balign="left"> # index : Integer </td></tr>
 <tr><td align="left" balign="left"> # name : String </td></tr>
 <tr><td align="left" balign="left"> # description : String </td></tr>
@@ -37,15 +37,22 @@ digraph G {
 <tr><td align="left" balign="left"> # accessClass : String </td></tr>
 <tr><td align="left" balign="left"> # isExportControlled : Boolean </td></tr>
 <tr><td align="left" balign="left"> # scopeCode : Integer </td></tr>
+<tr><td align="left" balign="left"> # creationDate : Date </td></tr>
 <tr><td align="left" balign="left"> # status : Integer </td></tr>
 <tr><td align="left" balign="left"> # priority : Integer </td></tr>
-<tr><td align="left" balign="left"> # signatures : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> # fidelities : Map&lt;String, ServiceFidelity&gt; </td></tr>
+<tr><td align="left" balign="left"> # fidelity : ServiceFidelity </td></tr>
+<tr><td align="left" balign="left"> # selectedFidelitySelector : String </td></tr>
+<tr><td align="left" balign="left"> # fidelityContexts : Map&lt;String, FidelityContext&gt; </td></tr>
 <tr><td align="left" balign="left"> # dataContext : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + count : int </td></tr>
 <tr><td align="left" balign="left"> # controlContext : ControlContext </td></tr>
 <tr><td align="left" balign="left"> # setters : List&lt;Setter&gt; </td></tr>
 <tr><td align="left" balign="left"> # principal : SorcerPrincipal </td></tr>
 <tr><td align="left" balign="left"> # isRevaluable : boolean </td></tr>
+<tr><td align="left" balign="left"> # isProxy : boolean </td></tr>
+<tr><td align="left" balign="left"> # scope : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # dependers : List&lt;Invocation&lt;&gt;&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ServiceExertion() </td></tr>
@@ -53,6 +60,7 @@ digraph G {
 <tr><td align="left" balign="left"> # init(name : String) </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + invoke() : Object </td></tr>
 <tr><td align="left" balign="left"> + invoke(entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + exert(txn : Transaction, entries : Arg[]) : T </td></tr>
@@ -65,10 +73,20 @@ digraph G {
 <tr><td align="left" balign="left"> + removeSignature(index : int) </td></tr>
 <tr><td align="left" balign="left"> + setAccess(access : Strategy.Access) </td></tr>
 <tr><td align="left" balign="left"> + setFlow(type : Strategy.Flow) </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + addSignatures(signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isNotCorrectBatch() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getFidelity() : ServiceFidelity </td></tr>
+<tr><td align="left" balign="left"> + addSignatures(signatures : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + isBatch() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setFidelity(fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + putFidelity(fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + addFidelity(fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + setFidelity(name : String, fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + putFidelity(name : String, fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + addFidelity(name : String, fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + selectFidelity(entries : Arg[]) </td></tr>
+<tr><td align="left" balign="left"> + selectFidelity(selector : String) </td></tr>
+<tr><td align="left" balign="left"> + selectComponentFidelity(componetFiInfo : ComponentFidelityInfo) </td></tr>
+<tr><td align="left" balign="left"> + applyFidelityContext(fiContext : FidelityContext) </td></tr>
+<tr><td align="left" balign="left"> + selectFidelity() </td></tr>
 <tr><td align="left" balign="left"> + setProcessSignature(signature : Signature) </td></tr>
 <tr><td align="left" balign="left"> + setService(provider : Service) </td></tr>
 <tr><td align="left" balign="left"> + getService() : Service </td></tr>
@@ -99,7 +117,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getGoodUntilDate() : String </td></tr>
 <tr><td align="left" balign="left"> + setGoodUntilDate(date : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + getDeploymentId(list : List&lt;NetSignature&gt;) : String </td></tr>
+<tr><td align="left" balign="left"> + getDeploymentId(list : List&lt;Signature&gt;) : String </td></tr>
 <tr><td align="left" balign="left"> + getDeploymentId() : String </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeId() : String </td></tr>
 <tr><td align="left" balign="left"> + setRuntimeId(id : String) </td></tr>
@@ -163,6 +181,8 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTree(visited : Set&lt;&gt;) : boolean </font></td></tr>
 <tr><td align="left" balign="left"> + reportException(t : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + addException(et : ThrowableTrace) </td></tr>
+<tr><td align="left" balign="left"> + getInoker() : ExertInvoker </td></tr>
+<tr><td align="left" balign="left"> + getInvoker(name : String) : ExertInvoker </td></tr>
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + getPersisters() : List&lt;Setter&gt; </td></tr>
@@ -172,14 +192,15 @@ digraph G {
 <tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getAllExertions() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDeployments() : List&lt;Deployment&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetSignatures() : List&lt;NetSignature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetTaskSignatures() : List&lt;NetSignature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeployments() : List&lt;ServiceDeployment&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllNetSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllNetTaskSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeploymnets() : List&lt;ServiceDeployment&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExceptions(exs : List&lt;ThrowableTrace&gt;) : List&lt;ThrowableTrace&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllTaskSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllDeployments() : List&lt;Deployment&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllDeployments() : List&lt;ServiceDeployment&gt; </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </font></td></tr>
 <tr><td align="left" balign="left"> + updateValue(value : Object) </td></tr>
 <tr><td align="left" balign="left"> + getExertion(componentExertionName : String) : Exertion </td></tr>
@@ -187,13 +208,23 @@ digraph G {
 <tr><td align="left" balign="left"> + isSpacable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + correctProcessSignature() : Signature </td></tr>
 <tr><td align="left" balign="left"> + reset(state : int) </td></tr>
-<tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
-<tr><td align="left" balign="left"> + setMonitorSession(monitorSession : MonitoringSession) </td></tr>
 <tr><td align="left" balign="left"> + getValue(entries : Arg[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + getScope() : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getDependers() : List&lt;Invocation&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setDependers(dependers : List&lt;Invocation&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addDepender(depender : Invocation&lt;&gt;) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + addDependers(dependers : Invocation&lt;&gt;[]) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + asis() : Object </td></tr>
 <tr><td align="left" balign="left"> + asis(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
 <tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFidelities() : Map&lt;String, ServiceFidelity&gt; </td></tr>
+<tr><td align="left" balign="left"> + setFidelities(fidelities : Map&lt;String, ServiceFidelity&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getSelectedFidelitySelector() : String </td></tr>
+<tr><td align="left" balign="left"> + setSelectedFidelitySelector(selectedFidelitySelector : String) </td></tr>
+<tr><td align="left" balign="left"> + getFidelityContexts() : Map&lt;String, FidelityContext&gt; </td></tr>
+<tr><td align="left" balign="left"> + setFidelityContexts(fidelityContexts : Map&lt;String, FidelityContext&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getSetters() : List&lt;Setter&gt; </td></tr>
 <tr><td align="left" balign="left"> + setSetters(setters : List&lt;Setter&gt;) </td></tr>
 <tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
@@ -204,25 +235,15 @@ digraph G {
 <tr><td align="left" balign="left"> + isCmd() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isProxy() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setProxy(isProxy : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getComponentExertion(path : String) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getCreationDate() : Date </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Revaluation
-	c434762 [label=<<table title="sorcer.service.Revaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Revaluation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Revaluation </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Revaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Context<T>
-	c434790 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
+	c467449 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
@@ -270,143 +291,155 @@ digraph G {
 <tr><td align="left" balign="left"> + RETURN : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setId(contextId : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getWeakValue(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + getParentPath() : String </td></tr>
-<tr><td align="left" balign="left"> + setParentPath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + getParentID() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setParentID(parentId : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getCreationDate() : String </td></tr>
-<tr><td align="left" balign="left"> + setCreationDate(date : String) </td></tr>
-<tr><td align="left" balign="left"> + getLastUpdateDate() : String </td></tr>
-<tr><td align="left" balign="left"> + setLastUpdateDate(date : String) </td></tr>
-<tr><td align="left" balign="left"> + setDescription(date : String) </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + getScope() : int </td></tr>
-<tr><td align="left" balign="left"> + setScopeCode(scope : int) </td></tr>
-<tr><td align="left" balign="left"> + getOwnerID() : String </td></tr>
-<tr><td align="left" balign="left"> + setOwnerID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + setSubjectID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + getSubjectID() : String </td></tr>
-<tr><td align="left" balign="left"> + setProject(projectName : String) </td></tr>
-<tr><td align="left" balign="left"> + getProject() : String </td></tr>
-<tr><td align="left" balign="left"> + setAccessClass(accessClass : String) </td></tr>
-<tr><td align="left" balign="left"> + getAccessClass() : String </td></tr>
-<tr><td align="left" balign="left"> + setExportControl(exportControl : String) </td></tr>
-<tr><td align="left" balign="left"> + getExportControl() : String </td></tr>
-<tr><td align="left" balign="left"> + getGoodUntilDate() : String </td></tr>
-<tr><td align="left" balign="left"> + setGoodUntilDate(date : String) </td></tr>
-<tr><td align="left" balign="left"> + getDomainID() : String </td></tr>
-<tr><td align="left" balign="left"> + setDomainID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + getSubdomainID() : String </td></tr>
-<tr><td align="left" balign="left"> + setSubdomainID(id : String) </td></tr>
-<tr><td align="left" balign="left"> + getDomainName() : String </td></tr>
-<tr><td align="left" balign="left"> + setDomainName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getSubdomainName() : String </td></tr>
-<tr><td align="left" balign="left"> + setSubdomainName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getPrincipal() : SorcerPrincipal </td></tr>
-<tr><td align="left" balign="left"> + setPrincipal(principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + getVersion() : float </td></tr>
-<tr><td align="left" balign="left"> + setVersion(version : float) </td></tr>
-<tr><td align="left" balign="left"> + containsPath(path : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getMetacontext() : Hashtable&lt;String, Map&lt;String, String&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setMetacontext(metacontext : Hashtable&lt;String, Map&lt;String, String&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getExecPath() : ExecPath </td></tr>
-<tr><td align="left" balign="left"> + setExertion(task : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + getSubjectPath() : String </td></tr>
-<tr><td align="left" balign="left"> + getSubjectValue() : Object </td></tr>
-<tr><td align="left" balign="left"> + setSubject(path : String, value : Object) </td></tr>
-<tr><td align="left" balign="left"> + reportException(t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + reportException(message : String, t : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + appendTrace(footprint : String) </td></tr>
-<tr><td align="left" balign="left"> + append(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + setReturnValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + putDbValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putDbValue(path : String, value : Object, datastoreUrl : URL) : Object </td></tr>
-<tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
-<tr><td align="left" balign="left"> + addValue(value : Identifiable) : Object </td></tr>
-<tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object, association : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(name : String, path : String, cntxt : Context&lt;&gt;, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(name : String, path : String, id : String, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + putLink(name : String, path : String, lnkedCntxtID : String, version : float, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + remove(path : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + connect(outPath : String, inPath : String, inContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + pipe(inPath : String, outPath : String, outContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + map(fromPath : String, toPath : String, toContext : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + removeLink(path : String) </td></tr>
-<tr><td align="left" balign="left"> + getContextMapping(path : String) : Object[] </td></tr>
-<tr><td align="left" balign="left"> + checkpoint() </td></tr>
-<tr><td align="left" balign="left"> + mark(path : String, tuple : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + markedPaths(association : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getMarkedValues(association : String) : List&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setAttribute(attribute : String) </td></tr>
-<tr><td align="left" balign="left"> + isLocalAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isLocalSingletonAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isLocalMetaattribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSingletonAttribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isMetaattribute(attributeName : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getAttributeValue(path : String, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getSingletonAttributeValue(path : String, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getMetaattributeValue(path : String, attributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + removeAttributeValue(path : String, attributeValue : String) </td></tr>
-<tr><td align="left" balign="left"> + getLocalMetapath(metaattributeName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + isValid(method : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + contextPaths() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPaths() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + paths(regex : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextValues() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localLinkPaths() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + linkPaths() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + links() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localLinks() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + link(context : Context&lt;&gt;, atPath : String, offset : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + getLink(path : String) : Link </td></tr>
-<tr><td align="left" balign="left"> + putInValue(path : String, value : T) : T </td></tr>
-<tr><td align="left" balign="left"> + putOutValue(path : String, value : T) : T </td></tr>
-<tr><td align="left" balign="left"> + putInoutValue(path : String, value : T) : T </td></tr>
-<tr><td align="left" balign="left"> + putInValue(path : String, value : T, association : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putOutValue(path : String, value : T, association : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putInoutValue(path : String, value : T, association : String) : T </td></tr>
-<tr><td align="left" balign="left"> + setIn(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setOut(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setInout(path : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + removePath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + toString(isHTML : boolean) : String </td></tr>
-<tr><td align="left" balign="left"> + isExportControlled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isExportControlled(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getPath(obj : Object) : String </td></tr>
-<tr><td align="left" balign="left"> + localSimpleAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + simpleAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + metaassociations(path : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + localCompositeAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + compositeAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAttributes(path : String) : Enumeration&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getData() : Object </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
-<tr><td align="left" balign="left"> + getUserName() : String </td></tr>
-<tr><td align="left" balign="left"> + getLinkedContext(link : Link) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setName(name : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setId(contextId : Uuid) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getWeakValue(path : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getParentPath() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParentPath(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getParentID() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParentID(parentId : Uuid) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCreationDate() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setCreationDate(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLastUpdateDate() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setLastUpdateDate(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setDescription(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDescription() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getScope() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setScopeCode(scope : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOwnerID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOwnerID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubjectID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubjectID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setProject(projectName : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProject() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAccessClass(accessClass : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAccessClass() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setExportControl(exportControl : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExportControl() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getGoodUntilDate() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setGoodUntilDate(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDomainID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setDomainID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubdomainID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubdomainID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDomainName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setDomainName(name : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubdomainName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubdomainName(name : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPrincipal() : SorcerPrincipal </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setPrincipal(principal : SorcerPrincipal) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVersion() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setVersion(version : float) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + containsPath(path : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMetacontext() : Hashtable&lt;String, Map&lt;String, String&gt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setMetacontext(metacontext : Hashtable&lt;String, Map&lt;String, String&gt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertion() : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProvider() : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getReturnPath() : Signature.ReturnPath&lt;T&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getReturnValue(entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExecPath() : ExecPath </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setExertion(task : Exertion) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubjectPath() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubjectValue() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubject(path : String, value : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + reportException(t : Throwable) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + reportException(message : String, t : Throwable) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + appendTrace(footprint : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + append(context : Context&lt;T&gt;) : Context&lt;T&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + get(path : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + asis(path : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setReturnValue(value : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putDbValue(path : String, value : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putDbValue(path : String, value : Object, datastoreUrl : URL) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getURL(path : String) : URL </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addValue(value : Identifiable) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addPar(path : String, value : Object) : Arg </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPar(path : String) : Arg </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putValue(path : String, value : Object, association : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(path : String, cntxt : Context&lt;&gt;, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(name : String, path : String, cntxt : Context&lt;&gt;, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(name : String, path : String, id : String, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(name : String, path : String, lnkedCntxtID : String, version : float, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + remove(path : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + connect(outPath : String, inPath : String, inContext : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + pipe(inPath : String, outPath : String, outContext : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + map(fromPath : String, toPath : String, toContext : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removeLink(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextMapping(path : String) : Object[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + mark(path : String, tuple : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + markedPaths(association : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMarkedValues(association : String) : List&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAttribute(attribute : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isLocalAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isLocalSingletonAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isLocalMetaattribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isSingletonAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isMetaattribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributeValue(path : String, attributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSingletonAttributeValue(path : String, attributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMetaattributeValue(path : String, attributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removeAttributeValue(path : String, attributeValue : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLocalMetapath(metaattributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isValid(method : Signature) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextPaths() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPaths() : List&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + paths(regex : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextValues() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localLinkPaths() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + linkPaths() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + links() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localLinks() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + link(context : Context&lt;&gt;, atPath : String, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLink(path : String) : Link </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInValue(path : String, value : T) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putOutValue(path : String, value : T) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInoutValue(path : String, value : T) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInValue(path : String, value : T, association : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putOutValue(path : String, value : T, association : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInoutValue(path : String, value : T, association : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setIn(path : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOut(path : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setInout(path : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removePath(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + toString() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + toString(isHTML : boolean) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isExportControlled() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isExportControlled(state : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPath(obj : Object) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localSimpleAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + simpleAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + metaassociations(path : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localCompositeAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + compositeAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes(path : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + size() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getUserName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLinkedContext(link : Link) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setReturnPath(returnPath : Signature.ReturnPath&lt;&gt;) : Context&lt;&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Revaluation
+	c467454 [label=<<table title="sorcer.service.Revaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Revaluation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Revaluation </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isRevaluable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setRevaluable(isRevaluable : boolean) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Revaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.ServiceExertion implements sorcer.service.Revaluation
-	c434762:p -> c434750:p [dir=back,arrowtail=empty,style=dashed];
+	c467454:p -> c467435:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Context<T> implements sorcer.service.Revaluation
-	c434762:p -> c434790:p [dir=back,arrowtail=empty,style=dashed];
+	c467454:p -> c467449:p [dir=back,arrowtail=empty,style=dashed];
 }
 

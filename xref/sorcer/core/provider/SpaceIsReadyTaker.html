@@ -78,7 +78,7 @@
 <a class="jxr_linenumber" name="68" href="#68">68</a>  				}
 <a class="jxr_linenumber" name="69" href="#69">69</a>  
 <a class="jxr_linenumber" name="70" href="#70">70</a>  				Transaction.Created txnCreated = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="71" href="#71">71</a>  				<em class="jxr_comment">// logger.log(Level.INFO, "worker space template envelop = "</em>
+<a class="jxr_linenumber" name="71" href="#71">71</a>  				<em class="jxr_comment">// logger.info( "worker space template envelop = "</em>
 <a class="jxr_linenumber" name="72" href="#72">72</a>  				<em class="jxr_comment">// + data.entry.describe() + "\n service provider = "</em>
 <a class="jxr_linenumber" name="73" href="#73">73</a>  				<em class="jxr_comment">// + provider);</em>
 <a class="jxr_linenumber" name="74" href="#74">74</a>  				<strong class="jxr_keyword">if</strong> (isTransactional) {
@@ -114,7 +114,7 @@
 <a class="jxr_linenumber" name="104" href="#104">104</a> 					initDataMember(ee, txnCreated.transaction);
 <a class="jxr_linenumber" name="105" href="#105">105</a> 				}
 <a class="jxr_linenumber" name="106" href="#106">106</a> 				
-<a class="jxr_linenumber" name="107" href="#107">107</a> 				pool.execute(<strong class="jxr_keyword">new</strong> <a href="../../../sorcer/core/provider/SpaceTaker.html">SpaceWorker</a>(ee, txnCreated));
+<a class="jxr_linenumber" name="107" href="#107">107</a> 				pool.execute(<strong class="jxr_keyword">new</strong> <a href="../../../sorcer/core/provider/SpaceTaker.html">SpaceWorker</a>(ee, txnCreated, data.provider, remoteLogging));
 <a class="jxr_linenumber" name="108" href="#108">108</a> 			} <strong class="jxr_keyword">catch</strong> (Exception ex) {
 <a class="jxr_linenumber" name="109" href="#109">109</a> 				<strong class="jxr_keyword">continue</strong>;
 <a class="jxr_linenumber" name="110" href="#110">110</a> 			}

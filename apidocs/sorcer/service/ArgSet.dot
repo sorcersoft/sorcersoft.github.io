@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.ArgSet
-	c110470 [label=<<table title="sorcer.service.ArgSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArgSet.html">
+	c116357 [label=<<table title="sorcer.service.ArgSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArgSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArgSet </td></tr>
 		</table></td></tr>
@@ -19,31 +19,23 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ArgSet() </td></tr>
-<tr><td align="left" balign="left"> + ArgSet(argList : ArgList) </td></tr>
-<tr><td align="left" balign="left"> + ArgSet(argSet : Set&lt;Par&lt;&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + ArgSet(argLists : ArgList[]) </td></tr>
 <tr><td align="left" balign="left"> + ArgSet(args : Arg[]) </td></tr>
-<tr><td align="left" balign="left"> + getArg(parName : String) : Arg </td></tr>
-<tr><td align="left" balign="left"> + setValue(parName : String, value : Object) </td></tr>
-<tr><td align="left" balign="left"> + selectArgs(parnames : List&lt;String&gt;[]) : ArgList </td></tr>
-<tr><td align="left" balign="left"> + selectArgs(parnames : String[]) : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + getArg(argName : String) : Arg </td></tr>
+<tr><td align="left" balign="left"> + setValue(argName : String, value : Object) </td></tr>
+<tr><td align="left" balign="left"> + selectArgs(argnames : String[]) : ArgSet </td></tr>
 <tr><td align="left" balign="left"> + contains(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + toArray() : Arg[] </td></tr>
-<tr><td align="left" balign="left"> + toList() : ArgList </td></tr>
-<tr><td align="left" balign="left"> + asSet(map : Map&lt;&gt;) : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + asSet(list : ArgList) : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + asList(array : Arg[]) : ArgList </td></tr>
 <tr><td align="left" balign="left"> + asSet(array : Arg[]) : ArgSet </td></tr>
 <tr><td align="left" balign="left"> + clearArgs() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ArgSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.ArgSet extends java.util.TreeSet<sorcer.service.Arg>
-	c111044:p -> c110470:p [dir=back,arrowtail=empty];
+	c116839:p -> c116357:p [dir=back,arrowtail=empty];
 	// java.util.TreeSet<E>
-	c111044 [label=<<table title="java.util.TreeSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html">
+	c116839 [label=<<table title="java.util.TreeSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TreeSet&lt;E&gt; </td></tr>
 		</table></td></tr>
@@ -81,6 +73,7 @@ digraph G {
 <tr><td align="left" balign="left"> + pollFirst() : E </td></tr>
 <tr><td align="left" balign="left"> + pollLast() : E </td></tr>
 <tr><td align="left" balign="left"> + clone() : Object </td></tr>
+<tr><td align="left" balign="left"> + spliterator() : Spliterator&lt;E&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

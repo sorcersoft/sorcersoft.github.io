@@ -9,15 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.DatabaseStorer
-	c548667 [label=<<table title="sorcer.service.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/DatabaseStorer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> DatabaseStorer </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StorageManagement
-	c548789 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StorageManagement.html">
+	c587165 [label=<<table title="sorcer.core.provider.StorageManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StorageManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> StorageManagement </td></tr>
@@ -35,17 +28,24 @@ digraph G {
 <tr><td align="left" balign="left"> + store_content_list : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + contextRetrieve(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextStore(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextUpdate(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextDelete(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextClear(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextList(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextRecords(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + contextSize(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextRetrieve(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextStore(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextUpdate(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextDelete(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextClear(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextList(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextRecords(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextSize(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./StorageManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.service.DatabaseStorer implements sorcer.core.provider.StorageManagement
-	c548789:p -> c548667:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.core.provider.DatabaseStorer
+	c587166 [label=<<table title="sorcer.core.provider.DatabaseStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DatabaseStorer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DatabaseStorer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DatabaseStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.provider.DatabaseStorer implements sorcer.core.provider.StorageManagement
+	c587165:p -> c587166:p [dir=back,arrowtail=empty,style=dashed];
 }
 

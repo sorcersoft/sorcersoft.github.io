@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceListRenderer
-	c478124 [label=<<table title="sorcer.core.provider.cataloger.ServiceListRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceListRenderer.html">
+	c511627 [label=<<table title="sorcer.core.provider.cataloger.ServiceListRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceListRenderer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceListRenderer </td></tr>
 		</table></td></tr>
@@ -24,11 +24,24 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceListRenderer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceListRenderer extends javax.swing.JLabel
-	c478161:p -> c478124:p [dir=back,arrowtail=empty];
+	c511681:p -> c511627:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceListRenderer implements javax.swing.ListCellRenderer<E>
-	c478162:p -> c478124:p [dir=back,arrowtail=empty,style=dashed];
+	c511682:p -> c511627:p [dir=back,arrowtail=empty,style=dashed];
+	// javax.swing.ListCellRenderer<E>
+	c511682 [label=<<table title="javax.swing.ListCellRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/ListCellRenderer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ListCellRenderer&lt;E&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getListCellRendererComponent(arg0 : JList&lt;?&gt;, arg1 : E, arg2 : int, arg3 : boolean, arg4 : boolean) : Component </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/ListCellRenderer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// javax.swing.JLabel
-	c478161 [label=<<table title="javax.swing.JLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JLabel.html">
+	c511681 [label=<<table title="javax.swing.JLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JLabel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JLabel </td></tr>
 		</table></td></tr>
@@ -76,18 +89,5 @@ digraph G {
 <tr><td align="left" balign="left"> + getAccessibleContext() : AccessibleContext </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/JLabel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// javax.swing.ListCellRenderer<E>
-	c478162 [label=<<table title="javax.swing.ListCellRenderer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/ListCellRenderer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ListCellRenderer&lt;E&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getListCellRendererComponent(arg0 : JList&lt;?&gt;, arg1 : E, arg2 : int, arg3 : boolean, arg4 : boolean) : Component </td></tr>
-		</table></td></tr>
-		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/ListCellRenderer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

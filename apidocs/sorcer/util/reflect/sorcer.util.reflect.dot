@@ -9,8 +9,21 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.util.reflect.Fields
+	c2330 [label=<<table title="sorcer.util.reflect.Fields" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Fields.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Fields </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Fields() </td></tr>
+<tr><td align="left" balign="left"> + findAll(type : Class&lt;?&gt;, anno : Class&lt;T&gt;) : Collection&lt;Field&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Fields.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.reflect.Methods
-	c5889 [label=<<table title="sorcer.util.reflect.Methods" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Methods.html">
+	c2331 [label=<<table title="sorcer.util.reflect.Methods" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Methods.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Methods </td></tr>
 		</table></td></tr>
@@ -24,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Methods.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.reflect.Classes
-	c5890 [label=<<table title="sorcer.util.reflect.Classes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Classes.html">
+	c2332 [label=<<table title="sorcer.util.reflect.Classes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Classes.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Classes </td></tr>
 		</table></td></tr>
@@ -37,18 +50,5 @@ digraph G {
 <tr><td align="left" balign="left"> + isAssignableFrom(self : String, cls : Class&lt;&gt;) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Classes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.reflect.Fields
-	c5891 [label=<<table title="sorcer.util.reflect.Fields" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Fields.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Fields </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Fields() </td></tr>
-<tr><td align="left" balign="left"> + findAll(type : Class&lt;?&gt;, anno : Class&lt;T&gt;) : Collection&lt;Field&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Fields.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

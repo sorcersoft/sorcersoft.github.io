@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.account.provider.ui.mvc.AccountView
-	c96518 [label=<<table title="sorcer.account.provider.ui.mvc.AccountView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AccountView.html">
+	c102490 [label=<<table title="sorcer.account.provider.ui.mvc.AccountView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AccountView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AccountView </td></tr>
 		</table></td></tr>
@@ -29,11 +29,24 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AccountView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.account.provider.ui.mvc.AccountView extends javax.swing.JPanel
-	c96524:p -> c96518:p [dir=back,arrowtail=empty];
+	c102510:p -> c102490:p [dir=back,arrowtail=empty];
 	//sorcer.account.provider.ui.mvc.AccountView implements java.util.Observer
-	c96525:p -> c96518:p [dir=back,arrowtail=empty,style=dashed];
+	c102511:p -> c102490:p [dir=back,arrowtail=empty,style=dashed];
+	// java.util.Observer
+	c102511 [label=<<table title="java.util.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Observer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + update(arg0 : Observable, arg1 : Object) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// javax.swing.JPanel
-	c96524 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
+	c102510 [label=<<table title="javax.swing.JPanel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JPanel </td></tr>
 		</table></td></tr>
@@ -53,18 +66,5 @@ digraph G {
 <tr><td align="left" balign="left"> + getAccessibleContext() : AccessibleContext </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// java.util.Observer
-	c96525 [label=<<table title="java.util.Observer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Observer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + update(arg0 : Observable, arg1 : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/Observer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

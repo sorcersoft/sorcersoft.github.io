@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.io.AsyncPinger
-	c116215 [label=<<table title="sorcer.util.io.AsyncPinger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AsyncPinger.html">
+	c120676 [label=<<table title="sorcer.util.io.AsyncPinger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AsyncPinger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AsyncPinger </td></tr>
 		</table></td></tr>
@@ -24,9 +24,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AsyncPinger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.io.AsyncPinger implements java.util.concurrent.Callable<V>
-	c116848:p -> c116215:p [dir=back,arrowtail=empty,style=dashed];
+	c121360:p -> c120676:p [dir=back,arrowtail=empty,style=dashed];
 	// java.util.concurrent.Callable<V>
-	c116848 [label=<<table title="java.util.concurrent.Callable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html">
+	c121360 [label=<<table title="java.util.concurrent.Callable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Callable&lt;V&gt; </td></tr>
@@ -35,7 +35,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + call() : V </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + call() : V </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

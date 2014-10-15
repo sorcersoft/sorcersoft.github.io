@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Configurator
-	c160499 [label=<<table title="sorcer.service.Configurator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Configurator.html">
+	c171306 [label=<<table title="sorcer.service.Configurator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Configurator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Configurator </font></td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Configurator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Configurable
-	c160502 [label=<<table title="sorcer.service.Configurable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Configurable.html">
+	c171312 [label=<<table title="sorcer.service.Configurable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Configurable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Configurable </td></tr>
@@ -32,10 +32,10 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + configure(configs : Object[]) : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + configure(configs : Object[]) : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Configurable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Configurator implements sorcer.service.Configurable
-	c160502:p -> c160499:p [dir=back,arrowtail=empty,style=dashed];
+	c171312:p -> c171306:p [dir=back,arrowtail=empty,style=dashed];
 }
 

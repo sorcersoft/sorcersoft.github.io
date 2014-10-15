@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ContextUtil
-	c178008 [label=<<table title="sorcer.core.context.ContextUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextUtil.html">
+	c187843 [label=<<table title="sorcer.core.context.ContextUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextUtil </td></tr>
 		</table></td></tr>
@@ -20,8 +20,6 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ContextUtil() </td></tr>
 <tr><td align="left" balign="left"> + copyNodes(fromCntxt : Context&lt;&gt;, toCntxt : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getContextNodes(context : Context&lt;&gt;) : ContextNode[] </td></tr>
-<tr><td align="left" balign="left"> + putDirectionalValue(context : Context&lt;&gt;, path : String, node : Object, attribute : String, value : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + containsContextNodeWithMetaAssoc(context : Context&lt;&gt;, metaAssoc : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getContextNodePaths(context : Context&lt;&gt;) : String[] </td></tr>
 <tr><td align="left" balign="left"> + getMarkerForDataNodeType(ctx : Context&lt;&gt;, path : String) : String </td></tr>

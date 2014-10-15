@@ -29,7 +29,7 @@
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
 <a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
 <a class="jxr_linenumber" name="21" href="#21">21</a>  
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.exertmonitor.IMonitorSession;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.MonitorManagementSession;
 <a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.exertmonitor.MonitorSession;
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.util.bdb.objects.MarshalledData;
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.util.bdb.objects.UuidKey;
@@ -50,7 +50,7 @@
 <a class="jxr_linenumber" name="40" href="#40">40</a>  @SuppressWarnings({ <span class="jxr_string">"rawtypes"</span>, <span class="jxr_string">"unchecked"</span> })
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../sorcer/core/provider/exertmonitor/db/SessionDatabaseViews.html">SessionDatabaseViews</a> {
 <a class="jxr_linenumber" name="42" href="#42">42</a>  	
-<a class="jxr_linenumber" name="43" href="#43">43</a>  	<strong class="jxr_keyword">private</strong> StoredMap&lt;UuidKey, IMonitorSession&gt;  sessionMap;
+<a class="jxr_linenumber" name="43" href="#43">43</a>  	<strong class="jxr_keyword">private</strong> StoredMap&lt;UuidKey, MonitorManagementSession&gt;  sessionMap;
 <a class="jxr_linenumber" name="44" href="#44">44</a>  
 <a class="jxr_linenumber" name="45" href="#45">45</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment">	 * Create the data bindings and collection views.</em>
@@ -75,7 +75,7 @@
 <a class="jxr_linenumber" name="65" href="#65">65</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="66" href="#66">66</a>  <em class="jxr_javadoccomment">	 * Return a map view of the session storage container.</em>
 <a class="jxr_linenumber" name="67" href="#67">67</a>  <em class="jxr_javadoccomment">	 */</em>
-<a class="jxr_linenumber" name="68" href="#68">68</a>  	<strong class="jxr_keyword">public</strong> StoredMap&lt;UuidKey, IMonitorSession&gt;  getSessionMap() {
+<a class="jxr_linenumber" name="68" href="#68">68</a>  	<strong class="jxr_keyword">public</strong> StoredMap&lt;UuidKey, MonitorManagementSession&gt;  getSessionMap() {
 <a class="jxr_linenumber" name="69" href="#69">69</a>  		<strong class="jxr_keyword">return</strong> sessionMap;
 <a class="jxr_linenumber" name="70" href="#70">70</a>  	}
 <a class="jxr_linenumber" name="71" href="#71">71</a>  	

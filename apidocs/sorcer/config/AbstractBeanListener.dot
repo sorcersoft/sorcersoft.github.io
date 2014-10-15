@@ -9,8 +9,38 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.config.BeanListener
+	c90821 [label=<<table title="sorcer.config.BeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> BeanListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./BeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.config.AbstractBeanListener
+	c90822 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractBeanListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractBeanListener </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # log : Logger </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AbstractBeanListener() </td></tr>
+<tr><td align="left" balign="left"> + preProcess(provider : IServiceBuilder&lt;T&gt;) </td></tr>
+<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
+<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AbstractBeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.service.ServiceRegistrar
-	c86009 [label=<<table title="sorcer.core.service.ServiceRegistrar" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/service/ServiceRegistrar.html">
+	c90828 [label=<<table title="sorcer.core.service.ServiceRegistrar" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/service/ServiceRegistrar.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceRegistrar </td></tr>
 		</table></td></tr>
@@ -25,7 +55,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/service/ServiceRegistrar.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.service.ServiceBeanDestroyer
-	c86015 [label=<<table title="sorcer.core.service.ServiceBeanDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/service/ServiceBeanDestroyer.html">
+	c90833 [label=<<table title="sorcer.core.service.ServiceBeanDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/service/ServiceBeanDestroyer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceBeanDestroyer </td></tr>
 		</table></td></tr>
@@ -38,7 +68,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../core/service/ServiceBeanDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.service.Configurer
-	c86017 [label=<<table title="sorcer.core.service.Configurer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/service/Configurer.html">
+	c90835 [label=<<table title="sorcer.core.service.Configurer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/service/Configurer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Configurer </td></tr>
 		</table></td></tr>
@@ -49,40 +79,11 @@ digraph G {
 <tr><td align="left" balign="left"> + Configurer() </td></tr>
 <tr><td align="left" balign="left"> + preProcess(provider : IServiceBuilder&lt;&gt;, serviceBean : Object) </td></tr>
 <tr><td align="left" balign="left"> + process(object : Object, config : Configuration) </td></tr>
+<tr><td align="left" balign="left"> + getConfig(type : Class&lt;T&gt;, config : Configuration) : T </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/service/Configurer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.config.AbstractBeanListener
-	c86020 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractBeanListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractBeanListener </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # log : Logger </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractBeanListener() </td></tr>
-<tr><td align="left" balign="left"> + preProcess(provider : IServiceBuilder&lt;T&gt;) </td></tr>
-<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AbstractBeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.config.BeanListener
-	c86024 [label=<<table title="sorcer.config.BeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> BeanListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;) </td></tr>
-<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./BeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.container.LegacyInitializer
-	c86056 [label=<<table title="sorcer.core.provider.container.LegacyInitializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/container/LegacyInitializer.html">
+	c90882 [label=<<table title="sorcer.core.provider.container.LegacyInitializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/container/LegacyInitializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LegacyInitializer </td></tr>
 		</table></td></tr>
@@ -94,15 +95,15 @@ digraph G {
 <tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;&gt;, serviceBean : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/container/LegacyInitializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.service.ServiceRegistrar extends sorcer.config.AbstractBeanListener
-	c86020:p -> c86009:p [dir=back,arrowtail=empty];
-	//sorcer.core.service.ServiceBeanDestroyer extends sorcer.config.AbstractBeanListener
-	c86020:p -> c86015:p [dir=back,arrowtail=empty];
-	//sorcer.core.service.Configurer extends sorcer.config.AbstractBeanListener
-	c86020:p -> c86017:p [dir=back,arrowtail=empty];
 	//sorcer.config.AbstractBeanListener implements sorcer.config.BeanListener
-	c86024:p -> c86020:p [dir=back,arrowtail=empty,style=dashed];
+	c90821:p -> c90822:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.service.ServiceRegistrar extends sorcer.config.AbstractBeanListener
+	c90822:p -> c90828:p [dir=back,arrowtail=empty];
+	//sorcer.core.service.ServiceBeanDestroyer extends sorcer.config.AbstractBeanListener
+	c90822:p -> c90833:p [dir=back,arrowtail=empty];
+	//sorcer.core.service.Configurer extends sorcer.config.AbstractBeanListener
+	c90822:p -> c90835:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.container.LegacyInitializer extends sorcer.config.AbstractBeanListener
-	c86020:p -> c86056:p [dir=back,arrowtail=empty];
+	c90822:p -> c90882:p [dir=back,arrowtail=empty];
 }
 

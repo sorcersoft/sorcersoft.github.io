@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.platform.logger.RemoteLoggerAppender
-	c423712 [label=<<table title="sorcer.platform.logger.RemoteLoggerAppender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteLoggerAppender.html">
+	c455868 [label=<<table title="sorcer.platform.logger.RemoteLoggerAppender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteLoggerAppender.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteLoggerAppender </td></tr>
 		</table></td></tr>
@@ -18,14 +18,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RemoteLoggerAppender(queue : Queue&lt;ILoggingEvent&gt;) </td></tr>
+<tr><td align="left" balign="left"> + RemoteLoggerAppender(queue : Queue&lt;ILoggingEvent&gt;, hostname : String) </td></tr>
 <tr><td align="left" balign="left"> # append(eventObject : ILoggingEvent) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemoteLoggerAppender.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.platform.logger.RemoteLoggerAppender extends ch.qos.logback.core.UnsynchronizedAppenderBase<ch.qos.logback.classic.spi.ILoggingEvent>
-	c423741:p -> c423712:p [dir=back,arrowtail=empty];
+	c455913:p -> c455868:p [dir=back,arrowtail=empty];
 	// ch.qos.logback.core.UnsynchronizedAppenderBase<E>
-	c423741 [label=<<table title="ch.qos.logback.core.UnsynchronizedAppenderBase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c455913 [label=<<table title="ch.qos.logback.core.UnsynchronizedAppenderBase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> UnsynchronizedAppenderBase&lt;E&gt; </font></td></tr>
 		</table></td></tr>

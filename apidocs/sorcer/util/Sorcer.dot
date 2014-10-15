@@ -9,13 +9,25 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.util.Sorcer
+	c540350 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Sorcer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Sorcer() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerEnv
-	c505023 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
+	c540422 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/SorcerEnv.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerEnv </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + debug : boolean </td></tr>
+<tr><td align="left" balign="left"> + S_SHARED_DIRS : String </td></tr>
 <tr><td align="left" balign="left"> + PROVIDER_PROPERTIES_FILENAME : String </td></tr>
 <tr><td align="left" balign="left"> # sorcerEnv : SorcerEnv </td></tr>
 <tr><td align="left" balign="left"> # loadedEnvFile : String </td></tr>
@@ -32,6 +44,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getLookupMinMatches() : int </td></tr>
 <tr><td align="left" balign="left"> + getLookupMaxMatches() : int </td></tr>
 <tr><td align="left" balign="left"> + getWebsterUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + updateWebster() </td></tr>
 <tr><td align="left" balign="left"> + getWebsterInterface() : String </td></tr>
 <tr><td align="left" balign="left"> + getWebsterUrlURL() : URL </td></tr>
 <tr><td align="left" balign="left"> + setWebsterUrl(host : String, port : int) </td></tr>
@@ -55,6 +68,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getActualDataspaceStorerName() : String </td></tr>
 <tr><td align="left" balign="left"> + getSpacerName() : String </td></tr>
 <tr><td align="left" balign="left"> + getActualSpacerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getCatalogerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getActualCatalogerName() : String </td></tr>
 <tr><td align="left" balign="left"> + getRmiHost() : String </td></tr>
 <tr><td align="left" balign="left"> + getRmiPort() : String </td></tr>
 <tr><td align="left" balign="left"> + getPortalHost() : String </td></tr>
@@ -85,6 +100,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getDataFile(filename : String) : File </td></tr>
 <tr><td align="left" balign="left"> + getUserHomeDir() : File </td></tr>
 <tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getSharedDirs() : File[] </td></tr>
 <tr><td align="left" balign="left"> + getUniqueId() : String </td></tr>
 <tr><td align="left" balign="left"> + getNewScratchDir() : File </td></tr>
 <tr><td align="left" balign="left"> + getNewScratchDir(scratchDirNamePrefix : String) : File </td></tr>
@@ -105,7 +121,9 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextNodeTypes(map : Hashtable&lt;?, ?&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getEnvironment() : SorcerEnv </td></tr>
 <tr><td align="left" balign="left"> + getHomeDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getHome() : String </td></tr>
 <tr><td align="left" balign="left"> + getExtDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getModelingDir() : String </td></tr>
 <tr><td align="left" balign="left"> + getRepoDir() : String </td></tr>
 <tr><td align="left" balign="left"> + getLibPath() : String </td></tr>
 <tr><td align="left" balign="left"> + setRepoDir(props : Properties) : Properties </td></tr>
@@ -126,6 +144,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getCodebaseRoot() : URL </td></tr>
 <tr><td align="left" balign="left"> + setHomeDir() </td></tr>
 <tr><td align="left" balign="left"> + loadProperties(filename : String) : Properties </td></tr>
+<tr><td align="left" balign="left"> + loadPropertiesFromFile(filename : String) : Properties </td></tr>
 <tr><td align="left" balign="left"> + prepareWebsterInterface(props : Properties) : String </td></tr>
 <tr><td align="left" balign="left"> + getProviderDataServerInterface() : String </td></tr>
 <tr><td align="left" balign="left"> + getProviderDataServerPort() : String </td></tr>
@@ -134,6 +153,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setWebsterInternal(internal : boolean) </td></tr>
 <tr><td align="left" balign="left"> + getRequestorWebsterCodebase() : String </td></tr>
 <tr><td align="left" balign="left"> + setRequestorWebsterCodebase(codebase : String) </td></tr>
+<tr><td align="left" balign="left"> + setWebsterInterfaceProperty(interfaceProperty : String) </td></tr>
 <tr><td align="left" balign="left"> + setWebsterPortProperty(port : int) </td></tr>
 <tr><td align="left" balign="left"> + getWebsterRootsString() : String </td></tr>
 <tr><td align="left" balign="left"> + setWebsterRootsString(roots : String) </td></tr>
@@ -143,24 +163,17 @@ digraph G {
 <tr><td align="left" balign="left"> + load(fileName : String) : SorcerEnv </td></tr>
 <tr><td align="left" balign="left"> + setSorcerEnv(sorcerEnv : SorcerEnv) </td></tr>
 <tr><td align="left" balign="left"> + getSorcerExt() : String </td></tr>
+<tr><td align="left" balign="left"> + getSorcerModelingLoc() : String </td></tr>
 <tr><td align="left" balign="left"> + getSorcerExtDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getSorcerModelingDir() : File </td></tr>
 <tr><td align="left" balign="left"> + getLookupLocatorsHolder() : LookupLocators </td></tr>
 <tr><td align="left" balign="left"> + getWebsterRoots(additional : String[]) : String[] </td></tr>
+<tr><td align="left" balign="left"> + isIGrid() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getResolverCache() : File </td></tr>
+<tr><td align="left" balign="left"> + isClearResolverCache() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/SorcerEnv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.Sorcer
-	c505067 [label=<<table title="sorcer.util.Sorcer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Sorcer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Sorcer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Sorcer() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Sorcer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.Sorcer extends sorcer.core.SorcerEnv
-	c505023:p -> c505067:p [dir=back,arrowtail=empty];
+	c540422:p -> c540350:p [dir=back,arrowtail=empty];
 }
 

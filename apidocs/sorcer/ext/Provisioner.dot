@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ext.Provisioner
-	c416105 [label=<<table title="sorcer.ext.Provisioner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Provisioner.html">
+	c446441 [label=<<table title="sorcer.ext.Provisioner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Provisioner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provisioner </td></tr>
@@ -19,8 +19,8 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + provision(type : String, name : String, version : String) : T </td></tr>
-<tr><td align="left" balign="left"> + unProvision(service : ServiceID) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + provision(type : String, name : String, version : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + unProvision(service : ServiceID) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Provisioner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

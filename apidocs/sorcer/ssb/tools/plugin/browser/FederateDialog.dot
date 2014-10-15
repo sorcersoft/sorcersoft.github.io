@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.FederateDialog
-	c240817 [label=<<table title="sorcer.ssb.tools.plugin.browser.FederateDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FederateDialog.html">
+	c252379 [label=<<table title="sorcer.ssb.tools.plugin.browser.FederateDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FederateDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FederateDialog </td></tr>
 		</table></td></tr>
@@ -23,11 +23,24 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FederateDialog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.FederateDialog extends javax.swing.JDialog
-	c240911:p -> c240817:p [dir=back,arrowtail=empty];
+	c252473:p -> c252379:p [dir=back,arrowtail=empty];
 	//sorcer.ssb.tools.plugin.browser.FederateDialog implements java.awt.event.ActionListener
-	c240912:p -> c240817:p [dir=back,arrowtail=empty,style=dashed];
+	c252474:p -> c252379:p [dir=back,arrowtail=empty,style=dashed];
+	// java.awt.event.ActionListener
+	c252474 [label=<<table title="java.awt.event.ActionListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ActionListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + actionPerformed(arg0 : ActionEvent) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// javax.swing.JDialog
-	c240911 [label=<<table title="javax.swing.JDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JDialog.html">
+	c252473 [label=<<table title="javax.swing.JDialog" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JDialog.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JDialog </td></tr>
 		</table></td></tr>
@@ -84,18 +97,5 @@ digraph G {
 <tr><td align="left" balign="left"> + getAccessibleContext() : AccessibleContext </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/javax/swing/JDialog.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// java.awt.event.ActionListener
-	c240912 [label=<<table title="java.awt.event.ActionListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ActionListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + actionPerformed(arg0 : ActionEvent) </td></tr>
-		</table></td></tr>
-		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

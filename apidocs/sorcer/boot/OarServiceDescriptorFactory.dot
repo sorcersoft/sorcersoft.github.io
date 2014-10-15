@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.boot.OpstringServiceDescriptorFactory
-	c359701 [label=<<table title="sorcer.boot.OpstringServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptorFactory.html">
+	c389392 [label=<<table title="sorcer.boot.OpstringServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptorFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpstringServiceDescriptorFactory </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpstringServiceDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.OarServiceDescriptorFactory
-	c359702 [label=<<table title="sorcer.boot.OarServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OarServiceDescriptorFactory.html">
+	c389394 [label=<<table title="sorcer.boot.OarServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OarServiceDescriptorFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OarServiceDescriptorFactory </td></tr>
 		</table></td></tr>
@@ -39,6 +39,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OarServiceDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.boot.OarServiceDescriptorFactory extends sorcer.boot.OpstringServiceDescriptorFactory
-	c359701:p -> c359702:p [dir=back,arrowtail=empty];
+	c389392:p -> c389394:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.InclusiveContext
-	c152407 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../InclusiveContext.html">
+	c162904 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../InclusiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> InclusiveContext </td></tr>
@@ -19,24 +19,24 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addKeyToMap(newPath : String, oldPath : String) </td></tr>
-<tr><td align="left" balign="left"> + removePathFromMap(path : String) </td></tr>
-<tr><td align="left" balign="left"> + put(newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(path : String, index : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(oldIndex : int, newIndex : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getValueAtIndex(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
-<tr><td align="left" balign="left"> + getPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getRealPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getRealPath(path : String) : String </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
-<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContextMetaData() : ContextMetaData </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addKeyToMap(newPath : String, oldPath : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removePathFromMap(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + put(newPath : String, oldPath : String, value : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + changeIndex(path : String, index : int) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + changeIndex(oldIndex : int, newIndex : int) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValueAtIndex(index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(path : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getIndex(path : String) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPathAtIndex(index : int) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRealPathAtIndex(index : int) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRealPath(path : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + size() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + iterator() : Iterator&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextMetaData() : ContextMetaData </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c152603 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c162958 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -44,8 +44,8 @@ digraph G {
 <tr><td align="left" balign="left"> # name : String </td></tr>
 <tr><td align="left" balign="left"> # subjectPath : String </td></tr>
 <tr><td align="left" balign="left"> # subjectValue : Object </td></tr>
-<tr><td align="left" balign="left"> # returnPath : ReturnPath&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> # returnJobPath : ReturnPath&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> # returnPath : Signature.ReturnPath&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> # returnJobPath : Signature.ReturnPath&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> # execPath : ExecPath </td></tr>
 <tr><td align="left" balign="left"> # contextChanged : boolean </td></tr>
 <tr><td align="left" balign="left"> # argsPath : String </td></tr>
@@ -72,6 +72,7 @@ digraph G {
 <tr><td align="left" balign="left"> # isRevaluable : boolean </td></tr>
 <tr><td align="left" balign="left"> # dbUrl : String </td></tr>
 <tr><td align="left" balign="left"> # prefix : String </td></tr>
+<tr><td align="left" balign="left"> # entryLists : List&lt;EntryList&gt; </td></tr>
 <tr><td align="left" balign="left"> # version : float </td></tr>
 <tr><td align="left" balign="left"> # delPathIds : Hashtable&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # metacontext : Hashtable&lt;&gt; </td></tr>
@@ -221,17 +222,17 @@ digraph G {
 <tr><td align="left" balign="left"> + setTarget(target : Object) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTargetPath() : String </td></tr>
 <tr><td align="left" balign="left"> + setTargetPath(targetPath : String) : ServiceContext&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : Signature.ReturnPath&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath() : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(path : String) : ServiceContext&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(returnPath : Signature.ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setExecPath(execPath : ExecPath) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExecPath() : ExecPath </td></tr>
 <tr><td align="left" balign="left"> + setReturnValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + getReturnJobPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnJobPath() : Signature.ReturnPath&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnJobPath() : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnJobPath(path : String) : ServiceContext&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnJobPath(returnPath : ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setReturnJobPath(returnPath : Signature.ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnJobValue(value : T) : T </td></tr>
 <tr><td align="left" balign="left"> + putInoutValue(path : String, value : T) : T </td></tr>
 <tr><td align="left" balign="left"> + putInValue(path : String, value : T, association : String) : T </td></tr>
@@ -274,8 +275,6 @@ digraph G {
 <tr><td align="left" balign="left"> + setMetacontext(mc : Hashtable&lt;String, Map&lt;String, String&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + checkpoint() </td></tr>
-<tr><td align="left" balign="left"> + changed(aspect : Exec.State) </td></tr>
 <tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + setOutValues(context : Context&lt;T&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
@@ -286,7 +285,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getCurrentPrefix() : String </td></tr>
 <tr><td align="left" balign="left"> + setCurrentPrefix(currentPrefix : String) </td></tr>
 <tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getData() : Object </td></tr>
 <tr><td align="left" balign="left"> + getPrefix() : String </td></tr>
 <tr><td align="left" balign="left"> + setPrefix(prefix : String) </td></tr>
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
@@ -297,20 +295,24 @@ digraph G {
 <tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
 <tr><td align="left" balign="left"> + getDbUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + setDbUrl(dbUrl : String) </td></tr>
+<tr><td align="left" balign="left"> + getEntryLists() : List&lt;EntryList&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEntryLists(entryLists : List&lt;EntryList&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getEntryList(type : EntryList.Type) : EntryList </td></tr>
 <tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + getBlockScope() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setBlockScope(blockScope : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;T&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ComprehensiveContext
-	c152610 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComprehensiveContext.html">
+	c162971 [label=<<table title="sorcer.core.context.ComprehensiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComprehensiveContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContext </td></tr>
 		</table></td></tr>
@@ -351,8 +353,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComprehensiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ComprehensiveContext extends sorcer.core.context.ServiceContext
-	c152603:p -> c152610:p [dir=back,arrowtail=empty];
+	c162958:p -> c162971:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.ComprehensiveContext implements sorcer.core.InclusiveContext
-	c152407:p -> c152610:p [dir=back,arrowtail=empty,style=dashed];
+	c162904:p -> c162971:p [dir=back,arrowtail=empty,style=dashed];
 }
 

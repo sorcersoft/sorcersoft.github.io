@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.bdb.objects.SorcerDatabaseViews
-	c509721 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerDatabaseViews.html">
+	c545252 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerDatabaseViews.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerDatabaseViews </td></tr>
 		</table></td></tr>
@@ -21,13 +21,15 @@ digraph G {
 <tr><td align="left" balign="left"> + SorcerDatabaseViews(db : SorcerDatabase) </td></tr>
 <tr><td align="left" balign="left"> + getExertionMap() : StoredMap&lt;UuidKey, Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContextMap() : StoredMap&lt;UuidKey, Context&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTableMap() : StoredMap&lt;UuidKey, ModelTable&gt; </td></tr>
 <tr><td align="left" balign="left"> + getUuidObjectMap() : StoredMap&lt;UuidKey, UuidObject&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExertionSet() : StoredValueSet&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeSet() : StoredValueSet&lt;ProviderRuntime&gt; </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeByProviderNameMap() : StoredMap&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContextSet() : StoredValueSet&lt;Context&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTableSet() : StoredValueSet&lt;ModelTable&gt; </td></tr>
 <tr><td align="left" balign="left"> + getUuidObjectSet() : StoredValueSet&lt;UuidObject&gt; </td></tr>
-<tr><td align="left" balign="left"> + getStoreType(storeName : String) : Store </td></tr>
+<tr><td align="left" balign="left"> + getStoreType(storeName : String) : DatabaseStorer.Store </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerDatabaseViews.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

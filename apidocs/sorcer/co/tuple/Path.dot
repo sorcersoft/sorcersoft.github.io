@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.co.tuple.StrategyEntry
-	c339556 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StrategyEntry.html">
+	c411755 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StrategyEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StrategyEntry </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StrategyEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.ExecPath
-	c339557 [label=<<table title="sorcer.co.tuple.ExecPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecPath.html">
+	c411756 [label=<<table title="sorcer.co.tuple.ExecPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecPath.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExecPath </td></tr>
 		</table></td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExecPath.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Path<T2>
-	c339558 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Path.html">
+	c411757 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Path.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Path&lt;T2&gt; </td></tr>
 		</table></td></tr>
@@ -52,7 +52,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c339566 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
+	c411765 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -77,7 +77,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.ParameterTypes
-	c339567 [label=<<table title="sorcer.co.tuple.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParameterTypes.html">
+	c411766 [label=<<table title="sorcer.co.tuple.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParameterTypes.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParameterTypes </td></tr>
 		</table></td></tr>
@@ -89,22 +89,8 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParameterTypes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Args
-	c339568 [label=<<table title="sorcer.co.tuple.Args" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Args.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Args </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + args : Object[] </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Args(args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + Args(path : String, args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Args.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.target
-	c339569 [label=<<table title="sorcer.co.tuple.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./target.html">
+	c411767 [label=<<table title="sorcer.co.tuple.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./target.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> target </td></tr>
 		</table></td></tr>
@@ -117,30 +103,60 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./target.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.target
-	c339770 [label=<<table title="sorcer.eo.operator.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.target.html">
+	c412007 [label=<<table title="sorcer.eo.operator.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.target.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> target </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + target : Object </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../eo/operator.target.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.ParameterTypes
+	c412009 [label=<<table title="sorcer.eo.operator.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.ParameterTypes.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ParameterTypes </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + parameterTypes : Class&lt;&gt;[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ParameterTypes(parameterTypes : Class&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ParameterTypes(path : String, parameterTypes : Class&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../eo/operator.ParameterTypes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.eo.operator.Args
+	c412010 [label=<<table title="sorcer.eo.operator.Args" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.Args.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Args </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + args : Object[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Args(args : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + Args(path : String, args : Object[]) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../eo/operator.Args.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.StrategyEntry extends sorcer.co.tuple.Path<sorcer.service.Strategy>
-	c339558:p -> c339556:p [dir=back,arrowtail=empty];
+	c411757:p -> c411755:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.ExecPath extends sorcer.co.tuple.Path<java.lang.Object>
-	c339558:p -> c339557:p [dir=back,arrowtail=empty];
+	c411757:p -> c411756:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Path<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
-	c339566:p -> c339558:p [dir=back,arrowtail=empty];
+	c411765:p -> c411757:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.ParameterTypes extends sorcer.co.tuple.Path
-	c339558:p -> c339567:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Args extends sorcer.co.tuple.Path
-	c339558:p -> c339568:p [dir=back,arrowtail=empty];
+	c411757:p -> c411766:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.target extends sorcer.co.tuple.Path
-	c339558:p -> c339569:p [dir=back,arrowtail=empty];
+	c411757:p -> c411767:p [dir=back,arrowtail=empty];
 	//sorcer.eo.operator.target extends sorcer.co.tuple.Path
-	c339558:p -> c339770:p [dir=back,arrowtail=empty];
+	c411757:p -> c412007:p [dir=back,arrowtail=empty];
+	//sorcer.eo.operator.ParameterTypes extends sorcer.co.tuple.Path
+	c411757:p -> c412009:p [dir=back,arrowtail=empty];
+	//sorcer.eo.operator.Args extends sorcer.co.tuple.Path
+	c411757:p -> c412010:p [dir=back,arrowtail=empty];
 }
 

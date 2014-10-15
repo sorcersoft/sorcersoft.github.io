@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.NotifyImpl
-	c355437 [label=<<table title="sorcer.ssb.tools.plugin.browser.NotifyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NotifyImpl.html">
+	c384241 [label=<<table title="sorcer.ssb.tools.plugin.browser.NotifyImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NotifyImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NotifyImpl </td></tr>
 		</table></td></tr>
@@ -25,48 +25,15 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NotifyImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements net.jini.core.event.RemoteEventListener
-	c355541:p -> c355437:p [dir=back,arrowtail=empty,style=dashed];
+	c384329:p -> c384241:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements java.rmi.Remote
-	c355542:p -> c355437:p [dir=back,arrowtail=empty,style=dashed];
+	c384330:p -> c384241:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements java.lang.Runnable
-	c355543:p -> c355437:p [dir=back,arrowtail=empty,style=dashed];
+	c384331:p -> c384241:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ssb.tools.plugin.browser.NotifyImpl implements net.jini.security.proxytrust.ServerProxyTrust
-	c355544:p -> c355437:p [dir=back,arrowtail=empty,style=dashed];
-	// net.jini.core.event.RemoteEventListener
-	c355541 [label=<<table title="net.jini.core.event.RemoteEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemoteEventListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + notify(arg0 : RemoteEvent) </td></tr>
-		</table></td></tr>
-		</table>>, URL="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// java.rmi.Remote
-	c355542 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Remote </td></tr>
-		</table></td></tr>
-		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// java.lang.Runnable
-	c355543 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Runnable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	c384332:p -> c384241:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.security.proxytrust.ServerProxyTrust
-	c355544 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
+	c384332 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServerProxyTrust </td></tr>
@@ -75,8 +42,41 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxyVerifier() : TrustVerifier </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// net.jini.core.event.RemoteEventListener
+	c384329 [label=<<table title="net.jini.core.event.RemoteEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RemoteEventListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notify(arg0 : RemoteEvent) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/net/jini/core/event/RemoteEventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.rmi.Remote
+	c384330 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Remote </td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.lang.Runnable
+	c384331 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Runnable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + run() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

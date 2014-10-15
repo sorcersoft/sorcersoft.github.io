@@ -9,8 +9,62 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.resolver.MappedFlattenedArtifactResolver
+	c31263 [label=<<table title="sorcer.resolver.MappedFlattenedArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MappedFlattenedArtifactResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> MappedFlattenedArtifactResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GROUPDIR_DEFAULT : String </td></tr>
+<tr><td align="left" balign="left"> # rootDir : File </td></tr>
+<tr><td align="left" balign="left"> # groupDirMap : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> # roots : List&lt;String&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MappedFlattenedArtifactResolver(rootDir : File) </td></tr>
+<tr><td align="left" balign="left"> + MappedFlattenedArtifactResolver(rootDir : File, groups : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveRelative(coords : ArtifactCoordinates) : String </td></tr>
+<tr><td align="left" balign="left"> + getRootDir() : String </td></tr>
+<tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./MappedFlattenedArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.AbstractArtifactResolver
+	c31264 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # log : Logger </td></tr>
+<tr><td align="left" balign="left"> # versionResolver : VersionResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AbstractArtifactResolver() </td></tr>
+<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> # resolveVersion(groupId : String, artifactId : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.ArtifactResolver
+	c31265 [label=<<table title="sorcer.resolver.ArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArtifactResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ArtifactResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resolveAbsolute(artifactCoordinates : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resolveRelative(artifactCoordinates : ArtifactCoordinates) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resolveRelative(artifactCoordinates : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRootDir() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resolveSimpleName(simpleName : String, packaging : String) : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.resolver.Resolver
-	c47607 [label=<<table title="sorcer.resolver.Resolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Resolver.html">
+	c31266 [label=<<table title="sorcer.resolver.Resolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Resolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Resolver </td></tr>
 		</table></td></tr>
@@ -35,120 +89,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getResolver() : ArtifactResolver </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Resolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.AbstractArtifactResolver
-	c47608 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # log : Logger </td></tr>
-<tr><td align="left" balign="left"> # versionResolver : VersionResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractArtifactResolver() </td></tr>
-<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> # resolveVersion(groupId : String, artifactId : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.MappedFlattenedArtifactResolver
-	c47609 [label=<<table title="sorcer.resolver.MappedFlattenedArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MappedFlattenedArtifactResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MappedFlattenedArtifactResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + GROUPDIR_DEFAULT : String </td></tr>
-<tr><td align="left" balign="left"> # rootDir : File </td></tr>
-<tr><td align="left" balign="left"> # groupDirMap : Map&lt;String, String&gt; </td></tr>
-<tr><td align="left" balign="left"> # roots : List&lt;String&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MappedFlattenedArtifactResolver(rootDir : File) </td></tr>
-<tr><td align="left" balign="left"> + MappedFlattenedArtifactResolver(rootDir : File, groups : Map&lt;String, String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveRelative(coords : ArtifactCoordinates) : String </td></tr>
-<tr><td align="left" balign="left"> + getRootDir() : String </td></tr>
-<tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./MappedFlattenedArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.RepositoryArtifactResolver
-	c47610 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryArtifactResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RepositoryArtifactResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RepositoryArtifactResolver(repositoryRoot : String) </td></tr>
-<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
-<tr><td align="left" balign="left"> + getRootDir() : String </td></tr>
-<tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
-<tr><td align="left" balign="left"> # resolveSimpleName(root : File, groupId : String, artifactId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) </td></tr>
-<tr><td align="left" balign="left"> # findVersion(artifactDir : File, groupId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RepositoryArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.RepositoryArtifactResolver.ArtifactDirFilter
-	c47611 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver.ArtifactDirFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryArtifactResolver.ArtifactDirFilter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ArtifactDirFilter </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RepositoryArtifactResolver.ArtifactDirFilter(groupId : String, artifactId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) </td></tr>
-<tr><td align="left" balign="left"> + accept(file : File) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RepositoryArtifactResolver.ArtifactDirFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.RepositoryArtifactResolver.ArtifactFilter
-	c47612 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver.ArtifactFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryArtifactResolver.ArtifactFilter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ArtifactFilter </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RepositoryArtifactResolver.ArtifactFilter(groupId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) </td></tr>
-<tr><td align="left" balign="left"> + accept(versionDir : File) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RepositoryArtifactResolver.ArtifactFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.VersionResolver
-	c47613 [label=<<table title="sorcer.resolver.VersionResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./VersionResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> VersionResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # versions : Map&lt;String, String&gt; </td></tr>
-<tr><td align="left" balign="left"> + instance : VersionResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + VersionResolver() </td></tr>
-<tr><td align="left" balign="left"> + resolveVersion(groupId : String, artifactId : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./VersionResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.resolver.ArtifactResolver
-	c47614 [label=<<table title="sorcer.resolver.ArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArtifactResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ArtifactResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getRootDir() : String </td></tr>
-<tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.resolver.ProjectArtifactResolver
-	c47615 [label=<<table title="sorcer.resolver.ProjectArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProjectArtifactResolver.html">
+	c31267 [label=<<table title="sorcer.resolver.ProjectArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProjectArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProjectArtifactResolver </td></tr>
 		</table></td></tr>
@@ -166,13 +108,92 @@ digraph G {
 <tr><td align="left" balign="left"> # resolveRelative(root : File, artifactId : String) : File </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProjectArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.resolver.AbstractArtifactResolver implements sorcer.resolver.ArtifactResolver
-	c47614:p -> c47608:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.resolver.VersionResolver
+	c31268 [label=<<table title="sorcer.resolver.VersionResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./VersionResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> VersionResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # versions : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> + instance : VersionResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + VersionResolver() </td></tr>
+<tr><td align="left" balign="left"> + resolveVersion(coords : ArtifactCoordinates) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveVersion(groupId : String, artifactId : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./VersionResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.RepositoryArtifactResolver
+	c31269 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryArtifactResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RepositoryArtifactResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RepositoryArtifactResolver(repositoryRoot : String) </td></tr>
+<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : ArtifactCoordinates) : String </td></tr>
+<tr><td align="left" balign="left"> + getRootDir() : String </td></tr>
+<tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
+<tr><td align="left" balign="left"> # resolveSimpleName(root : File, groupId : String, artifactId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) </td></tr>
+<tr><td align="left" balign="left"> # findVersion(artifactDir : File, groupId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RepositoryArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.RepositoryArtifactResolver.ArtifactDirFilter
+	c31270 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver.ArtifactDirFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryArtifactResolver.ArtifactDirFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ArtifactDirFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ArtifactDirFilter(groupId : String, artifactId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) </td></tr>
+<tr><td align="left" balign="left"> + accept(file : File) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RepositoryArtifactResolver.ArtifactDirFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.RepositoryArtifactResolver.ArtifactFilter
+	c31271 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver.ArtifactFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryArtifactResolver.ArtifactFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ArtifactFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ArtifactFilter(groupId : String, packaging : String, results : List&lt;ArtifactCoordinates&gt;) </td></tr>
+<tr><td align="left" balign="left"> + accept(versionDir : File) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RepositoryArtifactResolver.ArtifactFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.SorcerResolver
+	c31272 [label=<<table title="sorcer.resolver.SorcerResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # log : Logger </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerResolver(resolver : Resolver) </td></tr>
+<tr><td align="left" balign="left"> + getResolver() : Resolver </td></tr>
+<tr><td align="left" balign="left"> + getClassPathFor(artifact : String) : String[] </td></tr>
+<tr><td align="left" balign="left"> + getClassPathFor(artifact : String, repositories : RemoteRepository[]) : String[] </td></tr>
+<tr><td align="left" balign="left"> + getLocation(artifact : String, artifactType : String) : URL </td></tr>
+<tr><td align="left" balign="left"> + getLocation(artifact : String, artifactType : String, repositories : RemoteRepository[]) : URL </td></tr>
+<tr><td align="left" balign="left"> + getRemoteRepositories() : Collection&lt;RemoteRepository&gt; </td></tr>
+<tr><td align="left" balign="left"> + getClassPathFor(artifact : String, pom : File, download : boolean) : String[] </td></tr>
+<tr><td align="left" balign="left"> # updateCacheStore(read : boolean) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.resolver.MappedFlattenedArtifactResolver extends sorcer.resolver.AbstractArtifactResolver
-	c47608:p -> c47609:p [dir=back,arrowtail=empty];
-	//sorcer.resolver.RepositoryArtifactResolver extends sorcer.resolver.AbstractArtifactResolver
-	c47608:p -> c47610:p [dir=back,arrowtail=empty];
+	c31264:p -> c31263:p [dir=back,arrowtail=empty];
+	//sorcer.resolver.AbstractArtifactResolver implements sorcer.resolver.ArtifactResolver
+	c31265:p -> c31264:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.resolver.ProjectArtifactResolver implements sorcer.resolver.ArtifactResolver
-	c47614:p -> c47615:p [dir=back,arrowtail=empty,style=dashed];
+	c31265:p -> c31267:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.resolver.RepositoryArtifactResolver extends sorcer.resolver.AbstractArtifactResolver
+	c31264:p -> c31269:p [dir=back,arrowtail=empty];
 }
 

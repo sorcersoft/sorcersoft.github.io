@@ -54,8 +54,8 @@
 <a class="jxr_linenumber" name="44" href="#44">44</a>  <strong class="jxr_keyword">import</strong> java.util.List;
 <a class="jxr_linenumber" name="45" href="#45">45</a>  <strong class="jxr_keyword">import</strong> java.util.Map;
 <a class="jxr_linenumber" name="46" href="#46">46</a>  <strong class="jxr_keyword">import</strong> java.util.Set;
-<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Level;
-<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <strong class="jxr_keyword">import</strong> org.slf4j.Logger;
+<a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">import</strong> org.slf4j.LoggerFactory;
 <a class="jxr_linenumber" name="49" href="#49">49</a>  
 <a class="jxr_linenumber" name="50" href="#50">50</a>  <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="51" href="#51">51</a>  <em class="jxr_javadoccomment"> * A service discovery and management utility allowing to access services by</em>
@@ -82,7 +82,7 @@
 <a class="jxr_linenumber" name="72" href="#72">72</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="73" href="#73">73</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../sorcer/util/ServiceAccessor.html">ServiceAccessor</a> <strong class="jxr_keyword">implements</strong> <a href="../../sorcer/service/DynamicAccessor.html">DynamicAccessor</a> {
 <a class="jxr_linenumber" name="74" href="#74">74</a>  
-<a class="jxr_linenumber" name="75" href="#75">75</a>  	<strong class="jxr_keyword">static</strong> Logger logger = Logger.getLogger(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="75" href="#75">75</a>  	<strong class="jxr_keyword">static</strong> Logger logger = LoggerFactory.getLogger(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName());
 <a class="jxr_linenumber" name="76" href="#76">76</a>  
 <a class="jxr_linenumber" name="77" href="#77">77</a>  	<strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> cacheEnabled = SorcerEnv.isLookupCacheEnabled();
 <a class="jxr_linenumber" name="78" href="#78">78</a>  
@@ -126,10 +126,10 @@
 <a class="jxr_linenumber" name="116" href="#116">116</a> 					attrSets);
 <a class="jxr_linenumber" name="117" href="#117">117</a> 			si = sdManager.lookup(st, <strong class="jxr_keyword">null</strong>, WAIT_FOR);
 <a class="jxr_linenumber" name="118" href="#118">118</a> 		} <strong class="jxr_keyword">catch</strong> (IOException ioe) {
-<a class="jxr_linenumber" name="119" href="#119">119</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
+<a class="jxr_linenumber" name="119" href="#119">119</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
 <a class="jxr_linenumber" name="120" href="#120">120</a> 					ioe);
 <a class="jxr_linenumber" name="121" href="#121">121</a> 		} <strong class="jxr_keyword">catch</strong> (InterruptedException ie) {
-<a class="jxr_linenumber" name="122" href="#122">122</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
+<a class="jxr_linenumber" name="122" href="#122">122</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
 <a class="jxr_linenumber" name="123" href="#123">123</a> 					ie);
 <a class="jxr_linenumber" name="124" href="#124">124</a> 		}
 <a class="jxr_linenumber" name="125" href="#125">125</a> 		<strong class="jxr_keyword">return</strong> si;
@@ -150,10 +150,10 @@
 <a class="jxr_linenumber" name="140" href="#140">140</a> 					<strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="141" href="#141">141</a> 			si = sdManager.lookup(st, <strong class="jxr_keyword">null</strong>, WAIT_FOR);
 <a class="jxr_linenumber" name="142" href="#142">142</a> 		} <strong class="jxr_keyword">catch</strong> (IOException ioe) {
-<a class="jxr_linenumber" name="143" href="#143">143</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
+<a class="jxr_linenumber" name="143" href="#143">143</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
 <a class="jxr_linenumber" name="144" href="#144">144</a> 					ioe);
 <a class="jxr_linenumber" name="145" href="#145">145</a> 		} <strong class="jxr_keyword">catch</strong> (InterruptedException ie) {
-<a class="jxr_linenumber" name="146" href="#146">146</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
+<a class="jxr_linenumber" name="146" href="#146">146</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
 <a class="jxr_linenumber" name="147" href="#147">147</a> 					ie);
 <a class="jxr_linenumber" name="148" href="#148">148</a> 		}
 <a class="jxr_linenumber" name="149" href="#149">149</a> 		<strong class="jxr_keyword">return</strong> si;
@@ -187,10 +187,10 @@
 <a class="jxr_linenumber" name="177" href="#177">177</a> 		openDiscoveryManagement(groups);
 <a class="jxr_linenumber" name="178" href="#178">178</a> 			si = sdManager.lookup(template, filter, WAIT_FOR);
 <a class="jxr_linenumber" name="179" href="#179">179</a> 		} <strong class="jxr_keyword">catch</strong> (IOException ioe) {
-<a class="jxr_linenumber" name="180" href="#180">180</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
+<a class="jxr_linenumber" name="180" href="#180">180</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
 <a class="jxr_linenumber" name="181" href="#181">181</a> 					ioe);
 <a class="jxr_linenumber" name="182" href="#182">182</a> 		} <strong class="jxr_keyword">catch</strong> (InterruptedException ie) {
-<a class="jxr_linenumber" name="183" href="#183">183</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
+<a class="jxr_linenumber" name="183" href="#183">183</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
 <a class="jxr_linenumber" name="184" href="#184">184</a> 					ie);
 <a class="jxr_linenumber" name="185" href="#185">185</a> 		}
 <a class="jxr_linenumber" name="186" href="#186">186</a> 		<strong class="jxr_keyword">return</strong> si;
@@ -230,7 +230,7 @@
 <a class="jxr_linenumber" name="220" href="#220">220</a> 				}
 <a class="jxr_linenumber" name="221" href="#221">221</a> 			}
 <a class="jxr_linenumber" name="222" href="#222">222</a> 		} <strong class="jxr_keyword">catch</strong> (IOException ioe) {
-<a class="jxr_linenumber" name="223" href="#223">223</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
+<a class="jxr_linenumber" name="223" href="#223">223</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItem"</span>,
 <a class="jxr_linenumber" name="224" href="#224">224</a> 					ioe);
 <a class="jxr_linenumber" name="225" href="#225">225</a> 			closeLookupCache();
 <a class="jxr_linenumber" name="226" href="#226">226</a> 		}
@@ -264,10 +264,10 @@
 <a class="jxr_linenumber" name="254" href="#254">254</a> 			sis = sdManager.lookup(template, MIN_MATCHES, MAX_MATCHES, filter,
 <a class="jxr_linenumber" name="255" href="#255">255</a> 					WAIT_FOR);
 <a class="jxr_linenumber" name="256" href="#256">256</a> 		} <strong class="jxr_keyword">catch</strong> (IOException ioe) {
-<a class="jxr_linenumber" name="257" href="#257">257</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItems"</span>,
+<a class="jxr_linenumber" name="257" href="#257">257</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItems"</span>,
 <a class="jxr_linenumber" name="258" href="#258">258</a> 					ioe);
 <a class="jxr_linenumber" name="259" href="#259">259</a> 		} <strong class="jxr_keyword">catch</strong> (InterruptedException ie) {
-<a class="jxr_linenumber" name="260" href="#260">260</a> 			logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItems"</span>,
+<a class="jxr_linenumber" name="260" href="#260">260</a> 			logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(), <span class="jxr_string">"getServiceItems"</span>,
 <a class="jxr_linenumber" name="261" href="#261">261</a> 					ie);
 <a class="jxr_linenumber" name="262" href="#262">262</a> 		}
 <a class="jxr_linenumber" name="263" href="#263">263</a> 		closeDiscoveryManagement();
@@ -308,7 +308,7 @@
 <a class="jxr_linenumber" name="298" href="#298">298</a> 		<strong class="jxr_keyword">if</strong> (sdManager == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="299" href="#299">299</a> 			LookupLocator[] locators = getLookupLocators();
 <a class="jxr_linenumber" name="300" href="#300">300</a> 			<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="301" href="#301">301</a> 				logger.finer(<span class="jxr_string">"[openDiscoveryManagement]\n"</span>
+<a class="jxr_linenumber" name="301" href="#301">301</a> 				logger.debug(<span class="jxr_string">"[openDiscoveryManagement]\n"</span>
 <a class="jxr_linenumber" name="302" href="#302">302</a> 						+ <span class="jxr_string">"\tSORCER Group(s): "</span>
 <a class="jxr_linenumber" name="303" href="#303">303</a> 						+ StringUtils.arrayToString(groups) + <span class="jxr_string">"\n"</span>
 <a class="jxr_linenumber" name="304" href="#304">304</a> 						+ <span class="jxr_string">"\tLocators:        "</span>
@@ -318,7 +318,7 @@
 <a class="jxr_linenumber" name="308" href="#308">308</a> 				sdManager = <strong class="jxr_keyword">new</strong> ServiceDiscoveryManager(ldManager,
 <a class="jxr_linenumber" name="309" href="#309">309</a> 						<strong class="jxr_keyword">new</strong> LeaseRenewalManager());
 <a class="jxr_linenumber" name="310" href="#310">310</a> 			} <strong class="jxr_keyword">catch</strong> (Throwable t) {
-<a class="jxr_linenumber" name="311" href="#311">311</a> 				logger.throwing(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(),
+<a class="jxr_linenumber" name="311" href="#311">311</a> 				logger.error(ServiceAccessor.<strong class="jxr_keyword">class</strong>.getName(),
 <a class="jxr_linenumber" name="312" href="#312">312</a> 						<span class="jxr_string">"openDiscoveryManagement"</span>, t);
 <a class="jxr_linenumber" name="313" href="#313">313</a> 			}
 <a class="jxr_linenumber" name="314" href="#314">314</a> 		}
@@ -417,7 +417,7 @@
 <a class="jxr_linenumber" name="407" href="#407">407</a> 
 <a class="jxr_linenumber" name="408" href="#408">408</a> 				Thread.sleep(WAIT_FOR);
 <a class="jxr_linenumber" name="409" href="#409">409</a> 			} <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="410" href="#410">410</a> 				logger.throwing(<span class="jxr_string">""</span> + ServiceAccessor.<strong class="jxr_keyword">class</strong>, <span class="jxr_string">"getService"</span>, e);
+<a class="jxr_linenumber" name="410" href="#410">410</a> 				logger.error(<span class="jxr_string">""</span> + ServiceAccessor.<strong class="jxr_keyword">class</strong>, <span class="jxr_string">"getService"</span>, e);
 <a class="jxr_linenumber" name="411" href="#411">411</a> 			}
 <a class="jxr_linenumber" name="412" href="#412">412</a> 		}
 <a class="jxr_linenumber" name="413" href="#413">413</a> 		logger.info(<span class="jxr_string">"got LUS service [type="</span> + serviceType + <span class="jxr_string">" name="</span> + serviceName + <span class="jxr_string">"]: "</span> + proxy);
@@ -468,13 +468,13 @@
 <a class="jxr_linenumber" name="458" href="#458">458</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="459" href="#459">459</a>         }
 <a class="jxr_linenumber" name="460" href="#460">460</a>         List&lt;LookupLocator&gt; locators = <strong class="jxr_keyword">new</strong> ArrayList&lt;LookupLocator&gt;(locURLs.length);
-<a class="jxr_linenumber" name="461" href="#461">461</a>         logger.finer(<span class="jxr_string">"ProviderAccessor Locators: "</span> + Arrays.toString(locURLs));
+<a class="jxr_linenumber" name="461" href="#461">461</a>         logger.debug(<span class="jxr_string">"ProviderAccessor Locators: "</span> + Arrays.toString(locURLs));
 <a class="jxr_linenumber" name="462" href="#462">462</a> 
 <a class="jxr_linenumber" name="463" href="#463">463</a> 		<strong class="jxr_keyword">for</strong> (String locURL : locURLs)
 <a class="jxr_linenumber" name="464" href="#464">464</a> 			<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="465" href="#465">465</a> 				locators.add(<strong class="jxr_keyword">new</strong> LookupLocator(locURL));
 <a class="jxr_linenumber" name="466" href="#466">466</a> 			} <strong class="jxr_keyword">catch</strong> (Throwable t) {
-<a class="jxr_linenumber" name="467" href="#467">467</a> 				logger.warning(
+<a class="jxr_linenumber" name="467" href="#467">467</a> 				logger.warn(
 <a class="jxr_linenumber" name="468" href="#468">468</a> 						<span class="jxr_string">"Invalid Lookup URL: "</span> + locURL);
 <a class="jxr_linenumber" name="469" href="#469">469</a> 			}
 <a class="jxr_linenumber" name="470" href="#470">470</a> 
@@ -567,7 +567,7 @@
 <a class="jxr_linenumber" name="557" href="#557">557</a>             <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="558" href="#558">558</a>                 Thread.sleep(ServiceAccessor.WAIT_FOR);
 <a class="jxr_linenumber" name="559" href="#559">559</a>             } <strong class="jxr_keyword">catch</strong> (InterruptedException ignored) {
-<a class="jxr_linenumber" name="560" href="#560">560</a>                 <em class="jxr_comment">//ignore</em>
+<a class="jxr_linenumber" name="560" href="#560">560</a>                 <em class="jxr_comment">//IGNORE</em>
 <a class="jxr_linenumber" name="561" href="#561">561</a>             }
 <a class="jxr_linenumber" name="562" href="#562">562</a>         }
 <a class="jxr_linenumber" name="563" href="#563">563</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ServiceItem[0];
@@ -579,7 +579,7 @@
 <a class="jxr_linenumber" name="569" href="#569">569</a>         } <strong class="jxr_keyword">catch</strong> (RuntimeException e) {
 <a class="jxr_linenumber" name="570" href="#570">570</a>             <strong class="jxr_keyword">throw</strong> e;
 <a class="jxr_linenumber" name="571" href="#571">571</a>         } <strong class="jxr_keyword">catch</strong> (Exception e) {
-<a class="jxr_linenumber" name="572" href="#572">572</a>             logger.log(Level.SEVERE,<span class="jxr_string">"Error while getting service"</span>, e);
+<a class="jxr_linenumber" name="572" href="#572">572</a>             logger.error(<span class="jxr_string">"Error while getting service"</span>, e);
 <a class="jxr_linenumber" name="573" href="#573">573</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="574" href="#574">574</a>         }
 <a class="jxr_linenumber" name="575" href="#575">575</a>     }

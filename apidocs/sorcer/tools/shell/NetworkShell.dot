@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.NetworkShell
-	c348620 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.html">
+	c377124 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetworkShell </td></tr>
 		</table></td></tr>
@@ -28,12 +28,14 @@ digraph G {
 <tr><td align="left" balign="left"> + nshUrl : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + buildInstance(argv : String[]) : String[] </td></tr>
+<tr><td align="left" balign="left"> + buildInstance(ensureSecurityManager : boolean, argv : String[]) : String[] </td></tr>
 <tr><td align="left" balign="left"> + getInstance() : INetworkShell </td></tr>
 <tr><td align="left" balign="left"> # ensureSecurityManager() </td></tr>
 <tr><td align="left" balign="left"> + main(argv : String[]) </td></tr>
+<tr><td align="left" balign="left"> + processRequest(outsideCall : boolean) </td></tr>
 <tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + isDebug() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isRemoteLogging() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getPrincipal() : SorcerPrincipal </td></tr>
 <tr><td align="left" balign="left"> + startApplication(appPath : String) </td></tr>
 <tr><td align="left" balign="left"> + setLookupDiscovery(ingroups : String[]) </td></tr>
@@ -43,13 +45,14 @@ digraph G {
 <tr><td align="left" balign="left"> + enumerateCommands() </td></tr>
 <tr><td align="left" balign="left"> + addToCommandTable(cmd : String, inCls : Class&lt;?&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getCmd() : String </td></tr>
-<tr><td align="left" balign="left"> + getShellTokenizer() : StringTokenizer </td></tr>
+<tr><td align="left" balign="left"> + getShellTokenizer() : WhitespaceTokenizer </td></tr>
+<tr><td align="left" balign="left"> + getTokenizer() : WhitespaceTokenizer </td></tr>
 <tr><td align="left" balign="left"> + getShellInputStream() : BufferedReader </td></tr>
 <tr><td align="left" balign="left"> + getShellOutputStream() : PrintStream </td></tr>
 <tr><td align="left" balign="left"> + getOutputStream() : PrintStream </td></tr>
 <tr><td align="left" balign="left"> + setShellOutput(outputStream : PrintStream) </td></tr>
 <tr><td align="left" balign="left"> + getDisco() : LookupDiscovery </td></tr>
-<tr><td align="left" balign="left"> + getRegistrars() : ArrayList&lt;ServiceRegistrar&gt; </td></tr>
+<tr><td align="left" balign="left"> + getRegistrars() : List&lt;ServiceRegistrar&gt; </td></tr>
 <tr><td align="left" balign="left"> + getConfiguration() : Configuration </td></tr>
 <tr><td align="left" balign="left"> + getHomeDir() : String </td></tr>
 <tr><td align="left" balign="left"> + setHomeDir(homeDir : String) </td></tr>
@@ -59,6 +62,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setShellLog(shellLog : File) </td></tr>
 <tr><td align="left" balign="left"> + isInteractive() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getWebsterUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getNshWebsterUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + initShell(args : String[]) : String[] </td></tr>
 <tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
 <tr><td align="left" balign="left"> + setGroups(groups : String[]) </td></tr>
@@ -82,7 +86,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.INetworkShell
-	c348630 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./INetworkShell.html">
+	c377133 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./INetworkShell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> INetworkShell </td></tr>
@@ -91,23 +95,26 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addToCommandTable(cmd : String, inCls : Class&lt;?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + addAlias(alias : String, command : String) </td></tr>
-<tr><td align="left" balign="left"> + getCmd() : String </td></tr>
-<tr><td align="left" balign="left"> + getCurrentDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getHomeDir() : String </td></tr>
-<tr><td align="left" balign="left"> + setCurrentDir(file : File) </td></tr>
-<tr><td align="left" balign="left"> + getSelectedRegistrar() : ServiceRegistrar </td></tr>
-<tr><td align="left" balign="left"> + getOutputStream() : PrintStream </td></tr>
-<tr><td align="left" balign="left"> + isDebug() : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addToCommandTable(cmd : String, inCls : Class&lt;?&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addAlias(alias : String, command : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCmd() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCurrentDir() : File </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHomeDir() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getNshWebsterUrl() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setCurrentDir(file : File) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSelectedRegistrar() : ServiceRegistrar </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOutputStream() : PrintStream </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTokenizer() : WhitespaceTokenizer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isDebug() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isRemoteLogging() : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./INetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.NetworkShell implements net.jini.discovery.DiscoveryListener
-	c349014:p -> c348620:p [dir=back,arrowtail=empty,style=dashed];
+	c377550:p -> c377124:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.tools.shell.NetworkShell implements sorcer.tools.shell.INetworkShell
-	c348630:p -> c348620:p [dir=back,arrowtail=empty,style=dashed];
+	c377133:p -> c377124:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.discovery.DiscoveryListener
-	c349014 [label=<<table title="net.jini.discovery.DiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/discovery/DiscoveryListener.html">
+	c377550 [label=<<table title="net.jini.discovery.DiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/discovery/DiscoveryListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DiscoveryListener </td></tr>
@@ -116,8 +123,8 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + discovered(arg0 : DiscoveryEvent) </td></tr>
-<tr><td align="left" balign="left"> + discarded(arg0 : DiscoveryEvent) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + discovered(arg0 : DiscoveryEvent) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + discarded(arg0 : DiscoveryEvent) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/discovery/DiscoveryListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

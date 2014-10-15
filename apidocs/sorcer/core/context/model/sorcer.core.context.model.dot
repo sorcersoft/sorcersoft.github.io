@@ -9,88 +9,47 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.context.model.Variability<T>
-	c12543 [label=<<table title="sorcer.core.context.model.Variability" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Variability.html">
+	// sorcer.core.context.model.Pool
+	c12970 [label=<<table title="sorcer.core.context.model.Pool" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Pool.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Variability&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> Pool </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + maxThreads : int </td></tr>
+<tr><td align="left" balign="left"> + loadFactor : float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Pool() </td></tr>
+<tr><td align="left" balign="left"> + Pool(type : Modeling.ParType) </td></tr>
+<tr><td align="left" balign="left"> + Pool(type : Modeling.ParType, size : int) </td></tr>
+<tr><td align="left" balign="left"> + Pool(type : Modeling.ParType, size : int, batchSize : float) </td></tr>
+<tr><td align="left" balign="left"> + getSize() : int </td></tr>
+<tr><td align="left" balign="left"> + getType() : Modeling.ParType </td></tr>
+<tr><td align="left" balign="left"> + getBatchSize() : float </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Pool.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.PoolStrategy
+	c12971 [label=<<table title="sorcer.core.context.model.PoolStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PoolStrategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PoolStrategy </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
-<tr><td align="left" balign="left"> + setValue(varValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + getValueType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + getVariability(name : String) : Variability&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged() </td></tr>
+<tr><td align="left" balign="left"> + PoolStrategy() </td></tr>
+<tr><td align="left" balign="left"> + getBuilder() : Signature </td></tr>
+<tr><td align="left" balign="left"> + setBuilder(signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + getCapacity() : int </td></tr>
+<tr><td align="left" balign="left"> + setCapacity(capacity : int) </td></tr>
+<tr><td align="left" balign="left"> + getLoad() : int </td></tr>
+<tr><td align="left" balign="left"> + setLoad(load : int) </td></tr>
+<tr><td align="left" balign="left"> + getFlow() : Strategy.Flow </td></tr>
+<tr><td align="left" balign="left"> + setFlow(flow : Strategy.Flow) </td></tr>
+<tr><td align="left" balign="left"> + getPools() : List&lt;Pool&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPools(pools : List&lt;Pool&gt;) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Variability.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.Variability.Type
-	c12544 [label=<<table title="sorcer.core.context.model.Variability.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Variability.Type.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Type </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> INPUT </td></tr>
-<tr><td align="left" balign="left"> CONSTANT </td></tr>
-<tr><td align="left" balign="left"> INVARIANT </td></tr>
-<tr><td align="left" balign="left"> OUTPUT </td></tr>
-<tr><td align="left" balign="left"> RESPONSE </td></tr>
-<tr><td align="left" balign="left"> DESIGN </td></tr>
-<tr><td align="left" balign="left"> PARAMETER </td></tr>
-<tr><td align="left" balign="left"> LINKED </td></tr>
-<tr><td align="left" balign="left"> CONSTRAINT </td></tr>
-<tr><td align="left" balign="left"> OBJECTIVE </td></tr>
-<tr><td align="left" balign="left"> DERIVATIVE </td></tr>
-<tr><td align="left" balign="left"> GRADIENT </td></tr>
-<tr><td align="left" balign="left"> RANDOM </td></tr>
-<tr><td align="left" balign="left"> BOUNDED </td></tr>
-<tr><td align="left" balign="left"> FUNDMENTAL </td></tr>
-<tr><td align="left" balign="left"> RAW </td></tr>
-<tr><td align="left" balign="left"> DELEGATION </td></tr>
-<tr><td align="left" balign="left"> COMPOSITION </td></tr>
-<tr><td align="left" balign="left"> FILTER </td></tr>
-<tr><td align="left" balign="left"> PERSISTER </td></tr>
-<tr><td align="left" balign="left"> EVALUATOR </td></tr>
-<tr><td align="left" balign="left"> EVALUATION </td></tr>
-<tr><td align="left" balign="left"> PRODUCT </td></tr>
-<tr><td align="left" balign="left"> WATCHABLE </td></tr>
-<tr><td align="left" balign="left"> NONE </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Variability.Type.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.Variability.MathType
-	c12545 [label=<<table title="sorcer.core.context.model.Variability.MathType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Variability.MathType.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> MathType </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> CONTINUOUS </td></tr>
-<tr><td align="left" balign="left"> DISCRETE </td></tr>
-<tr><td align="left" balign="left"> DISCRETE_WITH_ORDER </td></tr>
-<tr><td align="left" balign="left"> DISCRETE_WITH_MATH </td></tr>
-<tr><td align="left" balign="left"> DISCRETE_NO_ORDER </td></tr>
-<tr><td align="left" balign="left"> PROBLEM_PARAMETER </td></tr>
-<tr><td align="left" balign="left"> REAL </td></tr>
-<tr><td align="left" balign="left"> LINEAR </td></tr>
-<tr><td align="left" balign="left"> QUADRATIC </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Variability.MathType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./PoolStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

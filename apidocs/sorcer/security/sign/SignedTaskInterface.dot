@@ -9,24 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.security.sign.SignedTaskInterface
-	c504034 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignedTaskInterface.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SignedTaskInterface </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProcessByteSignature() : byte[] </td></tr>
-<tr><td align="left" balign="left"> + setSignature(signature : byte[], mobject : MarshalledObject&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getObject() : Object </td></tr>
-<tr><td align="left" balign="left"> + verify(publickey : PublicKey, signature1 : Signature) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SignedTaskInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.security.sign.SignedServiceTask
-	c504035 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedServiceTask.html">
+	c539157 [label=<<table title="sorcer.security.sign.SignedServiceTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignedServiceTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignedServiceTask </td></tr>
 		</table></td></tr>
@@ -41,7 +25,23 @@ digraph G {
 <tr><td align="left" balign="left"> + verify(publickey : PublicKey, signature1 : Signature) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SignedServiceTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.security.sign.SignedTaskInterface
+	c539158 [label=<<table title="sorcer.security.sign.SignedTaskInterface" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignedTaskInterface.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SignedTaskInterface </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProcessByteSignature() : byte[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSignature(signature : byte[], mobject : MarshalledObject&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getObject() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + verify(publickey : PublicKey, signature1 : Signature) : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SignedTaskInterface.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.security.sign.SignedServiceTask implements sorcer.security.sign.SignedTaskInterface
-	c504034:p -> c504035:p [dir=back,arrowtail=empty,style=dashed];
+	c539158:p -> c539157:p [dir=back,arrowtail=empty,style=dashed];
 }
 

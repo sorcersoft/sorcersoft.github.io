@@ -10,13 +10,12 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.SorcerDescriptorUtil
-	c512064 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerDescriptorUtil.html">
+	c548384 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerDescriptorUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerDescriptorUtil </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SOS_PLATFORM : ArtifactCoordinates </td></tr>
-<tr><td align="left" balign="left"> + COMMONS_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + EXERTMONITOR_SERVICE : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + EXERTLET_UI : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + DBP_PRV : ArtifactCoordinates </td></tr>
@@ -24,16 +23,12 @@ digraph G {
 <tr><td align="left" balign="left"> + CATALOGER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + LOGGER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + LOGGER_SUI : ArtifactCoordinates </td></tr>
-<tr><td align="left" balign="left"> + SPACER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + JOBBER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + SLEEPYCAT : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + SERVICEUI : ArtifactCoordinates </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SorcerDescriptorUtil() </td></tr>
-<tr><td align="left" balign="left"> + getSpacer(policy : String, spacerConfig : String[]) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getSpacer(policy : String, port : int, spacerConfig : String[]) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getSpacer(policy : String, hostAddress : String, port : int, spacerConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getJobber(policy : String, jobberConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getJobber(policy : String, port : int, jobberConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getJobber(policy : String, hostAddress : String, port : int, jobberConfig : String[]) : ServiceDescriptor </td></tr>

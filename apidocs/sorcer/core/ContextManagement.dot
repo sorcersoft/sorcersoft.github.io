@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.ContextManagement
-	c169833 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextManagement.html">
+	c180244 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextManagement </td></tr>
@@ -20,24 +20,24 @@ digraph G {
 <tr><td align="left" balign="left"> + CONTEXT_FILENAME : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContextScript() : String </td></tr>
-<tr><td align="left" balign="left"> + getMethodContext(interfaceName : String, methodName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getMethodContextScript(interfaceName : String, methodName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + saveMethodContext(interfaceName : String, methodName : String, theContext : Context&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + currentContextList(interfaceName : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + deleteContext(interfaceName : String, methodName : String) : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextScript() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethodContext(interfaceName : String, methodName : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethodContextScript(interfaceName : String, methodName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + saveMethodContext(interfaceName : String, methodName : String, theContext : Context&lt;&gt;) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + currentContextList(interfaceName : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteContext(interfaceName : String, methodName : String) : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.RemoteContextManagement
-	c169835 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
+	// sorcer.core.provider.RemoteContextManagement
+	c180275 [label=<<table title="sorcer.core.provider.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./provider/RemoteContextManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
 		</table></td></tr>
-		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./provider/RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextManagementAdapter
-	c170024 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ContextManagementAdapter.html">
+	c180305 [label=<<table title="sorcer.core.context.ContextManagementAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./context/ContextManagementAdapter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextManagementAdapter </td></tr>
 		</table></td></tr>
@@ -55,9 +55,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getMethodContextScript(interfaceName : String, methodName : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./context/ContextManagementAdapter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.RemoteContextManagement implements sorcer.core.ContextManagement
-	c169833:p -> c169835:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.RemoteContextManagement implements sorcer.core.ContextManagement
+	c180244:p -> c180275:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ContextManagementAdapter implements sorcer.core.ContextManagement
-	c169833:p -> c170024:p [dir=back,arrowtail=empty,style=dashed];
+	c180244:p -> c180305:p [dir=back,arrowtail=empty,style=dashed];
 }
 

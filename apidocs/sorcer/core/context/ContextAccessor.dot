@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ContextAccessor
-	c164953 [label=<<table title="sorcer.core.context.ContextAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextAccessor.html">
+	c176541 [label=<<table title="sorcer.core.context.ContextAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ContextAccessor </td></tr>
@@ -19,11 +19,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + save(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + saveAs(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContext(id : String, principal : SorcerPrincipal) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContext(id : Uuid, version : float, principal : SorcerPrincipal) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getHistory(id : String) : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + save(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + saveAs(context : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(id : String, principal : SorcerPrincipal) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(id : Uuid, version : float, principal : SorcerPrincipal) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHistory(id : String) : String </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

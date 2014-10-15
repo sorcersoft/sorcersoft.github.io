@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.rio.cli.StartOptionHandler
-	c543461 [label=<<table title="sorcer.rio.cli.StartOptionHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StartOptionHandler.html">
+	c581759 [label=<<table title="sorcer.rio.cli.StartOptionHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StartOptionHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StartOptionHandler </td></tr>
 		</table></td></tr>
@@ -24,9 +24,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StartOptionHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.rio.cli.StartOptionHandler implements org.rioproject.tools.cli.OptionHandler
-	c543463:p -> c543461:p [dir=back,arrowtail=empty,style=dashed];
+	c581761:p -> c581759:p [dir=back,arrowtail=empty,style=dashed];
 	// org.rioproject.tools.cli.OptionHandler
-	c543463 [label=<<table title="org.rioproject.tools.cli.OptionHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c581761 [label=<<table title="org.rioproject.tools.cli.OptionHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OptionHandler </td></tr>
@@ -35,8 +35,8 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + process(arg0 : String, arg1 : BufferedReader, arg2 : PrintStream) : String </td></tr>
-<tr><td align="left" balign="left"> + getUsage() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + process(arg0 : String, arg1 : BufferedReader, arg2 : PrintStream) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getUsage() : String </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

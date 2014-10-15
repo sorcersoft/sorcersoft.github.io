@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.co.tuple.FidelityEntry<T>
-	c329333 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityEntry.html">
+	c401972 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FidelityEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FidelityEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.OutEntry<T>
-	c329336 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OutEntry.html">
+	c401975 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OutEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OutEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -41,6 +41,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.OutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
-	c329333:p -> c329336:p [dir=back,arrowtail=empty];
+	c401972:p -> c401975:p [dir=back,arrowtail=empty];
 }
 

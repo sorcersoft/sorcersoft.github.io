@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.account.provider.Money
-	c330133 [label=<<table title="sorcer.account.provider.Money" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Money.html">
+	c357170 [label=<<table title="sorcer.account.provider.Money" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Money.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Money </td></tr>
 		</table></td></tr>
@@ -30,9 +30,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Money.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.account.provider.Money implements java.io.Serializable
-	c330145:p -> c330133:p [dir=back,arrowtail=empty,style=dashed];
+	c357200:p -> c357170:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c330145 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c357200 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

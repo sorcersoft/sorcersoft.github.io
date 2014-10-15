@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.service.ServiceBeanDestroyer
-	c459667 [label=<<table title="sorcer.core.service.ServiceBeanDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBeanDestroyer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceBeanDestroyer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceBeanDestroyer() </td></tr>
-<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;&gt;, o : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceBeanDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.config.AbstractBeanListener
-	c459672 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../config/AbstractBeanListener.html">
+	c490945 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../config/AbstractBeanListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractBeanListener </font></td></tr>
 		</table></td></tr>
@@ -37,7 +24,20 @@ digraph G {
 <tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../config/AbstractBeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.service.ServiceBeanDestroyer
+	c490956 [label=<<table title="sorcer.core.service.ServiceBeanDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBeanDestroyer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceBeanDestroyer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceBeanDestroyer() </td></tr>
+<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;&gt;, o : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceBeanDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.service.ServiceBeanDestroyer extends sorcer.config.AbstractBeanListener
-	c459672:p -> c459667:p [dir=back,arrowtail=empty];
+	c490945:p -> c490956:p [dir=back,arrowtail=empty];
 }
 

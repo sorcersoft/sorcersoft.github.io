@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.exertmonitor.db.SessionDatabaseViews
-	c491926 [label=<<table title="sorcer.core.provider.exertmonitor.db.SessionDatabaseViews" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SessionDatabaseViews.html">
+	c524456 [label=<<table title="sorcer.core.provider.exertmonitor.db.SessionDatabaseViews" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SessionDatabaseViews.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SessionDatabaseViews </td></tr>
 		</table></td></tr>
@@ -19,7 +19,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SessionDatabaseViews(db : SessionDatabase) </td></tr>
-<tr><td align="left" balign="left"> + getSessionMap() : StoredMap&lt;UuidKey, IMonitorSession&gt; </td></tr>
+<tr><td align="left" balign="left"> + getSessionMap() : StoredMap&lt;UuidKey, MonitorManagementSession&gt; </td></tr>
 <tr><td align="left" balign="left"> + getSessionSet() : StoredValueSet&lt;MonitorSession&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SessionDatabaseViews.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];

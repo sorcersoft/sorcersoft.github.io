@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.launcher.SorcerLauncher
-	c514215 [label=<<table title="sorcer.launcher.SorcerLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerLauncher.html">
+	c550614 [label=<<table title="sorcer.launcher.SorcerLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerLauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerLauncher </td></tr>
 		</table></td></tr>
@@ -34,7 +34,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.Launcher
-	c514216 [label=<<table title="sorcer.launcher.Launcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Launcher.html">
+	c550621 [label=<<table title="sorcer.launcher.Launcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Launcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Launcher </font></td></tr>
 		</table></td></tr>
@@ -71,6 +71,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Launcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.SorcerLauncher extends sorcer.launcher.Launcher
-	c514216:p -> c514215:p [dir=back,arrowtail=empty];
+	c550621:p -> c550614:p [dir=back,arrowtail=empty];
 }
 

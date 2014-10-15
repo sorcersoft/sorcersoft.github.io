@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo
-	c467962 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.html">
+	c499571 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogerInfo </td></tr>
 		</table></td></tr>
@@ -18,7 +18,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceCataloger.CatalogerInfo() </td></tr>
+<tr><td align="left" balign="left"> + CatalogerInfo() </td></tr>
 <tr><td align="left" balign="left"> + setCataloger(cataloger : Cataloger) </td></tr>
 <tr><td align="left" balign="left"> + addObserver(observer : Observer) </td></tr>
 <tr><td align="left" balign="left"> + put(key : ServiceCataloger.CatalogerInfo.InterfaceList, value : List&lt;ServiceItem&gt;) : List&lt;ServiceItem&gt; </td></tr>
@@ -42,18 +42,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo extends java.util.concurrent.ConcurrentHashMap<sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList, java.util.List<net.jini.core.lookup.ServiceItem>>
-	c468003:p -> c467962:p [dir=back,arrowtail=empty];
+	c499623:p -> c499571:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo implements java.io.Serializable
-	c468004:p -> c467962:p [dir=back,arrowtail=empty,style=dashed];
+	c499624:p -> c499571:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c468004 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c499624 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.util.concurrent.ConcurrentHashMap<K, V>
-	c468003 [label=<<table title="java.util.concurrent.ConcurrentHashMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html">
+	c499623 [label=<<table title="java.util.concurrent.ConcurrentHashMap" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConcurrentHashMap&lt;K, V&gt; </td></tr>
 		</table></td></tr>
@@ -61,30 +61,75 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ConcurrentHashMap(arg0 : int, arg1 : float, arg2 : int) </td></tr>
-<tr><td align="left" balign="left"> + ConcurrentHashMap(arg0 : int, arg1 : float) </td></tr>
-<tr><td align="left" balign="left"> + ConcurrentHashMap(arg0 : int) </td></tr>
 <tr><td align="left" balign="left"> + ConcurrentHashMap() </td></tr>
+<tr><td align="left" balign="left"> + ConcurrentHashMap(arg0 : int) </td></tr>
 <tr><td align="left" balign="left"> + ConcurrentHashMap(arg0 : Map&lt;?, ?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isEmpty() : boolean </td></tr>
+<tr><td align="left" balign="left"> + ConcurrentHashMap(arg0 : int, arg1 : float) </td></tr>
+<tr><td align="left" balign="left"> + ConcurrentHashMap(arg0 : int, arg1 : float, arg2 : int) </td></tr>
 <tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + isEmpty() : boolean </td></tr>
 <tr><td align="left" balign="left"> + get(arg0 : Object) : V </td></tr>
 <tr><td align="left" balign="left"> + containsKey(arg0 : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + containsValue(arg0 : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + contains(arg0 : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + put(arg0 : K, arg1 : V) : V </td></tr>
-<tr><td align="left" balign="left"> + putIfAbsent(arg0 : K, arg1 : V) : V </td></tr>
 <tr><td align="left" balign="left"> + putAll(arg0 : Map&lt;?, ?&gt;) </td></tr>
 <tr><td align="left" balign="left"> + remove(arg0 : Object) : V </td></tr>
+<tr><td align="left" balign="left"> + clear() </td></tr>
+<tr><td align="left" balign="left"> + keySet() : ConcurrentHashMap.KeySetView&lt;K, V&gt; </td></tr>
+<tr><td align="left" balign="left"> + values() : Collection&lt;V&gt; </td></tr>
+<tr><td align="left" balign="left"> + entrySet() : Set&lt;Map.Entry&lt;K, V&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + equals(arg0 : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + putIfAbsent(arg0 : K, arg1 : V) : V </td></tr>
 <tr><td align="left" balign="left"> + remove(arg0 : Object, arg1 : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + replace(arg0 : K, arg1 : V, arg2 : V) : boolean </td></tr>
 <tr><td align="left" balign="left"> + replace(arg0 : K, arg1 : V) : V </td></tr>
-<tr><td align="left" balign="left"> + clear() </td></tr>
-<tr><td align="left" balign="left"> + keySet() : Set&lt;K&gt; </td></tr>
-<tr><td align="left" balign="left"> + values() : Collection&lt;V&gt; </td></tr>
-<tr><td align="left" balign="left"> + entrySet() : Set&lt;Map.Entry&lt;K, V&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getOrDefault(arg0 : Object, arg1 : V) : V </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : BiConsumer&lt;?, ?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + replaceAll(arg0 : BiFunction&lt;?, ?, ?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + computeIfAbsent(arg0 : K, arg1 : Function&lt;?, ?&gt;) : V </td></tr>
+<tr><td align="left" balign="left"> + computeIfPresent(arg0 : K, arg1 : BiFunction&lt;?, ?, ?&gt;) : V </td></tr>
+<tr><td align="left" balign="left"> + compute(arg0 : K, arg1 : BiFunction&lt;?, ?, ?&gt;) : V </td></tr>
+<tr><td align="left" balign="left"> + merge(arg0 : K, arg1 : V, arg2 : BiFunction&lt;?, ?, ?&gt;) : V </td></tr>
+<tr><td align="left" balign="left"> + contains(arg0 : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + keys() : Enumeration&lt;K&gt; </td></tr>
 <tr><td align="left" balign="left"> + elements() : Enumeration&lt;V&gt; </td></tr>
+<tr><td align="left" balign="left"> + mappingCount() : long </td></tr>
+<tr><td align="left" balign="left"> + newKeySet() : ConcurrentHashMap.KeySetView&lt;K, Boolean&gt; </td></tr>
+<tr><td align="left" balign="left"> + newKeySet(arg0 : int) : ConcurrentHashMap.KeySetView&lt;K, Boolean&gt; </td></tr>
+<tr><td align="left" balign="left"> + keySet(arg0 : V) : ConcurrentHashMap.KeySetView&lt;K, V&gt; </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : long, arg1 : BiConsumer&lt;?, ?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : long, arg1 : BiFunction&lt;?, ?, ?&gt;, arg2 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + search(arg0 : long, arg1 : BiFunction&lt;?, ?, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduce(arg0 : long, arg1 : BiFunction&lt;?, ?, ?&gt;, arg2 : BiFunction&lt;?, ?, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduceToDouble(arg0 : long, arg1 : ToDoubleBiFunction&lt;?, ?&gt;, arg2 : double, arg3 : DoubleBinaryOperator) : double </td></tr>
+<tr><td align="left" balign="left"> + reduceToLong(arg0 : long, arg1 : ToLongBiFunction&lt;?, ?&gt;, arg2 : long, arg3 : LongBinaryOperator) : long </td></tr>
+<tr><td align="left" balign="left"> + reduceToInt(arg0 : long, arg1 : ToIntBiFunction&lt;?, ?&gt;, arg2 : int, arg3 : IntBinaryOperator) : int </td></tr>
+<tr><td align="left" balign="left"> + forEachKey(arg0 : long, arg1 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + forEachKey(arg0 : long, arg1 : Function&lt;?, ?&gt;, arg2 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + searchKeys(arg0 : long, arg1 : Function&lt;?, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduceKeys(arg0 : long, arg1 : BiFunction&lt;?, ?, ?&gt;) : K </td></tr>
+<tr><td align="left" balign="left"> + reduceKeys(arg0 : long, arg1 : Function&lt;?, ?&gt;, arg2 : BiFunction&lt;?, ?, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduceKeysToDouble(arg0 : long, arg1 : ToDoubleFunction&lt;?&gt;, arg2 : double, arg3 : DoubleBinaryOperator) : double </td></tr>
+<tr><td align="left" balign="left"> + reduceKeysToLong(arg0 : long, arg1 : ToLongFunction&lt;?&gt;, arg2 : long, arg3 : LongBinaryOperator) : long </td></tr>
+<tr><td align="left" balign="left"> + reduceKeysToInt(arg0 : long, arg1 : ToIntFunction&lt;?&gt;, arg2 : int, arg3 : IntBinaryOperator) : int </td></tr>
+<tr><td align="left" balign="left"> + forEachValue(arg0 : long, arg1 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + forEachValue(arg0 : long, arg1 : Function&lt;?, ?&gt;, arg2 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + searchValues(arg0 : long, arg1 : Function&lt;?, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduceValues(arg0 : long, arg1 : BiFunction&lt;?, ?, ?&gt;) : V </td></tr>
+<tr><td align="left" balign="left"> + reduceValues(arg0 : long, arg1 : Function&lt;?, ?&gt;, arg2 : BiFunction&lt;?, ?, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduceValuesToDouble(arg0 : long, arg1 : ToDoubleFunction&lt;?&gt;, arg2 : double, arg3 : DoubleBinaryOperator) : double </td></tr>
+<tr><td align="left" balign="left"> + reduceValuesToLong(arg0 : long, arg1 : ToLongFunction&lt;?&gt;, arg2 : long, arg3 : LongBinaryOperator) : long </td></tr>
+<tr><td align="left" balign="left"> + reduceValuesToInt(arg0 : long, arg1 : ToIntFunction&lt;?&gt;, arg2 : int, arg3 : IntBinaryOperator) : int </td></tr>
+<tr><td align="left" balign="left"> + forEachEntry(arg0 : long, arg1 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + forEachEntry(arg0 : long, arg1 : Function&lt;Map.Entry&lt;K, V&gt;, ?&gt;, arg2 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + searchEntries(arg0 : long, arg1 : Function&lt;Map.Entry&lt;K, V&gt;, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduceEntries(arg0 : long, arg1 : BiFunction&lt;Map.Entry&lt;K, V&gt;, Map.Entry&lt;K, V&gt;, ?&gt;) : Map.Entry&lt;K, V&gt; </td></tr>
+<tr><td align="left" balign="left"> + reduceEntries(arg0 : long, arg1 : Function&lt;Map.Entry&lt;K, V&gt;, ?&gt;, arg2 : BiFunction&lt;?, ?, ?&gt;) : U </td></tr>
+<tr><td align="left" balign="left"> + reduceEntriesToDouble(arg0 : long, arg1 : ToDoubleFunction&lt;Map.Entry&lt;K, V&gt;&gt;, arg2 : double, arg3 : DoubleBinaryOperator) : double </td></tr>
+<tr><td align="left" balign="left"> + reduceEntriesToLong(arg0 : long, arg1 : ToLongFunction&lt;Map.Entry&lt;K, V&gt;&gt;, arg2 : long, arg3 : LongBinaryOperator) : long </td></tr>
+<tr><td align="left" balign="left"> + reduceEntriesToInt(arg0 : long, arg1 : ToIntFunction&lt;Map.Entry&lt;K, V&gt;&gt;, arg2 : int, arg3 : IntBinaryOperator) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

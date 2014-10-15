@@ -9,8 +9,24 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.client.ServiceScope
+	c33542 [label=<<table title="sorcer.client.ServiceScope" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceScope.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> ServiceScope </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> preferLocal </td></tr>
+<tr><td align="left" balign="left"> preferRemote </td></tr>
+<tr><td align="left" balign="left"> requireLocal </td></tr>
+<tr><td align="left" balign="left"> requireRemote </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceScope.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.client.ClientProxyFactory<T>
-	c32293 [label=<<table title="sorcer.client.ClientProxyFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClientProxyFactory.html">
+	c33543 [label=<<table title="sorcer.client.ClientProxyFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClientProxyFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ClientProxyFactory&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -29,21 +45,5 @@ digraph G {
 <tr><td align="left" balign="left"> + setFilter(filter : ServiceItemFilter) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ClientProxyFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.client.ServiceScope
-	c32294 [label=<<table title="sorcer.client.ServiceScope" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceScope.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> ServiceScope </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> preferLocal </td></tr>
-<tr><td align="left" balign="left"> preferRemote </td></tr>
-<tr><td align="left" balign="left"> requireLocal </td></tr>
-<tr><td align="left" balign="left"> requireRemote </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceScope.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

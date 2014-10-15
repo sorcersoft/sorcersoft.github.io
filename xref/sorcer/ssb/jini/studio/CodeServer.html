@@ -131,7 +131,7 @@
 <a class="jxr_linenumber" name="121" href="#121">121</a> 		System.out.println(<span class="jxr_string">"SSB Code Server started on port "</span> + port);
 <a class="jxr_linenumber" name="122" href="#122">122</a> 
 <a class="jxr_linenumber" name="123" href="#123">123</a> 		setCodebase(port);
-<a class="jxr_linenumber" name="124" href="#124">124</a>         _thread = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">this</strong>, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] CodeServer-"</span> + port);
+<a class="jxr_linenumber" name="124" href="#124">124</a>         _thread = <strong class="jxr_keyword">new</strong> Thread(<strong class="jxr_keyword">this</strong>, <span class="jxr_string">"CodeServer-"</span> + port);
 <a class="jxr_linenumber" name="125" href="#125">125</a>         _thread.start();
 <a class="jxr_linenumber" name="126" href="#126">126</a> 	}
 <a class="jxr_linenumber" name="127" href="#127">127</a> 
@@ -143,7 +143,7 @@
 <a class="jxr_linenumber" name="133" href="#133">133</a> 					<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> run() {
 <a class="jxr_linenumber" name="134" href="#134">134</a> 						serviceRequest(request);
 <a class="jxr_linenumber" name="135" href="#135">135</a> 					}
-<a class="jxr_linenumber" name="136" href="#136">136</a>                 }, <span class="jxr_string">"["</span> + Thread.currentThread().getName() + <span class="jxr_string">"] CodeServer.serviceRequest"</span>);
+<a class="jxr_linenumber" name="136" href="#136">136</a>                 }, <span class="jxr_string">"CodeServer.serviceRequest"</span>);
 <a class="jxr_linenumber" name="137" href="#137">137</a>                 t.start();
 <a class="jxr_linenumber" name="138" href="#138">138</a> 			} <strong class="jxr_keyword">catch</strong> (Exception ex) {
 <a class="jxr_linenumber" name="139" href="#139">139</a> 				System.out.println(ex);

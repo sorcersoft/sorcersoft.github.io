@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.AdministratableProvider
-	c546376 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AdministratableProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
-		</table></td></tr>
-		</table>>, URL="../AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.RemoteContextManagement
-	c546381 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../RemoteContextManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="../RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider
-	c546597 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StaticServiceProvider.html">
+	c584892 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -37,30 +23,25 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c546607 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
+	c584897 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
-<tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
+<tr><td align="left" balign="left"> # scheduler : ScheduledExecutorService </td></tr>
 <tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_THREADS : String </td></tr>
-<tr><td align="left" balign="left"> + MANAGER_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + LOAD_FACTOR : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT_INCREMENT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ServiceProvider() </td></tr>
+<tr><td align="left" balign="left"> + ServiceProvider() </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(providerPropertiesFile : String) </td></tr>
 <tr><td align="left" balign="left"> + getGrants(cl : Class&lt;?&gt;, principals : Principal[]) : Permission[] </td></tr>
-<tr><td align="left" balign="left"> + grant(cl : Class&lt;?&gt;, principals : Principal[], permissions : Permission[]) </td></tr>
 <tr><td align="left" balign="left"> + grantSupported() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
 <tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
@@ -122,6 +103,7 @@ digraph G {
 <tr><td align="left" balign="left"> + invokeMethod(method : String, context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + invokeMethod(methodName : String, ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
@@ -157,7 +139,6 @@ digraph G {
 <tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -166,15 +147,27 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextDatabase() : boolean </td></tr>
 <tr><td align="left" balign="left"> # setupThreadManager() </td></tr>
 <tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + initSpaceSupport() </td></tr>
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.RemoteContextManagement
+	c584904 [label=<<table title="sorcer.core.provider.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.AdministratableProvider
+	c584908 [label=<<table title="sorcer.core.provider.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AdministratableProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partnership
-	c546638 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partnership.html">
+	c584920 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partnership.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partnership </td></tr>
@@ -183,53 +176,53 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setInner(inner : Object) </td></tr>
-<tr><td align="left" balign="left"> + setAdmin(admin : Object) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setInner(inner : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAdmin(admin : Object) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../proxy/Partnership.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partner
-	c546640 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partner.html">
+	c584922 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partner </td></tr>
 		</table></td></tr>
 		</table>>, URL="../proxy/Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c546607:p -> c546597:p [dir=back,arrowtail=empty];
-	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.AdministratableProvider
-	c546376:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
+	c584897:p -> c584892:p [dir=back,arrowtail=empty];
+	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.provider.AdministratableProvider
+	c584908:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements net.jini.export.ProxyAccessor
-	c547089:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
+	c585527:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements net.jini.security.proxytrust.ServerProxyTrust
-	c547090:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
+	c585528:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements net.jini.core.constraint.RemoteMethodControl
-	c547091:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
+	c585529:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements com.sun.jini.start.LifeCycle
-	c547092:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
+	c585530:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.proxy.Partner
-	c546640:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
+	c584922:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.proxy.Partnership
-	c546638:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.RemoteContextManagement
-	c546381:p -> c546597:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.ServiceProvider implements sorcer.core.AdministratableProvider
-	c546376:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
+	c584920:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.provider.RemoteContextManagement
+	c584904:p -> c584892:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.AdministratableProvider
+	c584908:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.export.ProxyAccessor
-	c547089:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
+	c585527:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.security.proxytrust.ServerProxyTrust
-	c547090:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
+	c585528:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.core.constraint.RemoteMethodControl
-	c547091:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
+	c585529:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements com.sun.jini.start.LifeCycle
-	c547092:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
+	c585530:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.proxy.Partner
-	c546640:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
+	c584922:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.proxy.Partnership
-	c546638:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.ServiceProvider implements sorcer.core.RemoteContextManagement
-	c546381:p -> c546607:p [dir=back,arrowtail=empty,style=dashed];
+	c584920:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.RemoteContextManagement
+	c584904:p -> c584897:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.export.ProxyAccessor
-	c547089 [label=<<table title="net.jini.export.ProxyAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/export/ProxyAccessor.html">
+	c585527 [label=<<table title="net.jini.export.ProxyAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/export/ProxyAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProxyAccessor </td></tr>
@@ -238,37 +231,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxy() : Object </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/export/ProxyAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.sun.jini.start.LifeCycle
-	c547092 [label=<<table title="com.sun.jini.start.LifeCycle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> LifeCycle </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + unregister(arg0 : Object) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// net.jini.security.proxytrust.ServerProxyTrust
-	c547090 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ServerProxyTrust </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
-		</table></td></tr>
-		</table>>, URL="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.core.constraint.RemoteMethodControl
-	c547091 [label=<<table title="net.jini.core.constraint.RemoteMethodControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html">
+	c585529 [label=<<table title="net.jini.core.constraint.RemoteMethodControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteMethodControl </td></tr>
@@ -277,9 +244,35 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setConstraints(arg0 : MethodConstraints) : RemoteMethodControl </td></tr>
-<tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setConstraints(arg0 : MethodConstraints) : RemoteMethodControl </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getConstraints() : MethodConstraints </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// net.jini.security.proxytrust.ServerProxyTrust
+	c585528 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ServerProxyTrust </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxyVerifier() : TrustVerifier </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.sun.jini.start.LifeCycle
+	c585530 [label=<<table title="com.sun.jini.start.LifeCycle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> LifeCycle </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + unregister(arg0 : Object) : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

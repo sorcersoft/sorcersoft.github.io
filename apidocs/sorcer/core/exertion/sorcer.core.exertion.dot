@@ -9,22 +9,132 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.exertion.ExertionMethodFactory
-	c35198 [label=<<table title="sorcer.core.exertion.ExertionMethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionMethodFactory.html">
+	// sorcer.core.exertion.JobException
+	c44897 [label=<<table title="sorcer.core.exertion.JobException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JobException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertionMethodFactory </td></tr>
+<tr><td align="center" balign="center"> JobException </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getFactory() : ExertionMethodFactory </td></tr>
-<tr><td align="left" balign="left"> + createMethod(method : Signature) : Signature </td></tr>
-<tr><td align="left" balign="left"> + createMethods(signatures : List&lt;Signature&gt;) : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + JobException() </td></tr>
+<tr><td align="left" balign="left"> + JobException(job : Job) </td></tr>
+<tr><td align="left" balign="left"> + JobException(msg : String) </td></tr>
+<tr><td align="left" balign="left"> + JobException(msg : String, job : Job) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ExertionMethodFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./JobException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.ObjectBlock
+	c44898 [label=<<table title="sorcer.core.exertion.ObjectBlock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectBlock.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ObjectBlock </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ObjectBlock() </td></tr>
+<tr><td align="left" balign="left"> + ObjectBlock(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ObjectBlock(name : String, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + doBlock(txn : Transaction) : Block </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ObjectBlock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.NetBlock
+	c44899 [label=<<table title="sorcer.core.exertion.NetBlock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetBlock.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> NetBlock </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NetBlock() </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(name : String) </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(name : String, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + NetBlock(name : String, principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> + doBlock(txn : Transaction) : Block </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./NetBlock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.LoopExertion
+	c44900 [label=<<table title="sorcer.core.exertion.LoopExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoopExertion.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoopExertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # condition : Condition </td></tr>
+<tr><td align="left" balign="left"> # target : Exertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoopExertion(name : String, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + LoopExertion(name : String, condition : Condition, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, condition : Condition, invoker : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getCondition() : Condition </td></tr>
+<tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getConditions() : List&lt;Conditional&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExceptions(exceptions : List&lt;ThrowableTrace&gt;) : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoopExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.Jobs
+	c44901 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Jobs.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Jobs </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + isCatalogSingleton(job : Job) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isCatalogParallel(job : Job) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isCatalogSequential(job : Job) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isCatalogBlock(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isSpaceBlock(exertion : Exertion) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isSpaceSequential(job : Job) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isSpaceParallel(job : Job) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isSpaceSingleton(job : Job) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getInputExertions(job : Job) : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + removeExceptions(job : Job) </td></tr>
+<tr><td align="left" balign="left"> + removeExceptions(sc : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getTaskContexts(ex : Exertion) : List&lt;Context&lt;&gt;&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Jobs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.NetTask
+	c44902 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetTask.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> NetTask </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NetTask() </td></tr>
+<tr><td align="left" balign="left"> + NetTask(name : String) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(jobId : Uuid, jobState : int) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(name : String, description : String) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(name : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(name : String, description : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(name : String, description : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + NetTask(name : String, signatures : Signature[], context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setService(provider : Service) </td></tr>
+<tr><td align="left" balign="left"> + getService() : Service </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getTemplate() : NetTask </td></tr>
+<tr><td align="left" balign="left"> + getTemplate(provider : String) : NetTask </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.OptExertion
-	c35199 [label=<<table title="sorcer.core.exertion.OptExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OptExertion.html">
+	c44903 [label=<<table title="sorcer.core.exertion.OptExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OptExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OptExertion </td></tr>
 		</table></td></tr>
@@ -51,104 +161,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OptExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ObjectTask
-	c35200 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectTask </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.LoopExertion
-	c35201 [label=<<table title="sorcer.core.exertion.LoopExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoopExertion.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LoopExertion </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # condition : Condition </td></tr>
-<tr><td align="left" balign="left"> # target : Exertion </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoopExertion(name : String, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + LoopExertion(name : String, condition : Condition, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, condition : Condition, invoker : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getCondition() : Condition </td></tr>
-<tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getConditions() : List&lt;Conditional&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExceptions(exceptions : List&lt;ThrowableTrace&gt;) : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./LoopExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ObjectJob
-	c35202 [label=<<table title="sorcer.core.exertion.ObjectJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectJob.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectJob </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ObjectJob(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ObjectJob(name : String, signature : Signature) </td></tr>
-<tr><td align="left" balign="left"> + ObjectJob(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ObjectJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.EvaluationTask
-	c35203 [label=<<table title="sorcer.core.exertion.EvaluationTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EvaluationTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> EvaluationTask </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EvaluationTask(name : String) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(evaluator : Evaluation&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getEvaluation() : Evaluation&lt;&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./EvaluationTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.NetJob
-	c35204 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetJob.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> NetJob </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NetJob() </td></tr>
-<tr><td align="left" balign="left"> + NetJob(name : String) </td></tr>
-<tr><td align="left" balign="left"> + NetJob(principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + NetJob(name : String, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./NetJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.AntTask
-	c35205 [label=<<table title="sorcer.core.exertion.AntTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AntTask.html">
+	c44904 [label=<<table title="sorcer.core.exertion.AntTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AntTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AntTask </td></tr>
 		</table></td></tr>
@@ -167,7 +181,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AntTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.ExertionEnvelop
-	c35206 [label=<<table title="sorcer.core.exertion.ExertionEnvelop" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionEnvelop.html">
+	c44905 [label=<<table title="sorcer.core.exertion.ExertionEnvelop" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionEnvelop.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionEnvelop </td></tr>
 		</table></td></tr>
@@ -198,79 +212,81 @@ digraph G {
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionEnvelop.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.JobException
-	c35207 [label=<<table title="sorcer.core.exertion.JobException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JobException.html">
+	// sorcer.core.exertion.EvaluationTask
+	c44906 [label=<<table title="sorcer.core.exertion.EvaluationTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EvaluationTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> JobException </td></tr>
+<tr><td align="center" balign="center"> EvaluationTask </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + JobException() </td></tr>
-<tr><td align="left" balign="left"> + JobException(job : Job) </td></tr>
-<tr><td align="left" balign="left"> + JobException(msg : String) </td></tr>
-<tr><td align="left" balign="left"> + JobException(msg : String, job : Job) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./JobException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.NetTask
-	c35208 [label=<<table title="sorcer.core.exertion.NetTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> NetTask </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NetTask() </td></tr>
-<tr><td align="left" balign="left"> + NetTask(name : String) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(jobId : Uuid, jobState : int) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(name : String, description : String) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(name : String, signature : Signature) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(name : String, description : String, signature : Signature) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(name : String, description : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + NetTask(name : String, signatures : Signature[], context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setService(provider : Service) </td></tr>
-<tr><td align="left" balign="left"> + getService() : Service </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(name : String) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(evaluator : Evaluation&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getTemplate() : NetTask </td></tr>
-<tr><td align="left" balign="left"> + getTemplate(provider : String) : NetTask </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getEvaluation() : Evaluation&lt;&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./NetTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ObjectBlock
-	c35209 [label=<<table title="sorcer.core.exertion.ObjectBlock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectBlock.html">
+		</table>>, URL="./EvaluationTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.ObjectJob
+	c44907 [label=<<table title="sorcer.core.exertion.ObjectJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectJob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectBlock </td></tr>
+<tr><td align="center" balign="center"> ObjectJob </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ObjectBlock() </td></tr>
-<tr><td align="left" balign="left"> + ObjectBlock(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ObjectBlock(name : String, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doBlock(txn : Transaction) : Block </td></tr>
+<tr><td align="left" balign="left"> + ObjectJob(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ObjectJob(name : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + ObjectJob(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
 <tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ObjectBlock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ContextTask
-	c35210 [label=<<table title="sorcer.core.exertion.ContextTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextTask.html">
+		</table>>, URL="./ObjectJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.NetJob
+	c44908 [label=<<table title="sorcer.core.exertion.NetJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetJob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ContextTask </td></tr>
+<tr><td align="center" balign="center"> NetJob </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ContextTask(serviceType : Class&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getProviderContext() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + NetJob() </td></tr>
+<tr><td align="left" balign="left"> + NetJob(name : String) </td></tr>
+<tr><td align="left" balign="left"> + NetJob(principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + NetJob(name : String, principal : SorcerPrincipal) </td></tr>
+<tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ContextTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./NetJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.ObjectTask
+	c44909 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectTask.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ObjectTask </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.AltExertion
-	c35211 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AltExertion.html">
+	c44910 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AltExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AltExertion </td></tr>
 		</table></td></tr>
@@ -293,68 +309,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AltExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.NetBlock
-	c35212 [label=<<table title="sorcer.core.exertion.NetBlock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetBlock.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> NetBlock </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NetBlock() </td></tr>
-<tr><td align="left" balign="left"> + NetBlock(name : String) </td></tr>
-<tr><td align="left" balign="left"> + NetBlock(name : String, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + NetBlock(principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + NetBlock(name : String, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + getTemplate() : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(txn : Transaction) : Block </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./NetBlock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.Jobs
-	c35213 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Jobs.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Jobs </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isCatalogSingleton(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosCatalogSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosCatalogParallel(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isCatalogParallel(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isCatalogSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isCatalogBlock(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSpaceBlock(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSWIFSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSpaceSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosSpaceSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSpaceParallel(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosSpaceParallel(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSpaceSingleton(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isParallel(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getInputExertions(job : Job) : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getCC(sc : Context&lt;&gt;) : ControlContext </td></tr>
-<tr><td align="left" balign="left"> + removeExceptions(job : Job) </td></tr>
-<tr><td align="left" balign="left"> + removeExceptions(sc : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + replaceNullIDs(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + replaceNullIDs(task : ServiceExertion) </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + getID() : String </td></tr>
-<tr><td align="left" balign="left"> + getEntryEnvelop(ex : Exertion) : ExertionEnvelop </td></tr>
-<tr><td align="left" balign="left"> + getTaskContexts(ex : Exertion) : List&lt;Context&lt;&gt;&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Jobs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.NetTask extends sorcer.core.exertion.ObjectTask
-	c35200:p -> c35208:p [dir=back,arrowtail=empty];
-	//sorcer.core.exertion.ContextTask extends sorcer.core.exertion.NetTask
-	c35208:p -> c35210:p [dir=back,arrowtail=empty];
+	c44909:p -> c44902:p [dir=back,arrowtail=empty];
 }
 

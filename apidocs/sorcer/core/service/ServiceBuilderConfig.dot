@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.service.ServiceBuilderConfig
-	c465472 [label=<<table title="sorcer.core.service.ServiceBuilderConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBuilderConfig.html">
+	c496985 [label=<<table title="sorcer.core.service.ServiceBuilderConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBuilderConfig.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceBuilderConfig </td></tr>
 		</table></td></tr>
@@ -18,7 +18,7 @@ digraph G {
 <tr><td align="left" balign="left"> + type : Class&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + export : boolean </td></tr>
 <tr><td align="left" balign="left"> + register : boolean </td></tr>
-<tr><td align="left" balign="left"> + exporter : Exporter </td></tr>
+<tr><td align="left" balign="left"> + exporterFactory : AbstractExporterFactory&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> + lookupGroups : String[] </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

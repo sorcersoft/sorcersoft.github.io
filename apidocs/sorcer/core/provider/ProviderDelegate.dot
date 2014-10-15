@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.ProviderDelegate
-	c404387 [label=<<table title="sorcer.core.provider.ProviderDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderDelegate.html">
+	c434184 [label=<<table title="sorcer.core.provider.ProviderDelegate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderDelegate.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderDelegate </td></tr>
 		</table></td></tr>
@@ -37,6 +37,7 @@ digraph G {
 <tr><td align="left" balign="left"> # mutualExclusion : boolean </td></tr>
 <tr><td align="left" balign="left"> # providerProxy : Remote </td></tr>
 <tr><td align="left" balign="left"> # adminProxy : Object </td></tr>
+<tr><td align="left" balign="left"> # exporterFactory : AbstractExporterFactory&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + EXPORTER : String </td></tr>
 <tr><td align="left" balign="left"> + BEANS : String </td></tr>
 <tr><td align="left" balign="left"> + DATA_BEANS : String </td></tr>
@@ -74,7 +75,7 @@ digraph G {
 <tr><td align="left" balign="left"> + INTERFACE_ONLY : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProviderDelegate(beanListener : IServiceBeanListener, serviceBuilder : IServiceBuilder&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ProviderDelegate(beanListener : IServiceBeanListener, serviceBuilder : IProviderServiceBuilder) </td></tr>
 <tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
 <tr><td align="left" balign="left"> + init(provider : Provider, configFilename : String) </td></tr>
 <tr><td align="left" balign="left"> # configure(jconfig : Configuration) </td></tr>
@@ -122,7 +123,6 @@ digraph G {
 <tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
 <tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
 <tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + changed(sc : Context&lt;&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + stop(ueid : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + suspend(ueid : UEID, subject : Subject) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProviderConfig() : ProviderDelegate.DeploymentConfiguration </td></tr>
@@ -149,9 +149,7 @@ digraph G {
 <tr><td align="left" balign="left"> + isSpaceSecurityEnabled() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getServiceComponents() : Map&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setServiceComponents(serviceComponents : Map&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
+<tr><td align="left" balign="left"> + getBean(serviceType : Class&lt;&gt;) : Object </td></tr>
 <tr><td align="left" balign="left"> + getHostAddress() : String </td></tr>
 <tr><td align="left" balign="left"> + getHostName() : String </td></tr>
 <tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>

@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.requestor.ExertletRunner
-	c237121 [label=<<table title="sorcer.core.requestor.ExertletRunner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertletRunner.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertletRunner </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # shell : GroovyShell </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertletRunner() </td></tr>
-<tr><td align="left" balign="left"> + evaluate(scriptFile : File) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExertletRunner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.requestor.ServiceRequestor
-	c237122 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceRequestor.html">
+	c247018 [label=<<table title="sorcer.core.requestor.ServiceRequestor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceRequestor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceRequestor </font></td></tr>
 		</table></td></tr>
@@ -54,13 +41,28 @@ digraph G {
 <tr><td align="left" balign="left"> + getProperty(key : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getProperty(property : String, defaultValue : String) : String </td></tr>
 <tr><td align="left" balign="left"> + prepareCodebase() : Webster </td></tr>
+<tr><td align="left" balign="left"> + prepareCodebaseAsString(artifactCoords : List&lt;String&gt;) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : String[]) : Webster </td></tr>
+<tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : List&lt;ArtifactCoordinates&gt;) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareCodebase(artifactCoords : ArtifactCoordinates[]) : Webster </td></tr>
 <tr><td align="left" balign="left"> + prepareEnvironment() </td></tr>
 <tr><td align="left" balign="left"> # prepareBasicEnvironment() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceRequestor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.requestor.ExertletRunner
+	c247020 [label=<<table title="sorcer.core.requestor.ExertletRunner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertletRunner.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertletRunner </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # shell : GroovyShell </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ExertletRunner() </td></tr>
+<tr><td align="left" balign="left"> + evaluate(scriptFile : File) : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExertletRunner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.requestor.ExertletRunner extends sorcer.core.requestor.ServiceRequestor
-	c237122:p -> c237121:p [dir=back,arrowtail=empty];
+	c247018:p -> c247020:p [dir=back,arrowtail=empty];
 }
 

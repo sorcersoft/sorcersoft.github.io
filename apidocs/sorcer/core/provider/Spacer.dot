@@ -9,28 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Service
-	c539239 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Service </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Spacer
-	c539362 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Spacer.html">
+	c577374 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Spacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Spacer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceSpacer
-	c539530 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./jobber/ServiceSpacer.html">
+	// sorcer.core.provider.Jobber
+	c577378 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Jobber.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Jobber </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.rendezvous.ServiceSpacer
+	c577665 [label=<<table title="sorcer.core.provider.rendezvous.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./rendezvous/ServiceSpacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSpacer </td></tr>
 		</table></td></tr>
@@ -39,29 +33,14 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ServiceSpacer() </td></tr>
-<tr><td align="left" balign="left"> + ServiceSpacer(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + doTask(task : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getDispatcherFactory(exertion : Exertion) : DispatcherFactory </td></tr>
 		</table></td></tr>
-		</table>>, URL="./jobber/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.provider.Spacer implements sorcer.service.Service
-	c539239:p -> c539362:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.Spacer implements java.rmi.Remote
-	c539836:p -> c539362:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.core.provider.Spacer
-	c539362:p -> c539530:p [dir=back,arrowtail=empty,style=dashed];
-	// java.rmi.Remote
-	c539836 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Remote </td></tr>
-		</table></td></tr>
-		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./rendezvous/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.provider.Spacer implements sorcer.core.provider.Jobber
+	c577378:p -> c577374:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.rendezvous.ServiceSpacer implements sorcer.core.provider.Spacer
+	c577374:p -> c577665:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.SecureIdentifiable
-	c455049 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SecureIdentifiable.html">
+	c485506 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SecureIdentifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SecureIdentifiable </td></tr>
@@ -19,11 +19,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPrincipal() : Principal </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./SecureIdentifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Identifiable
-	c455099 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
+	c485550 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Identifiable </td></tr>
@@ -32,12 +32,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.UuidObject
-	c455302 [label=<<table title="sorcer.util.bdb.objects.UuidObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/UuidObject.html">
+	c485719 [label=<<table title="sorcer.util.bdb.objects.UuidObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/UuidObject.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UuidObject </td></tr>
 		</table></td></tr>
@@ -61,8 +61,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../util/bdb/objects/UuidObject.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.SecureIdentifiable implements sorcer.service.Identifiable
-	c455099:p -> c455049:p [dir=back,arrowtail=empty,style=dashed];
+	c485550:p -> c485506:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.bdb.objects.UuidObject implements sorcer.service.SecureIdentifiable
-	c455049:p -> c455302:p [dir=back,arrowtail=empty,style=dashed];
+	c485506:p -> c485719:p [dir=back,arrowtail=empty,style=dashed];
 }
 

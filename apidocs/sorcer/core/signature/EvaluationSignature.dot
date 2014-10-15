@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.signature.EvaluationSignature
-	c212885 [label=<<table title="sorcer.core.signature.EvaluationSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EvaluationSignature.html">
+	c223198 [label=<<table title="sorcer.core.signature.EvaluationSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EvaluationSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EvaluationSignature </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EvaluationSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.ServiceSignature
-	c212886 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
+	c223199 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSignature </td></tr>
 		</table></td></tr>
@@ -37,7 +37,7 @@ digraph G {
 <tr><td align="left" balign="left"> # selector : String </td></tr>
 <tr><td align="left" balign="left"> # prefix : String </td></tr>
 <tr><td align="left" balign="left"> # ownerID : String </td></tr>
-<tr><td align="left" balign="left"> # returnPath : ReturnPath&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> # returnPath : Signature.ReturnPath&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> # rank : Set&lt;Signature.Kind&gt; </td></tr>
 <tr><td align="left" balign="left"> # providerName : String </td></tr>
 <tr><td align="left" balign="left"> # serviceType : Class&lt;?&gt; </td></tr>
@@ -53,6 +53,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getServiceType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getVariability() : Variability&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> + addRank(kinds : Signature.Kind[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + addRank(kinds : List&lt;Signature.Kind&gt;) </td></tr>
 <tr><td align="left" balign="left"> + isKindOf(kind : Signature.Kind) : boolean </td></tr>
@@ -105,16 +106,16 @@ digraph G {
 <tr><td align="left" balign="left"> + setPrefix(prefix : String) </td></tr>
 <tr><td align="left" balign="left"> + getGroup() : String </td></tr>
 <tr><td align="left" balign="left"> + setGroup(group : String) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(returnPath : Signature.ReturnPath&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
-<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Signature.Direction) </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : Signature.ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeployment() : ServiceDeployment </td></tr>
+<tr><td align="left" balign="left"> + setDeployment(deployment : ServiceDeployment) </td></tr>
 <tr><td align="left" balign="left"> + compareTo(signature : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.EvaluationSignature extends sorcer.core.signature.ServiceSignature
-	c212886:p -> c212885:p [dir=back,arrowtail=empty];
+	c223199:p -> c223198:p [dir=back,arrowtail=empty];
 }
 

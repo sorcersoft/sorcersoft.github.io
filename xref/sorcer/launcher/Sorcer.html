@@ -35,7 +35,7 @@
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.cli.PosixParser;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> org.slf4j.LoggerFactory;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> org.slf4j.helpers.MessageFormatter;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.launcher.process.DestroyingListener;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.launcher.impl.process.DestroyingListener;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.launcher.process.ProcessDestroyer;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.util.FileUtils;
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> sorcer.util.JavaSystemProperties;
@@ -249,11 +249,11 @@
 <a class="jxr_linenumber" name="239" href="#239">239</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a href="../../sorcer/launcher/IForkingLauncher.html">IForkingLauncher</a> createForkingLauncher(Integer debugPort, <a href="../../sorcer/launcher/WaitMode.html">WaitMode</a> mode) {
 <a class="jxr_linenumber" name="240" href="#240">240</a>         <a href="../../sorcer/launcher/IForkingLauncher.html">IForkingLauncher</a> forkingLauncher;
 <a class="jxr_linenumber" name="241" href="#241">241</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="242" href="#242">242</a>             forkingLauncher = (IForkingLauncher) Class.forName(<span class="jxr_string">"sorcer.launcher.process.ForkingLauncher"</span>).newInstance();
+<a class="jxr_linenumber" name="242" href="#242">242</a>             forkingLauncher = (IForkingLauncher) Class.forName(<span class="jxr_string">"sorcer.launcher.impl.process.ForkingLauncher"</span>).newInstance();
 <a class="jxr_linenumber" name="243" href="#243">243</a>             <strong class="jxr_keyword">if</strong> (debugPort != <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="244" href="#244">244</a>                 forkingLauncher.setDebugPort(debugPort);
 <a class="jxr_linenumber" name="245" href="#245">245</a> 
-<a class="jxr_linenumber" name="246" href="#246">246</a>             forkingLauncher.addSorcerListener(<strong class="jxr_keyword">new</strong> <a href="../../sorcer/launcher/process/DestroyingListener.html">DestroyingListener</a>(ProcessDestroyer.installShutdownHook(), mode == WaitMode.start));
+<a class="jxr_linenumber" name="246" href="#246">246</a>             forkingLauncher.addSorcerListener(<strong class="jxr_keyword">new</strong> <a href="../../sorcer/launcher/impl/process/DestroyingListener.html">DestroyingListener</a>(ProcessDestroyer.installShutdownHook(), mode == WaitMode.start));
 <a class="jxr_linenumber" name="247" href="#247">247</a>         } <strong class="jxr_keyword">catch</strong> (InstantiationException e) {
 <a class="jxr_linenumber" name="248" href="#248">248</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Could not instantiate ForkingLauncher"</span>, e);
 <a class="jxr_linenumber" name="249" href="#249">249</a>         } <strong class="jxr_keyword">catch</strong> (IllegalAccessException e) {

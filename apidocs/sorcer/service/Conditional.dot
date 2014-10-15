@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Condition
-	c156153 [label=<<table title="sorcer.service.Condition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Condition.html">
+	c166788 [label=<<table title="sorcer.service.Condition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Condition.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Condition </td></tr>
 		</table></td></tr>
@@ -40,8 +40,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setStatus(status : Boolean) </td></tr>
 <tr><td align="left" balign="left"> + getClosure() : Closure&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setClosure(closure : Closure&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getConditionalContext() : Context&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setConditionalContext(conditionaContext : Context&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getConditionalContext() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setConditionalContext(conditionaContext : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getClosureExpression() : String </td></tr>
 <tr><td align="left" balign="left"> + cleanupScripts(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + clenupContextScripts(context : Context&lt;&gt;) </td></tr>
@@ -49,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Condition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Conditional
-	c156157 [label=<<table title="sorcer.service.Conditional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Conditional.html">
+	c166852 [label=<<table title="sorcer.service.Conditional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Conditional.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Conditional </td></tr>
@@ -58,10 +58,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isTrue() : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTrue() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getConditionalContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setConditionalContext(context : Context&lt;&gt;) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Conditional.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Condition implements sorcer.service.Conditional
-	c156157:p -> c156153:p [dir=back,arrowtail=empty,style=dashed];
+	c166852:p -> c166788:p [dir=back,arrowtail=empty,style=dashed];
 }
 

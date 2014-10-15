@@ -9,8 +9,29 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.config.Component
+	c28229 [label=<<table title="sorcer.config.Component" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Component.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Component </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Component.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.config.BeanListener
+	c28230 [label=<<table title="sorcer.config.BeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> BeanListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./BeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.config.AbstractBeanListener
-	c30107 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBeanListener.html">
+	c28231 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractBeanListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractBeanListener </font></td></tr>
 		</table></td></tr>
@@ -25,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractBeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.config.ConfigEntry
-	c30108 [label=<<table title="sorcer.config.ConfigEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConfigEntry.html">
+	c28232 [label=<<table title="sorcer.config.ConfigEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConfigEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ConfigEntry </font></td></tr>
 		</table></td></tr>
@@ -38,7 +59,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConfigEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.config.Configurable
-	c30109 [label=<<table title="sorcer.config.Configurable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Configurable.html">
+	c28233 [label=<<table title="sorcer.config.Configurable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Configurable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Configurable </td></tr>
@@ -47,31 +68,10 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + configure(config : Configuration) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + configure(config : Configuration) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Configurable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.config.Component
-	c30110 [label=<<table title="sorcer.config.Component" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Component.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Component </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./Component.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.config.BeanListener
-	c30111 [label=<<table title="sorcer.config.BeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> BeanListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;) </td></tr>
-<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./BeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.config.AbstractBeanListener implements sorcer.config.BeanListener
-	c30111:p -> c30107:p [dir=back,arrowtail=empty,style=dashed];
+	c28230:p -> c28231:p [dir=back,arrowtail=empty,style=dashed];
 }
 

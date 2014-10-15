@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.junit.ExertionErrors.MultiException
-	c232053 [label=<<table title="sorcer.junit.ExertionErrors.MultiException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionErrors.MultiException.html">
+	c242503 [label=<<table title="sorcer.junit.ExertionErrors.MultiException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionErrors.MultiException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MultiException </td></tr>
 		</table></td></tr>
@@ -18,14 +18,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertionErrors.MultiException(others : List&lt;Throwable&gt;) </td></tr>
+<tr><td align="left" balign="left"> + MultiException(others : List&lt;Throwable&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getErrors() : List&lt;Throwable&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionErrors.MultiException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.junit.ExertionErrors.MultiException extends java.lang.Exception
-	c232201:p -> c232053:p [dir=back,arrowtail=empty];
+	c242673:p -> c242503:p [dir=back,arrowtail=empty];
 	// java.lang.Exception
-	c232201 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html">
+	c242673 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Exception </td></tr>
 		</table></td></tr>

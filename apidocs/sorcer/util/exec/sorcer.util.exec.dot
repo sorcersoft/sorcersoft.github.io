@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.exec.RedirectingInputStream
-	c7344 [label=<<table title="sorcer.util.exec.RedirectingInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectingInputStream.html">
+	c3086 [label=<<table title="sorcer.util.exec.RedirectingInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectingInputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RedirectingInputStream </td></tr>
 		</table></td></tr>
@@ -26,8 +26,71 @@ digraph G {
 <tr><td align="left" balign="left"> + redirectAll(out : OutputStream) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RedirectingInputStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.exec.ExecUtils
+	c3087 [label=<<table title="sorcer.util.exec.ExecUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ExecUtils </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + execCommand(cmd : String) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommandWin(cmd : String) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommand(process : Process) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommand(process : Process, stdin : InputStream) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommand(process : Process, stdin : InputStream, outLogged : boolean) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, stdout : OutputStream, stderr : OutputStream) </td></tr>
+<tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, stdout : OutputStream, stderr : OutputStream, autoFlush : boolean, autoClose : boolean, brokenPipeHandler : ExecUtils.BrokenPipeHandler, exitHandler : ExecUtils.ProcessExitHandler) </td></tr>
+<tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, inAutoFlush : boolean, inAutoClose : boolean, inBrokenHandler : ExecUtils.BrokenPipeHandler, stdout : OutputStream, outAutoFlush : boolean, outAutoClose : boolean, outBrokenHandler : ExecUtils.BrokenPipeHandler, stderr : OutputStream, errAutoFlush : boolean, errAutoClose : boolean, errBrokenHandler : ExecUtils.BrokenPipeHandler, exitHandler : ExecUtils.ProcessExitHandler) </td></tr>
+<tr><td align="left" balign="left"> + executeCommandWithWorkerNoBlocking(command : String[], printOutput : boolean, printError : boolean, timeOut : long, dir : File, logFile : File, doSynchronizedLaunch : boolean) : Thread </td></tr>
+<tr><td align="left" balign="left"> + execCommand(cmdarray : String[]) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process, stdin : InputStream) : ExecUtils.CmdResult </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExecUtils.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.exec.ExecUtils.BrokenPipeHandler
+	c3088 [label=<<table title="sorcer.util.exec.ExecUtils.BrokenPipeHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.BrokenPipeHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> BrokenPipeHandler </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + brokenPipe(e : IOException, src : InputStream, sink : OutputStream) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExecUtils.BrokenPipeHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.exec.ExecUtils.ProcessExitHandler
+	c3089 [label=<<table title="sorcer.util.exec.ExecUtils.ProcessExitHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.ProcessExitHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ProcessExitHandler </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + processExited(process : Process) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExecUtils.ProcessExitHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.exec.ExecUtils.CmdResult
+	c3090 [label=<<table title="sorcer.util.exec.ExecUtils.CmdResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.CmdResult.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CmdResult </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + getExitValue() : int </td></tr>
+<tr><td align="left" balign="left"> + getOut() : String </td></tr>
+<tr><td align="left" balign="left"> + getErr() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExecUtils.CmdResult.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.exec.NullInputStream
-	c7345 [label=<<table title="sorcer.util.exec.NullInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullInputStream.html">
+	c3091 [label=<<table title="sorcer.util.exec.NullInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NullInputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NullInputStream </td></tr>
 		</table></td></tr>
@@ -43,22 +106,8 @@ digraph G {
 <tr><td align="left" balign="left"> + skip(n : long) : long </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NullInputStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.exec.RedirectibleInput
-	c7346 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectibleInput.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + redirect(dest : OutputStream, len : int) : int </td></tr>
-<tr><td align="left" balign="left"> + redirectAll(dest : OutputStream) : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.exec.Input
-	c7347 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Input.html">
+	c3092 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Input.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Input </td></tr>
@@ -67,85 +116,36 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + read() : int </td></tr>
-<tr><td align="left" balign="left"> + read(buf : byte[]) : int </td></tr>
-<tr><td align="left" balign="left"> + read(buf : byte[], off : int, len : int) : int </td></tr>
-<tr><td align="left" balign="left"> + available() : int </td></tr>
-<tr><td align="left" balign="left"> + skip(n : long) : long </td></tr>
-<tr><td align="left" balign="left"> + close() </td></tr>
-<tr><td align="left" balign="left"> + markSupported() : boolean </td></tr>
-<tr><td align="left" balign="left"> + reset() </td></tr>
-<tr><td align="left" balign="left"> + mark(readLimit : int) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + read() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + read(buf : byte[]) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + read(buf : byte[], off : int, len : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + available() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + skip(n : long) : long </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + close() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + markSupported() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + reset() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + mark(readLimit : int) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Input.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.exec.ExecUtils
-	c7348 [label=<<table title="sorcer.util.exec.ExecUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExecUtils </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + execCommand(cmd : String) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommand(cmdarray : String[]) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommand(process : Process) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommand(process : Process, stdin : InputStream) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommand(process : Process, stdin : InputStream, outLogged : boolean) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process, stdin : InputStream) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, stdout : OutputStream, stderr : OutputStream) </td></tr>
-<tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, stdout : OutputStream, stderr : OutputStream, autoFlush : boolean, autoClose : boolean, brokenPipeHandler : ExecUtils.BrokenPipeHandler, exitHandler : ExecUtils.ProcessExitHandler) </td></tr>
-<tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, inAutoFlush : boolean, inAutoClose : boolean, inBrokenHandler : ExecUtils.BrokenPipeHandler, stdout : OutputStream, outAutoFlush : boolean, outAutoClose : boolean, outBrokenHandler : ExecUtils.BrokenPipeHandler, stderr : OutputStream, errAutoFlush : boolean, errAutoClose : boolean, errBrokenHandler : ExecUtils.BrokenPipeHandler, exitHandler : ExecUtils.ProcessExitHandler) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExecUtils.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.exec.ExecUtils.BrokenPipeHandler
-	c7349 [label=<<table title="sorcer.util.exec.ExecUtils.BrokenPipeHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.BrokenPipeHandler.html">
+	// sorcer.util.exec.RedirectibleInput
+	c3093 [label=<<table title="sorcer.util.exec.RedirectibleInput" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RedirectibleInput.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> BrokenPipeHandler </td></tr>
+<tr><td align="center" balign="center"> RedirectibleInput </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + brokenPipe(e : IOException, src : InputStream, sink : OutputStream) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + redirect(dest : OutputStream, len : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + redirectAll(dest : OutputStream) : int </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./ExecUtils.BrokenPipeHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.exec.ExecUtils.ProcessExitHandler
-	c7350 [label=<<table title="sorcer.util.exec.ExecUtils.ProcessExitHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.ProcessExitHandler.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ProcessExitHandler </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + processExited(process : Process) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExecUtils.ProcessExitHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.exec.ExecUtils.CmdResult
-	c7351 [label=<<table title="sorcer.util.exec.ExecUtils.CmdResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecUtils.CmdResult.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CmdResult </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExecUtils.CmdResult(exitValue : int, out : String, err : String) </td></tr>
-<tr><td align="left" balign="left"> + getExitValue() : int </td></tr>
-<tr><td align="left" balign="left"> + getOut() : String </td></tr>
-<tr><td align="left" balign="left"> + getErr() : String </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExecUtils.CmdResult.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./RedirectibleInput.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.exec.RedirectingInputStream implements sorcer.util.exec.RedirectibleInput
-	c7346:p -> c7344:p [dir=back,arrowtail=empty,style=dashed];
+	c3093:p -> c3086:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.exec.NullInputStream implements sorcer.util.exec.Input
-	c7347:p -> c7345:p [dir=back,arrowtail=empty,style=dashed];
+	c3092:p -> c3091:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.exec.RedirectibleInput implements sorcer.util.exec.Input
-	c7347:p -> c7346:p [dir=back,arrowtail=empty,style=dashed];
+	c3092:p -> c3093:p [dir=back,arrowtail=empty,style=dashed];
 }
 

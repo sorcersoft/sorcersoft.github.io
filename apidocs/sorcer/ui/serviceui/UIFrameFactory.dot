@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ui.serviceui.UIFrameFactory
-	c574288 [label=<<table title="sorcer.ui.serviceui.UIFrameFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UIFrameFactory.html">
+	c616031 [label=<<table title="sorcer.ui.serviceui.UIFrameFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UIFrameFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UIFrameFactory </td></tr>
 		</table></td></tr>
@@ -29,18 +29,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UIFrameFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ui.serviceui.UIFrameFactory implements net.jini.lookup.ui.factory.JFrameFactory
-	c574663:p -> c574288:p [dir=back,arrowtail=empty,style=dashed];
+	c616426:p -> c616031:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.ui.serviceui.UIFrameFactory implements java.io.Serializable
-	c574664:p -> c574288:p [dir=back,arrowtail=empty,style=dashed];
+	c616427:p -> c616031:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c574664 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c616427 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.lookup.ui.factory.JFrameFactory
-	c574663 [label=<<table title="net.jini.lookup.ui.factory.JFrameFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c616426 [label=<<table title="net.jini.lookup.ui.factory.JFrameFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> JFrameFactory </td></tr>
@@ -50,7 +50,7 @@ digraph G {
 <tr><td align="left" balign="left"> + TYPE_NAME : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getJFrame(arg0 : Object) : JFrame </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getJFrame(arg0 : Object) : JFrame </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

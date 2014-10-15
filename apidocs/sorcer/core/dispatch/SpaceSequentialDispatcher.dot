@@ -9,34 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.dispatch.SpaceExertDispatcher
-	c536635 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SpaceExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
-<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
-<tr><td align="left" balign="left"> # myMemberUtil : LokiMemberUtil </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceExertDispatcher() </td></tr>
-<tr><td align="left" balign="left"> + SpaceExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, memUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + SpaceExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
-<tr><td align="left" balign="left"> # addPoison(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # changeDoneExertionIndex(index : int) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # writeEnvelop(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # takeEnvelop(template : Entry) : ExertionEnvelop </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + collectFails() </td></tr>
-<tr><td align="left" balign="left"> + collectErrors() </td></tr>
-<tr><td align="left" balign="left"> # handleError(exertion : Exertion, state : int) </td></tr>
-<tr><td align="left" balign="left"> # executeMasterExertion() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SpaceSequentialDispatcher
-	c536643 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceSequentialDispatcher.html">
+	c574682 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceSequentialDispatcher </td></tr>
 		</table></td></tr>
@@ -44,12 +18,40 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceSequentialDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> + SpaceSequentialDispatcher(job : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # dispatchExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # waitForExertion(exertion : Exertion) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SpaceSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.dispatch.SpaceSequentialDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c536635:p -> c536643:p [dir=back,arrowtail=empty];
+	// sorcer.core.dispatch.SpaceParallelDispatcher
+	c574695 [label=<<table title="sorcer.core.dispatch.SpaceParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceParallelDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceParallelDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
+<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
+<tr><td align="left" balign="left"> # loki : LokiMemberUtil </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceParallelDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, loki : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # getInputExertions() : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + doExec() </td></tr>
+<tr><td align="left" balign="left"> # dispatchExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> # getTemplate(state : int) : ExertionEnvelop </td></tr>
+<tr><td align="left" balign="left"> # handleResult(results : Collection&lt;ExertionEnvelop&gt;) </td></tr>
+<tr><td align="left" balign="left"> # addPoison(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # changeDoneExertionIndex(index : int) </td></tr>
+<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # writeEnvelop(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # takeEnvelop(template : Entry) : ExertionEnvelop </td></tr>
+<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # handleError(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # executeMasterExertion() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.dispatch.SpaceSequentialDispatcher extends sorcer.core.dispatch.SpaceParallelDispatcher
+	c574695:p -> c574682:p [dir=back,arrowtail=empty];
 }
 

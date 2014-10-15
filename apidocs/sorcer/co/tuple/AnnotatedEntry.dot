@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Arg
-	c105366 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Arg </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Evaluation<T>
-	c105387 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
+	c111026 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
@@ -32,13 +19,26 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + asis() : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Arg
+	c111085 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.AnnotatedEntry<T>
-	c105541 [label=<<table title="sorcer.co.tuple.AnnotatedEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AnnotatedEntry.html">
+	c111114 [label=<<table title="sorcer.co.tuple.AnnotatedEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AnnotatedEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AnnotatedEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -65,7 +65,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AnnotatedEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple3<T1, T2, T3>
-	c105547 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
+	c111123 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
 		</table></td></tr>
@@ -81,10 +81,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.AnnotatedEntry<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.String>
-	c105547:p -> c105541:p [dir=back,arrowtail=empty];
+	c111123:p -> c111114:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.AnnotatedEntry<T> implements sorcer.service.Arg
-	c105366:p -> c105541:p [dir=back,arrowtail=empty,style=dashed];
+	c111085:p -> c111114:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.AnnotatedEntry<T> implements sorcer.service.Evaluation<T>
-	c105387:p -> c105541:p [dir=back,arrowtail=empty,style=dashed];
+	c111026:p -> c111114:p [dir=back,arrowtail=empty,style=dashed];
 }
 

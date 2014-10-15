@@ -8,33 +8,33 @@
 <body>
 <div id="overview"><a href="../../../../apidocs/sorcer/arithmetic/provider/Arithmometer.html">View Javadoc</a></div><pre>
 
-<a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_javadoccomment"> * Copyright 2013 the original author or authors.</em>
-<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_javadoccomment"> * Copyright 2013 Sorcersoft.com S.A.</em>
-<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_javadoccomment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
-<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_javadoccomment"> * you may not use this file except in compliance with the License.</em>
-<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_javadoccomment"> * You may obtain a copy of the License at</em>
-<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_javadoccomment"> *      <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
-<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_javadoccomment"> * Unless required by applicable law or agreed to in writing, software</em>
-<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_javadoccomment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
-<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_javadoccomment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
-<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_javadoccomment"> * See the License for the specific language governing permissions and</em>
-<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_javadoccomment"> * limitations under the License.</em>
-<a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">package</strong> sorcer.arithmetic.provider;
-<a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> sorcer.eo.<strong class="jxr_keyword">operator</strong>.revalue;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> sorcer.eo.<strong class="jxr_keyword">operator</strong>.path;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.io.Serializable;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.net.UnknownHostException;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> java.util.List;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * Copyright 2013 the original author or authors.</em>
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_comment"> * Copyright 2013 Sorcersoft.com S.A.</em>
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_comment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_comment"> * you may not use this file except in compliance with the License.</em>
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_comment"> * You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_comment"> *      <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_comment"> * See the License for the specific language governing permissions and</em>
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_comment"> * limitations under the License.</em>
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <strong class="jxr_keyword">package</strong> sorcer.arithmetic.provider;
+<a class="jxr_linenumber" name="18" href="#18">18</a>  
+<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> sorcer.eo.<strong class="jxr_keyword">operator</strong>.revalue;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> sorcer.eo.<strong class="jxr_keyword">operator</strong>.path;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.io.Serializable;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.net.UnknownHostException;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.rmi.RemoteException;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> org.slf4j.Logger;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> org.slf4j.LoggerFactory;
 <a class="jxr_linenumber" name="28" href="#28">28</a>  
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.ArrayContext;
@@ -42,7 +42,7 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> sorcer.core.context.PositionalContext;
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> sorcer.service.Context;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ContextException;
-<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> sorcer.service.ReturnPath;
+<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> sorcer.service.Signature.ReturnPath;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  
 <a class="jxr_linenumber" name="37" href="#37">37</a>  @SuppressWarnings({ <span class="jxr_string">"rawtypes"</span>, <span class="jxr_string">"unchecked"</span> })
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../sorcer/arithmetic/provider/Arithmometer.html">Arithmometer</a> <strong class="jxr_keyword">implements</strong> Serializable {
@@ -59,7 +59,7 @@
 <a class="jxr_linenumber" name="49" href="#49">49</a>  
 <a class="jxr_linenumber" name="50" href="#50">50</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String RESULT_PATH = <span class="jxr_string">"result/value"</span>;
 <a class="jxr_linenumber" name="51" href="#51">51</a>  
-<a class="jxr_linenumber" name="52" href="#52">52</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> Logger logger = Logger.getLogger(Arithmometer.<strong class="jxr_keyword">class</strong>
+<a class="jxr_linenumber" name="52" href="#52">52</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">static</strong> Logger logger = LoggerFactory.getLogger(Arithmometer.<strong class="jxr_keyword">class</strong>
 <a class="jxr_linenumber" name="53" href="#53">53</a>              .getName());
 <a class="jxr_linenumber" name="54" href="#54">54</a>  
 <a class="jxr_linenumber" name="55" href="#55">55</a>      <em class="jxr_javadoccomment">/**</em>
@@ -157,172 +157,170 @@
 <a class="jxr_linenumber" name="147" href="#147">147</a> <em class="jxr_javadoccomment">     *            service context</em>
 <a class="jxr_linenumber" name="148" href="#148">148</a> <em class="jxr_javadoccomment">     * @param selector</em>
 <a class="jxr_linenumber" name="149" href="#149">149</a> <em class="jxr_javadoccomment">     *            a name of arithmetic operation</em>
-<a class="jxr_linenumber" name="150" href="#150">150</a> <em class="jxr_javadoccomment">     * @throws RemoteException</em>
-<a class="jxr_linenumber" name="151" href="#151">151</a> <em class="jxr_javadoccomment">     * @throws ContextException</em>
-<a class="jxr_linenumber" name="152" href="#152">152</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="153" href="#153">153</a>     <strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> calculateFromArrayContext(<a href="../../../sorcer/service/Context.html">Context</a> context, String selector)
-<a class="jxr_linenumber" name="154" href="#154">154</a>             <strong class="jxr_keyword">throws</strong> RemoteException, <a href="../../../sorcer/service/ContextException.html">ContextException</a> {
-<a class="jxr_linenumber" name="155" href="#155">155</a>         <a href="../../../sorcer/core/context/ArrayContext.html">ArrayContext</a> cxt = (ArrayContext) context;
-<a class="jxr_linenumber" name="156" href="#156">156</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="157" href="#157">157</a>             <em class="jxr_comment">// get sorted list of input values</em>
-<a class="jxr_linenumber" name="158" href="#158">158</a>             List&lt;Double&gt; inputs = (List&lt;Double&gt;)cxt.getInValues();
-<a class="jxr_linenumber" name="159" href="#159">159</a>             logger.info(<span class="jxr_string">"inputs: \n"</span> + inputs);
-<a class="jxr_linenumber" name="160" href="#160">160</a>             List&lt;String&gt; outpaths = cxt.getOutPaths();
-<a class="jxr_linenumber" name="161" href="#161">161</a>             logger.info(<span class="jxr_string">"outpaths: \n"</span> + outpaths);
-<a class="jxr_linenumber" name="162" href="#162">162</a> 
-<a class="jxr_linenumber" name="163" href="#163">163</a>             <strong class="jxr_keyword">double</strong> result = 0.0d;
-<a class="jxr_linenumber" name="164" href="#164">164</a>             <strong class="jxr_keyword">if</strong> (selector.equals(ADD)) {
-<a class="jxr_linenumber" name="165" href="#165">165</a>                 result = 0;
-<a class="jxr_linenumber" name="166" href="#166">166</a>                 <strong class="jxr_keyword">for</strong> (Double value : inputs)
-<a class="jxr_linenumber" name="167" href="#167">167</a>                     result += value;
-<a class="jxr_linenumber" name="168" href="#168">168</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(SUBTRACT)) {
-<a class="jxr_linenumber" name="169" href="#169">169</a>                 result = inputs.get(0);
-<a class="jxr_linenumber" name="170" href="#170">170</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
-<a class="jxr_linenumber" name="171" href="#171">171</a>                     result -= inputs.get(i);
-<a class="jxr_linenumber" name="172" href="#172">172</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(MULTIPLY)) {
-<a class="jxr_linenumber" name="173" href="#173">173</a>                 result = inputs.get(0);
-<a class="jxr_linenumber" name="174" href="#174">174</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
-<a class="jxr_linenumber" name="175" href="#175">175</a>                     result *= inputs.get(i);
-<a class="jxr_linenumber" name="176" href="#176">176</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(DIVIDE)) {
-<a class="jxr_linenumber" name="177" href="#177">177</a>                 result = inputs.get(0);
-<a class="jxr_linenumber" name="178" href="#178">178</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
-<a class="jxr_linenumber" name="179" href="#179">179</a>                     result /= inputs.get(i);
-<a class="jxr_linenumber" name="180" href="#180">180</a>             }  <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(AVERAGE)) {
-<a class="jxr_linenumber" name="181" href="#181">181</a>                 result = 0;
-<a class="jxr_linenumber" name="182" href="#182">182</a>                 <strong class="jxr_keyword">for</strong> (Double value : inputs)
-<a class="jxr_linenumber" name="183" href="#183">183</a>                     result += value;
-<a class="jxr_linenumber" name="184" href="#184">184</a>                 result = result/inputs.size();
-<a class="jxr_linenumber" name="185" href="#185">185</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"Not supported operation: "</span> + selector);
-<a class="jxr_linenumber" name="186" href="#186">186</a> 
-<a class="jxr_linenumber" name="187" href="#187">187</a>             logger.info(selector + <span class="jxr_string">" result: \n"</span> + result);
-<a class="jxr_linenumber" name="188" href="#188">188</a> 
-<a class="jxr_linenumber" name="189" href="#189">189</a>             String outputMessage = <span class="jxr_string">"calculated by "</span> + getHostname();
-<a class="jxr_linenumber" name="190" href="#190">190</a>             <em class="jxr_comment">// set return value</em>
-<a class="jxr_linenumber" name="191" href="#191">191</a>             <strong class="jxr_keyword">if</strong> (context.getReturnPath() != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="192" href="#192">192</a>                 context.setReturnValue(result);
-<a class="jxr_linenumber" name="193" href="#193">193</a>             }
-<a class="jxr_linenumber" name="194" href="#194">194</a>             <em class="jxr_comment">//other ways to indicate the output value</em>
-<a class="jxr_linenumber" name="195" href="#195">195</a>             <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (outpaths.size() == 1) {
-<a class="jxr_linenumber" name="196" href="#196">196</a>                 <em class="jxr_comment">// put the result in the existing output path</em>
-<a class="jxr_linenumber" name="197" href="#197">197</a>                 cxt.putValue(outpaths.get(0), result);
-<a class="jxr_linenumber" name="198" href="#198">198</a>                 cxt.putValue(path(outpaths.get(0), ArrayContext.DESCRIPTION), outputMessage);
-<a class="jxr_linenumber" name="199" href="#199">199</a>             } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="200" href="#200">200</a>                 <em class="jxr_comment">// put the result for a new output path</em>
-<a class="jxr_linenumber" name="201" href="#201">201</a>                 logger.info(<span class="jxr_string">"max index; "</span> + cxt.getMaxIndex());
-<a class="jxr_linenumber" name="202" href="#202">202</a>                 <strong class="jxr_keyword">int</strong> oi = cxt.getMaxIndex() + 1;
-<a class="jxr_linenumber" name="203" href="#203">203</a>                 cxt.ov(oi, result);
-<a class="jxr_linenumber" name="204" href="#204">204</a>                 cxt.ovd(oi, outputMessage);
-<a class="jxr_linenumber" name="205" href="#205">205</a>             }
-<a class="jxr_linenumber" name="206" href="#206">206</a> 
-<a class="jxr_linenumber" name="207" href="#207">207</a>         } <strong class="jxr_keyword">catch</strong> (Exception ex) {
-<a class="jxr_linenumber" name="208" href="#208">208</a>             <em class="jxr_comment">// ContextException, UnknownHostException</em>
-<a class="jxr_linenumber" name="209" href="#209">209</a>             context.reportException(ex);
-<a class="jxr_linenumber" name="210" href="#210">210</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(selector + <span class="jxr_string">" calculate exception"</span>, ex);
-<a class="jxr_linenumber" name="211" href="#211">211</a>         }
-<a class="jxr_linenumber" name="212" href="#212">212</a>         <strong class="jxr_keyword">return</strong> context;
-<a class="jxr_linenumber" name="213" href="#213">213</a>     }
-<a class="jxr_linenumber" name="214" href="#214">214</a> 
-<a class="jxr_linenumber" name="215" href="#215">215</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="216" href="#216">216</a> <em class="jxr_javadoccomment">     * Calculates the result of arithmetic operation specified by a selector</em>
-<a class="jxr_linenumber" name="217" href="#217">217</a> <em class="jxr_javadoccomment">     * (add, subtract, multiply, or divide) from the instance of ServiceContext.</em>
-<a class="jxr_linenumber" name="218" href="#218">218</a> <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="219" href="#219">219</a> <em class="jxr_javadoccomment">     * @param context</em>
-<a class="jxr_linenumber" name="220" href="#220">220</a> <em class="jxr_javadoccomment">     *            service context</em>
-<a class="jxr_linenumber" name="221" href="#221">221</a> <em class="jxr_javadoccomment">     * @param selector</em>
-<a class="jxr_linenumber" name="222" href="#222">222</a> <em class="jxr_javadoccomment">     *            a name of arithmetic operation</em>
-<a class="jxr_linenumber" name="223" href="#223">223</a> <em class="jxr_javadoccomment">     * @throws RemoteException</em>
-<a class="jxr_linenumber" name="224" href="#224">224</a> <em class="jxr_javadoccomment">     * @throws ContextException</em>
-<a class="jxr_linenumber" name="225" href="#225">225</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="226" href="#226">226</a>     <strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> calculateFromPositionalContext(<a href="../../../sorcer/service/Context.html">Context</a> context, String selector)
-<a class="jxr_linenumber" name="227" href="#227">227</a>             <strong class="jxr_keyword">throws</strong> RemoteException, <a href="../../../sorcer/service/ContextException.html">ContextException</a> {
-<a class="jxr_linenumber" name="228" href="#228">228</a>         <a href="../../../sorcer/core/context/PositionalContext.html">PositionalContext</a> cxt = (PositionalContext) context;
-<a class="jxr_linenumber" name="229" href="#229">229</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="230" href="#230">230</a>             <em class="jxr_comment">//logger.info("selector: " + ((ServiceContext)context).getCurrentSelector());</em>
-<a class="jxr_linenumber" name="231" href="#231">231</a>             <em class="jxr_comment">// get sorted list of input values</em>
-<a class="jxr_linenumber" name="232" href="#232">232</a>             List&lt;Double&gt; inputs = (List&lt;Double&gt;)Contexts.getNamedInValues(context);
-<a class="jxr_linenumber" name="233" href="#233">233</a>             <strong class="jxr_keyword">if</strong> (inputs == <strong class="jxr_keyword">null</strong> || inputs.size() == 0) {
-<a class="jxr_linenumber" name="234" href="#234">234</a>                 inputs = (List&lt;Double&gt;)Contexts.getPrefixedInValues(context);
-<a class="jxr_linenumber" name="235" href="#235">235</a>                 logger.info(<span class="jxr_string">"prefixed inputs: \n"</span> + inputs);
-<a class="jxr_linenumber" name="236" href="#236">236</a>             }
-<a class="jxr_linenumber" name="237" href="#237">237</a>             <em class="jxr_comment">//logger.info("named inputs: \n" + inputs);</em>
-<a class="jxr_linenumber" name="238" href="#238">238</a>             <strong class="jxr_keyword">if</strong> (inputs == <strong class="jxr_keyword">null</strong> || inputs.size() == 0)
-<a class="jxr_linenumber" name="239" href="#239">239</a>                 inputs = (List&lt;Double&gt;)cxt.getInValues();
-<a class="jxr_linenumber" name="240" href="#240">240</a>             <em class="jxr_comment">//logger.info("inputs: \n" + inputs);</em>
-<a class="jxr_linenumber" name="241" href="#241">241</a>             List&lt;String&gt; outpaths = cxt.getOutPaths();
-<a class="jxr_linenumber" name="242" href="#242">242</a>             <em class="jxr_comment">//logger.info("outpaths: \n" + outpaths);</em>
-<a class="jxr_linenumber" name="243" href="#243">243</a> 
-<a class="jxr_linenumber" name="244" href="#244">244</a>             <strong class="jxr_keyword">double</strong> result = 0.0d;
-<a class="jxr_linenumber" name="245" href="#245">245</a>             <strong class="jxr_keyword">if</strong> (selector.equals(ADD)) {
-<a class="jxr_linenumber" name="246" href="#246">246</a>                 result = (Double)revalue(inputs.get(0));
-<a class="jxr_linenumber" name="247" href="#247">247</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
-<a class="jxr_linenumber" name="248" href="#248">248</a>                     result += (Double)revalue(inputs.get(i));
-<a class="jxr_linenumber" name="249" href="#249">249</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(SUBTRACT)) {
-<a class="jxr_linenumber" name="250" href="#250">250</a>                 ReturnPath&lt;?&gt; rp = context.getReturnPath();
-<a class="jxr_linenumber" name="251" href="#251">251</a>                 <strong class="jxr_keyword">if</strong> (rp != <strong class="jxr_keyword">null</strong> &amp;&amp; rp.argPaths != <strong class="jxr_keyword">null</strong> &amp;&amp; rp.argPaths.length &gt; 0) {
-<a class="jxr_linenumber" name="252" href="#252">252</a>                     result = (Double) revalue(cxt.getValue(rp.argPaths[0]));
-<a class="jxr_linenumber" name="253" href="#253">253</a>                     result -= (Double) revalue(cxt.getValue(rp.argPaths[1]));
-<a class="jxr_linenumber" name="254" href="#254">254</a>                 } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="255" href="#255">255</a>                     <strong class="jxr_keyword">if</strong> (inputs.size() &gt; 2) {
-<a class="jxr_linenumber" name="256" href="#256">256</a>                         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"more than two arguments for subtraction"</span>);
-<a class="jxr_linenumber" name="257" href="#257">257</a>                     }
-<a class="jxr_linenumber" name="258" href="#258">258</a>                     result = (Double) revalue(cxt.getInValueAt(1));
-<a class="jxr_linenumber" name="259" href="#259">259</a>                     result -= (Double) revalue(cxt.getInValueAt(2));
-<a class="jxr_linenumber" name="260" href="#260">260</a>                 }
-<a class="jxr_linenumber" name="261" href="#261">261</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(MULTIPLY)) {
-<a class="jxr_linenumber" name="262" href="#262">262</a>                 result = inputs.get(0);
-<a class="jxr_linenumber" name="263" href="#263">263</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
-<a class="jxr_linenumber" name="264" href="#264">264</a>                     result *= (Double)revalue(inputs.get(i));
-<a class="jxr_linenumber" name="265" href="#265">265</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(DIVIDE)) {
-<a class="jxr_linenumber" name="266" href="#266">266</a>                 <strong class="jxr_keyword">if</strong> (inputs.size() &gt; 2)
-<a class="jxr_linenumber" name="267" href="#267">267</a>                     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"more than two arguments for division"</span>);
-<a class="jxr_linenumber" name="268" href="#268">268</a>                 result = (Double)revalue(cxt.getInValueAt(1));
-<a class="jxr_linenumber" name="269" href="#269">269</a>                 result /= (Double)revalue(cxt.getInValueAt(2));
-<a class="jxr_linenumber" name="270" href="#270">270</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(AVERAGE)) {
-<a class="jxr_linenumber" name="271" href="#271">271</a>                 result = (Double)revalue(inputs.get(0));
-<a class="jxr_linenumber" name="272" href="#272">272</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++) {
-<a class="jxr_linenumber" name="273" href="#273">273</a>                     result += (Double)revalue(inputs.get(i));
-<a class="jxr_linenumber" name="274" href="#274">274</a>                 }
-<a class="jxr_linenumber" name="275" href="#275">275</a>                 result = result/inputs.size();
-<a class="jxr_linenumber" name="276" href="#276">276</a>             } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="277" href="#277">277</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"Not supported operation: "</span> +  selector);
-<a class="jxr_linenumber" name="278" href="#278">278</a>             }
-<a class="jxr_linenumber" name="279" href="#279">279</a> 
+<a class="jxr_linenumber" name="150" href="#150">150</a> <em class="jxr_javadoccomment">     * @throws ContextException</em>
+<a class="jxr_linenumber" name="151" href="#151">151</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="152" href="#152">152</a>     <strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> calculateFromArrayContext(<a href="../../../sorcer/service/Context.html">Context</a> context, String selector)
+<a class="jxr_linenumber" name="153" href="#153">153</a>             <strong class="jxr_keyword">throws</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a> {
+<a class="jxr_linenumber" name="154" href="#154">154</a>         <a href="../../../sorcer/core/context/ArrayContext.html">ArrayContext</a> cxt = (ArrayContext) context;
+<a class="jxr_linenumber" name="155" href="#155">155</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="156" href="#156">156</a>             <em class="jxr_comment">// get sorted list of input values</em>
+<a class="jxr_linenumber" name="157" href="#157">157</a>             List&lt;Double&gt; inputs = (List&lt;Double&gt;)cxt.getInValues();
+<a class="jxr_linenumber" name="158" href="#158">158</a>             logger.info(<span class="jxr_string">"inputs: \n"</span> + inputs);
+<a class="jxr_linenumber" name="159" href="#159">159</a>             List&lt;String&gt; outpaths = cxt.getOutPaths();
+<a class="jxr_linenumber" name="160" href="#160">160</a>             logger.info(<span class="jxr_string">"outpaths: \n"</span> + outpaths);
+<a class="jxr_linenumber" name="161" href="#161">161</a> 
+<a class="jxr_linenumber" name="162" href="#162">162</a>             <strong class="jxr_keyword">double</strong> result = 0.0d;
+<a class="jxr_linenumber" name="163" href="#163">163</a>             <strong class="jxr_keyword">if</strong> (selector.equals(ADD)) {
+<a class="jxr_linenumber" name="164" href="#164">164</a>                 result = 0;
+<a class="jxr_linenumber" name="165" href="#165">165</a>                 <strong class="jxr_keyword">for</strong> (Double value : inputs)
+<a class="jxr_linenumber" name="166" href="#166">166</a>                     result += value;
+<a class="jxr_linenumber" name="167" href="#167">167</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(SUBTRACT)) {
+<a class="jxr_linenumber" name="168" href="#168">168</a>                 result = inputs.get(0);
+<a class="jxr_linenumber" name="169" href="#169">169</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
+<a class="jxr_linenumber" name="170" href="#170">170</a>                     result -= inputs.get(i);
+<a class="jxr_linenumber" name="171" href="#171">171</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(MULTIPLY)) {
+<a class="jxr_linenumber" name="172" href="#172">172</a>                 result = inputs.get(0);
+<a class="jxr_linenumber" name="173" href="#173">173</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
+<a class="jxr_linenumber" name="174" href="#174">174</a>                     result *= inputs.get(i);
+<a class="jxr_linenumber" name="175" href="#175">175</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(DIVIDE)) {
+<a class="jxr_linenumber" name="176" href="#176">176</a>                 result = inputs.get(0);
+<a class="jxr_linenumber" name="177" href="#177">177</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
+<a class="jxr_linenumber" name="178" href="#178">178</a>                     result /= inputs.get(i);
+<a class="jxr_linenumber" name="179" href="#179">179</a>             }  <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(AVERAGE)) {
+<a class="jxr_linenumber" name="180" href="#180">180</a>                 result = 0;
+<a class="jxr_linenumber" name="181" href="#181">181</a>                 <strong class="jxr_keyword">for</strong> (Double value : inputs)
+<a class="jxr_linenumber" name="182" href="#182">182</a>                     result += value;
+<a class="jxr_linenumber" name="183" href="#183">183</a>                 result = result/inputs.size();
+<a class="jxr_linenumber" name="184" href="#184">184</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"Not supported operation: "</span> + selector);
+<a class="jxr_linenumber" name="185" href="#185">185</a> 
+<a class="jxr_linenumber" name="186" href="#186">186</a>             logger.info(selector + <span class="jxr_string">" result: \n"</span> + result);
+<a class="jxr_linenumber" name="187" href="#187">187</a> 
+<a class="jxr_linenumber" name="188" href="#188">188</a>             String outputMessage = <span class="jxr_string">"calculated by "</span> + getHostname();
+<a class="jxr_linenumber" name="189" href="#189">189</a>             <em class="jxr_comment">// set return value</em>
+<a class="jxr_linenumber" name="190" href="#190">190</a>             <strong class="jxr_keyword">if</strong> (context.getReturnPath() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="191" href="#191">191</a>                 context.setReturnValue(result);
+<a class="jxr_linenumber" name="192" href="#192">192</a>             }
+<a class="jxr_linenumber" name="193" href="#193">193</a>             <em class="jxr_comment">//other ways to indicate the output value</em>
+<a class="jxr_linenumber" name="194" href="#194">194</a>             <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (outpaths.size() == 1) {
+<a class="jxr_linenumber" name="195" href="#195">195</a>                 <em class="jxr_comment">// put the result in the existing output path</em>
+<a class="jxr_linenumber" name="196" href="#196">196</a>                 cxt.putValue(outpaths.get(0), result);
+<a class="jxr_linenumber" name="197" href="#197">197</a>                 cxt.putValue(path(outpaths.get(0), ArrayContext.DESCRIPTION), outputMessage);
+<a class="jxr_linenumber" name="198" href="#198">198</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="199" href="#199">199</a>                 <em class="jxr_comment">// put the result for a new output path</em>
+<a class="jxr_linenumber" name="200" href="#200">200</a>                 logger.info(<span class="jxr_string">"max index; "</span> + cxt.getMaxIndex());
+<a class="jxr_linenumber" name="201" href="#201">201</a>                 <strong class="jxr_keyword">int</strong> oi = cxt.getMaxIndex() + 1;
+<a class="jxr_linenumber" name="202" href="#202">202</a>                 cxt.ov(oi, result);
+<a class="jxr_linenumber" name="203" href="#203">203</a>                 cxt.ovd(oi, outputMessage);
+<a class="jxr_linenumber" name="204" href="#204">204</a>             }
+<a class="jxr_linenumber" name="205" href="#205">205</a> 
+<a class="jxr_linenumber" name="206" href="#206">206</a>         } <strong class="jxr_keyword">catch</strong> (Exception ex) {
+<a class="jxr_linenumber" name="207" href="#207">207</a>             <em class="jxr_comment">// ContextException, UnknownHostException</em>
+<a class="jxr_linenumber" name="208" href="#208">208</a>             context.reportException(ex);
+<a class="jxr_linenumber" name="209" href="#209">209</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(selector + <span class="jxr_string">" calculate exception"</span>, ex);
+<a class="jxr_linenumber" name="210" href="#210">210</a>         }
+<a class="jxr_linenumber" name="211" href="#211">211</a>         <strong class="jxr_keyword">return</strong> context;
+<a class="jxr_linenumber" name="212" href="#212">212</a>     }
+<a class="jxr_linenumber" name="213" href="#213">213</a> 
+<a class="jxr_linenumber" name="214" href="#214">214</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="215" href="#215">215</a> <em class="jxr_javadoccomment">     * Calculates the result of arithmetic operation specified by a selector</em>
+<a class="jxr_linenumber" name="216" href="#216">216</a> <em class="jxr_javadoccomment">     * (add, subtract, multiply, or divide) from the instance of ServiceContext.</em>
+<a class="jxr_linenumber" name="217" href="#217">217</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="218" href="#218">218</a> <em class="jxr_javadoccomment">     * @param context</em>
+<a class="jxr_linenumber" name="219" href="#219">219</a> <em class="jxr_javadoccomment">     *            service context</em>
+<a class="jxr_linenumber" name="220" href="#220">220</a> <em class="jxr_javadoccomment">     * @param selector</em>
+<a class="jxr_linenumber" name="221" href="#221">221</a> <em class="jxr_javadoccomment">     *            a name of arithmetic operation</em>
+<a class="jxr_linenumber" name="222" href="#222">222</a> <em class="jxr_javadoccomment">     * @throws ContextException</em>
+<a class="jxr_linenumber" name="223" href="#223">223</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="224" href="#224">224</a>     <strong class="jxr_keyword">private</strong> <a href="../../../sorcer/service/Context.html">Context</a> calculateFromPositionalContext(<a href="../../../sorcer/service/Context.html">Context</a> context, String selector)
+<a class="jxr_linenumber" name="225" href="#225">225</a>             <strong class="jxr_keyword">throws</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a> {
+<a class="jxr_linenumber" name="226" href="#226">226</a>         <a href="../../../sorcer/core/context/PositionalContext.html">PositionalContext</a> cxt = (PositionalContext) context;
+<a class="jxr_linenumber" name="227" href="#227">227</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="228" href="#228">228</a>             <em class="jxr_comment">//logger.info("selector: " + ((ServiceContext)context).getCurrentSelector());</em>
+<a class="jxr_linenumber" name="229" href="#229">229</a>             <em class="jxr_comment">// get sorted list of input values</em>
+<a class="jxr_linenumber" name="230" href="#230">230</a>             List&lt;Double&gt; inputs = (List&lt;Double&gt;)Contexts.getNamedInValues(context);
+<a class="jxr_linenumber" name="231" href="#231">231</a>             <strong class="jxr_keyword">if</strong> (inputs == <strong class="jxr_keyword">null</strong> || inputs.size() == 0) {
+<a class="jxr_linenumber" name="232" href="#232">232</a>                 inputs = (List&lt;Double&gt;)Contexts.getPrefixedInValues(context);
+<a class="jxr_linenumber" name="233" href="#233">233</a>                 logger.info(<span class="jxr_string">"prefixed inputs: \n"</span> + inputs);
+<a class="jxr_linenumber" name="234" href="#234">234</a>             }
+<a class="jxr_linenumber" name="235" href="#235">235</a>             <em class="jxr_comment">//logger.info("named inputs: \n" + inputs);</em>
+<a class="jxr_linenumber" name="236" href="#236">236</a>             <strong class="jxr_keyword">if</strong> (inputs == <strong class="jxr_keyword">null</strong> || inputs.size() == 0)
+<a class="jxr_linenumber" name="237" href="#237">237</a>                 inputs = (List&lt;Double&gt;)cxt.getInValues();
+<a class="jxr_linenumber" name="238" href="#238">238</a>             <em class="jxr_comment">//logger.info("inputs: \n" + inputs);</em>
+<a class="jxr_linenumber" name="239" href="#239">239</a>             List&lt;String&gt; outpaths = cxt.getOutPaths();
+<a class="jxr_linenumber" name="240" href="#240">240</a>             <em class="jxr_comment">//logger.info("outpaths: \n" + outpaths);</em>
+<a class="jxr_linenumber" name="241" href="#241">241</a> 
+<a class="jxr_linenumber" name="242" href="#242">242</a>             <strong class="jxr_keyword">double</strong> result = 0.0d;
+<a class="jxr_linenumber" name="243" href="#243">243</a>             <strong class="jxr_keyword">if</strong> (selector.equals(ADD)) {
+<a class="jxr_linenumber" name="244" href="#244">244</a>                 result = (Double)revalue(inputs.get(0));
+<a class="jxr_linenumber" name="245" href="#245">245</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
+<a class="jxr_linenumber" name="246" href="#246">246</a>                     result += (Double)revalue(inputs.get(i));
+<a class="jxr_linenumber" name="247" href="#247">247</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(SUBTRACT)) {
+<a class="jxr_linenumber" name="248" href="#248">248</a>                 ReturnPath&lt;?&gt; rp = context.getReturnPath();
+<a class="jxr_linenumber" name="249" href="#249">249</a>                 <strong class="jxr_keyword">if</strong> (rp != <strong class="jxr_keyword">null</strong> &amp;&amp; rp.argPaths != <strong class="jxr_keyword">null</strong> &amp;&amp; rp.argPaths.length &gt; 0) {
+<a class="jxr_linenumber" name="250" href="#250">250</a>                     result = (Double) revalue(cxt.getValue(rp.argPaths[0]));
+<a class="jxr_linenumber" name="251" href="#251">251</a>                     result -= (Double) revalue(cxt.getValue(rp.argPaths[1]));
+<a class="jxr_linenumber" name="252" href="#252">252</a>                 } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="253" href="#253">253</a>                     <strong class="jxr_keyword">if</strong> (inputs.size() &gt; 2) {
+<a class="jxr_linenumber" name="254" href="#254">254</a>                         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"more than two arguments for subtraction"</span>);
+<a class="jxr_linenumber" name="255" href="#255">255</a>                     }
+<a class="jxr_linenumber" name="256" href="#256">256</a>                     result = (Double) revalue(inputs.get(1));
+<a class="jxr_linenumber" name="257" href="#257">257</a>                     result -= (Double) revalue(inputs.get(0));
+<a class="jxr_linenumber" name="258" href="#258">258</a>                 }
+<a class="jxr_linenumber" name="259" href="#259">259</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(MULTIPLY)) {
+<a class="jxr_linenumber" name="260" href="#260">260</a>                 result = inputs.get(0);
+<a class="jxr_linenumber" name="261" href="#261">261</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++)
+<a class="jxr_linenumber" name="262" href="#262">262</a>                     result *= (Double)revalue(inputs.get(i));
+<a class="jxr_linenumber" name="263" href="#263">263</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(DIVIDE)) {
+<a class="jxr_linenumber" name="264" href="#264">264</a>                 <strong class="jxr_keyword">if</strong> (inputs.size() &gt; 2)
+<a class="jxr_linenumber" name="265" href="#265">265</a>                     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"more than two arguments for division"</span>);
+<a class="jxr_linenumber" name="266" href="#266">266</a>                 result = (Double)revalue(inputs.get(1));
+<a class="jxr_linenumber" name="267" href="#267">267</a>                 result /= (Double)revalue(inputs.get(0));
+<a class="jxr_linenumber" name="268" href="#268">268</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (selector.equals(AVERAGE)) {
+<a class="jxr_linenumber" name="269" href="#269">269</a>                 result = (Double)revalue(inputs.get(0));
+<a class="jxr_linenumber" name="270" href="#270">270</a>                 <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt; inputs.size(); i++) {
+<a class="jxr_linenumber" name="271" href="#271">271</a>                     result += (Double)revalue(inputs.get(i));
+<a class="jxr_linenumber" name="272" href="#272">272</a>                 }
+<a class="jxr_linenumber" name="273" href="#273">273</a>                 result = result/inputs.size();
+<a class="jxr_linenumber" name="274" href="#274">274</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="275" href="#275">275</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(<span class="jxr_string">"Not supported operation: "</span> +  selector);
+<a class="jxr_linenumber" name="276" href="#276">276</a>             }
+<a class="jxr_linenumber" name="277" href="#277">277</a> 
+<a class="jxr_linenumber" name="278" href="#278">278</a> 
+<a class="jxr_linenumber" name="279" href="#279">279</a>             logger.info(selector + <span class="jxr_string">" result: \n"</span> + result);
 <a class="jxr_linenumber" name="280" href="#280">280</a> 
-<a class="jxr_linenumber" name="281" href="#281">281</a>             logger.info(selector + <span class="jxr_string">" result: \n"</span> + result);
-<a class="jxr_linenumber" name="282" href="#282">282</a> 
-<a class="jxr_linenumber" name="283" href="#283">283</a>             String outputMessage = <span class="jxr_string">"calculated by "</span> + getHostname();
-<a class="jxr_linenumber" name="284" href="#284">284</a>             <strong class="jxr_keyword">if</strong> (context.getReturnPath() != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="285" href="#285">285</a>                 context.setReturnValue(result);
-<a class="jxr_linenumber" name="286" href="#286">286</a>             }
-<a class="jxr_linenumber" name="287" href="#287">287</a>             <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (outpaths.size() == 1) {
-<a class="jxr_linenumber" name="288" href="#288">288</a>                 <em class="jxr_comment">// put the result in the existing output path</em>
-<a class="jxr_linenumber" name="289" href="#289">289</a>                 cxt.putValue(outpaths.get(0), result);
-<a class="jxr_linenumber" name="290" href="#290">290</a>                 cxt.putValue(path(outpaths.get(0), ArrayContext.DESCRIPTION), outputMessage);
-<a class="jxr_linenumber" name="291" href="#291">291</a>             } <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="292" href="#292">292</a>                 cxt.putValue(RESULT_PATH, result);
-<a class="jxr_linenumber" name="293" href="#293">293</a>                 cxt.putValue(path(RESULT_PATH, ArrayContext.DESCRIPTION), outputMessage);
-<a class="jxr_linenumber" name="294" href="#294">294</a>             }
-<a class="jxr_linenumber" name="295" href="#295">295</a>         } <strong class="jxr_keyword">catch</strong> (Exception ex) {
-<a class="jxr_linenumber" name="296" href="#296">296</a>             <em class="jxr_comment">// ContextException, UnknownHostException</em>
-<a class="jxr_linenumber" name="297" href="#297">297</a>             ex.printStackTrace();
-<a class="jxr_linenumber" name="298" href="#298">298</a>             context.reportException(ex);
-<a class="jxr_linenumber" name="299" href="#299">299</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(selector + <span class="jxr_string">" calculate exception"</span>, ex);
-<a class="jxr_linenumber" name="300" href="#300">300</a>         }
-<a class="jxr_linenumber" name="301" href="#301">301</a>         <strong class="jxr_keyword">return</strong> context;
-<a class="jxr_linenumber" name="302" href="#302">302</a>     }
-<a class="jxr_linenumber" name="303" href="#303">303</a> 
-<a class="jxr_linenumber" name="304" href="#304">304</a> 
-<a class="jxr_linenumber" name="305" href="#305">305</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="306" href="#306">306</a> <em class="jxr_javadoccomment">     * Returns name of the local host.</em>
-<a class="jxr_linenumber" name="307" href="#307">307</a> <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="308" href="#308">308</a> <em class="jxr_javadoccomment">     * @return local host name</em>
-<a class="jxr_linenumber" name="309" href="#309">309</a> <em class="jxr_javadoccomment">     * @throws UnknownHostException</em>
-<a class="jxr_linenumber" name="310" href="#310">310</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="311" href="#311">311</a>     <strong class="jxr_keyword">private</strong> String getHostname() <strong class="jxr_keyword">throws</strong> UnknownHostException {
-<a class="jxr_linenumber" name="312" href="#312">312</a>         <strong class="jxr_keyword">return</strong> SorcerEnv.getLocalHost().getHostName();
-<a class="jxr_linenumber" name="313" href="#313">313</a>     }
-<a class="jxr_linenumber" name="314" href="#314">314</a> 
-<a class="jxr_linenumber" name="315" href="#315">315</a> }
+<a class="jxr_linenumber" name="281" href="#281">281</a>             String outputMessage = <span class="jxr_string">"calculated by "</span> + getHostname();
+<a class="jxr_linenumber" name="282" href="#282">282</a>             <strong class="jxr_keyword">if</strong> (context.getReturnPath() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="283" href="#283">283</a>                 context.setReturnValue(result);
+<a class="jxr_linenumber" name="284" href="#284">284</a>             }
+<a class="jxr_linenumber" name="285" href="#285">285</a>             <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (outpaths.size() == 1) {
+<a class="jxr_linenumber" name="286" href="#286">286</a>                 <em class="jxr_comment">// put the result in the existing output path</em>
+<a class="jxr_linenumber" name="287" href="#287">287</a>                 cxt.putValue(outpaths.get(0), result);
+<a class="jxr_linenumber" name="288" href="#288">288</a>                 cxt.putValue(path(outpaths.get(0), ArrayContext.DESCRIPTION), outputMessage);
+<a class="jxr_linenumber" name="289" href="#289">289</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="290" href="#290">290</a>                 cxt.putValue(RESULT_PATH, result);
+<a class="jxr_linenumber" name="291" href="#291">291</a>                 cxt.putValue(path(RESULT_PATH, ArrayContext.DESCRIPTION), outputMessage);
+<a class="jxr_linenumber" name="292" href="#292">292</a>             }
+<a class="jxr_linenumber" name="293" href="#293">293</a>         } <strong class="jxr_keyword">catch</strong> (Exception ex) {
+<a class="jxr_linenumber" name="294" href="#294">294</a>             <em class="jxr_comment">// ContextException, UnknownHostException</em>
+<a class="jxr_linenumber" name="295" href="#295">295</a>             ex.printStackTrace();
+<a class="jxr_linenumber" name="296" href="#296">296</a>             context.reportException(ex);
+<a class="jxr_linenumber" name="297" href="#297">297</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/service/ContextException.html">ContextException</a>(selector + <span class="jxr_string">" calculate exception"</span>, ex);
+<a class="jxr_linenumber" name="298" href="#298">298</a>         }
+<a class="jxr_linenumber" name="299" href="#299">299</a>         <strong class="jxr_keyword">return</strong> context;
+<a class="jxr_linenumber" name="300" href="#300">300</a>     }
+<a class="jxr_linenumber" name="301" href="#301">301</a> 
+<a class="jxr_linenumber" name="302" href="#302">302</a> 
+<a class="jxr_linenumber" name="303" href="#303">303</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="304" href="#304">304</a> <em class="jxr_javadoccomment">     * Returns name of the local host.</em>
+<a class="jxr_linenumber" name="305" href="#305">305</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="306" href="#306">306</a> <em class="jxr_javadoccomment">     * @return local host name</em>
+<a class="jxr_linenumber" name="307" href="#307">307</a> <em class="jxr_javadoccomment">     * @throws UnknownHostException</em>
+<a class="jxr_linenumber" name="308" href="#308">308</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="309" href="#309">309</a>     <strong class="jxr_keyword">private</strong> String getHostname() <strong class="jxr_keyword">throws</strong> UnknownHostException {
+<a class="jxr_linenumber" name="310" href="#310">310</a>         <strong class="jxr_keyword">return</strong> SorcerEnv.getLocalHost().getHostName();
+<a class="jxr_linenumber" name="311" href="#311">311</a>     }
+<a class="jxr_linenumber" name="312" href="#312">312</a> 
+<a class="jxr_linenumber" name="313" href="#313">313</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

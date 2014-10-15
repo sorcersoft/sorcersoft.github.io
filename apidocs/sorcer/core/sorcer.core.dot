@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.RemoteLogger
-	c0 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLogger.html">
+	c5356 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLogger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteLogger </td></tr>
@@ -18,24 +18,21 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + LOGGER_CONTEXT_KEY : String </td></tr>
 <tr><td align="left" balign="left"> + KEY_HOSTNAME : String </td></tr>
+<tr><td align="left" balign="left"> + KEY_EXERTION_ID : String </td></tr>
+<tr><td align="left" balign="left"> + KEY_PROVIDER_ID : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + publish(record : List&lt;LoggingEventVO&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getLoggers() : List&lt;LoggingConfig&gt; </td></tr>
-<tr><td align="left" balign="left"> + getLogNames() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getLog(fileName : String) : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + deleteLog(logName : String) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + publish(record : List&lt;LoggingEventVO&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLoggers() : List&lt;LoggingConfig&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLogNames() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLog(fileName : String) : List&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteLog(logName : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + registerLogListener(listener : RemoteEventListener, handback : MarshalledObject&lt;&gt;, duration : long, filterMapList : List&lt;Map&lt;String, String&gt;&gt;) : EventRegistration </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + unregisterLogListener(evReg : EventRegistration) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemoteLogger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.Grider
-	c1 [label=<<table title="sorcer.core.Grider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Grider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Grider </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Grider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerNotifierProtocol
-	c2 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerNotifierProtocol.html">
+	c5357 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerNotifierProtocol.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerNotifierProtocol </td></tr>
@@ -44,59 +41,33 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + register(listener : RemoteEventListener, handback : Object, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </td></tr>
-<tr><td align="left" balign="left"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </td></tr>
-<tr><td align="left" balign="left"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;) : Integer </td></tr>
-<tr><td align="left" balign="left"> + deleteListener(id : Integer, regFor : Integer) </td></tr>
-<tr><td align="left" balign="left"> + notify(ev : RemoteEvent) </td></tr>
-<tr><td align="left" balign="left"> + appendJobToSession(ownerID : String, jobID : String, sessionType : int, sessionID : String) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + register(listener : RemoteEventListener, handback : Object, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;) : Integer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteListener(id : Integer, regFor : Integer) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notify(ev : RemoteEvent) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + appendJobToSession(ownerID : String, jobID : String, sessionType : int, sessionID : String) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerNotifierProtocol.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.ContextMetaData
-	c3 [label=<<table title="sorcer.core.ContextMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaData.html">
+	// sorcer.core.ComponentFidelityInfo
+	c5358 [label=<<table title="sorcer.core.ComponentFidelityInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComponentFidelityInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ContextMetaData </td></tr>
+<tr><td align="center" balign="center"> ComponentFidelityInfo </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> # path : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getColumnCount() : int </td></tr>
-<tr><td align="left" balign="left"> + getColumnLabel(column : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getColumnName(column : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getColumnType(column : int) : int </td></tr>
-<tr><td align="left" balign="left"> + getColumnTypeName(column : int) : String </td></tr>
+<tr><td align="left" balign="left"> + ComponentFidelityInfo() </td></tr>
+<tr><td align="left" balign="left"> + ComponentFidelityInfo(fidelityName : String, path : String) </td></tr>
+<tr><td align="left" balign="left"> + ComponentFidelityInfo(fidelityName : String, path : String, selectors : String[]) </td></tr>
+<tr><td align="left" balign="left"> + getPath() : String </td></tr>
+<tr><td align="left" balign="left"> + setPath(fidelityPath : String) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ContextMetaData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.InclusiveContext
-	c4 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InclusiveContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> InclusiveContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addKeyToMap(newPath : String, oldPath : String) </td></tr>
-<tr><td align="left" balign="left"> + removePathFromMap(path : String) </td></tr>
-<tr><td align="left" balign="left"> + put(newPath : String, oldPath : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(path : String, index : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + changeIndex(oldIndex : int, newIndex : int) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getValueAtIndex(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + getIndex(path : String) : int </td></tr>
-<tr><td align="left" balign="left"> + getPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getRealPathAtIndex(index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getRealPath(path : String) : String </td></tr>
-<tr><td align="left" balign="left"> + size() : int </td></tr>
-<tr><td align="left" balign="left"> + iterator() : Iterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContextMetaData() : ContextMetaData </td></tr>
-		</table></td></tr>
-		</table>>, URL="./InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ComponentFidelityInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.Dispatcher
-	c5 [label=<<table title="sorcer.core.Dispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Dispatcher.html">
+	c5359 [label=<<table title="sorcer.core.Dispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Dispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Dispatcher </td></tr>
@@ -105,47 +76,27 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-<tr><td align="left" balign="left"> + getState() : int </td></tr>
-<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + setProvider(provider : Provider) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exec() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getResult() : DispatchResult </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLrm() : LeaseRenewalManager </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setLrm(lrm : LeaseRenewalManager) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Dispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.Persister
-	c6 [label=<<table title="sorcer.core.Persister" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Persister.html">
+	// sorcer.core.DispatchResult
+	c5360 [label=<<table title="sorcer.core.DispatchResult" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatchResult.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Persister </td></tr>
+<tr><td align="center" balign="center"> DispatchResult </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + state : Exec.State </td></tr>
+<tr><td align="left" balign="left"> + exertion : Exertion </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + isPersistable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + DispatchResult(state : Exec.State, exertion : Exertion) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Persister.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.FileStorer
-	c7 [label=<<table title="sorcer.core.FileStorer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileStorer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> FileStorer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInputDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getAppendDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getOutputDescriptor(desc : DocumentDescriptor) : DocumentDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getDirectories(docDesc : DocumentDescriptor) : String </td></tr>
-<tr><td align="left" balign="left"> + getDirectoryContent(desc : DocumentDescriptor) : String </td></tr>
-<tr><td align="left" balign="left"> + listDirectories(desc : DocumentDescriptor) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./FileStorer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./DispatchResult.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.Auditor
-	c8 [label=<<table title="sorcer.core.Auditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Auditor.html">
+	c5361 [label=<<table title="sorcer.core.Auditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Auditor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Auditor </td></tr>
@@ -154,18 +105,42 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + audit(context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + audit(context : Context&lt;&gt;) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Auditor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.Methoder
-	c9 [label=<<table title="sorcer.core.Methoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Methoder.html">
+	// sorcer.core.Persister
+	c5362 [label=<<table title="sorcer.core.Persister" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Persister.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Methoder </td></tr>
+<tr><td align="center" balign="center"> Persister </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Methoder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setValue(value : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isPersistable() : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Persister.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.ContextMetaData
+	c5363 [label=<<table title="sorcer.core.ContextMetaData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextMetaData.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ContextMetaData </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getColumnCount() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getColumnLabel(column : int) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getColumnName(column : int) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getColumnType(column : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getColumnTypeName(column : int) : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextMetaData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.ComprehensiveContextException
-	c10 [label=<<table title="sorcer.core.ComprehensiveContextException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextException.html">
+	c5364 [label=<<table title="sorcer.core.ComprehensiveContextException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComprehensiveContextException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContextException </td></tr>
 		</table></td></tr>
@@ -177,154 +152,57 @@ digraph G {
 <tr><td align="left" balign="left"> + ComprehensiveContextException(msg : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ComprehensiveContextException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.SorcerEnv
-	c11 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerEnv.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerEnv </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + debug : boolean </td></tr>
-<tr><td align="left" balign="left"> + PROVIDER_PROPERTIES_FILENAME : String </td></tr>
-<tr><td align="left" balign="left"> # sorcerEnv : SorcerEnv </td></tr>
-<tr><td align="left" balign="left"> # loadedEnvFile : String </td></tr>
-<tr><td align="left" balign="left"> # envFrom : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerEnv(props : Map&lt;String, String&gt;) </td></tr>
-<tr><td align="left" balign="left"> # SorcerEnv() </td></tr>
-<tr><td align="left" balign="left"> + getWebsterPort() : int </td></tr>
-<tr><td align="left" balign="left"> + getServiceIdFilename() : String </td></tr>
-<tr><td align="left" balign="left"> + isMulticastEnabled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isLookupCacheEnabled() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getLookupWaitTime() : Long </td></tr>
-<tr><td align="left" balign="left"> + getLookupMinMatches() : int </td></tr>
-<tr><td align="left" balign="left"> + getLookupMaxMatches() : int </td></tr>
-<tr><td align="left" balign="left"> + getWebsterUrl() : String </td></tr>
-<tr><td align="left" balign="left"> + getWebsterInterface() : String </td></tr>
-<tr><td align="left" balign="left"> + getWebsterUrlURL() : URL </td></tr>
-<tr><td align="left" balign="left"> + setWebsterUrl(host : String, port : int) </td></tr>
-<tr><td align="left" balign="left"> + getDatabaseStorerUrl() : String </td></tr>
-<tr><td align="left" balign="left"> + getDataspaceStorerUrl() : String </td></tr>
-<tr><td align="left" balign="left"> + getDataServerUrl() : String </td></tr>
-<tr><td align="left" balign="left"> + getDataServerInterface() : String </td></tr>
-<tr><td align="left" balign="left"> + getDataServerPort() : int </td></tr>
-<tr><td align="left" balign="left"> + getPortalUrl() : String </td></tr>
-<tr><td align="left" balign="left"> + getLookupLocators() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getLookupGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getRioVersion() : String </td></tr>
-<tr><td align="left" balign="left"> + getSpaceGroup() : String </td></tr>
-<tr><td align="left" balign="left"> + getSpaceName() : String </td></tr>
-<tr><td align="left" balign="left"> + getActualSpaceName() : String </td></tr>
-<tr><td align="left" balign="left"> + getPersisterType() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getExertMonitorName() : String </td></tr>
-<tr><td align="left" balign="left"> + getDatabaseStorerName() : String </td></tr>
-<tr><td align="left" balign="left"> + getActualDatabaseStorerName() : String </td></tr>
-<tr><td align="left" balign="left"> + getDataspaceStorerName() : String </td></tr>
-<tr><td align="left" balign="left"> + getActualDataspaceStorerName() : String </td></tr>
-<tr><td align="left" balign="left"> + getSpacerName() : String </td></tr>
-<tr><td align="left" balign="left"> + getActualSpacerName() : String </td></tr>
-<tr><td align="left" balign="left"> + getRmiHost() : String </td></tr>
-<tr><td align="left" balign="left"> + getRmiPort() : String </td></tr>
-<tr><td align="left" balign="left"> + getPortalHost() : String </td></tr>
-<tr><td align="left" balign="left"> + getPortalPort() : String </td></tr>
-<tr><td align="left" balign="left"> + isOn(property : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isDbOracle() : boolean </td></tr>
-<tr><td align="left" balign="left"> + nameSuffixed() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
-<tr><td align="left" balign="left"> + setProperty(key : String, value : String) </td></tr>
-<tr><td align="left" balign="left"> + getProperty(property : String, defaultValue : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getDBPrefix() : String </td></tr>
-<tr><td align="left" balign="left"> + setDBPrefix(prefix : String) </td></tr>
-<tr><td align="left" balign="left"> + getSepChar() : String </td></tr>
-<tr><td align="left" balign="left"> + setSepChar(character : String) </td></tr>
-<tr><td align="left" balign="left"> + seqIdPath(tableBaseName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + seqName(tableBaseName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + seqIdName(tableBaseName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + tableName(tableBaseName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getRmiUrl() : String </td></tr>
-<tr><td align="left" balign="left"> + getContextFactory() : String </td></tr>
-<tr><td align="left" balign="left"> + getContextProviderUrl() : String </td></tr>
-<tr><td align="left" balign="left"> + getEnvProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + setEnvProperties(properties : Properties) </td></tr>
-<tr><td align="left" balign="left"> + getProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + updateFromProperties(properties : Properties) </td></tr>
-<tr><td align="left" balign="left"> + getDataDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getDocRootDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getDataFile(filename : String) : File </td></tr>
-<tr><td align="left" balign="left"> + getUserHomeDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getUniqueId() : String </td></tr>
-<tr><td align="left" balign="left"> + getNewScratchDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getNewScratchDir(scratchDirNamePrefix : String) : File </td></tr>
-<tr><td align="left" balign="left"> + getAbsoluteScrachFilename(filename : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getScratchURL(scratchFile : File) : URL </td></tr>
-<tr><td align="left" balign="left"> + getDataURL(dataFile : File) : URL </td></tr>
-<tr><td align="left" balign="left"> + getAnonymousPort() : int </td></tr>
-<tr><td align="left" balign="left"> + getPortAvailable() : int </td></tr>
-<tr><td align="left" balign="left"> + updateCodebase() </td></tr>
-<tr><td align="left" balign="left"> + setCodeBase(jars : String[]) </td></tr>
-<tr><td align="left" balign="left"> + toArray(arg : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getNameSuffix() : String </td></tr>
-<tr><td align="left" balign="left"> + getDefaultNameSuffix(suffixLength : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getSuffixedName(name : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getActualName(name : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getPureNameFromActual(actualName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getSuffixedName(name : String, suffixLength : int) : String </td></tr>
-<tr><td align="left" balign="left"> + loadContextNodeTypes(map : Hashtable&lt;?, ?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getEnvironment() : SorcerEnv </td></tr>
-<tr><td align="left" balign="left"> + getHomeDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getExtDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getRepoDir() : String </td></tr>
-<tr><td align="left" balign="left"> + getLibPath() : String </td></tr>
-<tr><td align="left" balign="left"> + setRepoDir(props : Properties) : Properties </td></tr>
-<tr><td align="left" balign="left"> + loadProperties(inputStream : InputStream) : Properties </td></tr>
-<tr><td align="left" balign="left"> + getCodebase(root : URL, jar : String) : URL </td></tr>
-<tr><td align="left" balign="left"> + getCodebase(root : URL, jars : String[]) : String </td></tr>
-<tr><td align="left" balign="left"> + appendProperties(properties : Properties) </td></tr>
-<tr><td align="left" balign="left"> + expandStringProperties(value : String, isSystemProperty : boolean, props : Properties) : String </td></tr>
-<tr><td align="left" balign="left"> + getHostAddress() : String </td></tr>
-<tr><td align="left" balign="left"> + getHostAddress(name : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getHostName() : String </td></tr>
-<tr><td align="left" balign="left"> + getLocalHost() : InetAddress </td></tr>
-<tr><td align="left" balign="left"> + getWebsterRoots() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getHostAddressFromProperty(property : String) : String </td></tr>
-<tr><td align="left" balign="left"> + isBootable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setBootable(bootable : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getSorcerVersion() : String </td></tr>
-<tr><td align="left" balign="left"> + getCodebaseRoot() : URL </td></tr>
-<tr><td align="left" balign="left"> + setHomeDir() </td></tr>
-<tr><td align="left" balign="left"> + loadProperties(filename : String) : Properties </td></tr>
-<tr><td align="left" balign="left"> + prepareWebsterInterface(props : Properties) : String </td></tr>
-<tr><td align="left" balign="left"> + getProviderDataServerInterface() : String </td></tr>
-<tr><td align="left" balign="left"> + getProviderDataServerPort() : String </td></tr>
-<tr><td align="left" balign="left"> + getDataRootDir() : File </td></tr>
-<tr><td align="left" balign="left"> + isWebsterInternal() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setWebsterInternal(internal : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getRequestorWebsterCodebase() : String </td></tr>
-<tr><td align="left" balign="left"> + setRequestorWebsterCodebase(codebase : String) </td></tr>
-<tr><td align="left" balign="left"> + setWebsterPortProperty(port : int) </td></tr>
-<tr><td align="left" balign="left"> + getWebsterRootsString() : String </td></tr>
-<tr><td align="left" balign="left"> + setWebsterRootsString(roots : String) </td></tr>
-<tr><td align="left" balign="left"> + getSorcerHome() : String </td></tr>
-<tr><td align="left" balign="left"> + setSorcerHome(sorcerHome : String) </td></tr>
-<tr><td align="left" balign="left"> + load(props : Map&lt;String, String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + load(fileName : String) : SorcerEnv </td></tr>
-<tr><td align="left" balign="left"> + setSorcerEnv(sorcerEnv : SorcerEnv) </td></tr>
-<tr><td align="left" balign="left"> + getSorcerExt() : String </td></tr>
-<tr><td align="left" balign="left"> + getSorcerExtDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getLookupLocatorsHolder() : LookupLocators </td></tr>
-<tr><td align="left" balign="left"> + getWebsterRoots(additional : String[]) : String[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerEnv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.AdministratableProvider
-	c12 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AdministratableProvider.html">
+	// sorcer.core.Grider
+	c5365 [label=<<table title="sorcer.core.Grider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Grider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
+<tr><td align="center" balign="center"> Grider </td></tr>
 		</table></td></tr>
-		</table>>, URL="./AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./Grider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.InclusiveContext
+	c5366 [label=<<table title="sorcer.core.InclusiveContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InclusiveContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> InclusiveContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addKeyToMap(newPath : String, oldPath : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removePathFromMap(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + put(newPath : String, oldPath : String, value : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + changeIndex(path : String, index : int) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + changeIndex(oldIndex : int, newIndex : int) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValueAtIndex(index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(path : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getIndex(path : String) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPathAtIndex(index : int) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRealPathAtIndex(index : int) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRealPath(path : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + size() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + iterator() : Iterator&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextMetaData() : ContextMetaData </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./InclusiveContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.LookupLocators
+	c5367 [label=<<table title="sorcer.core.LookupLocators" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LookupLocators.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LookupLocators </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LookupLocators() </td></tr>
+<tr><td align="left" balign="left"> + getLookupLocators() : String[] </td></tr>
+<tr><td align="left" balign="left"> + setDynamicUrls(dynamicUrls : List&lt;String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setStaticUrls(urls : String[]) </td></tr>
+<tr><td align="left" balign="left"> + isInitialized() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LookupLocators.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.DestroyAdmin
-	c13 [label=<<table title="sorcer.core.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DestroyAdmin.html">
+	c5368 [label=<<table title="sorcer.core.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DestroyAdmin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DestroyAdmin </td></tr>
@@ -333,12 +211,48 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + destroyNode() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroyNode() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./DestroyAdmin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.UEID
+	c5369 [label=<<table title="sorcer.core.UEID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UEID.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UEID </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + sid : ServiceID </td></tr>
+<tr><td align="left" balign="left"> + exertionID : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UEID(sid : ServiceID, exertionID : String) </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + asString() : String </td></tr>
+<tr><td align="left" balign="left"> + fromString(ueid : String) : UEID </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UEID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.ContextManagement
+	c5370 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ContextManagement </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CONTEXT_REQUEST_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + CONTEXT_FILENAME : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextScript() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethodContext(interfaceName : String, methodName : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethodContextScript(interfaceName : String, methodName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + saveMethodContext(interfaceName : String, methodName : String, theContext : Context&lt;&gt;) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + currentContextList(interfaceName : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteContext(interfaceName : String, methodName : String) : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.SorcerConstants
-	c14 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerConstants.html">
+	c5371 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -350,6 +264,8 @@ digraph G {
 <tr><td align="left" balign="left"> + E_SORCER_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_SORCER_EXT : String </td></tr>
 <tr><td align="left" balign="left"> + S_SORCER_EXT : String </td></tr>
+<tr><td align="left" balign="left"> + E_SORCER_MODELING : String </td></tr>
+<tr><td align="left" balign="left"> + S_SORCER_MODELING : String </td></tr>
 <tr><td align="left" balign="left"> + P_UNDEFINED : String </td></tr>
 <tr><td align="left" balign="left"> + P_PROVIDER_NAME : String </td></tr>
 <tr><td align="left" balign="left"> + EXERT_MONITOR_NAME : String </td></tr>
@@ -465,8 +381,10 @@ digraph G {
 <tr><td align="left" balign="left"> + S_VERSION_SORCER : String </td></tr>
 <tr><td align="left" balign="left"> + S_VERSION_RIO : String </td></tr>
 <tr><td align="left" balign="left"> + S_SORCER_LOCAL_HOSTADDR : String </td></tr>
+<tr><td align="left" balign="left"> + S_JNA_LIB_PATH : String </td></tr>
 <tr><td align="left" balign="left"> + S_KEY_SORCER_ENV : String </td></tr>
 <tr><td align="left" balign="left"> + S_WEBSTER_TMP_DIR : String </td></tr>
+<tr><td align="left" balign="left"> + S_WEBSTER_PUT_DIR : String </td></tr>
 <tr><td align="left" balign="left"> + S_RIO_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_RIO_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_WEBSTER_PORT : String </td></tr>
@@ -944,73 +862,170 @@ digraph G {
 <tr><td align="left" balign="left"> + CODEBASE_SEPARATOR : String </td></tr>
 <tr><td align="left" balign="left"> + NAME_DEFAULT : String </td></tr>
 <tr><td align="left" balign="left"> + MDC_SORCER_REMOTE_CALL : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_EXERTION_ID : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_PROVIDER_ID : String </td></tr>
 <tr><td align="left" balign="left"> + START_PACKAGE : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_LOGGER_INTERFACE : String </td></tr>
+<tr><td align="left" balign="left"> + S_SHARED_DIRS_FILE : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.ContextManagement
-	c15 [label=<<table title="sorcer.core.ContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ContextManagement.html">
+	// sorcer.core.SorcerEnv
+	c5372 [label=<<table title="sorcer.core.SorcerEnv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerEnv.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ContextManagement </td></tr>
+<tr><td align="center" balign="center"> SorcerEnv </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CONTEXT_REQUEST_PATH : String </td></tr>
-<tr><td align="left" balign="left"> + CONTEXT_FILENAME : String </td></tr>
+<tr><td align="left" balign="left"> + S_SHARED_DIRS : String </td></tr>
+<tr><td align="left" balign="left"> + PROVIDER_PROPERTIES_FILENAME : String </td></tr>
+<tr><td align="left" balign="left"> # sorcerEnv : SorcerEnv </td></tr>
+<tr><td align="left" balign="left"> # loadedEnvFile : String </td></tr>
+<tr><td align="left" balign="left"> # envFrom : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContextScript() : String </td></tr>
-<tr><td align="left" balign="left"> + getMethodContext(interfaceName : String, methodName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getMethodContextScript(interfaceName : String, methodName : String) : String </td></tr>
-<tr><td align="left" balign="left"> + saveMethodContext(interfaceName : String, methodName : String, theContext : Context&lt;&gt;) : boolean </td></tr>
-<tr><td align="left" balign="left"> + currentContextList(interfaceName : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + deleteContext(interfaceName : String, methodName : String) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.UEID
-	c16 [label=<<table title="sorcer.core.UEID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UEID.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UEID </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + sid : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + exertionID : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + UEID(sid : ServiceID, exertionID : String) </td></tr>
-<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + asString() : String </td></tr>
-<tr><td align="left" balign="left"> + fromString(ueid : String) : UEID </td></tr>
-		</table></td></tr>
-		</table>>, URL="./UEID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.RemoteContextManagement
-	c17 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.LookupLocators
-	c18 [label=<<table title="sorcer.core.LookupLocators" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LookupLocators.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LookupLocators </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LookupLocators() </td></tr>
+<tr><td align="left" balign="left"> + SorcerEnv(props : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> # SorcerEnv() </td></tr>
+<tr><td align="left" balign="left"> + getWebsterPort() : int </td></tr>
+<tr><td align="left" balign="left"> + getServiceIdFilename() : String </td></tr>
+<tr><td align="left" balign="left"> + isMulticastEnabled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isLookupCacheEnabled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getLookupWaitTime() : Long </td></tr>
+<tr><td align="left" balign="left"> + getLookupMinMatches() : int </td></tr>
+<tr><td align="left" balign="left"> + getLookupMaxMatches() : int </td></tr>
+<tr><td align="left" balign="left"> + getWebsterUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + updateWebster() </td></tr>
+<tr><td align="left" balign="left"> + getWebsterInterface() : String </td></tr>
+<tr><td align="left" balign="left"> + getWebsterUrlURL() : URL </td></tr>
+<tr><td align="left" balign="left"> + setWebsterUrl(host : String, port : int) </td></tr>
+<tr><td align="left" balign="left"> + getDatabaseStorerUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getDataspaceStorerUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getDataServerUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getDataServerInterface() : String </td></tr>
+<tr><td align="left" balign="left"> + getDataServerPort() : int </td></tr>
+<tr><td align="left" balign="left"> + getPortalUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + getLookupLocators() : String[] </td></tr>
-<tr><td align="left" balign="left"> + setDynamicUrls(dynamicUrls : List&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setStaticUrls(urls : String[]) </td></tr>
-<tr><td align="left" balign="left"> + isInitialized() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getLookupGroups() : String[] </td></tr>
+<tr><td align="left" balign="left"> + getRioVersion() : String </td></tr>
+<tr><td align="left" balign="left"> + getSpaceGroup() : String </td></tr>
+<tr><td align="left" balign="left"> + getSpaceName() : String </td></tr>
+<tr><td align="left" balign="left"> + getActualSpaceName() : String </td></tr>
+<tr><td align="left" balign="left"> + getPersisterType() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getExertMonitorName() : String </td></tr>
+<tr><td align="left" balign="left"> + getDatabaseStorerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getActualDatabaseStorerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getDataspaceStorerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getActualDataspaceStorerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getSpacerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getActualSpacerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getCatalogerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getActualCatalogerName() : String </td></tr>
+<tr><td align="left" balign="left"> + getRmiHost() : String </td></tr>
+<tr><td align="left" balign="left"> + getRmiPort() : String </td></tr>
+<tr><td align="left" balign="left"> + getPortalHost() : String </td></tr>
+<tr><td align="left" balign="left"> + getPortalPort() : String </td></tr>
+<tr><td align="left" balign="left"> + isOn(property : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDbOracle() : boolean </td></tr>
+<tr><td align="left" balign="left"> + nameSuffixed() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
+<tr><td align="left" balign="left"> + setProperty(key : String, value : String) </td></tr>
+<tr><td align="left" balign="left"> + getProperty(property : String, defaultValue : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getDBPrefix() : String </td></tr>
+<tr><td align="left" balign="left"> + setDBPrefix(prefix : String) </td></tr>
+<tr><td align="left" balign="left"> + getSepChar() : String </td></tr>
+<tr><td align="left" balign="left"> + setSepChar(character : String) </td></tr>
+<tr><td align="left" balign="left"> + seqIdPath(tableBaseName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + seqName(tableBaseName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + seqIdName(tableBaseName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + tableName(tableBaseName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getRmiUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getContextFactory() : String </td></tr>
+<tr><td align="left" balign="left"> + getContextProviderUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getEnvProperties() : Properties </td></tr>
+<tr><td align="left" balign="left"> + setEnvProperties(properties : Properties) </td></tr>
+<tr><td align="left" balign="left"> + getProperties() : Properties </td></tr>
+<tr><td align="left" balign="left"> + updateFromProperties(properties : Properties) </td></tr>
+<tr><td align="left" balign="left"> + getDataDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getDocRootDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getDataFile(filename : String) : File </td></tr>
+<tr><td align="left" balign="left"> + getUserHomeDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getScratchDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getSharedDirs() : File[] </td></tr>
+<tr><td align="left" balign="left"> + getUniqueId() : String </td></tr>
+<tr><td align="left" balign="left"> + getNewScratchDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getNewScratchDir(scratchDirNamePrefix : String) : File </td></tr>
+<tr><td align="left" balign="left"> + getAbsoluteScrachFilename(filename : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getScratchURL(scratchFile : File) : URL </td></tr>
+<tr><td align="left" balign="left"> + getDataURL(dataFile : File) : URL </td></tr>
+<tr><td align="left" balign="left"> + getAnonymousPort() : int </td></tr>
+<tr><td align="left" balign="left"> + getPortAvailable() : int </td></tr>
+<tr><td align="left" balign="left"> + updateCodebase() </td></tr>
+<tr><td align="left" balign="left"> + setCodeBase(jars : String[]) </td></tr>
+<tr><td align="left" balign="left"> + toArray(arg : String) : String[] </td></tr>
+<tr><td align="left" balign="left"> + getNameSuffix() : String </td></tr>
+<tr><td align="left" balign="left"> + getDefaultNameSuffix(suffixLength : int) : String </td></tr>
+<tr><td align="left" balign="left"> + getSuffixedName(name : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getActualName(name : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getPureNameFromActual(actualName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getSuffixedName(name : String, suffixLength : int) : String </td></tr>
+<tr><td align="left" balign="left"> + loadContextNodeTypes(map : Hashtable&lt;?, ?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getEnvironment() : SorcerEnv </td></tr>
+<tr><td align="left" balign="left"> + getHomeDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getHome() : String </td></tr>
+<tr><td align="left" balign="left"> + getExtDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getModelingDir() : String </td></tr>
+<tr><td align="left" balign="left"> + getRepoDir() : String </td></tr>
+<tr><td align="left" balign="left"> + getLibPath() : String </td></tr>
+<tr><td align="left" balign="left"> + setRepoDir(props : Properties) : Properties </td></tr>
+<tr><td align="left" balign="left"> + loadProperties(inputStream : InputStream) : Properties </td></tr>
+<tr><td align="left" balign="left"> + getCodebase(root : URL, jar : String) : URL </td></tr>
+<tr><td align="left" balign="left"> + getCodebase(root : URL, jars : String[]) : String </td></tr>
+<tr><td align="left" balign="left"> + appendProperties(properties : Properties) </td></tr>
+<tr><td align="left" balign="left"> + expandStringProperties(value : String, isSystemProperty : boolean, props : Properties) : String </td></tr>
+<tr><td align="left" balign="left"> + getHostAddress() : String </td></tr>
+<tr><td align="left" balign="left"> + getHostAddress(name : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getHostName() : String </td></tr>
+<tr><td align="left" balign="left"> + getLocalHost() : InetAddress </td></tr>
+<tr><td align="left" balign="left"> + getWebsterRoots() : String[] </td></tr>
+<tr><td align="left" balign="left"> + getHostAddressFromProperty(property : String) : String </td></tr>
+<tr><td align="left" balign="left"> + isBootable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setBootable(bootable : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getSorcerVersion() : String </td></tr>
+<tr><td align="left" balign="left"> + getCodebaseRoot() : URL </td></tr>
+<tr><td align="left" balign="left"> + setHomeDir() </td></tr>
+<tr><td align="left" balign="left"> + loadProperties(filename : String) : Properties </td></tr>
+<tr><td align="left" balign="left"> + loadPropertiesFromFile(filename : String) : Properties </td></tr>
+<tr><td align="left" balign="left"> + prepareWebsterInterface(props : Properties) : String </td></tr>
+<tr><td align="left" balign="left"> + getProviderDataServerInterface() : String </td></tr>
+<tr><td align="left" balign="left"> + getProviderDataServerPort() : String </td></tr>
+<tr><td align="left" balign="left"> + getDataRootDir() : File </td></tr>
+<tr><td align="left" balign="left"> + isWebsterInternal() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setWebsterInternal(internal : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getRequestorWebsterCodebase() : String </td></tr>
+<tr><td align="left" balign="left"> + setRequestorWebsterCodebase(codebase : String) </td></tr>
+<tr><td align="left" balign="left"> + setWebsterInterfaceProperty(interfaceProperty : String) </td></tr>
+<tr><td align="left" balign="left"> + setWebsterPortProperty(port : int) </td></tr>
+<tr><td align="left" balign="left"> + getWebsterRootsString() : String </td></tr>
+<tr><td align="left" balign="left"> + setWebsterRootsString(roots : String) </td></tr>
+<tr><td align="left" balign="left"> + getSorcerHome() : String </td></tr>
+<tr><td align="left" balign="left"> + setSorcerHome(sorcerHome : String) </td></tr>
+<tr><td align="left" balign="left"> + load(props : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + load(fileName : String) : SorcerEnv </td></tr>
+<tr><td align="left" balign="left"> + setSorcerEnv(sorcerEnv : SorcerEnv) </td></tr>
+<tr><td align="left" balign="left"> + getSorcerExt() : String </td></tr>
+<tr><td align="left" balign="left"> + getSorcerModelingLoc() : String </td></tr>
+<tr><td align="left" balign="left"> + getSorcerExtDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getSorcerModelingDir() : File </td></tr>
+<tr><td align="left" balign="left"> + getLookupLocatorsHolder() : LookupLocators </td></tr>
+<tr><td align="left" balign="left"> + getWebsterRoots(additional : String[]) : String[] </td></tr>
+<tr><td align="left" balign="left"> + isIGrid() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getResolverCache() : File </td></tr>
+<tr><td align="left" balign="left"> + isClearResolverCache() : boolean </td></tr>
 		</table></td></tr>
-		</table>>, URL="./LookupLocators.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SorcerEnv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.ServiceActivator
-	c19 [label=<<table title="sorcer.core.ServiceActivator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceActivator.html">
+	c5373 [label=<<table title="sorcer.core.ServiceActivator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceActivator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceActivator </td></tr>
@@ -1019,12 +1034,8 @@ digraph G {
 <tr><td align="left" balign="left"> + KEY_ACTIVATOR : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + activate() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + activate() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceActivator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.Methoder implements sorcer.core.AdministratableProvider
-	c12:p -> c9:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.RemoteContextManagement implements sorcer.core.ContextManagement
-	c15:p -> c17:p [dir=back,arrowtail=empty,style=dashed];
 }
 

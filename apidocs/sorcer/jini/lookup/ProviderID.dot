@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.jini.lookup.ProviderID
-	c407397 [label=<<table title="sorcer.jini.lookup.ProviderID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderID.html">
+	c436643 [label=<<table title="sorcer.jini.lookup.ProviderID" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderID.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderID </td></tr>
 		</table></td></tr>
@@ -23,9 +23,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderID.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.jini.lookup.ProviderID implements java.lang.Comparable<T>
-	c407776:p -> c407397:p [dir=back,arrowtail=empty,style=dashed];
+	c437073:p -> c436643:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Comparable<T>
-	c407776 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
+	c437073 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Comparable&lt;T&gt; </td></tr>
@@ -34,7 +34,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + compareTo(arg0 : T) : int </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + compareTo(arg0 : T) : int </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

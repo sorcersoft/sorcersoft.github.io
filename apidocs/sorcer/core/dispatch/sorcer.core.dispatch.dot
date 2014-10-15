@@ -9,141 +9,99 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.dispatch.MonitoredTaskDispatcher
-	c38124 [label=<<table title="sorcer.core.dispatch.MonitoredTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredTaskDispatcher.html">
+	// sorcer.core.dispatch.CatalogBlockDispatcher
+	c44124 [label=<<table title="sorcer.core.dispatch.CatalogBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogBlockDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MonitoredTaskDispatcher </td></tr>
+<tr><td align="center" balign="center"> CatalogBlockDispatcher </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitoredTaskDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> + CatalogBlockDispatcher(block : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # doExec() </td></tr>
+<tr><td align="left" balign="left"> # beforeExec(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # afterExec(result : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # getInputExertions() : List&lt;Exertion&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./MonitoredTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceExertDispatcher
-	c38125 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SpaceExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
-<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
-<tr><td align="left" balign="left"> # myMemberUtil : LokiMemberUtil </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceExertDispatcher() </td></tr>
-<tr><td align="left" balign="left"> + SpaceExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, memUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + SpaceExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) </td></tr>
-<tr><td align="left" balign="left"> # addPoison(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # changeDoneExertionIndex(index : int) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # writeEnvelop(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # takeEnvelop(template : Entry) : ExertionEnvelop </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + collectFails() </td></tr>
-<tr><td align="left" balign="left"> + collectErrors() </td></tr>
-<tr><td align="left" balign="left"> # handleError(exertion : Exertion, state : int) </td></tr>
-<tr><td align="left" balign="left"> # executeMasterExertion() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceExertDispatcher.CollectFailThread
-	c38126 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher.CollectFailThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.CollectFailThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CollectFailThread </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceExertDispatcher.CollectFailThread(disatchGroup : ThreadGroup) </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceExertDispatcher.CollectFailThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceExertDispatcher.CollectErrorThread
-	c38127 [label=<<table title="sorcer.core.dispatch.SpaceExertDispatcher.CollectErrorThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceExertDispatcher.CollectErrorThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CollectErrorThread </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceExertDispatcher.CollectErrorThread(disatchGroup : ThreadGroup) </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceExertDispatcher.CollectErrorThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ProvisionManager
-	c38128 [label=<<table title="sorcer.core.dispatch.ProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProvisionManager.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ProvisionManager </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ProvisionManager(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + deployServices() : boolean </td></tr>
-<tr><td align="left" balign="left"> + undeploy() </td></tr>
-<tr><td align="left" balign="left"> + getOperationalStringManager() : OperationalStringManager </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./CatalogBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.ExertionDispatcherFactory
-	c38129 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionDispatcherFactory.html">
+	c44125 [label=<<table title="sorcer.core.dispatch.ExertionDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionDispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionDispatcherFactory </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + catalog : Cataloger </td></tr>
+<tr><td align="left" balign="left"> + LEASE_RENEWAL_PERIOD : long </td></tr>
+<tr><td align="left" balign="left"> + DEFAULT_TIMEOUT_PERIOD : long </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertionDispatcherFactory() </td></tr>
-<tr><td align="left" balign="left"> + getFactory() : ExertionDispatcherFactory </td></tr>
-<tr><td align="left" balign="left"> + getProvisionableFactory() : ExertionDispatcherFactory </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> # ExertionDispatcherFactory(loki : LokiMemberUtil) </td></tr>
+<tr><td align="left" balign="left"> + getFactory() : DispatcherFactory </td></tr>
+<tr><td align="left" balign="left"> + getFactory(loki : LokiMemberUtil) : DispatcherFactory </td></tr>
 <tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, config : String[]) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> # isSpaceSequential(exertion : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider, config : String[]) : Dispatcher </td></tr>
+<tr><td align="left" balign="left"> + createDispatcher(task : Task, provider : Provider, config : String[]) : SpaceTaskDispatcher </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionDispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogExertDispatcher
-	c38130 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
+	// sorcer.core.dispatch.ExertionSorter
+	c44126 [label=<<table title="sorcer.core.dispatch.ExertionSorter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionSorter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> CatalogExertDispatcher </font></td></tr>
+<tr><td align="center" balign="center"> ExertionSorter </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogExertDispatcher(job : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # runExertion(ex : ServiceExertion) : CatalogExertDispatcher.ExertionThread </td></tr>
-<tr><td align="left" balign="left"> # execExertion(ex : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # execTask(task : Task) : Task </td></tr>
-<tr><td align="left" balign="left"> # execServiceTask(task : Task) : Task </td></tr>
-<tr><td align="left" balign="left"> # execJob(job : Job) : Job </td></tr>
+<tr><td align="left" balign="left"> + ExertionSorter(topLevelJob : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + getSortedJob() : Exertion </td></tr>
 		</table></td></tr>
-		</table>>, URL="./CatalogExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogExertDispatcher.ExertionThread
-	c38131 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher.ExertionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.ExertionThread.html">
+		</table>>, URL="./ExertionSorter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.SpaceSequentialDispatcher
+	c44127 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertionThread </td></tr>
+<tr><td align="center" balign="center"> SpaceSequentialDispatcher </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogExertDispatcher.ExertionThread(exertion : ServiceExertion, dispatcher : ExertDispatcher) </td></tr>
+<tr><td align="left" balign="left"> + SpaceSequentialDispatcher(job : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # dispatchExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # waitForExertion(exertion : Exertion) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.ProviderProvisionManager
+	c44128 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProvisionManager.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProviderProvisionManager </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # servicesToProvision : Set&lt;ProviderProvisionManager.SignatureElement&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # ProviderProvisionManager() </td></tr>
+<tr><td align="left" balign="left"> + getInstance() : ProviderProvisionManager </td></tr>
+<tr><td align="left" balign="left"> + add(exertion : Exertion, spaceExertDispatcher : SpaceParallelDispatcher) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProviderProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.ProviderProvisionManager.ProvisionThread
+	c44129 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager.ProvisionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProvisionManager.ProvisionThread.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProvisionThread </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # ProvisionThread() </td></tr>
 <tr><td align="left" balign="left"> + run() </td></tr>
-<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getResult() : Exertion </td></tr>
 		</table></td></tr>
-		</table>>, URL="./CatalogExertDispatcher.ExertionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ProviderProvisionManager.ProvisionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.SortingException
-	c38132 [label=<<table title="sorcer.core.dispatch.SortingException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SortingException.html">
+	c44130 [label=<<table title="sorcer.core.dispatch.SortingException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SortingException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SortingException </td></tr>
 		</table></td></tr>
@@ -157,109 +115,200 @@ digraph G {
 <tr><td align="left" balign="left"> + SortingException(msg : String, exception : Exception) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SortingException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceSequentialDispatcher
-	c38133 [label=<<table title="sorcer.core.dispatch.SpaceSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceSequentialDispatcher.html">
+	// sorcer.core.dispatch.CatalogExertDispatcher
+	c44131 [label=<<table title="sorcer.core.dispatch.CatalogExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogExertDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceSequentialDispatcher </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> CatalogExertDispatcher </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceSequentialDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> + CatalogExertDispatcher(job : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # execExertion(ex : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # afterExec(ex : Exertion, result : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # execTask(task : Task) : Task </td></tr>
+<tr><td align="left" balign="left"> # execServiceTask(task : Task) : Task </td></tr>
+<tr><td align="left" balign="left"> # execJob(job : Job) : Job </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SpaceSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SWIFSequentialDispatcher
-	c38134 [label=<<table title="sorcer.core.dispatch.SWIFSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFSequentialDispatcher.html">
+		</table>>, URL="./CatalogExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.CatalogSequentialDispatcher
+	c44132 [label=<<table title="sorcer.core.dispatch.CatalogSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSequentialDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SWIFSequentialDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SWIFSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-<tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> + setStatus(ex : ServiceExertion, status : int) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SWIFSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogSingletonDispatcher
-	c38135 [label=<<table title="sorcer.core.dispatch.CatalogSingletonDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSingletonDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogSingletonDispatcher </td></tr>
+<tr><td align="center" balign="center"> CatalogSequentialDispatcher </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogSingletonDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> + CatalogSequentialDispatcher(job : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # doExec() </td></tr>
+<tr><td align="left" balign="left"> # dispatchExertion(se : ServiceExertion) </td></tr>
+<tr><td align="left" balign="left"> # getInputExertions() : List&lt;Exertion&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./CatalogSingletonDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SWIFExertDispatcher
-	c38136 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.html">
+		</table>>, URL="./CatalogSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.SpaceTaskDispatcher
+	c44133 [label=<<table title="sorcer.core.dispatch.SpaceTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaskDispatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SWIFExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SWIFExertDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # runExertion(ex : ServiceExertion) : SWIFExertDispatcher.ExertionThread </td></tr>
-<tr><td align="left" balign="left"> # execExertion(ex : Exertion) : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SWIFExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SWIFExertDispatcher.ExertionThread
-	c38137 [label=<<table title="sorcer.core.dispatch.SWIFExertDispatcher.ExertionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SWIFExertDispatcher.ExertionThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertionThread </td></tr>
+<tr><td align="center" balign="center"> SpaceTaskDispatcher </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SWIFExertDispatcher.ExertionThread(exertion : ServiceExertion, dispatcher : ExertDispatcher) </td></tr>
+<tr><td align="left" balign="left"> + SpaceTaskDispatcher(task : Task, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # getInputExertions() : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> # handleResult(results : Collection&lt;ExertionEnvelop&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.CatalogParallelDispatcher
+	c44134 [label=<<table title="sorcer.core.dispatch.CatalogParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogParallelDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatalogParallelDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # executor : ExecutorService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatalogParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + exec() </td></tr>
+<tr><td align="left" balign="left"> + doExec() </td></tr>
+<tr><td align="left" balign="left"> # getInputExertions() : List&lt;Exertion&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.CatalogParallelDispatcher.ExecExertion
+	c44135 [label=<<table title="sorcer.core.dispatch.CatalogParallelDispatcher.ExecExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogParallelDispatcher.ExecExertion.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ExecExertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ExecExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + call() : Exertion </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CatalogParallelDispatcher.ExecExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.DispatcherException
+	c44136 [label=<<table title="sorcer.core.dispatch.DispatcherException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DispatcherException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DispatcherException() </td></tr>
+<tr><td align="left" balign="left"> + DispatcherException(msg : String) </td></tr>
+<tr><td align="left" balign="left"> + DispatcherException(msg : String, t : Throwable) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DispatcherException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.ExertDispatcher
+	c44137 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # logger : Logger </td></tr>
+<tr><td align="left" balign="left"> # xrt : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> # masterXrt : ServiceExertion </td></tr>
+<tr><td align="left" balign="left"> # inputXrts : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> # state : int </td></tr>
+<tr><td align="left" balign="left"> # isMonitored : boolean </td></tr>
+<tr><td align="left" balign="left"> # sharedContexts : Set&lt;Context&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # runningExertionIDs : List&lt;Uuid&gt; </td></tr>
+<tr><td align="left" balign="left"> # subject : Subject </td></tr>
+<tr><td align="left" balign="left"> # provider : Provider </td></tr>
+<tr><td align="left" balign="left"> # dispatchers : Map&lt;Uuid, Dispatcher&gt; </td></tr>
+<tr><td align="left" balign="left"> # disatchGroup : ThreadGroup </td></tr>
+<tr><td align="left" balign="left"> # providerProvisionManager : ProviderProvisionManager </td></tr>
+<tr><td align="left" balign="left"> # provisionManager : ProvisionManager </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ExertDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> + getDispatchers() : Map&lt;Uuid, Dispatcher&gt; </td></tr>
+<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
+<tr><td align="left" balign="left"> + setProvider(provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + exec() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # doExec() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # getInputExertions() : List&lt;Exertion&gt; </font></td></tr>
+<tr><td align="left" balign="left"> # beforeParent(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # beforeExec(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # afterExec(result : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + getResult() : DispatchResult </td></tr>
+<tr><td align="left" balign="left"> # checkProvision() </td></tr>
+<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getState() : int </td></tr>
+<tr><td align="left" balign="left"> + setState(state : int) </td></tr>
+<tr><td align="left" balign="left"> # collectResults() </td></tr>
+<tr><td align="left" balign="left"> # collectOutputs(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # updateInputs(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # updateInputs(toContext : ServiceContext&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> # getSharedContext(path : String, id : String) : ServiceContext&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
+<tr><td align="left" balign="left"> # reconcileInputExertions(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + getLrm() : LeaseRenewalManager </td></tr>
+<tr><td align="left" balign="left"> + setLrm(lrm : LeaseRenewalManager) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.ExertDispatcher.CollectResultThread
+	c44138 [label=<<table title="sorcer.core.dispatch.ExertDispatcher.CollectResultThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.CollectResultThread.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CollectResultThread </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # CollectResultThread() </td></tr>
 <tr><td align="left" balign="left"> + run() </td></tr>
-<tr><td align="left" balign="left"> + getExertion() : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> + getResult() : ServiceExertion </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SWIFExertDispatcher.ExertionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ExertionSorter
-	c38138 [label=<<table title="sorcer.core.dispatch.ExertionSorter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionSorter.html">
+		</table>>, URL="./ExertDispatcher.CollectResultThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.DispatcherFactory
+	c44139 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertionSorter </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertionSorter(topLevelJob : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + getSortedJob() : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExertionSorter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ExertDispatcherFactory
-	c38139 [label=<<table title="sorcer.core.dispatch.ExertDispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcherFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertDispatcherFactory </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DispatcherFactory </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertDispatcherFactory() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + createDispatcher(exertion : Exertion, provider : Provider, config : String[]) : Dispatcher </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + createDispatcher(Task : Task, provider : Provider, config : String[]) : SpaceTaskDispatcher </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + createDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider) : Dispatcher </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./ExertDispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./DispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.dispatch.SpaceParallelDispatcher
+	c44140 [label=<<table title="sorcer.core.dispatch.SpaceParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceParallelDispatcher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SpaceParallelDispatcher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # space : JavaSpace05 </td></tr>
+<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
+<tr><td align="left" balign="left"> # loki : LokiMemberUtil </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SpaceParallelDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, loki : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
+<tr><td align="left" balign="left"> # getInputExertions() : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + doExec() </td></tr>
+<tr><td align="left" balign="left"> # dispatchExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + collectResults() </td></tr>
+<tr><td align="left" balign="left"> # getTemplate(state : int) : ExertionEnvelop </td></tr>
+<tr><td align="left" balign="left"> # handleResult(results : Collection&lt;ExertionEnvelop&gt;) </td></tr>
+<tr><td align="left" balign="left"> # addPoison(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # changeDoneExertionIndex(index : int) </td></tr>
+<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # writeEnvelop(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # takeEnvelop(template : Entry) : ExertionEnvelop </td></tr>
+<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # handleError(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # executeMasterExertion() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.BlockThread
-	c38140 [label=<<table title="sorcer.core.dispatch.BlockThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BlockThread.html">
+	c44141 [label=<<table title="sorcer.core.dispatch.BlockThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BlockThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BlockThread </td></tr>
 		</table></td></tr>
@@ -274,7 +323,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BlockThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.dispatch.JobThread
-	c38141 [label=<<table title="sorcer.core.dispatch.JobThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JobThread.html">
+	c44142 [label=<<table title="sorcer.core.dispatch.JobThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JobThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JobThread </td></tr>
 		</table></td></tr>
@@ -282,301 +331,42 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + JobThread(job : Job, provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + JobThread(job : Job, provider : Provider, dispatcherFactory : DispatcherFactory) </td></tr>
 <tr><td align="left" balign="left"> + run() </td></tr>
 <tr><td align="left" balign="left"> + getJob() : Job </td></tr>
 <tr><td align="left" balign="left"> + getResult() : Job </td></tr>
 		</table></td></tr>
 		</table>>, URL="./JobThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.DispatcherException
-	c38142 [label=<<table title="sorcer.core.dispatch.DispatcherException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherException.html">
+	// sorcer.core.dispatch.ProvisionManager
+	c44143 [label=<<table title="sorcer.core.dispatch.ProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProvisionManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DispatcherException </td></tr>
+<tr><td align="center" balign="center"> ProvisionManager </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DispatcherException() </td></tr>
-<tr><td align="left" balign="left"> + DispatcherException(msg : String) </td></tr>
-<tr><td align="left" balign="left"> + DispatcherException(msg : String, t : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + ProvisionManager(exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + deployServices() : boolean </td></tr>
+<tr><td align="left" balign="left"> + undeploy() </td></tr>
+<tr><td align="left" balign="left"> + getOperationalStringManager() : OperationalStringManager </td></tr>
 		</table></td></tr>
-		</table>>, URL="./DispatcherException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ExertDispatcher
-	c38143 [label=<<table title="sorcer.core.dispatch.ExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # logger : Logger </td></tr>
-<tr><td align="left" balign="left"> # xrt : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> # masterXrt : ServiceExertion </td></tr>
-<tr><td align="left" balign="left"> # inputXrts : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> # state : int </td></tr>
-<tr><td align="left" balign="left"> # isMonitored : boolean </td></tr>
-<tr><td align="left" balign="left"> # sharedContexts : Set&lt;Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> # isSpawned : boolean </td></tr>
-<tr><td align="left" balign="left"> # runningExertionIDs : Vector&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> # subject : Subject </td></tr>
-<tr><td align="left" balign="left"> # provider : Provider </td></tr>
-<tr><td align="left" balign="left"> # catalog : Cataloger </td></tr>
-<tr><td align="left" balign="left"> # dispatchers : Hashtable&lt;Uuid, ExertDispatcher&gt; </td></tr>
-<tr><td align="left" balign="left"> # disatchGroup : ThreadGroup </td></tr>
-<tr><td align="left" balign="left"> # dThread : ExertDispatcher.DispatchThread </td></tr>
-<tr><td align="left" balign="left"> # providerProvisionManager : ProviderProvisionManager </td></tr>
-<tr><td align="left" balign="left"> # provisionManager : ProvisionManager </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertDispatcher() </td></tr>
-<tr><td align="left" balign="left"> + ExertDispatcher(exertion : Exertion, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + getDispatchers() : Hashtable&lt;Uuid, ExertDispatcher&gt; </td></tr>
-<tr><td align="left" balign="left"> + setDispatchers(dispatchers : Hashtable&lt;Uuid, ExertDispatcher&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
-<tr><td align="left" balign="left"> + setProvider(provider : Provider) </td></tr>
-<tr><td align="left" balign="left"> # initialize() </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + dispatchExertions() </font></td></tr>
-<tr><td align="left" balign="left"> # checkAndDispatchExertions() </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + collectResults() </font></td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # preExecExertion(ex : Exertion) </font></td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # postExecExertion(input : Exertion, result : Exertion) </font></td></tr>
-<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getState() : int </td></tr>
-<tr><td align="left" balign="left"> + setState(state : int) </td></tr>
-<tr><td align="left" balign="left"> + createExertionID(ex : ServiceExertion) : String </td></tr>
-<tr><td align="left" balign="left"> # collectSharedContexts(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # collectOutputs(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # updateInputs(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # updateInputs(toContext : ServiceContext&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> # getSharedContext(path : String, id : String) : ServiceContext&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + sendMail(message : String, to : String) </td></tr>
-<tr><td align="left" balign="left"> + sendMailWithSubject(message : String, subject : String, to : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyExertionExecution(inex : Exertion, outex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + notifyExertionExecution(parent : Exertion, inex : Exertion, outex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # getDataURL(filename : String) : String </td></tr>
-<tr><td align="left" balign="left"> # getDataFilename(filename : String) : String </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
-<tr><td align="left" balign="left"> # notifyFailure(msg : String, t : ServiceExertion, seqNum : long) </td></tr>
-<tr><td align="left" balign="left"> # notifyException(msg : String, t : ServiceExertion, seqNum : long) </td></tr>
-<tr><td align="left" balign="left"> # notifyInformation(msg : String, t : ServiceExertion, seqNum : long) </td></tr>
-<tr><td align="left" balign="left"> # notifyWarning(msg : String, t : ServiceExertion, seqNum : long) </td></tr>
-<tr><td align="left" balign="left"> + stopJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> + suspendJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> # isInterupted(ex : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + resumeJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> + stepJob() : NetJob </td></tr>
-<tr><td align="left" balign="left"> + getProviderProvisionManager() : ProviderProvisionManager </td></tr>
-<tr><td align="left" balign="left"> + getProvisionManager() : ProvisionManager </td></tr>
-<tr><td align="left" balign="left"> + sendCheckPointEmail(task : ServiceExertion, job : NetJob) </td></tr>
-<tr><td align="left" balign="left"> # reconcileInputExertions(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # prepareJob() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ExertDispatcher.DispatchThread
-	c38144 [label=<<table title="sorcer.core.dispatch.ExertDispatcher.DispatchThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.DispatchThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DispatchThread </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertDispatcher.DispatchThread() </td></tr>
-<tr><td align="left" balign="left"> + ExertDispatcher.DispatchThread(disatchGroup : ThreadGroup) </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExertDispatcher.DispatchThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ExertDispatcher.CollectResultThread
-	c38145 [label=<<table title="sorcer.core.dispatch.ExertDispatcher.CollectResultThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertDispatcher.CollectResultThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CollectResultThread </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertDispatcher.CollectResultThread(disatchGroup : ThreadGroup) </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExertDispatcher.CollectResultThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.MonitoredExertDispatcher
-	c38146 [label=<<table title="sorcer.core.dispatch.MonitoredExertDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoredExertDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> MonitoredExertDispatcher </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + sessionMonitor : MonitorSessionManagement </td></tr>
-<tr><td align="left" balign="left"> + lrm : LeaseRenewalManager </td></tr>
-<tr><td align="left" balign="left"> + LEASE_RENEWAL_PERIOD : long </td></tr>
-<tr><td align="left" balign="left"> + DEFAULT_TIMEOUT_PERIOD : long </td></tr>
-<tr><td align="left" balign="left"> # doneExertionIndex : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MonitoredExertDispatcher(exertion : Exertion, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> # preExecExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(result : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # execExertion(exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> # postExecExertion(ex : Exertion, result : Exertion) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./MonitoredExertDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogBlockDispatcher
-	c38147 [label=<<table title="sorcer.core.dispatch.CatalogBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogBlockDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogBlockDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogBlockDispatcher(block : Block, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogParallelDispatcher
-	c38148 [label=<<table title="sorcer.core.dispatch.CatalogParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogParallelDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogParallelDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.CatalogSequentialDispatcher
-	c38149 [label=<<table title="sorcer.core.dispatch.CatalogSequentialDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatalogSequentialDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatalogSequentialDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatalogSequentialDispatcher(job : Job, sharedContext : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./CatalogSequentialDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceBlockDispatcher
-	c38150 [label=<<table title="sorcer.core.dispatch.SpaceBlockDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceBlockDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceBlockDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceBlockDispatcher(exertion : Block, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceBlockDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceParallelDispatcher
-	c38151 [label=<<table title="sorcer.core.dispatch.SpaceParallelDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceParallelDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceParallelDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceParallelDispatcher(job : Job, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provider : Provider, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceParallelDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.SpaceTaskDispatcher
-	c38152 [label=<<table title="sorcer.core.dispatch.SpaceTaskDispatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SpaceTaskDispatcher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SpaceTaskDispatcher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SpaceTaskDispatcher(task : NetTask, sharedContexts : Set&lt;Context&lt;&gt;&gt;, isSpawned : boolean, myMemberUtil : LokiMemberUtil, provisionManager : ProvisionManager, providerProvisionManager : ProviderProvisionManager) </td></tr>
-<tr><td align="left" balign="left"> + dispatchExertions() </td></tr>
-<tr><td align="left" balign="left"> + collectResults() </td></tr>
-<tr><td align="left" balign="left"> + collectFails() </td></tr>
-<tr><td align="left" balign="left"> + collectErrors() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceTaskDispatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.DispatcherFactory
-	c38153 [label=<<table title="sorcer.core.dispatch.DispatcherFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DispatcherFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> DispatcherFactory </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider) : Dispatcher </td></tr>
-<tr><td align="left" balign="left"> + createDispatcher(exertion : Exertion, provider : Provider, config : String[]) : Dispatcher </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DispatcherFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ProviderProvisionManager
-	c38154 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProvisionManager.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ProviderProvisionManager </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # servicesToProvision : Set&lt;ProviderProvisionManager.SignatureElement&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ProviderProvisionManager() </td></tr>
-<tr><td align="left" balign="left"> + getInstance() : ProviderProvisionManager </td></tr>
-<tr><td align="left" balign="left"> + add(exertion : Exertion, spaceExertDispatcher : SpaceExertDispatcher) </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProviderProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.dispatch.ProviderProvisionManager.ProvisionThread
-	c38155 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager.ProvisionThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProvisionManager.ProvisionThread.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ProvisionThread </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ProviderProvisionManager.ProvisionThread() </td></tr>
-<tr><td align="left" balign="left"> + run() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ProviderProvisionManager.ProvisionThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.dispatch.MonitoredTaskDispatcher extends sorcer.core.dispatch.MonitoredExertDispatcher
-	c38146:p -> c38124:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SpaceExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c38143:p -> c38125:p [dir=back,arrowtail=empty];
+		</table>>, URL="./ProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.dispatch.CatalogBlockDispatcher extends sorcer.core.dispatch.CatalogSequentialDispatcher
+	c44132:p -> c44124:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.ExertionDispatcherFactory implements sorcer.core.dispatch.DispatcherFactory
-	c38153:p -> c38129:p [dir=back,arrowtail=empty,style=dashed];
+	c44139:p -> c44125:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.dispatch.SpaceSequentialDispatcher extends sorcer.core.dispatch.SpaceParallelDispatcher
+	c44140:p -> c44127:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c38143:p -> c38130:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SpaceSequentialDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c38125:p -> c38133:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SWIFSequentialDispatcher extends sorcer.core.dispatch.SWIFExertDispatcher
-	c38136:p -> c38134:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.CatalogSingletonDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c38130:p -> c38135:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SWIFExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c38143:p -> c38136:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.ExertDispatcherFactory extends sorcer.core.dispatch.ExertionDispatcherFactory
-	c38129:p -> c38139:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.MonitoredExertDispatcher extends sorcer.core.dispatch.ExertDispatcher
-	c38143:p -> c38146:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.CatalogBlockDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c38130:p -> c38147:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.CatalogParallelDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c38130:p -> c38148:p [dir=back,arrowtail=empty];
+	c44137:p -> c44131:p [dir=back,arrowtail=empty];
 	//sorcer.core.dispatch.CatalogSequentialDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
-	c38130:p -> c38149:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SpaceBlockDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c38125:p -> c38150:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SpaceParallelDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c38125:p -> c38151:p [dir=back,arrowtail=empty];
-	//sorcer.core.dispatch.SpaceTaskDispatcher extends sorcer.core.dispatch.SpaceExertDispatcher
-	c38125:p -> c38152:p [dir=back,arrowtail=empty];
+	c44131:p -> c44132:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.SpaceTaskDispatcher extends sorcer.core.dispatch.SpaceParallelDispatcher
+	c44140:p -> c44133:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.CatalogParallelDispatcher extends sorcer.core.dispatch.CatalogExertDispatcher
+	c44131:p -> c44134:p [dir=back,arrowtail=empty];
+	//sorcer.core.dispatch.SpaceParallelDispatcher extends sorcer.core.dispatch.ExertDispatcher
+	c44137:p -> c44140:p [dir=back,arrowtail=empty];
 }
 

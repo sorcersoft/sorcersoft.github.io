@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.StaticServiceProvider
-	c383342 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/StaticServiceProvider.html">
+	c410818 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -23,30 +23,25 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../provider/StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c383352 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/ServiceProvider.html">
+	c410823 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
-<tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
+<tr><td align="left" balign="left"> # scheduler : ScheduledExecutorService </td></tr>
 <tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_THREADS : String </td></tr>
-<tr><td align="left" balign="left"> + MANAGER_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + LOAD_FACTOR : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT_INCREMENT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ServiceProvider() </td></tr>
+<tr><td align="left" balign="left"> + ServiceProvider() </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(providerPropertiesFile : String) </td></tr>
 <tr><td align="left" balign="left"> + getGrants(cl : Class&lt;?&gt;, principals : Principal[]) : Permission[] </td></tr>
-<tr><td align="left" balign="left"> + grant(cl : Class&lt;?&gt;, principals : Principal[], permissions : Permission[]) </td></tr>
 <tr><td align="left" balign="left"> + grantSupported() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
 <tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
@@ -108,6 +103,7 @@ digraph G {
 <tr><td align="left" balign="left"> + invokeMethod(method : String, context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + invokeMethod(methodName : String, ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
@@ -143,7 +139,6 @@ digraph G {
 <tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -152,15 +147,13 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextDatabase() : boolean </td></tr>
 <tr><td align="left" balign="left"> # setupThreadManager() </td></tr>
 <tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + initSpaceSupport() </td></tr>
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../provider/ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partnership
-	c383383 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Partnership.html">
+	c410846 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Partnership.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partnership </td></tr>
@@ -169,15 +162,15 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setInner(inner : Object) </td></tr>
-<tr><td align="left" balign="left"> + setAdmin(admin : Object) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setInner(inner : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAdmin(admin : Object) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Partnership.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c383352:p -> c383342:p [dir=back,arrowtail=empty];
+	c410823:p -> c410818:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.proxy.Partnership
-	c383383:p -> c383342:p [dir=back,arrowtail=empty,style=dashed];
+	c410846:p -> c410818:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.proxy.Partnership
-	c383383:p -> c383352:p [dir=back,arrowtail=empty,style=dashed];
+	c410846:p -> c410823:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,49 +9,15 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.proxy.Outer
-	c18398 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Outer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Outer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.proxy.Partnership
-	c18399 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Partnership.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Partnership </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setInner(inner : Object) </td></tr>
-<tr><td align="left" balign="left"> + setAdmin(admin : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Partnership.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.RemotePartner
-	c18400 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemotePartner.html">
+	c11438 [label=<<table title="sorcer.core.proxy.RemotePartner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemotePartner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemotePartner </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemotePartner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.proxy.Partner
-	c18401 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Partner.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Partner </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.AdminProxy
-	c18402 [label=<<table title="sorcer.core.proxy.AdminProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AdminProxy.html">
+	c11439 [label=<<table title="sorcer.core.proxy.AdminProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AdminProxy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AdminProxy </td></tr>
 		</table></td></tr>
@@ -79,7 +45,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AdminProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.ProviderProxy
-	c18403 [label=<<table title="sorcer.core.proxy.ProviderProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProxy.html">
+	c11440 [label=<<table title="sorcer.core.proxy.ProviderProxy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderProxy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderProxy </td></tr>
 		</table></td></tr>
@@ -92,9 +58,43 @@ digraph G {
 <tr><td align="left" balign="left"> + wrapAdminProxy(adminProxy : Object, adminProxyID : Uuid, additionalInterfaces : Class&lt;&gt;[]) : Remote </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProviderProxy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.Partnership
+	c11441 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Partnership.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Partnership </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setInner(inner : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAdmin(admin : Object) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Partnership.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.Outer
+	c11442 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Outer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Outer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInner() : Remote </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.Partner
+	c11443 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Partner.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Partner </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.proxy.RemotePartner implements sorcer.core.proxy.Partner
-	c18401:p -> c18400:p [dir=back,arrowtail=empty,style=dashed];
+	c11443:p -> c11438:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
-	c18398:p -> c18401:p [dir=back,arrowtail=empty,style=dashed];
+	c11442:p -> c11443:p [dir=back,arrowtail=empty,style=dashed];
 }
 

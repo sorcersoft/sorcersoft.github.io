@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.schema.Schema
-	c447878 [label=<<table title="sorcer.schema.Schema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Schema.html">
+	c478870 [label=<<table title="sorcer.schema.Schema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Schema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Schema </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Schema.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.schema.Schema implements java.lang.annotation.Annotation
-	c448408:p -> c447878:p [dir=back,arrowtail=empty,style=dashed];
+	c479271:p -> c478870:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.annotation.Annotation
-	c448408 [label=<<table title="java.lang.annotation.Annotation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html">
+	c479271 [label=<<table title="java.lang.annotation.Annotation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Annotation </td></tr>
@@ -27,10 +27,10 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + equals(arg0 : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + annotationType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + equals(arg0 : Object) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + hashCode() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + toString() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + annotationType() : Class&lt;?&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Annotation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

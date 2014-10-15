@@ -9,36 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.AdministratableProvider
-	c480351 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AdministratableProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
-		</table></td></tr>
-		</table>>, URL="../AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.RemoteContextManagement
-	c480356 [label=<<table title="sorcer.core.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../RemoteContextManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
-		</table></td></tr>
-		</table>>, URL="../RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identifiable
-	c480499 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Identifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Identifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.StaticServiceProvider
-	c480572 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.html">
+	c514061 [label=<<table title="sorcer.core.provider.StaticServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StaticServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> StaticServiceProvider </td></tr>
 		</table></td></tr>
@@ -51,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./StaticServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceTasker
-	c480574 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceTasker.html">
+	c514063 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceTasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceTasker </td></tr>
 		</table></td></tr>
@@ -67,30 +39,25 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceTasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c480582 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceProvider.html">
+	c514066 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
-<tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
+<tr><td align="left" balign="left"> # scheduler : ScheduledExecutorService </td></tr>
 <tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_THREADS : String </td></tr>
-<tr><td align="left" balign="left"> + MANAGER_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + LOAD_FACTOR : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT_INCREMENT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ServiceProvider() </td></tr>
+<tr><td align="left" balign="left"> + ServiceProvider() </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(providerPropertiesFile : String) </td></tr>
 <tr><td align="left" balign="left"> + getGrants(cl : Class&lt;?&gt;, principals : Principal[]) : Permission[] </td></tr>
-<tr><td align="left" balign="left"> + grant(cl : Class&lt;?&gt;, principals : Principal[], permissions : Permission[]) </td></tr>
 <tr><td align="left" balign="left"> + grantSupported() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
 <tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
@@ -152,6 +119,7 @@ digraph G {
 <tr><td align="left" balign="left"> + invokeMethod(method : String, context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + invokeMethod(methodName : String, ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
@@ -187,7 +155,6 @@ digraph G {
 <tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -196,15 +163,27 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextDatabase() : boolean </td></tr>
 <tr><td align="left" balign="left"> # setupThreadManager() </td></tr>
 <tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + initSpaceSupport() </td></tr>
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.RemoteContextManagement
+	c514073 [label=<<table title="sorcer.core.provider.RemoteContextManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteContextManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RemoteContextManagement </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RemoteContextManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.AdministratableProvider
+	c514077 [label=<<table title="sorcer.core.provider.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AdministratableProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Provider
-	c480589 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Provider.html">
+	c514080 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Provider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider </td></tr>
@@ -213,43 +192,42 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
-<tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + init() </td></tr>
-<tr><td align="left" balign="left"> + init(propFile : String) </td></tr>
-<tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + mutualExclusion() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + destroyNode() </td></tr>
-<tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + changed(ctx : Context&lt;?&gt;, aspect : Object) </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
-<tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
-<tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderID() : ServiceID </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes() : Entry[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProperties() : List&lt;Object&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderConfiguration() : Configuration </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(propFile : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + restore() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + mutualExclusion() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProperty(property : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getGroups() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInfo() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDescription() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isBusy() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroyNode() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyInformation(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyException(task : Exertion, message : String, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyException(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyWarning(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyFailure(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyFailure(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getJavaSystemProperties() : Properties </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxy() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + updatePolicy(policy : Policy) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRemoteLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addAttribute(attribute : Entry) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.exertmonitor.ExertMonitor
-	c480591 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./exertmonitor/ExertMonitor.html">
+	c514083 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./exertmonitor/ExertMonitor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertMonitor </td></tr>
 		</table></td></tr>
@@ -258,10 +236,6 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ExertMonitor(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + stop(ref : UEID, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + suspend(ref : UEID, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + resume(ref : UEID, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + step(ref : UEID, principal : SorcerPrincipal) </td></tr>
 <tr><td align="left" balign="left"> + register(lstnr : RemoteEventListener, ex : Exertion, duration : long) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + init(cookie : Uuid, mntrbl : Monitorable, duration : long, timeout : long) : Lease </td></tr>
 <tr><td align="left" balign="left"> + init(cookie : Uuid, duration : long, timeout : long) </td></tr>
@@ -270,15 +244,15 @@ digraph G {
 <tr><td align="left" balign="left"> + getMonitorableExertionInfo(state : Exec.State, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(id : Uuid, principal : Principal) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(cookie : UEID, principal : Principal) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + update(cookie : Uuid, ctx : Context&lt;&gt;, aspect : Object) </td></tr>
+<tr><td align="left" balign="left"> + update(cookie : Uuid, ctx : Context&lt;&gt;, controlContext : IControlContext, aspect : int) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + persist(session : IMonitorSession) : boolean </td></tr>
+<tr><td align="left" balign="left"> + persist(session : MonitorManagementSession) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getSession(key : UuidKey) : MonitorSession </td></tr>
 <tr><td align="left" balign="left"> + getSession(key : Uuid) : MonitorSession </td></tr>
 		</table></td></tr>
 		</table>>, URL="./exertmonitor/ExertMonitor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partnership
-	c480613 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partnership.html">
+	c514089 [label=<<table title="sorcer.core.proxy.Partnership" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partnership.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partnership </td></tr>
@@ -287,81 +261,33 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setInner(inner : Object) </td></tr>
-<tr><td align="left" balign="left"> + setAdmin(admin : Object) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setInner(inner : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAdmin(admin : Object) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../proxy/Partnership.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partner
-	c480615 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partner.html">
+	c514091 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../proxy/Partner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partner </td></tr>
 		</table></td></tr>
 		</table>>, URL="../proxy/Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceSpacer
-	c480758 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./jobber/ServiceSpacer.html">
+	// sorcer.service.Identifiable
+	c514192 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Identifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceSpacer </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Identifiable </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceSpacer() </td></tr>
-<tr><td align="left" balign="left"> + ServiceSpacer(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + doTask(task : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./jobber/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceConcatenator
-	c480761 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./jobber/ServiceConcatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceConcatenator() </td></tr>
-<tr><td align="left" balign="left"> + ServiceConcatenator(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./jobber/ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceJobber
-	c480762 [label=<<table title="sorcer.core.provider.jobber.ServiceJobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./jobber/ServiceJobber.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceJobber </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceJobber() </td></tr>
-<tr><td align="left" balign="left"> + ServiceJobber(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="./jobber/ServiceJobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger
-	c481024 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cataloger/ServiceCataloger.html">
+	c514644 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cataloger/ServiceCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceCataloger </td></tr>
 		</table></td></tr>
@@ -392,95 +318,62 @@ digraph G {
 <tr><td align="left" balign="left"> + exertService(providerName : String, serviceType : Class&lt;&gt;, methodName : String, theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContexts(serviceType : Class&lt;&gt;, method : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getServiceInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate) : Object </td></tr>
 <tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate, maxMatches : int) : ServiceMatches </td></tr>
 <tr><td align="left" balign="left"> + returnString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./cataloger/ServiceCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.StaticServiceProvider extends sorcer.core.provider.ServiceProvider
-	c480582:p -> c480572:p [dir=back,arrowtail=empty];
-	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.AdministratableProvider
-	c480351:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
+	c514066:p -> c514061:p [dir=back,arrowtail=empty];
+	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.provider.AdministratableProvider
+	c514077:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements net.jini.export.ProxyAccessor
-	c481064:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
+	c514696:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements net.jini.security.proxytrust.ServerProxyTrust
-	c481065:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
+	c514697:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements net.jini.core.constraint.RemoteMethodControl
-	c481066:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
+	c514698:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements com.sun.jini.start.LifeCycle
-	c481067:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
+	c514699:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.proxy.Partner
-	c480615:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
+	c514091:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.proxy.Partnership
-	c480613:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.RemoteContextManagement
-	c480356:p -> c480572:p [dir=back,arrowtail=empty,style=dashed];
+	c514089:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.StaticServiceProvider implements sorcer.core.provider.RemoteContextManagement
+	c514073:p -> c514061:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceTasker extends sorcer.core.provider.ServiceProvider
-	c480582:p -> c480574:p [dir=back,arrowtail=empty];
+	c514066:p -> c514063:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.ServiceProvider implements sorcer.service.Identifiable
-	c480499:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514192:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.Provider
-	c480589:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514080:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.lookup.ServiceIDListener
-	c481068:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514700:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.id.ReferentUuid
-	c481069:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.ServiceProvider implements sorcer.core.AdministratableProvider
-	c480351:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514701:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.AdministratableProvider
+	c514077:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.export.ProxyAccessor
-	c481064:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514696:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.security.proxytrust.ServerProxyTrust
-	c481065:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514697:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements net.jini.core.constraint.RemoteMethodControl
-	c481066:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514698:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements com.sun.jini.start.LifeCycle
-	c481067:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514699:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.proxy.Partner
-	c480615:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514091:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.proxy.Partnership
-	c480613:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.ServiceProvider implements sorcer.core.RemoteContextManagement
-	c480356:p -> c480582:p [dir=back,arrowtail=empty,style=dashed];
+	c514089:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.RemoteContextManagement
+	c514073:p -> c514066:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.exertmonitor.ExertMonitor extends sorcer.core.provider.ServiceProvider
-	c480582:p -> c480591:p [dir=back,arrowtail=empty];
-	//sorcer.core.provider.jobber.ServiceSpacer extends sorcer.core.provider.ServiceProvider
-	c480582:p -> c480758:p [dir=back,arrowtail=empty];
-	//sorcer.core.provider.jobber.ServiceConcatenator extends sorcer.core.provider.ServiceProvider
-	c480582:p -> c480761:p [dir=back,arrowtail=empty];
-	//sorcer.core.provider.jobber.ServiceJobber extends sorcer.core.provider.ServiceProvider
-	c480582:p -> c480762:p [dir=back,arrowtail=empty];
+	c514066:p -> c514083:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger extends sorcer.core.provider.ServiceProvider
-	c480582:p -> c481024:p [dir=back,arrowtail=empty];
-	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.AdministratableProvider
-	c480351:p -> c481024:p [dir=back,arrowtail=empty,style=dashed];
-	// net.jini.id.ReferentUuid
-	c481069 [label=<<table title="net.jini.id.ReferentUuid" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/id/ReferentUuid.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ReferentUuid </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getReferentUuid() : Uuid </td></tr>
-		</table></td></tr>
-		</table>>, URL="https://river.apache.org/doc/api/net/jini/id/ReferentUuid.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// net.jini.lookup.ServiceIDListener
-	c481068 [label=<<table title="net.jini.lookup.ServiceIDListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lookup/ServiceIDListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ServiceIDListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + serviceIDNotify(arg0 : ServiceID) </td></tr>
-		</table></td></tr>
-		</table>>, URL="https://river.apache.org/doc/api/net/jini/lookup/ServiceIDListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	c514066:p -> c514644:p [dir=back,arrowtail=empty];
+	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.provider.AdministratableProvider
+	c514077:p -> c514644:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.export.ProxyAccessor
-	c481064 [label=<<table title="net.jini.export.ProxyAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/export/ProxyAccessor.html">
+	c514696 [label=<<table title="net.jini.export.ProxyAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/export/ProxyAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProxyAccessor </td></tr>
@@ -489,37 +382,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxy() : Object </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/export/ProxyAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// com.sun.jini.start.LifeCycle
-	c481067 [label=<<table title="com.sun.jini.start.LifeCycle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> LifeCycle </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + unregister(arg0 : Object) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// net.jini.security.proxytrust.ServerProxyTrust
-	c481065 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ServerProxyTrust </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
-		</table></td></tr>
-		</table>>, URL="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.core.constraint.RemoteMethodControl
-	c481066 [label=<<table title="net.jini.core.constraint.RemoteMethodControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html">
+	c514698 [label=<<table title="net.jini.core.constraint.RemoteMethodControl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteMethodControl </td></tr>
@@ -528,9 +395,61 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setConstraints(arg0 : MethodConstraints) : RemoteMethodControl </td></tr>
-<tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setConstraints(arg0 : MethodConstraints) : RemoteMethodControl </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getConstraints() : MethodConstraints </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/core/constraint/RemoteMethodControl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// net.jini.id.ReferentUuid
+	c514701 [label=<<table title="net.jini.id.ReferentUuid" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/id/ReferentUuid.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ReferentUuid </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getReferentUuid() : Uuid </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/net/jini/id/ReferentUuid.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// net.jini.security.proxytrust.ServerProxyTrust
+	c514697 [label=<<table title="net.jini.security.proxytrust.ServerProxyTrust" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ServerProxyTrust </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxyVerifier() : TrustVerifier </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/net/jini/security/proxytrust/ServerProxyTrust.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// com.sun.jini.start.LifeCycle
+	c514699 [label=<<table title="com.sun.jini.start.LifeCycle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> LifeCycle </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + unregister(arg0 : Object) : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/start/LifeCycle.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// net.jini.lookup.ServiceIDListener
+	c514700 [label=<<table title="net.jini.lookup.ServiceIDListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lookup/ServiceIDListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ServiceIDListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceIDNotify(arg0 : ServiceID) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="https://river.apache.org/doc/api/net/jini/lookup/ServiceIDListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.Protocol
-	c400560 [label=<<table title="sorcer.util.Protocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Protocol.html">
+	c430311 [label=<<table title="sorcer.util.Protocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Protocol.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Protocol </td></tr>
@@ -19,14 +19,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + executeCmd(command : int, data : String[]) : Vector&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + executeQuery(sql : String) : Vector&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + executeUpdate(sql : String) : int </td></tr>
-<tr><td align="left" balign="left"> + executeQueryFor(parameters : String) : Vector&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + executeUpdateFor(parameters : String) : int </td></tr>
-<tr><td align="left" balign="left"> + connect() </td></tr>
-<tr><td align="left" balign="left"> + disconnect() </td></tr>
-<tr><td align="left" balign="left"> + connected() : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + executeCmd(command : int, data : String[]) : Vector&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + executeQuery(sql : String) : Vector&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + executeUpdate(sql : String) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + executeQueryFor(parameters : String) : Vector&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + executeUpdateFor(parameters : String) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + connect() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + disconnect() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + connected() : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Protocol.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

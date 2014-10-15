@@ -9,10 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.invoker.Invoker<T>
-	c318823 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
+	// sorcer.core.invoker.LoopInvoker<V>
+	c343069 [label=<<table title="sorcer.core.invoker.LoopInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoopInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> LoopInvoker&lt;V&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # condition : Condition </td></tr>
+<tr><td align="left" balign="left"> # target : ServiceInvoker&lt;V&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, invoker : ServiceInvoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, invoker : ServiceInvoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, condition : Condition, invoker : ServiceInvoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, condition : Condition, invoker : ServiceInvoker&lt;V&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : V </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoopInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.invoker.ServiceInvoker<T>
+	c343078 [label=<<table title="sorcer.core.invoker.ServiceInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceInvoker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceInvoker&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # name : String </td></tr>
@@ -25,22 +42,22 @@ digraph G {
 <tr><td align="left" balign="left"> # pars : ArgSet </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Invoker() </td></tr>
-<tr><td align="left" balign="left"> + Invoker(name : String) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker() </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
 <tr><td align="left" balign="left"> + getPars() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + valueValid(state : boolean) </td></tr>
 <tr><td align="left" balign="left"> + valueValid() : boolean </td></tr>
 <tr><td align="left" balign="left"> + valueChanged() </td></tr>
 <tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + addPar(par : Object) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + addPar(par : Object) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPars(parSet : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + addPars(parList : List&lt;Par&lt;&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + addPars(pars : Par&lt;&gt;[]) </td></tr>
@@ -53,7 +70,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 <tr><td align="left" balign="left"> + getEvaluator() : Evaluator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + clearPars() </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
@@ -62,26 +79,11 @@ digraph G {
 <tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.LoopInvoker<V>
-	c318824 [label=<<table title="sorcer.core.invoker.LoopInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoopInvoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LoopInvoker&lt;V&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # condition : Condition </td></tr>
-<tr><td align="left" balign="left"> # target : Invoker&lt;V&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + LoopInvoker(name : String, min : int, max : int, condition : Condition, invoker : Invoker&lt;V&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : V </td></tr>
-		</table></td></tr>
-		</table>>, URL="./LoopInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.invoker.LoopInvoker<V> extends sorcer.core.invoker.Invoker<V>
-	c318823:p -> c318824:p [dir=back,arrowtail=empty];
+		</table>>, URL="./ServiceInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.invoker.LoopInvoker<V> extends sorcer.core.invoker.ServiceInvoker<V>
+	c343078:p -> c343069:p [dir=back,arrowtail=empty];
 }
 

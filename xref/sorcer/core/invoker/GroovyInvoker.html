@@ -47,7 +47,7 @@
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <em class="jxr_javadoccomment"> * @author Mike Sobolewski</em>
 <a class="jxr_linenumber" name="38" href="#38">38</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="39" href="#39">39</a>  @SuppressWarnings({ <span class="jxr_string">"rawtypes"</span>, <span class="jxr_string">"unchecked"</span> })
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> GroovyInvoker&lt;T&gt; <strong class="jxr_keyword">extends</strong> Invoker&lt;T&gt; {
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> GroovyInvoker&lt;T&gt; <strong class="jxr_keyword">extends</strong> ServiceInvoker&lt;T&gt; {
 <a class="jxr_linenumber" name="41" href="#41">41</a>  
 <a class="jxr_linenumber" name="42" href="#42">42</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = -2821704426312928422L;
 <a class="jxr_linenumber" name="43" href="#43">43</a>  
@@ -137,7 +137,7 @@
 <a class="jxr_linenumber" name="127" href="#127">127</a> 				}
 <a class="jxr_linenumber" name="128" href="#128">128</a> 			}
 <a class="jxr_linenumber" name="129" href="#129">129</a> 		} <strong class="jxr_keyword">catch</strong> (RuntimeException e) {
-<a class="jxr_linenumber" name="130" href="#130">130</a> 			logger.severe(<span class="jxr_string">"Error Occurred in Groovy Shell: "</span> + e.getMessage());
+<a class="jxr_linenumber" name="130" href="#130">130</a> 			logger.error(<span class="jxr_string">"Error Occurred in Groovy Shell: "</span> + e.getMessage());
 <a class="jxr_linenumber" name="131" href="#131">131</a> 		}
 <a class="jxr_linenumber" name="132" href="#132">132</a> 		<strong class="jxr_keyword">return</strong> (T) result;
 <a class="jxr_linenumber" name="133" href="#133">133</a> 	}

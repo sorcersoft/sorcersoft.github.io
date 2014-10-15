@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Task
-	c558806 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Task.html">
+	c599297 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Task.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 		</table></td></tr>
@@ -22,7 +22,9 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + Task() </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String) </td></tr>
+<tr><td align="left" balign="left"> + Task(signature : Signature) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + Task(signature : Signature, context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, description : String) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, signatures : List&lt;Signature&gt;) </td></tr>
@@ -30,6 +32,8 @@ digraph G {
 <tr><td align="left" balign="left"> + newTask(name : String, signature : Signature, context : Context&lt;&gt;) : Task </td></tr>
 <tr><td align="left" balign="left"> + doTask() : Task </td></tr>
 <tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + doTask(xrt : Exertion, txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + updateConditionalContext(condition : Conditional) </td></tr>
 <tr><td align="left" balign="left"> + undoTask() </td></tr>
 <tr><td align="left" balign="left"> + setIndex(i : int) </td></tr>
 <tr><td align="left" balign="left"> + isTask() : boolean </td></tr>
@@ -59,11 +63,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Task.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.ServiceExertion
-	c558819 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
+	c599305 [label=<<table title="sorcer.service.ServiceExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceExertion </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + debug : boolean </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> # exertionId : Uuid </td></tr>
 <tr><td align="left" balign="left"> # runtimeId : String </td></tr>
@@ -77,7 +82,6 @@ digraph G {
 <tr><td align="left" balign="left"> # lsbId : Long </td></tr>
 <tr><td align="left" balign="left"> # msbId : Long </td></tr>
 <tr><td align="left" balign="left"> # sessionId : Uuid </td></tr>
-<tr><td align="left" balign="left"> # monitorSession : MonitoringSession </td></tr>
 <tr><td align="left" balign="left"> # index : Integer </td></tr>
 <tr><td align="left" balign="left"> # name : String </td></tr>
 <tr><td align="left" balign="left"> # description : String </td></tr>
@@ -86,15 +90,22 @@ digraph G {
 <tr><td align="left" balign="left"> # accessClass : String </td></tr>
 <tr><td align="left" balign="left"> # isExportControlled : Boolean </td></tr>
 <tr><td align="left" balign="left"> # scopeCode : Integer </td></tr>
+<tr><td align="left" balign="left"> # creationDate : Date </td></tr>
 <tr><td align="left" balign="left"> # status : Integer </td></tr>
 <tr><td align="left" balign="left"> # priority : Integer </td></tr>
-<tr><td align="left" balign="left"> # signatures : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> # fidelities : Map&lt;String, ServiceFidelity&gt; </td></tr>
+<tr><td align="left" balign="left"> # fidelity : ServiceFidelity </td></tr>
+<tr><td align="left" balign="left"> # selectedFidelitySelector : String </td></tr>
+<tr><td align="left" balign="left"> # fidelityContexts : Map&lt;String, FidelityContext&gt; </td></tr>
 <tr><td align="left" balign="left"> # dataContext : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + count : int </td></tr>
 <tr><td align="left" balign="left"> # controlContext : ControlContext </td></tr>
 <tr><td align="left" balign="left"> # setters : List&lt;Setter&gt; </td></tr>
 <tr><td align="left" balign="left"> # principal : SorcerPrincipal </td></tr>
 <tr><td align="left" balign="left"> # isRevaluable : boolean </td></tr>
+<tr><td align="left" balign="left"> # isProxy : boolean </td></tr>
+<tr><td align="left" balign="left"> # scope : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> # dependers : List&lt;Invocation&lt;&gt;&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ServiceExertion() </td></tr>
@@ -102,6 +113,7 @@ digraph G {
 <tr><td align="left" balign="left"> # init(name : String) </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + invoke() : Object </td></tr>
 <tr><td align="left" balign="left"> + invoke(entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + exert(txn : Transaction, entries : Arg[]) : T </td></tr>
@@ -114,10 +126,20 @@ digraph G {
 <tr><td align="left" balign="left"> + removeSignature(index : int) </td></tr>
 <tr><td align="left" balign="left"> + setAccess(access : Strategy.Access) </td></tr>
 <tr><td align="left" balign="left"> + setFlow(type : Strategy.Flow) </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + addSignatures(signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isNotCorrectBatch() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setSignatures(signatures : List&lt;Signature&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getFidelity() : ServiceFidelity </td></tr>
+<tr><td align="left" balign="left"> + addSignatures(signatures : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + isBatch() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setFidelity(fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + putFidelity(fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + addFidelity(fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + setFidelity(name : String, fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + putFidelity(name : String, fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + addFidelity(name : String, fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + selectFidelity(entries : Arg[]) </td></tr>
+<tr><td align="left" balign="left"> + selectFidelity(selector : String) </td></tr>
+<tr><td align="left" balign="left"> + selectComponentFidelity(componetFiInfo : ComponentFidelityInfo) </td></tr>
+<tr><td align="left" balign="left"> + applyFidelityContext(fiContext : FidelityContext) </td></tr>
+<tr><td align="left" balign="left"> + selectFidelity() </td></tr>
 <tr><td align="left" balign="left"> + setProcessSignature(signature : Signature) </td></tr>
 <tr><td align="left" balign="left"> + setService(provider : Service) </td></tr>
 <tr><td align="left" balign="left"> + getService() : Service </td></tr>
@@ -148,7 +170,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getGoodUntilDate() : String </td></tr>
 <tr><td align="left" balign="left"> + setGoodUntilDate(date : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + getDeploymentId(list : List&lt;NetSignature&gt;) : String </td></tr>
+<tr><td align="left" balign="left"> + getDeploymentId(list : List&lt;Signature&gt;) : String </td></tr>
 <tr><td align="left" balign="left"> + getDeploymentId() : String </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeId() : String </td></tr>
 <tr><td align="left" balign="left"> + setRuntimeId(id : String) </td></tr>
@@ -212,6 +234,8 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTree(visited : Set&lt;&gt;) : boolean </font></td></tr>
 <tr><td align="left" balign="left"> + reportException(t : Throwable) </td></tr>
 <tr><td align="left" balign="left"> + addException(et : ThrowableTrace) </td></tr>
+<tr><td align="left" balign="left"> + getInoker() : ExertInvoker </td></tr>
+<tr><td align="left" balign="left"> + getInvoker(name : String) : ExertInvoker </td></tr>
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : ServiceExertion </td></tr>
 <tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + getPersisters() : List&lt;Setter&gt; </td></tr>
@@ -221,14 +245,15 @@ digraph G {
 <tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getAllExertions() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDeployments() : List&lt;Deployment&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetSignatures() : List&lt;NetSignature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetTaskSignatures() : List&lt;NetSignature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeployments() : List&lt;ServiceDeployment&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllNetSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllNetTaskSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeploymnets() : List&lt;ServiceDeployment&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExceptions(exs : List&lt;ThrowableTrace&gt;) : List&lt;ThrowableTrace&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllSignatures() : List&lt;Signature&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllTaskSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllDeployments() : List&lt;Deployment&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllDeployments() : List&lt;ServiceDeployment&gt; </td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </font></td></tr>
 <tr><td align="left" balign="left"> + updateValue(value : Object) </td></tr>
 <tr><td align="left" balign="left"> + getExertion(componentExertionName : String) : Exertion </td></tr>
@@ -236,13 +261,23 @@ digraph G {
 <tr><td align="left" balign="left"> + isSpacable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + correctProcessSignature() : Signature </td></tr>
 <tr><td align="left" balign="left"> + reset(state : int) </td></tr>
-<tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
-<tr><td align="left" balign="left"> + setMonitorSession(monitorSession : MonitoringSession) </td></tr>
 <tr><td align="left" balign="left"> + getValue(entries : Arg[]) : Object </td></tr>
+<tr><td align="left" balign="left"> + getScope() : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getDependers() : List&lt;Invocation&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setDependers(dependers : List&lt;Invocation&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + addDepender(depender : Invocation&lt;&gt;) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + addDependers(dependers : Invocation&lt;&gt;[]) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + asis() : Object </td></tr>
 <tr><td align="left" balign="left"> + asis(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
 <tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFidelities() : Map&lt;String, ServiceFidelity&gt; </td></tr>
+<tr><td align="left" balign="left"> + setFidelities(fidelities : Map&lt;String, ServiceFidelity&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getSelectedFidelitySelector() : String </td></tr>
+<tr><td align="left" balign="left"> + setSelectedFidelitySelector(selectedFidelitySelector : String) </td></tr>
+<tr><td align="left" balign="left"> + getFidelityContexts() : Map&lt;String, FidelityContext&gt; </td></tr>
+<tr><td align="left" balign="left"> + setFidelityContexts(fidelityContexts : Map&lt;String, FidelityContext&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getSetters() : List&lt;Setter&gt; </td></tr>
 <tr><td align="left" balign="left"> + setSetters(setters : List&lt;Setter&gt;) </td></tr>
 <tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
@@ -253,11 +288,39 @@ digraph G {
 <tr><td align="left" balign="left"> + isCmd() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + isProxy() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setProxy(isProxy : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getComponentExertion(path : String) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getCreationDate() : Date </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.LoopExertion
+	c599562 [label=<<table title="sorcer.core.exertion.LoopExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/LoopExertion.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoopExertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # condition : Condition </td></tr>
+<tr><td align="left" balign="left"> # target : Exertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoopExertion(name : String, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + LoopExertion(name : String, condition : Condition, exertion : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, condition : Condition, invoker : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getTarget() : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getCondition() : Condition </td></tr>
+<tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getConditions() : List&lt;Conditional&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExceptions(exceptions : List&lt;ThrowableTrace&gt;) : List&lt;ThrowableTrace&gt; </td></tr>
+<tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/exertion/LoopExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.OptExertion
-	c559096 [label=<<table title="sorcer.core.exertion.OptExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/OptExertion.html">
+	c599565 [label=<<table title="sorcer.core.exertion.OptExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/OptExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OptExertion </td></tr>
 		</table></td></tr>
@@ -284,70 +347,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/exertion/OptExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ObjectTask
-	c559097 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/ObjectTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectTask </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
-<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/exertion/ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.LoopExertion
-	c559098 [label=<<table title="sorcer.core.exertion.LoopExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/LoopExertion.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LoopExertion </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # condition : Condition </td></tr>
-<tr><td align="left" balign="left"> # target : Exertion </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoopExertion(name : String, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + LoopExertion(name : String, condition : Condition, exertion : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + LoopExertion(name : String, min : int, max : int, condition : Condition, invoker : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getCondition() : Condition </td></tr>
-<tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getConditions() : List&lt;Conditional&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExceptions(exceptions : List&lt;ThrowableTrace&gt;) : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/exertion/LoopExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.EvaluationTask
-	c559100 [label=<<table title="sorcer.core.exertion.EvaluationTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/EvaluationTask.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> EvaluationTask </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EvaluationTask(name : String) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(evaluator : Evaluation&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
-<tr><td align="left" balign="left"> + getEvaluation() : Evaluation&lt;&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/exertion/EvaluationTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.AntTask
-	c559102 [label=<<table title="sorcer.core.exertion.AntTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/AntTask.html">
+	c599566 [label=<<table title="sorcer.core.exertion.AntTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/AntTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AntTask </td></tr>
 		</table></td></tr>
@@ -365,8 +366,47 @@ digraph G {
 <tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/exertion/AntTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.EvaluationTask
+	c599568 [label=<<table title="sorcer.core.exertion.EvaluationTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/EvaluationTask.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EvaluationTask </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + EvaluationTask(name : String) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(evaluator : Evaluation&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + EvaluationTask(name : String, signature : EvaluationSignature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getEvaluation() : Evaluation&lt;&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/exertion/EvaluationTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.exertion.ObjectTask
+	c599571 [label=<<table title="sorcer.core.exertion.ObjectTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/ObjectTask.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ObjectTask </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ObjectTask() </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signatures : Signature[]) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, description : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ObjectTask(signature : Signature, context : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : Object </td></tr>
+<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/exertion/ObjectTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.AltExertion
-	c559108 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/AltExertion.html">
+	c599572 [label=<<table title="sorcer.core.exertion.AltExertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/exertion/AltExertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AltExertion </td></tr>
 		</table></td></tr>
@@ -389,22 +429,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExertions(exs : List&lt;Exertion&gt;) : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTargets() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/exertion/AltExertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Task extends sorcer.service.ServiceExertion
-	c558819:p -> c558806:p [dir=back,arrowtail=empty];
-	//sorcer.core.exertion.OptExertion extends sorcer.service.Task
-	c558806:p -> c559096:p [dir=back,arrowtail=empty];
-	//sorcer.core.exertion.ObjectTask extends sorcer.service.Task
-	c558806:p -> c559097:p [dir=back,arrowtail=empty];
+	c599305:p -> c599297:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.LoopExertion extends sorcer.service.Task
-	c558806:p -> c559098:p [dir=back,arrowtail=empty];
-	//sorcer.core.exertion.EvaluationTask extends sorcer.service.Task
-	c558806:p -> c559100:p [dir=back,arrowtail=empty];
+	c599297:p -> c599562:p [dir=back,arrowtail=empty];
+	//sorcer.core.exertion.OptExertion extends sorcer.service.Task
+	c599297:p -> c599565:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.AntTask extends sorcer.service.Task
-	c558806:p -> c559102:p [dir=back,arrowtail=empty];
+	c599297:p -> c599566:p [dir=back,arrowtail=empty];
+	//sorcer.core.exertion.EvaluationTask extends sorcer.service.Task
+	c599297:p -> c599568:p [dir=back,arrowtail=empty];
+	//sorcer.core.exertion.ObjectTask extends sorcer.service.Task
+	c599297:p -> c599571:p [dir=back,arrowtail=empty];
 	//sorcer.core.exertion.AltExertion extends sorcer.service.Task
-	c558806:p -> c559108:p [dir=back,arrowtail=empty];
+	c599297:p -> c599572:p [dir=back,arrowtail=empty];
 }
 

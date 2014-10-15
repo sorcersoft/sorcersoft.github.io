@@ -9,24 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.resolver.AbstractArtifactResolver
-	c322650 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # log : Logger </td></tr>
-<tr><td align="left" balign="left"> # versionResolver : VersionResolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractArtifactResolver() </td></tr>
-<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
-<tr><td align="left" balign="left"> # resolveVersion(groupId : String, artifactId : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.resolver.MappedFlattenedArtifactResolver
-	c322651 [label=<<table title="sorcer.resolver.MappedFlattenedArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MappedFlattenedArtifactResolver.html">
+	c347046 [label=<<table title="sorcer.resolver.MappedFlattenedArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MappedFlattenedArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MappedFlattenedArtifactResolver </td></tr>
 		</table></td></tr>
@@ -45,7 +29,23 @@ digraph G {
 <tr><td align="left" balign="left"> + resolveSimpleName(simpleName : String, packaging : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MappedFlattenedArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.resolver.AbstractArtifactResolver
+	c347047 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # log : Logger </td></tr>
+<tr><td align="left" balign="left"> # versionResolver : VersionResolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AbstractArtifactResolver() </td></tr>
+<tr><td align="left" balign="left"> + resolveAbsolute(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> + resolveRelative(artifactCoordinates : String) : String </td></tr>
+<tr><td align="left" balign="left"> # resolveVersion(groupId : String, artifactId : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.resolver.MappedFlattenedArtifactResolver extends sorcer.resolver.AbstractArtifactResolver
-	c322650:p -> c322651:p [dir=back,arrowtail=empty];
+	c347047:p -> c347046:p [dir=back,arrowtail=empty];
 }
 

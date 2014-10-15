@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.po.operator
-	c58564 [label=<<table title="sorcer.po.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.html">
+	c63073 [label=<<table title="sorcer.po.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> operator </td></tr>
 		</table></td></tr>
@@ -49,18 +49,17 @@ digraph G {
 <tr><td align="left" balign="left"> + invoke(invoker : Invocation&lt;&gt;, parameters : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + invoke(invoker : Invocation&lt;&gt;, context : Context&lt;&gt;, parameters : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + invoke(parModel : ParModel&lt;&gt;, parname : String, parameters : Arg[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + invoke(parContext : ParModel&lt;&gt;, parname : String, context : Context&lt;&gt;, parameters : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + args(parameters : Arg[]) : Arg[] </td></tr>
-<tr><td align="left" balign="left"> + pars(invoker : Invoker&lt;&gt;) : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + pars(invoker : ServiceInvoker&lt;&gt;) : ArgSet </td></tr>
 <tr><td align="left" balign="left"> + pars(parnames : String[]) : Arg[] </td></tr>
 <tr><td align="left" balign="left"> + args(pm : ParModel&lt;&gt;, parnames : String[]) : Arg[] </td></tr>
-<tr><td align="left" balign="left"> + invoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoker(name : String, expression : String, pars : Arg[]) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoker(name : String, expression : String, pars : Par&lt;&gt;[]) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoker(expression : String, pars : Arg[]) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoker(expression : String) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoker(exertion : Exertion) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoker(name : String, expression : String, pars : Arg[]) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoker(name : String, expression : String, pars : Par&lt;&gt;[]) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoker(expression : String, pars : Arg[]) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoker(expression : String) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoker(exertion : Exertion) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + inc(name : String, invoker : Invocation&lt;&gt;) : InvokeIncrementor </td></tr>
 <tr><td align="left" balign="left"> + inc(name : String, invoker : Invocation&lt;&gt;, increment : int) : InvokeIncrementor </td></tr>
 <tr><td align="left" balign="left"> + inc(name : String, invoker : Invocation&lt;&gt;, increment : double) : InvokeDoubleIncrementor </td></tr>
@@ -75,14 +74,14 @@ digraph G {
 <tr><td align="left" balign="left"> + cmdInvoker(name : String, cmd : String, pars : Par&lt;&gt;[]) : CmdInvoker </td></tr>
 <tr><td align="left" balign="left"> + runnableInvoker(name : String, runnable : Runnable, pars : Par&lt;&gt;[]) : RunnableInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + callableInvoker(name : String, callable : Callable&lt;&gt;, pars : Par&lt;&gt;[]) : CallableInvoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + opt(name : String, target : Invoker&lt;&gt;) : OptInvoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + opt(name : String, condition : Condition, target : Invoker&lt;&gt;) : OptInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + opt(name : String, target : ServiceInvoker&lt;&gt;) : OptInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + opt(name : String, condition : Condition, target : ServiceInvoker&lt;&gt;) : OptInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + alt(name : String, invokers : OptInvoker&lt;&gt;[]) : AltInvoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + loop(name : String, condition : Condition, target : Invoker&lt;&gt;) : LoopInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + loop(name : String, condition : Condition, target : ServiceInvoker&lt;&gt;) : LoopInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + loop(name : String, condition : Condition, target : Par&lt;&gt;) : LoopInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + get(invoker : AltInvoker&lt;&gt;, index : int) : OptInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + agent(name : String, classNme : String, agentJar : URL) : Agent&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoker(name : String, invoker : Invoker&lt;&gt;) : ExecPath </td></tr>
+<tr><td align="left" balign="left"> + invoker(name : String, invoker : ServiceInvoker&lt;&gt;) : ExecPath </td></tr>
 <tr><td align="left" balign="left"> + input(par : Par&lt;&gt;) : InEntry&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + in(par : Par&lt;&gt;) : InEntry&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + scope(par : Par&lt;&gt;) : Context&lt;&gt; </td></tr>

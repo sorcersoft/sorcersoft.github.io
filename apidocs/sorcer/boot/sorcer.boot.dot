@@ -9,21 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.boot.SorcerOAR
-	c54176 [label=<<table title="sorcer.boot.SorcerOAR" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerOAR.html">
+	// sorcer.boot.OpstringServiceDescriptor
+	c59270 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerOAR </td></tr>
+<tr><td align="center" balign="center"> OpstringServiceDescriptor </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerOAR(file : File) </td></tr>
-<tr><td align="left" balign="left"> + getPolicyFile() : File </td></tr>
+<tr><td align="left" balign="left"> + OpstringServiceDescriptor(serviceElement : ServiceElement, policyFile : File) </td></tr>
+<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SorcerOAR.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./OpstringServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.OpstringServiceDescriptorFactory
-	c54177 [label=<<table title="sorcer.boot.OpstringServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptorFactory.html">
+	c59271 [label=<<table title="sorcer.boot.OpstringServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptorFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpstringServiceDescriptorFactory </td></tr>
 		</table></td></tr>
@@ -37,8 +38,21 @@ digraph G {
 <tr><td align="left" balign="left"> # createServiceDescriptors(operationalStrings : OperationalString[], policyFile : File) : List&lt;OpstringServiceDescriptor&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OpstringServiceDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.SorcerOAR
+	c59272 [label=<<table title="sorcer.boot.SorcerOAR" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerOAR.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerOAR </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerOAR(file : File) </td></tr>
+<tr><td align="left" balign="left"> + getPolicyFile() : File </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerOAR.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.OarServiceDescriptorFactory
-	c54178 [label=<<table title="sorcer.boot.OarServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OarServiceDescriptorFactory.html">
+	c59273 [label=<<table title="sorcer.boot.OarServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OarServiceDescriptorFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OarServiceDescriptorFactory </td></tr>
 		</table></td></tr>
@@ -51,55 +65,8 @@ digraph G {
 <tr><td align="left" balign="left"> + create(file : File) : List&lt;?&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OarServiceDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.boot.OpstringServiceDescriptor
-	c54179 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> OpstringServiceDescriptor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + OpstringServiceDescriptor(serviceElement : ServiceElement, policyFile : File) </td></tr>
-<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./OpstringServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.boot.ResolvingServiceDescriptor
-	c54180 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingServiceDescriptor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ResolvingServiceDescriptor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # resolver : Resolver </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ResolvingServiceDescriptor() </td></tr>
-<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String, configFile : String) </td></tr>
-<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : String, classpath : String, implClassName : String, configFile : String) </td></tr>
-<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String) </td></tr>
-<tr><td align="left" balign="left"> # asArtifacts(artifact : String) : Set&lt;Artifact&gt; </td></tr>
-<tr><td align="left" balign="left"> + codebase(codebase : Set&lt;Artifact&gt;) : Set&lt;URL&gt; </td></tr>
-<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ResolvingServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.boot.RiverDescriptorFactory
-	c54181 [label=<<table title="sorcer.boot.RiverDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RiverDescriptorFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RiverDescriptorFactory </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RiverDescriptorFactory() </td></tr>
-<tr><td align="left" balign="left"> + handledExtensions() : Collection&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + create(file : File) : List&lt;?&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./RiverDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.ServiceStarter
-	c54182 [label=<<table title="sorcer.boot.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceStarter.html">
+	c59274 [label=<<table title="sorcer.boot.ServiceStarter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceStarter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceStarter </td></tr>
 		</table></td></tr>
@@ -117,8 +84,55 @@ digraph G {
 <tr><td align="left" balign="left"> + create(descs : ServiceDescriptor[], config : Configuration, stat : ServiceStarter.ServiceStatHolder, processors : Set&lt;ServiceDescriptorProcessor&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceStarter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.RiverDescriptorFactory
+	c59275 [label=<<table title="sorcer.boot.RiverDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RiverDescriptorFactory.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RiverDescriptorFactory </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RiverDescriptorFactory() </td></tr>
+<tr><td align="left" balign="left"> + handledExtensions() : Collection&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + create(file : File) : List&lt;?&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RiverDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.ResolvingServiceDescriptor
+	c59276 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingServiceDescriptor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ResolvingServiceDescriptor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # resolver : Resolver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # ResolvingServiceDescriptor() </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String, configFile : String) </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : String, classpath : String, implClassName : String, configFile : String) </td></tr>
+<tr><td align="left" balign="left"> + ResolvingServiceDescriptor(codebase : String, policyFile : File, classpath : String, implClassName : String) </td></tr>
+<tr><td align="left" balign="left"> # asArtifacts(artifact : String) : Set&lt;Artifact&gt; </td></tr>
+<tr><td align="left" balign="left"> + codebase(codebase : Set&lt;Artifact&gt;) : Set&lt;URL&gt; </td></tr>
+<tr><td align="left" balign="left"> # getClasspath() : Set&lt;URI&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ResolvingServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.IServiceDescriptorFactory
+	c59277 [label=<<table title="sorcer.boot.IServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IServiceDescriptorFactory.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IServiceDescriptorFactory </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + handledExtensions() : Collection&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + create(file : File) : List&lt;?&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./IServiceDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.ServiceDescriptorFactory
-	c54183 [label=<<table title="sorcer.boot.ServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDescriptorFactory.html">
+	c59278 [label=<<table title="sorcer.boot.ServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDescriptorFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceDescriptorFactory </td></tr>
 		</table></td></tr>
@@ -131,27 +145,13 @@ digraph G {
 <tr><td align="left" balign="left"> + setDescriptorFactories(set : Set&lt;IServiceDescriptorFactory&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.boot.IServiceDescriptorFactory
-	c54184 [label=<<table title="sorcer.boot.IServiceDescriptorFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IServiceDescriptorFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> IServiceDescriptorFactory </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + handledExtensions() : Collection&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + create(file : File) : List&lt;?&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./IServiceDescriptorFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.boot.OpstringServiceDescriptorFactory implements sorcer.boot.IServiceDescriptorFactory
-	c54184:p -> c54177:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.boot.OarServiceDescriptorFactory extends sorcer.boot.OpstringServiceDescriptorFactory
-	c54177:p -> c54178:p [dir=back,arrowtail=empty];
 	//sorcer.boot.OpstringServiceDescriptor extends sorcer.boot.ResolvingServiceDescriptor
-	c54180:p -> c54179:p [dir=back,arrowtail=empty];
+	c59276:p -> c59270:p [dir=back,arrowtail=empty];
+	//sorcer.boot.OpstringServiceDescriptorFactory implements sorcer.boot.IServiceDescriptorFactory
+	c59277:p -> c59271:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.boot.OarServiceDescriptorFactory extends sorcer.boot.OpstringServiceDescriptorFactory
+	c59271:p -> c59273:p [dir=back,arrowtail=empty];
 	//sorcer.boot.RiverDescriptorFactory implements sorcer.boot.IServiceDescriptorFactory
-	c54184:p -> c54181:p [dir=back,arrowtail=empty,style=dashed];
+	c59277:p -> c59275:p [dir=back,arrowtail=empty,style=dashed];
 }
 

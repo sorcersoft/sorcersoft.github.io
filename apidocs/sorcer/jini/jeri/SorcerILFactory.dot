@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.jini.jeri.SorcerILFactory
-	c513465 [label=<<table title="sorcer.jini.jeri.SorcerILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerILFactory.html">
+	c549850 [label=<<table title="sorcer.jini.jeri.SorcerILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerILFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerILFactory </td></tr>
 		</table></td></tr>
@@ -25,12 +25,13 @@ digraph G {
 <tr><td align="left" balign="left"> + SorcerILFactory(serverConstraints : MethodConstraints, permissionClass : Class&lt;&gt;, loader : ClassLoader, serviceBeans : Map&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> # getExtraProxyInterfaces(impl : Remote) : Class&lt;&gt;[] </td></tr>
 <tr><td align="left" balign="left"> # createInvocationDispatcher(methods : Collection&lt;&gt;, impl : Remote, caps : ServerCapabilities) : InvocationDispatcher </td></tr>
+<tr><td align="left" balign="left"> + setRemoteLogging(remoteLogging : boolean) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerILFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.jini.jeri.SorcerILFactory extends net.jini.jeri.BasicILFactory
-	c513716:p -> c513465:p [dir=back,arrowtail=empty];
+	c550115:p -> c549850:p [dir=back,arrowtail=empty];
 	// net.jini.jeri.BasicILFactory
-	c513716 [label=<<table title="net.jini.jeri.BasicILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/jeri/BasicILFactory.html">
+	c550115 [label=<<table title="net.jini.jeri.BasicILFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/jeri/BasicILFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BasicILFactory </td></tr>
 		</table></td></tr>

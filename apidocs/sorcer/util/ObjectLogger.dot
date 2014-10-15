@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ObjectLogger
-	c363571 [label=<<table title="sorcer.util.ObjectLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectLogger.html">
+	c393393 [label=<<table title="sorcer.util.ObjectLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectLogger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectLogger </td></tr>
 		</table></td></tr>
@@ -24,7 +24,9 @@ digraph G {
 <tr><td align="left" balign="left"> + restore(filename : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + persistMarshalled(filename : String, item : Object) </td></tr>
 <tr><td align="left" balign="left"> + restoreMarshalled(filename : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + restoreMarshalled(input : InputStream) : Object </td></tr>
 <tr><td align="left" balign="left"> + persistAnnotatedMarshalled(filename : String, item : Object) </td></tr>
+<tr><td align="left" balign="left"> + persistAnnotatedMarshalled(file : File, item : Object) </td></tr>
 <tr><td align="left" balign="left"> + restoreAnnotatedMarshalled(filename : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + restore(url : URL) : Object </td></tr>
 <tr><td align="left" balign="left"> + restoreMarshalled(url : URL) : Object </td></tr>

@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.service.IProviderServiceBuilder
-	c413236 [label=<<table title="sorcer.core.service.IProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/IProviderServiceBuilder.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> IProviderServiceBuilder </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/IProviderServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.container.ProviderServiceBuilder
-	c413272 [label=<<table title="sorcer.core.provider.container.ProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderServiceBuilder.html">
+	c442777 [label=<<table title="sorcer.core.provider.container.ProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderServiceBuilder </td></tr>
 		</table></td></tr>
@@ -48,7 +35,20 @@ digraph G {
 <tr><td align="left" balign="left"> + get() : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProviderServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.provider.container.ProviderServiceBuilder implements sorcer.core.service.IProviderServiceBuilder
-	c413236:p -> c413272:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.core.provider.container.IProviderServiceBuilder
+	c442780 [label=<<table title="sorcer.core.provider.container.IProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IProviderServiceBuilder.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IProviderServiceBuilder </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProvider() : Provider </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./IProviderServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.provider.container.ProviderServiceBuilder implements sorcer.core.provider.container.IProviderServiceBuilder
+	c442780:p -> c442777:p [dir=back,arrowtail=empty,style=dashed];
 }
 

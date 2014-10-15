@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.container.discovery.ServiceManagerRegistry
-	c264523 [label=<<table title="sorcer.container.discovery.ServiceManagerRegistry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceManagerRegistry.html">
+	c279250 [label=<<table title="sorcer.container.discovery.ServiceManagerRegistry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceManagerRegistry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceManagerRegistry </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceManagerRegistry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.container.discovery.IDiscoveryManagerRegistry
-	c264524 [label=<<table title="sorcer.container.discovery.IDiscoveryManagerRegistry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IDiscoveryManagerRegistry.html">
+	c279252 [label=<<table title="sorcer.container.discovery.IDiscoveryManagerRegistry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IDiscoveryManagerRegistry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IDiscoveryManagerRegistry </td></tr>
@@ -36,13 +36,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getManager() : ServiceDiscoveryManager </td></tr>
-<tr><td align="left" balign="left"> + getManager(groups : String[], locs : LookupLocator[]) : ServiceDiscoveryManager </td></tr>
-<tr><td align="left" balign="left"> + getLookupCache() : LookupCache </td></tr>
-<tr><td align="left" balign="left"> + getLookupCache(groups : String[]) : LookupCache </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getManager() : ServiceDiscoveryManager </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getManager(groups : String[], locs : LookupLocator[]) : ServiceDiscoveryManager </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLookupCache() : LookupCache </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLookupCache(groups : String[]) : LookupCache </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./IDiscoveryManagerRegistry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.container.discovery.ServiceManagerRegistry implements sorcer.container.discovery.IDiscoveryManagerRegistry
-	c264524:p -> c264523:p [dir=back,arrowtail=empty,style=dashed];
+	c279252:p -> c279250:p [dir=back,arrowtail=empty,style=dashed];
 }
 

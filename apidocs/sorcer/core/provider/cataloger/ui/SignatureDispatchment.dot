@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger
-	c500594 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForCataloger.html">
+	c536471 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureDispatcherForCataloger </td></tr>
 		</table></td></tr>
@@ -36,8 +36,35 @@ digraph G {
 <tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatcherForCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.cataloger.ui.SignatureDispatchment
+	c536477 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignatureDispatchment.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SignatureDispatchment </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderListener() : ListSelectionListener </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInterfaceListener() : ListSelectionListener </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethodListener() : ListSelectionListener </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + actionPerformed(e : ActionEvent) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + fillModel() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviders() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInterfaces(providerName : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethods(interfaceName : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSavedContextList() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(methodName : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + saveContext(theContext : Context&lt;&gt;) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + saveContext(newName : String, theContext : Context&lt;&gt;) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteContext(methodName : String) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exertService(theContext : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProvider() : Provider </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SignatureDispatchment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider
-	c500597 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForProvider.html">
+	c536478 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SignatureDispatcherForProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SignatureDispatcherForProvider </td></tr>
 		</table></td></tr>
@@ -63,41 +90,14 @@ digraph G {
 <tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SignatureDispatcherForProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c500598 [label=<<table title="sorcer.core.provider.cataloger.ui.SignatureDispatchment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SignatureDispatchment.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SignatureDispatchment </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProviderListener() : ListSelectionListener </td></tr>
-<tr><td align="left" balign="left"> + getInterfaceListener() : ListSelectionListener </td></tr>
-<tr><td align="left" balign="left"> + getMethodListener() : ListSelectionListener </td></tr>
-<tr><td align="left" balign="left"> + actionPerformed(e : ActionEvent) </td></tr>
-<tr><td align="left" balign="left"> + fillModel() </td></tr>
-<tr><td align="left" balign="left"> + getProviders() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInterfaces(providerName : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getMethods(interfaceName : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getSavedContextList() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getContext(methodName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + saveContext(theContext : Context&lt;&gt;) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + saveContext(newName : String, theContext : Context&lt;&gt;) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + deleteContext(methodName : String) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + exertService(theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SignatureDispatchment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForCataloger implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c500598:p -> c500594:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
-	c500598:p -> c500597:p [dir=back,arrowtail=empty,style=dashed];
+	c536477:p -> c536471:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ui.SignatureDispatchment implements java.awt.event.ActionListener
-	c500656:p -> c500598:p [dir=back,arrowtail=empty,style=dashed];
+	c536550:p -> c536477:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.cataloger.ui.SignatureDispatcherForProvider implements sorcer.core.provider.cataloger.ui.SignatureDispatchment
+	c536477:p -> c536478:p [dir=back,arrowtail=empty,style=dashed];
 	// java.awt.event.ActionListener
-	c500656 [label=<<table title="java.awt.event.ActionListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html">
+	c536550 [label=<<table title="java.awt.event.ActionListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ActionListener </td></tr>
@@ -106,7 +106,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + actionPerformed(arg0 : ActionEvent) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + actionPerformed(arg0 : ActionEvent) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

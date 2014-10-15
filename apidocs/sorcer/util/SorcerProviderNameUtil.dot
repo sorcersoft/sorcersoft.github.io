@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.SorcerProviderNameUtil
-	c518845 [label=<<table title="sorcer.util.SorcerProviderNameUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerProviderNameUtil.html">
+	c555417 [label=<<table title="sorcer.util.SorcerProviderNameUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerProviderNameUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerProviderNameUtil </td></tr>
 		</table></td></tr>
@@ -24,12 +24,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerProviderNameUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ProviderNameUtil
-	c518873 [label=<<table title="sorcer.util.ProviderNameUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderNameUtil.html">
+	c555439 [label=<<table title="sorcer.util.ProviderNameUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderNameUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderNameUtil </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # names : Map&lt;String, String&gt; </td></tr>
+<tr><td align="left" balign="left"> # log : Logger </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ProviderNameUtil() </td></tr>
@@ -37,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderNameUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.SorcerProviderNameUtil extends sorcer.util.ProviderNameUtil
-	c518873:p -> c518845:p [dir=back,arrowtail=empty];
+	c555439:p -> c555417:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener
-	c467237 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerEventListener.html">
+	c498818 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerEventListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatalogerEventListener </td></tr>
 		</table></td></tr>
@@ -18,8 +18,8 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceCataloger.CatalogerEventListener() </td></tr>
-<tr><td align="left" balign="left"> + ServiceCataloger.CatalogerEventListener(msg : String) </td></tr>
+<tr><td align="left" balign="left"> + CatalogerEventListener() </td></tr>
+<tr><td align="left" balign="left"> + CatalogerEventListener(msg : String) </td></tr>
 <tr><td align="left" balign="left"> + serviceAdded(ev : ServiceDiscoveryEvent) </td></tr>
 <tr><td align="left" balign="left"> + serviceRemoved(ev : ServiceDiscoveryEvent) </td></tr>
 <tr><td align="left" balign="left"> + serviceChanged(ev : ServiceDiscoveryEvent) </td></tr>
@@ -27,11 +27,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerEventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener implements net.jini.lookup.ServiceDiscoveryListener
-	c467274:p -> c467237:p [dir=back,arrowtail=empty,style=dashed];
+	c498867:p -> c498818:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerEventListener implements java.lang.Runnable
-	c467275:p -> c467237:p [dir=back,arrowtail=empty,style=dashed];
+	c498868:p -> c498818:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Runnable
-	c467275 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+	c498868 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Runnable </td></tr>
@@ -40,11 +40,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + run() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.lookup.ServiceDiscoveryListener
-	c467274 [label=<<table title="net.jini.lookup.ServiceDiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lookup/ServiceDiscoveryListener.html">
+	c498867 [label=<<table title="net.jini.lookup.ServiceDiscoveryListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/lookup/ServiceDiscoveryListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceDiscoveryListener </td></tr>
@@ -53,9 +53,9 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + serviceAdded(arg0 : ServiceDiscoveryEvent) </td></tr>
-<tr><td align="left" balign="left"> + serviceRemoved(arg0 : ServiceDiscoveryEvent) </td></tr>
-<tr><td align="left" balign="left"> + serviceChanged(arg0 : ServiceDiscoveryEvent) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceAdded(arg0 : ServiceDiscoveryEvent) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceRemoved(arg0 : ServiceDiscoveryEvent) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceChanged(arg0 : ServiceDiscoveryEvent) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/lookup/ServiceDiscoveryListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

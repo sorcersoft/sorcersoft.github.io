@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.boot.destroy.ServiceDestroyer
-	c472167 [label=<<table title="sorcer.boot.destroy.ServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceDestroyer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ServiceDestroyer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.destroy.RioServiceDestroyer
-	c472169 [label=<<table title="sorcer.boot.destroy.RioServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RioServiceDestroyer.html">
+	c504691 [label=<<table title="sorcer.boot.destroy.RioServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RioServiceDestroyer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RioServiceDestroyer </td></tr>
 		</table></td></tr>
@@ -36,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RioServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.destroy.RiverServiceDestroyer
-	c472171 [label=<<table title="sorcer.boot.destroy.RiverServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RiverServiceDestroyer.html">
+	c504693 [label=<<table title="sorcer.boot.destroy.RiverServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RiverServiceDestroyer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RiverServiceDestroyer </td></tr>
 		</table></td></tr>
@@ -49,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RiverServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.destroy.SorcerServiceDestroyer
-	c472172 [label=<<table title="sorcer.boot.destroy.SorcerServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDestroyer.html">
+	c504694 [label=<<table title="sorcer.boot.destroy.SorcerServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDestroyer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceDestroyer </td></tr>
 		</table></td></tr>
@@ -61,11 +48,24 @@ digraph G {
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.boot.destroy.ServiceDestroyer
+	c504696 [label=<<table title="sorcer.boot.destroy.ServiceDestroyer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceDestroyer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ServiceDestroyer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceDestroyer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.boot.destroy.RioServiceDestroyer implements sorcer.boot.destroy.ServiceDestroyer
-	c472167:p -> c472169:p [dir=back,arrowtail=empty,style=dashed];
+	c504696:p -> c504691:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.boot.destroy.RiverServiceDestroyer implements sorcer.boot.destroy.ServiceDestroyer
-	c472167:p -> c472171:p [dir=back,arrowtail=empty,style=dashed];
+	c504696:p -> c504693:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.boot.destroy.SorcerServiceDestroyer implements sorcer.boot.destroy.ServiceDestroyer
-	c472167:p -> c472172:p [dir=back,arrowtail=empty,style=dashed];
+	c504696:p -> c504694:p [dir=back,arrowtail=empty,style=dashed];
 }
 

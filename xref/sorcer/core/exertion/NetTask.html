@@ -35,7 +35,7 @@
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> net.jini.id.Uuid;
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.core.signature.NetSignature;
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> sorcer.service.*;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ServiceExerter;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> sorcer.core.provider.exerter.ExertionDispatcher;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> * The SORCER service task extending the abstract task {@link Task}.</em>
@@ -111,7 +111,7 @@
 <a class="jxr_linenumber" name="101" href="#101">101</a> 		} <strong class="jxr_keyword">catch</strong> (ExertionException e) {
 <a class="jxr_linenumber" name="102" href="#102">102</a> 			e.printStackTrace();
 <a class="jxr_linenumber" name="103" href="#103">103</a> 		}
-<a class="jxr_linenumber" name="104" href="#104">104</a> 		<strong class="jxr_keyword">this</strong>.signatures.addAll(Arrays.asList(signatures));
+<a class="jxr_linenumber" name="104" href="#104">104</a> 		<strong class="jxr_keyword">this</strong>.fidelity.addAll(Arrays.asList(signatures));
 <a class="jxr_linenumber" name="105" href="#105">105</a> 	}
 <a class="jxr_linenumber" name="106" href="#106">106</a> 
 <a class="jxr_linenumber" name="107" href="#107">107</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setService(<a href="../../../sorcer/service/Service.html">Service</a> provider) {
@@ -124,7 +124,7 @@
 <a class="jxr_linenumber" name="114" href="#114">114</a> 
 <a class="jxr_linenumber" name="115" href="#115">115</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../sorcer/service/Task.html">Task</a> doTask(Transaction txn) <strong class="jxr_keyword">throws</strong> ExertionException,
 <a class="jxr_linenumber" name="116" href="#116">116</a> 			SignatureException, RemoteException {
-<a class="jxr_linenumber" name="117" href="#117">117</a> 		ServiceExerter se = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/util/ServiceExerter.html">ServiceExerter</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="117" href="#117">117</a> 		ExertionDispatcher se = <strong class="jxr_keyword">new</strong> <a href="../../../sorcer/core/provider/exerter/ExertionDispatcher.html">ExertionDispatcher</a>(<strong class="jxr_keyword">this</strong>);
 <a class="jxr_linenumber" name="118" href="#118">118</a> 		<strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="119" href="#119">119</a> 			<strong class="jxr_keyword">return</strong> (Task) se.exert();
 <a class="jxr_linenumber" name="120" href="#120">120</a> 		} <strong class="jxr_keyword">catch</strong> (TransactionException e) {
@@ -137,7 +137,7 @@
 <a class="jxr_linenumber" name="127" href="#127">127</a> 		temp.status = Exec.INITIAL;
 <a class="jxr_linenumber" name="128" href="#128">128</a> 		temp.priority = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="129" href="#129">129</a> 		temp.index = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="130" href="#130">130</a> 		temp.signatures = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="130" href="#130">130</a> 		temp.fidelity = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="131" href="#131">131</a> 		<strong class="jxr_keyword">return</strong> temp;
 <a class="jxr_linenumber" name="132" href="#132">132</a> 	}
 <a class="jxr_linenumber" name="133" href="#133">133</a> 

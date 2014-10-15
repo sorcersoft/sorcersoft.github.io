@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.security.util.SorcerPrincipal
-	c517673 [label=<<table title="sorcer.security.util.SorcerPrincipal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerPrincipal.html">
+	c554222 [label=<<table title="sorcer.security.util.SorcerPrincipal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerPrincipal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerPrincipal </td></tr>
 		</table></td></tr>
@@ -75,18 +75,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerPrincipal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.security.util.SorcerPrincipal implements java.security.Principal
-	c518068:p -> c517673:p [dir=back,arrowtail=empty,style=dashed];
+	c554635:p -> c554222:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.security.util.SorcerPrincipal implements java.io.Serializable
-	c518069:p -> c517673:p [dir=back,arrowtail=empty,style=dashed];
+	c554636:p -> c554222:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c518069 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c554636 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.security.Principal
-	c518068 [label=<<table title="java.security.Principal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/security/Principal.html">
+	c554635 [label=<<table title="java.security.Principal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/security/Principal.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Principal </td></tr>
@@ -95,10 +95,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + equals(arg0 : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + equals(arg0 : Object) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + toString() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + hashCode() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"> + implies(arg0 : Subject) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/security/Principal.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

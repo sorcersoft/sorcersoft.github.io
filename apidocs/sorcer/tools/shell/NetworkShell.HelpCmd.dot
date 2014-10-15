@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.NetworkShell.HelpCmd
-	c350797 [label=<<table title="sorcer.tools.shell.NetworkShell.HelpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.HelpCmd.html">
+	c379385 [label=<<table title="sorcer.tools.shell.NetworkShell.HelpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NetworkShell.HelpCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelpCmd </td></tr>
 		</table></td></tr>
@@ -18,12 +18,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # NetworkShell.HelpCmd() </td></tr>
+<tr><td align="left" balign="left"> # HelpCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.HelpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.ShellCmd
-	c350805 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShellCmd.html">
+	c379395 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -43,13 +43,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getShortHelp() : String </td></tr>
 <tr><td align="left" balign="left"> + getLongDescription(subCmd : String) : String </td></tr>
 <tr><td align="left" balign="left"> + nameConflictDetected(conflictClass : Class&lt;?&gt;) : String </td></tr>
-<tr><td align="left" balign="left"> + initializeSubsystem() </td></tr>
-<tr><td align="left" balign="left"> + endSubsystem() </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + setConfig(config : Configuration) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.NetworkShell.HelpCmd extends sorcer.tools.shell.ShellCmd
-	c350805:p -> c350797:p [dir=back,arrowtail=empty];
+	c379395:p -> c379385:p [dir=back,arrowtail=empty];
 }
 

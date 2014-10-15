@@ -9,8 +9,25 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.context.model.par.Agent<T>
+	c43365 [label=<<table title="sorcer.core.context.model.par.Agent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Agent.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Agent&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Agent(name : String, agentURLs : URL[]) </td></tr>
+<tr><td align="left" balign="left"> + Agent(name : String, className : String, agentURLs : URL[]) </td></tr>
+<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Agent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.ParSet
-	c13271 [label=<<table title="sorcer.core.context.model.par.ParSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParSet.html">
+	c43366 [label=<<table title="sorcer.core.context.model.par.ParSet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParSet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParSet </td></tr>
 		</table></td></tr>
@@ -38,8 +55,95 @@ digraph G {
 <tr><td align="left" balign="left"> + clearPars() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParSet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.par.ParModel<T>
+	c43367 [label=<<table title="sorcer.core.context.model.par.ParModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParModel.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ParModel&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ParModel() </td></tr>
+<tr><td align="left" balign="left"> + ParModel(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ParModel(objects : Identifiable[]) </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
+<tr><td align="left" balign="left"> + getPar(name : String) : Par&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + bindVar(var : Variability&lt;&gt;) : Variability&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + add(objects : List&lt;Identifiable&gt;) : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + append(objects : Identifiable[]) : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + add(objects : Identifiable[]) : ParModel&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + isContextChanged() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setContextChanged(contextChanged : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getVar(name : String) : Variability&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getVarPaths(var : Variability&lt;&gt;) : Enumeration&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMarkedVariables(sc : Context&lt;&gt;, association : String) : Variability&lt;&gt;[] </td></tr>
+<tr><td align="left" balign="left"> + markVar(cntxt : Context&lt;&gt;, path : String, var : Variability&lt;&gt;) : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + appendNew(context : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ParModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.context.model.par.Par<T>
+	c43368 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Par.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Par&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # value : T </td></tr>
+<tr><td align="left" balign="left"> # scope : Context&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> # mappable : Mappable&lt;&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Par(parname : String) </td></tr>
+<tr><td align="left" balign="left"> + Par(identifiable : Identifiable) </td></tr>
+<tr><td align="left" balign="left"> + Par(parname : String, argument : T) </td></tr>
+<tr><td align="left" balign="left"> + Par(parname : String, argument : Object, scope : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + Par(name : String, path : String, map : Mappable&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
+<tr><td align="left" balign="left"> + asis() : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + substitute(parameters : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + compareTo(o : T) : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + getPerturbedValue(varName : String) : T </td></tr>
+<tr><td align="left" balign="left"> + getPerturbation() : double </td></tr>
+<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
+<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
+<tr><td align="left" balign="left"> + getValueType() : Class&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
+<tr><td align="left" balign="left"> + getContextable() : Mappable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
+<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
+<tr><td align="left" balign="left"> + valueChanged() </td></tr>
+<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
+<tr><td align="left" balign="left"> + getDbURL() : URL </td></tr>
+<tr><td align="left" balign="left"> + getURL() : URL </td></tr>
+<tr><td align="left" balign="left"> + setDbURL(dbURL : URL) </td></tr>
+<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setPersistent(state : boolean) </td></tr>
+<tr><td align="left" balign="left"> + getMappable() : Mappable&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setMappable(mappable : Mappable&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + isMappable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
+<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
+<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.ParList
-	c13272 [label=<<table title="sorcer.core.context.model.par.ParList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParList.html">
+	c43369 [label=<<table title="sorcer.core.context.model.par.ParList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParList </td></tr>
 		</table></td></tr>
@@ -67,189 +171,12 @@ digraph G {
 <tr><td align="left" balign="left"> + setParValues(entries : Tuple2&lt;String, ?&gt;[]) : ParList </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + toParSet() : ParSet </td></tr>
+<tr><td align="left" balign="left"> + toParList() : ParList </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.Agent<T>
-	c13273 [label=<<table title="sorcer.core.context.model.par.Agent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Agent.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Agent&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Agent(name : String, agentURLs : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + Agent(name : String, className : String, agentURLs : URL[]) </td></tr>
-<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Agent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.ParModel<T>
-	c13274 [label=<<table title="sorcer.core.context.model.par.ParModel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParModel.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ParModel&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ParModel() </td></tr>
-<tr><td align="left" balign="left"> + ParModel(name : String) </td></tr>
-<tr><td align="left" balign="left"> + ParModel(objects : Identifiable[]) </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
-<tr><td align="left" balign="left"> + getPar(name : String) : Par&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + add(objects : List&lt;Identifiable&gt;) : ParModel&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + append(objects : Identifiable[]) : ParModel&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + add(objects : Identifiable[]) : ParModel&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + isContextChanged() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setContextChanged(contextChanged : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getVar(name : String) : Variability&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getVarPaths(var : Variability&lt;&gt;) : Enumeration&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getMarkedVariables(sc : Context&lt;&gt;, association : String) : Variability&lt;&gt;[] </td></tr>
-<tr><td align="left" balign="left"> + markVar(cntxt : Context&lt;&gt;, path : String, var : Variability&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ParModel.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.ParImpl<T>
-	c13275 [label=<<table title="sorcer.core.context.model.par.ParImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParImpl.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ParImpl&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ParImpl(parname : String) </td></tr>
-<tr><td align="left" balign="left"> + ParImpl(identifiable : Identifiable) </td></tr>
-<tr><td align="left" balign="left"> + ParImpl(parname : String, argument : T) </td></tr>
-<tr><td align="left" balign="left"> + ParImpl(parname : String, argument : Object, scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + ParImpl(name : String, path : String, map : Mappable&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setClosure(scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getVariability(name : String) : Variability&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDbURL() : URL </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ParImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.EntryList
-	c13276 [label=<<table title="sorcer.core.context.model.par.EntryList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> EntryList </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EntryList() </td></tr>
-<tr><td align="left" balign="left"> + EntryList(size : int) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entrySet : Set&lt;Entry&lt;&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entryLists : EntryList[]) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entryArray : Entry&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(entryList : EntryList) </td></tr>
-<tr><td align="left" balign="left"> + EntryList(parSet : ParSet) </td></tr>
-<tr><td align="left" balign="left"> + getEntry(entryName : String) : Entry&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + containsEntryName(name : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + contains(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + toArray() : Entry&lt;&gt;[] </td></tr>
-<tr><td align="left" balign="left"> + asList(array : Entry&lt;&gt;[]) : EntryList </td></tr>
-<tr><td align="left" balign="left"> + describe() : String </td></tr>
-<tr><td align="left" balign="left"> + getType() : EntryList.Type </td></tr>
-<tr><td align="left" balign="left"> + setType(type : EntryList.Type) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./EntryList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.EntryList.Type
-	c13277 [label=<<table title="sorcer.core.context.model.par.EntryList.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.Type.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Type </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> INPUT </td></tr>
-<tr><td align="left" balign="left"> OUTPUT </td></tr>
-<tr><td align="left" balign="left"> INITIAL_DESIGN </td></tr>
-<tr><td align="left" balign="left"> OPTIMIZED_DESIGN </td></tr>
-<tr><td align="left" balign="left"> CONSTRAINTS </td></tr>
-<tr><td align="left" balign="left"> LINKED </td></tr>
-<tr><td align="left" balign="left"> CONSTNTS </td></tr>
-<tr><td align="left" balign="left"> INVARIANTS </td></tr>
-		</table></td></tr>
-		</table>>, URL="./EntryList.Type.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.par.Par<T>
-	c13278 [label=<<table title="sorcer.core.context.model.par.Par" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Par.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Par&lt;T&gt; </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # name : String </td></tr>
-<tr><td align="left" balign="left"> # value : T </td></tr>
-<tr><td align="left" balign="left"> # scope : Context&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> # dbURL : URL </td></tr>
-<tr><td align="left" balign="left"> # mappable : Mappable&lt;&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Par(parname : String) </td></tr>
-<tr><td align="left" balign="left"> + Par(identifiable : Identifiable) </td></tr>
-<tr><td align="left" balign="left"> + Par(parname : String, argument : T) </td></tr>
-<tr><td align="left" balign="left"> + Par(parname : String, argument : Object, scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + Par(name : String, path : String, map : Mappable&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setClosure(scope : Context&lt;&gt;) </font></td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setValue(value : Object) </font></td></tr>
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(entries : Arg[]) : T </font></td></tr>
-<tr><td align="left" balign="left"> + substitute(parameters : Arg[]) : Evaluation&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setScope(scope : Context&lt;&gt;) </font></td></tr>
-<tr><td align="left" balign="left"> + compareTo(o : T) : int </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + getPerturbedValue(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + getPerturbation() : double </td></tr>
-<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
-<tr><td align="left" balign="left"> + getValueType() : Class&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + getContextable() : Mappable&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
-<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged() </td></tr>
-<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVariability(name : String) : Variability&lt;T&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDbURL() : URL </font></td></tr>
-<tr><td align="left" balign="left"> + getURL() : URL </td></tr>
-<tr><td align="left" balign="left"> + setDbURL(dbURL : URL) </td></tr>
-<tr><td align="left" balign="left"> + isPersistent() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setPersistent(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getMappable() : Mappable&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setMappable(mappable : Mappable&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + isMappable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
-<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Par.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.model.par.ParException
-	c13279 [label=<<table title="sorcer.core.context.model.par.ParException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParException.html">
+	c43370 [label=<<table title="sorcer.core.context.model.par.ParException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParException </td></tr>
 		</table></td></tr>
@@ -266,9 +193,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getException() : Exception </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.context.model.par.Agent<T> extends sorcer.core.context.model.par.ParImpl<T>
-	c13275:p -> c13273:p [dir=back,arrowtail=empty];
-	//sorcer.core.context.model.par.ParImpl<T> extends sorcer.core.context.model.par.Par
-	c13278:p -> c13275:p [dir=back,arrowtail=empty];
+	//sorcer.core.context.model.par.Agent<T> extends sorcer.core.context.model.par.Par<T>
+	c43368:p -> c43365:p [dir=back,arrowtail=empty];
 }
 

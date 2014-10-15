@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.logger.RemoteLoggerManager
-	c73904 [label=<<table title="sorcer.core.provider.logger.RemoteLoggerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerManager.html">
+	c68379 [label=<<table title="sorcer.core.provider.logger.RemoteLoggerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteLoggerManager </td></tr>
 		</table></td></tr>
@@ -19,16 +19,19 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + RemoteLoggerManager() </td></tr>
+<tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
 <tr><td align="left" balign="left"> + getLogNames() : String[] </td></tr>
 <tr><td align="left" balign="left"> + publish(loggingEvents : List&lt;LoggingEventVO&gt;) </td></tr>
 <tr><td align="left" balign="left"> # publish(loggingEvent : ILoggingEvent) </td></tr>
 <tr><td align="left" balign="left"> + getLog(fileName : String) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getLoggers() : List&lt;LoggingConfig&gt; </td></tr>
 <tr><td align="left" balign="left"> + deleteLog(loggerName : String) </td></tr>
+<tr><td align="left" balign="left"> + registerLogListener(listener : RemoteEventListener, handback : MarshalledObject&lt;&gt;, duration : long, filterMap : List&lt;Map&lt;String, String&gt;&gt;) : EventRegistration </td></tr>
+<tr><td align="left" balign="left"> + unregisterLogListener(evReg : EventRegistration) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemoteLoggerManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.logger.LoggingConfig
-	c73905 [label=<<table title="sorcer.core.provider.logger.LoggingConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoggingConfig.html">
+	c68380 [label=<<table title="sorcer.core.provider.logger.LoggingConfig" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoggingConfig.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoggingConfig </td></tr>
 		</table></td></tr>
@@ -45,8 +48,51 @@ digraph G {
 <tr><td align="left" balign="left"> + setLevel(lev : Level) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LoggingConfig.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.logger.LoggerRemoteEvent
+	c68381 [label=<<table title="sorcer.core.provider.logger.LoggerRemoteEvent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoggerRemoteEvent.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoggerRemoteEvent </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ID : long </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoggerRemoteEvent(source : Object) </td></tr>
+<tr><td align="left" balign="left"> + LoggerRemoteEvent(source : Object, loggingEvent : ILoggingEvent) </td></tr>
+<tr><td align="left" balign="left"> + getLoggingEvent() : ILoggingEvent </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoggerRemoteEvent.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.logger.LoggerRemoteEventClient
+	c68382 [label=<<table title="sorcer.core.provider.logger.LoggerRemoteEventClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoggerRemoteEventClient.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoggerRemoteEventClient </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoggerRemoteEventClient() </td></tr>
+<tr><td align="left" balign="left"> + register(filterMapList : List&lt;Map&lt;String, String&gt;&gt;, remoteEventListener : RemoteEventListener) </td></tr>
+<tr><td align="left" balign="left"> + register(loggers : List&lt;RemoteLogger&gt;, filterMapList : List&lt;Map&lt;String, String&gt;&gt;, remoteEventListener : RemoteEventListener) </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoggerRemoteEventClient.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.logger.LoggerRemoteException
+	c68383 [label=<<table title="sorcer.core.provider.logger.LoggerRemoteException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoggerRemoteException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoggerRemoteException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoggerRemoteException(message : String) </td></tr>
+<tr><td align="left" balign="left"> + LoggerRemoteException(message : String, cause : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + LoggerRemoteException(cause : Throwable) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoggerRemoteException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.logger.LogFilter
-	c73906 [label=<<table title="sorcer.core.provider.logger.LogFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogFilter.html">
+	c68384 [label=<<table title="sorcer.core.provider.logger.LogFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogFilter </td></tr>
 		</table></td></tr>
@@ -60,7 +106,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LogFilter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.logger.Level
-	c73907 [label=<<table title="sorcer.core.provider.logger.Level" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Level.html">
+	c68385 [label=<<table title="sorcer.core.provider.logger.Level" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Level.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Level </td></tr>
 		</table></td></tr>

@@ -9,38 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Arg
-	c550123 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Arg </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Strategy
-	c550163 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Strategy.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Strategy </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
-<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ControlContext
-	c550198 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ControlContext.html">
+	c587941 [label=<<table title="sorcer.core.context.ControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/ControlContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ControlContext </td></tr>
 		</table></td></tr>
@@ -114,8 +84,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getOpti() : Strategy.Opti </td></tr>
 <tr><td align="left" balign="left"> + setExecState(state : Exec.State) </td></tr>
 <tr><td align="left" balign="left"> + getExecState() : Exec.State </td></tr>
-<tr><td align="left" balign="left"> + getMonitor() : MonitoringManagement </td></tr>
-<tr><td align="left" balign="left"> + setMonitor(monitor : MonitoringManagement) </td></tr>
 <tr><td align="left" balign="left"> + setAccessType(access : Strategy.Access) </td></tr>
 <tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
 <tr><td align="left" balign="left"> + setExertionComments(message : String) </td></tr>
@@ -164,11 +132,68 @@ digraph G {
 <tr><td align="left" balign="left"> + getMutexId() : Object </td></tr>
 <tr><td align="left" balign="left"> + setMutexId(mutexId : Object) </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + isTraceEnabled() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setTraceEnabled(traceEnabled : boolean) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/ControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.service.Strategy implements sorcer.service.Arg
-	c550123:p -> c550163:p [dir=back,arrowtail=empty,style=dashed];
+	// sorcer.core.context.IControlContext
+	c587958 [label=<<table title="sorcer.core.context.IControlContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/IControlContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IControlContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isMonitorable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isMonitorable(value : Strategy.Monitor) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setMonitorable(state : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isProvisionable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setProvisionable(state : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOpti(optiType : Strategy.Opti) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOpti() : Strategy.Opti </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addException(t : Throwable) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addException(message : String, t : Throwable) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/context/IControlContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Strategy
+	c588013 [label=<<table title="sorcer.service.Strategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Strategy.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Strategy </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isWaitable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFlowType() : Strategy.Flow </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAccessType() : Strategy.Access </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExceptions() : List&lt;ThrowableTrace&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTrace() : List&lt;String&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Strategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Arg
+	c588070 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ControlContext implements sorcer.service.Strategy
-	c550163:p -> c550198:p [dir=back,arrowtail=empty,style=dashed];
+	c588013:p -> c587941:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.ControlContext implements sorcer.core.context.IControlContext
+	c587958:p -> c587941:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.context.IControlContext implements sorcer.service.Strategy
+	c588013:p -> c587958:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Strategy implements sorcer.service.Arg
+	c588070:p -> c588013:p [dir=back,arrowtail=empty,style=dashed];
 }
 

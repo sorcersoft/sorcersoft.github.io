@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerNotifierProtocol
-	c402700 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerNotifierProtocol.html">
+	c432638 [label=<<table title="sorcer.core.SorcerNotifierProtocol" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerNotifierProtocol.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerNotifierProtocol </td></tr>
@@ -19,68 +19,34 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + register(listener : RemoteEventListener, handback : Object, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </td></tr>
-<tr><td align="left" balign="left"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </td></tr>
-<tr><td align="left" balign="left"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;) : Integer </td></tr>
-<tr><td align="left" balign="left"> + deleteListener(id : Integer, regFor : Integer) </td></tr>
-<tr><td align="left" balign="left"> + notify(ev : RemoteEvent) </td></tr>
-<tr><td align="left" balign="left"> + appendJobToSession(ownerID : String, jobID : String, sessionType : int, sessionID : String) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + register(listener : RemoteEventListener, handback : Object, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;, sessionID : String) : Integer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + register(listener : RemoteEventListener, regFor : Integer, userId : String, sessionJobs : Vector&lt;&gt;) : Integer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteListener(id : Integer, regFor : Integer) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notify(ev : RemoteEvent) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + appendJobToSession(ownerID : String, jobID : String, sessionType : int, sessionID : String) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../SorcerNotifierProtocol.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Service
-	c402826 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Service </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Monitorable
-	c402831 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Monitorable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + stop(ref : UEID, subject : Subject) </td></tr>
-<tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
-<tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Monitorable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c402941 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
+	c432675 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
-<tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
+<tr><td align="left" balign="left"> # scheduler : ScheduledExecutorService </td></tr>
 <tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_THREADS : String </td></tr>
-<tr><td align="left" balign="left"> + MANAGER_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + LOAD_FACTOR : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT_INCREMENT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ServiceProvider() </td></tr>
+<tr><td align="left" balign="left"> + ServiceProvider() </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(providerPropertiesFile : String) </td></tr>
 <tr><td align="left" balign="left"> + getGrants(cl : Class&lt;?&gt;, principals : Principal[]) : Permission[] </td></tr>
-<tr><td align="left" balign="left"> + grant(cl : Class&lt;?&gt;, principals : Principal[], permissions : Permission[]) </td></tr>
 <tr><td align="left" balign="left"> + grantSupported() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
 <tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
@@ -142,6 +108,7 @@ digraph G {
 <tr><td align="left" balign="left"> + invokeMethod(method : String, context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + invokeMethod(methodName : String, ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
@@ -177,7 +144,6 @@ digraph G {
 <tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -186,15 +152,13 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextDatabase() : boolean </td></tr>
 <tr><td align="left" balign="left"> # setupThreadManager() </td></tr>
 <tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + initSpaceSupport() </td></tr>
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Provider
-	c402948 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Provider.html">
+	c432689 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Provider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider </td></tr>
@@ -203,62 +167,91 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
-<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
-<tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + init() </td></tr>
-<tr><td align="left" balign="left"> + init(propFile : String) </td></tr>
-<tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + mutualExclusion() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + destroyNode() </td></tr>
-<tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + changed(ctx : Context&lt;?&gt;, aspect : Object) </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
-<tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
-<tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderID() : ServiceID </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes() : Entry[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProperties() : List&lt;Object&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderConfiguration() : Configuration </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(propFile : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + restore() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + mutualExclusion() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProperty(property : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getGroups() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInfo() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDescription() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isBusy() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroyNode() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyInformation(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyException(task : Exertion, message : String, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyException(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyWarning(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyFailure(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyFailure(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getJavaSystemProperties() : Properties </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxy() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + updatePolicy(policy : Policy) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRemoteLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addAttribute(attribute : Entry) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Service
+	c432816 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Service </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + service(exertion : Exertion, txn : Transaction) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + service(exertion : Exertion) : Exertion </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Monitorable
+	c432834 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Monitorable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + stop(ref : UEID, subject : Subject) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + suspend(ref : UEID, subject : Subject) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resume(ex : Exertion) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + step(ex : Exertion) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Monitorable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.SorcerNotifierProtocol implements sorcer.core.provider.Provider
-	c402948:p -> c402700:p [dir=back,arrowtail=empty,style=dashed];
+	c432689:p -> c432638:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.Provider
-	c402948:p -> c402941:p [dir=back,arrowtail=empty,style=dashed];
+	c432689:p -> c432675:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Provider implements sorcer.service.Service
-	c402826:p -> c402948:p [dir=back,arrowtail=empty,style=dashed];
+	c432816:p -> c432689:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Provider implements sorcer.service.Monitorable
-	c402831:p -> c402948:p [dir=back,arrowtail=empty,style=dashed];
+	c432834:p -> c432689:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Provider implements net.jini.admin.Administrable
-	c403423:p -> c402948:p [dir=back,arrowtail=empty,style=dashed];
+	c433305:p -> c432689:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Provider implements java.rmi.Remote
-	c403424:p -> c402948:p [dir=back,arrowtail=empty,style=dashed];
+	c433306:p -> c432689:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c403424 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c433306 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// net.jini.admin.Administrable
-	c403423 [label=<<table title="net.jini.admin.Administrable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/Administrable.html">
+	c433305 [label=<<table title="net.jini.admin.Administrable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/Administrable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Administrable </td></tr>
@@ -267,7 +260,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getAdmin() : Object </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAdmin() : Object </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/admin/Administrable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

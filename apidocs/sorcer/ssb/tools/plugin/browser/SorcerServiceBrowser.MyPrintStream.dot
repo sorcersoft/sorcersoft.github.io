@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.SorcerServiceBrowser.MyPrintStream
-	c523777 [label=<<table title="sorcer.ssb.tools.plugin.browser.SorcerServiceBrowser.MyPrintStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerServiceBrowser.MyPrintStream.html">
+	c562066 [label=<<table title="sorcer.ssb.tools.plugin.browser.SorcerServiceBrowser.MyPrintStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerServiceBrowser.MyPrintStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MyPrintStream </td></tr>
 		</table></td></tr>
@@ -18,14 +18,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerServiceBrowser.MyPrintStream(os : SorcerServiceBrowser.MyOutputStream, fName : String) </td></tr>
+<tr><td align="left" balign="left"> + MyPrintStream(os : SorcerServiceBrowser.MyOutputStream, fName : String) </td></tr>
 <tr><td align="left" balign="left"> + println(str : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceBrowser.MyPrintStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.SorcerServiceBrowser.MyPrintStream extends java.io.PrintStream
-	c523874:p -> c523777:p [dir=back,arrowtail=empty];
+	c562172:p -> c562066:p [dir=back,arrowtail=empty];
 	// java.io.PrintStream
-	c523874 [label=<<table title="java.io.PrintStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintStream.html">
+	c562172 [label=<<table title="java.io.PrintStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PrintStream </td></tr>
 		</table></td></tr>

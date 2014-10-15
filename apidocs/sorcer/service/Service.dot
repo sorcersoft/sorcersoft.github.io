@@ -9,8 +9,274 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.core.provider.Concatenator
+	c486940 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Concatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Concatenator </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Jobber
+	c486945 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Jobber.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Jobber </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.Provider
+	c486946 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Provider </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderID() : ServiceID </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes() : Entry[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProperties() : List&lt;Object&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderConfiguration() : Configuration </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(propFile : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + restore() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + mutualExclusion() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProperty(property : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getGroups() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInfo() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDescription() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isBusy() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroyNode() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyInformation(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyException(task : Exertion, message : String, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyException(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyWarning(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyFailure(task : Exertion, e : Exception) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + notifyFailure(task : Exertion, message : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getJavaSystemProperties() : Properties </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxy() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + updatePolicy(policy : Policy) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRemoteLogger() : Logger </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addAttribute(attribute : Entry) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.Outer
+	c486956 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Outer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Outer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInner() : Remote </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/proxy/Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.proxy.Partner
+	c486957 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Partner.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Partner </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/proxy/Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Context<T>
+	c487039 [label=<<table title="sorcer.service.Context" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Context.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Context&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PATH_PAR : String </td></tr>
+<tr><td align="left" balign="left"> + CONTEXT_PARAMETER : String </td></tr>
+<tr><td align="left" balign="left"> + PIPE : String </td></tr>
+<tr><td align="left" balign="left"> + DIRECTION : String </td></tr>
+<tr><td align="left" balign="left"> + OPP : String </td></tr>
+<tr><td align="left" balign="left"> + INDEX : String </td></tr>
+<tr><td align="left" balign="left"> + PATH : String </td></tr>
+<tr><td align="left" balign="left"> + CONTEXT_ID : String </td></tr>
+<tr><td align="left" balign="left"> + DATA_NODE_TYPE : String </td></tr>
+<tr><td align="left" balign="left"> + VAR_NODE_TYPE : String </td></tr>
+<tr><td align="left" balign="left"> + APPLICATION : String </td></tr>
+<tr><td align="left" balign="left"> + FORMAT : String </td></tr>
+<tr><td align="left" balign="left"> + MODIFIER : String </td></tr>
+<tr><td align="left" balign="left"> + ACTION : String </td></tr>
+<tr><td align="left" balign="left"> + PROVIDER_NAME : String </td></tr>
+<tr><td align="left" balign="left"> + INTERFACE : String </td></tr>
+<tr><td align="left" balign="left"> + SELECTOR : String </td></tr>
+<tr><td align="left" balign="left"> + VAR : String </td></tr>
+<tr><td align="left" balign="left"> + VT : String </td></tr>
+<tr><td align="left" balign="left"> + DA_IN : String </td></tr>
+<tr><td align="left" balign="left"> + DA_OUT : String </td></tr>
+<tr><td align="left" balign="left"> + DA_INOUT : String </td></tr>
+<tr><td align="left" balign="left"> + DA_ININ : String </td></tr>
+<tr><td align="left" balign="left"> + DA_OUTOUT : String </td></tr>
+<tr><td align="left" balign="left"> + SERVICE_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + PAR_MODEL : String </td></tr>
+<tr><td align="left" balign="left"> + EMPTY_LEAF : String </td></tr>
+<tr><td align="left" balign="left"> + JOB : String </td></tr>
+<tr><td align="left" balign="left"> + JOB_ : String </td></tr>
+<tr><td align="left" balign="left"> + TASK : String </td></tr>
+<tr><td align="left" balign="left"> + TASK_ : String </td></tr>
+<tr><td align="left" balign="left"> + ID : String </td></tr>
+<tr><td align="left" balign="left"> + JOB_COMMENTS : String </td></tr>
+<tr><td align="left" balign="left"> + JOB_FEEDBACK : String </td></tr>
+<tr><td align="left" balign="left"> + DSD_PATH : String </td></tr>
+<tr><td align="left" balign="left"> + none : Object </td></tr>
+<tr><td align="left" balign="left"> + PARAMETER_TYPES : String </td></tr>
+<tr><td align="left" balign="left"> + PARAMETER_VALUES : String </td></tr>
+<tr><td align="left" balign="left"> + TARGET : String </td></tr>
+<tr><td align="left" balign="left"> + RETURN : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setName(name : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setId(contextId : Uuid) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getWeakValue(path : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getParentPath() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParentPath(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getParentID() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParentID(parentId : Uuid) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCreationDate() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setCreationDate(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLastUpdateDate() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setLastUpdateDate(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setDescription(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDescription() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getScope() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setScopeCode(scope : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOwnerID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOwnerID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubjectID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubjectID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setProject(projectName : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProject() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAccessClass(accessClass : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAccessClass() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setExportControl(exportControl : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExportControl() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getGoodUntilDate() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setGoodUntilDate(date : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDomainID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setDomainID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubdomainID() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubdomainID(id : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDomainName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setDomainName(name : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubdomainName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubdomainName(name : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPrincipal() : SorcerPrincipal </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setPrincipal(principal : SorcerPrincipal) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVersion() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setVersion(version : float) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + containsPath(path : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMetacontext() : Hashtable&lt;String, Map&lt;String, String&gt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setMetacontext(metacontext : Hashtable&lt;String, Map&lt;String, String&gt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertion() : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProvider() : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getReturnPath() : Signature.ReturnPath&lt;T&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getReturnValue(entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExecPath() : ExecPath </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setExertion(task : Exertion) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubjectPath() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSubjectValue() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSubject(path : String, value : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + reportException(t : Throwable) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + reportException(message : String, t : Throwable) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + appendTrace(footprint : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + append(context : Context&lt;T&gt;) : Context&lt;T&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + get(path : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + asis(path : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setReturnValue(value : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putDbValue(path : String, value : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putDbValue(path : String, value : Object, datastoreUrl : URL) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getURL(path : String) : URL </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addValue(value : Identifiable) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addPar(path : String, value : Object) : Arg </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPar(path : String) : Arg </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putValue(path : String, value : Object, association : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(path : String, cntxt : Context&lt;&gt;, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(name : String, path : String, cntxt : Context&lt;&gt;, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(name : String, path : String, id : String, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putLink(name : String, path : String, lnkedCntxtID : String, version : float, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + remove(path : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + connect(outPath : String, inPath : String, inContext : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + pipe(inPath : String, outPath : String, outContext : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + map(fromPath : String, toPath : String, toContext : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removeLink(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContextMapping(path : String) : Object[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + mark(path : String, tuple : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + markedPaths(association : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMarkedValues(association : String) : List&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAttribute(attribute : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isLocalAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isLocalSingletonAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isLocalMetaattribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isSingletonAttribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isMetaattribute(attributeName : String) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributeValue(path : String, attributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSingletonAttributeValue(path : String, attributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMetaattributeValue(path : String, attributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removeAttributeValue(path : String, attributeValue : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLocalMetapath(metaattributeName : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isValid(method : Signature) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextPaths() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPaths() : List&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + paths(regex : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contextValues() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localLinkPaths() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + linkPaths() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + links() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localLinks() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + link(context : Context&lt;&gt;, atPath : String, offset : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLink(path : String) : Link </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInValue(path : String, value : T) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putOutValue(path : String, value : T) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInoutValue(path : String, value : T) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInValue(path : String, value : T, association : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putOutValue(path : String, value : T, association : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInoutValue(path : String, value : T, association : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setIn(path : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOut(path : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setInout(path : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removePath(path : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + toString() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + toString(isHTML : boolean) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isExportControlled() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isExportControlled(state : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPath(obj : Object) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localSimpleAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + simpleAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + metaassociations(path : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + localCompositeAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + compositeAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes() : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes(path : String) : Enumeration&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + size() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getUserName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLinkedContext(link : Link) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setReturnPath(returnPath : Signature.ReturnPath&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Context.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Tasker
+	c487043 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tasker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Tasker </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Exertion
-	c455789 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+	c487045 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Exertion </td></tr>
@@ -20,54 +286,55 @@ digraph G {
 <tr><td align="left" balign="left"> + STANDARD : int </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + getStatus() : int </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + getDeploymentId() : String </td></tr>
-<tr><td align="left" balign="left"> + addExertion(component : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDataContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + getContext(componentExertionName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getControlContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPar(path : String) : Arg </td></tr>
-<tr><td align="left" balign="left"> + getProcessSignature() : Signature </td></tr>
-<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
-<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
-<tr><td align="left" balign="left"> + exert(txn : Transaction, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + exert(entries : Arg[]) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetSignatures() : List&lt;NetSignature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetTaskSignatures() : List&lt;NetSignature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExertion(name : String) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllExertions() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isJob() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isTask() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isBlock() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isCmd() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isTree() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getIndex() : int </td></tr>
-<tr><td align="left" balign="left"> + setIndex(i : int) </td></tr>
-<tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
-<tr><td align="left" balign="left"> + getParentId() : Uuid </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getStatus() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDeploymentId() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addExertion(component : Exertion) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDataContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getComponentExertion(path : String) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(path : String, args : Arg[]) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getReturnValue(entries : Arg[]) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(componentExertionName : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTrace() : List&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getControlContext() : IControlContext </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFidelity() : ServiceFidelity </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFidelities() : Map&lt;String, ServiceFidelity&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProcessSignature() : Signature </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFlowType() : Strategy.Flow </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAccessType() : Strategy.Access </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exert(txn : Transaction, entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exert(entries : Arg[]) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isSpacable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExceptions() : List&lt;ThrowableTrace&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllSignatures() : List&lt;Signature&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllNetSignatures() : List&lt;Signature&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllNetTaskSignatures() : List&lt;Signature&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllExceptions() : List&lt;ThrowableTrace&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertion(name : String) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertions() : List&lt;Exertion&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllExertions() : List&lt;Exertion&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isMonitorable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isProvisionable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isWaitable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isJob() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTask() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isBlock() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isCmd() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setProvisionable(state : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + substitute(entries : Arg[]) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTree() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isConditional() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isCompound() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getIndex() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setIndex(i : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getParentId() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCreationDate() : Date </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Service
-	c455792 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Service.html">
+	c487073 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Service </td></tr>
@@ -76,119 +343,53 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + service(exertion : Exertion, txn : Transaction) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + service(exertion : Exertion) : Exertion </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Tasker
-	c455842 [label=<<table title="sorcer.service.Tasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tasker.html">
+	// sorcer.core.provider.rendezvous.RendezvousBean
+	c487235 [label=<<table title="sorcer.core.provider.rendezvous.RendezvousBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/rendezvous/RendezvousBean.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Tasker </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Concatenator
-	c455911 [label=<<table title="sorcer.core.provider.Concatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Concatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Concatenator </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/Concatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Jobber
-	c455913 [label=<<table title="sorcer.core.provider.Jobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Jobber.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Jobber </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/Jobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Provider
-	c455914 [label=<<table title="sorcer.core.provider.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Provider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Provider </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> RendezvousBean </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> # provider : ServiceProvider </td></tr>
+<tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProviderID() : ServiceID </td></tr>
+<tr><td align="left" balign="left"> + RendezvousBean() </td></tr>
+<tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
 <tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
-<tr><td align="left" balign="left"> + getProperties() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + init() </td></tr>
-<tr><td align="left" balign="left"> + init(propFile : String) </td></tr>
-<tr><td align="left" balign="left"> + restore() </td></tr>
-<tr><td align="left" balign="left"> + mutualExclusion() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getProperty(property : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : String </td></tr>
-<tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + destroyNode() </td></tr>
-<tr><td align="left" balign="left"> + notifyInformation(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, message : String, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyExceptionWithStackTrace(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyException(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyWarning(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, e : Exception) </td></tr>
-<tr><td align="left" balign="left"> + notifyFailure(task : Exertion, message : String) </td></tr>
-<tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + changed(ctx : Context&lt;?&gt;, aspect : Object) </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Object </td></tr>
-<tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + updatePolicy(policy : Policy) </td></tr>
-<tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getContextLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getProviderLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + getRemoteLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
+<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
+<tr><td align="left" balign="left"> # replaceNullExertionIDs(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # notifyViaEmail(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion, transaction : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + execute(exertion : Exertion, txn : Transaction) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
 		</table></td></tr>
-		</table>>, URL="../core/provider/Provider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.Spacer
-	c455915 [label=<<table title="sorcer.core.provider.Spacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/Spacer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Spacer </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/Spacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.proxy.Outer
-	c455937 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Outer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Outer </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/proxy/Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.proxy.Partner
-	c455940 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/proxy/Partner.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Partner </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/proxy/Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.service.Exertion implements sorcer.service.Service
-	c455792:p -> c455789:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Tasker implements sorcer.service.Service
-	c455792:p -> c455842:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="../core/provider/rendezvous/RendezvousBean.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.Concatenator implements sorcer.service.Service
-	c455792:p -> c455911:p [dir=back,arrowtail=empty,style=dashed];
+	c487073:p -> c486940:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Jobber implements sorcer.service.Service
-	c455792:p -> c455913:p [dir=back,arrowtail=empty,style=dashed];
+	c487073:p -> c486945:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.Provider implements sorcer.service.Service
-	c455792:p -> c455914:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.Spacer implements sorcer.service.Service
-	c455792:p -> c455915:p [dir=back,arrowtail=empty,style=dashed];
+	c487073:p -> c486946:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Outer implements sorcer.service.Service
-	c455792:p -> c455937:p [dir=back,arrowtail=empty,style=dashed];
+	c487073:p -> c486956:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
-	c455937:p -> c455940:p [dir=back,arrowtail=empty,style=dashed];
+	c486956:p -> c486957:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Partner implements sorcer.service.Service
-	c455792:p -> c455940:p [dir=back,arrowtail=empty,style=dashed];
+	c487073:p -> c486957:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Context<T> implements sorcer.service.Service
+	c487073:p -> c487039:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Tasker implements sorcer.service.Service
+	c487073:p -> c487043:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Exertion implements sorcer.service.Service
+	c487073:p -> c487045:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.rendezvous.RendezvousBean implements sorcer.service.Service
+	c487073:p -> c487235:p [dir=back,arrowtail=empty,style=dashed];
 }
 

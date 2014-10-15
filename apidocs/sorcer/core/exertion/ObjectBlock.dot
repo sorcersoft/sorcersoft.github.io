@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Block
-	c360016 [label=<<table title="sorcer.service.Block" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Block.html">
+	c389825 [label=<<table title="sorcer.service.Block" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Block.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Block </font></td></tr>
 		</table></td></tr>
@@ -48,7 +48,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Block.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.ObjectBlock
-	c360308 [label=<<table title="sorcer.core.exertion.ObjectBlock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectBlock.html">
+	c390079 [label=<<table title="sorcer.core.exertion.ObjectBlock" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectBlock.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectBlock </td></tr>
 		</table></td></tr>
@@ -64,6 +64,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectBlock.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.ObjectBlock extends sorcer.service.Block
-	c360016:p -> c360308:p [dir=back,arrowtail=empty];
+	c389825:p -> c390079:p [dir=back,arrowtail=empty];
 }
 

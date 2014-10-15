@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.model.par.ParList
-	c378253 [label=<<table title="sorcer.core.context.model.par.ParList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParList.html">
+	c405874 [label=<<table title="sorcer.core.context.model.par.ParList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParList </td></tr>
 		</table></td></tr>
@@ -38,12 +38,14 @@ digraph G {
 <tr><td align="left" balign="left"> + setParValues(entries : Tuple2&lt;String, ?&gt;[]) : ParList </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + toParSet() : ParSet </td></tr>
+<tr><td align="left" balign="left"> + toParList() : ParList </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.model.par.ParList extends java.util.ArrayList<sorcer.core.context.model.par.Par>
-	c378756:p -> c378253:p [dir=back,arrowtail=empty];
+	c406179:p -> c405874:p [dir=back,arrowtail=empty];
 	// java.util.ArrayList<E>
-	c378756 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
+	c406179 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayList&lt;E&gt; </td></tr>
 		</table></td></tr>
@@ -80,6 +82,11 @@ digraph G {
 <tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + iterator() : Iterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + subList(arg0 : int, arg1 : int) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + spliterator() : Spliterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + removeIf(arg0 : Predicate&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + replaceAll(arg0 : UnaryOperator&lt;E&gt;) </td></tr>
+<tr><td align="left" balign="left"> + sort(arg0 : Comparator&lt;?&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

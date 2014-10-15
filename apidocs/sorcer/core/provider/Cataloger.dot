@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.Cataloger
-	c135964 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Cataloger.html">
+	c144860 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Cataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cataloger </td></tr>
@@ -19,30 +19,29 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + lookup(primaryInterfaces : Class&lt;&gt;[]) : Provider </td></tr>
-<tr><td align="left" balign="left"> + lookup(providerName : String, primaryInterfaces : Class&lt;&gt;[]) : Provider </td></tr>
-<tr><td align="left" balign="left"> + lookupItem(providerName : String, serviceTypes : Class&lt;&gt;[]) : ServiceItem </td></tr>
-<tr><td align="left" balign="left"> + lookup(sid : ServiceID) : Provider </td></tr>
-<tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate) : Object </td></tr>
-<tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate, maxMatches : int) : ServiceMatches </td></tr>
-<tr><td align="left" balign="left"> + getProviderMethods() : Map&lt;String, String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProviderList() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInterfaceList(serviceType : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getMethodsList(providerName : String, serviceType : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getLL() : LookupLocator[] </td></tr>
-<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getTemplate() : ServiceTemplate </td></tr>
-<tr><td align="left" balign="left"> + getContext(providerName : String, serviceType : String, methodName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + saveContext(providerName : String, serviceType : String, methodName : String, theContext : Context&lt;&gt;) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + deleteContext(providerName : String, serviceType : String, methodName : String) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + getSavedContextList(providerName : String, serviceType : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + exertService(providerName : String, serviceType : Class&lt;&gt;, methodName : String, theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContexts(provider : Class&lt;&gt;, method : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getServiceInfo() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(primaryInterfaces : Class&lt;&gt;[]) : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(providerName : String, primaryInterfaces : Class&lt;&gt;[]) : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookupItem(providerName : String, serviceTypes : Class&lt;&gt;[]) : ServiceItem </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(sid : ServiceID) : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(tmpl : ServiceTemplate, maxMatches : int) : ServiceMatches </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderMethods() : Map&lt;String, String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderList() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInterfaceList(serviceType : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethodsList(providerName : String, serviceType : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLL() : LookupLocator[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getGroups() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTemplate() : ServiceTemplate </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(providerName : String, serviceType : String, methodName : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + saveContext(providerName : String, serviceType : String, methodName : String, theContext : Context&lt;&gt;) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteContext(providerName : String, serviceType : String, methodName : String) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSavedContextList(providerName : String, serviceType : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exertService(providerName : String, serviceType : Class&lt;&gt;, methodName : String, theContext : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContexts(provider : Class&lt;&gt;, method : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getServiceInfo() : String </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Cataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger
-	c136403 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cataloger/ServiceCataloger.html">
+	c145428 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./cataloger/ServiceCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceCataloger </td></tr>
 		</table></td></tr>
@@ -73,17 +72,16 @@ digraph G {
 <tr><td align="left" balign="left"> + exertService(providerName : String, serviceType : Class&lt;&gt;, methodName : String, theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContexts(serviceType : Class&lt;&gt;, method : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getServiceInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate) : Object </td></tr>
 <tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate, maxMatches : int) : ServiceMatches </td></tr>
 <tr><td align="left" balign="left"> + returnString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./cataloger/ServiceCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.Cataloger implements java.rmi.Remote
-	c136443:p -> c135964:p [dir=back,arrowtail=empty,style=dashed];
+	c145480:p -> c144860:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.provider.Cataloger
-	c135964:p -> c136403:p [dir=back,arrowtail=empty,style=dashed];
+	c144860:p -> c145428:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c136443 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c145480 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.ExertionInfo
-	c233799 [label=<<table title="sorcer.service.ExertionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionInfo.html">
+	c244449 [label=<<table title="sorcer.service.ExertionInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertionInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertionInfo </td></tr>
 		</table></td></tr>
@@ -21,6 +21,8 @@ digraph G {
 <tr><td align="left" balign="left"> + ExertionInfo(name : String) </td></tr>
 <tr><td align="left" balign="left"> + ExertionInfo(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + ExertionInfo(exertion : Exertion, storeId : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getCreationDate() : Date </td></tr>
+<tr><td align="left" balign="left"> + getLastUpdateDate() : String </td></tr>
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
@@ -33,18 +35,35 @@ digraph G {
 <tr><td align="left" balign="left"> + setStoreId(storeId : Uuid) </td></tr>
 <tr><td align="left" balign="left"> + getSignature() : Signature </td></tr>
 <tr><td align="left" balign="left"> + setSignature(signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + compareTo(o : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertionInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.service.ExertionInfo implements java.lang.Comparable<T>
+	c244934:p -> c244449:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.ExertionInfo implements java.io.Serializable
-	c234378:p -> c233799:p [dir=back,arrowtail=empty,style=dashed];
+	c244935:p -> c244449:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c234378 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c244935 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.lang.Comparable<T>
+	c244934 [label=<<table title="java.lang.Comparable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Comparable&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + compareTo(arg0 : T) : int </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

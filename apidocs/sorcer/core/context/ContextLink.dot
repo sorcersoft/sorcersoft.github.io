@@ -9,30 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Link
-	c169279 [label=<<table title="sorcer.service.Link" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Link.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Link </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getOffset() : String </td></tr>
-<tr><td align="left" balign="left"> + setOffset(offset : String) </td></tr>
-<tr><td align="left" balign="left"> + setContext(ctxt : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + isLocal() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isFetched() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isFetched(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + getContext(principal : SorcerPrincipal) : Context&lt;&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Link.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ContextLink
-	c169292 [label=<<table title="sorcer.core.context.ContextLink" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextLink.html">
+	c179546 [label=<<table title="sorcer.core.context.ContextLink" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextLink.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextLink </td></tr>
 		</table></td></tr>
@@ -60,7 +38,29 @@ digraph G {
 <tr><td align="left" balign="left"> + isFetched(state : boolean) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextLink.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Link
+	c179672 [label=<<table title="sorcer.service.Link" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Link.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Link </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setName(name : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOffset() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOffset(offset : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setContext(ctxt : Context&lt;&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isLocal() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isFetched() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isFetched(state : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(principal : SorcerPrincipal) : Context&lt;&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Link.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ContextLink implements sorcer.service.Link
-	c169279:p -> c169292:p [dir=back,arrowtail=empty,style=dashed];
+	c179672:p -> c179546:p [dir=back,arrowtail=empty,style=dashed];
 }
 

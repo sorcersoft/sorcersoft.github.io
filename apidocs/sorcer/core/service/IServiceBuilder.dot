@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.service.ActualServiceBuilder<T>
-	c272484 [label=<<table title="sorcer.core.service.ActualServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActualServiceBuilder.html">
+	c287513 [label=<<table title="sorcer.core.service.ActualServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ActualServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActualServiceBuilder&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -40,7 +40,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ActualServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.service.IServiceBuilder<T>
-	c272488 [label=<<table title="sorcer.core.service.IServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IServiceBuilder.html">
+	c287519 [label=<<table title="sorcer.core.service.IServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IServiceBuilder&lt;T&gt; </td></tr>
@@ -49,20 +49,20 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addInterceptor(interceptor : MethodInterceptor) </td></tr>
-<tr><td align="left" balign="left"> + contributeInterface(impl : I, iface : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + getConfiguration(key : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putConfiguration(key : Object, data : Object) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + getType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Remote </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addInterceptor(interceptor : MethodInterceptor) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contributeInterface(impl : I, iface : Class&lt;?&gt;[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addAttribute(attribute : Entry) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderConfiguration() : Configuration </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getConfiguration(key : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putConfiguration(key : Object, data : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getType() : Class&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxy() : Remote </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes() : Entry[] </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./IServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.service.IProviderServiceBuilder
-	c272490 [label=<<table title="sorcer.core.service.IProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IProviderServiceBuilder.html">
+	// sorcer.core.provider.container.IProviderServiceBuilder
+	c287566 [label=<<table title="sorcer.core.provider.container.IProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/container/IProviderServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IProviderServiceBuilder </td></tr>
@@ -71,17 +71,17 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getProvider() : Provider </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProvider() : Provider </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./IProviderServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../provider/container/IProviderServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.service.ActualServiceBuilder<T> implements sorcer.core.service.IServiceBuilder<T>
-	c272488:p -> c272484:p [dir=back,arrowtail=empty,style=dashed];
+	c287519:p -> c287513:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.service.IServiceBuilder<T> implements javax.inject.Provider<T>
-	c272835:p -> c272488:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.service.IProviderServiceBuilder implements sorcer.core.service.IServiceBuilder<T>
-	c272488:p -> c272490:p [dir=back,arrowtail=empty,style=dashed];
+	c287888:p -> c287519:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.container.IProviderServiceBuilder implements sorcer.core.service.IServiceBuilder<T>
+	c287519:p -> c287566:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.inject.Provider<T>
-	c272835 [label=<<table title="javax.inject.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c287888 [label=<<table title="javax.inject.Provider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Provider&lt;T&gt; </td></tr>
@@ -90,7 +90,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + get() : T </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + get() : T </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

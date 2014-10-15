@@ -132,7 +132,7 @@
 <a class="jxr_linenumber" name="122" href="#122">122</a>             <strong class="jxr_keyword">if</strong> (serviceType!=<strong class="jxr_keyword">null</strong>) <strong class="jxr_keyword">this</strong>.version = MavenUtil.findVersion(serviceType);
 <a class="jxr_linenumber" name="123" href="#123">123</a>             setSelector(selector);
 <a class="jxr_linenumber" name="124" href="#124">124</a>         } <strong class="jxr_keyword">catch</strong> (ClassNotFoundException e) {
-<a class="jxr_linenumber" name="125" href="#125">125</a>             logger.severe(<span class="jxr_string">"Problem creating NetSignature: "</span> + e.getMessage());
+<a class="jxr_linenumber" name="125" href="#125">125</a>             logger.error(<span class="jxr_string">"Problem creating NetSignature: "</span> + e.getMessage());
 <a class="jxr_linenumber" name="126" href="#126">126</a>         }
 <a class="jxr_linenumber" name="127" href="#127">127</a>     }
 <a class="jxr_linenumber" name="128" href="#128">128</a> 

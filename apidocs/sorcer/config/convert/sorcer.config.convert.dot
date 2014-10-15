@@ -9,8 +9,21 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.config.convert.TypeConverter<F, T>
+	c28987 [label=<<table title="sorcer.config.convert.TypeConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TypeConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> TypeConverter&lt;F, T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + convert(object : F, target : Class&lt;T&gt;) : T </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./TypeConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.config.convert.PropertiesPathConverter
-	c30837 [label=<<table title="sorcer.config.convert.PropertiesPathConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PropertiesPathConverter.html">
+	c28988 [label=<<table title="sorcer.config.convert.PropertiesPathConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PropertiesPathConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PropertiesPathConverter </td></tr>
 		</table></td></tr>
@@ -22,20 +35,7 @@ digraph G {
 <tr><td align="left" balign="left"> + convert(path : String, target : Class&lt;Properties&gt;) : Properties </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PropertiesPathConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.config.convert.TypeConverter<F, T>
-	c30838 [label=<<table title="sorcer.config.convert.TypeConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TypeConverter.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> TypeConverter&lt;F, T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + convert(object : F, target : Class&lt;T&gt;) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="./TypeConverter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.config.convert.PropertiesPathConverter implements sorcer.config.convert.TypeConverter<F, T>
-	c30838:p -> c30837:p [dir=back,arrowtail=empty,style=dashed];
+	c28987:p -> c28988:p [dir=back,arrowtail=empty,style=dashed];
 }
 

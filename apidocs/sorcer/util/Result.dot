@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.Result
-	c433205 [label=<<table title="sorcer.util.Result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Result.html">
+	c466485 [label=<<table title="sorcer.util.Result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Result.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Result </td></tr>
 		</table></td></tr>
@@ -25,18 +25,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Result.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.Result extends java.util.Vector
-	c433900:p -> c433205:p [dir=back,arrowtail=empty];
+	c467217:p -> c466485:p [dir=back,arrowtail=empty];
 	//sorcer.util.Result implements java.io.Serializable
-	c433901:p -> c433205:p [dir=back,arrowtail=empty,style=dashed];
-	// java.io.Serializable
-	c433901 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Serializable </td></tr>
-		</table></td></tr>
-		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	c467218:p -> c466485:p [dir=back,arrowtail=empty,style=dashed];
 	// java.util.Vector<E>
-	c433900 [label=<<table title="java.util.Vector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Vector.html">
+	c467217 [label=<<table title="java.util.Vector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Vector.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Vector&lt;E&gt; </td></tr>
 		</table></td></tr>
@@ -95,7 +88,19 @@ digraph G {
 <tr><td align="left" balign="left"> + listIterator(arg0 : int) : ListIterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + iterator() : Iterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + removeIf(arg0 : Predicate&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + replaceAll(arg0 : UnaryOperator&lt;E&gt;) </td></tr>
+<tr><td align="left" balign="left"> + sort(arg0 : Comparator&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + spliterator() : Spliterator&lt;E&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/Vector.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.io.Serializable
+	c467218 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Serializable </td></tr>
+		</table></td></tr>
+		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

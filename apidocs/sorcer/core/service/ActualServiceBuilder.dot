@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.service.ActualServiceBuilder<T>
-	c99800 [label=<<table title="sorcer.core.service.ActualServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActualServiceBuilder.html">
+	c105149 [label=<<table title="sorcer.core.service.ActualServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ActualServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ActualServiceBuilder&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -40,7 +40,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ActualServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.service.IServiceBuilder<T>
-	c99804 [label=<<table title="sorcer.core.service.IServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IServiceBuilder.html">
+	c105155 [label=<<table title="sorcer.core.service.IServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IServiceBuilder&lt;T&gt; </td></tr>
@@ -49,24 +49,24 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addInterceptor(interceptor : MethodInterceptor) </td></tr>
-<tr><td align="left" balign="left"> + contributeInterface(impl : I, iface : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + addAttribute(attribute : Entry) </td></tr>
-<tr><td align="left" balign="left"> + getProviderConfiguration() : Configuration </td></tr>
-<tr><td align="left" balign="left"> + getConfiguration(key : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + putConfiguration(key : Object, data : Object) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + getType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProxy() : Remote </td></tr>
-<tr><td align="left" balign="left"> + getAttributes() : Entry[] </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addInterceptor(interceptor : MethodInterceptor) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contributeInterface(impl : I, iface : Class&lt;?&gt;[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addAttribute(attribute : Entry) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderConfiguration() : Configuration </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getConfiguration(key : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putConfiguration(key : Object, data : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getType() : Class&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProxy() : Remote </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAttributes() : Entry[] </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./IServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.service.ActualServiceBuilder<T> implements sorcer.core.service.IServiceBuilder<T>
-	c99804:p -> c99800:p [dir=back,arrowtail=empty,style=dashed];
+	c105155:p -> c105149:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.service.ActualServiceBuilder<T> implements com.sun.jini.admin.DestroyAdmin
-	c100151:p -> c99800:p [dir=back,arrowtail=empty,style=dashed];
+	c105524:p -> c105149:p [dir=back,arrowtail=empty,style=dashed];
 	// com.sun.jini.admin.DestroyAdmin
-	c100151 [label=<<table title="com.sun.jini.admin.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html">
+	c105524 [label=<<table title="com.sun.jini.admin.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DestroyAdmin </td></tr>
@@ -75,7 +75,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

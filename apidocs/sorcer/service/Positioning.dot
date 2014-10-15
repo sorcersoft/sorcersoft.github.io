@@ -9,29 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Positioning
-	c389775 [label=<<table title="sorcer.service.Positioning" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Positioning.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Positioning </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValuesAt(index : int) : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + getInValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getOutValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + getInoutValueAt(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putInValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putOutValueAt(path : String, value : Object, index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + putInoutValueAt(path : String, value : Object, index : int) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Positioning.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.PositionalContext<T>
-	c389849 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
+	c419142 [label=<<table title="sorcer.core.context.PositionalContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/PositionalContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PositionalContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -55,7 +34,28 @@ digraph G {
 <tr><td align="left" balign="left"> + getTally() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/PositionalContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Positioning
+	c419264 [label=<<table title="sorcer.service.Positioning" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Positioning.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Positioning </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValueAt(index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValuesAt(index : int) : List&lt;Object&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInValueAt(index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOutValueAt(index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInoutValueAt(index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putValueAt(path : String, value : Object, index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInValueAt(path : String, value : Object, index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putOutValueAt(path : String, value : Object, index : int) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putInoutValueAt(path : String, value : Object, index : int) : Object </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Positioning.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.PositionalContext<T> implements sorcer.service.Positioning
-	c389775:p -> c389849:p [dir=back,arrowtail=empty,style=dashed];
+	c419264:p -> c419142:p [dir=back,arrowtail=empty,style=dashed];
 }
 

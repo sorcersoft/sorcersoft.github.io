@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Executor
-	c221503 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Executor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Executor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Executor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceTasker
-	c221556 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/ServiceTasker.html">
+	c232246 [label=<<table title="sorcer.core.provider.ServiceTasker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/ServiceTasker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceTasker </td></tr>
 		</table></td></tr>
@@ -39,8 +25,22 @@ digraph G {
 <tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/ServiceTasker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceSpacer
-	c221740 [label=<<table title="sorcer.core.provider.jobber.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/jobber/ServiceSpacer.html">
+	// sorcer.service.Executor
+	c232412 [label=<<table title="sorcer.service.Executor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Executor.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Executor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + execute(exertion : Exertion, txn : Transaction) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isAuthorized(subject : Subject, signature : Signature) : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Executor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.rendezvous.ServiceSpacer
+	c232549 [label=<<table title="sorcer.core.provider.rendezvous.ServiceSpacer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/rendezvous/ServiceSpacer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSpacer </td></tr>
 		</table></td></tr>
@@ -49,39 +49,13 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ServiceSpacer() </td></tr>
-<tr><td align="left" balign="left"> + ServiceSpacer(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + doTask(task : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getDispatcherFactory(exertion : Exertion) : DispatcherFactory </td></tr>
 		</table></td></tr>
-		</table>>, URL="../core/provider/jobber/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceConcatenator
-	c221743 [label=<<table title="sorcer.core.provider.jobber.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/jobber/ServiceConcatenator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceConcatenator() </td></tr>
-<tr><td align="left" balign="left"> + ServiceConcatenator(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doBlock(block : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/provider/jobber/ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.provider.jobber.ServiceJobber
-	c221744 [label=<<table title="sorcer.core.provider.jobber.ServiceJobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/jobber/ServiceJobber.html">
+		</table>>, URL="../core/provider/rendezvous/ServiceSpacer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.rendezvous.ServiceJobber
+	c232551 [label=<<table title="sorcer.core.provider.rendezvous.ServiceJobber" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/rendezvous/ServiceJobber.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceJobber </td></tr>
 		</table></td></tr>
@@ -90,24 +64,63 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ServiceJobber() </td></tr>
-<tr><td align="left" balign="left"> + ServiceJobber(args : String[], lifeCycle : LifeCycle) </td></tr>
+<tr><td align="left" balign="left"> + execute(job : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getDispatcherFactory(exertion : Exertion) : DispatcherFactory </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/rendezvous/ServiceJobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.rendezvous.RendezvousBean
+	c232552 [label=<<table title="sorcer.core.provider.rendezvous.RendezvousBean" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/rendezvous/RendezvousBean.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> RendezvousBean </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # provider : ServiceProvider </td></tr>
+<tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RendezvousBean() </td></tr>
+<tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
+<tr><td align="left" balign="left"> + getProviderName() : String </td></tr>
+<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
+<tr><td align="left" balign="left"> # replaceNullExertionIDs(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> # notifyViaEmail(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + setServiceID(ex : Exertion) </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion, transaction : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + execute(exertion : Exertion, txn : Transaction) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
+		</table></td></tr>
+		</table>>, URL="../core/provider/rendezvous/RendezvousBean.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.rendezvous.ServiceConcatenator
+	c232553 [label=<<table title="sorcer.core.provider.rendezvous.ServiceConcatenator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/rendezvous/ServiceConcatenator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceConcatenator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceConcatenator() </td></tr>
 <tr><td align="left" balign="left"> + execute(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + execute(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + doJob(job : Exertion, txn : Transaction) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isAuthorized(subject : Subject, signature : Signature) : boolean </td></tr>
-<tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 		</table></td></tr>
-		</table>>, URL="../core/provider/jobber/ServiceJobber.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../core/provider/rendezvous/ServiceConcatenator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.ServiceTasker implements sorcer.service.Executor
-	c221503:p -> c221556:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.jobber.ServiceSpacer implements sorcer.service.Executor
-	c221503:p -> c221740:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.jobber.ServiceConcatenator implements sorcer.service.Executor
-	c221503:p -> c221743:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.jobber.ServiceJobber implements sorcer.service.Executor
-	c221503:p -> c221744:p [dir=back,arrowtail=empty,style=dashed];
+	c232412:p -> c232246:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.rendezvous.ServiceSpacer extends sorcer.core.provider.rendezvous.ServiceJobber
+	c232551:p -> c232549:p [dir=back,arrowtail=empty];
+	//sorcer.core.provider.rendezvous.ServiceSpacer implements sorcer.service.Executor
+	c232412:p -> c232549:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.rendezvous.ServiceJobber extends sorcer.core.provider.rendezvous.RendezvousBean
+	c232552:p -> c232551:p [dir=back,arrowtail=empty];
+	//sorcer.core.provider.rendezvous.ServiceJobber implements sorcer.service.Executor
+	c232412:p -> c232551:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.rendezvous.RendezvousBean implements sorcer.service.Executor
+	c232412:p -> c232552:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.rendezvous.ServiceConcatenator extends sorcer.core.provider.rendezvous.RendezvousBean
+	c232552:p -> c232553:p [dir=back,arrowtail=empty];
+	//sorcer.core.provider.rendezvous.ServiceConcatenator implements sorcer.service.Executor
+	c232412:p -> c232553:p [dir=back,arrowtail=empty,style=dashed];
 }
 

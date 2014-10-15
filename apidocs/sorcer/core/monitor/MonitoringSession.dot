@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.monitor.MonitorableSession
-	c339837 [label=<<table title="sorcer.core.monitor.MonitorableSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorableSession.html">
+	c367928 [label=<<table title="sorcer.core.monitor.MonitorableSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorableSession.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MonitorableSession </td></tr>
 		</table></td></tr>
@@ -23,13 +23,13 @@ digraph G {
 <tr><td align="left" balign="left"> + init(mntrbl : Monitorable, duration : long, timeout : long) </td></tr>
 <tr><td align="left" balign="left"> + init(duration : long, timeout : long) </td></tr>
 <tr><td align="left" balign="left"> + init(mntrbl : Monitorable) </td></tr>
-<tr><td align="left" balign="left"> + changed(ctx : Context&lt;&gt;, aspect : Object) </td></tr>
+<tr><td align="left" balign="left"> + changed(ctx : Context&lt;&gt;, controlContext : IControlContext, aspect : int) </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
 <tr><td align="left" balign="left"> + getLease() : Lease </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitorableSession.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitoringSession
-	c339843 [label=<<table title="sorcer.core.monitor.MonitoringSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoringSession.html">
+	c367932 [label=<<table title="sorcer.core.monitor.MonitoringSession" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitoringSession.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitoringSession </td></tr>
@@ -38,20 +38,20 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + init(mntrbl : Monitorable, duration : long, timeout : long) </td></tr>
-<tr><td align="left" balign="left"> + init(duration : long, timeout : long) </td></tr>
-<tr><td align="left" balign="left"> + init(mntrbl : Monitorable) </td></tr>
-<tr><td align="left" balign="left"> + changed(ctx : Context&lt;&gt;, aspect : Object) </td></tr>
-<tr><td align="left" balign="left"> + getLease() : Lease </td></tr>
-<tr><td align="left" balign="left"> + getState() : int </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(mntrbl : Monitorable, duration : long, timeout : long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(duration : long, timeout : long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(mntrbl : Monitorable) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + changed(ctx : Context&lt;&gt;, controlContext : IControlContext, aspect : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLease() : Lease </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getState() : int </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitoringSession.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.monitor.MonitorableSession implements sorcer.core.monitor.MonitoringSession
-	c339843:p -> c339837:p [dir=back,arrowtail=empty,style=dashed];
+	c367932:p -> c367928:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringSession implements java.io.Serializable
-	c340307:p -> c339843:p [dir=back,arrowtail=empty,style=dashed];
+	c368507:p -> c367932:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c340307 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c368507 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

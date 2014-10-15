@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.context.ComprehensiveContextIterator
-	c154062 [label=<<table title="sorcer.core.context.ComprehensiveContextIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComprehensiveContextIterator.html">
+	c164469 [label=<<table title="sorcer.core.context.ComprehensiveContextIterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComprehensiveContextIterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComprehensiveContextIterator </td></tr>
 		</table></td></tr>
@@ -27,18 +27,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComprehensiveContextIterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.ComprehensiveContextIterator implements java.util.Iterator<E>
-	c154579:p -> c154062:p [dir=back,arrowtail=empty,style=dashed];
+	c165069:p -> c164469:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.ComprehensiveContextIterator implements java.io.Serializable
-	c154580:p -> c154062:p [dir=back,arrowtail=empty,style=dashed];
+	c165070:p -> c164469:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c154580 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c165070 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.util.Iterator<E>
-	c154579 [label=<<table title="java.util.Iterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html">
+	c165069 [label=<<table title="java.util.Iterator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Iterator&lt;E&gt; </td></tr>
@@ -47,9 +47,10 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + hasNext() : boolean </td></tr>
-<tr><td align="left" balign="left"> + next() : E </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + hasNext() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + next() : E </font></td></tr>
 <tr><td align="left" balign="left"> + remove() </td></tr>
+<tr><td align="left" balign="left"> + forEachRemaining(arg0 : Consumer&lt;?&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

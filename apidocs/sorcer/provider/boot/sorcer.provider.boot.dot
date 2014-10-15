@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.provider.boot.InstrumentationHook
+	c57752 [label=<<table title="sorcer.provider.boot.InstrumentationHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InstrumentationHook.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> InstrumentationHook </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + InstrumentationHook() </td></tr>
+<tr><td align="left" balign="left"> + getInstrumentation() : Instrumentation </td></tr>
+<tr><td align="left" balign="left"> + premain(agentArgs : String, inst : Instrumentation) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./InstrumentationHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.AbstractServiceDescriptor
-	c53444 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
+	c57753 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractServiceDescriptor </font></td></tr>
 		</table></td></tr>
@@ -44,7 +58,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.AbstractServiceDescriptor.Service
-	c53445 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.Service.html">
+	c57754 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Service </td></tr>
 		</table></td></tr>
@@ -56,30 +70,12 @@ digraph G {
 <tr><td align="left" balign="left"> + destroyer : ServiceDestroyer </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AbstractServiceDescriptor.Service(impl : Object, proxy : Object, descriptor : ServiceDescriptor) </td></tr>
-<tr><td align="left" balign="left"> + AbstractServiceDescriptor.Service(impl : Object, proxy : Object, descriptor : ServiceDescriptor, exception : Exception) </td></tr>
+<tr><td align="left" balign="left"> + Service(impl : Object, proxy : Object, descriptor : ServiceDescriptor) </td></tr>
+<tr><td align="left" balign="left"> + Service(impl : Object, proxy : Object, descriptor : ServiceDescriptor, exception : Exception) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractServiceDescriptor.Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.SorcerServiceDescriptor
-	c53446 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerServiceDescriptor </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : File, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : File, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + SorcerServiceDescriptor(codebase : String, policy : String, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
-<tr><td align="left" balign="left"> # getCodebase(codebase : String, address : String) : Set&lt;URL&gt; </td></tr>
-<tr><td align="left" balign="left"> + getClasspath() : Set&lt;URI&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.Booter
-	c53447 [label=<<table title="sorcer.provider.boot.Booter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Booter.html">
+	c57755 [label=<<table title="sorcer.provider.boot.Booter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Booter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Booter </td></tr>
 		</table></td></tr>
@@ -115,28 +111,31 @@ digraph G {
 <tr><td align="left" balign="left"> + getProperty(property : String, defaultValue : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Booter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.provider.boot.InstrumentationHook
-	c53448 [label=<<table title="sorcer.provider.boot.InstrumentationHook" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InstrumentationHook.html">
+	// sorcer.provider.boot.SorcerServiceDescriptor
+	c57756 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InstrumentationHook </td></tr>
+<tr><td align="center" balign="center"> SorcerServiceDescriptor </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InstrumentationHook() </td></tr>
-<tr><td align="left" balign="left"> + getInstrumentation() : Instrumentation </td></tr>
-<tr><td align="left" balign="left"> + premain(agentArgs : String, inst : Instrumentation) </td></tr>
+<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
+<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : File, classpath : String, implClassName : String, address : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
+<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : String, classpath : String, implClassName : String, lifeCycle : LifeCycle, serverConfigArgs : String[]) </td></tr>
+<tr><td align="left" balign="left"> + SorcerServiceDescriptor(descCodebase : String, policy : File, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
+<tr><td align="left" balign="left"> + SorcerServiceDescriptor(codebase : String, policy : String, classpath : String, implClassName : String, serverConfigArgs : String[]) </td></tr>
+<tr><td align="left" balign="left"> # getCodebase(codebase : String, address : String) : Set&lt;URL&gt; </td></tr>
+<tr><td align="left" balign="left"> + getClasspath() : Set&lt;URI&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./InstrumentationHook.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SorcerServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.SorcerDescriptorUtil
-	c53449 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDescriptorUtil.html">
+	c57757 [label=<<table title="sorcer.provider.boot.SorcerDescriptorUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDescriptorUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerDescriptorUtil </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SOS_PLATFORM : ArtifactCoordinates </td></tr>
-<tr><td align="left" balign="left"> + COMMONS_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + EXERTMONITOR_SERVICE : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + EXERTLET_UI : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + DBP_PRV : ArtifactCoordinates </td></tr>
@@ -144,16 +143,12 @@ digraph G {
 <tr><td align="left" balign="left"> + CATALOGER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + LOGGER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + LOGGER_SUI : ArtifactCoordinates </td></tr>
-<tr><td align="left" balign="left"> + SPACER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + JOBBER_PRV : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + SLEEPYCAT : ArtifactCoordinates </td></tr>
 <tr><td align="left" balign="left"> + SERVICEUI : ArtifactCoordinates </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SorcerDescriptorUtil() </td></tr>
-<tr><td align="left" balign="left"> + getSpacer(policy : String, spacerConfig : String[]) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getSpacer(policy : String, port : int, spacerConfig : String[]) : ServiceDescriptor </td></tr>
-<tr><td align="left" balign="left"> + getSpacer(policy : String, hostAddress : String, port : int, spacerConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getJobber(policy : String, jobberConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getJobber(policy : String, port : int, jobberConfig : String[]) : ServiceDescriptor </td></tr>
 <tr><td align="left" balign="left"> + getJobber(policy : String, hostAddress : String, port : int, jobberConfig : String[]) : ServiceDescriptor </td></tr>
@@ -184,7 +179,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerDescriptorUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.MulticastStatus
-	c53450 [label=<<table title="sorcer.provider.boot.MulticastStatus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MulticastStatus.html">
+	c57758 [label=<<table title="sorcer.provider.boot.MulticastStatus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MulticastStatus.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MulticastStatus </td></tr>
 		</table></td></tr>
@@ -198,6 +193,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MulticastStatus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.provider.boot.SorcerServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c53444:p -> c53446:p [dir=back,arrowtail=empty];
+	c57753:p -> c57756:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.signature.MethodFactory
-	c324608 [label=<<table title="sorcer.core.signature.MethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MethodFactory.html">
+	c349025 [label=<<table title="sorcer.core.signature.MethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MethodFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MethodFactory </td></tr>
@@ -19,25 +19,9 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + createMethod(signature : Signature) : Signature </td></tr>
-<tr><td align="left" balign="left"> + createMethods(signatures : List&lt;Signature&gt;) : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + createMethod(signature : Signature) : Signature </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + createMethods(signatures : List&lt;Signature&gt;) : List&lt;Signature&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./MethodFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.exertion.ExertionMethodFactory
-	c324741 [label=<<table title="sorcer.core.exertion.ExertionMethodFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../exertion/ExertionMethodFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertionMethodFactory </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getFactory() : ExertionMethodFactory </td></tr>
-<tr><td align="left" balign="left"> + createMethod(method : Signature) : Signature </td></tr>
-<tr><td align="left" balign="left"> + createMethods(signatures : List&lt;Signature&gt;) : List&lt;Signature&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="../exertion/ExertionMethodFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.exertion.ExertionMethodFactory implements sorcer.core.signature.MethodFactory
-	c324608:p -> c324741:p [dir=back,arrowtail=empty,style=dashed];
 }
 

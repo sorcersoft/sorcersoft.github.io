@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.boot.OpstringServiceDescriptor
-	c370580 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpstringServiceDescriptor.html">
+	c399181 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpstringServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpstringServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpstringServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.ResolvingServiceDescriptor
-	c370581 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingServiceDescriptor.html">
+	c399187 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResolvingServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResolvingServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -43,6 +43,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResolvingServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.boot.OpstringServiceDescriptor extends sorcer.boot.ResolvingServiceDescriptor
-	c370581:p -> c370580:p [dir=back,arrowtail=empty];
+	c399187:p -> c399181:p [dir=back,arrowtail=empty];
 }
 

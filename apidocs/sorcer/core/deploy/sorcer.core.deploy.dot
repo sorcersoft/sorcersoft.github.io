@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.deploy.ServiceElementFactory
-	c17668 [label=<<table title="sorcer.core.deploy.ServiceElementFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceElementFactory.html">
+	c16015 [label=<<table title="sorcer.core.deploy.ServiceElementFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceElementFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceElementFactory </td></tr>
 		</table></td></tr>
@@ -19,10 +19,12 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + create(signature : ServiceSignature) : ServiceElement </td></tr>
+<tr><td align="left" balign="left"> + create(deployment : ServiceDeployment) : ServiceElement </td></tr>
+<tr><td align="left" balign="left"> + isIpAddress(ip : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceElementFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.deploy.OperationalStringFactory
-	c17669 [label=<<table title="sorcer.core.deploy.OperationalStringFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OperationalStringFactory.html">
+	c16016 [label=<<table title="sorcer.core.deploy.OperationalStringFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OperationalStringFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OperationalStringFactory </td></tr>
 		</table></td></tr>
@@ -33,20 +35,28 @@ digraph G {
 <tr><td align="left" balign="left"> + create(exertion : Exertion) : Map&lt;Deployment.Unique, List&lt;OperationalString&gt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OperationalStringFactory.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.deploy.Deployment
-	c17670 [label=<<table title="sorcer.core.deploy.Deployment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Deployment.html">
+	// sorcer.core.deploy.ServiceDeployment
+	c16017 [label=<<table title="sorcer.core.deploy.ServiceDeployment" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceDeployment.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Deployment </td></tr>
+<tr><td align="center" balign="center"> ServiceDeployment </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + DEFAULT_IDLE_TIME : int </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Deployment() </td></tr>
-<tr><td align="left" balign="left"> + Deployment(configs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + setConfigs(configs : String[]) </td></tr>
-<tr><td align="left" balign="left"> + getConfigs() : String[] </td></tr>
+<tr><td align="left" balign="left"> + ServiceDeployment() </td></tr>
+<tr><td align="left" balign="left"> + ServiceDeployment(config : String) </td></tr>
+<tr><td align="left" balign="left"> + setConfig(config : String) </td></tr>
+<tr><td align="left" balign="left"> + getConfig() : String </td></tr>
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + setIps(ips : String[]) </td></tr>
+<tr><td align="left" balign="left"> + getIps() : String[] </td></tr>
+<tr><td align="left" balign="left"> + setExcludeIps(ips : String[]) </td></tr>
+<tr><td align="left" balign="left"> + getExcludeIps() : String[] </td></tr>
+<tr><td align="left" balign="left"> + setArchitecture(architecture : String) </td></tr>
+<tr><td align="left" balign="left"> + getArchitecture() : String </td></tr>
+<tr><td align="left" balign="left"> + setOperatingSystems(operatingSystems : String[]) </td></tr>
+<tr><td align="left" balign="left"> + getOperatingSystems() : String[] </td></tr>
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
 <tr><td align="left" balign="left"> + getProviderUuid() : Uuid </td></tr>
 <tr><td align="left" balign="left"> + setProviderUuid(providerUuid : Uuid) </td></tr>
@@ -79,37 +89,11 @@ digraph G {
 <tr><td align="left" balign="left"> + setUnique(unique : Deployment.Unique) </td></tr>
 <tr><td align="left" balign="left"> + getUnique() : Deployment.Unique </td></tr>
 <tr><td align="left" balign="left"> + createDeploymentID(ssb : String) : String </td></tr>
+<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setProvisionable(isProvisionable : boolean) </td></tr>
+<tr><td align="left" balign="left"> + setProvisionable(isProvisionable : Strategy.Provision) </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Deployment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.deploy.Deployment.Type
-	c17671 [label=<<table title="sorcer.core.deploy.Deployment.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Deployment.Type.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Type </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> SELF </td></tr>
-<tr><td align="left" balign="left"> FED </td></tr>
-<tr><td align="left" balign="left"> NONE </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Deployment.Type.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.deploy.Deployment.Unique
-	c17672 [label=<<table title="sorcer.core.deploy.Deployment.Unique" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Deployment.Unique.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Unique </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> YES </td></tr>
-<tr><td align="left" balign="left"> NO </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Deployment.Unique.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ServiceDeployment.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

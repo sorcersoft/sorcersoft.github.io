@@ -9,8 +9,48 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.launcher.process.ForkingLauncher
-	c264961 [label=<<table title="sorcer.launcher.process.ForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./process/ForkingLauncher.html">
+	// sorcer.launcher.ILauncher
+	c280103 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ILauncher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ILauncher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + start() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + stop() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + preConfigure() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setLogDir(logDir : File) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setHome(home : File) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setConfigs(configs : List&lt;String&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setConfigDir(config : File) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addSorcerListener(listener : SorcerListener) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setProfile(profile : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removeSorcerListener(listener : SorcerListener) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setRioConfigs(rioConfigs : List&lt;String&gt;) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ILauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.IForkingLauncher
+	c280111 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IForkingLauncher.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IForkingLauncher </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setDebugPort(debugPort : Integer) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOut(out : OutputStream) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setErr(err : OutputStream) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setOutFile(outFile : File) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setErrFile(errFile : File) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./IForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.impl.process.ForkingLauncher
+	c280113 [label=<<table title="sorcer.launcher.impl.process.ForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/process/ForkingLauncher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ForkingLauncher </td></tr>
 		</table></td></tr>
@@ -31,50 +71,10 @@ digraph G {
 <tr><td align="left" balign="left"> + setErrFile(errFile : File) </td></tr>
 <tr><td align="left" balign="left"> + setProfile(profile : String) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./process/ForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.ILauncher
-	c265360 [label=<<table title="sorcer.launcher.ILauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ILauncher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ILauncher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + start() </td></tr>
-<tr><td align="left" balign="left"> + stop() </td></tr>
-<tr><td align="left" balign="left"> + preConfigure() </td></tr>
-<tr><td align="left" balign="left"> + setLogDir(logDir : File) </td></tr>
-<tr><td align="left" balign="left"> + setHome(home : File) </td></tr>
-<tr><td align="left" balign="left"> + setConfigs(configs : List&lt;String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setConfigDir(config : File) </td></tr>
-<tr><td align="left" balign="left"> + addSorcerListener(listener : SorcerListener) </td></tr>
-<tr><td align="left" balign="left"> + setProfile(profile : String) </td></tr>
-<tr><td align="left" balign="left"> + removeSorcerListener(listener : SorcerListener) </td></tr>
-<tr><td align="left" balign="left"> + setRioConfigs(rioConfigs : List&lt;String&gt;) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ILauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.IForkingLauncher
-	c265366 [label=<<table title="sorcer.launcher.IForkingLauncher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IForkingLauncher.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> IForkingLauncher </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setDebugPort(debugPort : Integer) </td></tr>
-<tr><td align="left" balign="left"> + setOut(out : OutputStream) </td></tr>
-<tr><td align="left" balign="left"> + setErr(err : OutputStream) </td></tr>
-<tr><td align="left" balign="left"> + setOutFile(outFile : File) </td></tr>
-<tr><td align="left" balign="left"> + setErrFile(errFile : File) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./IForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.launcher.process.ForkingLauncher implements sorcer.launcher.IForkingLauncher
-	c265366:p -> c264961:p [dir=back,arrowtail=empty,style=dashed];
+		</table>>, URL="./impl/process/ForkingLauncher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.IForkingLauncher implements sorcer.launcher.ILauncher
-	c265360:p -> c265366:p [dir=back,arrowtail=empty,style=dashed];
+	c280103:p -> c280111:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.launcher.impl.process.ForkingLauncher implements sorcer.launcher.IForkingLauncher
+	c280111:p -> c280113:p [dir=back,arrowtail=empty,style=dashed];
 }
 

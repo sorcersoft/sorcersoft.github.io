@@ -9,24 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.co.tuple.Tuple3<T1, T2, T3>
-	c278949 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Tuple3() </td></tr>
-<tr><td align="left" balign="left"> + Tuple3(x1 : T1, x2 : T2, x3 : T3) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.IndexedTriplet<T>
-	c278951 [label=<<table title="sorcer.co.tuple.IndexedTriplet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IndexedTriplet.html">
+	c294220 [label=<<table title="sorcer.co.tuple.IndexedTriplet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IndexedTriplet.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IndexedTriplet&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -42,7 +26,23 @@ digraph G {
 <tr><td align="left" balign="left"> + ext(extention : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./IndexedTriplet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Tuple3<T1, T2, T3>
+	c294232 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Tuple3() </td></tr>
+<tr><td align="left" balign="left"> + Tuple3(x1 : T1, x2 : T2, x3 : T3) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.IndexedTriplet<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.Object>
-	c278949:p -> c278951:p [dir=back,arrowtail=empty];
+	c294232:p -> c294220:p [dir=back,arrowtail=empty];
 }
 

@@ -9,38 +9,26 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.AdministratableProvider
-	c465836 [label=<<table title="sorcer.core.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../AdministratableProvider.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c466067 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c497484 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
-<tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
+<tr><td align="left" balign="left"> # scheduler : ScheduledExecutorService </td></tr>
 <tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_THREADS : String </td></tr>
-<tr><td align="left" balign="left"> + MANAGER_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + LOAD_FACTOR : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT_INCREMENT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ServiceProvider() </td></tr>
+<tr><td align="left" balign="left"> + ServiceProvider() </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(providerPropertiesFile : String) </td></tr>
 <tr><td align="left" balign="left"> + getGrants(cl : Class&lt;?&gt;, principals : Principal[]) : Permission[] </td></tr>
-<tr><td align="left" balign="left"> + grant(cl : Class&lt;?&gt;, principals : Principal[], permissions : Permission[]) </td></tr>
 <tr><td align="left" balign="left"> + grantSupported() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
 <tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
@@ -102,6 +90,7 @@ digraph G {
 <tr><td align="left" balign="left"> + invokeMethod(method : String, context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + invokeMethod(methodName : String, ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
@@ -137,7 +126,6 @@ digraph G {
 <tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -146,15 +134,13 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextDatabase() : boolean </td></tr>
 <tr><td align="left" balign="left"> # setupThreadManager() </td></tr>
 <tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + initSpaceSupport() </td></tr>
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.Cataloger
-	c466070 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Cataloger.html">
+	c497494 [label=<<table title="sorcer.core.provider.Cataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../Cataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cataloger </td></tr>
@@ -163,30 +149,36 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + lookup(primaryInterfaces : Class&lt;&gt;[]) : Provider </td></tr>
-<tr><td align="left" balign="left"> + lookup(providerName : String, primaryInterfaces : Class&lt;&gt;[]) : Provider </td></tr>
-<tr><td align="left" balign="left"> + lookupItem(providerName : String, serviceTypes : Class&lt;&gt;[]) : ServiceItem </td></tr>
-<tr><td align="left" balign="left"> + lookup(sid : ServiceID) : Provider </td></tr>
-<tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate) : Object </td></tr>
-<tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate, maxMatches : int) : ServiceMatches </td></tr>
-<tr><td align="left" balign="left"> + getProviderMethods() : Map&lt;String, String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getProviderList() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getInterfaceList(serviceType : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getMethodsList(providerName : String, serviceType : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + getLL() : LookupLocator[] </td></tr>
-<tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getTemplate() : ServiceTemplate </td></tr>
-<tr><td align="left" balign="left"> + getContext(providerName : String, serviceType : String, methodName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + saveContext(providerName : String, serviceType : String, methodName : String, theContext : Context&lt;&gt;) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + deleteContext(providerName : String, serviceType : String, methodName : String) : Boolean </td></tr>
-<tr><td align="left" balign="left"> + getSavedContextList(providerName : String, serviceType : String) : String[] </td></tr>
-<tr><td align="left" balign="left"> + exertService(providerName : String, serviceType : Class&lt;&gt;, methodName : String, theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContexts(provider : Class&lt;&gt;, method : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getServiceInfo() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(primaryInterfaces : Class&lt;&gt;[]) : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(providerName : String, primaryInterfaces : Class&lt;&gt;[]) : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookupItem(providerName : String, serviceTypes : Class&lt;&gt;[]) : ServiceItem </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(sid : ServiceID) : Provider </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + lookup(tmpl : ServiceTemplate, maxMatches : int) : ServiceMatches </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderMethods() : Map&lt;String, String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProviderList() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInterfaceList(serviceType : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMethodsList(providerName : String, serviceType : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLL() : LookupLocator[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getGroups() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTemplate() : ServiceTemplate </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(providerName : String, serviceType : String, methodName : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + saveContext(providerName : String, serviceType : String, methodName : String, theContext : Context&lt;&gt;) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteContext(providerName : String, serviceType : String, methodName : String) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSavedContextList(providerName : String, serviceType : String) : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exertService(providerName : String, serviceType : Class&lt;&gt;, methodName : String, theContext : Context&lt;&gt;) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContexts(provider : Class&lt;&gt;, method : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getServiceInfo() : String </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../Cataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.AdministratableProvider
+	c497495 [label=<<table title="sorcer.core.provider.AdministratableProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AdministratableProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> AdministratableProvider </td></tr>
+		</table></td></tr>
+		</table>>, URL="../AdministratableProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.cataloger.ServiceCataloger
-	c466509 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.html">
+	c498062 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceCataloger </td></tr>
 		</table></td></tr>
@@ -217,18 +209,17 @@ digraph G {
 <tr><td align="left" balign="left"> + exertService(providerName : String, serviceType : Class&lt;&gt;, methodName : String, theContext : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContexts(serviceType : Class&lt;&gt;, method : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getServiceInfo() : String </td></tr>
-<tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate) : Object </td></tr>
 <tr><td align="left" balign="left"> + lookup(tmpl : ServiceTemplate, maxMatches : int) : ServiceMatches </td></tr>
 <tr><td align="left" balign="left"> + returnString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.provider.ServiceProvider implements sorcer.core.AdministratableProvider
-	c465836:p -> c466067:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.ServiceProvider implements sorcer.core.provider.AdministratableProvider
+	c497495:p -> c497484:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.cataloger.ServiceCataloger extends sorcer.core.provider.ServiceProvider
-	c466067:p -> c466509:p [dir=back,arrowtail=empty];
+	c497484:p -> c498062:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.provider.Cataloger
-	c466070:p -> c466509:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.AdministratableProvider
-	c465836:p -> c466509:p [dir=back,arrowtail=empty,style=dashed];
+	c497494:p -> c498062:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.provider.cataloger.ServiceCataloger implements sorcer.core.provider.AdministratableProvider
+	c497495:p -> c498062:p [dir=back,arrowtail=empty,style=dashed];
 }
 

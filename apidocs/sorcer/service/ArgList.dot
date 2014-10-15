@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.ArgList
-	c109769 [label=<<table title="sorcer.service.ArgList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArgList.html">
+	c115613 [label=<<table title="sorcer.service.ArgList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArgList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArgList </td></tr>
 		</table></td></tr>
@@ -22,8 +22,6 @@ digraph G {
 <tr><td align="left" balign="left"> + ArgList(size : int) </td></tr>
 <tr><td align="left" balign="left"> + ArgList(parSet : Set&lt;Arg&gt;) </td></tr>
 <tr><td align="left" balign="left"> + ArgList(parLists : ArgList[]) </td></tr>
-<tr><td align="left" balign="left"> + ArgList(parArray : Par&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + ArgList(parList : List&lt;Par&lt;T&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getArg(parName : String) : Arg </td></tr>
 <tr><td align="left" balign="left"> + setArgValue(parName : String, value : Object) </td></tr>
 <tr><td align="left" balign="left"> + selectArgs(parNames : List&lt;String&gt;[]) : ArgList </td></tr>
@@ -33,16 +31,14 @@ digraph G {
 <tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + toArray() : Par&lt;?&gt;[] </td></tr>
-<tr><td align="left" balign="left"> + asList(array : Par&lt;?&gt;[]) : ArgList </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ArgList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.ArgList extends java.util.ArrayList<sorcer.service.Arg>
-	c110317:p -> c109769:p [dir=back,arrowtail=empty];
+	c116084:p -> c115613:p [dir=back,arrowtail=empty];
 	// java.util.ArrayList<E>
-	c110317 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
+	c116084 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayList&lt;E&gt; </td></tr>
 		</table></td></tr>
@@ -79,6 +75,11 @@ digraph G {
 <tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + iterator() : Iterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + subList(arg0 : int, arg1 : int) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + spliterator() : Spliterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + removeIf(arg0 : Predicate&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + replaceAll(arg0 : UnaryOperator&lt;E&gt;) </td></tr>
+<tr><td align="left" balign="left"> + sort(arg0 : Comparator&lt;?&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

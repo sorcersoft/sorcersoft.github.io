@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.dbp.DatabaseProvider
-	c263760 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DatabaseProvider.html">
+	c278459 [label=<<table title="sorcer.core.provider.dbp.DatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DatabaseProvider </td></tr>
 		</table></td></tr>
@@ -23,28 +23,30 @@ digraph G {
 <tr><td align="left" balign="left"> + store(object : Object) : Uuid </td></tr>
 <tr><td align="left" balign="left"> + update(uuid : Uuid, object : Object) : Uuid </td></tr>
 <tr><td align="left" balign="left"> + update(url : URL, object : Object) : Uuid </td></tr>
+<tr><td align="left" balign="left"> + waitWhileObjectsAreModified() </td></tr>
 <tr><td align="left" balign="left"> + getObject(uuid : Uuid) : Object </td></tr>
 <tr><td align="left" balign="left"> + getContext(uuid : Uuid) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExertion(uuid : Uuid) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + getTable(uuid : Uuid) : ModelTable </td></tr>
 <tr><td align="left" balign="left"> + contextStore(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDatabaseURL(storeType : Store, uuid : Uuid) : URL </td></tr>
+<tr><td align="left" balign="left"> + getDatabaseURL(storeType : DatabaseStorer.Store, uuid : Uuid) : URL </td></tr>
 <tr><td align="left" balign="left"> + getSdbUrl() : URL </td></tr>
-<tr><td align="left" balign="left"> + size(storeType : Store) : int </td></tr>
+<tr><td align="left" balign="left"> + size(storeType : DatabaseStorer.Store) : int </td></tr>
 <tr><td align="left" balign="left"> + deleteURL(url : URL) : Uuid </td></tr>
 <tr><td align="left" balign="left"> + retrieve(url : URL) : Object </td></tr>
-<tr><td align="left" balign="left"> + retrieve(uuid : Uuid, storeType : Store) : Object </td></tr>
+<tr><td align="left" balign="left"> + retrieve(uuid : Uuid, storeType : DatabaseStorer.Store) : Object </td></tr>
 <tr><td align="left" balign="left"> + contextRetrieve(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + contextUpdate(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + contextList(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + list(storeType : Store) : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + list(storeType : DatabaseStorer.Store) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + list(url : URL) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + contextClear(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + clear(type : Store) : int </td></tr>
+<tr><td align="left" balign="left"> + clear(type : DatabaseStorer.Store) : int </td></tr>
 <tr><td align="left" balign="left"> # setupDatabase() </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + contextDelete(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getStoredMap(storeType : Store) : StoredMap&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getStoredSet(storeType : Store) : StoredValueSet&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getStoredMap(storeType : DatabaseStorer.Store) : StoredMap&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getStoredSet(storeType : DatabaseStorer.Store) : StoredValueSet&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(object : Object) : Uuid </td></tr>
 <tr><td align="left" balign="left"> + deleteIdentifiable(object : Object) : Uuid </td></tr>
 <tr><td align="left" balign="left"> + contextSize(context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
@@ -55,7 +57,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.dbp.IDatabaseProvider
-	c263764 [label=<<table title="sorcer.core.provider.dbp.IDatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IDatabaseProvider.html">
+	c278463 [label=<<table title="sorcer.core.provider.dbp.IDatabaseProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IDatabaseProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IDatabaseProvider </td></tr>
@@ -64,18 +66,20 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + storeObject(object : Object) : URL </td></tr>
-<tr><td align="left" balign="left"> + updateObject(url : URL, object : Object) </td></tr>
-<tr><td align="left" balign="left"> + deleteObject(url : URL) </td></tr>
-<tr><td align="left" balign="left"> + retrieve(url : URL) : Object </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + storeObject(object : Object) : URL </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + updateObject(url : URL, object : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteObject(url : URL) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + retrieve(url : URL) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + store(object : Object) : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDatabaseURL(storeType : DatabaseStorer.Store, uuid : Uuid) : URL </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./IDatabaseProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.dbp.DatabaseProvider implements sorcer.core.provider.dbp.IDatabaseProvider
-	c263764:p -> c263760:p [dir=back,arrowtail=empty,style=dashed];
+	c278463:p -> c278459:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.dbp.IDatabaseProvider implements java.rmi.Remote
-	c264132:p -> c263764:p [dir=back,arrowtail=empty,style=dashed];
+	c278849:p -> c278463:p [dir=back,arrowtail=empty,style=dashed];
 	// java.rmi.Remote
-	c264132 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
+	c278849 [label=<<table title="java.rmi.Remote" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/rmi/Remote.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Remote </td></tr>

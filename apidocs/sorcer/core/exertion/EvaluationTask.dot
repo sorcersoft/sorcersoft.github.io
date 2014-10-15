@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Task
-	c213453 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
+	c224049 [label=<<table title="sorcer.service.Task" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Task.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Task </td></tr>
 		</table></td></tr>
@@ -22,7 +22,9 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + Task() </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String) </td></tr>
+<tr><td align="left" balign="left"> + Task(signature : Signature) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, signature : Signature) </td></tr>
+<tr><td align="left" balign="left"> + Task(signature : Signature, context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, signature : Signature, context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, description : String) </td></tr>
 <tr><td align="left" balign="left"> + Task(name : String, signatures : List&lt;Signature&gt;) </td></tr>
@@ -30,6 +32,8 @@ digraph G {
 <tr><td align="left" balign="left"> + newTask(name : String, signature : Signature, context : Context&lt;&gt;) : Task </td></tr>
 <tr><td align="left" balign="left"> + doTask() : Task </td></tr>
 <tr><td align="left" balign="left"> + doTask(txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + doTask(xrt : Exertion, txn : Transaction) : Task </td></tr>
+<tr><td align="left" balign="left"> + updateConditionalContext(condition : Conditional) </td></tr>
 <tr><td align="left" balign="left"> + undoTask() </td></tr>
 <tr><td align="left" balign="left"> + setIndex(i : int) </td></tr>
 <tr><td align="left" balign="left"> + isTask() : boolean </td></tr>
@@ -59,7 +63,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../service/Task.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.EvaluationTask
-	c213747 [label=<<table title="sorcer.core.exertion.EvaluationTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EvaluationTask.html">
+	c224320 [label=<<table title="sorcer.core.exertion.EvaluationTask" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EvaluationTask.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EvaluationTask </td></tr>
 		</table></td></tr>
@@ -78,6 +82,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EvaluationTask.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.EvaluationTask extends sorcer.service.Task
-	c213453:p -> c213747:p [dir=back,arrowtail=empty];
+	c224049:p -> c224320:p [dir=back,arrowtail=empty];
 }
 

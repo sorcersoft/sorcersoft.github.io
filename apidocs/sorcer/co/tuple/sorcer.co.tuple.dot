@@ -9,37 +9,175 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.co.tuple.FidelityEntry<T>
-	c20602 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityEntry.html">
+	// sorcer.co.tuple.EntryList
+	c19123 [label=<<table title="sorcer.co.tuple.EntryList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> FidelityEntry&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> EntryList </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + FidelityEntry() </td></tr>
-<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, value : T) </td></tr>
-<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, fidelity : FidelityInfo) </td></tr>
-<tr><td align="left" balign="left"> + fidelity() : FidelityInfo </td></tr>
-<tr><td align="left" balign="left"> + fidelity(fidelity : FidelityInfo) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./FidelityEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.target
-	c20603 [label=<<table title="sorcer.co.tuple.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./target.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> target </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + target : Object </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + target(target : Object) </td></tr>
+<tr><td align="left" balign="left"> + EntryList() </td></tr>
+<tr><td align="left" balign="left"> + EntryList(size : int) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entrySet : Set&lt;Entry&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entryLists : EntryList[]) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entryArray : Entry&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(entryList : EntryList) </td></tr>
+<tr><td align="left" balign="left"> + EntryList(parSet : ParSet) </td></tr>
+<tr><td align="left" balign="left"> + getEntry(entryName : String) : Entry&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + containsEntryName(name : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
+<tr><td align="left" balign="left"> + toArray() : Entry&lt;&gt;[] </td></tr>
+<tr><td align="left" balign="left"> + asList(array : Entry&lt;&gt;[]) : EntryList </td></tr>
+<tr><td align="left" balign="left"> + describe() : String </td></tr>
+<tr><td align="left" balign="left"> + getType() : EntryList.Type </td></tr>
+<tr><td align="left" balign="left"> + setType(type : EntryList.Type) </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./target.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./EntryList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.EntryList.Type
+	c19124 [label=<<table title="sorcer.co.tuple.EntryList.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntryList.Type.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> Type </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> INPUT </td></tr>
+<tr><td align="left" balign="left"> OUTPUT </td></tr>
+<tr><td align="left" balign="left"> INITIAL_DESIGN </td></tr>
+<tr><td align="left" balign="left"> OPTIMIZED_DESIGN </td></tr>
+<tr><td align="left" balign="left"> CONSTRAINTS </td></tr>
+<tr><td align="left" balign="left"> LINKED </td></tr>
+<tr><td align="left" balign="left"> CONSTNTS </td></tr>
+<tr><td align="left" balign="left"> INVARIANTS </td></tr>
+		</table></td></tr>
+		</table>>, URL="./EntryList.Type.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Tuple4<T1, T2, T3, T4>
+	c19125 [label=<<table title="sorcer.co.tuple.Tuple4" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple4.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Tuple4&lt;T1, T2, T3, T4&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + _1 : T1 </td></tr>
+<tr><td align="left" balign="left"> + _2 : T2 </td></tr>
+<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
+<tr><td align="left" balign="left"> + _4 : T4 </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Tuple4(x1 : T1, x2 : T2, x3 : T3, x4 : T4) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tuple4.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Tuple1<T1>
+	c19126 [label=<<table title="sorcer.co.tuple.Tuple1" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple1.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Tuple1&lt;T1&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + _1 : T1 </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Tuple1(x1 : T1) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tuple1.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.StrategyEntry
+	c19127 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StrategyEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> StrategyEntry </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + StrategyEntry(path : String, strategy : Strategy) </td></tr>
+<tr><td align="left" balign="left"> + strategy() : Strategy </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./StrategyEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.ExecPath
+	c19128 [label=<<table title="sorcer.co.tuple.ExecPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecPath.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ExecPath </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ExecPath() </td></tr>
+<tr><td align="left" balign="left"> + ExecPath(path : String) </td></tr>
+<tr><td align="left" balign="left"> + ExecPath(path : String, executor : Object) </td></tr>
+<tr><td align="left" balign="left"> + path() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExecPath.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Path<T2>
+	c19129 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Path&lt;T2&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Path() </td></tr>
+<tr><td align="left" balign="left"> + Path(path : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.IndexedTriplet<T>
+	c19130 [label=<<table title="sorcer.co.tuple.IndexedTriplet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IndexedTriplet.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> IndexedTriplet&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + index : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + IndexedTriplet() </td></tr>
+<tr><td align="left" balign="left"> + IndexedTriplet(extention : Object) </td></tr>
+<tr><td align="left" balign="left"> + IndexedTriplet(x1 : String, value : T) </td></tr>
+<tr><td align="left" balign="left"> + IndexedTriplet(x1 : String, value : T, extention : Object) </td></tr>
+<tr><td align="left" balign="left"> + extention() : Object </td></tr>
+<tr><td align="left" balign="left"> + ext(extention : Object) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./IndexedTriplet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Tuple5<T1, T2, T3, T4, T5>
+	c19131 [label=<<table title="sorcer.co.tuple.Tuple5" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple5.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Tuple5&lt;T1, T2, T3, T4, T5&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + _1 : T1 </td></tr>
+<tr><td align="left" balign="left"> + _2 : T2 </td></tr>
+<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
+<tr><td align="left" balign="left"> + _4 : T4 </td></tr>
+<tr><td align="left" balign="left"> + _5 : T5 </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Tuple5(x1 : T1, x2 : T2, x3 : T3, x4 : T4, x5 : T5) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tuple5.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Complement<T2>
+	c19132 [label=<<table title="sorcer.co.tuple.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Complement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Complement&lt;T2&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Complement(path : String, value : T2) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Complement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.AnnotatedEntry<T>
-	c20604 [label=<<table title="sorcer.co.tuple.AnnotatedEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AnnotatedEntry.html">
+	c19133 [label=<<table title="sorcer.co.tuple.AnnotatedEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AnnotatedEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AnnotatedEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -65,140 +203,8 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AnnotatedEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.ParameterTypes
-	c20605 [label=<<table title="sorcer.co.tuple.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParameterTypes.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ParameterTypes </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + parameterTypes : Class&lt;&gt;[] </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ParameterTypes(parameterTypes : Class&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ParameterTypes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Tuple5<T1, T2, T3, T4, T5>
-	c20606 [label=<<table title="sorcer.co.tuple.Tuple5" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple5.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Tuple5&lt;T1, T2, T3, T4, T5&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + _1 : T1 </td></tr>
-<tr><td align="left" balign="left"> + _2 : T2 </td></tr>
-<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
-<tr><td align="left" balign="left"> + _4 : T4 </td></tr>
-<tr><td align="left" balign="left"> + _5 : T5 </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Tuple5(x1 : T1, x2 : T2, x3 : T3, x4 : T4, x5 : T5) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tuple5.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.DataEntry<T2>
-	c20607 [label=<<table title="sorcer.co.tuple.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DataEntry&lt;T2&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DataEntry(path : String, value : T2) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DataEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Tuple4<T1, T2, T3, T4>
-	c20608 [label=<<table title="sorcer.co.tuple.Tuple4" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple4.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Tuple4&lt;T1, T2, T3, T4&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + _1 : T1 </td></tr>
-<tr><td align="left" balign="left"> + _2 : T2 </td></tr>
-<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
-<tr><td align="left" balign="left"> + _4 : T4 </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Tuple4(x1 : T1, x2 : T2, x3 : T3, x4 : T4) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tuple4.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Path<T2>
-	c20609 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Path&lt;T2&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Path() </td></tr>
-<tr><td align="left" balign="left"> + Path(path : String) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Tuple3<T1, T2, T3>
-	c20610 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Tuple3() </td></tr>
-<tr><td align="left" balign="left"> + Tuple3(x1 : T1, x2 : T2, x3 : T3) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.InEntry<T>
-	c20611 [label=<<table title="sorcer.co.tuple.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InEntry&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, fidelity : FidelityInfo) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./InEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.IndexedTriplet<T>
-	c20612 [label=<<table title="sorcer.co.tuple.IndexedTriplet" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IndexedTriplet.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> IndexedTriplet&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + index : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + IndexedTriplet() </td></tr>
-<tr><td align="left" balign="left"> + IndexedTriplet(extention : Object) </td></tr>
-<tr><td align="left" balign="left"> + IndexedTriplet(x1 : String, value : T) </td></tr>
-<tr><td align="left" balign="left"> + IndexedTriplet(x1 : String, value : T, extention : Object) </td></tr>
-<tr><td align="left" balign="left"> + extention() : Object </td></tr>
-<tr><td align="left" balign="left"> + ext(extention : Object) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./IndexedTriplet.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Tuple1<T1>
-	c20613 [label=<<table title="sorcer.co.tuple.Tuple1" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple1.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Tuple1&lt;T1&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + _1 : T1 </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Tuple1(x1 : T1) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Tuple1.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple6<T1, T2, T3, T4, T5, T6>
-	c20614 [label=<<table title="sorcer.co.tuple.Tuple6" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple6.html">
+	c19134 [label=<<table title="sorcer.co.tuple.Tuple6" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple6.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple6&lt;T1, T2, T3, T4, T5, T6&gt; </td></tr>
 		</table></td></tr>
@@ -214,22 +220,35 @@ digraph G {
 <tr><td align="left" balign="left"> + Tuple6(x1 : T1, x2 : T2, x3 : T3, x4 : T4, x5 : T5, x6 : T6) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Tuple6.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.StrategyEntry
-	c20615 [label=<<table title="sorcer.co.tuple.StrategyEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./StrategyEntry.html">
+	// sorcer.co.tuple.InEntry<T>
+	c19135 [label=<<table title="sorcer.co.tuple.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> StrategyEntry </td></tr>
+<tr><td align="center" balign="center"> InEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + StrategyEntry(path : String, strategy : Strategy) </td></tr>
-<tr><td align="left" balign="left"> + strategy() : Strategy </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, fidelity : FidelityInfo) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./StrategyEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./InEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.DataEntry<T2>
+	c19136 [label=<<table title="sorcer.co.tuple.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DataEntry&lt;T2&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DataEntry(path : String, value : T2) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DataEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c20616 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
+	c19137 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -253,20 +272,80 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Complement<T2>
-	c20617 [label=<<table title="sorcer.co.tuple.Complement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Complement.html">
+	// sorcer.co.tuple.ParameterTypes
+	c19138 [label=<<table title="sorcer.co.tuple.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParameterTypes.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Complement&lt;T2&gt; </td></tr>
+<tr><td align="center" balign="center"> ParameterTypes </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + parameterTypes : Class&lt;&gt;[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ParameterTypes(parameterTypes : Class&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ParameterTypes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.target
+	c19139 [label=<<table title="sorcer.co.tuple.target" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./target.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> target </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + target : Object </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + target(target : Object) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./target.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.FidelityEntry<T>
+	c19140 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FidelityEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> FidelityEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Complement(path : String, value : T2) </td></tr>
+<tr><td align="left" balign="left"> + FidelityEntry() </td></tr>
+<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, value : T) </td></tr>
+<tr><td align="left" balign="left"> + FidelityEntry(x1 : String, fidelity : FidelityInfo) </td></tr>
+<tr><td align="left" balign="left"> + fidelity() : FidelityInfo </td></tr>
+<tr><td align="left" balign="left"> + fidelity(fidelity : FidelityInfo) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Complement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./FidelityEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.InoutEntry<T>
+	c19141 [label=<<table title="sorcer.co.tuple.InoutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InoutEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> InoutEntry&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InoutEntry(path : String, fidelity : FidelityInfo) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./InoutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Tuple3<T1, T2, T3>
+	c19142 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Tuple3() </td></tr>
+<tr><td align="left" balign="left"> + Tuple3(x1 : T1, x2 : T2, x3 : T3) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.OutEntry<T>
-	c20618 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutEntry.html">
+	c19143 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OutEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -280,22 +359,8 @@ digraph G {
 <tr><td align="left" balign="left"> + OutEntry(path : String, fidelity : FidelityInfo) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Args
-	c20619 [label=<<table title="sorcer.co.tuple.Args" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Args.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Args </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + args : Object[] </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Args(args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + Args(path : String, args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Args.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Entry<T>
-	c20620 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
+	c19144 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Entry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -317,69 +382,37 @@ digraph G {
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + compareTo(o : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Entry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.InoutEntry<T>
-	c20621 [label=<<table title="sorcer.co.tuple.InoutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InoutEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InoutEntry&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InoutEntry(path : String, fidelity : FidelityInfo) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./InoutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.ExecPath
-	c20622 [label=<<table title="sorcer.co.tuple.ExecPath" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExecPath.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExecPath </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExecPath() </td></tr>
-<tr><td align="left" balign="left"> + ExecPath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + ExecPath(path : String, executor : Object) </td></tr>
-<tr><td align="left" balign="left"> + path() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExecPath.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.co.tuple.FidelityEntry<T> extends sorcer.co.tuple.Entry<T>
-	c20620:p -> c20602:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.target extends sorcer.co.tuple.Path
-	c20609:p -> c20603:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.AnnotatedEntry<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.String>
-	c20610:p -> c20604:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.ParameterTypes extends sorcer.co.tuple.Path
-	c20609:p -> c20605:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.DataEntry<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
-	c20616:p -> c20607:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Path<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
-	c20616:p -> c20609:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Tuple3<T1, T2, T3> extends sorcer.co.tuple.Tuple2<T1, T2>
-	c20616:p -> c20610:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.InEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
-	c20602:p -> c20611:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.IndexedTriplet<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.Object>
-	c20610:p -> c20612:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.StrategyEntry extends sorcer.co.tuple.Path<sorcer.service.Strategy>
-	c20609:p -> c20615:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Complement<T2> extends sorcer.co.tuple.Entry<T2>
-	c20620:p -> c20617:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.OutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
-	c20602:p -> c20618:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Args extends sorcer.co.tuple.Path
-	c20609:p -> c20619:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Entry<T> extends sorcer.co.tuple.Tuple2<java.lang.String, T>
-	c20616:p -> c20620:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.InoutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
-	c20602:p -> c20621:p [dir=back,arrowtail=empty];
+	c19129:p -> c19127:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.ExecPath extends sorcer.co.tuple.Path<java.lang.Object>
-	c20609:p -> c20622:p [dir=back,arrowtail=empty];
+	c19129:p -> c19128:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.Path<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
+	c19137:p -> c19129:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.IndexedTriplet<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.Object>
+	c19142:p -> c19130:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.Complement<T2> extends sorcer.co.tuple.Entry<T2>
+	c19144:p -> c19132:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.AnnotatedEntry<T> extends sorcer.co.tuple.Tuple3<java.lang.String, T, java.lang.String>
+	c19142:p -> c19133:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.InEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
+	c19140:p -> c19135:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.DataEntry<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
+	c19137:p -> c19136:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.ParameterTypes extends sorcer.co.tuple.Path
+	c19129:p -> c19138:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.target extends sorcer.co.tuple.Path
+	c19129:p -> c19139:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.FidelityEntry<T> extends sorcer.co.tuple.Entry<T>
+	c19144:p -> c19140:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.InoutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
+	c19140:p -> c19141:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.Tuple3<T1, T2, T3> extends sorcer.co.tuple.Tuple2<T1, T2>
+	c19137:p -> c19142:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.OutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
+	c19140:p -> c19143:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.Entry<T> extends sorcer.co.tuple.Tuple2<java.lang.String, T>
+	c19137:p -> c19144:p [dir=back,arrowtail=empty];
 }
 

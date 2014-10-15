@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.container.core.SingletonModule
-	c50534 [label=<<table title="sorcer.container.core.SingletonModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SingletonModule.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SingletonModule </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SingletonModule(type : Class&lt;?&gt;) </td></tr>
-<tr><td align="left" balign="left"> # configure() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SingletonModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.container.core.InitializingModule
-	c50535 [label=<<table title="sorcer.container.core.InitializingModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InitializingModule.html">
+	c54730 [label=<<table title="sorcer.container.core.InitializingModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InitializingModule.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InitializingModule </td></tr>
 		</table></td></tr>
@@ -35,21 +22,21 @@ digraph G {
 <tr><td align="left" balign="left"> # configure() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./InitializingModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.container.core.BeanListenerModule
-	c50536 [label=<<table title="sorcer.container.core.BeanListenerModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanListenerModule.html">
+	// sorcer.container.core.SingletonModule
+	c54731 [label=<<table title="sorcer.container.core.SingletonModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SingletonModule.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> BeanListenerModule </td></tr>
+<tr><td align="center" balign="center"> SingletonModule </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # beanListener : IServiceBeanListener </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + BeanListenerModule() </td></tr>
+<tr><td align="left" balign="left"> + SingletonModule(type : Class&lt;?&gt;) </td></tr>
 <tr><td align="left" balign="left"> # configure() </td></tr>
 		</table></td></tr>
-		</table>>, URL="./BeanListenerModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SingletonModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.container.core.ConfiguringModule
-	c50537 [label=<<table title="sorcer.container.core.ConfiguringModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConfiguringModule.html">
+	c54732 [label=<<table title="sorcer.container.core.ConfiguringModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConfiguringModule.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConfiguringModule </td></tr>
 		</table></td></tr>
@@ -63,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConfiguringModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.container.core.TypeMatcher
-	c50538 [label=<<table title="sorcer.container.core.TypeMatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TypeMatcher.html">
+	c54733 [label=<<table title="sorcer.container.core.TypeMatcher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TypeMatcher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TypeMatcher </td></tr>
 		</table></td></tr>
@@ -75,5 +62,18 @@ digraph G {
 <tr><td align="left" balign="left"> + matches(typeLiteral : TypeLiteral&lt;?&gt;) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TypeMatcher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.container.core.BeanListenerModule
+	c54734 [label=<<table title="sorcer.container.core.BeanListenerModule" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanListenerModule.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BeanListenerModule </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # beanListener : IServiceBeanListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BeanListenerModule() </td></tr>
+<tr><td align="left" balign="left"> # configure() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./BeanListenerModule.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

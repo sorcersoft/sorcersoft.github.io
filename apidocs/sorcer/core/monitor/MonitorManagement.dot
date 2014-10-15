@@ -9,24 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Monitorable
-	c333187 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Monitorable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + stop(ref : UEID, subject : Subject) </td></tr>
-<tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
-<tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Monitorable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorManagement
-	c333312 [label=<<table title="sorcer.core.monitor.MonitorManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorManagement.html">
+	c360396 [label=<<table title="sorcer.core.monitor.MonitorManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MonitorManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorManagement </td></tr>
@@ -35,12 +19,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + register(lstnr : RemoteEventListener, ex : Exertion, duration : long) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + persist(session : IMonitorSession) : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + register(lstnr : RemoteEventListener, ex : Exertion, duration : long) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + persist(session : MonitorManagementSession) : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitorManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitorSessionManagement
-	c333313 [label=<<table title="sorcer.core.monitor.MonitorSessionManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSessionManagement.html">
+	c360397 [label=<<table title="sorcer.core.monitor.MonitorSessionManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitorSessionManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitorSessionManagement </td></tr>
@@ -49,29 +33,45 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + init(cookie : Uuid, mntrbl : Monitorable, duration : long, timeout : long) : Lease </td></tr>
-<tr><td align="left" balign="left"> + init(cookie : Uuid, duration : long, timeout : long) </td></tr>
-<tr><td align="left" balign="left"> + init(cookie : Uuid, mntrbl : Monitorable) : Lease </td></tr>
-<tr><td align="left" balign="left"> + update(cookie : Uuid, ctx : Context&lt;&gt;, aspect : Object) </td></tr>
-<tr><td align="left" balign="left"> + getState(cookie : Uuid) : int </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(cookie : Uuid, mntrbl : Monitorable, duration : long, timeout : long) : Lease </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(cookie : Uuid, duration : long, timeout : long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + init(cookie : Uuid, mntrbl : Monitorable) : Lease </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + update(cookie : Uuid, ctx : Context&lt;&gt;, controlContext : IControlContext, aspect : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getState(cookie : Uuid) : int </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitorSessionManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitoringManagement
-	c333314 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoringManagement.html">
+	c360398 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MonitoringManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitoringManagement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Monitorable
+	c360503 [label=<<table title="sorcer.service.Monitorable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Monitorable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Monitorable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + stop(ref : UEID, subject : Subject) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + suspend(ref : UEID, subject : Subject) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resume(ex : Exertion) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + step(ex : Exertion) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Monitorable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.monitor.MonitorManagement implements sorcer.service.Monitorable
-	c333187:p -> c333312:p [dir=back,arrowtail=empty,style=dashed];
+	c360503:p -> c360396:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitorSessionManagement implements sorcer.core.monitor.MonitorManagement
-	c333312:p -> c333313:p [dir=back,arrowtail=empty,style=dashed];
+	c360396:p -> c360397:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.service.Monitorable
-	c333187:p -> c333314:p [dir=back,arrowtail=empty,style=dashed];
+	c360503:p -> c360398:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorManagement
-	c333312:p -> c333314:p [dir=back,arrowtail=empty,style=dashed];
+	c360396:p -> c360398:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.monitor.MonitoringManagement implements sorcer.core.monitor.MonitorSessionManagement
-	c333313:p -> c333314:p [dir=back,arrowtail=empty,style=dashed];
+	c360397:p -> c360398:p [dir=back,arrowtail=empty,style=dashed];
 }
 

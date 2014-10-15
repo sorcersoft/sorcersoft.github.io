@@ -9,21 +9,21 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.platform.logger.RemoteLoggerInstaller
-	c76821 [label=<<table title="sorcer.platform.logger.RemoteLoggerInstaller" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerInstaller.html">
+	// sorcer.platform.logger.RemoteLoggerAppender
+	c81281 [label=<<table title="sorcer.platform.logger.RemoteLoggerAppender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerAppender.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RemoteLoggerInstaller </td></tr>
+<tr><td align="center" balign="center"> RemoteLoggerAppender </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + rate : long </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RemoteLoggerInstaller() </td></tr>
-<tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"> + RemoteLoggerAppender(queue : Queue&lt;ILoggingEvent&gt;, hostname : String) </td></tr>
+<tr><td align="left" balign="left"> # append(eventObject : ILoggingEvent) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./RemoteLoggerInstaller.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./RemoteLoggerAppender.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.platform.logger.RemoteLoggerClient
-	c76822 [label=<<table title="sorcer.platform.logger.RemoteLoggerClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerClient.html">
+	c81282 [label=<<table title="sorcer.platform.logger.RemoteLoggerClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerClient.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteLoggerClient </td></tr>
 		</table></td></tr>
@@ -35,18 +35,19 @@ digraph G {
 <tr><td align="left" balign="left"> + run() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemoteLoggerClient.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.platform.logger.RemoteLoggerAppender
-	c76823 [label=<<table title="sorcer.platform.logger.RemoteLoggerAppender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerAppender.html">
+	// sorcer.platform.logger.RemoteLoggerInstaller
+	c81283 [label=<<table title="sorcer.platform.logger.RemoteLoggerInstaller" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RemoteLoggerInstaller.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> RemoteLoggerAppender </td></tr>
+<tr><td align="center" balign="center"> RemoteLoggerInstaller </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + rate : long </td></tr>
+<tr><td align="left" balign="left"> + hostname : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RemoteLoggerAppender(queue : Queue&lt;ILoggingEvent&gt;) </td></tr>
-<tr><td align="left" balign="left"> # append(eventObject : ILoggingEvent) </td></tr>
+<tr><td align="left" balign="left"> + RemoteLoggerInstaller() </td></tr>
+<tr><td align="left" balign="left"> + destroy() </td></tr>
 		</table></td></tr>
-		</table>>, URL="./RemoteLoggerAppender.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./RemoteLoggerInstaller.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.invoker.InvokerList
-	c290528 [label=<<table title="sorcer.core.invoker.InvokerList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InvokerList.html">
+	c305401 [label=<<table title="sorcer.core.invoker.InvokerList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InvokerList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InvokerList </td></tr>
 		</table></td></tr>
@@ -20,28 +20,28 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + InvokerList() </td></tr>
 <tr><td align="left" balign="left"> + InvokerList(size : int) </td></tr>
-<tr><td align="left" balign="left"> + InvokerList(invokerSet : Set&lt;Invoker&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + InvokerList(invokerSet : Set&lt;ServiceInvoker&lt;&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + InvokerList(invokerLists : InvokerList[]) </td></tr>
-<tr><td align="left" balign="left"> + InvokerList(invokerArray : Invoker&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + InvokerList(invokerList : List&lt;Invoker&lt;&gt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getInvoker(invokerName : String) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setInvoker(invokerName : String, invoker : Invoker&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + InvokerList(invokerArray : ServiceInvoker&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + InvokerList(invokerList : List&lt;ServiceInvoker&lt;&gt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getInvoker(invokerName : String) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setInvoker(invokerName : String, invoker : ServiceInvoker&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + selectInvokers(invokerNames : List&lt;String&gt;[]) : InvokerList </td></tr>
 <tr><td align="left" balign="left"> + selectInvokers(invokerNames : String[]) : InvokerList </td></tr>
 <tr><td align="left" balign="left"> + remove(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getNames() : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getEntries() : List&lt;Tuple2&lt;String, Object&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getValues() : List&lt;Object&gt; </td></tr>
-<tr><td align="left" balign="left"> + toArray() : Invoker&lt;&gt;[] </td></tr>
-<tr><td align="left" balign="left"> + asList(array : Invoker&lt;&gt;[]) : InvokerList </td></tr>
+<tr><td align="left" balign="left"> + toArray() : ServiceInvoker&lt;&gt;[] </td></tr>
+<tr><td align="left" balign="left"> + asList(array : ServiceInvoker&lt;&gt;[]) : InvokerList </td></tr>
 <tr><td align="left" balign="left"> + describe() : String </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./InvokerList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.invoker.InvokerList extends java.util.ArrayList<sorcer.core.invoker.Invoker>
-	c290966:p -> c290528:p [dir=back,arrowtail=empty];
+	//sorcer.core.invoker.InvokerList extends java.util.ArrayList<sorcer.core.invoker.ServiceInvoker>
+	c305964:p -> c305401:p [dir=back,arrowtail=empty];
 	// java.util.ArrayList<E>
-	c290966 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
+	c305964 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayList&lt;E&gt; </td></tr>
 		</table></td></tr>
@@ -78,6 +78,11 @@ digraph G {
 <tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + iterator() : Iterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + subList(arg0 : int, arg1 : int) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + spliterator() : Spliterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + removeIf(arg0 : Predicate&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + replaceAll(arg0 : UnaryOperator&lt;E&gt;) </td></tr>
+<tr><td align="left" balign="left"> + sort(arg0 : Comparator&lt;?&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

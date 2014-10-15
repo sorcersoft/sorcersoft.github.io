@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList
-	c468692 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.InterfaceList.html">
+	c500328 [label=<<table title="sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceCataloger.CatalogerInfo.InterfaceList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InterfaceList </td></tr>
 		</table></td></tr>
@@ -18,15 +18,15 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceCataloger.CatalogerInfo.InterfaceList(clazz : Class&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + InterfaceList(clazz : Class&lt;&gt;[]) </td></tr>
 <tr><td align="left" balign="left"> + containsAllInterfaces(interfaceList : ServiceCataloger.CatalogerInfo.InterfaceList) : boolean </td></tr>
 <tr><td align="left" balign="left"> + equals(otherList : ServiceCataloger.CatalogerInfo.InterfaceList) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceCataloger.CatalogerInfo.InterfaceList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.cataloger.ServiceCataloger.CatalogerInfo.InterfaceList extends java.util.ArrayList<java.lang.Class>
-	c468730:p -> c468692:p [dir=back,arrowtail=empty];
+	c500378:p -> c500328:p [dir=back,arrowtail=empty];
 	// java.util.ArrayList<E>
-	c468730 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
+	c500378 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayList&lt;E&gt; </td></tr>
 		</table></td></tr>
@@ -63,6 +63,11 @@ digraph G {
 <tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + iterator() : Iterator&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + subList(arg0 : int, arg1 : int) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + spliterator() : Spliterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + removeIf(arg0 : Predicate&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + replaceAll(arg0 : UnaryOperator&lt;E&gt;) </td></tr>
+<tr><td align="left" balign="left"> + sort(arg0 : Comparator&lt;?&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

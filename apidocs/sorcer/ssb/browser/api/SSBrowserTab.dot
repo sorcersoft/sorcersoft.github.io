@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.browser.api.SSBrowserTab
-	c445431 [label=<<table title="sorcer.ssb.browser.api.SSBrowserTab" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SSBrowserTab.html">
+	c478387 [label=<<table title="sorcer.ssb.browser.api.SSBrowserTab" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SSBrowserTab.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SSBrowserTab </td></tr>
@@ -19,12 +19,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getTabName() : String </td></tr>
-<tr><td align="left" balign="left"> + getIcon() : ImageIcon </td></tr>
-<tr><td align="left" balign="left"> + getServiceTree() : JTree </td></tr>
-<tr><td align="left" balign="left"> + serviceDiscovered(serviceItem : ServiceItem) </td></tr>
-<tr><td align="left" balign="left"> + serviceDiscarded(serviceID : ServiceID) </td></tr>
-<tr><td align="left" balign="left"> + serviceModified(serviceID : ServiceID) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTabName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getIcon() : ImageIcon </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getServiceTree() : JTree </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceDiscovered(serviceItem : ServiceItem) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceDiscarded(serviceID : ServiceID) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + serviceModified(serviceID : ServiceID) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./SSBrowserTab.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.GlyphView
-	c251675 [label=<<table title="sorcer.ssb.tools.plugin.browser.GlyphView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GlyphView.html">
+	c265176 [label=<<table title="sorcer.ssb.tools.plugin.browser.GlyphView" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GlyphView.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GlyphView </td></tr>
 		</table></td></tr>
@@ -24,9 +24,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GlyphView.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.GlyphView extends javax.swing.JComponent
-	c251797:p -> c251675:p [dir=back,arrowtail=empty];
+	c265286:p -> c265176:p [dir=back,arrowtail=empty];
 	// javax.swing.JComponent
-	c251797 [label=<<table title="javax.swing.JComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JComponent.html">
+	c265286 [label=<<table title="javax.swing.JComponent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/javax/swing/JComponent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> JComponent </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,6 @@ digraph G {
 <tr><td align="left" balign="left"> + WHEN_IN_FOCUSED_WINDOW : int </td></tr>
 <tr><td align="left" balign="left"> + UNDEFINED_CONDITION : int </td></tr>
 <tr><td align="left" balign="left"> + TOOL_TIP_TEXT_KEY : String </td></tr>
-<tr><td align="left" balign="left"> # accessibleContext : AccessibleContext </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + JComponent() </td></tr>
@@ -135,7 +134,6 @@ digraph G {
 <tr><td align="left" balign="left"> # processMouseMotionEvent(arg0 : MouseEvent) </td></tr>
 <tr><td align="left" balign="left"> + enable() </td></tr>
 <tr><td align="left" balign="left"> + disable() </td></tr>
-<tr><td align="left" balign="left"> + getAccessibleContext() : AccessibleContext </td></tr>
 <tr><td align="left" balign="left"> + getClientProperty(arg0 : Object) : Object </td></tr>
 <tr><td align="left" balign="left"> + putClientProperty(arg0 : Object, arg1 : Object) </td></tr>
 <tr><td align="left" balign="left"> + setFocusTraversalKeys(arg0 : int, arg1 : Set&lt;?&gt;) </td></tr>

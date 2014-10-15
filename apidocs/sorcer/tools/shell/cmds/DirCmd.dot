@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.ShellCmd
-	c196274 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
+	c206853 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -30,14 +30,12 @@ digraph G {
 <tr><td align="left" balign="left"> + getShortHelp() : String </td></tr>
 <tr><td align="left" balign="left"> + getLongDescription(subCmd : String) : String </td></tr>
 <tr><td align="left" balign="left"> + nameConflictDetected(conflictClass : Class&lt;?&gt;) : String </td></tr>
-<tr><td align="left" balign="left"> + initializeSubsystem() </td></tr>
-<tr><td align="left" balign="left"> + endSubsystem() </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + setConfig(config : Configuration) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.cmds.DirCmd
-	c196517 [label=<<table title="sorcer.tools.shell.cmds.DirCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DirCmd.html">
+	c207110 [label=<<table title="sorcer.tools.shell.cmds.DirCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DirCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DirCmd </td></tr>
 		</table></td></tr>
@@ -53,6 +51,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DirCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.cmds.DirCmd extends sorcer.tools.shell.ShellCmd
-	c196274:p -> c196517:p [dir=back,arrowtail=empty];
+	c206853:p -> c207110:p [dir=back,arrowtail=empty];
 }
 

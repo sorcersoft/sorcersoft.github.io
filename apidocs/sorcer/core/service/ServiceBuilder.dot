@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.service.ServiceBuilder
-	c464749 [label=<<table title="sorcer.core.service.ServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBuilder.html">
+	c496229 [label=<<table title="sorcer.core.service.ServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceBuilder </td></tr>
 		</table></td></tr>
@@ -23,9 +23,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.service.ServiceBuilder implements com.sun.jini.admin.DestroyAdmin
-	c465098:p -> c464749:p [dir=back,arrowtail=empty,style=dashed];
+	c496607:p -> c496229:p [dir=back,arrowtail=empty,style=dashed];
 	// com.sun.jini.admin.DestroyAdmin
-	c465098 [label=<<table title="com.sun.jini.admin.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html">
+	c496607 [label=<<table title="com.sun.jini.admin.DestroyAdmin" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DestroyAdmin </td></tr>
@@ -34,7 +34,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + destroy() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + destroy() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/com/sun/jini/admin/DestroyAdmin.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

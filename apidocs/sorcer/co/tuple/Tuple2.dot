@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Arg
-	c566809 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Arg </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Identifiable
-	c566840 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Identifiable.html">
+	c608383 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Identifiable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Identifiable </td></tr>
@@ -32,24 +19,25 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.DataEntry<T2>
-	c566987 [label=<<table title="sorcer.co.tuple.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataEntry.html">
+	// sorcer.service.Arg
+	c608413 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Arg.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DataEntry&lt;T2&gt; </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DataEntry(path : String, value : T2) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="./DataEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../service/Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Path<T2>
-	c566989 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
+	c608438 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Path&lt;T2&gt; </td></tr>
 		</table></td></tr>
@@ -61,24 +49,20 @@ digraph G {
 <tr><td align="left" balign="left"> + Path(path : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.Tuple3<T1, T2, T3>
-	c566990 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
+	// sorcer.co.tuple.DataEntry<T2>
+	c608445 [label=<<table title="sorcer.co.tuple.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
+<tr><td align="center" balign="center"> DataEntry&lt;T2&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Tuple3() </td></tr>
-<tr><td align="left" balign="left"> + Tuple3(x1 : T1, x2 : T2, x3 : T3) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + DataEntry(path : String, value : T2) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./DataEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c566996 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Tuple2.html">
+	c608446 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -102,8 +86,24 @@ digraph G {
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.Tuple3<T1, T2, T3>
+	c608451 [label=<<table title="sorcer.co.tuple.Tuple3" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Tuple3.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Tuple3&lt;T1, T2, T3&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + _3 : T3 </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Tuple3() </td></tr>
+<tr><td align="left" balign="left"> + Tuple3(x1 : T1, x2 : T2, x3 : T3) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Tuple3.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Entry<T>
-	c567000 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
+	c608453 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Entry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -125,11 +125,10 @@ digraph G {
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + compareTo(o : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Entry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.Range
-	c567230 [label=<<table title="sorcer.eo.operator.Range" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.Range.html">
+	c608686 [label=<<table title="sorcer.eo.operator.Range" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.Range.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Range </td></tr>
 		</table></td></tr>
@@ -137,8 +136,8 @@ digraph G {
 <tr><td align="left" balign="left"> + range : Integer[] </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + operator.Range(from : Integer, to : Integer) </td></tr>
-<tr><td align="left" balign="left"> + operator.Range(range : Integer[]) </td></tr>
+<tr><td align="left" balign="left"> + Range(from : Integer, to : Integer) </td></tr>
+<tr><td align="left" balign="left"> + Range(range : Integer[]) </td></tr>
 <tr><td align="left" balign="left"> + range() : Integer[] </td></tr>
 <tr><td align="left" balign="left"> + from() : int </td></tr>
 <tr><td align="left" balign="left"> + to() : int </td></tr>
@@ -146,7 +145,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../eo/operator.Range.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.result
-	c567233 [label=<<table title="sorcer.eo.operator.result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.result.html">
+	c608689 [label=<<table title="sorcer.eo.operator.result" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.result.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> result </td></tr>
 		</table></td></tr>
@@ -159,35 +158,35 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../eo/operator.result.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.DataEntry<T2>
-	c567234 [label=<<table title="sorcer.eo.operator.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.DataEntry.html">
+	c608692 [label=<<table title="sorcer.eo.operator.DataEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../eo/operator.DataEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataEntry&lt;T2&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../eo/operator.DataEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.co.tuple.DataEntry<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
-	c566996:p -> c566987:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Path<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
-	c566996:p -> c566989:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.Tuple3<T1, T2, T3> extends sorcer.co.tuple.Tuple2<T1, T2>
-	c566996:p -> c566990:p [dir=back,arrowtail=empty];
+	c608446:p -> c608438:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.DataEntry<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
+	c608446:p -> c608445:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Arg
-	c566809:p -> c566996:p [dir=back,arrowtail=empty,style=dashed];
+	c608413:p -> c608446:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Tuple2<T1, T2> implements java.io.Serializable
-	c567405:p -> c566996:p [dir=back,arrowtail=empty,style=dashed];
+	c608887:p -> c608446:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Identifiable
-	c566840:p -> c566996:p [dir=back,arrowtail=empty,style=dashed];
+	c608383:p -> c608446:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.co.tuple.Tuple3<T1, T2, T3> extends sorcer.co.tuple.Tuple2<T1, T2>
+	c608446:p -> c608451:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Entry<T> extends sorcer.co.tuple.Tuple2<java.lang.String, T>
-	c566996:p -> c567000:p [dir=back,arrowtail=empty];
+	c608446:p -> c608453:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.Entry<T> implements sorcer.service.Arg
-	c566809:p -> c567000:p [dir=back,arrowtail=empty,style=dashed];
+	c608413:p -> c608453:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.eo.operator.Range extends sorcer.co.tuple.Tuple2<java.lang.Integer, java.lang.Integer>
-	c566996:p -> c567230:p [dir=back,arrowtail=empty];
+	c608446:p -> c608686:p [dir=back,arrowtail=empty];
 	//sorcer.eo.operator.result extends sorcer.co.tuple.Tuple2
-	c566996:p -> c567233:p [dir=back,arrowtail=empty];
+	c608446:p -> c608689:p [dir=back,arrowtail=empty];
 	//sorcer.eo.operator.DataEntry<T2> extends sorcer.co.tuple.Tuple2<java.lang.String, T2>
-	c566996:p -> c567234:p [dir=back,arrowtail=empty];
+	c608446:p -> c608692:p [dir=back,arrowtail=empty];
 	// java.io.Serializable
-	c567405 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c608887 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

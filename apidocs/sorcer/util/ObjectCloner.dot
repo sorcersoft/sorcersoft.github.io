@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ObjectClonerAdv
-	c360659 [label=<<table title="sorcer.util.ObjectClonerAdv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectClonerAdv.html">
+	c390367 [label=<<table title="sorcer.util.ObjectClonerAdv" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectClonerAdv.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectClonerAdv </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectClonerAdv.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ObjectCloner
-	c360677 [label=<<table title="sorcer.util.ObjectCloner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectCloner.html">
+	c390389 [label=<<table title="sorcer.util.ObjectCloner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectCloner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectCloner </td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectCloner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ObjectClonerAdv extends sorcer.util.ObjectCloner
-	c360677:p -> c360659:p [dir=back,arrowtail=empty];
+	c390389:p -> c390367:p [dir=back,arrowtail=empty];
 }
 

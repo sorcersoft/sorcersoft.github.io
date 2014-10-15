@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.exec.NullInputStream
-	c356366 [label=<<table title="sorcer.util.exec.NullInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NullInputStream.html">
+	c385919 [label=<<table title="sorcer.util.exec.NullInputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NullInputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NullInputStream </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NullInputStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.exec.Input
-	c356368 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Input.html">
+	c385920 [label=<<table title="sorcer.util.exec.Input" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Input.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Input </td></tr>
@@ -36,23 +36,23 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + read() : int </td></tr>
-<tr><td align="left" balign="left"> + read(buf : byte[]) : int </td></tr>
-<tr><td align="left" balign="left"> + read(buf : byte[], off : int, len : int) : int </td></tr>
-<tr><td align="left" balign="left"> + available() : int </td></tr>
-<tr><td align="left" balign="left"> + skip(n : long) : long </td></tr>
-<tr><td align="left" balign="left"> + close() </td></tr>
-<tr><td align="left" balign="left"> + markSupported() : boolean </td></tr>
-<tr><td align="left" balign="left"> + reset() </td></tr>
-<tr><td align="left" balign="left"> + mark(readLimit : int) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + read() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + read(buf : byte[]) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + read(buf : byte[], off : int, len : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + available() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + skip(n : long) : long </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + close() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + markSupported() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + reset() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + mark(readLimit : int) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Input.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.exec.NullInputStream extends java.io.InputStream
-	c356996:p -> c356366:p [dir=back,arrowtail=empty];
+	c386593:p -> c385919:p [dir=back,arrowtail=empty];
 	//sorcer.util.exec.NullInputStream implements sorcer.util.exec.Input
-	c356368:p -> c356366:p [dir=back,arrowtail=empty,style=dashed];
+	c385920:p -> c385919:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.InputStream
-	c356996 [label=<<table title="java.io.InputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html">
+	c386593 [label=<<table title="java.io.InputStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> InputStream </font></td></tr>
 		</table></td></tr>

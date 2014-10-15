@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.co.operator
-	c57097 [label=<<table title="sorcer.co.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.html">
+	c62318 [label=<<table title="sorcer.co.operator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> operator </td></tr>
 		</table></td></tr>
@@ -33,12 +33,14 @@ digraph G {
 <tr><td align="left" balign="left"> + tuple(x1 : T1, x2 : T2, x3 : T3, x4 : T4, x5 : T5, x6 : T6) : Tuple6&lt;T1, T2, T3, T4, T5, T6&gt; </td></tr>
 <tr><td align="left" balign="left"> + from(elems : String[]) : String[] </td></tr>
 <tr><td align="left" balign="left"> + array(elems : T[]) : T[] </td></tr>
+<tr><td align="left" balign="left"> + args(elems : Arg[]) : Arg[] </td></tr>
 <tr><td align="left" balign="left"> + bag(elems : T[]) : Set&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + list(elems : T[]) : List&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + row(elems : Object[]) : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + values(elems : Object[]) : List&lt;Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + header(elems : String[]) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + names(elems : String[]) : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + names(nameLists : List&lt;String&gt;[]) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + duo(x1 : T1, x2 : T2) : Tuple2&lt;T1, T2&gt; </td></tr>
 <tr><td align="left" balign="left"> + triplet(x1 : T1, x2 : T2, x3 : T3) : Tuple3&lt;T1, T2, T3&gt; </td></tr>
 <tr><td align="left" balign="left"> + entry(x1 : String, x2 : T2) : Entry&lt;T2&gt; </td></tr>
@@ -47,9 +49,11 @@ digraph G {
 <tr><td align="left" balign="left"> + dbEntry(x1 : String, x2 : T2) : Entry&lt;T2&gt; </td></tr>
 <tr><td align="left" balign="left"> + dbEntry(x1 : T1, x2 : T2, dbURL : URL) : Tuple2&lt;T1, T2&gt; </td></tr>
 <tr><td align="left" balign="left"> + entry(x1 : T1, x2 : T2, x3 : T3) : Tuple3&lt;T1, T2, T3&gt; </td></tr>
+<tr><td align="left" balign="left"> + entry(x1 : String, x3 : FidelityInfo) : FidelityEntry&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + entry(x1 : String, x2 : Strategy) : StrategyEntry </td></tr>
 <tr><td align="left" balign="left"> + key(entry : Tuple2&lt;T1, T2&gt;) : T1 </td></tr>
 <tr><td align="left" balign="left"> + value(entry : Tuple2&lt;T1, T2&gt;) : T2 </td></tr>
+<tr><td align="left" balign="left"> + table(elems : T[]) : Table </td></tr>
 <tr><td align="left" balign="left"> + listContext(elems : T[]) : ListContext&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + dictionary(entries : Tuple2&lt;?, ?&gt;[]) : Map&lt;Object, Object&gt; </td></tr>
 <tr><td align="left" balign="left"> + map(entries : Tuple2&lt;K, V&gt;[]) : Map&lt;K, V&gt; </td></tr>
@@ -62,35 +66,18 @@ digraph G {
 <tr><td align="left" balign="left"> + names(name : String, size : int, from : int) : String[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="./operator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.Loop
-	c57098 [label=<<table title="sorcer.co.Loop" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Loop.html">
+	// sorcer.co.operator.Header<T>
+	c62319 [label=<<table title="sorcer.co.operator.Header" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./operator.Header.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Loop </td></tr>
+<tr><td align="center" balign="center"> Header&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Loop() </td></tr>
-<tr><td align="left" balign="left"> + Loop(to : int) </td></tr>
-<tr><td align="left" balign="left"> + Loop(from : int, to : int) </td></tr>
-<tr><td align="left" balign="left"> + Loop(template : String, from : int, to : int) </td></tr>
-<tr><td align="left" balign="left"> + Loop(templates : List&lt;String&gt;, to : int) </td></tr>
-<tr><td align="left" balign="left"> + count() : int </td></tr>
-<tr><td align="left" balign="left"> + getNames(name : String) : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getNames(names : List&lt;String&gt;) : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getLoopInstances() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + update(input : String, index : int) : String </td></tr>
-<tr><td align="left" balign="left"> + getRegexTemplate(input : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getTemplate(input : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getFrom() : int </td></tr>
-<tr><td align="left" balign="left"> + getTo() : int </td></tr>
-<tr><td align="left" balign="left"> + getTarget() : String </td></tr>
-<tr><td align="left" balign="left"> + setTarget(target : String) </td></tr>
-<tr><td align="left" balign="left"> + getTemplate() : String </td></tr>
-<tr><td align="left" balign="left"> + setTemplate(template : String) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + Header() </td></tr>
+<tr><td align="left" balign="left"> + Header(initialCapacity : int) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Loop.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./operator.Header.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

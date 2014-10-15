@@ -27,23 +27,23 @@
 <a class="jxr_linenumber" name="17" href="#17">17</a>  
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
 <a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.io.FileUtils;
-<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.io.filefilter.AbstractFileFilter;
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.io.filefilter.DirectoryFileFilter;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> org.slf4j.Logger;
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> org.slf4j.LoggerFactory;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ArtifactCoordinates;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> sorcer.util.JavaSystemProperties;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> java.io.File;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> java.util.*;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> * @author Rafał Krupiński</em>
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../sorcer/resolver/ProjectArtifactResolver.html">ProjectArtifactResolver</a> <strong class="jxr_keyword">implements</strong> <a href="../../sorcer/resolver/ArtifactResolver.html">ArtifactResolver</a> {
-<a class="jxr_linenumber" name="36" href="#36">36</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = LoggerFactory.getLogger(ProjectArtifactResolver.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.io.filefilter.*;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> org.slf4j.Logger;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> org.slf4j.LoggerFactory;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> sorcer.core.SorcerEnv;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> sorcer.util.ArtifactCoordinates;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> sorcer.util.JavaSystemProperties;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> java.io.File;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> * @author Rafał Krupiński</em>
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../sorcer/resolver/ProjectArtifactResolver.html">ProjectArtifactResolver</a> <strong class="jxr_keyword">implements</strong> <a href="../../sorcer/resolver/ArtifactResolver.html">ArtifactResolver</a> {
+<a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = LoggerFactory.getLogger(ProjectArtifactResolver.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> IOFileFilter DIR_FILTER = FileFilterUtils.and(DirectoryFileFilter.INSTANCE, HiddenFileFilter.VISIBLE);
 <a class="jxr_linenumber" name="37" href="#37">37</a>  
 <a class="jxr_linenumber" name="38" href="#38">38</a>      <strong class="jxr_keyword">private</strong> Collection&lt;File&gt; roots;
 <a class="jxr_linenumber" name="39" href="#39">39</a>  
@@ -132,7 +132,7 @@
 <a class="jxr_linenumber" name="122" href="#122">122</a>     }
 <a class="jxr_linenumber" name="123" href="#123">123</a> 
 <a class="jxr_linenumber" name="124" href="#124">124</a>     <strong class="jxr_keyword">protected</strong> File resolveRelative(File root, String artifactId) {
-<a class="jxr_linenumber" name="125" href="#125">125</a>         Collection&lt;File&gt; files = FileUtils.listFiles(root, <strong class="jxr_keyword">new</strong> <a href="../../sorcer/resolver/ProjectArtifactResolver.html">ArtifactIdFileFilter</a>(artifactId), DirectoryFileFilter.INSTANCE);
+<a class="jxr_linenumber" name="125" href="#125">125</a>         Collection&lt;File&gt; files = FileUtils.listFiles(root, <strong class="jxr_keyword">new</strong> <a href="../../sorcer/resolver/ProjectArtifactResolver.html">ArtifactIdFileFilter</a>(artifactId), DIR_FILTER);
 <a class="jxr_linenumber" name="126" href="#126">126</a>         <strong class="jxr_keyword">if</strong> (files.size() &gt; 0) {
 <a class="jxr_linenumber" name="127" href="#127">127</a>             File result = files.iterator().next();
 <a class="jxr_linenumber" name="128" href="#128">128</a>             <strong class="jxr_keyword">if</strong> (files.size() &gt; 1) {
@@ -162,12 +162,19 @@
 <a class="jxr_linenumber" name="152" href="#152">152</a>                         <span class="jxr_string">"target"</span>.equals(parent)
 <a class="jxr_linenumber" name="153" href="#153">153</a>                                 <em class="jxr_comment">//check repository just in case</em>
 <a class="jxr_linenumber" name="154" href="#154">154</a>                                 || artifactId.equals(grandParent)
-<a class="jxr_linenumber" name="155" href="#155">155</a>                 )
-<a class="jxr_linenumber" name="156" href="#156">156</a>                         <em class="jxr_comment">//check distribution structure</em>
-<a class="jxr_linenumber" name="157" href="#157">157</a>                         || <span class="jxr_string">"lib"</span>.equals(grandParent) &amp;&amp; (artifactId + <span class="jxr_string">".jar"</span>).equals(name)
-<a class="jxr_linenumber" name="158" href="#158">158</a>                 ;
-<a class="jxr_linenumber" name="159" href="#159">159</a>     }
-<a class="jxr_linenumber" name="160" href="#160">160</a> }
+<a class="jxr_linenumber" name="155" href="#155">155</a> 
+<a class="jxr_linenumber" name="156" href="#156">156</a>                         || (
+<a class="jxr_linenumber" name="157" href="#157">157</a>                             <em class="jxr_comment">//check gradle development structure</em>
+<a class="jxr_linenumber" name="158" href="#158">158</a>                             <span class="jxr_string">"libs"</span>.equals(parent)
+<a class="jxr_linenumber" name="159" href="#159">159</a>                                     <em class="jxr_comment">//check repository just in case</em>
+<a class="jxr_linenumber" name="160" href="#160">160</a>                                     || <span class="jxr_string">"build"</span>.equals(grandParent)
+<a class="jxr_linenumber" name="161" href="#161">161</a>                         )
+<a class="jxr_linenumber" name="162" href="#162">162</a>                 )
+<a class="jxr_linenumber" name="163" href="#163">163</a>                 <em class="jxr_comment">//check distribution structure</em>
+<a class="jxr_linenumber" name="164" href="#164">164</a>                 || <span class="jxr_string">"lib"</span>.equals(grandParent) &amp;&amp; (artifactId + <span class="jxr_string">".jar"</span>).equals(name)
+<a class="jxr_linenumber" name="165" href="#165">165</a>                 ;
+<a class="jxr_linenumber" name="166" href="#166">166</a>     }
+<a class="jxr_linenumber" name="167" href="#167">167</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

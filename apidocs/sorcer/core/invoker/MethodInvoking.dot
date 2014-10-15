@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Invocation<T>
-	c325960 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.MethodInvoker<T>
-	c326081 [label=<<table title="sorcer.core.invoker.MethodInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoker.html">
+	c350604 [label=<<table title="sorcer.core.invoker.MethodInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MethodInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MethodInvoker&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -67,7 +53,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MethodInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.invoker.MethodInvoking<T>
-	c326088 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MethodInvoking.html">
+	c350617 [label=<<table title="sorcer.core.invoker.MethodInvoking" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MethodInvoking.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MethodInvoking&lt;T&gt; </td></tr>
@@ -76,15 +62,28 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
-<tr><td align="left" balign="left"> + getParameters() : Object[] </td></tr>
-<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParameterTypes(types : Class&lt;?&gt;[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParameters(args : Object[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getParameters() : Object[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + evaluate(entries : Arg[]) : T </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./MethodInvoking.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Invocation<T>
+	c350679 [label=<<table title="sorcer.service.Invocation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Invocation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Invocation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + invoke(context : Context&lt;T&gt;, entries : Arg[]) : T </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Invocation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.invoker.MethodInvoker<T> implements sorcer.core.invoker.MethodInvoking<T>
-	c326088:p -> c326081:p [dir=back,arrowtail=empty,style=dashed];
+	c350617:p -> c350604:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.invoker.MethodInvoking<T> implements sorcer.service.Invocation<T>
-	c325960:p -> c326088:p [dir=back,arrowtail=empty,style=dashed];
+	c350679:p -> c350617:p [dir=back,arrowtail=empty,style=dashed];
 }
 

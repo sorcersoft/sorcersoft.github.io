@@ -9,23 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.service.ServiceRegistrar
-	c482892 [label=<<table title="sorcer.core.service.ServiceRegistrar" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceRegistrar.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ServiceRegistrar </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # lookupManagerRegistry : ILookupManagerRegistry </td></tr>
-<tr><td align="left" balign="left"> # leaseRenewalManager : LeaseRenewalManager </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ServiceRegistrar() </td></tr>
-<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ServiceRegistrar.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.config.AbstractBeanListener
-	c482903 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../config/AbstractBeanListener.html">
+	c515825 [label=<<table title="sorcer.config.AbstractBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../config/AbstractBeanListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractBeanListener </font></td></tr>
 		</table></td></tr>
@@ -39,7 +24,22 @@ digraph G {
 <tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../config/AbstractBeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.service.ServiceRegistrar
+	c515831 [label=<<table title="sorcer.core.service.ServiceRegistrar" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceRegistrar.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ServiceRegistrar </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # lookupManagerRegistry : ILookupManagerRegistry </td></tr>
+<tr><td align="left" balign="left"> # leaseRenewalManager : LeaseRenewalManager </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ServiceRegistrar() </td></tr>
+<tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
+<tr><td align="left" balign="left"> + destroy(serviceBuilder : IServiceBuilder&lt;T&gt;, bean : T) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ServiceRegistrar.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.service.ServiceRegistrar extends sorcer.config.AbstractBeanListener
-	c482903:p -> c482892:p [dir=back,arrowtail=empty];
+	c515825:p -> c515831:p [dir=back,arrowtail=empty];
 }
 

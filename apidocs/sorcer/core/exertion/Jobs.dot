@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.SorcerConstants
-	c298965 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
+	c320382 [label=<<table title="sorcer.core.SorcerConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../SorcerConstants.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerConstants </td></tr>
@@ -22,6 +22,8 @@ digraph G {
 <tr><td align="left" balign="left"> + E_SORCER_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_SORCER_EXT : String </td></tr>
 <tr><td align="left" balign="left"> + S_SORCER_EXT : String </td></tr>
+<tr><td align="left" balign="left"> + E_SORCER_MODELING : String </td></tr>
+<tr><td align="left" balign="left"> + S_SORCER_MODELING : String </td></tr>
 <tr><td align="left" balign="left"> + P_UNDEFINED : String </td></tr>
 <tr><td align="left" balign="left"> + P_PROVIDER_NAME : String </td></tr>
 <tr><td align="left" balign="left"> + EXERT_MONITOR_NAME : String </td></tr>
@@ -137,8 +139,10 @@ digraph G {
 <tr><td align="left" balign="left"> + S_VERSION_SORCER : String </td></tr>
 <tr><td align="left" balign="left"> + S_VERSION_RIO : String </td></tr>
 <tr><td align="left" balign="left"> + S_SORCER_LOCAL_HOSTADDR : String </td></tr>
+<tr><td align="left" balign="left"> + S_JNA_LIB_PATH : String </td></tr>
 <tr><td align="left" balign="left"> + S_KEY_SORCER_ENV : String </td></tr>
 <tr><td align="left" balign="left"> + S_WEBSTER_TMP_DIR : String </td></tr>
+<tr><td align="left" balign="left"> + S_WEBSTER_PUT_DIR : String </td></tr>
 <tr><td align="left" balign="left"> + S_RIO_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_RIO_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + E_WEBSTER_PORT : String </td></tr>
@@ -616,14 +620,18 @@ digraph G {
 <tr><td align="left" balign="left"> + CODEBASE_SEPARATOR : String </td></tr>
 <tr><td align="left" balign="left"> + NAME_DEFAULT : String </td></tr>
 <tr><td align="left" balign="left"> + MDC_SORCER_REMOTE_CALL : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_EXERTION_ID : String </td></tr>
+<tr><td align="left" balign="left"> + MDC_PROVIDER_ID : String </td></tr>
 <tr><td align="left" balign="left"> + START_PACKAGE : String </td></tr>
+<tr><td align="left" balign="left"> + REMOTE_LOGGER_INTERFACE : String </td></tr>
+<tr><td align="left" balign="left"> + S_SHARED_DIRS_FILE : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="../SorcerConstants.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.Jobs
-	c299364 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Jobs.html">
+	c320756 [label=<<table title="sorcer.core.exertion.Jobs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Jobs.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Jobs </td></tr>
 		</table></td></tr>
@@ -632,34 +640,20 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + isCatalogSingleton(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosCatalogSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosCatalogParallel(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isCatalogParallel(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isCatalogSequential(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isCatalogBlock(exertion : Exertion) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isSpaceBlock(exertion : Exertion) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSWIFSequential(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isSpaceSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosSpaceSequential(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isSpaceParallel(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isQosSpaceParallel(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + isSpaceSingleton(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isParallel(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isSequential(job : Job) : boolean </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable(job : Job) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getInputExertions(job : Job) : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getCC(sc : Context&lt;&gt;) : ControlContext </td></tr>
 <tr><td align="left" balign="left"> + removeExceptions(job : Job) </td></tr>
 <tr><td align="left" balign="left"> + removeExceptions(sc : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + replaceNullIDs(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + replaceNullIDs(task : ServiceExertion) </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + getID() : String </td></tr>
-<tr><td align="left" balign="left"> + getEntryEnvelop(ex : Exertion) : ExertionEnvelop </td></tr>
 <tr><td align="left" balign="left"> + getTaskContexts(ex : Exertion) : List&lt;Context&lt;&gt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Jobs.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.Jobs implements sorcer.core.SorcerConstants
-	c298965:p -> c299364:p [dir=back,arrowtail=empty,style=dashed];
+	c320382:p -> c320756:p [dir=back,arrowtail=empty,style=dashed];
 }
 

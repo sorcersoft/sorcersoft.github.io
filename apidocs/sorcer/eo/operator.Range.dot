@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c597464 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
+	c646116 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -35,7 +35,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../co/tuple/Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.eo.operator.Range
-	c597698 [label=<<table title="sorcer.eo.operator.Range" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./operator.Range.html">
+	c646356 [label=<<table title="sorcer.eo.operator.Range" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./operator.Range.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Range </td></tr>
 		</table></td></tr>
@@ -43,8 +43,8 @@ digraph G {
 <tr><td align="left" balign="left"> + range : Integer[] </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + operator.Range(from : Integer, to : Integer) </td></tr>
-<tr><td align="left" balign="left"> + operator.Range(range : Integer[]) </td></tr>
+<tr><td align="left" balign="left"> + Range(from : Integer, to : Integer) </td></tr>
+<tr><td align="left" balign="left"> + Range(range : Integer[]) </td></tr>
 <tr><td align="left" balign="left"> + range() : Integer[] </td></tr>
 <tr><td align="left" balign="left"> + from() : int </td></tr>
 <tr><td align="left" balign="left"> + to() : int </td></tr>
@@ -52,6 +52,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./operator.Range.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.eo.operator.Range extends sorcer.co.tuple.Tuple2<java.lang.Integer, java.lang.Integer>
-	c597464:p -> c597698:p [dir=back,arrowtail=empty];
+	c646116:p -> c646356:p [dir=back,arrowtail=empty];
 }
 

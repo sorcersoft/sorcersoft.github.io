@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.EmailCmd
-	c204685 [label=<<table title="sorcer.util.EmailCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EmailCmd.html">
+	c214826 [label=<<table title="sorcer.util.EmailCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EmailCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EmailCmd </td></tr>
 		</table></td></tr>
@@ -25,7 +25,6 @@ digraph G {
 <tr><td align="left" balign="left"> + EmailCmd(cmdName : String, smtpHost : String) </td></tr>
 <tr><td align="left" balign="left"> + setArgs(target : Object, args : Object[]) </td></tr>
 <tr><td align="left" balign="left"> + doIt() </td></tr>
-<tr><td align="left" balign="left"> + undoIt() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EmailCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

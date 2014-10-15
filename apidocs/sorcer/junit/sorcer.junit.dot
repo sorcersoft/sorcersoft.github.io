@@ -9,21 +9,52 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.junit.SorcerServiceConfigurations
-	c61471 [label=<<table title="sorcer.junit.SorcerServiceConfigurations" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceConfigurations.html">
+	// sorcer.junit.ExertionErrors
+	c65340 [label=<<table title="sorcer.junit.ExertionErrors" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionErrors.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SorcerServiceConfigurations </font></td></tr>
+<tr><td align="center" balign="center"> ExertionErrors </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SorcerServiceConfigurations.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.junit.SorcerClient
-	c61472 [label=<<table title="sorcer.junit.SorcerClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerClient.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SorcerClient </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
-		</table>>, URL="./SorcerClient.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ExertionErrors() </td></tr>
+<tr><td align="left" balign="left"> + check(errors : List&lt;ThrowableTrace&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExertionErrors.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.junit.ExertionErrors.MultiException
+	c65341 [label=<<table title="sorcer.junit.ExertionErrors.MultiException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionErrors.MultiException.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> MultiException </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MultiException(others : List&lt;Throwable&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getErrors() : List&lt;Throwable&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExertionErrors.MultiException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.junit.SorcerSuite
+	c65342 [label=<<table title="sorcer.junit.SorcerSuite" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerSuite.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SorcerSuite </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SorcerSuite(klass : Class&lt;?&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerSuite.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.junit.ExportCodebase
+	c65343 [label=<<table title="sorcer.junit.ExportCodebase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExportCodebase.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExportCodebase </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ExportCodebase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.junit.SorcerRunner
-	c61473 [label=<<table title="sorcer.junit.SorcerRunner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerRunner.html">
+	c65344 [label=<<table title="sorcer.junit.SorcerRunner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerRunner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerRunner </td></tr>
 		</table></td></tr>
@@ -38,54 +69,23 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerRunner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.junit.SorcerServiceConfiguration
-	c61474 [label=<<table title="sorcer.junit.SorcerServiceConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceConfiguration.html">
+	c65345 [label=<<table title="sorcer.junit.SorcerServiceConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SorcerServiceConfiguration </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.junit.SorcerSuite
-	c61475 [label=<<table title="sorcer.junit.SorcerSuite" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerSuite.html">
+	// sorcer.junit.SorcerClient
+	c65346 [label=<<table title="sorcer.junit.SorcerClient" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerClient.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> SorcerSuite </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SorcerClient </td></tr>
 		</table></td></tr>
+		</table>>, URL="./SorcerClient.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.junit.SorcerServiceConfigurations
+	c65347 [label=<<table title="sorcer.junit.SorcerServiceConfigurations" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerServiceConfigurations.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SorcerServiceConfigurations </font></td></tr>
 		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SorcerSuite(klass : Class&lt;?&gt;) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerSuite.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.junit.ExertionErrors
-	c61476 [label=<<table title="sorcer.junit.ExertionErrors" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionErrors.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ExertionErrors </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertionErrors() </td></tr>
-<tr><td align="left" balign="left"> + check(errors : List&lt;ThrowableTrace&gt;) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExertionErrors.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.junit.ExertionErrors.MultiException
-	c61477 [label=<<table title="sorcer.junit.ExertionErrors.MultiException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExertionErrors.MultiException.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MultiException </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ExertionErrors.MultiException(others : List&lt;Throwable&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getErrors() : List&lt;Throwable&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExertionErrors.MultiException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.junit.ExportCodebase
-	c61478 [label=<<table title="sorcer.junit.ExportCodebase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExportCodebase.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ExportCodebase </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./ExportCodebase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SorcerServiceConfigurations.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

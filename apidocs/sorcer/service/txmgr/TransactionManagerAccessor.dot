@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ServiceAccessor
-	c564554 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/ServiceAccessor.html">
+	c605904 [label=<<table title="sorcer.util.ServiceAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../util/ServiceAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceAccessor </td></tr>
 		</table></td></tr>
@@ -45,7 +45,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../util/ServiceAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.txmgr.TransactionManagerAccessor
-	c564690 [label=<<table title="sorcer.service.txmgr.TransactionManagerAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TransactionManagerAccessor.html">
+	c606161 [label=<<table title="sorcer.service.txmgr.TransactionManagerAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TransactionManagerAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TransactionManagerAccessor </td></tr>
 		</table></td></tr>
@@ -59,6 +59,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TransactionManagerAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.txmgr.TransactionManagerAccessor extends sorcer.util.ServiceAccessor
-	c564554:p -> c564690:p [dir=back,arrowtail=empty];
+	c605904:p -> c606161:p [dir=back,arrowtail=empty];
 }
 

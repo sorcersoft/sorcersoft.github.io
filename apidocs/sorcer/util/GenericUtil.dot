@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.GenericUtil
-	c248973 [label=<<table title="sorcer.util.GenericUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GenericUtil.html">
+	c260828 [label=<<table title="sorcer.util.GenericUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GenericUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GenericUtil </td></tr>
 		</table></td></tr>
@@ -68,6 +68,8 @@ digraph G {
 <tr><td align="left" balign="left"> + isWindows() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isWindows64() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isWindows32() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isLinux64() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isLinux32() : boolean </td></tr>
 <tr><td align="left" balign="left"> + main(args : String[]) </td></tr>
 <tr><td align="left" balign="left"> + makeExecutable(file : File) </td></tr>
 <tr><td align="left" balign="left"> + printArray(da : double[]) </td></tr>
@@ -130,7 +132,6 @@ digraph G {
 <tr><td align="left" balign="left"> + writeObjectToFile(file : File, obj : Object) </td></tr>
 <tr><td align="left" balign="left"> + writeUrlToFile(inputUrl : URL, localInputFile : File) </td></tr>
 <tr><td align="left" balign="left"> + executeCommandWithWorker(command : String, printOutput : boolean, printError : boolean, timeOut : long, dir : File, logFile : File) : int </td></tr>
-<tr><td align="left" balign="left"> + executeCommandWithWorkerNoBlocking(command : String[], printOutput : boolean, printError : boolean, timeOut : long, dir : File, logFile : File, doSynchronizedLaunch : boolean) : Thread </td></tr>
 <tr><td align="left" balign="left"> + dos2unix(file : File) </td></tr>
 <tr><td align="left" balign="left"> + runShellScriptViaSlurm(appName : String, scriptFile : File, scriptRecords : Vector&lt;String&gt;, logFile : File) : int </td></tr>
 <tr><td align="left" balign="left"> + runShellScriptViaSlurm(appName : String, scriptFile : File, scriptRecords : Vector&lt;String&gt;, logFile : File, scriptTimeout : long) : int </td></tr>
@@ -146,9 +147,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GenericUtil.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.GenericUtil implements java.io.Serializable
-	c249619:p -> c248973:p [dir=back,arrowtail=empty,style=dashed];
+	c261518:p -> c260828:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c249619 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c261518 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

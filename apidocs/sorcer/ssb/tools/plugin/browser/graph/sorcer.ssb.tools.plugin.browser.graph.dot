@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler
-	c66617 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChartItemEnabler.html">
+	c73710 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChartItemEnabler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ChartItemEnabler </td></tr>
@@ -19,11 +19,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + enableData(name : String, yesno : boolean) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + enableData(name : String, yesno : boolean) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ChartItemEnabler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.tools.plugin.browser.graph.ChartException
-	c66618 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChartException.html">
+	c73711 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.ChartException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChartException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ChartException </td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ChartException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.ssb.tools.plugin.browser.graph.Chart
-	c66619 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.Chart" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Chart.html">
+	c73712 [label=<<table title="sorcer.ssb.tools.plugin.browser.graph.Chart" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Chart.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Chart </td></tr>
 		</table></td></tr>
@@ -59,6 +59,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Chart.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.ssb.tools.plugin.browser.graph.Chart implements sorcer.ssb.tools.plugin.browser.graph.ChartItemEnabler
-	c66617:p -> c66619:p [dir=back,arrowtail=empty,style=dashed];
+	c73710:p -> c73712:p [dir=back,arrowtail=empty,style=dashed];
 }
 

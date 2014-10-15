@@ -9,25 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.loki.key.KeyGenerationManagement
-	c300864 [label=<<table title="sorcer.core.loki.key.KeyGenerationManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./KeyGenerationManagement.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> KeyGenerationManagement </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + genKeyPair() : KeyPair </td></tr>
-<tr><td align="left" balign="left"> + genKeyAgreement(myKP : KeyPair) : KeyAgreement </td></tr>
-<tr><td align="left" balign="left"> + genCompoundKeys(ids : Uuid[], pairs : KeyPair[]) : Map&lt;Uuid, Key&gt; </td></tr>
-<tr><td align="left" balign="left"> + genCompoundKeys(ids : Vector&lt;Uuid&gt;, pairs : Vector&lt;KeyPair&gt;) : Map&lt;Uuid, Key&gt; </td></tr>
-<tr><td align="left" balign="left"> + genSharedKey(agree : KeyAgreement, compKey : Key) : KeyAgreement </td></tr>
-		</table></td></tr>
-		</table>>, URL="./KeyGenerationManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.loki.key.KeyGenerator
-	c300866 [label=<<table title="sorcer.core.loki.key.KeyGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./KeyGenerator.html">
+	c322228 [label=<<table title="sorcer.core.loki.key.KeyGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./KeyGenerator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> KeyGenerator </td></tr>
 		</table></td></tr>
@@ -43,7 +26,24 @@ digraph G {
 <tr><td align="left" balign="left"> + genSharedKey(agree : KeyAgreement, compKey : Key) : KeyAgreement </td></tr>
 		</table></td></tr>
 		</table>>, URL="./KeyGenerator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.loki.key.KeyGenerationManagement
+	c322229 [label=<<table title="sorcer.core.loki.key.KeyGenerationManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./KeyGenerationManagement.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> KeyGenerationManagement </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + genKeyPair() : KeyPair </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + genKeyAgreement(myKP : KeyPair) : KeyAgreement </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + genCompoundKeys(ids : Uuid[], pairs : KeyPair[]) : Map&lt;Uuid, Key&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + genCompoundKeys(ids : Vector&lt;Uuid&gt;, pairs : Vector&lt;KeyPair&gt;) : Map&lt;Uuid, Key&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + genSharedKey(agree : KeyAgreement, compKey : Key) : KeyAgreement </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./KeyGenerationManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.loki.key.KeyGenerator implements sorcer.core.loki.key.KeyGenerationManagement
-	c300864:p -> c300866:p [dir=back,arrowtail=empty,style=dashed];
+	c322229:p -> c322228:p [dir=back,arrowtail=empty,style=dashed];
 }
 

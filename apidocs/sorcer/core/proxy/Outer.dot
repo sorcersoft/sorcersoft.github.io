@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Service
-	c373805 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Service </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Outer
-	c373950 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Outer.html">
+	c402557 [label=<<table title="sorcer.core.proxy.Outer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Outer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Outer </td></tr>
@@ -32,26 +19,40 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getInner() : Remote </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getInner() : Remote </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Outer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.proxy.Partner
-	c373953 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Partner.html">
+	c402558 [label=<<table title="sorcer.core.proxy.Partner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Partner.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Partner </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Partner.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Service
+	c402674 [label=<<table title="sorcer.service.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Service.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Service </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + service(exertion : Exertion, txn : Transaction) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + service(exertion : Exertion) : Exertion </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/Service.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.proxy.Outer implements net.jini.admin.Administrable
-	c374402:p -> c373950:p [dir=back,arrowtail=empty,style=dashed];
+	c403163:p -> c402557:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Outer implements sorcer.service.Service
-	c373805:p -> c373950:p [dir=back,arrowtail=empty,style=dashed];
+	c402674:p -> c402557:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Partner implements sorcer.core.proxy.Outer
-	c373950:p -> c373953:p [dir=back,arrowtail=empty,style=dashed];
+	c402557:p -> c402558:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.proxy.Partner implements sorcer.service.Service
-	c373805:p -> c373953:p [dir=back,arrowtail=empty,style=dashed];
+	c402674:p -> c402558:p [dir=back,arrowtail=empty,style=dashed];
 	// net.jini.admin.Administrable
-	c374402 [label=<<table title="net.jini.admin.Administrable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/Administrable.html">
+	c403163 [label=<<table title="net.jini.admin.Administrable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="https://river.apache.org/doc/api/net/jini/admin/Administrable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Administrable </td></tr>
@@ -60,7 +61,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getAdmin() : Object </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAdmin() : Object </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="https://river.apache.org/doc/api/net/jini/admin/Administrable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

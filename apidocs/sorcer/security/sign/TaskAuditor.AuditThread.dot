@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.security.sign.TaskAuditor.AuditThread
-	c560619 [label=<<table title="sorcer.security.sign.TaskAuditor.AuditThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TaskAuditor.AuditThread.html">
+	c600937 [label=<<table title="sorcer.security.sign.TaskAuditor.AuditThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TaskAuditor.AuditThread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AuditThread </td></tr>
 		</table></td></tr>
@@ -18,15 +18,15 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TaskAuditor.AuditThread(task : SignedServiceTask) </td></tr>
+<tr><td align="left" balign="left"> + AuditThread(task : SignedServiceTask) </td></tr>
 <tr><td align="left" balign="left"> + getAuditor() : Auditor </td></tr>
 <tr><td align="left" balign="left"> + run() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TaskAuditor.AuditThread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.security.sign.TaskAuditor.AuditThread implements java.lang.Runnable
-	c560872:p -> c560619:p [dir=back,arrowtail=empty,style=dashed];
+	c601348:p -> c600937:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Runnable
-	c560872 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
+	c601348 [label=<<table title="java.lang.Runnable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Runnable </td></tr>
@@ -35,7 +35,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + run() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

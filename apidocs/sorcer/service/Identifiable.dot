@@ -9,177 +9,33 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.SecureIdentifiable
-	c273671 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SecureIdentifiable.html">
+	// sorcer.util.ModelTable
+	c288667 [label=<<table title="sorcer.util.ModelTable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/ModelTable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SecureIdentifiable </td></tr>
+<tr><td align="center" balign="center"> ModelTable </td></tr>
 		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getPrincipal() : Principal </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SecureIdentifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Exertion
-	c273686 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Exertion </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + THIN : int </td></tr>
-<tr><td align="left" balign="left"> + STANDARD : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + getStatus() : int </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + getDeploymentId() : String </td></tr>
-<tr><td align="left" balign="left"> + addExertion(component : Exertion) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getDataContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
-<tr><td align="left" balign="left"> + getContext(componentExertionName : String) : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getTrace() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getControlContext() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPar(path : String) : Arg </td></tr>
-<tr><td align="left" balign="left"> + getProcessSignature() : Signature </td></tr>
-<tr><td align="left" balign="left"> + getFlowType() : Strategy.Flow </td></tr>
-<tr><td align="left" balign="left"> + getAccessType() : Strategy.Access </td></tr>
-<tr><td align="left" balign="left"> + exert(txn : Transaction, entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + exert(entries : Arg[]) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllSignatures() : List&lt;Signature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetSignatures() : List&lt;NetSignature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllNetTaskSignatures() : List&lt;NetSignature&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllExceptions() : List&lt;ThrowableTrace&gt; </td></tr>
-<tr><td align="left" balign="left"> + getExertion(name : String) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + getExertions() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + getAllExertions() : List&lt;Exertion&gt; </td></tr>
-<tr><td align="left" balign="left"> + isMonitorable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isProvisionable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isWaitable() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isJob() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isTask() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isBlock() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isCmd() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isNet() : boolean </td></tr>
-<tr><td align="left" balign="left"> + setProvisionable(state : boolean) </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + isTree() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isConditional() : boolean </td></tr>
-<tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getIndex() : int </td></tr>
-<tr><td align="left" balign="left"> + setIndex(i : int) </td></tr>
-<tr><td align="left" balign="left"> + getMonitorSession() : MonitoringSession </td></tr>
-<tr><td align="left" balign="left"> + getParentId() : Uuid </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Mappable<T>
-	c273710 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mappable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + putValue(path : String, value : Object) : T </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identity
-	c273716 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identity.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # id : Uuid </td></tr>
-<tr><td align="left" balign="left"> # name : String </td></tr>
-<tr><td align="left" balign="left"> # characteristicValue : Object </td></tr>
-<tr><td align="left" balign="left"> # hasCharacteristicValue : boolean </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Identity() </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + setId(uuid : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
-<tr><td align="left" balign="left"> + getCharacteristicValue() : Object </td></tr>
-<tr><td align="left" balign="left"> + setCharacteristicValue(characteristicValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Identifiable
-	c273721 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Identifiable.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Identifiable </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getId() : Object </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.context.model.Variability<T>
-	c273779 [label=<<table title="sorcer.core.context.model.Variability" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/model/Variability.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Variability&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + getType() : Variability.Type </td></tr>
-<tr><td align="left" balign="left"> + getDescription() : ApplicationDescription </td></tr>
-<tr><td align="left" balign="left"> + setValue(varValue : Object) </td></tr>
-<tr><td align="left" balign="left"> + getValueType() : Class&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + getVariability(name : String) : Variability&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> + getArg(varName : String) : T </td></tr>
-<tr><td align="left" balign="left"> + isValueCurrent() : boolean </td></tr>
-<tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setScope(scope : Context&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged(obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + valueChanged() </td></tr>
-		</table></td></tr>
-		</table>>, URL="../core/context/model/Variability.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../util/ModelTable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.ServiceProvider
-	c273804 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/ServiceProvider.html">
+	c288765 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/provider/ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
-<tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
+<tr><td align="left" balign="left"> # scheduler : ScheduledExecutorService </td></tr>
 <tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_THREADS : String </td></tr>
-<tr><td align="left" balign="left"> + MANAGER_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + LOAD_FACTOR : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT_INCREMENT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ServiceProvider() </td></tr>
+<tr><td align="left" balign="left"> + ServiceProvider() </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(providerPropertiesFile : String) </td></tr>
 <tr><td align="left" balign="left"> + getGrants(cl : Class&lt;?&gt;, principals : Principal[]) : Permission[] </td></tr>
-<tr><td align="left" balign="left"> + grant(cl : Class&lt;?&gt;, principals : Principal[], permissions : Permission[]) </td></tr>
 <tr><td align="left" balign="left"> + grantSupported() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
 <tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
@@ -241,6 +97,7 @@ digraph G {
 <tr><td align="left" balign="left"> + invokeMethod(method : String, context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + invokeMethod(methodName : String, ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
@@ -276,7 +133,6 @@ digraph G {
 <tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -285,17 +141,15 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextDatabase() : boolean </td></tr>
 <tr><td align="left" balign="left"> # setupThreadManager() </td></tr>
 <tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + initSpaceSupport() </td></tr>
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/provider/ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.Invoker<T>
-	c273844 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/Invoker.html">
+	// sorcer.core.invoker.ServiceInvoker<T>
+	c288831 [label=<<table title="sorcer.core.invoker.ServiceInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ServiceInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> ServiceInvoker&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # name : String </td></tr>
@@ -308,22 +162,22 @@ digraph G {
 <tr><td align="left" balign="left"> # pars : ArgSet </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Invoker() </td></tr>
-<tr><td align="left" balign="left"> + Invoker(name : String) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker() </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
 <tr><td align="left" balign="left"> + getPars() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + valueValid(state : boolean) </td></tr>
 <tr><td align="left" balign="left"> + valueValid() : boolean </td></tr>
 <tr><td align="left" balign="left"> + valueChanged() </td></tr>
 <tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + addPar(par : Object) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + addPar(par : Object) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPars(parSet : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + addPars(parList : List&lt;Par&lt;&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + addPars(pars : Par&lt;&gt;[]) </td></tr>
@@ -336,7 +190,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 <tr><td align="left" balign="left"> + getEvaluator() : Evaluator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + clearPars() </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
@@ -345,10 +199,154 @@ digraph G {
 <tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
 		</table></td></tr>
-		</table>>, URL="../core/invoker/Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../core/invoker/ServiceInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.SecureIdentifiable
+	c288847 [label=<<table title="sorcer.service.SecureIdentifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SecureIdentifiable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SecureIdentifiable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPrincipal() : Principal </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SecureIdentifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Exertion
+	c288878 [label=<<table title="sorcer.service.Exertion" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Exertion.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Exertion </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + THIN : int </td></tr>
+<tr><td align="left" balign="left"> + STANDARD : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getStatus() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDeploymentId() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addExertion(component : Exertion) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDataContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getComponentExertion(path : String) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(path : String, args : Arg[]) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getReturnValue(entries : Arg[]) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getContext(componentExertionName : String) : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTrace() : List&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getControlContext() : IControlContext </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFidelity() : ServiceFidelity </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFidelities() : Map&lt;String, ServiceFidelity&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProcessSignature() : Signature </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFlowType() : Strategy.Flow </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAccessType() : Strategy.Access </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exert(txn : Transaction, entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + exert(entries : Arg[]) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isSpacable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExceptions() : List&lt;ThrowableTrace&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllSignatures() : List&lt;Signature&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllNetSignatures() : List&lt;Signature&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllNetTaskSignatures() : List&lt;Signature&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllExceptions() : List&lt;ThrowableTrace&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertion(name : String) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getExertions() : List&lt;Exertion&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAllExertions() : List&lt;Exertion&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isMonitorable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isProvisionable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isWaitable() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isJob() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTask() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isBlock() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isCmd() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setProvisionable(state : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + substitute(entries : Arg[]) : Exertion </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTree() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isConditional() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isCompound() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getIndex() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setIndex(i : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getParentId() : Uuid </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCreationDate() : Date </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Exertion.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identity
+	c288879 [label=<<table title="sorcer.service.Identity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Identity.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Identity </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # id : Uuid </td></tr>
+<tr><td align="left" balign="left"> # name : String </td></tr>
+<tr><td align="left" balign="left"> # characteristicValue : Object </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Identity() </td></tr>
+<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + setId(uuid : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + setName(name : String) </td></tr>
+<tr><td align="left" balign="left"> + getCharacteristicValue() : Object </td></tr>
+<tr><td align="left" balign="left"> + setCharacteristicValue(characteristicValue : Object) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Identity.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Identifiable
+	c288891 [label=<<table title="sorcer.service.Identifiable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Identifiable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Identifiable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Identifiable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Mappable<T>
+	c288897 [label=<<table title="sorcer.service.Mappable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Mappable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Mappable&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(path : String, args : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + asis(path : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putValue(path : String, value : Object) : T </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Mappable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.modeling.Variability<T>
+	c288937 [label=<<table title="sorcer.service.modeling.Variability" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./modeling/Variability.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Variability&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getType() : Variability.Type </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDescription() : ApplicationDescription </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValueType() : Class&lt;?&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getArgs() : ArgSet </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addArgs(set : ArgSet) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getArg(varName : String) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isValueCurrent() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + valueChanged(obj : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + valueChanged() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./modeling/Variability.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Tuple2<T1, T2>
-	c273877 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
+	c288954 [label=<<table title="sorcer.co.tuple.Tuple2" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../co/tuple/Tuple2.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Tuple2&lt;T1, T2&gt; </td></tr>
 		</table></td></tr>
@@ -373,7 +371,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../co/tuple/Tuple2.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.MarshalledData
-	c273926 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/MarshalledData.html">
+	c289061 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/bdb/objects/MarshalledData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MarshalledData </td></tr>
 		</table></td></tr>
@@ -395,25 +393,27 @@ digraph G {
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../util/bdb/objects/MarshalledData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.service.SecureIdentifiable implements sorcer.service.Identifiable
-	c273721:p -> c273671:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Exertion implements sorcer.service.Mappable<T>
-	c273710:p -> c273686:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Exertion implements sorcer.service.Identifiable
-	c273721:p -> c273686:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Mappable<T> implements sorcer.service.Identifiable
-	c273721:p -> c273710:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.service.Identity implements sorcer.service.Identifiable
-	c273721:p -> c273716:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.context.model.Variability<T> implements sorcer.service.Identifiable
-	c273721:p -> c273779:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.util.ModelTable implements sorcer.service.Identifiable
+	c288891:p -> c288667:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.provider.ServiceProvider implements sorcer.service.Identifiable
-	c273721:p -> c273804:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.Invoker<T> implements sorcer.service.Identifiable
-	c273721:p -> c273844:p [dir=back,arrowtail=empty,style=dashed];
+	c288891:p -> c288765:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.core.invoker.ServiceInvoker<T> implements sorcer.service.Identifiable
+	c288891:p -> c288831:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.SecureIdentifiable implements sorcer.service.Identifiable
+	c288891:p -> c288847:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Exertion implements sorcer.service.Mappable<T>
+	c288897:p -> c288878:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Exertion implements sorcer.service.Identifiable
+	c288891:p -> c288878:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Identity implements sorcer.service.Identifiable
+	c288891:p -> c288879:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.Mappable<T> implements sorcer.service.Identifiable
+	c288891:p -> c288897:p [dir=back,arrowtail=empty,style=dashed];
+	//sorcer.service.modeling.Variability<T> implements sorcer.service.Identifiable
+	c288891:p -> c288937:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.co.tuple.Tuple2<T1, T2> implements sorcer.service.Identifiable
-	c273721:p -> c273877:p [dir=back,arrowtail=empty,style=dashed];
+	c288891:p -> c288954:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.util.bdb.objects.MarshalledData implements sorcer.service.Identifiable
-	c273721:p -> c273926:p [dir=back,arrowtail=empty,style=dashed];
+	c288891:p -> c289061:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -9,40 +9,10 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.Evaluation<T>
-	c214219 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
+	// sorcer.core.invoker.ServiceInvoker<T>
+	c224783 [label=<<table title="sorcer.core.invoker.ServiceInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/ServiceInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Evaluator<T>
-	c214235 [label=<<table title="sorcer.service.Evaluator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Evaluator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Evaluator&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Evaluator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.Invoker<T>
-	c214352 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/invoker/Invoker.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> ServiceInvoker&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # name : String </td></tr>
@@ -55,22 +25,22 @@ digraph G {
 <tr><td align="left" balign="left"> # pars : ArgSet </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Invoker() </td></tr>
-<tr><td align="left" balign="left"> + Invoker(name : String) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker() </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
 <tr><td align="left" balign="left"> + getPars() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + valueValid(state : boolean) </td></tr>
 <tr><td align="left" balign="left"> + valueValid() : boolean </td></tr>
 <tr><td align="left" balign="left"> + valueChanged() </td></tr>
 <tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + addPar(par : Object) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + addPar(par : Object) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPars(parSet : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + addPars(parList : List&lt;Par&lt;&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + addPars(pars : Par&lt;&gt;[]) </td></tr>
@@ -83,7 +53,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 <tr><td align="left" balign="left"> + getEvaluator() : Evaluator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + clearPars() </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
@@ -92,11 +62,45 @@ digraph G {
 <tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
 		</table></td></tr>
-		</table>>, URL="../core/invoker/Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../core/invoker/ServiceInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Evaluation<T>
+	c224814 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + asis() : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Evaluator<T>
+	c224832 [label=<<table title="sorcer.service.Evaluator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Evaluator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Evaluator&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + evaluate(entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addArgs(set : ArgSet) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getArgs() : ArgSet </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParameterTypes(types : Class&lt;?&gt;[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setParameters(args : Object[]) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Evaluator.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.invoker.ServiceInvoker<T> implements sorcer.service.Evaluator<T>
+	c224832:p -> c224783:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Evaluator<T> implements sorcer.service.Evaluation<T>
-	c214219:p -> c214235:p [dir=back,arrowtail=empty,style=dashed];
-	//sorcer.core.invoker.Invoker<T> implements sorcer.service.Evaluator<T>
-	c214235:p -> c214352:p [dir=back,arrowtail=empty,style=dashed];
+	c224814:p -> c224832:p [dir=back,arrowtail=empty,style=dashed];
 }
 

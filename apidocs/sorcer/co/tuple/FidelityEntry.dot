@@ -9,8 +9,23 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// sorcer.co.tuple.InEntry<T>
+	c253539 [label=<<table title="sorcer.co.tuple.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InEntry.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> InEntry&lt;T&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InEntry(path : String, fidelity : FidelityInfo) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./InEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.FidelityEntry<T>
-	c241215 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FidelityEntry.html">
+	c253544 [label=<<table title="sorcer.co.tuple.FidelityEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FidelityEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FidelityEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -25,23 +40,22 @@ digraph G {
 <tr><td align="left" balign="left"> + fidelity(fidelity : FidelityInfo) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FidelityEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.InEntry<T>
-	c241224 [label=<<table title="sorcer.co.tuple.InEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InEntry.html">
+	// sorcer.co.tuple.InoutEntry<T>
+	c253545 [label=<<table title="sorcer.co.tuple.InoutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InoutEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InEntry&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> InoutEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InEntry(path : String, fidelity : FidelityInfo) </td></tr>
+<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
+<tr><td align="left" balign="left"> + InoutEntry(path : String, fidelity : FidelityInfo) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./InEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./InoutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.OutEntry<T>
-	c241231 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutEntry.html">
+	c253547 [label=<<table title="sorcer.co.tuple.OutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OutEntry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OutEntry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -56,7 +70,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Entry<T>
-	c241233 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
+	c253548 [label=<<table title="sorcer.co.tuple.Entry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Entry.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Entry&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -78,30 +92,15 @@ digraph G {
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + equals(object : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
-<tr><td align="left" balign="left"> + compareTo(o : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Entry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.co.tuple.InoutEntry<T>
-	c241234 [label=<<table title="sorcer.co.tuple.InoutEntry" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InoutEntry.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> InoutEntry&lt;T&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InoutEntry(path : String, value : T, isPersistant : boolean, url : URL, index : int) </td></tr>
-<tr><td align="left" balign="left"> + InoutEntry(path : String, fidelity : FidelityInfo) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./InoutEntry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.co.tuple.FidelityEntry<T> extends sorcer.co.tuple.Entry<T>
-	c241233:p -> c241215:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.InEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
-	c241215:p -> c241224:p [dir=back,arrowtail=empty];
-	//sorcer.co.tuple.OutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
-	c241215:p -> c241231:p [dir=back,arrowtail=empty];
+	c253544:p -> c253539:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.FidelityEntry<T> extends sorcer.co.tuple.Entry<T>
+	c253548:p -> c253544:p [dir=back,arrowtail=empty];
 	//sorcer.co.tuple.InoutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
-	c241215:p -> c241234:p [dir=back,arrowtail=empty];
+	c253544:p -> c253545:p [dir=back,arrowtail=empty];
+	//sorcer.co.tuple.OutEntry<T> extends sorcer.co.tuple.FidelityEntry<T>
+	c253544:p -> c253547:p [dir=back,arrowtail=empty];
 }
 

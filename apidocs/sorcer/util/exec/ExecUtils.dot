@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.exec.ExecUtils
-	c218519 [label=<<table title="sorcer.util.exec.ExecUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExecUtils.html">
+	c229189 [label=<<table title="sorcer.util.exec.ExecUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExecUtils.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExecUtils </td></tr>
 		</table></td></tr>
@@ -19,15 +19,17 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + execCommand(cmd : String) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommand(cmdarray : String[]) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommandWin(cmd : String) : ExecUtils.CmdResult </td></tr>
 <tr><td align="left" balign="left"> + execCommand(process : Process) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process) : ExecUtils.CmdResult </td></tr>
 <tr><td align="left" balign="left"> + execCommand(process : Process, stdin : InputStream) : ExecUtils.CmdResult </td></tr>
 <tr><td align="left" balign="left"> + execCommand(process : Process, stdin : InputStream, outLogged : boolean) : ExecUtils.CmdResult </td></tr>
-<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process, stdin : InputStream) : ExecUtils.CmdResult </td></tr>
 <tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, stdout : OutputStream, stderr : OutputStream) </td></tr>
 <tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, stdout : OutputStream, stderr : OutputStream, autoFlush : boolean, autoClose : boolean, brokenPipeHandler : ExecUtils.BrokenPipeHandler, exitHandler : ExecUtils.ProcessExitHandler) </td></tr>
 <tr><td align="left" balign="left"> + handleProcess(process : Process, stdin : InputStream, inAutoFlush : boolean, inAutoClose : boolean, inBrokenHandler : ExecUtils.BrokenPipeHandler, stdout : OutputStream, outAutoFlush : boolean, outAutoClose : boolean, outBrokenHandler : ExecUtils.BrokenPipeHandler, stderr : OutputStream, errAutoFlush : boolean, errAutoClose : boolean, errBrokenHandler : ExecUtils.BrokenPipeHandler, exitHandler : ExecUtils.ProcessExitHandler) </td></tr>
+<tr><td align="left" balign="left"> + executeCommandWithWorkerNoBlocking(command : String[], printOutput : boolean, printError : boolean, timeOut : long, dir : File, logFile : File, doSynchronizedLaunch : boolean) : Thread </td></tr>
+<tr><td align="left" balign="left"> + execCommand(cmdarray : String[]) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process) : ExecUtils.CmdResult </td></tr>
+<tr><td align="left" balign="left"> + execCommandNoBlocking(process : Process, stdin : InputStream) : ExecUtils.CmdResult </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExecUtils.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

@@ -9,26 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.SpaceContext
-	c531990 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SpaceContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + spacePrefix : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + unshare() </td></tr>
-<tr><td align="left" balign="left"> + share() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedIndexedContext<T>
-	c532059 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
+	c572121 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedIndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedIndexedContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -53,7 +35,6 @@ digraph G {
 <tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + listIterator(index : int) : ListIterator&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + remove(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + removeAll(c : Collection&lt;&gt;) : boolean </td></tr>
 <tr><td align="left" balign="left"> + retainAll(c : Collection&lt;&gt;) : boolean </td></tr>
 <tr><td align="left" balign="left"> + set(index : int, element : T) : Object </td></tr>
 <tr><td align="left" balign="left"> + subList(fromIndex : int, toIndex : int) : List&lt;&gt; </td></tr>
@@ -63,13 +44,10 @@ digraph G {
 <tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + share() </td></tr>
-<tr><td align="left" balign="left"> + unshare() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/SharedIndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedAssociativeContext
-	c532061 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedAssociativeContext.html">
+	c572127 [label=<<table title="sorcer.core.context.SharedAssociativeContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../core/context/SharedAssociativeContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedAssociativeContext </td></tr>
 		</table></td></tr>
@@ -81,14 +59,26 @@ digraph G {
 <tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
 <tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + share() </td></tr>
-<tr><td align="left" balign="left"> + unshare() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../core/context/SharedAssociativeContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.SpaceContext
+	c572232 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SpaceContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SpaceContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + spacePrefix : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + writeValue(path : String, value : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + readValue(path : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + takeValue(path : String) : Object </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.SharedIndexedContext<T> implements sorcer.service.SpaceContext
-	c531990:p -> c532059:p [dir=back,arrowtail=empty,style=dashed];
+	c572232:p -> c572121:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.SharedAssociativeContext implements sorcer.service.SpaceContext
-	c531990:p -> c532061:p [dir=back,arrowtail=empty,style=dashed];
+	c572232:p -> c572127:p [dir=back,arrowtail=empty,style=dashed];
 }
 

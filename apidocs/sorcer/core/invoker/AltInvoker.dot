@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.invoker.AltInvoker<V>
-	c104791 [label=<<table title="sorcer.core.invoker.AltInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AltInvoker.html">
+	c110239 [label=<<table title="sorcer.core.invoker.AltInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AltInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AltInvoker&lt;V&gt; </td></tr>
 		</table></td></tr>
@@ -24,10 +24,10 @@ digraph G {
 <tr><td align="left" balign="left"> + getInvoker(index : int) : OptInvoker&lt;&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AltInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.core.invoker.Invoker<T>
-	c104795 [label=<<table title="sorcer.core.invoker.Invoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Invoker.html">
+	// sorcer.core.invoker.ServiceInvoker<T>
+	c110242 [label=<<table title="sorcer.core.invoker.ServiceInvoker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceInvoker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> Invoker&lt;T&gt; </td></tr>
+<tr><td align="center" balign="center"> ServiceInvoker&lt;T&gt; </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # name : String </td></tr>
@@ -40,22 +40,22 @@ digraph G {
 <tr><td align="left" balign="left"> # pars : ArgSet </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + Invoker() </td></tr>
-<tr><td align="left" balign="left"> + Invoker(name : String) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
-<tr><td align="left" balign="left"> + Invoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker() </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(name : String) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(context : ParModel&lt;&gt;, evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : ArgSet) </td></tr>
+<tr><td align="left" balign="left"> + ServiceInvoker(evaluator : Evaluator&lt;&gt;, pars : Par&lt;&gt;[]) </td></tr>
 <tr><td align="left" balign="left"> + getPars() : ArgSet </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : Invoker&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : ArgSet) : ServiceInvoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPars(pars : Arg[]) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + valueValid(state : boolean) </td></tr>
 <tr><td align="left" balign="left"> + valueValid() : boolean </td></tr>
 <tr><td align="left" balign="left"> + valueChanged() </td></tr>
 <tr><td align="left" balign="left"> + update(observable : Observable, obj : Object) </td></tr>
-<tr><td align="left" balign="left"> + addPar(par : Object) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + addPar(par : Object) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPars(parSet : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + addPars(parList : List&lt;Par&lt;&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + addPars(pars : Par&lt;&gt;[]) </td></tr>
@@ -68,7 +68,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getScope() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setScope(scope : Object) </td></tr>
 <tr><td align="left" balign="left"> + getEvaluator() : Evaluator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : Invoker&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEvaluator(evaluator : Evaluator&lt;&gt;) : ServiceInvoker&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + clearPars() </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + getId() : Object </td></tr>
@@ -77,9 +77,11 @@ digraph G {
 <tr><td align="left" balign="left"> + evaluate(entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + addArgs(set : ArgSet) </td></tr>
 <tr><td align="left" balign="left"> + getArgs() : ArgSet </td></tr>
+<tr><td align="left" balign="left"> + setParameterTypes(types : Class&lt;?&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + setParameters(args : Object[]) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Invoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.core.invoker.AltInvoker<V> extends sorcer.core.invoker.Invoker<V>
-	c104795:p -> c104791:p [dir=back,arrowtail=empty];
+		</table>>, URL="./ServiceInvoker.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.invoker.AltInvoker<V> extends sorcer.core.invoker.ServiceInvoker<V>
+	c110242:p -> c110239:p [dir=back,arrowtail=empty];
 }
 

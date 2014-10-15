@@ -9,21 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.co.tuple.ParameterTypes
-	c381238 [label=<<table title="sorcer.co.tuple.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParameterTypes.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ParameterTypes </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + parameterTypes : Class&lt;&gt;[] </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ParameterTypes(parameterTypes : Class&lt;&gt;[]) </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ParameterTypes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.co.tuple.Path<T2>
-	c381242 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
+	c408744 [label=<<table title="sorcer.co.tuple.Path" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Path.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Path&lt;T2&gt; </td></tr>
 		</table></td></tr>
@@ -35,7 +22,20 @@ digraph G {
 <tr><td align="left" balign="left"> + Path(path : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Path.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.co.tuple.ParameterTypes
+	c408753 [label=<<table title="sorcer.co.tuple.ParameterTypes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParameterTypes.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ParameterTypes </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + parameterTypes : Class&lt;&gt;[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ParameterTypes(parameterTypes : Class&lt;&gt;[]) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ParameterTypes.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.co.tuple.ParameterTypes extends sorcer.co.tuple.Path
-	c381242:p -> c381238:p [dir=back,arrowtail=empty];
+	c408744:p -> c408753:p [dir=back,arrowtail=empty];
 }
 

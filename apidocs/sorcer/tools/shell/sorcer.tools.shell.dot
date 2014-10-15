@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.tools.shell.NetworkShell
-	c23531 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.html">
+	c22164 [label=<<table title="sorcer.tools.shell.NetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetworkShell </td></tr>
 		</table></td></tr>
@@ -28,12 +28,14 @@ digraph G {
 <tr><td align="left" balign="left"> + nshUrl : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + buildInstance(argv : String[]) : String[] </td></tr>
+<tr><td align="left" balign="left"> + buildInstance(ensureSecurityManager : boolean, argv : String[]) : String[] </td></tr>
 <tr><td align="left" balign="left"> + getInstance() : INetworkShell </td></tr>
 <tr><td align="left" balign="left"> # ensureSecurityManager() </td></tr>
 <tr><td align="left" balign="left"> + main(argv : String[]) </td></tr>
+<tr><td align="left" balign="left"> + processRequest(outsideCall : boolean) </td></tr>
 <tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + isDebug() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isRemoteLogging() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getPrincipal() : SorcerPrincipal </td></tr>
 <tr><td align="left" balign="left"> + startApplication(appPath : String) </td></tr>
 <tr><td align="left" balign="left"> + setLookupDiscovery(ingroups : String[]) </td></tr>
@@ -43,13 +45,14 @@ digraph G {
 <tr><td align="left" balign="left"> + enumerateCommands() </td></tr>
 <tr><td align="left" balign="left"> + addToCommandTable(cmd : String, inCls : Class&lt;?&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getCmd() : String </td></tr>
-<tr><td align="left" balign="left"> + getShellTokenizer() : StringTokenizer </td></tr>
+<tr><td align="left" balign="left"> + getShellTokenizer() : WhitespaceTokenizer </td></tr>
+<tr><td align="left" balign="left"> + getTokenizer() : WhitespaceTokenizer </td></tr>
 <tr><td align="left" balign="left"> + getShellInputStream() : BufferedReader </td></tr>
 <tr><td align="left" balign="left"> + getShellOutputStream() : PrintStream </td></tr>
 <tr><td align="left" balign="left"> + getOutputStream() : PrintStream </td></tr>
 <tr><td align="left" balign="left"> + setShellOutput(outputStream : PrintStream) </td></tr>
 <tr><td align="left" balign="left"> + getDisco() : LookupDiscovery </td></tr>
-<tr><td align="left" balign="left"> + getRegistrars() : ArrayList&lt;ServiceRegistrar&gt; </td></tr>
+<tr><td align="left" balign="left"> + getRegistrars() : List&lt;ServiceRegistrar&gt; </td></tr>
 <tr><td align="left" balign="left"> + getConfiguration() : Configuration </td></tr>
 <tr><td align="left" balign="left"> + getHomeDir() : String </td></tr>
 <tr><td align="left" balign="left"> + setHomeDir(homeDir : String) </td></tr>
@@ -59,6 +62,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setShellLog(shellLog : File) </td></tr>
 <tr><td align="left" balign="left"> + isInteractive() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getWebsterUrl() : String </td></tr>
+<tr><td align="left" balign="left"> + getNshWebsterUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + initShell(args : String[]) : String[] </td></tr>
 <tr><td align="left" balign="left"> + getGroups() : String[] </td></tr>
 <tr><td align="left" balign="left"> + setGroups(groups : String[]) </td></tr>
@@ -82,7 +86,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.HelpCmd
-	c23532 [label=<<table title="sorcer.tools.shell.NetworkShell.HelpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HelpCmd.html">
+	c22165 [label=<<table title="sorcer.tools.shell.NetworkShell.HelpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HelpCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HelpCmd </td></tr>
 		</table></td></tr>
@@ -90,12 +94,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # NetworkShell.HelpCmd() </td></tr>
+<tr><td align="left" balign="left"> # HelpCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.HelpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.ClearCmd
-	c23533 [label=<<table title="sorcer.tools.shell.NetworkShell.ClearCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.ClearCmd.html">
+	c22166 [label=<<table title="sorcer.tools.shell.NetworkShell.ClearCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.ClearCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ClearCmd </td></tr>
 		</table></td></tr>
@@ -103,12 +107,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # NetworkShell.ClearCmd() </td></tr>
+<tr><td align="left" balign="left"> # ClearCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.ClearCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.EditCmd
-	c23534 [label=<<table title="sorcer.tools.shell.NetworkShell.EditCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.EditCmd.html">
+	c22167 [label=<<table title="sorcer.tools.shell.NetworkShell.EditCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.EditCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EditCmd </td></tr>
 		</table></td></tr>
@@ -116,12 +120,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # NetworkShell.EditCmd() </td></tr>
+<tr><td align="left" balign="left"> # EditCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.EditCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.InfoCmd
-	c23535 [label=<<table title="sorcer.tools.shell.NetworkShell.InfoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.InfoCmd.html">
+	c22168 [label=<<table title="sorcer.tools.shell.NetworkShell.InfoCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.InfoCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InfoCmd </td></tr>
 		</table></td></tr>
@@ -129,12 +133,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # NetworkShell.InfoCmd() </td></tr>
+<tr><td align="left" balign="left"> # InfoCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.InfoCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShell.HttpCmd
-	c23536 [label=<<table title="sorcer.tools.shell.NetworkShell.HttpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HttpCmd.html">
+	c22169 [label=<<table title="sorcer.tools.shell.NetworkShell.HttpCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShell.HttpCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HttpCmd </td></tr>
 		</table></td></tr>
@@ -142,7 +146,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NetworkShell.HttpCmd() </td></tr>
+<tr><td align="left" balign="left"> + HttpCmd() </td></tr>
 <tr><td align="left" balign="left"> + execute() </td></tr>
 <tr><td align="left" balign="left"> + createWebster(port : int, roots : String[], jars : String[], out : PrintStream) : boolean </td></tr>
 <tr><td align="left" balign="left"> + debugGetDefaultRoots() : String </td></tr>
@@ -152,7 +156,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NetworkShell.HttpCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.LoaderConfiguration
-	c23537 [label=<<table title="sorcer.tools.shell.LoaderConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoaderConfiguration.html">
+	c22170 [label=<<table title="sorcer.tools.shell.LoaderConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoaderConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoaderConfiguration </td></tr>
 		</table></td></tr>
@@ -173,7 +177,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LoaderConfiguration.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.RootLoader
-	c23538 [label=<<table title="sorcer.tools.shell.RootLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RootLoader.html">
+	c22171 [label=<<table title="sorcer.tools.shell.RootLoader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RootLoader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RootLoader </td></tr>
 		</table></td></tr>
@@ -190,7 +194,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RootLoader.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.NetworkShellAccessor
-	c23539 [label=<<table title="sorcer.tools.shell.NetworkShellAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShellAccessor.html">
+	c22172 [label=<<table title="sorcer.tools.shell.NetworkShellAccessor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NetworkShellAccessor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NetworkShellAccessor </td></tr>
 		</table></td></tr>
@@ -202,8 +206,47 @@ digraph G {
 <tr><td align="left" balign="left"> + getNetworkShell(cl : ClassLoader) : INetworkShell </td></tr>
 		</table></td></tr>
 		</table>>, URL="./NetworkShellAccessor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.INetworkShell
+	c22173 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./INetworkShell.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> INetworkShell </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addToCommandTable(cmd : String, inCls : Class&lt;?&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addAlias(alias : String, command : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCmd() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCurrentDir() : File </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHomeDir() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getNshWebsterUrl() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setCurrentDir(file : File) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSelectedRegistrar() : ServiceRegistrar </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getOutputStream() : PrintStream </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTokenizer() : WhitespaceTokenizer </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isDebug() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isRemoteLogging() : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./INetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.tools.shell.ReggieHelper
+	c22174 [label=<<table title="sorcer.tools.shell.ReggieHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReggieHelper.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ReggieHelper </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + MAX_MATCHES : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ReggieHelper() </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[]) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ReggieHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.tools.shell.ShellCmd
-	c23540 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShellCmd.html">
+	c22175 [label=<<table title="sorcer.tools.shell.ShellCmd" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ShellCmd.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ShellCmd </font></td></tr>
 		</table></td></tr>
@@ -223,59 +266,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getShortHelp() : String </td></tr>
 <tr><td align="left" balign="left"> + getLongDescription(subCmd : String) : String </td></tr>
 <tr><td align="left" balign="left"> + nameConflictDetected(conflictClass : Class&lt;?&gt;) : String </td></tr>
-<tr><td align="left" balign="left"> + initializeSubsystem() </td></tr>
-<tr><td align="left" balign="left"> + endSubsystem() </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + setConfig(config : Configuration) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ShellCmd.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.INetworkShell
-	c23541 [label=<<table title="sorcer.tools.shell.INetworkShell" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./INetworkShell.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> INetworkShell </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addToCommandTable(cmd : String, inCls : Class&lt;?&gt;) </td></tr>
-<tr><td align="left" balign="left"> + addAlias(alias : String, command : String) </td></tr>
-<tr><td align="left" balign="left"> + getCmd() : String </td></tr>
-<tr><td align="left" balign="left"> + getCurrentDir() : File </td></tr>
-<tr><td align="left" balign="left"> + getHomeDir() : String </td></tr>
-<tr><td align="left" balign="left"> + setCurrentDir(file : File) </td></tr>
-<tr><td align="left" balign="left"> + getSelectedRegistrar() : ServiceRegistrar </td></tr>
-<tr><td align="left" balign="left"> + getOutputStream() : PrintStream </td></tr>
-<tr><td align="left" balign="left"> + isDebug() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./INetworkShell.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.tools.shell.ReggieHelper
-	c23542 [label=<<table title="sorcer.tools.shell.ReggieHelper" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReggieHelper.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ReggieHelper </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MAX_MATCHES : int </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ReggieHelper() </td></tr>
-<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[]) : ServiceItem[] </td></tr>
-<tr><td align="left" balign="left"> + lookup(serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
-<tr><td align="left" balign="left"> + lookup(registrar : ServiceRegistrar, serviceTypes : Class&lt;&gt;[], serviceName : String) : ServiceItem[] </td></tr>
-		</table></td></tr>
-		</table>>, URL="./ReggieHelper.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.tools.shell.NetworkShell implements sorcer.tools.shell.INetworkShell
-	c23541:p -> c23531:p [dir=back,arrowtail=empty,style=dashed];
+	c22173:p -> c22164:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.tools.shell.NetworkShell.HelpCmd extends sorcer.tools.shell.ShellCmd
-	c23540:p -> c23532:p [dir=back,arrowtail=empty];
+	c22175:p -> c22165:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.ClearCmd extends sorcer.tools.shell.ShellCmd
-	c23540:p -> c23533:p [dir=back,arrowtail=empty];
+	c22175:p -> c22166:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.EditCmd extends sorcer.tools.shell.ShellCmd
-	c23540:p -> c23534:p [dir=back,arrowtail=empty];
+	c22175:p -> c22167:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.InfoCmd extends sorcer.tools.shell.ShellCmd
-	c23540:p -> c23535:p [dir=back,arrowtail=empty];
+	c22175:p -> c22168:p [dir=back,arrowtail=empty];
 	//sorcer.tools.shell.NetworkShell.HttpCmd extends sorcer.tools.shell.ShellCmd
-	c23540:p -> c23536:p [dir=back,arrowtail=empty];
+	c22175:p -> c22169:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Condition
-	c155427 [label=<<table title="sorcer.service.Condition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Condition.html">
+	c166034 [label=<<table title="sorcer.service.Condition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Condition.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Condition </td></tr>
 		</table></td></tr>
@@ -40,29 +40,16 @@ digraph G {
 <tr><td align="left" balign="left"> + setStatus(status : Boolean) </td></tr>
 <tr><td align="left" balign="left"> + getClosure() : Closure&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setClosure(closure : Closure&lt;&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getConditionalContext() : Context&lt;?&gt; </td></tr>
-<tr><td align="left" balign="left"> + setConditionalContext(conditionaContext : Context&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getConditionalContext() : Context&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setConditionalContext(conditionaContext : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getClosureExpression() : String </td></tr>
 <tr><td align="left" balign="left"> + cleanupScripts(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + clenupContextScripts(context : Context&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + clenupExertionScripts(exertion : Exertion) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Condition.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.Conditional
-	c155431 [label=<<table title="sorcer.service.Conditional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Conditional.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> Conditional </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + isTrue() : boolean </td></tr>
-		</table></td></tr>
-		</table>>, URL="./Conditional.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.service.Evaluation<T>
-	c155457 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
+	c166045 [label=<<table title="sorcer.service.Evaluation" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Evaluation.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Evaluation&lt;T&gt; </td></tr>
@@ -71,19 +58,34 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getValue(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + asis() : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(entries : Arg[]) : T </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + substitute(entries : Arg[]) : Evaluation&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Evaluation.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Conditional
+	c166098 [label=<<table title="sorcer.service.Conditional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Conditional.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Conditional </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isTrue() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getConditionalContext() : Context&lt;&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setConditionalContext(context : Context&lt;&gt;) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Conditional.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.service.Condition implements sorcer.service.Evaluation<T>
-	c155457:p -> c155427:p [dir=back,arrowtail=empty,style=dashed];
+	c166045:p -> c166034:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Condition implements sorcer.service.Conditional
-	c155431:p -> c155427:p [dir=back,arrowtail=empty,style=dashed];
+	c166098:p -> c166034:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.service.Condition implements java.io.Serializable
-	c156032:p -> c155427:p [dir=back,arrowtail=empty,style=dashed];
+	c166578:p -> c166034:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c156032 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c166578 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

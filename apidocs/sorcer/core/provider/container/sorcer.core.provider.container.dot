@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.container.ProviderServiceBuilder
-	c36666 [label=<<table title="sorcer.core.provider.container.ProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderServiceBuilder.html">
+	c37325 [label=<<table title="sorcer.core.provider.container.ProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProviderServiceBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderServiceBuilder </td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProviderServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.container.ServiceProviderBeanListener
-	c36667 [label=<<table title="sorcer.core.provider.container.ServiceProviderBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProviderBeanListener.html">
+	c37326 [label=<<table title="sorcer.core.provider.container.ServiceProviderBeanListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceProviderBeanListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProviderBeanListener </td></tr>
 		</table></td></tr>
@@ -51,7 +51,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServiceProviderBeanListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.container.LegacyInitializer
-	c36668 [label=<<table title="sorcer.core.provider.container.LegacyInitializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LegacyInitializer.html">
+	c37327 [label=<<table title="sorcer.core.provider.container.LegacyInitializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LegacyInitializer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LegacyInitializer </td></tr>
 		</table></td></tr>
@@ -63,5 +63,20 @@ digraph G {
 <tr><td align="left" balign="left"> + preProcess(serviceBuilder : IServiceBuilder&lt;&gt;, serviceBean : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LegacyInitializer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.provider.container.IProviderServiceBuilder
+	c37328 [label=<<table title="sorcer.core.provider.container.IProviderServiceBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IProviderServiceBuilder.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IProviderServiceBuilder </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getProvider() : Provider </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./IProviderServiceBuilder.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.core.provider.container.ProviderServiceBuilder implements sorcer.core.provider.container.IProviderServiceBuilder
+	c37328:p -> c37325:p [dir=back,arrowtail=empty,style=dashed];
 }
 

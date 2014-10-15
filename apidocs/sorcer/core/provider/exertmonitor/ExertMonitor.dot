@@ -10,30 +10,25 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.provider.ServiceProvider
-	c226641 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
+	c236015 [label=<<table title="sorcer.core.provider.ServiceProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceProvider </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> + COMPONENT : String </td></tr>
 <tr><td align="left" balign="left"> # delegate : ProviderDelegate </td></tr>
-<tr><td align="left" balign="left"> # threadManager : TaskManager </td></tr>
+<tr><td align="left" balign="left"> # scheduler : ScheduledExecutorService </td></tr>
 <tr><td align="left" balign="left"> # attributes : Set&lt;Entry&gt; </td></tr>
 <tr><td align="left" balign="left"> + theContextMap : HashMap&lt;String, Context&lt;&gt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + DB_HOME : String </td></tr>
 <tr><td align="left" balign="left"> + THREAD_MANAGEMNT : String </td></tr>
-<tr><td align="left" balign="left"> + MAX_THREADS : String </td></tr>
-<tr><td align="left" balign="left"> + MANAGER_TIMEOUT : String </td></tr>
-<tr><td align="left" balign="left"> + LOAD_FACTOR : String </td></tr>
-<tr><td align="left" balign="left"> + WAIT_INCREMENT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> # ServiceProvider() </td></tr>
+<tr><td align="left" balign="left"> + ServiceProvider() </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(args : String[], lifeCycle : LifeCycle) </td></tr>
 <tr><td align="left" balign="left"> + ServiceProvider(providerPropertiesFile : String) </td></tr>
 <tr><td align="left" balign="left"> + getGrants(cl : Class&lt;?&gt;, principals : Principal[]) : Permission[] </td></tr>
-<tr><td align="left" balign="left"> + grant(cl : Class&lt;?&gt;, principals : Principal[], permissions : Permission[]) </td></tr>
 <tr><td align="left" balign="left"> + grantSupported() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getProxyVerifier() : TrustVerifier </td></tr>
 <tr><td align="left" balign="left"> + getConstraints() : MethodConstraints </td></tr>
@@ -95,6 +90,7 @@ digraph G {
 <tr><td align="left" balign="left"> + invokeMethod(method : String, context : Context&lt;&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + invokeMethod(methodName : String, ex : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + doExertion(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> # getControlFlownManager(exertion : Exertion) : ControlFlowManager </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + dropTask(task : ServiceExertion) : ServiceExertion </td></tr>
@@ -130,7 +126,6 @@ digraph G {
 <tr><td align="left" balign="left"> + suspend(ref : UEID, subject : Subject) </td></tr>
 <tr><td align="left" balign="left"> + resume(ex : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + step(ex : Exertion) </td></tr>
-<tr><td align="left" balign="left"> + changed(context : Context&lt;?&gt;, aspect : Object) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 <tr><td align="left" balign="left"> + isBusy() : boolean </td></tr>
 <tr><td align="left" balign="left"> + destroyNode() </td></tr>
@@ -139,15 +134,13 @@ digraph G {
 <tr><td align="left" balign="left"> + loadContextDatabase() : boolean </td></tr>
 <tr><td align="left" balign="left"> # setupThreadManager() </td></tr>
 <tr><td align="left" balign="left"> + getJavaSystemProperties() : Properties </td></tr>
-<tr><td align="left" balign="left"> + initSpaceSupport() </td></tr>
 <tr><td align="left" balign="left"> + isContextValid(dataContext : Context&lt;?&gt;, forSignature : Signature) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getLogger() : Logger </td></tr>
-<tr><td align="left" balign="left"> + doMonitoredTask(task : Exertion, txn : Transaction) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + setServiceBeanListener(serviceBeanListener : IServiceBeanListener) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ServiceProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.exertmonitor.ExertMonitor
-	c226650 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertMonitor.html">
+	c236032 [label=<<table title="sorcer.core.provider.exertmonitor.ExertMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ExertMonitor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExertMonitor </td></tr>
 		</table></td></tr>
@@ -156,10 +149,6 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ExertMonitor(args : String[], lifeCycle : LifeCycle) </td></tr>
-<tr><td align="left" balign="left"> + stop(ref : UEID, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + suspend(ref : UEID, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + resume(ref : UEID, principal : SorcerPrincipal) </td></tr>
-<tr><td align="left" balign="left"> + step(ref : UEID, principal : SorcerPrincipal) </td></tr>
 <tr><td align="left" balign="left"> + register(lstnr : RemoteEventListener, ex : Exertion, duration : long) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + init(cookie : Uuid, mntrbl : Monitorable, duration : long, timeout : long) : Lease </td></tr>
 <tr><td align="left" balign="left"> + init(cookie : Uuid, duration : long, timeout : long) </td></tr>
@@ -168,23 +157,23 @@ digraph G {
 <tr><td align="left" balign="left"> + getMonitorableExertionInfo(state : Exec.State, principal : Principal) : Map&lt;Uuid, ExertionInfo&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(id : Uuid, principal : Principal) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getMonitorableExertion(cookie : UEID, principal : Principal) : Exertion </td></tr>
-<tr><td align="left" balign="left"> + update(cookie : Uuid, ctx : Context&lt;&gt;, aspect : Object) </td></tr>
+<tr><td align="left" balign="left"> + update(cookie : Uuid, ctx : Context&lt;&gt;, controlContext : IControlContext, aspect : int) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
-<tr><td align="left" balign="left"> + persist(session : IMonitorSession) : boolean </td></tr>
+<tr><td align="left" balign="left"> + persist(session : MonitorManagementSession) : boolean </td></tr>
 <tr><td align="left" balign="left"> + getSession(key : UuidKey) : MonitorSession </td></tr>
 <tr><td align="left" balign="left"> + getSession(key : Uuid) : MonitorSession </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ExertMonitor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.monitor.MonitoringManagement
-	c226658 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../monitor/MonitoringManagement.html">
+	c236069 [label=<<table title="sorcer.core.monitor.MonitoringManagement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../monitor/MonitoringManagement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MonitoringManagement </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../monitor/MonitoringManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.exertmonitor.ExertMonitor extends sorcer.core.provider.ServiceProvider
-	c226641:p -> c226650:p [dir=back,arrowtail=empty];
+	c236015:p -> c236032:p [dir=back,arrowtail=empty];
 	//sorcer.core.provider.exertmonitor.ExertMonitor implements sorcer.core.monitor.MonitoringManagement
-	c226658:p -> c226650:p [dir=back,arrowtail=empty,style=dashed];
+	c236069:p -> c236032:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.AbstractServiceDescriptor
-	c525846 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
+	c564206 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractServiceDescriptor </font></td></tr>
 		</table></td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.provider.boot.SorcerServiceDescriptor
-	c525848 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerServiceDescriptor.html">
+	c564209 [label=<<table title="sorcer.provider.boot.SorcerServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SorcerServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -62,6 +62,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.provider.boot.SorcerServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c525846:p -> c525848:p [dir=back,arrowtail=empty];
+	c564206:p -> c564209:p [dir=back,arrowtail=empty];
 }
 

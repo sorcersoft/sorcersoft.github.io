@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.resolver.AbstractArtifactResolver
-	c427855 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
+	c460828 [label=<<table title="sorcer.resolver.AbstractArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractArtifactResolver </font></td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.resolver.RepositoryArtifactResolver
-	c427857 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RepositoryArtifactResolver.html">
+	c460833 [label=<<table title="sorcer.resolver.RepositoryArtifactResolver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RepositoryArtifactResolver.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RepositoryArtifactResolver </td></tr>
 		</table></td></tr>
@@ -44,6 +44,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RepositoryArtifactResolver.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.resolver.RepositoryArtifactResolver extends sorcer.resolver.AbstractArtifactResolver
-	c427855:p -> c427857:p [dir=back,arrowtail=empty];
+	c460828:p -> c460833:p [dir=back,arrowtail=empty];
 }
 

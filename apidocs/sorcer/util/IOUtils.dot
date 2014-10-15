@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.IOUtils
-	c268539 [label=<<table title="sorcer.util.IOUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IOUtils.html">
+	c283422 [label=<<table title="sorcer.util.IOUtils" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IOUtils.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IOUtils </td></tr>
 		</table></td></tr>
@@ -30,6 +30,13 @@ digraph G {
 <tr><td align="left" balign="left"> + closeQuietly(closeable : Socket) </td></tr>
 <tr><td align="left" balign="left"> + readFileToString(filePath : String) : String </td></tr>
 <tr><td align="left" balign="left"> + readFileToString(file : File) : String </td></tr>
+<tr><td align="left" balign="left"> + isChild(dir : File, file : File) : boolean </td></tr>
+<tr><td align="left" balign="left"> + openInputStream(file : File) : FileInputStream </td></tr>
+<tr><td align="left" balign="left"> + readLines(file : File) : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + readLines(file : File, encoding : Charset) : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + readLines(input : InputStream, encoding : Charset) : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + readLines(input : Reader) : List&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + toBufferedReader(reader : Reader) : BufferedReader </td></tr>
 		</table></td></tr>
 		</table>>, URL="./IOUtils.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }

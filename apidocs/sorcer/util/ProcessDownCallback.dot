@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ProcessDownCallback
-	c391885 [label=<<table title="sorcer.util.ProcessDownCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcessDownCallback.html">
+	c421317 [label=<<table title="sorcer.util.ProcessDownCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcessDownCallback.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcessDownCallback </td></tr>
@@ -19,11 +19,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + processDown(process : Process) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + processDown(process : Process) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProcessDownCallback.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.SorcerListener
-	c392317 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../launcher/SorcerListener.html">
+	c421757 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../launcher/SorcerListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SorcerListener </td></tr>
@@ -32,12 +32,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
-<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
-<tr><td align="left" balign="left"> + sorcerEnded(exception : Exception) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + processLaunched(process : Process2) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + sorcerStarted() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + sorcerEnded(exception : Exception) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../launcher/SorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.SorcerListener implements sorcer.util.ProcessDownCallback
-	c391885:p -> c392317:p [dir=back,arrowtail=empty,style=dashed];
+	c421317:p -> c421757:p [dir=back,arrowtail=empty,style=dashed];
 }
 

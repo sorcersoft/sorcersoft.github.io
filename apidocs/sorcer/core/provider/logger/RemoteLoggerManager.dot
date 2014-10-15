@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.RemoteLogger
-	c425194 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../RemoteLogger.html">
+	c457507 [label=<<table title="sorcer.core.RemoteLogger" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../RemoteLogger.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RemoteLogger </td></tr>
@@ -18,17 +18,21 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + LOGGER_CONTEXT_KEY : String </td></tr>
 <tr><td align="left" balign="left"> + KEY_HOSTNAME : String </td></tr>
+<tr><td align="left" balign="left"> + KEY_EXERTION_ID : String </td></tr>
+<tr><td align="left" balign="left"> + KEY_PROVIDER_ID : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + publish(record : List&lt;LoggingEventVO&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getLoggers() : List&lt;LoggingConfig&gt; </td></tr>
-<tr><td align="left" balign="left"> + getLogNames() : String[] </td></tr>
-<tr><td align="left" balign="left"> + getLog(fileName : String) : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + deleteLog(logName : String) </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + publish(record : List&lt;LoggingEventVO&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLoggers() : List&lt;LoggingConfig&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLogNames() : String[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLog(fileName : String) : List&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + deleteLog(logName : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + registerLogListener(listener : RemoteEventListener, handback : MarshalledObject&lt;&gt;, duration : long, filterMapList : List&lt;Map&lt;String, String&gt;&gt;) : EventRegistration </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + unregisterLogListener(evReg : EventRegistration) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../RemoteLogger.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.provider.logger.RemoteLoggerManager
-	c425873 [label=<<table title="sorcer.core.provider.logger.RemoteLoggerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteLoggerManager.html">
+	c458031 [label=<<table title="sorcer.core.provider.logger.RemoteLoggerManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RemoteLoggerManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RemoteLoggerManager </td></tr>
 		</table></td></tr>
@@ -37,15 +41,18 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + RemoteLoggerManager() </td></tr>
+<tr><td align="left" balign="left"> + init(provider : Provider) </td></tr>
 <tr><td align="left" balign="left"> + getLogNames() : String[] </td></tr>
 <tr><td align="left" balign="left"> + publish(loggingEvents : List&lt;LoggingEventVO&gt;) </td></tr>
 <tr><td align="left" balign="left"> # publish(loggingEvent : ILoggingEvent) </td></tr>
 <tr><td align="left" balign="left"> + getLog(fileName : String) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getLoggers() : List&lt;LoggingConfig&gt; </td></tr>
 <tr><td align="left" balign="left"> + deleteLog(loggerName : String) </td></tr>
+<tr><td align="left" balign="left"> + registerLogListener(listener : RemoteEventListener, handback : MarshalledObject&lt;&gt;, duration : long, filterMap : List&lt;Map&lt;String, String&gt;&gt;) : EventRegistration </td></tr>
+<tr><td align="left" balign="left"> + unregisterLogListener(evReg : EventRegistration) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RemoteLoggerManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.provider.logger.RemoteLoggerManager implements sorcer.core.RemoteLogger
-	c425194:p -> c425873:p [dir=back,arrowtail=empty,style=dashed];
+	c457507:p -> c458031:p [dir=back,arrowtail=empty,style=dashed];
 }
 

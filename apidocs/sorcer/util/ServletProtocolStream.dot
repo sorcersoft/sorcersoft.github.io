@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.ServletProtocolStream
-	c489816 [label=<<table title="sorcer.util.ServletProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServletProtocolStream.html">
+	c522241 [label=<<table title="sorcer.util.ServletProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServletProtocolStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServletProtocolStream </td></tr>
 		</table></td></tr>
@@ -35,7 +35,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ServletProtocolStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.ProtocolStream
-	c489817 [label=<<table title="sorcer.util.ProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProtocolStream.html">
+	c522259 [label=<<table title="sorcer.util.ProtocolStream" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProtocolStream.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProtocolStream </td></tr>
@@ -44,20 +44,20 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + writeInt(v : int) </td></tr>
-<tr><td align="left" balign="left"> + readInt() : int </td></tr>
-<tr><td align="left" balign="left"> + readLine() : String </td></tr>
-<tr><td align="left" balign="left"> + readEscapedLine() : String </td></tr>
-<tr><td align="left" balign="left"> + writeLine(str : String) </td></tr>
-<tr><td align="left" balign="left"> + writeObject(str : Object) </td></tr>
-<tr><td align="left" balign="left"> + isObjectStream() : boolean </td></tr>
-<tr><td align="left" balign="left"> + writeEscapedLine(str : String) </td></tr>
-<tr><td align="left" balign="left"> + flush() </td></tr>
-<tr><td align="left" balign="left"> + close() </td></tr>
-<tr><td align="left" balign="left"> + done() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + writeInt(v : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + readInt() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + readLine() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + readEscapedLine() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + writeLine(str : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + writeObject(str : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isObjectStream() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + writeEscapedLine(str : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + flush() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + close() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + done() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProtocolStream.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.util.ServletProtocolStream implements sorcer.util.ProtocolStream
-	c489817:p -> c489816:p [dir=back,arrowtail=empty,style=dashed];
+	c522259:p -> c522241:p [dir=back,arrowtail=empty,style=dashed];
 }
 

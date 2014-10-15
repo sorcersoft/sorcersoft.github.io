@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.dispatch.ProviderProvisionManager
-	c410407 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderProvisionManager.html">
+	c439788 [label=<<table title="sorcer.core.dispatch.ProviderProvisionManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProviderProvisionManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProviderProvisionManager </td></tr>
 		</table></td></tr>
@@ -20,7 +20,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # ProviderProvisionManager() </td></tr>
 <tr><td align="left" balign="left"> + getInstance() : ProviderProvisionManager </td></tr>
-<tr><td align="left" balign="left"> + add(exertion : Exertion, spaceExertDispatcher : SpaceExertDispatcher) </td></tr>
+<tr><td align="left" balign="left"> + add(exertion : Exertion, spaceExertDispatcher : SpaceParallelDispatcher) </td></tr>
 <tr><td align="left" balign="left"> + destroy() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProviderProvisionManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];

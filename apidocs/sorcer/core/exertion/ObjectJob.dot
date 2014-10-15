@@ -10,22 +10,23 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Job
-	c362905 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Job.html">
+	c392835 [label=<<table title="sorcer.service.Job" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/Job.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Job </font></td></tr>
+<tr><td align="center" balign="center"> Job </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> # logger : Logger </td></tr>
 <tr><td align="left" balign="left"> # exertions : List&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + state : Integer </td></tr>
+<tr><td align="left" balign="left"> # delegate : Job </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + Job() </td></tr>
 <tr><td align="left" balign="left"> + Job(name : String) </td></tr>
 <tr><td align="left" balign="left"> + Job(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + Job(name : String, description : String) </td></tr>
-<tr><td align="left" balign="left"> + Job(name : String, description : String, signatures : List&lt;Signature&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getSignatures() : List&lt;Signature&gt; </td></tr>
+<tr><td align="left" balign="left"> + Job(name : String, description : String, fidelity : ServiceFidelity) </td></tr>
+<tr><td align="left" balign="left"> + getFidelity() : ServiceFidelity </td></tr>
 <tr><td align="left" balign="left"> + isJob() : boolean </td></tr>
 <tr><td align="left" balign="left"> + isCompound() : boolean </td></tr>
 <tr><td align="left" balign="left"> + hasChild(childName : String) : boolean </td></tr>
@@ -44,7 +45,7 @@ digraph G {
 <tr><td align="left" balign="left"> + removeExertion(exertion : Exertion) : Exertion </td></tr>
 <tr><td align="left" balign="left"> + remove(index : int) </td></tr>
 <tr><td align="left" balign="left"> + get(index : int) : Exertion </td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + doJob(txn : Transaction) : Job </font></td></tr>
+<tr><td align="left" balign="left"> + doJob(txn : Transaction) : Job </td></tr>
 <tr><td align="left" balign="left"> + undoJob() </td></tr>
 <tr><td align="left" balign="left"> + setState(state : int) </td></tr>
 <tr><td align="left" balign="left"> + getState() : int </td></tr>
@@ -73,17 +74,18 @@ digraph G {
 <tr><td align="left" balign="left"> + getValue(path : String, args : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + putValue(path : String, value : Object) : Object </td></tr>
 <tr><td align="left" balign="left"> + putJobValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : Signature.ReturnPath&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getReturnValue(entries : Arg[]) : Object </td></tr>
 <tr><td align="left" balign="left"> + getComponentContext(path : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getComponentControlContext(path : String) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getComponentExertion(path : String) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + applyFidelityContext(fiContext : FidelityContext) </td></tr>
 <tr><td align="left" balign="left"> + reset(state : int) </td></tr>
 <tr><td align="left" balign="left"> + substitute(entries : Arg[]) : ServiceExertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../service/Job.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.exertion.ObjectJob
-	c363201 [label=<<table title="sorcer.core.exertion.ObjectJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectJob.html">
+	c393100 [label=<<table title="sorcer.core.exertion.ObjectJob" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ObjectJob.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectJob </td></tr>
 		</table></td></tr>
@@ -99,6 +101,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectJob.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.exertion.ObjectJob extends sorcer.service.Job
-	c362905:p -> c363201:p [dir=back,arrowtail=empty];
+	c392835:p -> c393100:p [dir=back,arrowtail=empty];
 }
 

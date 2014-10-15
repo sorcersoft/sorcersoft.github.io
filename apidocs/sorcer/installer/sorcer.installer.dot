@@ -9,23 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.installer.NamespaceContextImpl
-	c69529 [label=<<table title="sorcer.installer.NamespaceContextImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NamespaceContextImpl.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> NamespaceContextImpl </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + NamespaceContextImpl(defaultNamespaceURI : String, namespaces : Map&lt;String, String&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getPrefixes(namespaceURI : String) : Iterator&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getPrefix(namespaceURI : String) : String </td></tr>
-<tr><td align="left" balign="left"> + getNamespaceURI(prefix : String) : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./NamespaceContextImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.installer.Installer
-	c69530 [label=<<table title="sorcer.installer.Installer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Installer.html">
+	c74466 [label=<<table title="sorcer.installer.Installer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Installer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Installer </td></tr>
 		</table></td></tr>
@@ -51,5 +36,20 @@ digraph G {
 <tr><td align="left" balign="left"> + get(zipFile : ZipFile, filter : ZipEntryFilter) : ZipEntry </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Installer.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.installer.NamespaceContextImpl
+	c74467 [label=<<table title="sorcer.installer.NamespaceContextImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NamespaceContextImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> NamespaceContextImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NamespaceContextImpl(defaultNamespaceURI : String, namespaces : Map&lt;String, String&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getPrefixes(namespaceURI : String) : Iterator&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPrefix(namespaceURI : String) : String </td></tr>
+<tr><td align="left" balign="left"> + getNamespaceURI(prefix : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./NamespaceContextImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

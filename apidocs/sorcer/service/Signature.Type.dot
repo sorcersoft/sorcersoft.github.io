@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.service.Signature.Type
-	c497898 [label=<<table title="sorcer.service.Signature.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Signature.Type.html">
+	c533782 [label=<<table title="sorcer.service.Signature.Type" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Signature.Type.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Type </td></tr>
@@ -22,8 +22,24 @@ digraph G {
 <tr><td align="left" balign="left"> SRV </td></tr>
 <tr><td align="left" balign="left"> PRE </td></tr>
 <tr><td align="left" balign="left"> POST </td></tr>
-<tr><td align="left" balign="left"> APD </td></tr>
+<tr><td align="left" balign="left"> APD_DATA </td></tr>
+<tr><td align="left" balign="left"> APD_CONTROL </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Signature.Type.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.Arg
+	c533817 [label=<<table title="sorcer.service.Arg" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Arg.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Arg </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Arg.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//sorcer.service.Signature.Type implements sorcer.service.Arg
+	c533817:p -> c533782:p [dir=back,arrowtail=empty,style=dashed];
 }
 

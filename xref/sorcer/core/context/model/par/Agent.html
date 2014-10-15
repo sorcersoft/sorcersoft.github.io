@@ -34,7 +34,7 @@
 <a class="jxr_linenumber" name="24" href="#24">24</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="26" href="#26">26</a>  @SuppressWarnings({ <span class="jxr_string">"unchecked"</span>, <span class="jxr_string">"rawtypes"</span> })
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> Agent&lt;T&gt; <strong class="jxr_keyword">extends</strong> ParImpl&lt;T&gt; <strong class="jxr_keyword">implements</strong> Serializable {
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> Agent&lt;T&gt; <strong class="jxr_keyword">extends</strong> Par&lt;T&gt; <strong class="jxr_keyword">implements</strong> Serializable {
 <a class="jxr_linenumber" name="28" href="#28">28</a>  
 <a class="jxr_linenumber" name="29" href="#29">29</a>  	<strong class="jxr_keyword">private</strong> URL[] agentURLs;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  	
@@ -58,9 +58,9 @@
 <a class="jxr_linenumber" name="48" href="#48">48</a>  	
 <a class="jxr_linenumber" name="49" href="#49">49</a>  	<strong class="jxr_keyword">public</strong> T evaluate(Arg... entries)
 <a class="jxr_linenumber" name="50" href="#50">50</a>  			<strong class="jxr_keyword">throws</strong> EvaluationException, RemoteException {
-<a class="jxr_linenumber" name="51" href="#51">51</a>  		<strong class="jxr_keyword">if</strong> (invoker != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="52" href="#52">52</a>              <strong class="jxr_keyword">return</strong> (T) invoker.invoke(getPars(entries));
-<a class="jxr_linenumber" name="53" href="#53">53</a>          }
+<a class="jxr_linenumber" name="51" href="#51">51</a>  		<strong class="jxr_keyword">if</strong> (invoker != <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="52" href="#52">52</a>  			<strong class="jxr_keyword">return</strong> (T)invoker.invoke(getPars(entries));
+<a class="jxr_linenumber" name="53" href="#53">53</a>  					
 <a class="jxr_linenumber" name="54" href="#54">54</a>  		<strong class="jxr_keyword">if</strong> (className == <strong class="jxr_keyword">null</strong>)
 <a class="jxr_linenumber" name="55" href="#55">55</a>  			className = getClassName(entries);
 <a class="jxr_linenumber" name="56" href="#56">56</a>  
@@ -96,7 +96,7 @@
 <a class="jxr_linenumber" name="86" href="#86">86</a>  						.newInstance(<strong class="jxr_keyword">new</strong> Object[] { scope });
 <a class="jxr_linenumber" name="87" href="#87">87</a>  				invoker = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/invoker/MethodInvoker.html">MethodInvoker</a>(name, obj, name, getPars(entries));
 <a class="jxr_linenumber" name="88" href="#88">88</a>  				<strong class="jxr_keyword">if</strong> (scope instanceof ParModel)
-<a class="jxr_linenumber" name="89" href="#89">89</a>  					invoker.setScope(scope);
+<a class="jxr_linenumber" name="89" href="#89">89</a>  					invoker.setScope((ParModel)scope);
 <a class="jxr_linenumber" name="90" href="#90">90</a>  				invoker.setContext(scope);
 <a class="jxr_linenumber" name="91" href="#91">91</a>  			} <strong class="jxr_keyword">finally</strong> {
 <a class="jxr_linenumber" name="92" href="#92">92</a>  				AccessController.doPrivileged(<strong class="jxr_keyword">new</strong> PrivilegedAction() {
@@ -113,17 +113,17 @@
 <a class="jxr_linenumber" name="103" href="#103">103</a> 							+ e.getClass().getName() + <span class="jxr_string">": "</span>
 <a class="jxr_linenumber" name="104" href="#104">104</a> 							+ e.getLocalizedMessage());
 <a class="jxr_linenumber" name="105" href="#105">105</a> 		}
-<a class="jxr_linenumber" name="106" href="#106">106</a> 		value = invoker.invoke(entries);
+<a class="jxr_linenumber" name="106" href="#106">106</a> 		value = (T)invoker.invoke(entries);
 <a class="jxr_linenumber" name="107" href="#107">107</a> 		invoker.valueValid(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="108" href="#108">108</a> 		<strong class="jxr_keyword">return</strong> (T)value;
+<a class="jxr_linenumber" name="108" href="#108">108</a> 		<strong class="jxr_keyword">return</strong> value;
 <a class="jxr_linenumber" name="109" href="#109">109</a> 	}
 <a class="jxr_linenumber" name="110" href="#110">110</a> 	
 <a class="jxr_linenumber" name="111" href="#111">111</a> 	@Override
 <a class="jxr_linenumber" name="112" href="#112">112</a> 	<strong class="jxr_keyword">public</strong> T getValue(Arg... entries) <strong class="jxr_keyword">throws</strong> EvaluationException, RemoteException {
 <a class="jxr_linenumber" name="113" href="#113">113</a> 		<strong class="jxr_keyword">if</strong> (value != <strong class="jxr_keyword">null</strong> &amp;&amp; invoker != <strong class="jxr_keyword">null</strong> &amp;&amp; invoker.valueValid())
-<a class="jxr_linenumber" name="114" href="#114">114</a> 			<strong class="jxr_keyword">return</strong> (T)value;
+<a class="jxr_linenumber" name="114" href="#114">114</a> 			<strong class="jxr_keyword">return</strong> value;
 <a class="jxr_linenumber" name="115" href="#115">115</a> 		<strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="116" href="#116">116</a> 			<strong class="jxr_keyword">return</strong> evaluate(entries);
+<a class="jxr_linenumber" name="116" href="#116">116</a> 			<strong class="jxr_keyword">return</strong> (T)evaluate(entries);
 <a class="jxr_linenumber" name="117" href="#117">117</a> 	}
 <a class="jxr_linenumber" name="118" href="#118">118</a> 	
 <a class="jxr_linenumber" name="119" href="#119">119</a> 	<em class="jxr_comment">/*<em class="jxr_comment"> (non-Javadoc)</em></em>
@@ -135,33 +135,27 @@
 <a class="jxr_linenumber" name="125" href="#125">125</a> 	}
 <a class="jxr_linenumber" name="126" href="#126">126</a> 	
 <a class="jxr_linenumber" name="127" href="#127">127</a> 	<strong class="jxr_keyword">private</strong> <a href="../../../../../sorcer/core/context/model/par/Par.html">Par</a>[] getPars(Arg... entries) {
-<a class="jxr_linenumber" name="128" href="#128">128</a> 		ArgList pl = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/service/ArgList.html">ArgList</a>();
+<a class="jxr_linenumber" name="128" href="#128">128</a> 		Par[] pa = <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/model/par/Par.html">Par</a>[entries.length];
 <a class="jxr_linenumber" name="129" href="#129">129</a> 		<strong class="jxr_keyword">if</strong> (entries != <strong class="jxr_keyword">null</strong> &amp;&amp; entries.length &gt; 0) {
-<a class="jxr_linenumber" name="130" href="#130">130</a> 			<strong class="jxr_keyword">for</strong> (Arg p : entries) {
-<a class="jxr_linenumber" name="131" href="#131">131</a> 				<strong class="jxr_keyword">if</strong> (p instanceof Par) {
-<a class="jxr_linenumber" name="132" href="#132">132</a> 					pl.add(p);
-<a class="jxr_linenumber" name="133" href="#133">133</a> 				}
-<a class="jxr_linenumber" name="134" href="#134">134</a> 			}
-<a class="jxr_linenumber" name="135" href="#135">135</a> 		}
-<a class="jxr_linenumber" name="136" href="#136">136</a> 		<strong class="jxr_keyword">if</strong> (pl.size() &gt; 0) {
-<a class="jxr_linenumber" name="137" href="#137">137</a> 			<strong class="jxr_keyword">return</strong> pl.toArray();
-<a class="jxr_linenumber" name="138" href="#138">138</a> 		} <strong class="jxr_keyword">else</strong>
-<a class="jxr_linenumber" name="139" href="#139">139</a> 			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../sorcer/core/context/model/par/Par.html">Par</a>[0];
-<a class="jxr_linenumber" name="140" href="#140">140</a> 	}
-<a class="jxr_linenumber" name="141" href="#141">141</a> 	
-<a class="jxr_linenumber" name="142" href="#142">142</a> 	<strong class="jxr_keyword">private</strong> String getClassName(Arg... entries) {
-<a class="jxr_linenumber" name="143" href="#143">143</a> 		<strong class="jxr_keyword">for</strong> (Arg p : entries) {
-<a class="jxr_linenumber" name="144" href="#144">144</a> 			<strong class="jxr_keyword">if</strong> (p instanceof Entry &amp;&amp; ((Entry)p).key().equals(<span class="jxr_string">"class"</span>))
-<a class="jxr_linenumber" name="145" href="#145">145</a> 				<strong class="jxr_keyword">return</strong> (String)((Entry)p).value();
-<a class="jxr_linenumber" name="146" href="#146">146</a> 		}
-<a class="jxr_linenumber" name="147" href="#147">147</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="148" href="#148">148</a> 	}
-<a class="jxr_linenumber" name="149" href="#149">149</a> 	
-<a class="jxr_linenumber" name="150" href="#150">150</a> 	@Override
-<a class="jxr_linenumber" name="151" href="#151">151</a> 	<strong class="jxr_keyword">public</strong> String toString() {
-<a class="jxr_linenumber" name="152" href="#152">152</a> 		<strong class="jxr_keyword">return</strong> <span class="jxr_string">"agent ["</span> + name + <span class="jxr_string">":"</span> + Arrays.toString(agentURLs) + <span class="jxr_string">"]"</span>;
-<a class="jxr_linenumber" name="153" href="#153">153</a> 	}
-<a class="jxr_linenumber" name="154" href="#154">154</a> }
+<a class="jxr_linenumber" name="130" href="#130">130</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; entries.length; i++)
+<a class="jxr_linenumber" name="131" href="#131">131</a> 				pa[i] = (Par) entries[i];
+<a class="jxr_linenumber" name="132" href="#132">132</a> 		}
+<a class="jxr_linenumber" name="133" href="#133">133</a> 		<strong class="jxr_keyword">return</strong> pa;
+<a class="jxr_linenumber" name="134" href="#134">134</a> 	}
+<a class="jxr_linenumber" name="135" href="#135">135</a> 	
+<a class="jxr_linenumber" name="136" href="#136">136</a> 	<strong class="jxr_keyword">private</strong> String getClassName(Arg... entries) {
+<a class="jxr_linenumber" name="137" href="#137">137</a> 		<strong class="jxr_keyword">for</strong> (Arg p : entries) {
+<a class="jxr_linenumber" name="138" href="#138">138</a> 			<strong class="jxr_keyword">if</strong> (p instanceof Entry &amp;&amp; ((Entry)p).key().equals(<span class="jxr_string">"class"</span>))
+<a class="jxr_linenumber" name="139" href="#139">139</a> 				<strong class="jxr_keyword">return</strong> (String)((Entry)p).value();
+<a class="jxr_linenumber" name="140" href="#140">140</a> 		}
+<a class="jxr_linenumber" name="141" href="#141">141</a> 		<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="142" href="#142">142</a> 	}
+<a class="jxr_linenumber" name="143" href="#143">143</a> 	
+<a class="jxr_linenumber" name="144" href="#144">144</a> 	@Override
+<a class="jxr_linenumber" name="145" href="#145">145</a> 	<strong class="jxr_keyword">public</strong> String toString() {
+<a class="jxr_linenumber" name="146" href="#146">146</a> 		<strong class="jxr_keyword">return</strong> <span class="jxr_string">"agent ["</span> + name + <span class="jxr_string">":"</span> + Arrays.toString(agentURLs) + <span class="jxr_string">"]"</span>;
+<a class="jxr_linenumber" name="147" href="#147">147</a> 	}
+<a class="jxr_linenumber" name="148" href="#148">148</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

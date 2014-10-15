@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.util.bdb.objects.SorcerDatabaseViews
-	c27908 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabaseViews.html">
+	c34297 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabaseViews.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerDatabaseViews </td></tr>
 		</table></td></tr>
@@ -21,17 +21,19 @@ digraph G {
 <tr><td align="left" balign="left"> + SorcerDatabaseViews(db : SorcerDatabase) </td></tr>
 <tr><td align="left" balign="left"> + getExertionMap() : StoredMap&lt;UuidKey, Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContextMap() : StoredMap&lt;UuidKey, Context&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTableMap() : StoredMap&lt;UuidKey, ModelTable&gt; </td></tr>
 <tr><td align="left" balign="left"> + getUuidObjectMap() : StoredMap&lt;UuidKey, UuidObject&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExertionSet() : StoredValueSet&lt;Exertion&gt; </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeSet() : StoredValueSet&lt;ProviderRuntime&gt; </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeByProviderNameMap() : StoredMap&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getContextSet() : StoredValueSet&lt;Context&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTableSet() : StoredValueSet&lt;ModelTable&gt; </td></tr>
 <tr><td align="left" balign="left"> + getUuidObjectSet() : StoredValueSet&lt;UuidObject&gt; </td></tr>
-<tr><td align="left" balign="left"> + getStoreType(storeName : String) : Store </td></tr>
+<tr><td align="left" balign="left"> + getStoreType(storeName : String) : DatabaseStorer.Store </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerDatabaseViews.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.SorcerDatabaseViews.ContextBinding
-	c27909 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews.ContextBinding" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabaseViews.ContextBinding.html">
+	c34298 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews.ContextBinding" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabaseViews.ContextBinding.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContextBinding </td></tr>
 		</table></td></tr>
@@ -44,8 +46,22 @@ digraph G {
 <tr><td align="left" balign="left"> + objectToKey(object : Object) : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerDatabaseViews.ContextBinding.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.util.bdb.objects.SorcerDatabaseViews.TableBinding
+	c34299 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews.TableBinding" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabaseViews.TableBinding.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TableBinding </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + objectToData(object : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + entryToObject(keyInput : Object, object : Object) : Object </td></tr>
+<tr><td align="left" balign="left"> + objectToKey(object : Object) : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerDatabaseViews.TableBinding.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.SorcerDatabaseViews.UuidObjectBinding
-	c27910 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews.UuidObjectBinding" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabaseViews.UuidObjectBinding.html">
+	c34300 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabaseViews.UuidObjectBinding" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabaseViews.UuidObjectBinding.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UuidObjectBinding </td></tr>
 		</table></td></tr>
@@ -59,7 +75,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SorcerDatabaseViews.UuidObjectBinding.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.SorcerDatabase
-	c27911 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabase.html">
+	c34301 [label=<<table title="sorcer.util.bdb.objects.SorcerDatabase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerDatabase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SorcerDatabase </td></tr>
 		</table></td></tr>
@@ -73,18 +89,21 @@ digraph G {
 <tr><td align="left" balign="left"> + getExertionDatabase() : Database </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeDatabase() : Database </td></tr>
 <tr><td align="left" balign="left"> + getContextDatabase() : Database </td></tr>
+<tr><td align="left" balign="left"> + getTableDatabase() : Database </td></tr>
+<tr><td align="left" balign="left"> + getVarDatabase() : Database </td></tr>
+<tr><td align="left" balign="left"> + getVarModelDatabase() : Database </td></tr>
 <tr><td align="left" balign="left"> + getUuidObjectDatabase() : Database </td></tr>
 <tr><td align="left" balign="left"> + getRuntimeByProviderNameDatabase() : SecondaryDatabase </td></tr>
 <tr><td align="left" balign="left"> + close() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SorcerDatabase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.ObjectInfo
-	c27912 [label=<<table title="sorcer.util.bdb.objects.ObjectInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectInfo.html">
+	c34302 [label=<<table title="sorcer.util.bdb.objects.ObjectInfo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ObjectInfo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ObjectInfo </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + type : Store </td></tr>
+<tr><td align="left" balign="left"> + type : DatabaseStorer.Store </td></tr>
 <tr><td align="left" balign="left"> + uuid : Uuid </td></tr>
 <tr><td align="left" balign="left"> + principal : Principal </td></tr>
 <tr><td align="left" balign="left"> + info : String </td></tr>
@@ -97,7 +116,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ObjectInfo.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.UuidObject
-	c27913 [label=<<table title="sorcer.util.bdb.objects.UuidObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UuidObject.html">
+	c34303 [label=<<table title="sorcer.util.bdb.objects.UuidObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UuidObject.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UuidObject </td></tr>
 		</table></td></tr>
@@ -120,24 +139,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getDateCreated() : Date </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UuidObject.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.bdb.objects.UuidKey
-	c27914 [label=<<table title="sorcer.util.bdb.objects.UuidKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UuidKey.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UuidKey </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + UuidKey(cookie : Uuid) </td></tr>
-<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./UuidKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.util.bdb.objects.MarshalledData
-	c27915 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MarshalledData.html">
+	c34304 [label=<<table title="sorcer.util.bdb.objects.MarshalledData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MarshalledData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MarshalledData </td></tr>
 		</table></td></tr>
@@ -159,24 +162,21 @@ digraph G {
 <tr><td align="left" balign="left"> + setName(name : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MarshalledData.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.util.bdb.objects.Store
-	c27916 [label=<<table title="sorcer.util.bdb.objects.Store" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Store.html">
+	// sorcer.util.bdb.objects.UuidKey
+	c34305 [label=<<table title="sorcer.util.bdb.objects.UuidKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UuidKey.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> Store </td></tr>
+<tr><td align="center" balign="center"> UuidKey </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> context </td></tr>
-<tr><td align="left" balign="left"> exertion </td></tr>
-<tr><td align="left" balign="left"> var </td></tr>
-<tr><td align="left" balign="left"> varmodel </td></tr>
-<tr><td align="left" balign="left"> table </td></tr>
-<tr><td align="left" balign="left"> object </td></tr>
-<tr><td align="left" balign="left"> all </td></tr>
+<tr><td align="left" balign="left"> + UuidKey(cookie : Uuid) </td></tr>
+<tr><td align="left" balign="left"> + getId() : Uuid </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./Store.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./UuidKey.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

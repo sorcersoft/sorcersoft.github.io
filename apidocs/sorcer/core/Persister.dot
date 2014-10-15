@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.core.Persister
-	c384566 [label=<<table title="sorcer.core.Persister" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Persister.html">
+	c412297 [label=<<table title="sorcer.core.Persister" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Persister.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Persister </td></tr>
@@ -19,14 +19,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + setValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + isPersistable() : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setValue(value : Object) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isPersistable() : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Persister.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.Persister implements java.io.Serializable
-	c385285:p -> c384566:p [dir=back,arrowtail=empty,style=dashed];
+	c412959:p -> c412297:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c385285 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
+	c412959 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

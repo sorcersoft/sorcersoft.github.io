@@ -9,40 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.service.IndexedContext
-	c494962 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/IndexedContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> IndexedContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + putValue(i : int, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + getValue(i : int) : Object </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/IndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.service.SpaceContext
-	c494986 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/SpaceContext.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SpaceContext </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + spacePrefix : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + unshare() </td></tr>
-<tr><td align="left" balign="left"> + share() </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../service/SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.ServiceContext<T>
-	c495054 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
+	c529165 [label=<<table title="sorcer.core.context.ServiceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -50,8 +18,8 @@ digraph G {
 <tr><td align="left" balign="left"> # name : String </td></tr>
 <tr><td align="left" balign="left"> # subjectPath : String </td></tr>
 <tr><td align="left" balign="left"> # subjectValue : Object </td></tr>
-<tr><td align="left" balign="left"> # returnPath : ReturnPath&lt;T&gt; </td></tr>
-<tr><td align="left" balign="left"> # returnJobPath : ReturnPath&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> # returnPath : Signature.ReturnPath&lt;T&gt; </td></tr>
+<tr><td align="left" balign="left"> # returnJobPath : Signature.ReturnPath&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> # execPath : ExecPath </td></tr>
 <tr><td align="left" balign="left"> # contextChanged : boolean </td></tr>
 <tr><td align="left" balign="left"> # argsPath : String </td></tr>
@@ -78,6 +46,7 @@ digraph G {
 <tr><td align="left" balign="left"> # isRevaluable : boolean </td></tr>
 <tr><td align="left" balign="left"> # dbUrl : String </td></tr>
 <tr><td align="left" balign="left"> # prefix : String </td></tr>
+<tr><td align="left" balign="left"> # entryLists : List&lt;EntryList&gt; </td></tr>
 <tr><td align="left" balign="left"> # version : float </td></tr>
 <tr><td align="left" balign="left"> # delPathIds : Hashtable&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> # metacontext : Hashtable&lt;&gt; </td></tr>
@@ -227,17 +196,17 @@ digraph G {
 <tr><td align="left" balign="left"> + setTarget(target : Object) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTargetPath() : String </td></tr>
 <tr><td align="left" balign="left"> + setTargetPath(targetPath : String) : ServiceContext&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : Signature.ReturnPath&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath() : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(path : String) : ServiceContext&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(returnPath : Signature.ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setExecPath(execPath : ExecPath) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getExecPath() : ExecPath </td></tr>
 <tr><td align="left" balign="left"> + setReturnValue(value : Object) </td></tr>
-<tr><td align="left" balign="left"> + getReturnJobPath() : ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getReturnJobPath() : Signature.ReturnPath&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnJobPath() : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnJobPath(path : String) : ServiceContext&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + setReturnJobPath(returnPath : ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + setReturnJobPath(returnPath : Signature.ReturnPath&lt;&gt;) : ServiceContext&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReturnJobValue(value : T) : T </td></tr>
 <tr><td align="left" balign="left"> + putInoutValue(path : String, value : T) : T </td></tr>
 <tr><td align="left" balign="left"> + putInValue(path : String, value : T, association : String) : T </td></tr>
@@ -280,8 +249,6 @@ digraph G {
 <tr><td align="left" balign="left"> + setMetacontext(mc : Hashtable&lt;String, Map&lt;String, String&gt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + get(path : String) : T </td></tr>
-<tr><td align="left" balign="left"> + checkpoint() </td></tr>
-<tr><td align="left" balign="left"> + changed(aspect : Exec.State) </td></tr>
 <tr><td align="left" balign="left"> + asis(path : String) : T </td></tr>
 <tr><td align="left" balign="left"> + setOutValues(context : Context&lt;T&gt;) : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + getPar(path : String) : Par&lt;&gt; </td></tr>
@@ -292,7 +259,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getCurrentPrefix() : String </td></tr>
 <tr><td align="left" balign="left"> + setCurrentPrefix(currentPrefix : String) </td></tr>
 <tr><td align="left" balign="left"> + asis() : T </td></tr>
-<tr><td align="left" balign="left"> + getData() : Object </td></tr>
 <tr><td align="left" balign="left"> + getPrefix() : String </td></tr>
 <tr><td align="left" balign="left"> + setPrefix(prefix : String) </td></tr>
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
@@ -303,20 +269,24 @@ digraph G {
 <tr><td align="left" balign="left"> + getURL(path : String) : URL </td></tr>
 <tr><td align="left" balign="left"> + getDbUrl() : String </td></tr>
 <tr><td align="left" balign="left"> + setDbUrl(dbUrl : String) </td></tr>
+<tr><td align="left" balign="left"> + getEntryLists() : List&lt;EntryList&gt; </td></tr>
+<tr><td align="left" balign="left"> + setEntryLists(entryLists : List&lt;EntryList&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getEntryList(type : EntryList.Type) : EntryList </td></tr>
 <tr><td align="left" balign="left"> + getContext(contextTemplate : Context&lt;T&gt;) : Context&lt;T&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + appendPar(p : Par&lt;&gt;) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addPar(path : String, value : Object) : Par&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + isRevaluable() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setRevaluable(isRevaluable : boolean) </td></tr>
-<tr><td align="left" balign="left"> + invoke(entries : Arg[]) : T </td></tr>
-<tr><td align="left" balign="left"> + invoke(context : Context&lt;&gt;, entries : Arg[]) : T </td></tr>
 <tr><td align="left" balign="left"> + getBlockScope() : Context&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + setBlockScope(blockScope : Context&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + invoke(context : Context&lt;T&gt;, entries : Arg[]) : T </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion, txn : Transaction) : Exertion </td></tr>
+<tr><td align="left" balign="left"> + service(exertion : Exertion) : Exertion </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.context.SharedIndexedContext<T>
-	c495055 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedIndexedContext.html">
+	c529167 [label=<<table title="sorcer.core.context.SharedIndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedIndexedContext.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedIndexedContext&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -341,7 +311,6 @@ digraph G {
 <tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + listIterator(index : int) : ListIterator&lt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + remove(index : int) : Object </td></tr>
-<tr><td align="left" balign="left"> + removeAll(c : Collection&lt;&gt;) : boolean </td></tr>
 <tr><td align="left" balign="left"> + retainAll(c : Collection&lt;&gt;) : boolean </td></tr>
 <tr><td align="left" balign="left"> + set(index : int, element : T) : Object </td></tr>
 <tr><td align="left" balign="left"> + subList(fromIndex : int, toIndex : int) : List&lt;&gt; </td></tr>
@@ -351,16 +320,42 @@ digraph G {
 <tr><td align="left" balign="left"> + readValue(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + takeValue(path : String) : Object </td></tr>
 <tr><td align="left" balign="left"> + writeValue(path : String, value : Object) : Object </td></tr>
-<tr><td align="left" balign="left"> + aliasValue(path : String, alias : String) : Object </td></tr>
-<tr><td align="left" balign="left"> + share() </td></tr>
-<tr><td align="left" balign="left"> + unshare() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SharedIndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.IndexedContext
+	c529226 [label=<<table title="sorcer.service.IndexedContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/IndexedContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IndexedContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + putValue(i : int, value : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getValue(i : int) : Object </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/IndexedContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.service.SpaceContext
+	c529278 [label=<<table title="sorcer.service.SpaceContext" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/SpaceContext.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SpaceContext </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + spacePrefix : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + writeValue(path : String, value : Object) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + readValue(path : String) : Object </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + takeValue(path : String) : Object </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../../service/SpaceContext.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.context.SharedIndexedContext<T> extends sorcer.core.context.ServiceContext
-	c495054:p -> c495055:p [dir=back,arrowtail=empty];
+	c529165:p -> c529167:p [dir=back,arrowtail=empty];
 	//sorcer.core.context.SharedIndexedContext<T> implements sorcer.service.IndexedContext
-	c494962:p -> c495055:p [dir=back,arrowtail=empty,style=dashed];
+	c529226:p -> c529167:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.core.context.SharedIndexedContext<T> implements sorcer.service.SpaceContext
-	c494986:p -> c495055:p [dir=back,arrowtail=empty,style=dashed];
+	c529278:p -> c529167:p [dir=back,arrowtail=empty,style=dashed];
 }
 

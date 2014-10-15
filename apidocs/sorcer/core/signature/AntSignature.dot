@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.core.signature.AntSignature
-	c106226 [label=<<table title="sorcer.core.signature.AntSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AntSignature.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> AntSignature </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AntSignature(selector : String, build : File) </td></tr>
-<tr><td align="left" balign="left"> + getBuildFile() : File </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./AntSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.core.signature.ServiceSignature
-	c106229 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
+	c111670 [label=<<table title="sorcer.core.signature.ServiceSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ServiceSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceSignature </td></tr>
 		</table></td></tr>
@@ -34,7 +20,7 @@ digraph G {
 <tr><td align="left" balign="left"> # selector : String </td></tr>
 <tr><td align="left" balign="left"> # prefix : String </td></tr>
 <tr><td align="left" balign="left"> # ownerID : String </td></tr>
-<tr><td align="left" balign="left"> # returnPath : ReturnPath&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> # returnPath : Signature.ReturnPath&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> # rank : Set&lt;Signature.Kind&gt; </td></tr>
 <tr><td align="left" balign="left"> # providerName : String </td></tr>
 <tr><td align="left" balign="left"> # serviceType : Class&lt;?&gt; </td></tr>
@@ -50,6 +36,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setExertion(exertion : Exertion) </td></tr>
 <tr><td align="left" balign="left"> + getExertion() : Exertion </td></tr>
 <tr><td align="left" balign="left"> + getServiceType() : Class&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getVariability() : Variability&lt;?&gt; </td></tr>
 <tr><td align="left" balign="left"> + addRank(kinds : Signature.Kind[]) : Signature </td></tr>
 <tr><td align="left" balign="left"> + addRank(kinds : List&lt;Signature.Kind&gt;) </td></tr>
 <tr><td align="left" balign="left"> + isKindOf(kind : Signature.Kind) : boolean </td></tr>
@@ -102,16 +89,30 @@ digraph G {
 <tr><td align="left" balign="left"> + setPrefix(prefix : String) </td></tr>
 <tr><td align="left" balign="left"> + getGroup() : String </td></tr>
 <tr><td align="left" balign="left"> + setGroup(group : String) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(returnPath : ReturnPath&lt;&gt;) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(returnPath : Signature.ReturnPath&lt;&gt;) </td></tr>
 <tr><td align="left" balign="left"> + setReturnPath(path : String) </td></tr>
-<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Direction) </td></tr>
-<tr><td align="left" balign="left"> + getReturnPath() : ReturnPath&lt;&gt; </td></tr>
-<tr><td align="left" balign="left"> + getDeployment() : Deployment </td></tr>
-<tr><td align="left" balign="left"> + setDeployment(deployment : Deployment) </td></tr>
+<tr><td align="left" balign="left"> + setReturnPath(path : String, direction : Signature.Direction) </td></tr>
+<tr><td align="left" balign="left"> + getReturnPath() : Signature.ReturnPath&lt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + getDeployment() : ServiceDeployment </td></tr>
+<tr><td align="left" balign="left"> + setDeployment(deployment : ServiceDeployment) </td></tr>
 <tr><td align="left" balign="left"> + compareTo(signature : Object) : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.core.signature.AntSignature
+	c111671 [label=<<table title="sorcer.core.signature.AntSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AntSignature.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AntSignature </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AntSignature(selector : String, build : File) </td></tr>
+<tr><td align="left" balign="left"> + getBuildFile() : File </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AntSignature.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.core.signature.AntSignature extends sorcer.core.signature.ServiceSignature
-	c106229:p -> c106226:p [dir=back,arrowtail=empty];
+	c111670:p -> c111671:p [dir=back,arrowtail=empty];
 }
 

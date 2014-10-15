@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// sorcer.provider.boot.AbstractServiceDescriptor
-	c432244 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/boot/AbstractServiceDescriptor.html">
+	c465483 [label=<<table title="sorcer.provider.boot.AbstractServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../provider/boot/AbstractServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractServiceDescriptor </font></td></tr>
 		</table></td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../provider/boot/AbstractServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.OpstringServiceDescriptor
-	c432254 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptor.html">
+	c465494 [label=<<table title="sorcer.boot.OpstringServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpstringServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpstringServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -58,7 +58,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpstringServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.boot.ResolvingServiceDescriptor
-	c432255 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResolvingServiceDescriptor.html">
+	c465500 [label=<<table title="sorcer.boot.ResolvingServiceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResolvingServiceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResolvingServiceDescriptor </td></tr>
 		</table></td></tr>
@@ -77,8 +77,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResolvingServiceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.boot.OpstringServiceDescriptor extends sorcer.boot.ResolvingServiceDescriptor
-	c432255:p -> c432254:p [dir=back,arrowtail=empty];
+	c465500:p -> c465494:p [dir=back,arrowtail=empty];
 	//sorcer.boot.ResolvingServiceDescriptor extends sorcer.provider.boot.AbstractServiceDescriptor
-	c432244:p -> c432255:p [dir=back,arrowtail=empty];
+	c465483:p -> c465500:p [dir=back,arrowtail=empty];
 }
 

@@ -9,22 +9,8 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// sorcer.launcher.process.DestroyingListener
-	c357099 [label=<<table title="sorcer.launcher.process.DestroyingListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./process/DestroyingListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DestroyingListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DestroyingListener(processDestroyer : ProcessDestroyer, unRegisterOnSuccess : boolean) </td></tr>
-<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
-<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
-		</table></td></tr>
-		</table>>, URL="./process/DestroyingListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.process.ExitingCallback
-	c357101 [label=<<table title="sorcer.launcher.process.ExitingCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./process/ExitingCallback.html">
+	c386677 [label=<<table title="sorcer.launcher.process.ExitingCallback" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./process/ExitingCallback.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExitingCallback </td></tr>
 		</table></td></tr>
@@ -37,23 +23,8 @@ digraph G {
 <tr><td align="left" balign="left"> + isShuttingDown() : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./process/ExitingCallback.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// sorcer.launcher.SorcerListener
-	c357497 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerListener.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> SorcerListener </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
-<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
-<tr><td align="left" balign="left"> + sorcerEnded(exception : Exception) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./SorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.NullSorcerListener
-	c357498 [label=<<table title="sorcer.launcher.NullSorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NullSorcerListener.html">
+	c387096 [label=<<table title="sorcer.launcher.NullSorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./NullSorcerListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NullSorcerListener </td></tr>
 		</table></td></tr>
@@ -69,7 +40,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NullSorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// sorcer.launcher.WaitingListener
-	c357504 [label=<<table title="sorcer.launcher.WaitingListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WaitingListener.html">
+	c387098 [label=<<table title="sorcer.launcher.WaitingListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WaitingListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WaitingListener </td></tr>
 		</table></td></tr>
@@ -84,13 +55,42 @@ digraph G {
 <tr><td align="left" balign="left"> + wait(mode : WaitMode) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./WaitingListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//sorcer.launcher.process.DestroyingListener extends sorcer.launcher.NullSorcerListener
-	c357498:p -> c357099:p [dir=back,arrowtail=empty];
+	// sorcer.launcher.SorcerListener
+	c387100 [label=<<table title="sorcer.launcher.SorcerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SorcerListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SorcerListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + processLaunched(process : Process2) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + sorcerStarted() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + sorcerEnded(exception : Exception) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SorcerListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// sorcer.launcher.impl.process.DestroyingListener
+	c387105 [label=<<table title="sorcer.launcher.impl.process.DestroyingListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/process/DestroyingListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DestroyingListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DestroyingListener(processDestroyer : ProcessDestroyer, unRegisterOnSuccess : boolean) </td></tr>
+<tr><td align="left" balign="left"> + processLaunched(process : Process2) </td></tr>
+<tr><td align="left" balign="left"> + sorcerStarted() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./impl/process/DestroyingListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//sorcer.launcher.process.ExitingCallback extends sorcer.launcher.NullSorcerListener
-	c357498:p -> c357101:p [dir=back,arrowtail=empty];
+	c387096:p -> c386677:p [dir=back,arrowtail=empty];
 	//sorcer.launcher.NullSorcerListener implements sorcer.launcher.SorcerListener
-	c357497:p -> c357498:p [dir=back,arrowtail=empty,style=dashed];
+	c387100:p -> c387096:p [dir=back,arrowtail=empty,style=dashed];
 	//sorcer.launcher.WaitingListener extends sorcer.launcher.NullSorcerListener
-	c357498:p -> c357504:p [dir=back,arrowtail=empty];
+	c387096:p -> c387098:p [dir=back,arrowtail=empty];
+	//sorcer.launcher.impl.process.DestroyingListener extends sorcer.launcher.NullSorcerListener
+	c387096:p -> c387105:p [dir=back,arrowtail=empty];
 }
 
